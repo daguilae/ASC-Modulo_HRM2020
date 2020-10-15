@@ -44,6 +44,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vista Capacitacion\frmCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmCapacitacion.Designer.cs">
+      <DependentUpon>frmCapacitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmEmpCapacitado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmEmpCapacitado.Designer.cs">
+      <DependentUpon>frmEmpCapacitado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmBusquedaCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmBusquedaCap.Designer.cs">
+      <DependentUpon>frmBusquedaCap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Nomina\frmNomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +91,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Vista Capacitacion\frmEmpCapacitado.resx">
+      <DependentUpon>frmEmpCapacitado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Capacitacion\frmBusquedaCap.resx">
+      <DependentUpon>frmBusquedaCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Capacitacion\frmCapacitacion.resx">
+      <DependentUpon>frmCapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </EmbeddedResource>
