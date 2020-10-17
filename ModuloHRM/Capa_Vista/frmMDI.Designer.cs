@@ -38,11 +38,7 @@
             this.tsmiEmpleadosCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReclutadosCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNominaCatalogos = new System.Windows.Forms.ToolStripMenuItem();
-<<<<<<< HEAD
             this.tsmiDesarrolloDelPersonalCatalogos = new System.Windows.Forms.ToolStripMenuItem();
-=======
-            this.tsmiDesarrolloDelPersonalCatalogo = new System.Windows.Forms.ToolStripMenuItem();
->>>>>>> dc7f9ed27d04076d4d7253664efbe3e48a2c1633
             this.desarrolloDeUnEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCapacitacionesCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBancoDeTalentoCatalogos = new System.Windows.Forms.ToolStripMenuItem();
@@ -182,11 +178,7 @@
             this.tsmiEmpleadosCatalogos,
             this.tsmiReclutadosCatalogos,
             this.tsmiNominaCatalogos,
-<<<<<<< HEAD
             this.tsmiDesarrolloDelPersonalCatalogos,
-=======
-            this.tsmiDesarrolloDelPersonalCatalogo,
->>>>>>> dc7f9ed27d04076d4d7253664efbe3e48a2c1633
             this.tsmiCapacitacionesCatalogos,
             this.tsmiBancoDeTalentoCatalogos,
             this.tsmiPuestosCatalogos,
@@ -255,23 +247,9 @@
             this.tsmiCapacitación.Text = "Capacitación";
 >>>>>>> 39b5d8574e7dcd8a509a3e489b847152cc0d1cef
             // 
-<<<<<<< HEAD
             // tsmiDesarrolloDelPersonalCatalogos
             // 
 <<<<<<< HEAD
-=======
-            // tsmiDesarrolloDelPersonalCatalogo
-            // 
-<<<<<<< HEAD
-            this.tsmiDesarrolloDelPersonalCatalogo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.desarrolloDeUnEmpleadoToolStripMenuItem});
-            this.tsmiDesarrolloDelPersonalCatalogo.Name = "tsmiDesarrolloDelPersonalCatalogo";
-            this.tsmiDesarrolloDelPersonalCatalogo.Size = new System.Drawing.Size(243, 22);
-            this.tsmiDesarrolloDelPersonalCatalogo.Text = "Desarrollo Del Personal";
-            this.tsmiDesarrolloDelPersonalCatalogo.Click += new System.EventHandler(this.tsmiDesarrolloDelPersonalCatalogos_Click);
-=======
-<<<<<<< HEAD
->>>>>>> dc7f9ed27d04076d4d7253664efbe3e48a2c1633
             this.tsmiDesarrolloDelPersonalCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.desarrolloDeUnEmpleadoToolStripMenuItem});
             this.tsmiDesarrolloDelPersonalCatalogos.Name = "tsmiDesarrolloDelPersonalCatalogos";
@@ -284,10 +262,6 @@
             this.tsmiCapacitaciones.Text = "Capacitaciones";
             this.tsmiCapacitaciones.Click += new System.EventHandler(this.tsmiCapacitaciones_Click);
 >>>>>>> 39b5d8574e7dcd8a509a3e489b847152cc0d1cef
-<<<<<<< HEAD
-=======
->>>>>>> 39f36b817de8c19f086ca1b3f4c3fc45606b1315
->>>>>>> dc7f9ed27d04076d4d7253664efbe3e48a2c1633
             // 
             // desarrolloDeUnEmpleadoToolStripMenuItem
             // 
@@ -644,11 +618,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiEmpleadosCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiReclutadosCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiNominaCatalogos;
-<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloDelPersonalCatalogos;
-=======
-        private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloDelPersonalCatalogo;
->>>>>>> dc7f9ed27d04076d4d7253664efbe3e48a2c1633
         private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionesCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiProcesos;
         private System.Windows.Forms.ToolStripMenuItem tsmiInformes;
