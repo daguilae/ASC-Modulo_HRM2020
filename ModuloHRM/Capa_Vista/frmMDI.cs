@@ -108,15 +108,21 @@ namespace Capa_Vista
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmCapacitacion());
         }
+   
 
-        private void tsmiPuestoProceso_Click(object sender, EventArgs e)
+        private void tsmiCatalogos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
+
         }
 
-        private void tsmiCompetenciaProceso_Click(object sender, EventArgs e)
+        private void tsmiDepartamentosEmpresariales_Click(object sender, EventArgs e)
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
+        }
+
+        private void tsmiPuestos_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
         }
     }
 
