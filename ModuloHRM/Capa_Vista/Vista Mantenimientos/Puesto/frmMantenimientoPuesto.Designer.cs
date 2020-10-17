@@ -32,17 +32,18 @@
             this.txtIDPuesto = new System.Windows.Forms.TextBox();
             this.lblIDepa = new System.Windows.Forms.Label();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombrePuesto = new System.Windows.Forms.TextBox();
+            this.cmbHorario = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblSalario = new System.Windows.Forms.Label();
             this.txtSalario = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbHorario = new System.Windows.Forms.ComboBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtNombrePuesto = new System.Windows.Forms.TextBox();
             this.gbxDatos.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Enabled = false;
             this.btnBuscar.Location = new System.Drawing.Point(247, 116);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
@@ -53,14 +54,17 @@
             // txtIDPuesto
             // 
             this.txtIDPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIDPuesto.Enabled = false;
             this.txtIDPuesto.Location = new System.Drawing.Point(109, 116);
             this.txtIDPuesto.Name = "txtIDPuesto";
             this.txtIDPuesto.Size = new System.Drawing.Size(122, 20);
             this.txtIDPuesto.TabIndex = 8;
+            this.txtIDPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblIDepa
             // 
             this.lblIDepa.AutoSize = true;
+            this.lblIDepa.Enabled = false;
             this.lblIDepa.Location = new System.Drawing.Point(25, 121);
             this.lblIDepa.Name = "lblIDepa";
             this.lblIDepa.Size = new System.Drawing.Size(54, 13);
@@ -82,22 +86,23 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos Del Puesto";
             // 
-            // lblNombre
+            // cmbHorario
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(22, 30);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(97, 13);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre del Puesto";
+            this.cmbHorario.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbHorario.FormattingEnabled = true;
+            this.cmbHorario.Location = new System.Drawing.Point(25, 152);
+            this.cmbHorario.Name = "cmbHorario";
+            this.cmbHorario.Size = new System.Drawing.Size(268, 21);
+            this.cmbHorario.TabIndex = 5;
             // 
-            // txtNombrePuesto
+            // label2
             // 
-            this.txtNombrePuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNombrePuesto.Location = new System.Drawing.Point(25, 46);
-            this.txtNombrePuesto.Name = "txtNombrePuesto";
-            this.txtNombrePuesto.Size = new System.Drawing.Size(268, 20);
-            this.txtNombrePuesto.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 136);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Horario";
             // 
             // lblSalario
             // 
@@ -115,24 +120,25 @@
             this.txtSalario.Name = "txtSalario";
             this.txtSalario.Size = new System.Drawing.Size(268, 20);
             this.txtSalario.TabIndex = 3;
+            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
-            // label2
+            // lblNombre
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Horario";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(22, 30);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(97, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre del Puesto";
             // 
-            // cmbHorario
+            // txtNombrePuesto
             // 
-            this.cmbHorario.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbHorario.FormattingEnabled = true;
-            this.cmbHorario.Location = new System.Drawing.Point(25, 152);
-            this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(268, 21);
-            this.cmbHorario.TabIndex = 5;
+            this.txtNombrePuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtNombrePuesto.Location = new System.Drawing.Point(25, 46);
+            this.txtNombrePuesto.Name = "txtNombrePuesto";
+            this.txtNombrePuesto.Size = new System.Drawing.Size(268, 20);
+            this.txtNombrePuesto.TabIndex = 1;
+            this.txtNombrePuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // frmMantenimientoPuesto
             // 

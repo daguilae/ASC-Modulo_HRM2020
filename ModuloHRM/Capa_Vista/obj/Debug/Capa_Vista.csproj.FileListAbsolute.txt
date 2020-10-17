@@ -88,3 +88,5 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclut
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmMostrarBancoTalento.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmMostrarEmpleado.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmMostrarReclutas.resources
+C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\Capa_Modelo.dll
+C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\Capa_Modelo.pdb
