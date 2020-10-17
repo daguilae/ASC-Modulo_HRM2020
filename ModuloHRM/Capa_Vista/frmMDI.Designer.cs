@@ -37,7 +37,7 @@
             this.tsmiEmpleadosCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReclutadosCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNominaCatalogos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDesarrolloDelPersonalCatalogos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDesarrolloDelPersonalCatalogo = new System.Windows.Forms.ToolStripMenuItem();
             this.desarrolloDeUnEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCapacitacionesCatalogos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBancoDeTalentoCatalogos = new System.Windows.Forms.ToolStripMenuItem();
@@ -130,7 +130,7 @@
             this.tsmiEmpleadosCatalogos,
             this.tsmiReclutadosCatalogos,
             this.tsmiNominaCatalogos,
-            this.tsmiDesarrolloDelPersonalCatalogos,
+            this.tsmiDesarrolloDelPersonalCatalogo,
             this.tsmiCapacitacionesCatalogos,
             this.tsmiBancoDeTalentoCatalogos,
             this.tsmiPuestosCatalogos,
@@ -161,14 +161,14 @@
             this.tsmiNominaCatalogos.Text = "Nómina";
             this.tsmiNominaCatalogos.Click += new System.EventHandler(this.tsmiNominaCatalogos_Click);
             // 
-            // tsmiDesarrolloDelPersonalCatalogos
+            // tsmiDesarrolloDelPersonalCatalogo
             // 
-            this.tsmiDesarrolloDelPersonalCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDesarrolloDelPersonalCatalogo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.desarrolloDeUnEmpleadoToolStripMenuItem});
-            this.tsmiDesarrolloDelPersonalCatalogos.Name = "tsmiDesarrolloDelPersonalCatalogos";
-            this.tsmiDesarrolloDelPersonalCatalogos.Size = new System.Drawing.Size(243, 22);
-            this.tsmiDesarrolloDelPersonalCatalogos.Text = "Desarrollo Del Personal";
-            this.tsmiDesarrolloDelPersonalCatalogos.Click += new System.EventHandler(this.tsmiDesarrolloDelPersonalCatalogos_Click);
+            this.tsmiDesarrolloDelPersonalCatalogo.Name = "tsmiDesarrolloDelPersonalCatalogo";
+            this.tsmiDesarrolloDelPersonalCatalogo.Size = new System.Drawing.Size(243, 22);
+            this.tsmiDesarrolloDelPersonalCatalogo.Text = "Desarrollo Del Personal";
+            this.tsmiDesarrolloDelPersonalCatalogo.Click += new System.EventHandler(this.tsmiDesarrolloDelPersonalCatalogos_Click);
             // 
             // desarrolloDeUnEmpleadoToolStripMenuItem
             // 
@@ -482,7 +482,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiEmpleadosCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiReclutadosCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiNominaCatalogos;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloDelPersonalCatalogos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloDelPersonalCatalogo;
         private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionesCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiProcesos;
         private System.Windows.Forms.ToolStripMenuItem tsmiInformes;
