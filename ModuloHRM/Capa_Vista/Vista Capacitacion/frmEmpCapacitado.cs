@@ -16,6 +16,18 @@ namespace Capa_Vista.Vista_Capacitacion
         {
             InitializeComponent();
         }
+        private void letra(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcLetras(e);
+        }
+        private void numero(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcNumeros(e);
+        }
 
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
