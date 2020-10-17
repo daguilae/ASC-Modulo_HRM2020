@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controlador Desarrollo\" />
+    <Folder Include="Controlador Nomina\" />
     <Folder Include="Controlador Reclutamiento\" />
   </ItemGroup>
   <ItemGroup>
