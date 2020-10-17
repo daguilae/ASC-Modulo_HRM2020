@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,11 @@ namespace Capa_Vista.Vista_Capacitacion
         private void lblTitulo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBuscarEmp_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

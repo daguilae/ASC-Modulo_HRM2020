@@ -138,12 +138,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(564, 327);
             this.Controls.Add(this.gbxFiltros);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lsvInfoBsqCap);
             this.Name = "frmBusquedaCap";
-            this.Text = "frmBusquedaCap";
+            this.Text = "Busqueda Capacitaciones";
             this.gbxFiltros.ResumeLayout(false);
             this.gbxFiltros.PerformLayout();
             this.ResumeLayout(false);
