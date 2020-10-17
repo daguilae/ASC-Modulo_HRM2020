@@ -53,6 +53,7 @@
             this.txtNombreDepa.Name = "txtNombreDepa";
             this.txtNombreDepa.Size = new System.Drawing.Size(268, 20);
             this.txtNombreDepa.TabIndex = 1;
+            this.txtNombreDepa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // gbxDatos
             // 
@@ -68,6 +69,7 @@
             // lblIDepa
             // 
             this.lblIDepa.AutoSize = true;
+            this.lblIDepa.Enabled = false;
             this.lblIDepa.Location = new System.Drawing.Point(12, 115);
             this.lblIDepa.Name = "lblIDepa";
             this.lblIDepa.Size = new System.Drawing.Size(88, 13);
@@ -77,6 +79,7 @@
             // txtIDepa
             // 
             this.txtIDepa.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIDepa.Enabled = false;
             this.txtIDepa.Location = new System.Drawing.Point(106, 112);
             this.txtIDepa.Name = "txtIDepa";
             this.txtIDepa.Size = new System.Drawing.Size(122, 20);
@@ -84,6 +87,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Enabled = false;
             this.btnBuscar.Location = new System.Drawing.Point(244, 112);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);

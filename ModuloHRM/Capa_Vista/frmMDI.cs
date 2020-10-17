@@ -49,11 +49,6 @@ namespace Capa_Vista
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
         }
 
-        private void desarrolloDeUnEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngreso());
-        }
-
         private void tsmiCapacitacionesCatalogos_Click(object sender, EventArgs e)
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmBusquedaCap());
@@ -110,11 +105,6 @@ namespace Capa_Vista
         }
    
 
-        private void tsmiCatalogos_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void tsmiDepartamentosEmpresariales_Click(object sender, EventArgs e)
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
@@ -123,6 +113,11 @@ namespace Capa_Vista
         private void tsmiPuestos_Click(object sender, EventArgs e)
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
+        }
+
+        private void tsmiDesarrolloDeUnEmpleado_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
         }
     }
 
