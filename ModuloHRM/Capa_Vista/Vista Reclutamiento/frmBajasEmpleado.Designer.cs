@@ -1,6 +1,6 @@
 ﻿namespace Capa_Vista.Vista_Reclutamiento
 {
-    partial class frmEmpleado
+    partial class frmBajasEmpleado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.tbcModificarEmpleado = new System.Windows.Forms.TabControl();
+            this.tbcDatosBajaEmpleado = new System.Windows.Forms.TabControl();
             this.tbpDatosGenerales = new System.Windows.Forms.TabPage();
             this.lblFotografia = new System.Windows.Forms.Label();
             this.pbxFotografia = new System.Windows.Forms.PictureBox();
@@ -41,17 +40,9 @@
             this.lblPuesto = new System.Windows.Forms.Label();
             this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
-            this.gbxSexo = new System.Windows.Forms.GroupBox();
-            this.txtSexo = new System.Windows.Forms.TextBox();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtNumeroIgss = new System.Windows.Forms.TextBox();
-            this.lblDpi = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.txtDpi = new System.Windows.Forms.TextBox();
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
             this.lblSegundoApellido = new System.Windows.Forms.Label();
-            this.lblNumeroIgss = new System.Windows.Forms.Label();
             this.txtSegundoApellido = new System.Windows.Forms.TextBox();
             this.txtPrimerNombre = new System.Windows.Forms.TextBox();
             this.txtSegundoNombre = new System.Windows.Forms.TextBox();
@@ -91,70 +82,71 @@
             this.lblTipoContrato = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
-            this.tbpDatosPersonales = new System.Windows.Forms.TabPage();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
-            this.gbxFormacionAcademica = new System.Windows.Forms.GroupBox();
-            this.txtNivelEstudios = new System.Windows.Forms.TextBox();
-            this.txtProfesion = new System.Windows.Forms.TextBox();
-            this.lblProfesion = new System.Windows.Forms.Label();
-            this.lblNivelEstudios = new System.Windows.Forms.Label();
-            this.gbxDomicilio = new System.Windows.Forms.GroupBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtCalleNumero = new System.Windows.Forms.TextBox();
-            this.lblCorreoElectronico = new System.Windows.Forms.Label();
-            this.lblDepartamento = new System.Windows.Forms.Label();
-            this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.lblCalleNumero = new System.Windows.Forms.Label();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
-            this.lblColonia = new System.Windows.Forms.Label();
-            this.lblPais = new System.Windows.Forms.Label();
-            this.txtColonia = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtPais = new System.Windows.Forms.TextBox();
-            this.lblEstadoCivil = new System.Windows.Forms.Label();
-            this.tbcModificarEmpleado.SuspendLayout();
+            this.tbpDespido = new System.Windows.Forms.TabPage();
+            this.rbtnDespido = new System.Windows.Forms.Button();
+            this.gbxPrestacionesDespido = new System.Windows.Forms.GroupBox();
+            this.dtpFechaDespido = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaDespido = new System.Windows.Forms.Label();
+            this.rtxtCausaDespido = new System.Windows.Forms.RichTextBox();
+            this.lblCausaDespido = new System.Windows.Forms.Label();
+            this.txtMontoVacDespido = new System.Windows.Forms.TextBox();
+            this.txtTiempoLaboradoDespido = new System.Windows.Forms.TextBox();
+            this.txtBono14Despido = new System.Windows.Forms.TextBox();
+            this.txtMontoAguinaldoDespido = new System.Windows.Forms.TextBox();
+            this.lblAguinaldoDespido = new System.Windows.Forms.Label();
+            this.lblVacacionesDespido = new System.Windows.Forms.Label();
+            this.rbtnNoDespido = new System.Windows.Forms.RadioButton();
+            this.lblBono14Despido = new System.Windows.Forms.Label();
+            this.rbtnSiDespido = new System.Windows.Forms.RadioButton();
+            this.lblTiempoLabDespido = new System.Windows.Forms.Label();
+            this.lblPreguntaVacacionesDespido = new System.Windows.Forms.Label();
+            this.rbpRenuncia = new System.Windows.Forms.TabPage();
+            this.gbxPrestacionesRenuncia = new System.Windows.Forms.GroupBox();
+            this.dtpFechaRenuncia = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaRenuncia = new System.Windows.Forms.Label();
+            this.txtMontoVacacionesRenuncia = new System.Windows.Forms.TextBox();
+            this.btnRenuncia = new System.Windows.Forms.Button();
+            this.txtTiempoLaboradoRenuncia = new System.Windows.Forms.TextBox();
+            this.txtMontoBono14Renuncia = new System.Windows.Forms.TextBox();
+            this.txtMontoAguinaldoRenuncia = new System.Windows.Forms.TextBox();
+            this.lblMontoAguinaldoRenuncia = new System.Windows.Forms.Label();
+            this.lblMontoVacaciones = new System.Windows.Forms.Label();
+            this.rbtnNoRenuncia = new System.Windows.Forms.RadioButton();
+            this.lblMontoBono14Renuncia = new System.Windows.Forms.Label();
+            this.rbtnSiRenuncia = new System.Windows.Forms.RadioButton();
+            this.lblTiempoLaboradoEmpresaRenuncia = new System.Windows.Forms.Label();
+            this.lblPreguntaVacacionesRenuncia = new System.Windows.Forms.Label();
+            this.tbcDatosBajaEmpleado.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).BeginInit();
             this.pnlPuesto.SuspendLayout();
-            this.gbxSexo.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
             this.tbpSalario.SuspendLayout();
             this.gbxDepositoNomina.SuspendLayout();
             this.gbxSalarioActual.SuspendLayout();
             this.tbpDatosContrato.SuspendLayout();
             this.gbxContrato.SuspendLayout();
-            this.tbpDatosPersonales.SuspendLayout();
-            this.gbxFormacionAcademica.SuspendLayout();
-            this.gbxDomicilio.SuspendLayout();
+            this.tbpDespido.SuspendLayout();
+            this.gbxPrestacionesDespido.SuspendLayout();
+            this.rbpRenuncia.SuspendLayout();
+            this.gbxPrestacionesRenuncia.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnModificar
+            // tbcDatosBajaEmpleado
             // 
-            this.btnModificar.Enabled = false;
-            this.btnModificar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(807, 448);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(121, 49);
-            this.btnModificar.TabIndex = 17;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // tbcModificarEmpleado
-            // 
-            this.tbcModificarEmpleado.Controls.Add(this.tbpDatosGenerales);
-            this.tbcModificarEmpleado.Controls.Add(this.tbpSalario);
-            this.tbcModificarEmpleado.Controls.Add(this.tbpDatosContrato);
-            this.tbcModificarEmpleado.Controls.Add(this.tbpDatosPersonales);
-            this.tbcModificarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbcModificarEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbcModificarEmpleado.Location = new System.Drawing.Point(0, 0);
-            this.tbcModificarEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbcModificarEmpleado.Name = "tbcModificarEmpleado";
-            this.tbcModificarEmpleado.SelectedIndex = 0;
-            this.tbcModificarEmpleado.Size = new System.Drawing.Size(932, 448);
-            this.tbcModificarEmpleado.TabIndex = 20;
+            this.tbcDatosBajaEmpleado.Controls.Add(this.tbpDatosGenerales);
+            this.tbcDatosBajaEmpleado.Controls.Add(this.tbpSalario);
+            this.tbcDatosBajaEmpleado.Controls.Add(this.tbpDatosContrato);
+            this.tbcDatosBajaEmpleado.Controls.Add(this.tbpDespido);
+            this.tbcDatosBajaEmpleado.Controls.Add(this.rbpRenuncia);
+            this.tbcDatosBajaEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbcDatosBajaEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbcDatosBajaEmpleado.Location = new System.Drawing.Point(0, 0);
+            this.tbcDatosBajaEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbcDatosBajaEmpleado.Name = "tbcDatosBajaEmpleado";
+            this.tbcDatosBajaEmpleado.SelectedIndex = 0;
+            this.tbcDatosBajaEmpleado.Size = new System.Drawing.Size(932, 473);
+            this.tbcDatosBajaEmpleado.TabIndex = 22;
             // 
             // tbpDatosGenerales
             // 
@@ -164,14 +156,13 @@
             this.tbpDatosGenerales.Controls.Add(this.txtIdBancoTalento);
             this.tbpDatosGenerales.Controls.Add(this.lblIngreseIDRecluta);
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
-            this.tbpDatosGenerales.Controls.Add(this.gbxSexo);
             this.tbpDatosGenerales.Controls.Add(this.pnlDatosGenerales);
             this.tbpDatosGenerales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosGenerales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
             this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpDatosGenerales.Size = new System.Drawing.Size(924, 415);
+            this.tbpDatosGenerales.Size = new System.Drawing.Size(924, 440);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
             this.tbpDatosGenerales.UseVisualStyleBackColor = true;
@@ -179,7 +170,7 @@
             // lblFotografia
             // 
             this.lblFotografia.AutoSize = true;
-            this.lblFotografia.Location = new System.Drawing.Point(737, 89);
+            this.lblFotografia.Location = new System.Drawing.Point(738, 64);
             this.lblFotografia.Name = "lblFotografia";
             this.lblFotografia.Size = new System.Drawing.Size(88, 20);
             this.lblFotografia.TabIndex = 28;
@@ -187,7 +178,7 @@
             // 
             // pbxFotografia
             // 
-            this.pbxFotografia.Location = new System.Drawing.Point(703, 129);
+            this.pbxFotografia.Location = new System.Drawing.Point(704, 104);
             this.pbxFotografia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbxFotografia.Name = "pbxFotografia";
             this.pbxFotografia.Size = new System.Drawing.Size(179, 153);
@@ -204,7 +195,7 @@
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtIdBancoTalento
             // 
@@ -229,7 +220,7 @@
             this.pnlPuesto.Controls.Add(this.lblPuesto);
             this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
-            this.pnlPuesto.Location = new System.Drawing.Point(465, 129);
+            this.pnlPuesto.Location = new System.Drawing.Point(467, 104);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPuesto.Name = "pnlPuesto";
             this.pnlPuesto.Size = new System.Drawing.Size(188, 153);
@@ -237,6 +228,7 @@
             // 
             // cmbTipoEntrevista
             // 
+            this.cmbTipoEntrevista.Enabled = false;
             this.cmbTipoEntrevista.FormattingEnabled = true;
             this.cmbTipoEntrevista.Location = new System.Drawing.Point(7, 109);
             this.cmbTipoEntrevista.Name = "cmbTipoEntrevista";
@@ -255,6 +247,7 @@
             // 
             // cmbDepartamentoTrabajo
             // 
+            this.cmbDepartamentoTrabajo.Enabled = false;
             this.cmbDepartamentoTrabajo.FormattingEnabled = true;
             this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(7, 46);
             this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
@@ -271,39 +264,10 @@
             this.lblDepartamentoTrabajo.TabIndex = 18;
             this.lblDepartamentoTrabajo.Text = "Departamento";
             // 
-            // gbxSexo
-            // 
-            this.gbxSexo.Controls.Add(this.txtSexo);
-            this.gbxSexo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSexo.Location = new System.Drawing.Point(465, 54);
-            this.gbxSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxSexo.Name = "gbxSexo";
-            this.gbxSexo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxSexo.Size = new System.Drawing.Size(188, 68);
-            this.gbxSexo.TabIndex = 23;
-            this.gbxSexo.TabStop = false;
-            this.gbxSexo.Text = "Sexo";
-            // 
-            // txtSexo
-            // 
-            this.txtSexo.Enabled = false;
-            this.txtSexo.Location = new System.Drawing.Point(3, 28);
-            this.txtSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSexo.Name = "txtSexo";
-            this.txtSexo.Size = new System.Drawing.Size(175, 27);
-            this.txtSexo.TabIndex = 1;
-            this.txtSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
             // pnlDatosGenerales
             // 
-            this.pnlDatosGenerales.Controls.Add(this.dtpFechaNacimiento);
-            this.pnlDatosGenerales.Controls.Add(this.txtNumeroIgss);
-            this.pnlDatosGenerales.Controls.Add(this.lblDpi);
-            this.pnlDatosGenerales.Controls.Add(this.lblFechaNacimiento);
-            this.pnlDatosGenerales.Controls.Add(this.txtDpi);
             this.pnlDatosGenerales.Controls.Add(this.txtPrimerApellido);
             this.pnlDatosGenerales.Controls.Add(this.lblSegundoApellido);
-            this.pnlDatosGenerales.Controls.Add(this.lblNumeroIgss);
             this.pnlDatosGenerales.Controls.Add(this.txtSegundoApellido);
             this.pnlDatosGenerales.Controls.Add(this.txtPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.txtSegundoNombre);
@@ -313,60 +277,12 @@
             this.pnlDatosGenerales.Location = new System.Drawing.Point(18, 54);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(417, 346);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(417, 228);
             this.pnlDatosGenerales.TabIndex = 22;
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Enabled = false;
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(49, 308);
-            this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(311, 27);
-            this.dtpFechaNacimiento.TabIndex = 24;
-            // 
-            // txtNumeroIgss
-            // 
-            this.txtNumeroIgss.Enabled = false;
-            this.txtNumeroIgss.Location = new System.Drawing.Point(200, 225);
-            this.txtNumeroIgss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNumeroIgss.Name = "txtNumeroIgss";
-            this.txtNumeroIgss.Size = new System.Drawing.Size(129, 27);
-            this.txtNumeroIgss.TabIndex = 23;
-            this.txtNumeroIgss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblDpi
-            // 
-            this.lblDpi.AutoSize = true;
-            this.lblDpi.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDpi.Location = new System.Drawing.Point(13, 187);
-            this.lblDpi.Name = "lblDpi";
-            this.lblDpi.Size = new System.Drawing.Size(36, 20);
-            this.lblDpi.TabIndex = 22;
-            this.lblDpi.Text = "DPI";
-            // 
-            // lblFechaNacimiento
-            // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(92, 275);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(174, 20);
-            this.lblFechaNacimiento.TabIndex = 21;
-            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
-            // 
-            // txtDpi
-            // 
-            this.txtDpi.Enabled = false;
-            this.txtDpi.Location = new System.Drawing.Point(200, 184);
-            this.txtDpi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDpi.Name = "txtDpi";
-            this.txtDpi.Size = new System.Drawing.Size(129, 27);
-            this.txtDpi.TabIndex = 12;
-            this.txtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtPrimerApellido
             // 
+            this.txtPrimerApellido.Enabled = false;
             this.txtPrimerApellido.Location = new System.Drawing.Point(200, 102);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
@@ -384,18 +300,9 @@
             this.lblSegundoApellido.TabIndex = 4;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
-            // lblNumeroIgss
-            // 
-            this.lblNumeroIgss.AutoSize = true;
-            this.lblNumeroIgss.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroIgss.Location = new System.Drawing.Point(13, 229);
-            this.lblNumeroIgss.Name = "lblNumeroIgss";
-            this.lblNumeroIgss.Size = new System.Drawing.Size(137, 20);
-            this.lblNumeroIgss.TabIndex = 11;
-            this.lblNumeroIgss.Text = "Número del Igss";
-            // 
             // txtSegundoApellido
             // 
+            this.txtSegundoApellido.Enabled = false;
             this.txtSegundoApellido.Location = new System.Drawing.Point(200, 145);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
@@ -405,6 +312,7 @@
             // 
             // txtPrimerNombre
             // 
+            this.txtPrimerNombre.Enabled = false;
             this.txtPrimerNombre.Location = new System.Drawing.Point(200, 16);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
@@ -414,6 +322,7 @@
             // 
             // txtSegundoNombre
             // 
+            this.txtSegundoNombre.Enabled = false;
             this.txtSegundoNombre.Location = new System.Drawing.Point(200, 61);
             this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
@@ -460,7 +369,7 @@
             this.tbpSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbpSalario.Name = "tbpSalario";
             this.tbpSalario.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpSalario.Size = new System.Drawing.Size(924, 415);
+            this.tbpSalario.Size = new System.Drawing.Size(924, 440);
             this.tbpSalario.TabIndex = 1;
             this.tbpSalario.Text = "Salario";
             this.tbpSalario.UseVisualStyleBackColor = true;
@@ -484,6 +393,7 @@
             // 
             // txtBancoOperador
             // 
+            this.txtBancoOperador.Enabled = false;
             this.txtBancoOperador.Location = new System.Drawing.Point(163, 37);
             this.txtBancoOperador.Name = "txtBancoOperador";
             this.txtBancoOperador.Size = new System.Drawing.Size(184, 27);
@@ -492,6 +402,7 @@
             // 
             // txtCuentaDeposito
             // 
+            this.txtCuentaDeposito.Enabled = false;
             this.txtCuentaDeposito.Location = new System.Drawing.Point(164, 116);
             this.txtCuentaDeposito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCuentaDeposito.Name = "txtCuentaDeposito";
@@ -501,6 +412,7 @@
             // 
             // txtNumRegistro
             // 
+            this.txtNumRegistro.Enabled = false;
             this.txtNumRegistro.Location = new System.Drawing.Point(164, 75);
             this.txtNumRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumRegistro.Name = "txtNumRegistro";
@@ -560,6 +472,7 @@
             // 
             // dtpFechaAplicacion
             // 
+            this.dtpFechaAplicacion.Enabled = false;
             this.dtpFechaAplicacion.Location = new System.Drawing.Point(194, 221);
             this.dtpFechaAplicacion.Name = "dtpFechaAplicacion";
             this.dtpFechaAplicacion.Size = new System.Drawing.Size(327, 27);
@@ -567,14 +480,16 @@
             // 
             // txtFormaPago
             // 
+            this.txtFormaPago.Enabled = false;
             this.txtFormaPago.Location = new System.Drawing.Point(194, 269);
             this.txtFormaPago.Name = "txtFormaPago";
             this.txtFormaPago.Size = new System.Drawing.Size(184, 27);
             this.txtFormaPago.TabIndex = 26;
-            this.txtFormaPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.txtFormaPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtSalarioDia
             // 
+            this.txtSalarioDia.Enabled = false;
             this.txtSalarioDia.Location = new System.Drawing.Point(194, 30);
             this.txtSalarioDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalarioDia.Name = "txtSalarioDia";
@@ -611,6 +526,7 @@
             // 
             // txtHorasDia
             // 
+            this.txtHorasDia.Enabled = false;
             this.txtHorasDia.Location = new System.Drawing.Point(194, 124);
             this.txtHorasDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtHorasDia.Name = "txtHorasDia";
@@ -638,6 +554,7 @@
             // 
             // txtSalarioHora
             // 
+            this.txtSalarioHora.Enabled = false;
             this.txtSalarioHora.Location = new System.Drawing.Point(194, 78);
             this.txtSalarioHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSalarioHora.Name = "txtSalarioHora";
@@ -656,6 +573,7 @@
             // 
             // txtDiasSemana
             // 
+            this.txtDiasSemana.Enabled = false;
             this.txtDiasSemana.Location = new System.Drawing.Point(194, 168);
             this.txtDiasSemana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiasSemana.Name = "txtDiasSemana";
@@ -674,13 +592,14 @@
             this.tbpDatosContrato.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosContrato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbpDatosContrato.Name = "tbpDatosContrato";
-            this.tbpDatosContrato.Size = new System.Drawing.Size(924, 415);
+            this.tbpDatosContrato.Size = new System.Drawing.Size(924, 440);
             this.tbpDatosContrato.TabIndex = 2;
             this.tbpDatosContrato.Text = "Datos Contrato";
             this.tbpDatosContrato.UseVisualStyleBackColor = true;
             // 
             // txtTipoJornada
             // 
+            this.txtTipoJornada.Enabled = false;
             this.txtTipoJornada.Location = new System.Drawing.Point(753, 54);
             this.txtTipoJornada.Name = "txtTipoJornada";
             this.txtTipoJornada.Size = new System.Drawing.Size(152, 27);
@@ -698,6 +617,7 @@
             // 
             // txtTipoTurno
             // 
+            this.txtTipoTurno.Enabled = false;
             this.txtTipoTurno.Location = new System.Drawing.Point(753, 99);
             this.txtTipoTurno.Name = "txtTipoTurno";
             this.txtTipoTurno.Size = new System.Drawing.Size(152, 27);
@@ -723,6 +643,7 @@
             // 
             // dtpFechaVencimiento
             // 
+            this.dtpFechaVencimiento.Enabled = false;
             this.dtpFechaVencimiento.Location = new System.Drawing.Point(220, 114);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(327, 27);
@@ -730,6 +651,7 @@
             // 
             // txtTipoContrato
             // 
+            this.txtTipoContrato.Enabled = false;
             this.txtTipoContrato.Location = new System.Drawing.Point(220, 23);
             this.txtTipoContrato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTipoContrato.Name = "txtTipoContrato";
@@ -739,6 +661,7 @@
             // 
             // dtpFechaInicio
             // 
+            this.dtpFechaInicio.Enabled = false;
             this.dtpFechaInicio.Location = new System.Drawing.Point(220, 64);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(327, 27);
@@ -780,238 +703,363 @@
             this.lblTurno.TabIndex = 26;
             this.lblTurno.Text = "Tipo de Turno";
             // 
-            // tbpDatosPersonales
+            // tbpDespido
             // 
-            this.tbpDatosPersonales.Controls.Add(this.cmbEstadoCivil);
-            this.tbpDatosPersonales.Controls.Add(this.gbxFormacionAcademica);
-            this.tbpDatosPersonales.Controls.Add(this.gbxDomicilio);
-            this.tbpDatosPersonales.Controls.Add(this.lblEstadoCivil);
-            this.tbpDatosPersonales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 29);
-            this.tbpDatosPersonales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpDatosPersonales.Name = "tbpDatosPersonales";
-            this.tbpDatosPersonales.Size = new System.Drawing.Size(924, 415);
-            this.tbpDatosPersonales.TabIndex = 3;
-            this.tbpDatosPersonales.Text = "Datos Personales";
-            this.tbpDatosPersonales.UseVisualStyleBackColor = true;
+            this.tbpDespido.Controls.Add(this.rbtnDespido);
+            this.tbpDespido.Controls.Add(this.gbxPrestacionesDespido);
+            this.tbpDespido.Location = new System.Drawing.Point(4, 29);
+            this.tbpDespido.Name = "tbpDespido";
+            this.tbpDespido.Size = new System.Drawing.Size(924, 440);
+            this.tbpDespido.TabIndex = 3;
+            this.tbpDespido.Text = "Despido";
+            this.tbpDespido.UseVisualStyleBackColor = true;
             // 
-            // cmbEstadoCivil
+            // rbtnDespido
             // 
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(613, 85);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(140, 28);
-            this.cmbEstadoCivil.TabIndex = 30;
+            this.rbtnDespido.Enabled = false;
+            this.rbtnDespido.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnDespido.Location = new System.Drawing.Point(735, 397);
+            this.rbtnDespido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtnDespido.Name = "rbtnDespido";
+            this.rbtnDespido.Size = new System.Drawing.Size(155, 40);
+            this.rbtnDespido.TabIndex = 22;
+            this.rbtnDespido.Text = "Realizar Despido";
+            this.rbtnDespido.UseVisualStyleBackColor = true;
+            this.rbtnDespido.Click += new System.EventHandler(this.rbtnDespido_Click);
             // 
-            // gbxFormacionAcademica
+            // gbxPrestacionesDespido
             // 
-            this.gbxFormacionAcademica.Controls.Add(this.txtNivelEstudios);
-            this.gbxFormacionAcademica.Controls.Add(this.txtProfesion);
-            this.gbxFormacionAcademica.Controls.Add(this.lblProfesion);
-            this.gbxFormacionAcademica.Controls.Add(this.lblNivelEstudios);
-            this.gbxFormacionAcademica.Location = new System.Drawing.Point(439, 187);
-            this.gbxFormacionAcademica.Name = "gbxFormacionAcademica";
-            this.gbxFormacionAcademica.Size = new System.Drawing.Size(470, 129);
-            this.gbxFormacionAcademica.TabIndex = 27;
-            this.gbxFormacionAcademica.TabStop = false;
-            this.gbxFormacionAcademica.Text = "Formación Académica";
+            this.gbxPrestacionesDespido.Controls.Add(this.dtpFechaDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblFechaDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.rtxtCausaDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblCausaDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.txtMontoVacDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.txtTiempoLaboradoDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.txtBono14Despido);
+            this.gbxPrestacionesDespido.Controls.Add(this.txtMontoAguinaldoDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblAguinaldoDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblVacacionesDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.rbtnNoDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblBono14Despido);
+            this.gbxPrestacionesDespido.Controls.Add(this.rbtnSiDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblTiempoLabDespido);
+            this.gbxPrestacionesDespido.Controls.Add(this.lblPreguntaVacacionesDespido);
+            this.gbxPrestacionesDespido.Location = new System.Drawing.Point(8, 17);
+            this.gbxPrestacionesDespido.Name = "gbxPrestacionesDespido";
+            this.gbxPrestacionesDespido.Size = new System.Drawing.Size(908, 375);
+            this.gbxPrestacionesDespido.TabIndex = 7;
+            this.gbxPrestacionesDespido.TabStop = false;
+            this.gbxPrestacionesDespido.Text = "Prestaciones";
             // 
-            // txtNivelEstudios
+            // dtpFechaDespido
             // 
-            this.txtNivelEstudios.Enabled = false;
-            this.txtNivelEstudios.Location = new System.Drawing.Point(174, 44);
-            this.txtNivelEstudios.Name = "txtNivelEstudios";
-            this.txtNivelEstudios.Size = new System.Drawing.Size(169, 27);
-            this.txtNivelEstudios.TabIndex = 29;
-            this.txtNivelEstudios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.dtpFechaDespido.Location = new System.Drawing.Point(208, 146);
+            this.dtpFechaDespido.Name = "dtpFechaDespido";
+            this.dtpFechaDespido.Size = new System.Drawing.Size(344, 27);
+            this.dtpFechaDespido.TabIndex = 24;
             // 
-            // txtProfesion
+            // lblFechaDespido
             // 
-            this.txtProfesion.Enabled = false;
-            this.txtProfesion.Location = new System.Drawing.Point(174, 89);
-            this.txtProfesion.Name = "txtProfesion";
-            this.txtProfesion.Size = new System.Drawing.Size(290, 27);
-            this.txtProfesion.TabIndex = 13;
-            this.txtProfesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.lblFechaDespido.AutoSize = true;
+            this.lblFechaDespido.Location = new System.Drawing.Point(6, 146);
+            this.lblFechaDespido.Name = "lblFechaDespido";
+            this.lblFechaDespido.Size = new System.Drawing.Size(149, 20);
+            this.lblFechaDespido.TabIndex = 23;
+            this.lblFechaDespido.Text = "Fecha de Despido";
             // 
-            // lblProfesion
+            // rtxtCausaDespido
             // 
-            this.lblProfesion.AutoSize = true;
-            this.lblProfesion.Location = new System.Drawing.Point(6, 91);
-            this.lblProfesion.Name = "lblProfesion";
-            this.lblProfesion.Size = new System.Drawing.Size(84, 20);
-            this.lblProfesion.TabIndex = 1;
-            this.lblProfesion.Text = "Profesión";
+            this.rtxtCausaDespido.Location = new System.Drawing.Point(10, 217);
+            this.rtxtCausaDespido.Name = "rtxtCausaDespido";
+            this.rtxtCausaDespido.Size = new System.Drawing.Size(892, 153);
+            this.rtxtCausaDespido.TabIndex = 12;
+            this.rtxtCausaDespido.Text = "";
             // 
-            // lblNivelEstudios
+            // lblCausaDespido
             // 
-            this.lblNivelEstudios.AutoSize = true;
-            this.lblNivelEstudios.Location = new System.Drawing.Point(6, 44);
-            this.lblNivelEstudios.Name = "lblNivelEstudios";
-            this.lblNivelEstudios.Size = new System.Drawing.Size(145, 20);
-            this.lblNivelEstudios.TabIndex = 0;
-            this.lblNivelEstudios.Text = "Nivel de Estudios";
+            this.lblCausaDespido.AutoSize = true;
+            this.lblCausaDespido.Location = new System.Drawing.Point(6, 194);
+            this.lblCausaDespido.Name = "lblCausaDespido";
+            this.lblCausaDespido.Size = new System.Drawing.Size(127, 20);
+            this.lblCausaDespido.TabIndex = 11;
+            this.lblCausaDespido.Text = "Causa Despido";
             // 
-            // gbxDomicilio
+            // txtMontoVacDespido
             // 
-            this.gbxDomicilio.Controls.Add(this.txtTelefono);
-            this.gbxDomicilio.Controls.Add(this.txtCalleNumero);
-            this.gbxDomicilio.Controls.Add(this.lblCorreoElectronico);
-            this.gbxDomicilio.Controls.Add(this.lblDepartamento);
-            this.gbxDomicilio.Controls.Add(this.txtCorreoElectronico);
-            this.gbxDomicilio.Controls.Add(this.lblCalleNumero);
-            this.gbxDomicilio.Controls.Add(this.txtDepartamento);
-            this.gbxDomicilio.Controls.Add(this.lblColonia);
-            this.gbxDomicilio.Controls.Add(this.lblPais);
-            this.gbxDomicilio.Controls.Add(this.txtColonia);
-            this.gbxDomicilio.Controls.Add(this.lblTelefono);
-            this.gbxDomicilio.Controls.Add(this.txtPais);
-            this.gbxDomicilio.Location = new System.Drawing.Point(19, 22);
-            this.gbxDomicilio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxDomicilio.Name = "gbxDomicilio";
-            this.gbxDomicilio.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxDomicilio.Size = new System.Drawing.Size(387, 294);
-            this.gbxDomicilio.TabIndex = 26;
-            this.gbxDomicilio.TabStop = false;
-            this.gbxDomicilio.Text = "Domicilio";
+            this.txtMontoVacDespido.Location = new System.Drawing.Point(675, 139);
+            this.txtMontoVacDespido.Name = "txtMontoVacDespido";
+            this.txtMontoVacDespido.Size = new System.Drawing.Size(161, 27);
+            this.txtMontoVacDespido.TabIndex = 10;
+            this.txtMontoVacDespido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
-            // txtTelefono
+            // txtTiempoLaboradoDespido
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(188, 247);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(129, 27);
-            this.txtTelefono.TabIndex = 23;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtTiempoLaboradoDespido.Location = new System.Drawing.Point(311, 105);
+            this.txtTiempoLaboradoDespido.Name = "txtTiempoLaboradoDespido";
+            this.txtTiempoLaboradoDespido.Size = new System.Drawing.Size(161, 27);
+            this.txtTiempoLaboradoDespido.TabIndex = 9;
+            this.txtTiempoLaboradoDespido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
-            // txtCalleNumero
+            // txtBono14Despido
             // 
-            this.txtCalleNumero.Location = new System.Drawing.Point(188, 18);
-            this.txtCalleNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCalleNumero.Name = "txtCalleNumero";
-            this.txtCalleNumero.Size = new System.Drawing.Size(184, 27);
-            this.txtCalleNumero.TabIndex = 5;
+            this.txtBono14Despido.Location = new System.Drawing.Point(311, 64);
+            this.txtBono14Despido.Name = "txtBono14Despido";
+            this.txtBono14Despido.Size = new System.Drawing.Size(161, 27);
+            this.txtBono14Despido.TabIndex = 8;
+            this.txtBono14Despido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
-            // lblCorreoElectronico
+            // txtMontoAguinaldoDespido
             // 
-            this.lblCorreoElectronico.AutoSize = true;
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(6, 206);
-            this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(161, 20);
-            this.lblCorreoElectronico.TabIndex = 22;
-            this.lblCorreoElectronico.Text = "Correo Electrónico";
+            this.txtMontoAguinaldoDespido.Location = new System.Drawing.Point(311, 26);
+            this.txtMontoAguinaldoDespido.Name = "txtMontoAguinaldoDespido";
+            this.txtMontoAguinaldoDespido.Size = new System.Drawing.Size(161, 27);
+            this.txtMontoAguinaldoDespido.TabIndex = 7;
+            this.txtMontoAguinaldoDespido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
-            // lblDepartamento
+            // lblAguinaldoDespido
             // 
-            this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Location = new System.Drawing.Point(6, 112);
-            this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(121, 20);
-            this.lblDepartamento.TabIndex = 3;
-            this.lblDepartamento.Text = "Departamento";
+            this.lblAguinaldoDespido.AutoSize = true;
+            this.lblAguinaldoDespido.Location = new System.Drawing.Point(6, 33);
+            this.lblAguinaldoDespido.Name = "lblAguinaldoDespido";
+            this.lblAguinaldoDespido.Size = new System.Drawing.Size(206, 20);
+            this.lblAguinaldoDespido.TabIndex = 0;
+            this.lblAguinaldoDespido.Text = "Monto Aguinaldo a Pagar";
             // 
-            // txtCorreoElectronico
+            // lblVacacionesDespido
             // 
-            this.txtCorreoElectronico.Enabled = false;
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(188, 199);
-            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(184, 27);
-            this.txtCorreoElectronico.TabIndex = 12;
+            this.lblVacacionesDespido.AutoSize = true;
+            this.lblVacacionesDespido.Location = new System.Drawing.Point(644, 107);
+            this.lblVacacionesDespido.Name = "lblVacacionesDespido";
+            this.lblVacacionesDespido.Size = new System.Drawing.Size(216, 20);
+            this.lblVacacionesDespido.TabIndex = 3;
+            this.lblVacacionesDespido.Text = "Monto Vacaciones a Pagar";
             // 
-            // lblCalleNumero
+            // rbtnNoDespido
             // 
-            this.lblCalleNumero.AutoSize = true;
-            this.lblCalleNumero.Location = new System.Drawing.Point(6, 26);
-            this.lblCalleNumero.Name = "lblCalleNumero";
-            this.lblCalleNumero.Size = new System.Drawing.Size(133, 20);
-            this.lblCalleNumero.TabIndex = 1;
-            this.lblCalleNumero.Text = "Calle y Número";
+            this.rbtnNoDespido.AutoSize = true;
+            this.rbtnNoDespido.Location = new System.Drawing.Point(804, 57);
+            this.rbtnNoDespido.Name = "rbtnNoDespido";
+            this.rbtnNoDespido.Size = new System.Drawing.Size(52, 24);
+            this.rbtnNoDespido.TabIndex = 6;
+            this.rbtnNoDespido.TabStop = true;
+            this.rbtnNoDespido.Text = "No";
+            this.rbtnNoDespido.UseVisualStyleBackColor = true;
             // 
-            // txtDepartamento
+            // lblBono14Despido
             // 
-            this.txtDepartamento.Location = new System.Drawing.Point(188, 105);
-            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(184, 27);
-            this.txtDepartamento.TabIndex = 7;
-            this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.lblBono14Despido.AutoSize = true;
+            this.lblBono14Despido.Location = new System.Drawing.Point(6, 69);
+            this.lblBono14Despido.Name = "lblBono14Despido";
+            this.lblBono14Despido.Size = new System.Drawing.Size(187, 20);
+            this.lblBono14Despido.TabIndex = 1;
+            this.lblBono14Despido.Text = "Monto Bono 14 a pagar";
             // 
-            // lblColonia
+            // rbtnSiDespido
             // 
-            this.lblColonia.AutoSize = true;
-            this.lblColonia.Location = new System.Drawing.Point(6, 71);
-            this.lblColonia.Name = "lblColonia";
-            this.lblColonia.Size = new System.Drawing.Size(71, 20);
-            this.lblColonia.TabIndex = 2;
-            this.lblColonia.Text = "Colonia";
+            this.rbtnSiDespido.AutoSize = true;
+            this.rbtnSiDespido.Location = new System.Drawing.Point(648, 59);
+            this.rbtnSiDespido.Name = "rbtnSiDespido";
+            this.rbtnSiDespido.Size = new System.Drawing.Size(44, 24);
+            this.rbtnSiDespido.TabIndex = 5;
+            this.rbtnSiDespido.TabStop = true;
+            this.rbtnSiDespido.Text = "Si";
+            this.rbtnSiDespido.UseVisualStyleBackColor = true;
             // 
-            // lblPais
+            // lblTiempoLabDespido
             // 
-            this.lblPais.AutoSize = true;
-            this.lblPais.Location = new System.Drawing.Point(6, 156);
-            this.lblPais.Name = "lblPais";
-            this.lblPais.Size = new System.Drawing.Size(41, 20);
-            this.lblPais.TabIndex = 4;
-            this.lblPais.Text = "Pais";
+            this.lblTiempoLabDespido.AutoSize = true;
+            this.lblTiempoLabDespido.Location = new System.Drawing.Point(6, 108);
+            this.lblTiempoLabDespido.Name = "lblTiempoLabDespido";
+            this.lblTiempoLabDespido.Size = new System.Drawing.Size(263, 20);
+            this.lblTiempoLabDespido.TabIndex = 2;
+            this.lblTiempoLabDespido.Text = "Tiempo Laborado en la Empresa";
             // 
-            // txtColonia
+            // lblPreguntaVacacionesDespido
             // 
-            this.txtColonia.Location = new System.Drawing.Point(188, 64);
-            this.txtColonia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtColonia.Name = "txtColonia";
-            this.txtColonia.Size = new System.Drawing.Size(184, 27);
-            this.txtColonia.TabIndex = 6;
-            this.txtColonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.lblPreguntaVacacionesDespido.AutoSize = true;
+            this.lblPreguntaVacacionesDespido.Location = new System.Drawing.Point(627, 23);
+            this.lblPreguntaVacacionesDespido.Name = "lblPreguntaVacacionesDespido";
+            this.lblPreguntaVacacionesDespido.Size = new System.Drawing.Size(272, 20);
+            this.lblPreguntaVacacionesDespido.TabIndex = 4;
+            this.lblPreguntaVacacionesDespido.Text = "Indique si ha Tomado Vacaciones";
             // 
-            // lblTelefono
+            // rbpRenuncia
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(6, 254);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(79, 20);
-            this.lblTelefono.TabIndex = 11;
-            this.lblTelefono.Text = "Teléfono";
+            this.rbpRenuncia.Controls.Add(this.gbxPrestacionesRenuncia);
+            this.rbpRenuncia.Location = new System.Drawing.Point(4, 29);
+            this.rbpRenuncia.Name = "rbpRenuncia";
+            this.rbpRenuncia.Size = new System.Drawing.Size(924, 440);
+            this.rbpRenuncia.TabIndex = 4;
+            this.rbpRenuncia.Text = "Renuncia";
+            this.rbpRenuncia.UseVisualStyleBackColor = true;
             // 
-            // txtPais
+            // gbxPrestacionesRenuncia
             // 
-            this.txtPais.Location = new System.Drawing.Point(188, 149);
-            this.txtPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPais.Name = "txtPais";
-            this.txtPais.Size = new System.Drawing.Size(184, 27);
-            this.txtPais.TabIndex = 8;
-            this.txtPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.dtpFechaRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblFechaRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.txtMontoVacacionesRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.btnRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.txtTiempoLaboradoRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.txtMontoBono14Renuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.txtMontoAguinaldoRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblMontoAguinaldoRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblMontoVacaciones);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.rbtnNoRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblMontoBono14Renuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.rbtnSiRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblTiempoLaboradoEmpresaRenuncia);
+            this.gbxPrestacionesRenuncia.Controls.Add(this.lblPreguntaVacacionesRenuncia);
+            this.gbxPrestacionesRenuncia.Location = new System.Drawing.Point(21, 16);
+            this.gbxPrestacionesRenuncia.Name = "gbxPrestacionesRenuncia";
+            this.gbxPrestacionesRenuncia.Size = new System.Drawing.Size(895, 366);
+            this.gbxPrestacionesRenuncia.TabIndex = 8;
+            this.gbxPrestacionesRenuncia.TabStop = false;
+            this.gbxPrestacionesRenuncia.Text = "Prestaciones";
             // 
-            // lblEstadoCivil
+            // dtpFechaRenuncia
             // 
-            this.lblEstadoCivil.AutoSize = true;
-            this.lblEstadoCivil.Location = new System.Drawing.Point(435, 89);
-            this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(103, 20);
-            this.lblEstadoCivil.TabIndex = 22;
-            this.lblEstadoCivil.Text = "Estado Civil";
+            this.dtpFechaRenuncia.Location = new System.Drawing.Point(14, 190);
+            this.dtpFechaRenuncia.Name = "dtpFechaRenuncia";
+            this.dtpFechaRenuncia.Size = new System.Drawing.Size(344, 27);
+            this.dtpFechaRenuncia.TabIndex = 23;
             // 
-            // frmEmpleado
+            // lblFechaRenuncia
+            // 
+            this.lblFechaRenuncia.AutoSize = true;
+            this.lblFechaRenuncia.Location = new System.Drawing.Point(10, 158);
+            this.lblFechaRenuncia.Name = "lblFechaRenuncia";
+            this.lblFechaRenuncia.Size = new System.Drawing.Size(157, 20);
+            this.lblFechaRenuncia.TabIndex = 22;
+            this.lblFechaRenuncia.Text = "Fecha de Renuncia";
+            // 
+            // txtMontoVacacionesRenuncia
+            // 
+            this.txtMontoVacacionesRenuncia.Location = new System.Drawing.Point(649, 151);
+            this.txtMontoVacacionesRenuncia.Name = "txtMontoVacacionesRenuncia";
+            this.txtMontoVacacionesRenuncia.Size = new System.Drawing.Size(161, 27);
+            this.txtMontoVacacionesRenuncia.TabIndex = 10;
+            this.txtMontoVacacionesRenuncia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // btnRenuncia
+            // 
+            this.btnRenuncia.Enabled = false;
+            this.btnRenuncia.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRenuncia.Location = new System.Drawing.Point(718, 305);
+            this.btnRenuncia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRenuncia.Name = "btnRenuncia";
+            this.btnRenuncia.Size = new System.Drawing.Size(155, 49);
+            this.btnRenuncia.TabIndex = 21;
+            this.btnRenuncia.Text = "Realizar Renuncia";
+            this.btnRenuncia.UseVisualStyleBackColor = true;
+            this.btnRenuncia.Click += new System.EventHandler(this.btnRenuncia_Click);
+            // 
+            // txtTiempoLaboradoRenuncia
+            // 
+            this.txtTiempoLaboradoRenuncia.Location = new System.Drawing.Point(311, 105);
+            this.txtTiempoLaboradoRenuncia.Name = "txtTiempoLaboradoRenuncia";
+            this.txtTiempoLaboradoRenuncia.Size = new System.Drawing.Size(161, 27);
+            this.txtTiempoLaboradoRenuncia.TabIndex = 9;
+            this.txtTiempoLaboradoRenuncia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            // 
+            // txtMontoBono14Renuncia
+            // 
+            this.txtMontoBono14Renuncia.Location = new System.Drawing.Point(311, 64);
+            this.txtMontoBono14Renuncia.Name = "txtMontoBono14Renuncia";
+            this.txtMontoBono14Renuncia.Size = new System.Drawing.Size(161, 27);
+            this.txtMontoBono14Renuncia.TabIndex = 8;
+            this.txtMontoBono14Renuncia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // txtMontoAguinaldoRenuncia
+            // 
+            this.txtMontoAguinaldoRenuncia.Location = new System.Drawing.Point(311, 26);
+            this.txtMontoAguinaldoRenuncia.Name = "txtMontoAguinaldoRenuncia";
+            this.txtMontoAguinaldoRenuncia.Size = new System.Drawing.Size(161, 27);
+            this.txtMontoAguinaldoRenuncia.TabIndex = 7;
+            this.txtMontoAguinaldoRenuncia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // lblMontoAguinaldoRenuncia
+            // 
+            this.lblMontoAguinaldoRenuncia.AutoSize = true;
+            this.lblMontoAguinaldoRenuncia.Location = new System.Drawing.Point(6, 33);
+            this.lblMontoAguinaldoRenuncia.Name = "lblMontoAguinaldoRenuncia";
+            this.lblMontoAguinaldoRenuncia.Size = new System.Drawing.Size(206, 20);
+            this.lblMontoAguinaldoRenuncia.TabIndex = 0;
+            this.lblMontoAguinaldoRenuncia.Text = "Monto Aguinaldo a Pagar";
+            // 
+            // lblMontoVacaciones
+            // 
+            this.lblMontoVacaciones.AutoSize = true;
+            this.lblMontoVacaciones.Location = new System.Drawing.Point(618, 119);
+            this.lblMontoVacaciones.Name = "lblMontoVacaciones";
+            this.lblMontoVacaciones.Size = new System.Drawing.Size(216, 20);
+            this.lblMontoVacaciones.TabIndex = 3;
+            this.lblMontoVacaciones.Text = "Monto Vacaciones a Pagar";
+            // 
+            // rbtnNoRenuncia
+            // 
+            this.rbtnNoRenuncia.AutoSize = true;
+            this.rbtnNoRenuncia.Location = new System.Drawing.Point(778, 69);
+            this.rbtnNoRenuncia.Name = "rbtnNoRenuncia";
+            this.rbtnNoRenuncia.Size = new System.Drawing.Size(52, 24);
+            this.rbtnNoRenuncia.TabIndex = 6;
+            this.rbtnNoRenuncia.TabStop = true;
+            this.rbtnNoRenuncia.Text = "No";
+            this.rbtnNoRenuncia.UseVisualStyleBackColor = true;
+            // 
+            // lblMontoBono14Renuncia
+            // 
+            this.lblMontoBono14Renuncia.AutoSize = true;
+            this.lblMontoBono14Renuncia.Location = new System.Drawing.Point(6, 69);
+            this.lblMontoBono14Renuncia.Name = "lblMontoBono14Renuncia";
+            this.lblMontoBono14Renuncia.Size = new System.Drawing.Size(187, 20);
+            this.lblMontoBono14Renuncia.TabIndex = 1;
+            this.lblMontoBono14Renuncia.Text = "Monto Bono 14 a pagar";
+            // 
+            // rbtnSiRenuncia
+            // 
+            this.rbtnSiRenuncia.AutoSize = true;
+            this.rbtnSiRenuncia.Location = new System.Drawing.Point(622, 71);
+            this.rbtnSiRenuncia.Name = "rbtnSiRenuncia";
+            this.rbtnSiRenuncia.Size = new System.Drawing.Size(44, 24);
+            this.rbtnSiRenuncia.TabIndex = 5;
+            this.rbtnSiRenuncia.TabStop = true;
+            this.rbtnSiRenuncia.Text = "Si";
+            this.rbtnSiRenuncia.UseVisualStyleBackColor = true;
+            // 
+            // lblTiempoLaboradoEmpresaRenuncia
+            // 
+            this.lblTiempoLaboradoEmpresaRenuncia.AutoSize = true;
+            this.lblTiempoLaboradoEmpresaRenuncia.Location = new System.Drawing.Point(6, 108);
+            this.lblTiempoLaboradoEmpresaRenuncia.Name = "lblTiempoLaboradoEmpresaRenuncia";
+            this.lblTiempoLaboradoEmpresaRenuncia.Size = new System.Drawing.Size(263, 20);
+            this.lblTiempoLaboradoEmpresaRenuncia.TabIndex = 2;
+            this.lblTiempoLaboradoEmpresaRenuncia.Text = "Tiempo Laborado en la Empresa";
+            // 
+            // lblPreguntaVacacionesRenuncia
+            // 
+            this.lblPreguntaVacacionesRenuncia.AutoSize = true;
+            this.lblPreguntaVacacionesRenuncia.Location = new System.Drawing.Point(601, 35);
+            this.lblPreguntaVacacionesRenuncia.Name = "lblPreguntaVacacionesRenuncia";
+            this.lblPreguntaVacacionesRenuncia.Size = new System.Drawing.Size(272, 20);
+            this.lblPreguntaVacacionesRenuncia.TabIndex = 4;
+            this.lblPreguntaVacacionesRenuncia.Text = "Indique si ha Tomado Vacaciones";
+            // 
+            // frmBajasEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 503);
-            this.Controls.Add(this.tbcModificarEmpleado);
-            this.Controls.Add(this.btnModificar);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(932, 471);
+            this.Controls.Add(this.tbcDatosBajaEmpleado);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmEmpleado";
-            this.Text = "frmEmpleado";
-            this.Load += new System.EventHandler(this.funcfrmEmpleado_Load);
-            this.tbcModificarEmpleado.ResumeLayout(false);
+            this.Name = "frmBajasEmpleado";
+            this.Text = "frmBajasEmpleado";
+            this.tbcDatosBajaEmpleado.ResumeLayout(false);
             this.tbpDatosGenerales.ResumeLayout(false);
             this.tbpDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).EndInit();
             this.pnlPuesto.ResumeLayout(false);
             this.pnlPuesto.PerformLayout();
-            this.gbxSexo.ResumeLayout(false);
-            this.gbxSexo.PerformLayout();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
             this.tbpSalario.ResumeLayout(false);
@@ -1023,19 +1071,19 @@
             this.tbpDatosContrato.PerformLayout();
             this.gbxContrato.ResumeLayout(false);
             this.gbxContrato.PerformLayout();
-            this.tbpDatosPersonales.ResumeLayout(false);
-            this.tbpDatosPersonales.PerformLayout();
-            this.gbxFormacionAcademica.ResumeLayout(false);
-            this.gbxFormacionAcademica.PerformLayout();
-            this.gbxDomicilio.ResumeLayout(false);
-            this.gbxDomicilio.PerformLayout();
+            this.tbpDespido.ResumeLayout(false);
+            this.gbxPrestacionesDespido.ResumeLayout(false);
+            this.gbxPrestacionesDespido.PerformLayout();
+            this.rbpRenuncia.ResumeLayout(false);
+            this.gbxPrestacionesRenuncia.ResumeLayout(false);
+            this.gbxPrestacionesRenuncia.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.TabControl tbcModificarEmpleado;
+
+        private System.Windows.Forms.TabControl tbcDatosBajaEmpleado;
         private System.Windows.Forms.TabPage tbpDatosGenerales;
         private System.Windows.Forms.Label lblFotografia;
         private System.Windows.Forms.PictureBox pbxFotografia;
@@ -1043,19 +1091,13 @@
         private System.Windows.Forms.TextBox txtIdBancoTalento;
         private System.Windows.Forms.Label lblIngreseIDRecluta;
         private System.Windows.Forms.Panel pnlPuesto;
+        private System.Windows.Forms.ComboBox cmbTipoEntrevista;
         private System.Windows.Forms.Label lblPuesto;
+        private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
         private System.Windows.Forms.Label lblDepartamentoTrabajo;
-        private System.Windows.Forms.GroupBox gbxSexo;
-        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Panel pnlDatosGenerales;
-        private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
-        private System.Windows.Forms.TextBox txtNumeroIgss;
-        private System.Windows.Forms.Label lblDpi;
-        private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.TextBox txtDpi;
         private System.Windows.Forms.TextBox txtPrimerApellido;
         private System.Windows.Forms.Label lblSegundoApellido;
-        private System.Windows.Forms.Label lblNumeroIgss;
         private System.Windows.Forms.TextBox txtSegundoApellido;
         private System.Windows.Forms.TextBox txtPrimerNombre;
         private System.Windows.Forms.TextBox txtSegundoNombre;
@@ -1064,12 +1106,15 @@
         private System.Windows.Forms.Label lblPrimerApellido;
         private System.Windows.Forms.TabPage tbpSalario;
         private System.Windows.Forms.GroupBox gbxDepositoNomina;
+        private System.Windows.Forms.TextBox txtBancoOperador;
         private System.Windows.Forms.TextBox txtCuentaDeposito;
         private System.Windows.Forms.TextBox txtNumRegistro;
         private System.Windows.Forms.Label lblCuentaDeposito;
         private System.Windows.Forms.Label lblNumRegistro;
         private System.Windows.Forms.Label lblBancoOperador;
         private System.Windows.Forms.GroupBox gbxSalarioActual;
+        private System.Windows.Forms.DateTimePicker dtpFechaAplicacion;
+        private System.Windows.Forms.TextBox txtFormaPago;
         private System.Windows.Forms.TextBox txtSalarioDia;
         private System.Windows.Forms.Label lblFechaAplicacion;
         private System.Windows.Forms.Label lblHorasDia;
@@ -1081,6 +1126,9 @@
         private System.Windows.Forms.Label lblFormaPago;
         private System.Windows.Forms.TextBox txtDiasSemana;
         private System.Windows.Forms.TabPage tbpDatosContrato;
+        private System.Windows.Forms.TextBox txtTipoJornada;
+        private System.Windows.Forms.Label lblJTipoJornada;
+        private System.Windows.Forms.TextBox txtTipoTurno;
         private System.Windows.Forms.GroupBox gbxContrato;
         private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
         private System.Windows.Forms.TextBox txtTipoContrato;
@@ -1089,34 +1137,39 @@
         private System.Windows.Forms.Label lblTipoContrato;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.Label lblTurno;
-        private System.Windows.Forms.TabPage tbpDatosPersonales;
-        private System.Windows.Forms.GroupBox gbxFormacionAcademica;
-        private System.Windows.Forms.TextBox txtNivelEstudios;
-        private System.Windows.Forms.TextBox txtProfesion;
-        private System.Windows.Forms.Label lblProfesion;
-        private System.Windows.Forms.Label lblNivelEstudios;
-        private System.Windows.Forms.GroupBox gbxDomicilio;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtCalleNumero;
-        private System.Windows.Forms.Label lblCorreoElectronico;
-        private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.TextBox txtCorreoElectronico;
-        private System.Windows.Forms.Label lblCalleNumero;
-        private System.Windows.Forms.TextBox txtDepartamento;
-        private System.Windows.Forms.Label lblColonia;
-        private System.Windows.Forms.Label lblPais;
-        private System.Windows.Forms.TextBox txtColonia;
-        private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox txtPais;
-        private System.Windows.Forms.Label lblEstadoCivil;
-        private System.Windows.Forms.TextBox txtBancoOperador;
-        private System.Windows.Forms.TextBox txtFormaPago;
-        private System.Windows.Forms.TextBox txtTipoJornada;
-        private System.Windows.Forms.Label lblJTipoJornada;
-        private System.Windows.Forms.TextBox txtTipoTurno;
-        private System.Windows.Forms.ComboBox cmbTipoEntrevista;
-        private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
-        private System.Windows.Forms.DateTimePicker dtpFechaAplicacion;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
+        private System.Windows.Forms.Button btnRenuncia;
+        private System.Windows.Forms.TabPage tbpDespido;
+        private System.Windows.Forms.TabPage rbpRenuncia;
+        private System.Windows.Forms.Button rbtnDespido;
+        private System.Windows.Forms.GroupBox gbxPrestacionesDespido;
+        private System.Windows.Forms.DateTimePicker dtpFechaDespido;
+        private System.Windows.Forms.Label lblFechaDespido;
+        private System.Windows.Forms.RichTextBox rtxtCausaDespido;
+        private System.Windows.Forms.Label lblCausaDespido;
+        private System.Windows.Forms.TextBox txtMontoVacDespido;
+        private System.Windows.Forms.TextBox txtTiempoLaboradoDespido;
+        private System.Windows.Forms.TextBox txtBono14Despido;
+        private System.Windows.Forms.TextBox txtMontoAguinaldoDespido;
+        private System.Windows.Forms.Label lblAguinaldoDespido;
+        private System.Windows.Forms.Label lblVacacionesDespido;
+        private System.Windows.Forms.RadioButton rbtnNoDespido;
+        private System.Windows.Forms.Label lblBono14Despido;
+        private System.Windows.Forms.RadioButton rbtnSiDespido;
+        private System.Windows.Forms.Label lblTiempoLabDespido;
+        private System.Windows.Forms.Label lblPreguntaVacacionesDespido;
+        private System.Windows.Forms.GroupBox gbxPrestacionesRenuncia;
+        private System.Windows.Forms.DateTimePicker dtpFechaRenuncia;
+        private System.Windows.Forms.Label lblFechaRenuncia;
+        private System.Windows.Forms.TextBox txtMontoVacacionesRenuncia;
+        private System.Windows.Forms.TextBox txtTiempoLaboradoRenuncia;
+        private System.Windows.Forms.TextBox txtMontoBono14Renuncia;
+        private System.Windows.Forms.TextBox txtMontoAguinaldoRenuncia;
+        private System.Windows.Forms.Label lblMontoAguinaldoRenuncia;
+        private System.Windows.Forms.Label lblMontoVacaciones;
+        private System.Windows.Forms.RadioButton rbtnNoRenuncia;
+        private System.Windows.Forms.Label lblMontoBono14Renuncia;
+        private System.Windows.Forms.RadioButton rbtnSiRenuncia;
+        private System.Windows.Forms.Label lblTiempoLaboradoEmpresaRenuncia;
+        private System.Windows.Forms.Label lblPreguntaVacacionesRenuncia;
     }
 }

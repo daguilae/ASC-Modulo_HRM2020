@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsValidacion.cs" />
     <Compile Include="frmMDI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +123,18 @@
     <Compile Include="Vista Nomina\frmNomina.Designer.cs">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Reclutamiento\frmBajasEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmBajasEmpleado.Designer.cs">
+      <DependentUpon>frmBajasEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmContratacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmContratacion.Designer.cs">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Reclutamiento\frmEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +146,30 @@
     </Compile>
     <Compile Include="Vista Reclutamiento\frmIngreso.Designer.cs">
       <DependentUpon>frmIngreso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmModificarRecluta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmModificarRecluta.Designer.cs">
+      <DependentUpon>frmModificarRecluta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarBancoTalento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarBancoTalento.Designer.cs">
+      <DependentUpon>frmMostrarBancoTalento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarEmpleado.Designer.cs">
+      <DependentUpon>frmMostrarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarReclutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmMostrarReclutas.Designer.cs">
+      <DependentUpon>frmMostrarReclutas.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />
@@ -183,11 +220,29 @@
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmBajasEmpleado.resx">
+      <DependentUpon>frmBajasEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmContratacion.resx">
+      <DependentUpon>frmContratacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmModificarRecluta.resx">
+      <DependentUpon>frmModificarRecluta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmMostrarBancoTalento.resx">
+      <DependentUpon>frmMostrarBancoTalento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmMostrarEmpleado.resx">
+      <DependentUpon>frmMostrarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmMostrarReclutas.resx">
+      <DependentUpon>frmMostrarReclutas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
