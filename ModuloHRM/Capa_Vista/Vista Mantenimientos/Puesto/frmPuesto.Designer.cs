@@ -59,6 +59,8 @@
             this.ClientSize = new System.Drawing.Size(852, 450);
             this.Controls.Add(this.dgvPuestos);
             this.Controls.Add(this.lblTitulo);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmPuesto";
             this.Text = "Puesto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();

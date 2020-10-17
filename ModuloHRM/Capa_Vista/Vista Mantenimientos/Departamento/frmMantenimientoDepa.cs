@@ -16,5 +16,15 @@ namespace Capa_Vista.Vista_Mantenimientos.Departamento
         {
             InitializeComponent();
         }
+
+        private void funcNumero(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcNumeros(e);
+        }
+
+        private void funcLetra(object sender, KeyPressEventArgs e)
+        {
+            clsValidacion.funcLetras(e);
+        }
     }
 }

@@ -71,6 +71,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.chtGraficos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEstadisticas";
             this.Text = "Estadísticas";
             ((System.ComponentModel.ISupportInitialize)(this.chtGraficos)).EndInit();
