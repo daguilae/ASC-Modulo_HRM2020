@@ -74,6 +74,12 @@
     <Compile Include="Vista Capacitacion\frmBusquedaCap.Designer.cs">
       <DependentUpon>frmBusquedaCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Desarrollo\frmCompetencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Desarrollo\frmCompetencias.Designer.cs">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Desarrollo\frmDesarrollo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,30 @@
     </Compile>
     <Compile Include="Vista Desarrollo\frmEstadisticas.Designer.cs">
       <DependentUpon>frmEstadisticas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Departamento\frmDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Departamento\frmDepartamento.Designer.cs">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.Designer.cs">
+      <DependentUpon>frmMantenimientoDepa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Puesto\frmMantenimientoPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Puesto\frmMantenimientoPuesto.Designer.cs">
+      <DependentUpon>frmMantenimientoPuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Puesto\frmPuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Mantenimientos\Puesto\frmPuesto.Designer.cs">
+      <DependentUpon>frmPuesto.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Nomina\frmNomina.cs">
       <SubType>Form</SubType>
@@ -129,11 +159,26 @@
     <EmbeddedResource Include="Vista Capacitacion\frmCapacitacion.resx">
       <DependentUpon>frmCapacitacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista Desarrollo\frmCompetencias.resx">
+      <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Desarrollo\frmDesarrollo.resx">
       <DependentUpon>frmDesarrollo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Desarrollo\frmEstadisticas.resx">
       <DependentUpon>frmEstadisticas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Mantenimientos\Departamento\frmDepartamento.resx">
+      <DependentUpon>frmDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.resx">
+      <DependentUpon>frmMantenimientoDepa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Mantenimientos\Puesto\frmMantenimientoPuesto.resx">
+      <DependentUpon>frmMantenimientoPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Mantenimientos\Puesto\frmPuesto.resx">
+      <DependentUpon>frmPuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>

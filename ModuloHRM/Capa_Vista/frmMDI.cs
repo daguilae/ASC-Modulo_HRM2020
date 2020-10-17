@@ -15,10 +15,9 @@ namespace Capa_Vista
         public frmMDI()
         {
             InitializeComponent();
-            pantallaCompleta();
         }
 
-        public void AbrirFormEnPanel(object Formhijo)
+        public void funcAbrirFormEnPanel(object Formhijo)
         {
             if (this.pnlContenedor.Controls.Count > 0)
                 this.pnlContenedor.Controls.RemoveAt(0);
@@ -30,54 +29,95 @@ namespace Capa_Vista
             fh.Show();
         }
 
-        int lx, ly;
-        int sw, sh;
-
-        private void tsmiReclutado_Click(object sender, EventArgs e)
+        private void tsmiEmpleadosCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngreso());
+            
         }
 
-        private void tsmiCapacitaciones_Click(object sender, EventArgs e)
+        private void tsmiReclutadosCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmEmpCapacitado());
+
         }
 
-        private void tsmiCursos_Click(object sender, EventArgs e)
+        private void tsmiNominaCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmCapacitacion());
+
         }
 
-        private void tsmiNomina_Click(object sender, EventArgs e)
+        private void tsmiDesarrolloDelPersonalCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmNomina());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
         }
 
-        private void tsmiCompetencias_Click(object sender, EventArgs e)
+        private void desarrolloDeUnEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngreso());
         }
 
-        private void tsmiEstadisticas_Click(object sender, EventArgs e)
+        private void tsmiCapacitacionesCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmEstadisticas());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmBusquedaCap());
         }
 
-        private void tsmiEmpleado_Click(object sender, EventArgs e)
+        private void tsmiBancoDeTalentoCatalogos_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmEmpleado());
+
         }
 
-        public void pantallaCompleta()
+        private void tsmiPuestosCatalogos_Click(object sender, EventArgs e)
         {
-            lx = this.Location.X;
-            ly = this.Location.Y;
-            sw = this.Size.Width;
-            sh = this.Size.Height;
-            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
-            this.Location = Screen.PrimaryScreen.WorkingArea.Location;
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmPuesto());
         }
 
+        private void tsmiDepartamentoCatalogos_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmDepartamento());
+        }
+
+        private void tsmiIniciarNomina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiDeduccionesPercepcciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiPagoAEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiCierreNómina_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiIngresarCompetencias_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
+        }
+
+        private void tsmiEstadísticas_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmEstadisticas());
+        }
+
+        private void tsmiIngresarNuevaCapacitacion_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmCapacitacion());
+        }
+
+        private void tsmiPuestoProceso_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
+        }
+
+        private void tsmiCompetenciaProceso_Click(object sender, EventArgs e)
+        {
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
+        }
     }
 
 }
