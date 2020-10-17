@@ -70,6 +70,7 @@
             this.btnAgregarCap.TabIndex = 1;
             this.btnAgregarCap.Text = "+";
             this.btnAgregarCap.UseVisualStyleBackColor = true;
+            this.btnAgregarCap.Click += new System.EventHandler(this.btnAgregarCap_Click);
             // 
             // lsvInfoCap
             // 
@@ -120,11 +121,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(570, 343);
             this.Controls.Add(this.btnAceptarCap);
             this.Controls.Add(this.gbxCapacitacion);
             this.Name = "frmCapacitacion";
-            this.Text = "frmCapacitacion";
+            this.Text = "Ingreso Capacitaciones";
             this.gbxCapacitacion.ResumeLayout(false);
             this.ResumeLayout(false);
 
