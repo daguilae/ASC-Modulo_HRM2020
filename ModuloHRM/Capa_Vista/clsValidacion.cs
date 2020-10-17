@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Capa_Vista
 {
-    class clsValidacion
+    public class clsValidacion
     {
 
         public static void funcLetras(KeyPressEventArgs v)
