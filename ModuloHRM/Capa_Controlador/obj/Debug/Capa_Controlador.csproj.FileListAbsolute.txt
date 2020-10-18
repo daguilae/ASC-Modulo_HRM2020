@@ -25,7 +25,6 @@ C:\Users\TheVolts\ASC\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.cspr
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.csproj.CopyComplete
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.dll
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.pdb
-<<<<<<< HEAD
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Controlador.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Controlador.pdb
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Modelo.dll
@@ -35,7 +34,6 @@ C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Cont
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.csproj.CopyComplete
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.pdb
-=======
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Controlador.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Controlador.pdb
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Controlador\bin\Debug\Capa_Modelo.dll
@@ -72,4 +70,3 @@ C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.csproj.CopyComplete
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Controlador\obj\Debug\Capa_Controlador.pdb
->>>>>>> da0c0c4d0f14a29478e4fcfca0771771dda83b18
