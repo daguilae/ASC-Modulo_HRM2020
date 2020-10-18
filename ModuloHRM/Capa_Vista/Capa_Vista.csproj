@@ -117,6 +117,18 @@
     <Compile Include="Vista Mantenimientos\Puesto\frmPuesto.Designer.cs">
       <DependentUpon>frmPuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Nomina\frmDeducPercep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Nomina\frmDeducPercep.Designer.cs">
+      <DependentUpon>frmDeducPercep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Nomina\frmEmpleadoNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Nomina\frmEmpleadoNomina.Designer.cs">
+      <DependentUpon>frmEmpleadoNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Nomina\frmNomina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +228,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Mantenimientos\Puesto\frmPuesto.resx">
       <DependentUpon>frmPuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Nomina\frmDeducPercep.resx">
+      <DependentUpon>frmDeducPercep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Nomina\frmEmpleadoNomina.resx">
+      <DependentUpon>frmEmpleadoNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
