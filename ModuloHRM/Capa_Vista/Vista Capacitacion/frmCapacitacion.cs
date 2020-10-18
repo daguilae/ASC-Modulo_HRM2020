@@ -16,5 +16,11 @@ namespace Capa_Vista.Vista_Capacitacion
         {
             InitializeComponent();
         }
+
+        private void btnAgregarCap_Click(object sender, EventArgs e)
+        {
+            frmEmpCapacitado emp = new frmEmpCapacitado();
+            emp.Show();
+        }
     }
 }

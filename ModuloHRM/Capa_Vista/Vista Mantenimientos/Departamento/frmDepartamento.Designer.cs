@@ -59,6 +59,8 @@
             this.ClientSize = new System.Drawing.Size(852, 450);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.dgvDepartamentos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDepartamento";
             this.Text = "Departamento";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();

@@ -29,20 +29,21 @@
         private void InitializeComponent()
         {
             this.gbxDatosCompetencia = new System.Windows.Forms.GroupBox();
+            this.lblFechaFin = new System.Windows.Forms.Label();
+            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaInicio = new System.Windows.Forms.Label();
+            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.dgvCompetencias = new System.Windows.Forms.DataGridView();
             this.lblIDEmpleado = new System.Windows.Forms.Label();
             this.gbxCompetencias = new System.Windows.Forms.GroupBox();
+            this.btnIngresarCompetencia = new System.Windows.Forms.Button();
             this.lblCompetencia = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.cmbCompetencias = new System.Windows.Forms.ComboBox();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.btnIngresarCompetencia = new System.Windows.Forms.Button();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.lblFechaFin = new System.Windows.Forms.Label();
-            this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.gbxDatosCompetencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
             this.gbxCompetencias.SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             // gbxDatosCompetencia
             // 
+            this.gbxDatosCompetencia.Controls.Add(this.btnBuscar);
             this.gbxDatosCompetencia.Controls.Add(this.lblFechaFin);
             this.gbxDatosCompetencia.Controls.Add(this.dtpFechaFin);
             this.gbxDatosCompetencia.Controls.Add(this.lblFechaInicio);
@@ -66,6 +68,40 @@
             this.gbxDatosCompetencia.TabIndex = 5;
             this.gbxDatosCompetencia.TabStop = false;
             this.gbxDatosCompetencia.Text = "Datos De Las Competencias Del Empleado";
+            // 
+            // lblFechaFin
+            // 
+            this.lblFechaFin.AutoSize = true;
+            this.lblFechaFin.Location = new System.Drawing.Point(420, 73);
+            this.lblFechaFin.Name = "lblFechaFin";
+            this.lblFechaFin.Size = new System.Drawing.Size(71, 13);
+            this.lblFechaFin.TabIndex = 8;
+            this.lblFechaFin.Text = "Fecha de Fin";
+            // 
+            // dtpFechaFin
+            // 
+            this.dtpFechaFin.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dtpFechaFin.Location = new System.Drawing.Point(357, 98);
+            this.dtpFechaFin.Name = "dtpFechaFin";
+            this.dtpFechaFin.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaFin.TabIndex = 7;
+            // 
+            // lblFechaInicio
+            // 
+            this.lblFechaInicio.AutoSize = true;
+            this.lblFechaInicio.Location = new System.Drawing.Point(118, 73);
+            this.lblFechaInicio.Name = "lblFechaInicio";
+            this.lblFechaInicio.Size = new System.Drawing.Size(83, 13);
+            this.lblFechaInicio.TabIndex = 6;
+            this.lblFechaInicio.Text = "Fecha de Inicio";
+            // 
+            // dtpFechaInicio
+            // 
+            this.dtpFechaInicio.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
+            this.dtpFechaInicio.Location = new System.Drawing.Point(65, 98);
+            this.dtpFechaInicio.Name = "dtpFechaInicio";
+            this.dtpFechaInicio.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaInicio.TabIndex = 5;
             // 
             // lblTitulo
             // 
@@ -84,6 +120,7 @@
             this.txtIDEmpleado.Name = "txtIDEmpleado";
             this.txtIDEmpleado.Size = new System.Drawing.Size(214, 20);
             this.txtIDEmpleado.TabIndex = 1;
+            this.txtIDEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // dgvCompetencias
             // 
@@ -116,6 +153,15 @@
             this.gbxCompetencias.TabStop = false;
             this.gbxCompetencias.Text = "Ingreso Competencia";
             // 
+            // btnIngresarCompetencia
+            // 
+            this.btnIngresarCompetencia.Location = new System.Drawing.Point(44, 176);
+            this.btnIngresarCompetencia.Name = "btnIngresarCompetencia";
+            this.btnIngresarCompetencia.Size = new System.Drawing.Size(109, 33);
+            this.btnIngresarCompetencia.TabIndex = 4;
+            this.btnIngresarCompetencia.Text = "INGRESAR";
+            this.btnIngresarCompetencia.UseVisualStyleBackColor = true;
+            // 
             // lblCompetencia
             // 
             this.lblCompetencia.AutoSize = true;
@@ -132,6 +178,7 @@
             this.txtResultado.Name = "txtResultado";
             this.txtResultado.Size = new System.Drawing.Size(164, 20);
             this.txtResultado.TabIndex = 2;
+            this.txtResultado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // cmbCompetencias
             // 
@@ -151,48 +198,14 @@
             this.lblResultado.TabIndex = 0;
             this.lblResultado.Text = "Resultado";
             // 
-            // btnIngresarCompetencia
+            // btnBuscar
             // 
-            this.btnIngresarCompetencia.Location = new System.Drawing.Point(44, 176);
-            this.btnIngresarCompetencia.Name = "btnIngresarCompetencia";
-            this.btnIngresarCompetencia.Size = new System.Drawing.Size(109, 33);
-            this.btnIngresarCompetencia.TabIndex = 4;
-            this.btnIngresarCompetencia.Text = "INGRESAR";
-            this.btnIngresarCompetencia.UseVisualStyleBackColor = true;
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(65, 98);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaInicio.TabIndex = 5;
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Location = new System.Drawing.Point(118, 73);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(83, 13);
-            this.lblFechaInicio.TabIndex = 6;
-            this.lblFechaInicio.Text = "Fecha de Inicio";
-            // 
-            // lblFechaFin
-            // 
-            this.lblFechaFin.AutoSize = true;
-            this.lblFechaFin.Location = new System.Drawing.Point(420, 73);
-            this.lblFechaFin.Name = "lblFechaFin";
-            this.lblFechaFin.Size = new System.Drawing.Size(71, 13);
-            this.lblFechaFin.TabIndex = 8;
-            this.lblFechaFin.Text = "Fecha de Fin";
-            // 
-            // dtpFechaFin
-            // 
-            this.dtpFechaFin.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dtpFechaFin.Location = new System.Drawing.Point(357, 98);
-            this.dtpFechaFin.Name = "dtpFechaFin";
-            this.dtpFechaFin.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaFin.TabIndex = 7;
+            this.btnBuscar.Location = new System.Drawing.Point(482, 28);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // frmCompetencias
             // 
@@ -231,5 +244,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }
