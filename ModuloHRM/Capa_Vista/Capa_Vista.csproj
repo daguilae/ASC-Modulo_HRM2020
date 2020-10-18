@@ -62,11 +62,23 @@
     <Compile Include="Vista Capacitacion\frmBusquedaCap.Designer.cs">
       <DependentUpon>frmBusquedaCap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Nomina\frmDeducciones_Percepciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Nomina\frmDeducciones_Percepciones.Designer.cs">
+      <DependentUpon>frmDeducciones_Percepciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Nomina\frmNomina.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista Nomina\frmNomina.Designer.cs">
       <DependentUpon>frmNomina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Nomina\frmPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Nomina\frmPlanilla.Designer.cs">
+      <DependentUpon>frmPlanilla.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Reclutamiento\frmEmpleado.cs">
       <SubType>Form</SubType>
@@ -99,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Capacitacion\frmCapacitacion.resx">
       <DependentUpon>frmCapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Nomina\frmDeducciones_Percepciones.resx">
+      <DependentUpon>frmDeducciones_Percepciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>

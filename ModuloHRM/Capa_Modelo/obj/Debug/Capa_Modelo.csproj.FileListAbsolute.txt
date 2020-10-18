@@ -16,3 +16,9 @@ C:\Users\TheVolts\ASC\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssembly
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CoreCompileInputs.cache
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
 C:\Users\TheVolts\ASC\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.dll
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.pdb
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssemblyReference.cache
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CoreCompileInputs.cache
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb
