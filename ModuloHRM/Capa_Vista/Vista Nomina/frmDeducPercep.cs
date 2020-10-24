@@ -16,5 +16,67 @@ namespace Capa_Vista.Vista_Nomina
         {
             InitializeComponent();
         }
+
+        bool Validado;
+        private void btnIngresoDedPer_Click(object sender, EventArgs e)
+        {
+            if (funcValidarCamposIngreso() == true)
+            {
+
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if(funcValidarCamposModificar() == true)
+            {
+
+            }
+        }
+
+        private bool funcValidarCamposIngreso()
+        {
+            if (rbtnDed.Checked == false && rbtnPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else if (txtIngresoNomCob.Text == "" || txtIngresoMontoCob.Text == "" || rtxtIngresoDescCob.Text == "")
+            {
+                funcMensajeCamposVacios();
+                Validado = false;
+            }
+            else
+            {
+                Validado = true;
+            }
+
+            return Validado;
+        }
+
+        private bool funcValidarCamposModificar()
+        {
+            if (rbtnModificarDed.Checked == false && rbtnModificarPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else if (txtModificarNomCob.Text == "" || txtModificarMontoCob.Text == "" || rtxtModificarDescCob.Text == "")
+            {
+                funcMensajeCamposVacios();
+                Validado = false;
+            }
+            else
+            {
+                Validado = true;
+            }
+
+            return Validado;
+        }
+
+        private void funcMensajeCamposVacios()
+        {
+            MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 }

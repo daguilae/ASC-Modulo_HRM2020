@@ -86,7 +86,7 @@
             this.tbcDeducPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbcDeducPer.Name = "tbcDeducPer";
             this.tbcDeducPer.SelectedIndex = 0;
-            this.tbcDeducPer.Size = new System.Drawing.Size(1000, 562);
+            this.tbcDeducPer.Size = new System.Drawing.Size(832, 532);
             this.tbcDeducPer.TabIndex = 1;
             // 
             // tbpIngresoDedPer
@@ -117,6 +117,7 @@
             this.btnIngresoDedPer.TabIndex = 16;
             this.btnIngresoDedPer.Text = "Ingresar";
             this.btnIngresoDedPer.UseVisualStyleBackColor = true;
+            this.btnIngresoDedPer.Click += new System.EventHandler(this.btnIngresoDedPer_Click);
             // 
             // txtIngresoMontoCob
             // 
@@ -246,6 +247,7 @@
             this.btnModificar.TabIndex = 16;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // txtModificarMontoCob
             // 
@@ -473,11 +475,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(832, 532);
             this.ControlBox = false;
             this.Controls.Add(this.tbcDeducPer);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDeducPercep";
             this.tbcDeducPer.ResumeLayout(false);
             this.tbpIngresoDedPer.ResumeLayout(false);
