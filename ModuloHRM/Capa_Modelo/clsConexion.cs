@@ -9,7 +9,7 @@ namespace Capa_Modelo
 {
     class clsConexion
     {
-        public OdbcConnection conexion()
+        public OdbcConnection funcconexion()
         {
             //creacion de la conexion via ODBC
             OdbcConnection conn = new OdbcConnection("Dsn=Prueba");
@@ -25,7 +25,7 @@ namespace Capa_Modelo
         }
 
         //metodo para cerrar la conexion
-        public void desconexion(OdbcConnection conn)
+        public void funcdesconexion(OdbcConnection conn)
         {
             try
             {

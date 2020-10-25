@@ -40,7 +40,7 @@
             this.lblIngresoTipoCob = new System.Windows.Forms.Label();
             this.gbxIngresoTipoCob = new System.Windows.Forms.GroupBox();
             this.rbtnDed = new System.Windows.Forms.RadioButton();
-            this.rbtnPerc = new System.Windows.Forms.RadioButton();
+            this.rbtnPer = new System.Windows.Forms.RadioButton();
             this.tbpModicarDedPer = new System.Windows.Forms.TabPage();
             this.btnBuscarModificar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.lblEliminarTipoCob = new System.Windows.Forms.Label();
             this.gbxEliminarTipoCob = new System.Windows.Forms.GroupBox();
             this.rbtnEliminarDed = new System.Windows.Forms.RadioButton();
-            this.rbtnPer = new System.Windows.Forms.RadioButton();
+            this.rbtnEliminarPer = new System.Windows.Forms.RadioButton();
             this.tbcDeducPer.SuspendLayout();
             this.tbpIngresoDedPer.SuspendLayout();
             this.gbxIngresoTipoCob.SuspendLayout();
@@ -104,7 +104,7 @@
             this.tbpIngresoDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpIngresoDedPer.Name = "tbpIngresoDedPer";
             this.tbpIngresoDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpIngresoDedPer.Size = new System.Drawing.Size(992, 529);
+            this.tbpIngresoDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpIngresoDedPer.TabIndex = 1;
             this.tbpIngresoDedPer.Text = "Ingreso";
             this.tbpIngresoDedPer.UseVisualStyleBackColor = true;
@@ -180,7 +180,7 @@
             // gbxIngresoTipoCob
             // 
             this.gbxIngresoTipoCob.Controls.Add(this.rbtnDed);
-            this.gbxIngresoTipoCob.Controls.Add(this.rbtnPerc);
+            this.gbxIngresoTipoCob.Controls.Add(this.rbtnPer);
             this.gbxIngresoTipoCob.Location = new System.Drawing.Point(173, 7);
             this.gbxIngresoTipoCob.Name = "gbxIngresoTipoCob";
             this.gbxIngresoTipoCob.Size = new System.Drawing.Size(279, 43);
@@ -198,16 +198,16 @@
             this.rbtnDed.Text = "Deducción";
             this.rbtnDed.UseVisualStyleBackColor = true;
             // 
-            // rbtnPerc
+            // rbtnPer
             // 
-            this.rbtnPerc.AutoSize = true;
-            this.rbtnPerc.Location = new System.Drawing.Point(153, 15);
-            this.rbtnPerc.Name = "rbtnPerc";
-            this.rbtnPerc.Size = new System.Drawing.Size(120, 24);
-            this.rbtnPerc.TabIndex = 1;
-            this.rbtnPerc.TabStop = true;
-            this.rbtnPerc.Text = "Percepción";
-            this.rbtnPerc.UseVisualStyleBackColor = true;
+            this.rbtnPer.AutoSize = true;
+            this.rbtnPer.Location = new System.Drawing.Point(153, 15);
+            this.rbtnPer.Name = "rbtnPer";
+            this.rbtnPer.Size = new System.Drawing.Size(120, 24);
+            this.rbtnPer.TabIndex = 1;
+            this.rbtnPer.TabStop = true;
+            this.rbtnPer.Text = "Percepción";
+            this.rbtnPer.UseVisualStyleBackColor = true;
             // 
             // tbpModicarDedPer
             // 
@@ -225,7 +225,7 @@
             this.tbpModicarDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpModicarDedPer.Name = "tbpModicarDedPer";
             this.tbpModicarDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpModicarDedPer.Size = new System.Drawing.Size(992, 529);
+            this.tbpModicarDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpModicarDedPer.TabIndex = 2;
             this.tbpModicarDedPer.Text = "Modificar";
             this.tbpModicarDedPer.UseVisualStyleBackColor = true;
@@ -238,6 +238,7 @@
             this.btnBuscarModificar.TabIndex = 17;
             this.btnBuscarModificar.Text = "Buscar";
             this.btnBuscarModificar.UseVisualStyleBackColor = true;
+            this.btnBuscarModificar.Click += new System.EventHandler(this.btnBuscarModificar_Click);
             // 
             // btnModificar
             // 
@@ -368,6 +369,7 @@
             this.btnEliminarBuscar.TabIndex = 17;
             this.btnEliminarBuscar.Text = "Buscar";
             this.btnEliminarBuscar.UseVisualStyleBackColor = true;
+            this.btnEliminarBuscar.Click += new System.EventHandler(this.btnEliminarBuscar_Click);
             // 
             // btnEliminar
             // 
@@ -441,7 +443,7 @@
             // gbxEliminarTipoCob
             // 
             this.gbxEliminarTipoCob.Controls.Add(this.rbtnEliminarDed);
-            this.gbxEliminarTipoCob.Controls.Add(this.rbtnPer);
+            this.gbxEliminarTipoCob.Controls.Add(this.rbtnEliminarPer);
             this.gbxEliminarTipoCob.Enabled = false;
             this.gbxEliminarTipoCob.Location = new System.Drawing.Point(173, 7);
             this.gbxEliminarTipoCob.Name = "gbxEliminarTipoCob";
@@ -460,16 +462,16 @@
             this.rbtnEliminarDed.Text = "Deducción";
             this.rbtnEliminarDed.UseVisualStyleBackColor = true;
             // 
-            // rbtnPer
+            // rbtnEliminarPer
             // 
-            this.rbtnPer.AutoSize = true;
-            this.rbtnPer.Location = new System.Drawing.Point(153, 15);
-            this.rbtnPer.Name = "rbtnPer";
-            this.rbtnPer.Size = new System.Drawing.Size(120, 24);
-            this.rbtnPer.TabIndex = 1;
-            this.rbtnPer.TabStop = true;
-            this.rbtnPer.Text = "Percepción";
-            this.rbtnPer.UseVisualStyleBackColor = true;
+            this.rbtnEliminarPer.AutoSize = true;
+            this.rbtnEliminarPer.Location = new System.Drawing.Point(153, 15);
+            this.rbtnEliminarPer.Name = "rbtnEliminarPer";
+            this.rbtnEliminarPer.Size = new System.Drawing.Size(120, 24);
+            this.rbtnEliminarPer.TabIndex = 1;
+            this.rbtnEliminarPer.TabStop = true;
+            this.rbtnEliminarPer.Text = "Percepción";
+            this.rbtnEliminarPer.UseVisualStyleBackColor = true;
             // 
             // frmDeducPercep
             // 
@@ -512,7 +514,7 @@
         private System.Windows.Forms.Label lblIngresoTipoCob;
         private System.Windows.Forms.GroupBox gbxIngresoTipoCob;
         private System.Windows.Forms.RadioButton rbtnDed;
-        private System.Windows.Forms.RadioButton rbtnPerc;
+        private System.Windows.Forms.RadioButton rbtnPer;
         private System.Windows.Forms.TabPage tbpModicarDedPer;
         private System.Windows.Forms.Button btnBuscarModificar;
         private System.Windows.Forms.Button btnModificar;
@@ -538,6 +540,6 @@
         private System.Windows.Forms.Label lblEliminarTipoCob;
         private System.Windows.Forms.GroupBox gbxEliminarTipoCob;
         private System.Windows.Forms.RadioButton rbtnEliminarDed;
-        private System.Windows.Forms.RadioButton rbtnPer;
+        private System.Windows.Forms.RadioButton rbtnEliminarPer;
     }
 }
