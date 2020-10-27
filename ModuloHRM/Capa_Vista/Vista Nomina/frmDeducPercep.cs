@@ -21,15 +21,18 @@ namespace Capa_Vista.Vista_Nomina
 
         clsControladorNomina ConsNom = new clsControladorNomina();
 
-        string NombreCob, DescCob;
+        string NombreCob, DescCob, NomOriginalCob;
         double MontoCob;
         bool Validado;
         private void btnIngresoDedPer_Click(object sender, EventArgs e)
         {
             if (funcValidarCamposIngreso() == true)
             {
-                funcObtenerDatos();
-                if(rbtnDed.Checked == true)
+                NombreCob = txtIngresoNomCob.Text;
+                MontoCob = Convert.ToDouble(txtIngresoMontoCob.Text);
+                DescCob = rtxtIngresoDescCob.Text;
+
+                if (rbtnDed.Checked == true)
                 {
                     ConsNom.funcInsertarDeduccion(NombreCob, MontoCob, DescCob);
                 }
@@ -45,64 +48,29 @@ namespace Capa_Vista.Vista_Nomina
         {
             if(funcValidarCamposModificar() == true)
             {
+                NombreCob = txtModificarNomCob.Text;
+                MontoCob = Convert.ToDouble(txtModificarMontoCob.Text);
+                DescCob = rtxtModificarDescCob.Text;
 
+                if (rbtnModificarDed.Checked == true)
+                {
+                    ConsNom.funcModificarDeduccion(NombreCob, MontoCob, DescCob, NomOriginalCob);
+                }
+                else if (rbtnModificarPer.Checked == true)
+                {
+                    ConsNom.funcModificarPercepcion(NombreCob, MontoCob, DescCob, NomOriginalCob);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el tipo de cobro para realizar la busqueda.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                funcLimpiarCampos();
             }
-        }
-
-        private bool funcValidarCamposIngreso()
-        {
-            if (rbtnDed.Checked == false && rbtnPer.Checked == false)
-            {
-                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Validado = false;
-            }
-            else if (txtIngresoNomCob.Text == "" || txtIngresoMontoCob.Text == "" || rtxtIngresoDescCob.Text == "")
-            {
-                funcMensajeCamposVacios();
-                Validado = false;
-            }
-            else
-            {
-                Validado = true;
-            }
-
-            return Validado;
-        }
-
-        private bool funcValidarCamposModificar()
-        {
-            if (rbtnModificarDed.Checked == false && rbtnModificarPer.Checked == false)
-            {
-                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Validado = false;
-            }
-            else if (txtModificarNomCob.Text == "" || txtModificarMontoCob.Text == "" || rtxtModificarDescCob.Text == "")
-            {
-                funcMensajeCamposVacios();
-                Validado = false;
-            }
-            else
-            {
-                Validado = true;
-            }
-
-            return Validado;
-        }
-
-        private void funcMensajeCamposVacios()
-        {
-            MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void funcObtenerDatos()
-        {
-            NombreCob = txtIngresoNomCob.Text;
-            MontoCob = Convert.ToDouble(txtIngresoMontoCob.Text);
-            DescCob = rtxtIngresoDescCob.Text;
         }
 
         private void btnBuscarModificar_Click(object sender, EventArgs e)
         {
+            NomOriginalCob = txtModificarNomCob.Text;
             if (rbtnModificarDed.Checked == true)
             {
                 OdbcDataReader Lector = ConsNom.funcBuscarDeduccion(txtModificarNomCob.Text);
@@ -122,19 +90,7 @@ namespace Capa_Vista.Vista_Nomina
             }
             else if (rbtnModificarPer.Checked == true)
             {
-
-            }
-            else
-            {
-
-            }
-        }
-
-        private void btnEliminarBuscar_Click(object sender, EventArgs e)
-        {
-            if (rbtnEliminarDed.Checked == true)
-            {
-                OdbcDataReader Lector = ConsNom.funcBuscarDeduccion(txtModificarNomCob.Text);
+                OdbcDataReader Lector = ConsNom.funcBuscarPercepcion(txtModificarNomCob.Text);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())
@@ -146,17 +102,135 @@ namespace Capa_Vista.Vista_Nomina
                 }
                 else
                 {
+                    MessageBox.Show("ERROR: El nombre de la percepcion no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione el tipo de cobro para realizar la busqueda..", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (funcValidarCamposEliminar() == true)
+            {
+                if (rbtnEliminarDed.Checked == true)
+                {
+                    ConsNom.funcEliminarDeduccion(txtEliminarNomCob.Text);
+                }
+                else if (rbtnEliminarPer.Checked == true)
+                {
+                    ConsNom.funcEliminarPercepcion(txtEliminarNomCob.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione el tipo de cobro que desea eliminar.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                funcLimpiarCampos();
+            }
+        }
+
+        private void btnEliminarBuscar_Click(object sender, EventArgs e)
+        {
+            if (rbtnEliminarDed.Checked == true)
+            {
+                OdbcDataReader Lector = ConsNom.funcBuscarDeduccion(txtEliminarNomCob.Text);
+                if (Lector.HasRows == true)
+                {
+                    while (Lector.Read())
+                    {
+                        txtEliminarNomCob.Text = Lector.GetString(0);
+                        txtEliminarMontoCob.Text = Convert.ToString(Lector.GetDouble(1));
+                        rtxtEliminarDescCob.Text = Lector.GetString(2);
+                    }
+                }
+                else
+                {
                     MessageBox.Show("ERROR: El nombre de la deducción no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else if (rbtnEliminarPer.Checked == true)
             {
-
+                OdbcDataReader Lector = ConsNom.funcBuscarPercepcion(txtEliminarNomCob.Text);
+                if (Lector.HasRows == true)
+                {
+                    while (Lector.Read())
+                    {
+                        txtEliminarNomCob.Text = Lector.GetString(0);
+                        txtEliminarMontoCob.Text = Convert.ToString(Lector.GetDouble(1));
+                        rtxtEliminarDescCob.Text = Lector.GetString(2);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: El nombre de la percepcion no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-
+                MessageBox.Show("Seleccione el tipo de cobro que desea eliminar.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private bool funcValidarCamposIngreso()
+        {
+            if (rbtnDed.Checked == false && rbtnPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else if (txtIngresoNomCob.Text == "" || txtIngresoMontoCob.Text == "" || rtxtIngresoDescCob.Text == "")
+            {
+                MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else
+            {
+                Validado = true;
+            }
+
+            return Validado;
+        }
+
+        private bool funcValidarCamposModificar()
+        {
+            if (rbtnModificarDed.Checked == false && rbtnModificarPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else if (txtModificarNomCob.Text == "" || txtModificarMontoCob.Text == "" || rtxtModificarDescCob.Text == "")
+            {
+                MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else
+            {
+                Validado = true;
+            }
+
+            return Validado;
+        }
+
+        private bool funcValidarCamposEliminar()
+        {
+            if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else if (txtEliminarNomCob.Text == "" || txtEliminarMontoCob.Text == "" || rtxtEliminarDescCob.Text == "")
+            {
+                MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Validado = false;
+            }
+            else
+            {
+                Validado = true;
+            }
+
+            return Validado;
         }
 
         private void funcLimpiarCampos()

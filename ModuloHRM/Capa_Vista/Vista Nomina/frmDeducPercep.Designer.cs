@@ -379,6 +379,7 @@
             this.btnEliminar.TabIndex = 16;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // txtEliminarMontoCob
             // 
@@ -444,7 +445,6 @@
             // 
             this.gbxEliminarTipoCob.Controls.Add(this.rbtnEliminarDed);
             this.gbxEliminarTipoCob.Controls.Add(this.rbtnEliminarPer);
-            this.gbxEliminarTipoCob.Enabled = false;
             this.gbxEliminarTipoCob.Location = new System.Drawing.Point(173, 7);
             this.gbxEliminarTipoCob.Name = "gbxEliminarTipoCob";
             this.gbxEliminarTipoCob.Size = new System.Drawing.Size(279, 43);

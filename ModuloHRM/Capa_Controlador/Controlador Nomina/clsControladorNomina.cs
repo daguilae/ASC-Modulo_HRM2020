@@ -12,21 +12,46 @@ namespace Capa_Controlador.Controlador_Nomina
 {
     public class clsControladorNomina
     {
-        clsConsultasNomina consulta = new clsConsultasNomina();
+        clsConsultasNomina Consulta = new clsConsultasNomina();
 
-        public void funcInsertarDeduccion(string nom, double monto, string desc)
+        public void funcInsertarDeduccion(string Nom, double Monto, string Desc)
         {
-            consulta.funIngresarDededuccion(nom, monto, desc);
+            Consulta.funIngresarDededuccion(Nom, Monto, Desc);
         }
-        public void funcInsertarPercepcion(string nom, double monto, string desc)
+        public void funcInsertarPercepcion(string Nom, double Monto, string Desc)
         {
-            consulta.funIngresarPercepcion(nom, monto, desc);
+            Consulta.funIngresarPercepcion(Nom, Monto, Desc);
         }
-
-        public OdbcDataReader funcBuscarDeduccion(string nom)
+        public OdbcDataReader funcBuscarDeduccion(string Nom)
         {
-            OdbcDataReader Lector = consulta.funcModificarDeduccion(nom);
+            OdbcDataReader Lector = Consulta.funcBuscarDeduccion(Nom);
             return Lector;
+        }
+
+        public OdbcDataReader funcBuscarPercepcion(string Nom)
+        {
+            OdbcDataReader Lector = Consulta.funcBuscarPercepcion(Nom);
+            return Lector;
+        }
+
+        public void funcModificarDeduccion(string Nom, double Monto, string Desc, string NomAnt)
+        {
+            Consulta.funcModificarDeduccion(Nom, Monto, Desc, NomAnt);
+        }
+
+        public void funcModificarPercepcion(string Nom, double Monto, string Desc, string NomAnt)
+        {
+            Consulta.funcModificarPercepcion(Nom, Monto, Desc, NomAnt);
+        }
+
+        public void funcEliminarDeduccion(string Nom)
+        {
+            Consulta.funcEliminarDeduccion(Nom);
+        }
+
+        public void funcEliminarPercepcion(string Nom)
+        {
+            Consulta.funcEliminarPercepcion(Nom);
         }
     }
 }
