@@ -20,7 +20,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (txtIdBancoTalento.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (txtIdEmpleado.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
                 btnModificar.Enabled = true;
@@ -32,7 +32,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void btnModificar_Click(object sender, EventArgs e)
         {
 
-            if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtPrimerApellido.Text == "" || txtSegundoApellido.Text == "" || txtSalarioDia.Text == "" || txtSalarioHora.Text == "" || txtHorasDia.Text == "" || txtDiasSemana.Text == "" || txtFormaPago.Text == "" || txtBancoOperador.Text=="" || txtNumRegistro.Text=="" || txtCuentaDeposito.Text=="" ||  txtTipoContrato.Text == "" || txtTipoJornada.Text=="" || txtTipoTurno.Text=="" || txtCalleNumero.Text == "" || txtColonia.Text == "" || txtDepartamento.Text == "" || txtPais.Text == "" || txtCorreoElectronico.Text == "" ||  txtTelefono.Text == "" || txtNivelEstudios.Text==""|| txtProfesion.Text == ""  ) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtPrimerApellido.Text == "" || txtSegundoApellido.Text == "" ||  txtCalleNumero.Text == "" || txtColonia.Text == "" || txtDepartamento.Text == "" || txtPais.Text == "" || txtCorreoElectronico.Text == "" ||  txtTelefono.Text == "" || txtNivelEstudios.Text==""|| txtProfesion.Text == ""  ) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else{
 
                 DateTime fecharNac = dtpFechaNacimiento.Value.Date;

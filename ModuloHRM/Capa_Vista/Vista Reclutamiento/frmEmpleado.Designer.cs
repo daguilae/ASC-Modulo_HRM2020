@@ -34,12 +34,12 @@
             this.lblFotografia = new System.Windows.Forms.Label();
             this.pbxFotografia = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtIdBancoTalento = new System.Windows.Forms.TextBox();
-            this.lblIngreseIDRecluta = new System.Windows.Forms.Label();
+            this.txtIdEmpleado = new System.Windows.Forms.TextBox();
+            this.lblIngreseIdEmpleado = new System.Windows.Forms.Label();
             this.pnlPuesto = new System.Windows.Forms.Panel();
-            this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
+            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
             this.lblPuesto = new System.Windows.Forms.Label();
-            this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
+            this.cmbPuesto = new System.Windows.Forms.ComboBox();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
             this.gbxSexo = new System.Windows.Forms.GroupBox();
             this.txtSexo = new System.Windows.Forms.TextBox();
@@ -58,39 +58,6 @@
             this.lblSegundoNombre = new System.Windows.Forms.Label();
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblPrimerApellido = new System.Windows.Forms.Label();
-            this.tbpSalario = new System.Windows.Forms.TabPage();
-            this.gbxDepositoNomina = new System.Windows.Forms.GroupBox();
-            this.txtBancoOperador = new System.Windows.Forms.TextBox();
-            this.txtCuentaDeposito = new System.Windows.Forms.TextBox();
-            this.txtNumRegistro = new System.Windows.Forms.TextBox();
-            this.lblCuentaDeposito = new System.Windows.Forms.Label();
-            this.lblNumRegistro = new System.Windows.Forms.Label();
-            this.lblBancoOperador = new System.Windows.Forms.Label();
-            this.gbxSalarioActual = new System.Windows.Forms.GroupBox();
-            this.dtpFechaAplicacion = new System.Windows.Forms.DateTimePicker();
-            this.txtFormaPago = new System.Windows.Forms.TextBox();
-            this.txtSalarioDia = new System.Windows.Forms.TextBox();
-            this.lblFechaAplicacion = new System.Windows.Forms.Label();
-            this.lblHorasDia = new System.Windows.Forms.Label();
-            this.lblSalarioDia = new System.Windows.Forms.Label();
-            this.txtHorasDia = new System.Windows.Forms.TextBox();
-            this.lblSalarioHora = new System.Windows.Forms.Label();
-            this.lblDiasSemana = new System.Windows.Forms.Label();
-            this.txtSalarioHora = new System.Windows.Forms.TextBox();
-            this.lblFormaPago = new System.Windows.Forms.Label();
-            this.txtDiasSemana = new System.Windows.Forms.TextBox();
-            this.tbpDatosContrato = new System.Windows.Forms.TabPage();
-            this.txtTipoJornada = new System.Windows.Forms.TextBox();
-            this.lblJTipoJornada = new System.Windows.Forms.Label();
-            this.txtTipoTurno = new System.Windows.Forms.TextBox();
-            this.gbxContrato = new System.Windows.Forms.GroupBox();
-            this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtTipoContrato = new System.Windows.Forms.TextBox();
-            this.dtpFechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.lblFechaVencimiento = new System.Windows.Forms.Label();
-            this.lblTipoContrato = new System.Windows.Forms.Label();
-            this.lblFechaInicio = new System.Windows.Forms.Label();
-            this.lblTurno = new System.Windows.Forms.Label();
             this.tbpDatosPersonales = new System.Windows.Forms.TabPage();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.gbxFormacionAcademica = new System.Windows.Forms.GroupBox();
@@ -112,17 +79,14 @@
             this.lblTelefono = new System.Windows.Forms.Label();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.lblEstadoCivil = new System.Windows.Forms.Label();
+            this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
+            this.lblTipoLicencia = new System.Windows.Forms.Label();
             this.tbcModificarEmpleado.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).BeginInit();
             this.pnlPuesto.SuspendLayout();
             this.gbxSexo.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
-            this.tbpSalario.SuspendLayout();
-            this.gbxDepositoNomina.SuspendLayout();
-            this.gbxSalarioActual.SuspendLayout();
-            this.tbpDatosContrato.SuspendLayout();
-            this.gbxContrato.SuspendLayout();
             this.tbpDatosPersonales.SuspendLayout();
             this.gbxFormacionAcademica.SuspendLayout();
             this.gbxDomicilio.SuspendLayout();
@@ -144,8 +108,6 @@
             // tbcModificarEmpleado
             // 
             this.tbcModificarEmpleado.Controls.Add(this.tbpDatosGenerales);
-            this.tbcModificarEmpleado.Controls.Add(this.tbpSalario);
-            this.tbcModificarEmpleado.Controls.Add(this.tbpDatosContrato);
             this.tbcModificarEmpleado.Controls.Add(this.tbpDatosPersonales);
             this.tbcModificarEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
             this.tbcModificarEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,8 +123,8 @@
             this.tbpDatosGenerales.Controls.Add(this.lblFotografia);
             this.tbpDatosGenerales.Controls.Add(this.pbxFotografia);
             this.tbpDatosGenerales.Controls.Add(this.btnBuscar);
-            this.tbpDatosGenerales.Controls.Add(this.txtIdBancoTalento);
-            this.tbpDatosGenerales.Controls.Add(this.lblIngreseIDRecluta);
+            this.tbpDatosGenerales.Controls.Add(this.txtIdEmpleado);
+            this.tbpDatosGenerales.Controls.Add(this.lblIngreseIdEmpleado);
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
             this.tbpDatosGenerales.Controls.Add(this.gbxSexo);
             this.tbpDatosGenerales.Controls.Add(this.pnlDatosGenerales);
@@ -206,28 +168,28 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // txtIdBancoTalento
+            // txtIdEmpleado
             // 
-            this.txtIdBancoTalento.Location = new System.Drawing.Point(507, 12);
-            this.txtIdBancoTalento.Name = "txtIdBancoTalento";
-            this.txtIdBancoTalento.Size = new System.Drawing.Size(148, 27);
-            this.txtIdBancoTalento.TabIndex = 26;
-            this.txtIdBancoTalento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(507, 12);
+            this.txtIdEmpleado.Name = "txtIdEmpleado";
+            this.txtIdEmpleado.Size = new System.Drawing.Size(148, 27);
+            this.txtIdEmpleado.TabIndex = 26;
+            this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
-            // lblIngreseIDRecluta
+            // lblIngreseIdEmpleado
             // 
-            this.lblIngreseIDRecluta.AutoSize = true;
-            this.lblIngreseIDRecluta.Location = new System.Drawing.Point(119, 15);
-            this.lblIngreseIDRecluta.Name = "lblIngreseIDRecluta";
-            this.lblIngreseIDRecluta.Size = new System.Drawing.Size(368, 20);
-            this.lblIngreseIDRecluta.TabIndex = 27;
-            this.lblIngreseIDRecluta.Text = "Ingrese el ID del Recluta del Banco de Talento";
+            this.lblIngreseIdEmpleado.AutoSize = true;
+            this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(119, 15);
+            this.lblIngreseIdEmpleado.Name = "lblIngreseIdEmpleado";
+            this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(222, 20);
+            this.lblIngreseIdEmpleado.TabIndex = 27;
+            this.lblIngreseIdEmpleado.Text = "Ingrese el ID del Empleado";
             // 
             // pnlPuesto
             // 
-            this.pnlPuesto.Controls.Add(this.cmbTipoEntrevista);
+            this.pnlPuesto.Controls.Add(this.cmbDepartamento);
             this.pnlPuesto.Controls.Add(this.lblPuesto);
-            this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
+            this.pnlPuesto.Controls.Add(this.cmbPuesto);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Location = new System.Drawing.Point(465, 129);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -235,13 +197,13 @@
             this.pnlPuesto.Size = new System.Drawing.Size(188, 153);
             this.pnlPuesto.TabIndex = 25;
             // 
-            // cmbTipoEntrevista
+            // cmbDepartamento
             // 
-            this.cmbTipoEntrevista.FormattingEnabled = true;
-            this.cmbTipoEntrevista.Location = new System.Drawing.Point(7, 109);
-            this.cmbTipoEntrevista.Name = "cmbTipoEntrevista";
-            this.cmbTipoEntrevista.Size = new System.Drawing.Size(175, 28);
-            this.cmbTipoEntrevista.TabIndex = 30;
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(7, 109);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(175, 28);
+            this.cmbDepartamento.TabIndex = 30;
             // 
             // lblPuesto
             // 
@@ -253,13 +215,13 @@
             this.lblPuesto.TabIndex = 19;
             this.lblPuesto.Text = "Puesto";
             // 
-            // cmbDepartamentoTrabajo
+            // cmbPuesto
             // 
-            this.cmbDepartamentoTrabajo.FormattingEnabled = true;
-            this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(7, 46);
-            this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
-            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(175, 28);
-            this.cmbDepartamentoTrabajo.TabIndex = 29;
+            this.cmbPuesto.FormattingEnabled = true;
+            this.cmbPuesto.Location = new System.Drawing.Point(7, 46);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Size = new System.Drawing.Size(175, 28);
+            this.cmbPuesto.TabIndex = 29;
             // 
             // lblDepartamentoTrabajo
             // 
@@ -451,337 +413,10 @@
             this.lblPrimerApellido.TabIndex = 3;
             this.lblPrimerApellido.Text = "Primer Apellido ";
             // 
-            // tbpSalario
-            // 
-            this.tbpSalario.Controls.Add(this.gbxDepositoNomina);
-            this.tbpSalario.Controls.Add(this.gbxSalarioActual);
-            this.tbpSalario.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpSalario.Location = new System.Drawing.Point(4, 29);
-            this.tbpSalario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpSalario.Name = "tbpSalario";
-            this.tbpSalario.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpSalario.Size = new System.Drawing.Size(924, 415);
-            this.tbpSalario.TabIndex = 1;
-            this.tbpSalario.Text = "Salario";
-            this.tbpSalario.UseVisualStyleBackColor = true;
-            // 
-            // gbxDepositoNomina
-            // 
-            this.gbxDepositoNomina.Controls.Add(this.txtBancoOperador);
-            this.gbxDepositoNomina.Controls.Add(this.txtCuentaDeposito);
-            this.gbxDepositoNomina.Controls.Add(this.txtNumRegistro);
-            this.gbxDepositoNomina.Controls.Add(this.lblCuentaDeposito);
-            this.gbxDepositoNomina.Controls.Add(this.lblNumRegistro);
-            this.gbxDepositoNomina.Controls.Add(this.lblBancoOperador);
-            this.gbxDepositoNomina.Location = new System.Drawing.Point(551, 20);
-            this.gbxDepositoNomina.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxDepositoNomina.Name = "gbxDepositoNomina";
-            this.gbxDepositoNomina.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxDepositoNomina.Size = new System.Drawing.Size(365, 155);
-            this.gbxDepositoNomina.TabIndex = 25;
-            this.gbxDepositoNomina.TabStop = false;
-            this.gbxDepositoNomina.Text = "Depósito de la Nómina";
-            // 
-            // txtBancoOperador
-            // 
-            this.txtBancoOperador.Location = new System.Drawing.Point(163, 37);
-            this.txtBancoOperador.Name = "txtBancoOperador";
-            this.txtBancoOperador.Size = new System.Drawing.Size(184, 27);
-            this.txtBancoOperador.TabIndex = 27;
-            this.txtBancoOperador.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // txtCuentaDeposito
-            // 
-            this.txtCuentaDeposito.Location = new System.Drawing.Point(164, 116);
-            this.txtCuentaDeposito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCuentaDeposito.Name = "txtCuentaDeposito";
-            this.txtCuentaDeposito.Size = new System.Drawing.Size(183, 27);
-            this.txtCuentaDeposito.TabIndex = 27;
-            this.txtCuentaDeposito.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // txtNumRegistro
-            // 
-            this.txtNumRegistro.Location = new System.Drawing.Point(164, 75);
-            this.txtNumRegistro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNumRegistro.Name = "txtNumRegistro";
-            this.txtNumRegistro.Size = new System.Drawing.Size(183, 27);
-            this.txtNumRegistro.TabIndex = 26;
-            this.txtNumRegistro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblCuentaDeposito
-            // 
-            this.lblCuentaDeposito.AutoSize = true;
-            this.lblCuentaDeposito.Location = new System.Drawing.Point(19, 121);
-            this.lblCuentaDeposito.Name = "lblCuentaDeposito";
-            this.lblCuentaDeposito.Size = new System.Drawing.Size(140, 20);
-            this.lblCuentaDeposito.TabIndex = 25;
-            this.lblCuentaDeposito.Text = "Cuenta Depósito";
-            // 
-            // lblNumRegistro
-            // 
-            this.lblNumRegistro.AutoSize = true;
-            this.lblNumRegistro.Location = new System.Drawing.Point(19, 80);
-            this.lblNumRegistro.Name = "lblNumRegistro";
-            this.lblNumRegistro.Size = new System.Drawing.Size(124, 20);
-            this.lblNumRegistro.TabIndex = 24;
-            this.lblNumRegistro.Text = "No. Registrado";
-            // 
-            // lblBancoOperador
-            // 
-            this.lblBancoOperador.AutoSize = true;
-            this.lblBancoOperador.Location = new System.Drawing.Point(19, 37);
-            this.lblBancoOperador.Name = "lblBancoOperador";
-            this.lblBancoOperador.Size = new System.Drawing.Size(138, 20);
-            this.lblBancoOperador.TabIndex = 23;
-            this.lblBancoOperador.Text = "Banco Operador";
-            // 
-            // gbxSalarioActual
-            // 
-            this.gbxSalarioActual.Controls.Add(this.dtpFechaAplicacion);
-            this.gbxSalarioActual.Controls.Add(this.txtFormaPago);
-            this.gbxSalarioActual.Controls.Add(this.txtSalarioDia);
-            this.gbxSalarioActual.Controls.Add(this.lblFechaAplicacion);
-            this.gbxSalarioActual.Controls.Add(this.lblHorasDia);
-            this.gbxSalarioActual.Controls.Add(this.lblSalarioDia);
-            this.gbxSalarioActual.Controls.Add(this.txtHorasDia);
-            this.gbxSalarioActual.Controls.Add(this.lblSalarioHora);
-            this.gbxSalarioActual.Controls.Add(this.lblDiasSemana);
-            this.gbxSalarioActual.Controls.Add(this.txtSalarioHora);
-            this.gbxSalarioActual.Controls.Add(this.lblFormaPago);
-            this.gbxSalarioActual.Controls.Add(this.txtDiasSemana);
-            this.gbxSalarioActual.Location = new System.Drawing.Point(17, 20);
-            this.gbxSalarioActual.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxSalarioActual.Name = "gbxSalarioActual";
-            this.gbxSalarioActual.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxSalarioActual.Size = new System.Drawing.Size(528, 323);
-            this.gbxSalarioActual.TabIndex = 24;
-            this.gbxSalarioActual.TabStop = false;
-            this.gbxSalarioActual.Text = "Salario Actual";
-            // 
-            // dtpFechaAplicacion
-            // 
-            this.dtpFechaAplicacion.Location = new System.Drawing.Point(194, 221);
-            this.dtpFechaAplicacion.Name = "dtpFechaAplicacion";
-            this.dtpFechaAplicacion.Size = new System.Drawing.Size(327, 27);
-            this.dtpFechaAplicacion.TabIndex = 27;
-            // 
-            // txtFormaPago
-            // 
-            this.txtFormaPago.Location = new System.Drawing.Point(194, 269);
-            this.txtFormaPago.Name = "txtFormaPago";
-            this.txtFormaPago.Size = new System.Drawing.Size(184, 27);
-            this.txtFormaPago.TabIndex = 26;
-            this.txtFormaPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // txtSalarioDia
-            // 
-            this.txtSalarioDia.Location = new System.Drawing.Point(194, 30);
-            this.txtSalarioDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSalarioDia.Name = "txtSalarioDia";
-            this.txtSalarioDia.Size = new System.Drawing.Size(184, 27);
-            this.txtSalarioDia.TabIndex = 5;
-            this.txtSalarioDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblFechaAplicacion
-            // 
-            this.lblFechaAplicacion.AutoSize = true;
-            this.lblFechaAplicacion.Location = new System.Drawing.Point(17, 224);
-            this.lblFechaAplicacion.Name = "lblFechaAplicacion";
-            this.lblFechaAplicacion.Size = new System.Drawing.Size(168, 20);
-            this.lblFechaAplicacion.TabIndex = 22;
-            this.lblFechaAplicacion.Text = "Fecha de Aplicación";
-            // 
-            // lblHorasDia
-            // 
-            this.lblHorasDia.AutoSize = true;
-            this.lblHorasDia.Location = new System.Drawing.Point(17, 129);
-            this.lblHorasDia.Name = "lblHorasDia";
-            this.lblHorasDia.Size = new System.Drawing.Size(116, 20);
-            this.lblHorasDia.TabIndex = 3;
-            this.lblHorasDia.Text = "Horas por Día";
-            // 
-            // lblSalarioDia
-            // 
-            this.lblSalarioDia.AutoSize = true;
-            this.lblSalarioDia.Location = new System.Drawing.Point(17, 32);
-            this.lblSalarioDia.Name = "lblSalarioDia";
-            this.lblSalarioDia.Size = new System.Drawing.Size(124, 20);
-            this.lblSalarioDia.TabIndex = 1;
-            this.lblSalarioDia.Text = "Salario por Día";
-            // 
-            // txtHorasDia
-            // 
-            this.txtHorasDia.Location = new System.Drawing.Point(194, 124);
-            this.txtHorasDia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtHorasDia.Name = "txtHorasDia";
-            this.txtHorasDia.Size = new System.Drawing.Size(184, 27);
-            this.txtHorasDia.TabIndex = 7;
-            this.txtHorasDia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblSalarioHora
-            // 
-            this.lblSalarioHora.AutoSize = true;
-            this.lblSalarioHora.Location = new System.Drawing.Point(17, 79);
-            this.lblSalarioHora.Name = "lblSalarioHora";
-            this.lblSalarioHora.Size = new System.Drawing.Size(136, 20);
-            this.lblSalarioHora.TabIndex = 2;
-            this.lblSalarioHora.Text = "Salario por Hora";
-            // 
-            // lblDiasSemana
-            // 
-            this.lblDiasSemana.AutoSize = true;
-            this.lblDiasSemana.Location = new System.Drawing.Point(17, 174);
-            this.lblDiasSemana.Name = "lblDiasSemana";
-            this.lblDiasSemana.Size = new System.Drawing.Size(140, 20);
-            this.lblDiasSemana.TabIndex = 4;
-            this.lblDiasSemana.Text = "Días por Semana";
-            // 
-            // txtSalarioHora
-            // 
-            this.txtSalarioHora.Location = new System.Drawing.Point(194, 78);
-            this.txtSalarioHora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSalarioHora.Name = "txtSalarioHora";
-            this.txtSalarioHora.Size = new System.Drawing.Size(184, 27);
-            this.txtSalarioHora.TabIndex = 6;
-            this.txtSalarioHora.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblFormaPago
-            // 
-            this.lblFormaPago.AutoSize = true;
-            this.lblFormaPago.Location = new System.Drawing.Point(17, 272);
-            this.lblFormaPago.Name = "lblFormaPago";
-            this.lblFormaPago.Size = new System.Drawing.Size(126, 20);
-            this.lblFormaPago.TabIndex = 11;
-            this.lblFormaPago.Text = "Forma de Pago";
-            // 
-            // txtDiasSemana
-            // 
-            this.txtDiasSemana.Location = new System.Drawing.Point(194, 168);
-            this.txtDiasSemana.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDiasSemana.Name = "txtDiasSemana";
-            this.txtDiasSemana.Size = new System.Drawing.Size(184, 27);
-            this.txtDiasSemana.TabIndex = 8;
-            this.txtDiasSemana.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // tbpDatosContrato
-            // 
-            this.tbpDatosContrato.Controls.Add(this.txtTipoJornada);
-            this.tbpDatosContrato.Controls.Add(this.lblJTipoJornada);
-            this.tbpDatosContrato.Controls.Add(this.txtTipoTurno);
-            this.tbpDatosContrato.Controls.Add(this.gbxContrato);
-            this.tbpDatosContrato.Controls.Add(this.lblTurno);
-            this.tbpDatosContrato.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpDatosContrato.Location = new System.Drawing.Point(4, 29);
-            this.tbpDatosContrato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbpDatosContrato.Name = "tbpDatosContrato";
-            this.tbpDatosContrato.Size = new System.Drawing.Size(924, 415);
-            this.tbpDatosContrato.TabIndex = 2;
-            this.tbpDatosContrato.Text = "Datos Contrato";
-            this.tbpDatosContrato.UseVisualStyleBackColor = true;
-            // 
-            // txtTipoJornada
-            // 
-            this.txtTipoJornada.Location = new System.Drawing.Point(753, 54);
-            this.txtTipoJornada.Name = "txtTipoJornada";
-            this.txtTipoJornada.Size = new System.Drawing.Size(152, 27);
-            this.txtTipoJornada.TabIndex = 33;
-            this.txtTipoJornada.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // lblJTipoJornada
-            // 
-            this.lblJTipoJornada.AutoSize = true;
-            this.lblJTipoJornada.Location = new System.Drawing.Point(612, 54);
-            this.lblJTipoJornada.Name = "lblJTipoJornada";
-            this.lblJTipoJornada.Size = new System.Drawing.Size(108, 20);
-            this.lblJTipoJornada.TabIndex = 32;
-            this.lblJTipoJornada.Text = "Tipo Jornada";
-            // 
-            // txtTipoTurno
-            // 
-            this.txtTipoTurno.Location = new System.Drawing.Point(753, 99);
-            this.txtTipoTurno.Name = "txtTipoTurno";
-            this.txtTipoTurno.Size = new System.Drawing.Size(152, 27);
-            this.txtTipoTurno.TabIndex = 31;
-            this.txtTipoTurno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // gbxContrato
-            // 
-            this.gbxContrato.Controls.Add(this.dtpFechaVencimiento);
-            this.gbxContrato.Controls.Add(this.txtTipoContrato);
-            this.gbxContrato.Controls.Add(this.dtpFechaInicio);
-            this.gbxContrato.Controls.Add(this.lblFechaVencimiento);
-            this.gbxContrato.Controls.Add(this.lblTipoContrato);
-            this.gbxContrato.Controls.Add(this.lblFechaInicio);
-            this.gbxContrato.Location = new System.Drawing.Point(21, 28);
-            this.gbxContrato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxContrato.Name = "gbxContrato";
-            this.gbxContrato.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxContrato.Size = new System.Drawing.Size(560, 164);
-            this.gbxContrato.TabIndex = 27;
-            this.gbxContrato.TabStop = false;
-            this.gbxContrato.Text = "Contrato";
-            // 
-            // dtpFechaVencimiento
-            // 
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(220, 114);
-            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(327, 27);
-            this.dtpFechaVencimiento.TabIndex = 32;
-            // 
-            // txtTipoContrato
-            // 
-            this.txtTipoContrato.Location = new System.Drawing.Point(220, 23);
-            this.txtTipoContrato.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTipoContrato.Name = "txtTipoContrato";
-            this.txtTipoContrato.Size = new System.Drawing.Size(184, 27);
-            this.txtTipoContrato.TabIndex = 5;
-            this.txtTipoContrato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // dtpFechaInicio
-            // 
-            this.dtpFechaInicio.Location = new System.Drawing.Point(220, 64);
-            this.dtpFechaInicio.Name = "dtpFechaInicio";
-            this.dtpFechaInicio.Size = new System.Drawing.Size(327, 27);
-            this.dtpFechaInicio.TabIndex = 31;
-            // 
-            // lblFechaVencimiento
-            // 
-            this.lblFechaVencimiento.AutoSize = true;
-            this.lblFechaVencimiento.Location = new System.Drawing.Point(9, 112);
-            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
-            this.lblFechaVencimiento.Size = new System.Drawing.Size(185, 20);
-            this.lblFechaVencimiento.TabIndex = 3;
-            this.lblFechaVencimiento.Text = "Fecha de Vencimiento";
-            // 
-            // lblTipoContrato
-            // 
-            this.lblTipoContrato.AutoSize = true;
-            this.lblTipoContrato.Location = new System.Drawing.Point(9, 26);
-            this.lblTipoContrato.Name = "lblTipoContrato";
-            this.lblTipoContrato.Size = new System.Drawing.Size(141, 20);
-            this.lblTipoContrato.TabIndex = 1;
-            this.lblTipoContrato.Text = "Tipo de Contrato";
-            // 
-            // lblFechaInicio
-            // 
-            this.lblFechaInicio.AutoSize = true;
-            this.lblFechaInicio.Location = new System.Drawing.Point(9, 71);
-            this.lblFechaInicio.Name = "lblFechaInicio";
-            this.lblFechaInicio.Size = new System.Drawing.Size(128, 20);
-            this.lblFechaInicio.TabIndex = 2;
-            this.lblFechaInicio.Text = "Fecha de Inicio";
-            // 
-            // lblTurno
-            // 
-            this.lblTurno.AutoSize = true;
-            this.lblTurno.Location = new System.Drawing.Point(612, 97);
-            this.lblTurno.Name = "lblTurno";
-            this.lblTurno.Size = new System.Drawing.Size(119, 20);
-            this.lblTurno.TabIndex = 26;
-            this.lblTurno.Text = "Tipo de Turno";
-            // 
             // tbpDatosPersonales
             // 
+            this.tbpDatosPersonales.Controls.Add(this.cmbTipoLicencia);
+            this.tbpDatosPersonales.Controls.Add(this.lblTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.cmbEstadoCivil);
             this.tbpDatosPersonales.Controls.Add(this.gbxFormacionAcademica);
             this.tbpDatosPersonales.Controls.Add(this.gbxDomicilio);
@@ -798,7 +433,7 @@
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(613, 85);
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(661, 85);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
             this.cmbEstadoCivil.Size = new System.Drawing.Size(140, 28);
             this.cmbEstadoCivil.TabIndex = 30;
@@ -991,6 +626,23 @@
             this.lblEstadoCivil.TabIndex = 22;
             this.lblEstadoCivil.Text = "Estado Civil";
             // 
+            // cmbTipoLicencia
+            // 
+            this.cmbTipoLicencia.FormattingEnabled = true;
+            this.cmbTipoLicencia.Location = new System.Drawing.Point(661, 131);
+            this.cmbTipoLicencia.Name = "cmbTipoLicencia";
+            this.cmbTipoLicencia.Size = new System.Drawing.Size(121, 28);
+            this.cmbTipoLicencia.TabIndex = 32;
+            // 
+            // lblTipoLicencia
+            // 
+            this.lblTipoLicencia.AutoSize = true;
+            this.lblTipoLicencia.Location = new System.Drawing.Point(433, 137);
+            this.lblTipoLicencia.Name = "lblTipoLicencia";
+            this.lblTipoLicencia.Size = new System.Drawing.Size(192, 20);
+            this.lblTipoLicencia.TabIndex = 31;
+            this.lblTipoLicencia.Text = "Tipo Licencia Conducir";
+            // 
             // frmEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -998,6 +650,7 @@
             this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.tbcModificarEmpleado);
             this.Controls.Add(this.btnModificar);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -1014,15 +667,6 @@
             this.gbxSexo.PerformLayout();
             this.pnlDatosGenerales.ResumeLayout(false);
             this.pnlDatosGenerales.PerformLayout();
-            this.tbpSalario.ResumeLayout(false);
-            this.gbxDepositoNomina.ResumeLayout(false);
-            this.gbxDepositoNomina.PerformLayout();
-            this.gbxSalarioActual.ResumeLayout(false);
-            this.gbxSalarioActual.PerformLayout();
-            this.tbpDatosContrato.ResumeLayout(false);
-            this.tbpDatosContrato.PerformLayout();
-            this.gbxContrato.ResumeLayout(false);
-            this.gbxContrato.PerformLayout();
             this.tbpDatosPersonales.ResumeLayout(false);
             this.tbpDatosPersonales.PerformLayout();
             this.gbxFormacionAcademica.ResumeLayout(false);
@@ -1040,8 +684,8 @@
         private System.Windows.Forms.Label lblFotografia;
         private System.Windows.Forms.PictureBox pbxFotografia;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtIdBancoTalento;
-        private System.Windows.Forms.Label lblIngreseIDRecluta;
+        private System.Windows.Forms.TextBox txtIdEmpleado;
+        private System.Windows.Forms.Label lblIngreseIdEmpleado;
         private System.Windows.Forms.Panel pnlPuesto;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Label lblDepartamentoTrabajo;
@@ -1062,33 +706,6 @@
         private System.Windows.Forms.Label lblSegundoNombre;
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
-        private System.Windows.Forms.TabPage tbpSalario;
-        private System.Windows.Forms.GroupBox gbxDepositoNomina;
-        private System.Windows.Forms.TextBox txtCuentaDeposito;
-        private System.Windows.Forms.TextBox txtNumRegistro;
-        private System.Windows.Forms.Label lblCuentaDeposito;
-        private System.Windows.Forms.Label lblNumRegistro;
-        private System.Windows.Forms.Label lblBancoOperador;
-        private System.Windows.Forms.GroupBox gbxSalarioActual;
-        private System.Windows.Forms.TextBox txtSalarioDia;
-        private System.Windows.Forms.Label lblFechaAplicacion;
-        private System.Windows.Forms.Label lblHorasDia;
-        private System.Windows.Forms.Label lblSalarioDia;
-        private System.Windows.Forms.TextBox txtHorasDia;
-        private System.Windows.Forms.Label lblSalarioHora;
-        private System.Windows.Forms.Label lblDiasSemana;
-        private System.Windows.Forms.TextBox txtSalarioHora;
-        private System.Windows.Forms.Label lblFormaPago;
-        private System.Windows.Forms.TextBox txtDiasSemana;
-        private System.Windows.Forms.TabPage tbpDatosContrato;
-        private System.Windows.Forms.GroupBox gbxContrato;
-        private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
-        private System.Windows.Forms.TextBox txtTipoContrato;
-        private System.Windows.Forms.DateTimePicker dtpFechaInicio;
-        private System.Windows.Forms.Label lblFechaVencimiento;
-        private System.Windows.Forms.Label lblTipoContrato;
-        private System.Windows.Forms.Label lblFechaInicio;
-        private System.Windows.Forms.Label lblTurno;
         private System.Windows.Forms.TabPage tbpDatosPersonales;
         private System.Windows.Forms.GroupBox gbxFormacionAcademica;
         private System.Windows.Forms.TextBox txtNivelEstudios;
@@ -1109,14 +726,10 @@
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label lblEstadoCivil;
-        private System.Windows.Forms.TextBox txtBancoOperador;
-        private System.Windows.Forms.TextBox txtFormaPago;
-        private System.Windows.Forms.TextBox txtTipoJornada;
-        private System.Windows.Forms.Label lblJTipoJornada;
-        private System.Windows.Forms.TextBox txtTipoTurno;
-        private System.Windows.Forms.ComboBox cmbTipoEntrevista;
-        private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
-        private System.Windows.Forms.DateTimePicker dtpFechaAplicacion;
+        private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.ComboBox cmbPuesto;
         private System.Windows.Forms.ComboBox cmbEstadoCivil;
+        private System.Windows.Forms.ComboBox cmbTipoLicencia;
+        private System.Windows.Forms.Label lblTipoLicencia;
     }
 }
