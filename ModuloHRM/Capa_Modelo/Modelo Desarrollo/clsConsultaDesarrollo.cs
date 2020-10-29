@@ -18,13 +18,13 @@ namespace Capa_Modelo.Modelo_Desarrollo
             try
             {
                 string CargaPuestos = "SELECT * FROM HORARIO";
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.funcconexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();              
                 Lector.SelectCommand = Query_Busqueda1;
                 Lector.Fill(Datos);
 
-                Con.desconexion(Con.conexion());
+                Con.funcdesconexion(Con.funcconexion());
                 return Datos;              
             }
             catch (Exception ex)
@@ -43,13 +43,13 @@ namespace Capa_Modelo.Modelo_Desarrollo
             try
             {
                 string CargaPuestos = "SELECT * FROM TIPO_COMPETENCIA";
-                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.conexion());
+                OdbcCommand Query_Busqueda1 = new OdbcCommand(CargaPuestos, Con.funcconexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
                 Lector.SelectCommand = Query_Busqueda1;
                 Lector.Fill(Datos);
 
-                Con.desconexion(Con.conexion());
+                Con.funcdesconexion(Con.funcconexion());
                 return Datos;
             }
             catch (Exception ex)

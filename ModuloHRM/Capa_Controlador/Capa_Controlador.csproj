@@ -42,10 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador Desarrollo\clsControladorDesarrollo.cs" />
+    <Compile Include="Controlador Nomina\clsControladorNomina.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controlador Nomina\" />
     <Folder Include="Controlador Reclutamiento\" />
   </ItemGroup>
   <ItemGroup>
