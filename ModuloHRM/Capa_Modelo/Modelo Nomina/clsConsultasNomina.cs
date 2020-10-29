@@ -166,5 +166,100 @@ namespace Capa_Modelo.Modelo_Nomina
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public OdbcDataReader funcBuscarNomEmpleado(int Id)
+        {
+            try
+            {
+                string sentencia = "SELECT pk_id_empleado, 	nombre1_empleado, nombre2_empleado, " +
+                    "apellido1_empleado, apellido2_empleado FROM empleado WHERE pk_id_empleado = '" + Id + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataReader Lector = Query_Validacion1.ExecuteReader();
+                return Lector;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable funcDeduccionescmb()
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT nombre_deduccion, monto_deduccion FROM deduccion";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable funcFechaPlanillacmb()
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT fecha_inicio_encabezado_nomina FROM encabezado_nomina";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable funcCobrosEmpleado(int IdEmp,string Fecha)
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT det.fk_id_encabezado_detalle_nomina, det.fk_id_empleado_detalle_nomina, det.fk_id_deducciones_detalle_nomina," +
+                    " ded.pk_id_deduccion, ded.nombre_deduccion, ded.monto_deduccion, emp.pk_id_empleado, emp.nombre1_empleado, emp.apellido1_empleado," +
+                    " en.pk_id_encabezado_nomina, en.fecha_inicio_encabezado_nomina FROM detalle_nomina AS det, deduccion AS ded, empleado AS emp," +
+                    " encabezado_nomina AS en WHERE det.fk_id_encabezado_detalle_nomina = en.pk_id_encabezado_nomina AND " +
+                    "en.fecha_inicio_encabezado_nomina = '" + Fecha + "' AND det.fk_id_empleado_detalle_nomina = '" + IdEmp + "'" +
+                    " AND emp.pk_id_empleado = '" + IdEmp + "' AND det.fk_id_deducciones_detalle_nomina = ded.pk_id_deduccion";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
     }
 }

@@ -53,5 +53,29 @@ namespace Capa_Controlador.Controlador_Nomina
         {
             Consulta.funcEliminarPercepcion(Nom);
         }
+
+        public OdbcDataReader funcBuscarNomEmpleado(int Id)
+        {
+            OdbcDataReader Lector = Consulta.funcBuscarNomEmpleado(Id);
+            return Lector;
+        }
+
+        public DataTable LlenarcmbDeducciones()
+        {
+            DataTable Items = Consulta.funcDeduccionescmb();
+            return Items;
+        }
+
+        public DataTable LLenarcmbFechaPanitlla()
+        {
+            DataTable Items = Consulta.funcFechaPlanillacmb();
+            return Items;
+        }
+
+        public DataTable LlenardgvCobrosEmp(int IdEmp, string Fecha)
+        {
+            DataTable Items = Consulta.funcCobrosEmpleado(IdEmp, Fecha);
+            return Items;
+        }
     }
 }
