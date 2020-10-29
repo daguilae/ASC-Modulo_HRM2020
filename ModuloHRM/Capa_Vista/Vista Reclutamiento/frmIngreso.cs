@@ -24,7 +24,7 @@ namespace Capa_Vista.Vista_Reclutamiento
             if (rbtnMasculino.Checked==false && rbtnFemenino.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha seleccionado un sexo", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else{
 
-                if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtPrimerApellido.Text == "" || txtSegundoApellido.Text == "" || txtDpi.Text == "" || txtNumeroIgss.Text == "" || txtCalleNumero.Text == "" || txtColonia.Text == "" || txtDepartamento.Text == "" || txtPais.Text == "" || txtCorreoElectronico.Text == "" || txtTelefono.Text == "" || txtProfesion.Text == "" ) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                if (txtPrimerNombre.Text == "" || txtSegundoNombre.Text == "" || txtPrimerApellido.Text == "" || txtSegundoApellido.Text == "" || txtDpi.Text == "" || txtNumeroIgss.Text == "" || txtZona.Text == "" || txtResidencia.Text == "" || txtDepartamento.Text == "" || txtMunicipio.Text == "" || txtCorreoElectronico.Text == "" || txtTelefono.Text == "" || txtProfesion.Text == "" ) { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                 else
                 {
                     DateTime FecharNac = dtpFechaNacimiento.Value.Date;
@@ -62,6 +62,24 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void funcNumero(object sender, KeyPressEventArgs e)
         {
             clsValidacion.funcNumeros(e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtIdRecluta.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            else
+            {
+                gbxSexo.Enabled = false;
+                btnIngreso.Enabled = false;
+                btnModificar.Enabled = true;
+                gbxFormacionAcademica.Enabled = false;
+                dtpFechaNacimiento.Enabled = false;
+
+
+
+            }//fin ifelse
+
+
         }
     }
 }

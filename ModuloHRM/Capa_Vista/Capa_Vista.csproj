@@ -135,6 +135,12 @@
     <Compile Include="Vista Nomina\frmNomina.Designer.cs">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Reclutamiento\frmAscender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmAscender.Designer.cs">
+      <DependentUpon>frmAscender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Reclutamiento\frmBajasEmpleado.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,17 +159,17 @@
     <Compile Include="Vista Reclutamiento\frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Reclutamiento\frmEntrevista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reclutamiento\frmEntrevista.Designer.cs">
+      <DependentUpon>frmEntrevista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Reclutamiento\frmIngreso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista Reclutamiento\frmIngreso.Designer.cs">
       <DependentUpon>frmIngreso.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista Reclutamiento\frmModificarRecluta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista Reclutamiento\frmModificarRecluta.Designer.cs">
-      <DependentUpon>frmModificarRecluta.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Reclutamiento\frmMostrarBancoTalento.cs">
       <SubType>Form</SubType>
@@ -238,6 +244,9 @@
     <EmbeddedResource Include="Vista Nomina\frmNomina.resx">
       <DependentUpon>frmNomina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmAscender.resx">
+      <DependentUpon>frmAscender.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmBajasEmpleado.resx">
       <DependentUpon>frmBajasEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,11 +256,11 @@
     <EmbeddedResource Include="Vista Reclutamiento\frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reclutamiento\frmEntrevista.resx">
+      <DependentUpon>frmEntrevista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmIngreso.resx">
       <DependentUpon>frmIngreso.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista Reclutamiento\frmModificarRecluta.resx">
-      <DependentUpon>frmModificarRecluta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmMostrarBancoTalento.resx">
       <DependentUpon>frmMostrarBancoTalento.cs</DependentUpon>

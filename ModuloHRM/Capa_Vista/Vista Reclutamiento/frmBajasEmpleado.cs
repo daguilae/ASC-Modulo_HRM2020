@@ -21,36 +21,25 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void btnBuscar_Click(object sender, EventArgs e)
         {
 
-            if (txtIdBancoTalento.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (txtIdEmpleado.Text == "") { MessageBox.Show("ADVERTENCIA: El campo de busqueda no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                btnRenuncia.Enabled = true;
-                rbtnDespido.Enabled = true;
+             
+                rbtnBaja.Enabled = true;
             }//fin ifelse
 
         }
 
-        private void btnRenuncia_Click(object sender, EventArgs e)
-        {
-            if(rbtnSiRenuncia.Checked==false && rbtnNoRenuncia.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha indicado si ha tomado Vacaciones", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            else
-            {
-            if (txtMontoAguinaldoRenuncia.Text == "" || txtMontoBono14Renuncia.Text == "" || txtTiempoLaboradoRenuncia.Text == "" || txtMontoVacacionesRenuncia.Text == "") { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            else{
-
-
-
-            }//fin elseif txt
-            }//fin elseif rbtn
-        }
+     
 
         private void rbtnDespido_Click(object sender, EventArgs e)
         {
 
-            if (rbtnSiDespido.Checked == false && rbtnNoDespido.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha indicado si ha tomado Vacaciones", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (rbtnDespido.Checked == false && rbtnRenuncia.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha seleccionado el tipo de Baja que se va a Realizar", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
-                if (txtMontoAguinaldoDespido.Text == "" || txtBono14Despido.Text == "" || txtTiempoLaboradoDespido.Text == "" || txtMontoVacDespido.Text == ""|| rtxtCausaDespido.Text=="") { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+
+                if ((rbtnDespido.Checked==true && (txtMontoPrestaciones.Text == "" ||  txtTiempoLaborado.Text == "" ||  rtxtCausaDespido.Text=="")) || (rbtnRenuncia.Checked==true && (txtMontoPrestaciones.Text == "" || txtTiempoLaborado.Text == "" ))  )  { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                 else
                 {
 
@@ -71,6 +60,24 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void funcLetra(object sender, KeyPressEventArgs e)
         {
             clsValidacion.funcLetras(e);
+        }
+
+        private void rbtnRenuncia_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnRenuncia.Checked == true)
+            {
+                rtxtCausaDespido.Enabled = false;
+
+            }
+        }
+
+        private void rbtnDespido_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnDespido.Checked == true)
+            {
+                rtxtCausaDespido.Enabled = true;
+
+            }
         }
     }
 }

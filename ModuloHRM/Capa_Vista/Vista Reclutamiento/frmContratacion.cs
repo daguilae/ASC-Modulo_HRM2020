@@ -32,27 +32,9 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void btnContratar_Click(object sender, EventArgs e)
         {
         
-            if (rbtnSi.Checked==false && rbtnNo.Checked == false) { MessageBox.Show("ADVERTENCIA: No ha seleccionado el tipo de jornada", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-            else{
-                if(txtSalarioDia.Text =="" || txtSalarioHora.Text == "" || txtHorasDia.Text == "" || txtDiasSemana.Text == "" || txtNumRegistro.Text=="" || txtCuentaDeposito.Text == "" || txtTipoContrato.Text == ""){ MessageBox.Show("ADVERTENCIA: Uno o más campos están vacíos.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
-                else{
-
-                    if (dtpFechaVencimiento.Value.Date < dtpFechaInicio.Value.Date){
-                        MessageBox.Show("ADVERTENCIA: La fecha de inicio no puede ser mayor a la fecha de vencimiento.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+           
 
 
-                        if (MessageBox.Show("¿Desea contratar a este Recluta ?", "Contratar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
-                        else
-                        {
-                         
-
-
-
-                        }//fin elseif Pregunta
-                    }
-                }//fin elseiftxt
-                
-            }//fin elseif rbtn
         }
 
 
@@ -70,6 +52,11 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             txtDpi.MaxLength = 13;
             txtTelefono.MaxLength = 8;
+        }
+
+        private void tbpDatosGenerales_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
