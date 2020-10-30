@@ -27,23 +27,56 @@ namespace Capa_Vista.Vista_Nomina
             {
                 if(rbtnIngresoDed.Checked == true)
                 {
-
+                    ConsNom.funcIngresarDeduccionEmpleado(cmbIngresoFecPLan.SelectedIndex, cmbIngresoDedPer.SelectedIndex, Id);
                 }
                 else
                 {
-
+                    ConsNom.funcIngresarPercepcionEmpleado(cmbIngresoFecPLan.SelectedIndex, cmbIngresoDedPer.SelectedIndex, Id);
                 }
             }
+            funcLimpiarIngreso();
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            if (txtEliminarIdEmp.Text == "")
+            {
+                MessageBox.Show("Ingree el ID del empleado.", "ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Id = Convert.ToInt32(txtEliminarIdEmp.Text);
+                OdbcDataReader Lector = ConsNom.funcBuscarNomEmpleado(Id);
 
+                if (Lector.HasRows == true)
+                {
+                    while (Lector.Read())
+                    {
+                        Id = Convert.ToInt32(Lector.GetString(0));
+                        txtEliminarNomEmp.Text = (Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3) + " " + Lector.GetString(4));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: El ID del empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
 
         private void btnEliminarEmpleadoDedPer_Click(object sender, EventArgs e)
         {
-
+            if (funcValidarCamposEliminar() == true)
+            {
+                if (rbtnEliminarDed.Checked == true)
+                {
+                    ConsNom.funcEliminarDeduccionEmpleado(Id, cmbIngresoDedPer.SelectedIndex, cmbEliminarFechPlan.SelectedIndex);
+                }
+                else
+                {
+                    ConsNom.funcEliminarPercepcionEmpleado(Id, cmbIngresoDedPer.SelectedIndex, cmbEliminarFechPlan.SelectedIndex);
+                }
+            }
+            funcLimpiarEliminar();
         }
 
         private void btnIngresarBuscar_Click(object sender, EventArgs e)
@@ -69,19 +102,77 @@ namespace Capa_Vista.Vista_Nomina
                 {
                     MessageBox.Show("ERROR: El ID del empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-                DataTable Datos = ConsNom.LlenardgvCobrosEmp(Id, cmbIngresoFecPLan.Text);
             }
         }
 
         private void rbtnIngresoDed_CheckedChanged(object sender, EventArgs e)
         {
-            funcDeducciones();
+            DataTable Datos = ConsNom.funcLlenarcmbDeducciones();
+            cmbIngresoDedPer.DataSource = Datos;
+            cmbIngresoDedPer.DisplayMember = "nombre_deduccion";
+            cmbIngresoDedPer.ResetText();
         }
 
         private void frmEmpleadoNomina_Load(object sender, EventArgs e)
         {
-            funcFechaPlanilla();
+            funcFechaPlanillaIngreso();
+            funcFechaPlanillaBuscar();
+            funcFechaPlanillaEliminar();
+        }
+
+        private void rbtnIngresoPerc_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable Datos = ConsNom.funcLlenarcmbPercepciones();
+            cmbIngresoDedPer.DataSource = Datos;
+            cmbIngresoDedPer.DisplayMember = "nombre_percepcion";
+            cmbIngresoDedPer.ResetText();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (funcValidarCamposBuscar() == true)
+            {
+                Id = Convert.ToInt32(txtBuscarIdEmp.Text);
+                OdbcDataReader Lector = ConsNom.funcBuscarNomEmpleado(Id);
+
+                if (Lector.HasRows == true)
+                {
+                    while (Lector.Read())
+                    {
+                        Id = Convert.ToInt32(Lector.GetString(0));
+                        txtBuscarNomEmp.Text = (Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3) + " " + Lector.GetString(4));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("ERROR: El ID del empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                DataTable DatosDed = ConsNom.funcLlenardgvDedEmp(Id, cmbBuscarPeriodoPlanilla.Text);
+                DataTable DatosPer = ConsNom.funcLlenardgvPerEmp(Id, cmbBuscarPeriodoPlanilla.Text);
+                dgvDedEmp.DataSource = DatosDed;
+                dgvPerEpm.DataSource = DatosPer;
+            }
+        }
+
+        private void rbtnEliminarDed_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable Datos = ConsNom.funcLlenarcmbDeducciones();
+            cmbEliminarDedPer.DataSource = Datos;
+            cmbEliminarDedPer.DisplayMember = "nombre_deduccion";
+            cmbEliminarDedPer.ResetText();
+        }
+
+        private void rbtnEliminarPer_CheckedChanged(object sender, EventArgs e)
+        {
+            DataTable Datos = ConsNom.funcLlenarcmbPercepciones();
+            cmbEliminarDedPer.DataSource = Datos;
+            cmbEliminarDedPer.DisplayMember = "nombre_percepcion";
+            cmbEliminarDedPer.ResetText();
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            funcLimpiarBuscar();
         }
 
         private bool funcValidarCamposIngreso()
@@ -102,20 +193,94 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
-        private void funcDeducciones()
+        private bool funcValidarCamposBuscar()
         {
-            DataTable Datos = ConsNom.LlenarcmbDeducciones();
-            cmbIngresoDedPer.DataSource = Datos;
-            cmbIngresoDedPer.DisplayMember = "nombre_deduccion";
-            cmbIngresoDedPer.ResetText();
+            if (txtBuscarIdEmp.Text == "" || cmbBuscarPeriodoPlanilla.Text == "")
+            {
+                MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
-        private void funcFechaPlanilla()
+        private bool funcValidarCamposEliminar()
         {
-            DataTable Datos = ConsNom.LLenarcmbFechaPanitlla();
+            if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
+            {
+                MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (txtEliminarIdEmp.Text == "" || txtEliminarNomEmp.Text == "" || cmbEliminarDedPer.Text == "" || cmbEliminarFechPlan.Text == "")
+            {
+                MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private void funcFechaPlanillaIngreso()
+        {
+            DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
             cmbIngresoFecPLan.DataSource = Datos;
             cmbIngresoFecPLan.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbIngresoFecPLan.ResetText();
+        }
+
+        private void funcFechaPlanillaBuscar()
+        {
+            DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
+            cmbBuscarPeriodoPlanilla.DataSource = Datos;
+            cmbBuscarPeriodoPlanilla.DisplayMember = "fecha_inicio_encabezado_nomina";
+            cmbBuscarPeriodoPlanilla.ResetText();
+            cmbBuscarPeriodoPlanilla.SelectedIndex = -1;
+        }
+
+        private void funcFechaPlanillaEliminar()
+        {
+            DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
+            cmbEliminarFechPlan.DataSource = Datos;
+            cmbEliminarFechPlan.DisplayMember = "fecha_inicio_encabezado_nomina";
+            cmbEliminarFechPlan.ResetText();
+            cmbEliminarFechPlan.SelectedIndex = -1;
+        }
+
+        private void funcLimpiarIngreso()
+        {
+            txtIngresoIdEmp.Text = "";
+            txtIngresoNomEmp.Text = "";
+            rbtnIngresoDed.Checked = false;
+            rbtnIngresoPerc.Checked = false;
+            cmbIngresoDedPer.Text = "";
+            cmbIngresoFecPLan.Text = "";
+            cmbIngresoDedPer.DataSource = null;
+        }
+
+        private void funcLimpiarBuscar()
+        {
+            txtBuscarIdEmp.Text = "";
+            txtBuscarNomEmp.Text = "";
+            txtBuscarPuestoEmp.Text = "";
+            cmbBuscarPeriodoPlanilla.Text = "";
+            dgvDedEmp.DataSource = null;
+            dgvDedEmp.Refresh();
+            dgvPerEpm.DataSource = null;
+            dgvPerEpm.Refresh();
+        }
+        private void funcLimpiarEliminar()
+        {
+            txtEliminarIdEmp.Text = "";
+            txtEliminarNomEmp.Text = "";
+            rbtnEliminarDed.Checked = false;
+            rbtnEliminarPer.Checked = false;
+            cmbEliminarDedPer.Text = "";
+            cmbEliminarFechPlan.Text = "";
+            cmbEliminarDedPer.DataSource = null;
         }
     }
 }

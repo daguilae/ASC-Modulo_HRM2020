@@ -60,22 +60,54 @@ namespace Capa_Controlador.Controlador_Nomina
             return Lector;
         }
 
-        public DataTable LlenarcmbDeducciones()
+        public DataTable funcLlenarcmbDeducciones()
         {
             DataTable Items = Consulta.funcDeduccionescmb();
             return Items;
         }
 
-        public DataTable LLenarcmbFechaPanitlla()
+        public DataTable funcLlenarcmbPercepciones()
+        {
+            DataTable Items = Consulta.funcPercepcionescmb();
+            return Items;
+        }
+
+        public DataTable funcLLenarcmbFechaPanitlla()
         {
             DataTable Items = Consulta.funcFechaPlanillacmb();
             return Items;
         }
 
-        public DataTable LlenardgvCobrosEmp(int IdEmp, string Fecha)
+        public void funcIngresarDeduccionEmpleado(int EncNom, int IdEmp, int Ded)
         {
-            DataTable Items = Consulta.funcCobrosEmpleado(IdEmp, Fecha);
+            Consulta.funcIngresarDeduccionEmpleado(EncNom, IdEmp, Ded);
+        }
+
+        public void funcIngresarPercepcionEmpleado(int EncNom, int IdEmp, int Per)
+        {
+            Consulta.funcIngresarPercepcionEmpleado(EncNom, IdEmp, Per);
+        }
+
+        public DataTable funcLlenardgvDedEmp(int IdEmp, string Fecha)
+        {
+            DataTable Items = Consulta.funcDedEmpleado(IdEmp, Fecha);
             return Items;
+        }
+
+        public DataTable funcLlenardgvPerEmp(int IdEmp, string Fecha)
+        {
+            DataTable Items = Consulta.funcPerEmpleado(IdEmp, Fecha);
+            return Items;
+        }
+
+        public void funcEliminarDeduccionEmpleado(int IdEmp, int Ded, int fecha)
+        {
+            Consulta.funcEliminarDeduccionEmpleado(IdEmp, Ded, fecha);
+        }
+
+        public void funcEliminarPercepcionEmpleado(int IdEmp, int Ded, int fecha)
+        {
+            Consulta.funcEliminarPercepcionEmpleado(IdEmp, Ded, fecha);
         }
     }
 }
