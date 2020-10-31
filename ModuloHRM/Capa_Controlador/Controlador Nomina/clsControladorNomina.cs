@@ -14,6 +14,7 @@ namespace Capa_Controlador.Controlador_Nomina
     {
         clsConsultasNomina Consulta = new clsConsultasNomina();
 
+        // Metodos para formulario frmDeducPercep
         public void funcInsertarDeduccion(string Nom, double Monto, string Desc)
         {
             Consulta.funIngresarDededuccion(Nom, Monto, Desc);
@@ -54,6 +55,8 @@ namespace Capa_Controlador.Controlador_Nomina
             Consulta.funcEliminarPercepcion(Nom);
         }
 
+        //Metodos para formulario frmEmpleadoNomina
+
         public OdbcDataReader funcBuscarNomEmpleado(int Id)
         {
             OdbcDataReader Lector = Consulta.funcBuscarNomEmpleado(Id);
@@ -78,12 +81,12 @@ namespace Capa_Controlador.Controlador_Nomina
             return Items;
         }
 
-        public void funcIngresarDeduccionEmpleado(int EncNom, int IdEmp, int Ded)
+        public void funcIngresarDeduccionEmpleado(string EncNom, int IdEmp, string Ded)
         {
             Consulta.funcIngresarDeduccionEmpleado(EncNom, IdEmp, Ded);
         }
 
-        public void funcIngresarPercepcionEmpleado(int EncNom, int IdEmp, int Per)
+        public void funcIngresarPercepcionEmpleado(string EncNom, int IdEmp, string Per)
         {
             Consulta.funcIngresarPercepcionEmpleado(EncNom, IdEmp, Per);
         }
@@ -100,14 +103,45 @@ namespace Capa_Controlador.Controlador_Nomina
             return Items;
         }
 
-        public void funcEliminarDeduccionEmpleado(int IdEmp, int Ded, int fecha)
+        public void funcEliminarDeduccionEmpleado(int IdEmp, string Ded, string fecha)
         {
             Consulta.funcEliminarDeduccionEmpleado(IdEmp, Ded, fecha);
         }
 
-        public void funcEliminarPercepcionEmpleado(int IdEmp, int Ded, int fecha)
+        public void funcEliminarPercepcionEmpleado(int IdEmp, string Per, string fecha)
         {
-            Consulta.funcEliminarPercepcionEmpleado(IdEmp, Ded, fecha);
+            Consulta.funcEliminarPercepcionEmpleado(IdEmp, Per, fecha);
+        }
+
+        public string funcBuscarPuestoEmp (int Id)
+        {
+            string puesto = Consulta.funcBuscarPuestoEmp(Id);
+            return puesto;
+        }
+
+        //Metodos para formulario frmNomina
+
+        public DataTable funcVisDeducciones()
+        {
+            DataTable Datos = Consulta.funcVisDeducciones();
+            return Datos;
+        }
+        public DataTable funcVisPercepciones()
+        {
+            DataTable Datos = Consulta.funcVisPercepciones();
+            return Datos;
+        }
+
+        public DataTable funcVisDedPlanilla(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisDedPlanilla(Fecha);
+            return Datos;
+        }
+
+        public DataTable funcVisPerPlanilla(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisPerPlanilla(Fecha);
+            return Datos;
         }
     }
 }
