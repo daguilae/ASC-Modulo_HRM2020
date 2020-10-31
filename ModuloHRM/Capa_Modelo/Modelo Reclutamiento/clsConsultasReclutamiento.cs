@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
+
 namespace Capa_Modelo.Modelo_Reclutamiento
 {
     public class clsConsultasReclutamiento

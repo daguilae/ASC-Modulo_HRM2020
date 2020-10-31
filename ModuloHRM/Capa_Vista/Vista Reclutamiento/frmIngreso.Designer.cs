@@ -43,8 +43,8 @@
             this.lblCorreoElectronico = new System.Windows.Forms.Label();
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.lbZona = new System.Windows.Forms.Label();
             this.txtMunicipio = new System.Windows.Forms.TextBox();
+            this.lbZona = new System.Windows.Forms.Label();
             this.lblMunicipio = new System.Windows.Forms.Label();
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.lblResidencia = new System.Windows.Forms.Label();
@@ -53,16 +53,11 @@
             this.lblEstadoCivil = new System.Windows.Forms.Label();
             this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.tbpDatosGenerales = new System.Windows.Forms.TabPage();
-            this.lblEstadoRecluta = new System.Windows.Forms.Label();
-            this.cmbEstadoReclutado = new System.Windows.Forms.ComboBox();
             this.pnlPuesto = new System.Windows.Forms.Panel();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.cmbPuesto = new System.Windows.Forms.ComboBox();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
             this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
-            this.pnlFotografia = new System.Windows.Forms.Panel();
-            this.btnFotografia = new System.Windows.Forms.Button();
-            this.pbxFotografia = new System.Windows.Forms.PictureBox();
             this.gbxSexo = new System.Windows.Forms.GroupBox();
             this.rbtnFemenino = new System.Windows.Forms.RadioButton();
             this.rbtnMasculino = new System.Windows.Forms.RadioButton();
@@ -91,8 +86,6 @@
             this.gbxDomicilio.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
             this.pnlPuesto.SuspendLayout();
-            this.pnlFotografia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).BeginInit();
             this.gbxSexo.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
             this.tbcIngresoRecluta.SuspendLayout();
@@ -111,6 +104,7 @@
             // 
             // tbpDatosPersonales
             // 
+            this.tbpDatosPersonales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpDatosPersonales.Controls.Add(this.cmbTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.lblTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.gbxFormacionAcademica);
@@ -122,10 +116,10 @@
             this.tbpDatosPersonales.Size = new System.Drawing.Size(923, 365);
             this.tbpDatosPersonales.TabIndex = 3;
             this.tbpDatosPersonales.Text = "Datos Personales";
-            this.tbpDatosPersonales.UseVisualStyleBackColor = true;
             // 
             // cmbTipoLicencia
             // 
+            this.cmbTipoLicencia.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbTipoLicencia.FormattingEnabled = true;
             this.cmbTipoLicencia.Location = new System.Drawing.Point(653, 97);
             this.cmbTipoLicencia.Name = "cmbTipoLicencia";
@@ -156,6 +150,7 @@
             // 
             // txtProfesion
             // 
+            this.txtProfesion.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtProfesion.Location = new System.Drawing.Point(175, 89);
             this.txtProfesion.Name = "txtProfesion";
             this.txtProfesion.Size = new System.Drawing.Size(291, 27);
@@ -164,6 +159,7 @@
             // 
             // cmbNivelEstudios
             // 
+            this.cmbNivelEstudios.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbNivelEstudios.FormattingEnabled = true;
             this.cmbNivelEstudios.Location = new System.Drawing.Point(175, 44);
             this.cmbNivelEstudios.Name = "cmbNivelEstudios";
@@ -211,18 +207,21 @@
             // 
             // txtTelefono
             // 
+            this.txtTelefono.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtTelefono.Location = new System.Drawing.Point(187, 247);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(129, 27);
-            this.txtTelefono.TabIndex = 23;
+            this.txtTelefono.TabIndex = 12;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtZona
             // 
+            this.txtZona.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtZona.Location = new System.Drawing.Point(187, 69);
             this.txtZona.Name = "txtZona";
             this.txtZona.Size = new System.Drawing.Size(183, 27);
-            this.txtZona.TabIndex = 5;
+            this.txtZona.TabIndex = 8;
+            this.txtZona.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblCorreoElectronico
             // 
@@ -244,10 +243,20 @@
             // 
             // txtCorreoElectronico
             // 
+            this.txtCorreoElectronico.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtCorreoElectronico.Location = new System.Drawing.Point(187, 199);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(183, 27);
-            this.txtCorreoElectronico.TabIndex = 12;
+            this.txtCorreoElectronico.TabIndex = 11;
+            // 
+            // txtMunicipio
+            // 
+            this.txtMunicipio.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtMunicipio.Location = new System.Drawing.Point(187, 112);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(183, 27);
+            this.txtMunicipio.TabIndex = 9;
+            this.txtMunicipio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lbZona
             // 
@@ -257,14 +266,6 @@
             this.lbZona.Size = new System.Drawing.Size(140, 20);
             this.lbZona.TabIndex = 1;
             this.lbZona.Text = "Número de Zona";
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.Location = new System.Drawing.Point(187, 112);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(183, 27);
-            this.txtMunicipio.TabIndex = 8;
-            this.txtMunicipio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblMunicipio
             // 
@@ -277,10 +278,11 @@
             // 
             // txtDepartamento
             // 
+            this.txtDepartamento.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtDepartamento.Location = new System.Drawing.Point(187, 158);
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Size = new System.Drawing.Size(183, 27);
-            this.txtDepartamento.TabIndex = 7;
+            this.txtDepartamento.TabIndex = 10;
             this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblResidencia
@@ -294,11 +296,12 @@
             // 
             // txtResidencia
             // 
+            this.txtResidencia.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtResidencia.Location = new System.Drawing.Point(187, 27);
             this.txtResidencia.Name = "txtResidencia";
             this.txtResidencia.Size = new System.Drawing.Size(183, 27);
-            this.txtResidencia.TabIndex = 6;
-            this.txtResidencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.txtResidencia.TabIndex = 7;
+            this.txtResidencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblTelefono
             // 
@@ -320,6 +323,7 @@
             // 
             // cmbEstadoCivil
             // 
+            this.cmbEstadoCivil.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbEstadoCivil.FormattingEnabled = true;
             this.cmbEstadoCivil.Location = new System.Drawing.Point(651, 43);
             this.cmbEstadoCivil.Name = "cmbEstadoCivil";
@@ -328,37 +332,16 @@
             // 
             // tbpDatosGenerales
             // 
-            this.tbpDatosGenerales.Controls.Add(this.lblEstadoRecluta);
-            this.tbpDatosGenerales.Controls.Add(this.cmbEstadoReclutado);
+            this.tbpDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
-            this.tbpDatosGenerales.Controls.Add(this.pnlFotografia);
             this.tbpDatosGenerales.Controls.Add(this.gbxSexo);
             this.tbpDatosGenerales.Controls.Add(this.pnlDatosGenerales);
             this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
-            this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(3);
             this.tbpDatosGenerales.Size = new System.Drawing.Size(923, 365);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
-            this.tbpDatosGenerales.UseVisualStyleBackColor = true;
-            // 
-            // lblEstadoRecluta
-            // 
-            this.lblEstadoRecluta.AutoSize = true;
-            this.lblEstadoRecluta.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoRecluta.Location = new System.Drawing.Point(761, 292);
-            this.lblEstadoRecluta.Name = "lblEstadoRecluta";
-            this.lblEstadoRecluta.Size = new System.Drawing.Size(124, 20);
-            this.lblEstadoRecluta.TabIndex = 22;
-            this.lblEstadoRecluta.Text = "Estado Recluta";
-            // 
-            // cmbEstadoReclutado
-            // 
-            this.cmbEstadoReclutado.FormattingEnabled = true;
-            this.cmbEstadoReclutado.Location = new System.Drawing.Point(737, 322);
-            this.cmbEstadoReclutado.Name = "cmbEstadoReclutado";
-            this.cmbEstadoReclutado.Size = new System.Drawing.Size(163, 28);
-            this.cmbEstadoReclutado.TabIndex = 22;
             // 
             // pnlPuesto
             // 
@@ -366,9 +349,9 @@
             this.pnlPuesto.Controls.Add(this.cmbPuesto);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
-            this.pnlPuesto.Location = new System.Drawing.Point(464, 164);
+            this.pnlPuesto.Location = new System.Drawing.Point(662, 54);
             this.pnlPuesto.Name = "pnlPuesto";
-            this.pnlPuesto.Size = new System.Drawing.Size(223, 163);
+            this.pnlPuesto.Size = new System.Drawing.Size(223, 152);
             this.pnlPuesto.TabIndex = 21;
             // 
             // lblPuesto
@@ -383,6 +366,7 @@
             // 
             // cmbPuesto
             // 
+            this.cmbPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbPuesto.FormattingEnabled = true;
             this.cmbPuesto.Location = new System.Drawing.Point(11, 40);
             this.cmbPuesto.Name = "cmbPuesto";
@@ -393,7 +377,7 @@
             // 
             this.lblDepartamentoTrabajo.AutoSize = true;
             this.lblDepartamentoTrabajo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoTrabajo.Location = new System.Drawing.Point(9, 85);
+            this.lblDepartamentoTrabajo.Location = new System.Drawing.Point(11, 85);
             this.lblDepartamentoTrabajo.Name = "lblDepartamentoTrabajo";
             this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(209, 20);
             this.lblDepartamentoTrabajo.TabIndex = 18;
@@ -401,45 +385,19 @@
             // 
             // cmbDepartamentoTrabajo
             // 
+            this.cmbDepartamentoTrabajo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbDepartamentoTrabajo.FormattingEnabled = true;
-            this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(11, 122);
+            this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(11, 108);
             this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
             this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(163, 28);
             this.cmbDepartamentoTrabajo.TabIndex = 9;
-            // 
-            // pnlFotografia
-            // 
-            this.pnlFotografia.Controls.Add(this.btnFotografia);
-            this.pnlFotografia.Controls.Add(this.pbxFotografia);
-            this.pnlFotografia.Location = new System.Drawing.Point(709, 20);
-            this.pnlFotografia.Name = "pnlFotografia";
-            this.pnlFotografia.Size = new System.Drawing.Size(200, 256);
-            this.pnlFotografia.TabIndex = 20;
-            // 
-            // btnFotografia
-            // 
-            this.btnFotografia.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFotografia.Location = new System.Drawing.Point(13, 186);
-            this.btnFotografia.Name = "btnFotografia";
-            this.btnFotografia.Size = new System.Drawing.Size(177, 67);
-            this.btnFotografia.TabIndex = 21;
-            this.btnFotografia.Text = "Seleccionar Fotografía";
-            this.btnFotografia.UseVisualStyleBackColor = true;
-            // 
-            // pbxFotografia
-            // 
-            this.pbxFotografia.Location = new System.Drawing.Point(13, 14);
-            this.pbxFotografia.Name = "pbxFotografia";
-            this.pbxFotografia.Size = new System.Drawing.Size(177, 152);
-            this.pbxFotografia.TabIndex = 0;
-            this.pbxFotografia.TabStop = false;
             // 
             // gbxSexo
             // 
             this.gbxSexo.Controls.Add(this.rbtnFemenino);
             this.gbxSexo.Controls.Add(this.rbtnMasculino);
             this.gbxSexo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSexo.Location = new System.Drawing.Point(464, 20);
+            this.gbxSexo.Location = new System.Drawing.Point(463, 76);
             this.gbxSexo.Name = "gbxSexo";
             this.gbxSexo.Size = new System.Drawing.Size(174, 120);
             this.gbxSexo.TabIndex = 17;
@@ -457,6 +415,7 @@
             this.rbtnFemenino.TabStop = true;
             this.rbtnFemenino.Text = "Femenino";
             this.rbtnFemenino.UseVisualStyleBackColor = true;
+            this.rbtnFemenino.CheckedChanged += new System.EventHandler(this.rbtnFemenino_CheckedChanged);
             // 
             // rbtnMasculino
             // 
@@ -469,6 +428,7 @@
             this.rbtnMasculino.TabStop = true;
             this.rbtnMasculino.Text = "Masculino";
             this.rbtnMasculino.UseVisualStyleBackColor = true;
+            this.rbtnMasculino.CheckedChanged += new System.EventHandler(this.rbtnMasculino_CheckedChanged);
             // 
             // pnlDatosGenerales
             // 
@@ -500,10 +460,11 @@
             // 
             // txtNumeroIgss
             // 
+            this.txtNumeroIgss.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumeroIgss.Location = new System.Drawing.Point(207, 229);
             this.txtNumeroIgss.Name = "txtNumeroIgss";
             this.txtNumeroIgss.Size = new System.Drawing.Size(129, 27);
-            this.txtNumeroIgss.TabIndex = 23;
+            this.txtNumeroIgss.TabIndex = 6;
             this.txtNumeroIgss.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblDpi
@@ -528,18 +489,20 @@
             // 
             // txtDpi
             // 
+            this.txtDpi.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtDpi.Location = new System.Drawing.Point(207, 187);
             this.txtDpi.Name = "txtDpi";
             this.txtDpi.Size = new System.Drawing.Size(129, 27);
-            this.txtDpi.TabIndex = 12;
+            this.txtDpi.TabIndex = 5;
             this.txtDpi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtPrimerApellido
             // 
+            this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerApellido.Location = new System.Drawing.Point(207, 105);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
             this.txtPrimerApellido.Size = new System.Drawing.Size(183, 27);
-            this.txtPrimerApellido.TabIndex = 7;
+            this.txtPrimerApellido.TabIndex = 3;
             this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblSegundoApellido
@@ -564,26 +527,29 @@
             // 
             // txtSegundoApellido
             // 
+            this.txtSegundoApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoApellido.Location = new System.Drawing.Point(207, 149);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
             this.txtSegundoApellido.Size = new System.Drawing.Size(183, 27);
-            this.txtSegundoApellido.TabIndex = 8;
+            this.txtSegundoApellido.TabIndex = 4;
             this.txtSegundoApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtPrimerNombre
             // 
+            this.txtPrimerNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerNombre.Location = new System.Drawing.Point(207, 19);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
             this.txtPrimerNombre.Size = new System.Drawing.Size(183, 27);
-            this.txtPrimerNombre.TabIndex = 5;
+            this.txtPrimerNombre.TabIndex = 1;
             this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtSegundoNombre
             // 
+            this.txtSegundoNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoNombre.Location = new System.Drawing.Point(207, 64);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
             this.txtSegundoNombre.Size = new System.Drawing.Size(183, 27);
-            this.txtSegundoNombre.TabIndex = 6;
+            this.txtSegundoNombre.TabIndex = 2;
             this.txtSegundoNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // lblSegundoNombre
@@ -631,7 +597,7 @@
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(577, 52);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(90, 35);
             this.btnBuscar.TabIndex = 31;
@@ -641,12 +607,14 @@
             // 
             // txtIdRecluta
             // 
+            this.txtIdRecluta.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIdRecluta.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdRecluta.Location = new System.Drawing.Point(432, 59);
-            this.txtIdRecluta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIdRecluta.Margin = new System.Windows.Forms.Padding(2);
             this.txtIdRecluta.Name = "txtIdRecluta";
             this.txtIdRecluta.Size = new System.Drawing.Size(119, 27);
-            this.txtIdRecluta.TabIndex = 32;
+            this.txtIdRecluta.TabIndex = 14;
+            this.txtIdRecluta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblIngreseIDRecluta
             // 
@@ -669,12 +637,13 @@
             this.btnModificar.TabIndex = 34;
             this.btnModificar.Text = "Realizar Modificación";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(925, 556);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnBuscar);
@@ -695,11 +664,8 @@
             this.gbxDomicilio.ResumeLayout(false);
             this.gbxDomicilio.PerformLayout();
             this.tbpDatosGenerales.ResumeLayout(false);
-            this.tbpDatosGenerales.PerformLayout();
             this.pnlPuesto.ResumeLayout(false);
             this.pnlPuesto.PerformLayout();
-            this.pnlFotografia.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).EndInit();
             this.gbxSexo.ResumeLayout(false);
             this.gbxSexo.PerformLayout();
             this.pnlDatosGenerales.ResumeLayout(false);
@@ -736,7 +702,6 @@
         private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.TabPage tbpDatosGenerales;
         private System.Windows.Forms.Panel pnlPuesto;
-        private System.Windows.Forms.Label lblEstadoRecluta;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.ComboBox cmbPuesto;
         private System.Windows.Forms.Label lblDepartamentoTrabajo;
@@ -760,12 +725,8 @@
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
         private System.Windows.Forms.TabControl tbcIngresoRecluta;
-        private System.Windows.Forms.Panel pnlFotografia;
-        private System.Windows.Forms.Button btnFotografia;
-        private System.Windows.Forms.PictureBox pbxFotografia;
         private System.Windows.Forms.ComboBox cmbTipoLicencia;
         private System.Windows.Forms.Label lblTipoLicencia;
-        private System.Windows.Forms.ComboBox cmbEstadoReclutado;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtIdRecluta;
         private System.Windows.Forms.Label lblIngreseIDRecluta;

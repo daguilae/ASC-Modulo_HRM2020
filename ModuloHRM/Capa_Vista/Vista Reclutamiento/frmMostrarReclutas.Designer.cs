@@ -35,9 +35,14 @@
             // 
             // dgvMostrarReclutas
             // 
+            this.dgvMostrarReclutas.AllowUserToAddRows = false;
+            this.dgvMostrarReclutas.AllowUserToDeleteRows = false;
+            this.dgvMostrarReclutas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMostrarReclutas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarReclutas.Location = new System.Drawing.Point(0, 164);
+            this.dgvMostrarReclutas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvMostrarReclutas.Location = new System.Drawing.Point(0, 149);
             this.dgvMostrarReclutas.Name = "dgvMostrarReclutas";
+            this.dgvMostrarReclutas.RowHeadersVisible = false;
             this.dgvMostrarReclutas.RowHeadersWidth = 51;
             this.dgvMostrarReclutas.RowTemplate.Height = 24;
             this.dgvMostrarReclutas.Size = new System.Drawing.Size(932, 354);
@@ -46,10 +51,10 @@
             // lblReclutas
             // 
             this.lblReclutas.AutoSize = true;
-            this.lblReclutas.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReclutas.Location = new System.Drawing.Point(386, 99);
+            this.lblReclutas.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReclutas.Location = new System.Drawing.Point(398, 107);
             this.lblReclutas.Name = "lblReclutas";
-            this.lblReclutas.Size = new System.Drawing.Size(75, 20);
+            this.lblReclutas.Size = new System.Drawing.Size(106, 27);
             this.lblReclutas.TabIndex = 3;
             this.lblReclutas.Text = "Reclutas";
             // 
@@ -57,6 +62,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.lblReclutas);
             this.Controls.Add(this.dgvMostrarReclutas);
