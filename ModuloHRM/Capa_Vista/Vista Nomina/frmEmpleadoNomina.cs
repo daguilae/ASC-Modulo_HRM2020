@@ -27,11 +27,11 @@ namespace Capa_Vista.Vista_Nomina
             {
                 if(rbtnIngresoDed.Checked == true)
                 {
-                    ConsNom.funcIngresarDeduccionEmpleado(cmbIngresoFecPLan.SelectedIndex, cmbIngresoDedPer.SelectedIndex, Id);
+                    ConsNom.funcIngresarDeduccionEmpleado(cmbIngresoFecPLan.Text, Id, cmbIngresoDedPer.Text);
                 }
                 else
                 {
-                    ConsNom.funcIngresarPercepcionEmpleado(cmbIngresoFecPLan.SelectedIndex, cmbIngresoDedPer.SelectedIndex, Id);
+                    ConsNom.funcIngresarPercepcionEmpleado(cmbIngresoFecPLan.Text, Id, cmbIngresoDedPer.Text);
                 }
             }
             funcLimpiarIngreso();
@@ -52,8 +52,7 @@ namespace Capa_Vista.Vista_Nomina
                 {
                     while (Lector.Read())
                     {
-                        Id = Convert.ToInt32(Lector.GetString(0));
-                        txtEliminarNomEmp.Text = (Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3) + " " + Lector.GetString(4));
+                        txtEliminarNomEmp.Text = (Lector.GetString(0) + " " + Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3));
                     }
                 }
                 else
@@ -69,11 +68,11 @@ namespace Capa_Vista.Vista_Nomina
             {
                 if (rbtnEliminarDed.Checked == true)
                 {
-                    ConsNom.funcEliminarDeduccionEmpleado(Id, cmbIngresoDedPer.SelectedIndex, cmbEliminarFechPlan.SelectedIndex);
+                    ConsNom.funcEliminarDeduccionEmpleado(Id, cmbEliminarDedPer.Text, cmbEliminarFechPlan.Text);
                 }
                 else
                 {
-                    ConsNom.funcEliminarPercepcionEmpleado(Id, cmbIngresoDedPer.SelectedIndex, cmbEliminarFechPlan.SelectedIndex);
+                    ConsNom.funcEliminarPercepcionEmpleado(Id, cmbEliminarDedPer.Text, cmbEliminarFechPlan.Text);
                 }
             }
             funcLimpiarEliminar();
@@ -94,8 +93,7 @@ namespace Capa_Vista.Vista_Nomina
                 {
                     while (Lector.Read())
                     {
-                        Id = Convert.ToInt32(Lector.GetString(0));
-                        txtIngresoNomEmp.Text = (Lector.GetString(1) +" "+ Lector.GetString(2) + " " +Lector.GetString(3) + " " + Lector.GetString(4));
+                        txtIngresoNomEmp.Text = (Lector.GetString(0) +" "+ Lector.GetString(1) + " " +Lector.GetString(2) + " " + Lector.GetString(3));
                     }
                 }
                 else
@@ -139,18 +137,22 @@ namespace Capa_Vista.Vista_Nomina
                 {
                     while (Lector.Read())
                     {
-                        Id = Convert.ToInt32(Lector.GetString(0));
-                        txtBuscarNomEmp.Text = (Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3) + " " + Lector.GetString(4));
+                        txtBuscarNomEmp.Text = (Lector.GetString(0) + " " + Lector.GetString(1) + " " + Lector.GetString(2) + " " + Lector.GetString(3));
                     }
                 }
                 else
                 {
                     MessageBox.Show("ERROR: El ID del empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txtBuscarPuestoEmp.Text = ConsNom.funcBuscarPuestoEmp(Id);
                 DataTable DatosDed = ConsNom.funcLlenardgvDedEmp(Id, cmbBuscarPeriodoPlanilla.Text);
                 DataTable DatosPer = ConsNom.funcLlenardgvPerEmp(Id, cmbBuscarPeriodoPlanilla.Text);
                 dgvDedEmp.DataSource = DatosDed;
                 dgvPerEpm.DataSource = DatosPer;
+                var Ded = DatosDed.Compute("SUM(Monto)", "");
+                var Per = DatosPer.Compute("SUM(Monto)", "");
+                txtTotalDed.Text = Ded.ToString();
+                txtTotalPer.Text = Per.ToString();
             }
         }
 
@@ -271,6 +273,8 @@ namespace Capa_Vista.Vista_Nomina
             dgvDedEmp.Refresh();
             dgvPerEpm.DataSource = null;
             dgvPerEpm.Refresh();
+            txtTotalDed.Text = "";
+            txtTotalPer.Text = "";
         }
         private void funcLimpiarEliminar()
         {

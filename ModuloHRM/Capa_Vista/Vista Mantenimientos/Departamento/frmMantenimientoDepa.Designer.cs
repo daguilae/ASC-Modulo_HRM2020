@@ -100,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(343, 264);
+            this.ClientSize = new System.Drawing.Size(341, 266);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtIDepa);
             this.Controls.Add(this.lblIDepa);

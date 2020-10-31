@@ -31,15 +31,15 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tbcContratar = new System.Windows.Forms.TabControl();
             this.tbpDatosGenerales = new System.Windows.Forms.TabPage();
+            this.lblFotografia = new System.Windows.Forms.Label();
+            this.pbxFotografia = new System.Windows.Forms.PictureBox();
             this.txtIdBancoTalento = new System.Windows.Forms.TextBox();
             this.lblIngreseIDRecluta = new System.Windows.Forms.Label();
             this.pnlPuesto = new System.Windows.Forms.Panel();
-            this.cmbPuesto = new System.Windows.Forms.ComboBox();
-            this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
             this.gbxSexo = new System.Windows.Forms.GroupBox();
-            this.txtGenero = new System.Windows.Forms.TextBox();
+            this.txtSexo = new System.Windows.Forms.TextBox();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
             this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.txtNumeroIgss = new System.Windows.Forms.TextBox();
@@ -56,39 +56,40 @@
             this.lblPrimerNombre = new System.Windows.Forms.Label();
             this.lblPrimerApellido = new System.Windows.Forms.Label();
             this.tbpDatosPersonales = new System.Windows.Forms.TabPage();
-            this.txtCuentaBanc = new System.Windows.Forms.TextBox();
-            this.lblCuentaBanc = new System.Windows.Forms.Label();
-            this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
-            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
-            this.gbxDomicilio = new System.Windows.Forms.GroupBox();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.txtZona = new System.Windows.Forms.TextBox();
-            this.lblCorreoElectronico = new System.Windows.Forms.Label();
-            this.lblDepartamento = new System.Windows.Forms.Label();
-            this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
-            this.txtMunicipio = new System.Windows.Forms.TextBox();
-            this.lbZona = new System.Windows.Forms.Label();
-            this.lblMunicipio = new System.Windows.Forms.Label();
-            this.txtDepartamento = new System.Windows.Forms.TextBox();
-            this.lblResidencia = new System.Windows.Forms.Label();
-            this.txtResidencia = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblTipoLicencia = new System.Windows.Forms.Label();
             this.gbxFormacionAcademica = new System.Windows.Forms.GroupBox();
-            this.cmbNivelEstudios = new System.Windows.Forms.ComboBox();
+            this.txtNivelEstudios = new System.Windows.Forms.TextBox();
             this.txtProfesion = new System.Windows.Forms.TextBox();
             this.lblProfesion = new System.Windows.Forms.Label();
             this.lblNivelEstudios = new System.Windows.Forms.Label();
+            this.gbxDomicilio = new System.Windows.Forms.GroupBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtCalleNumero = new System.Windows.Forms.TextBox();
+            this.lblCorreoElectronico = new System.Windows.Forms.Label();
+            this.lblDepartamento = new System.Windows.Forms.Label();
+            this.txtCorreoElectronico = new System.Windows.Forms.TextBox();
+            this.lblCalleNumero = new System.Windows.Forms.Label();
+            this.txtDepartamento = new System.Windows.Forms.TextBox();
+            this.lblColonia = new System.Windows.Forms.Label();
+            this.lblPais = new System.Windows.Forms.Label();
+            this.txtColonia = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtPais = new System.Windows.Forms.TextBox();
             this.lblEstadoCivil = new System.Windows.Forms.Label();
             this.btnContratar = new System.Windows.Forms.Button();
+            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
+            this.cmbPuesto = new System.Windows.Forms.ComboBox();
+            this.cmbTipoLicencia = new System.Windows.Forms.ComboBox();
+            this.lblTipoLicencia = new System.Windows.Forms.Label();
+            this.cmbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.tbcContratar.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).BeginInit();
             this.pnlPuesto.SuspendLayout();
             this.gbxSexo.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
             this.tbpDatosPersonales.SuspendLayout();
-            this.gbxDomicilio.SuspendLayout();
             this.gbxFormacionAcademica.SuspendLayout();
+            this.gbxDomicilio.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -118,7 +119,8 @@
             // 
             // tbpDatosGenerales
             // 
-            this.tbpDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpDatosGenerales.Controls.Add(this.lblFotografia);
+            this.tbpDatosGenerales.Controls.Add(this.pbxFotografia);
             this.tbpDatosGenerales.Controls.Add(this.btnBuscar);
             this.tbpDatosGenerales.Controls.Add(this.txtIdBancoTalento);
             this.tbpDatosGenerales.Controls.Add(this.lblIngreseIDRecluta);
@@ -133,10 +135,29 @@
             this.tbpDatosGenerales.Size = new System.Drawing.Size(924, 415);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
+            this.tbpDatosGenerales.UseVisualStyleBackColor = true;
+            this.tbpDatosGenerales.Click += new System.EventHandler(this.tbpDatosGenerales_Click);
+            // 
+            // lblFotografia
+            // 
+            this.lblFotografia.AutoSize = true;
+            this.lblFotografia.Location = new System.Drawing.Point(737, 89);
+            this.lblFotografia.Name = "lblFotografia";
+            this.lblFotografia.Size = new System.Drawing.Size(88, 20);
+            this.lblFotografia.TabIndex = 28;
+            this.lblFotografia.Text = "Fotografía";
+            // 
+            // pbxFotografia
+            // 
+            this.pbxFotografia.Location = new System.Drawing.Point(703, 129);
+            this.pbxFotografia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbxFotografia.Name = "pbxFotografia";
+            this.pbxFotografia.Size = new System.Drawing.Size(179, 153);
+            this.pbxFotografia.TabIndex = 0;
+            this.pbxFotografia.TabStop = false;
             // 
             // txtIdBancoTalento
             // 
-            this.txtIdBancoTalento.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIdBancoTalento.Location = new System.Drawing.Point(507, 12);
             this.txtIdBancoTalento.Name = "txtIdBancoTalento";
             this.txtIdBancoTalento.Size = new System.Drawing.Size(148, 27);
@@ -154,34 +175,16 @@
             // 
             // pnlPuesto
             // 
+            this.pnlPuesto.Controls.Add(this.cmbDepartamento);
             this.pnlPuesto.Controls.Add(this.cmbPuesto);
-            this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
             this.pnlPuesto.Controls.Add(this.lblPuesto);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Enabled = false;
-            this.pnlPuesto.Location = new System.Drawing.Point(540, 162);
+            this.pnlPuesto.Location = new System.Drawing.Point(467, 178);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPuesto.Name = "pnlPuesto";
-            this.pnlPuesto.Size = new System.Drawing.Size(188, 143);
+            this.pnlPuesto.Size = new System.Drawing.Size(188, 153);
             this.pnlPuesto.TabIndex = 25;
-            // 
-            // cmbPuesto
-            // 
-            this.cmbPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbPuesto.FormattingEnabled = true;
-            this.cmbPuesto.Location = new System.Drawing.Point(7, 35);
-            this.cmbPuesto.Name = "cmbPuesto";
-            this.cmbPuesto.Size = new System.Drawing.Size(171, 28);
-            this.cmbPuesto.TabIndex = 37;
-            // 
-            // cmbDepartamentoTrabajo
-            // 
-            this.cmbDepartamentoTrabajo.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbDepartamentoTrabajo.FormattingEnabled = true;
-            this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(7, 103);
-            this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
-            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(171, 28);
-            this.cmbDepartamentoTrabajo.TabIndex = 36;
             // 
             // lblPuesto
             // 
@@ -205,10 +208,10 @@
             // 
             // gbxSexo
             // 
-            this.gbxSexo.Controls.Add(this.txtGenero);
+            this.gbxSexo.Controls.Add(this.txtSexo);
             this.gbxSexo.Enabled = false;
             this.gbxSexo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxSexo.Location = new System.Drawing.Point(540, 74);
+            this.gbxSexo.Location = new System.Drawing.Point(467, 103);
             this.gbxSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbxSexo.Name = "gbxSexo";
             this.gbxSexo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -217,16 +220,15 @@
             this.gbxSexo.TabStop = false;
             this.gbxSexo.Text = "Sexo";
             // 
-            // txtGenero
+            // txtSexo
             // 
-            this.txtGenero.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtGenero.Enabled = false;
-            this.txtGenero.Location = new System.Drawing.Point(7, 28);
-            this.txtGenero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGenero.Name = "txtGenero";
-            this.txtGenero.Size = new System.Drawing.Size(171, 27);
-            this.txtGenero.TabIndex = 1;
-            this.txtGenero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            this.txtSexo.Enabled = false;
+            this.txtSexo.Location = new System.Drawing.Point(7, 28);
+            this.txtSexo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSexo.Name = "txtSexo";
+            this.txtSexo.Size = new System.Drawing.Size(171, 27);
+            this.txtSexo.TabIndex = 1;
+            this.txtSexo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // pnlDatosGenerales
             // 
@@ -245,7 +247,7 @@
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerApellido);
             this.pnlDatosGenerales.Enabled = false;
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(42, 54);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(18, 54);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
             this.pnlDatosGenerales.Size = new System.Drawing.Size(417, 346);
@@ -253,7 +255,6 @@
             // 
             // dtpFechaNacimiento
             // 
-            this.dtpFechaNacimiento.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.dtpFechaNacimiento.Enabled = false;
             this.dtpFechaNacimiento.Location = new System.Drawing.Point(49, 308);
             this.dtpFechaNacimiento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -263,7 +264,6 @@
             // 
             // txtNumeroIgss
             // 
-            this.txtNumeroIgss.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNumeroIgss.Enabled = false;
             this.txtNumeroIgss.Location = new System.Drawing.Point(200, 225);
             this.txtNumeroIgss.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -294,7 +294,6 @@
             // 
             // txtDpi
             // 
-            this.txtDpi.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtDpi.Enabled = false;
             this.txtDpi.Location = new System.Drawing.Point(200, 184);
             this.txtDpi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -305,7 +304,6 @@
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerApellido.Enabled = false;
             this.txtPrimerApellido.Location = new System.Drawing.Point(200, 102);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -336,7 +334,6 @@
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoApellido.Enabled = false;
             this.txtSegundoApellido.Location = new System.Drawing.Point(200, 145);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -347,7 +344,6 @@
             // 
             // txtPrimerNombre
             // 
-            this.txtPrimerNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerNombre.Enabled = false;
             this.txtPrimerNombre.Location = new System.Drawing.Point(200, 16);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -358,7 +354,6 @@
             // 
             // txtSegundoNombre
             // 
-            this.txtSegundoNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoNombre.Enabled = false;
             this.txtSegundoNombre.Location = new System.Drawing.Point(200, 61);
             this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -399,14 +394,11 @@
             // 
             // tbpDatosPersonales
             // 
-            this.tbpDatosPersonales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.tbpDatosPersonales.Controls.Add(this.txtCuentaBanc);
-            this.tbpDatosPersonales.Controls.Add(this.lblCuentaBanc);
-            this.tbpDatosPersonales.Controls.Add(this.cmbTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.cmbEstadoCivil);
-            this.tbpDatosPersonales.Controls.Add(this.gbxDomicilio);
+            this.tbpDatosPersonales.Controls.Add(this.cmbTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.lblTipoLicencia);
             this.tbpDatosPersonales.Controls.Add(this.gbxFormacionAcademica);
+            this.tbpDatosPersonales.Controls.Add(this.gbxDomicilio);
             this.tbpDatosPersonales.Controls.Add(this.lblEstadoCivil);
             this.tbpDatosPersonales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 29);
@@ -415,187 +407,11 @@
             this.tbpDatosPersonales.Size = new System.Drawing.Size(924, 415);
             this.tbpDatosPersonales.TabIndex = 3;
             this.tbpDatosPersonales.Text = "Datos Personales";
-            // 
-            // txtCuentaBanc
-            // 
-            this.txtCuentaBanc.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtCuentaBanc.Enabled = false;
-            this.txtCuentaBanc.Location = new System.Drawing.Point(687, 147);
-            this.txtCuentaBanc.Name = "txtCuentaBanc";
-            this.txtCuentaBanc.Size = new System.Drawing.Size(216, 27);
-            this.txtCuentaBanc.TabIndex = 36;
-            this.txtCuentaBanc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblCuentaBanc
-            // 
-            this.lblCuentaBanc.AutoSize = true;
-            this.lblCuentaBanc.Location = new System.Drawing.Point(445, 150);
-            this.lblCuentaBanc.Name = "lblCuentaBanc";
-            this.lblCuentaBanc.Size = new System.Drawing.Size(206, 20);
-            this.lblCuentaBanc.TabIndex = 35;
-            this.lblCuentaBanc.Text = "Número Cuenta Bancaria";
-            // 
-            // cmbTipoLicencia
-            // 
-            this.cmbTipoLicencia.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbTipoLicencia.Enabled = false;
-            this.cmbTipoLicencia.FormattingEnabled = true;
-            this.cmbTipoLicencia.Location = new System.Drawing.Point(742, 94);
-            this.cmbTipoLicencia.Name = "cmbTipoLicencia";
-            this.cmbTipoLicencia.Size = new System.Drawing.Size(161, 28);
-            this.cmbTipoLicencia.TabIndex = 34;
-            // 
-            // cmbEstadoCivil
-            // 
-            this.cmbEstadoCivil.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbEstadoCivil.Enabled = false;
-            this.cmbEstadoCivil.FormattingEnabled = true;
-            this.cmbEstadoCivil.Location = new System.Drawing.Point(742, 40);
-            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
-            this.cmbEstadoCivil.Size = new System.Drawing.Size(159, 28);
-            this.cmbEstadoCivil.TabIndex = 33;
-            // 
-            // gbxDomicilio
-            // 
-            this.gbxDomicilio.Controls.Add(this.txtTelefono);
-            this.gbxDomicilio.Controls.Add(this.txtZona);
-            this.gbxDomicilio.Controls.Add(this.lblCorreoElectronico);
-            this.gbxDomicilio.Controls.Add(this.lblDepartamento);
-            this.gbxDomicilio.Controls.Add(this.txtCorreoElectronico);
-            this.gbxDomicilio.Controls.Add(this.txtMunicipio);
-            this.gbxDomicilio.Controls.Add(this.lbZona);
-            this.gbxDomicilio.Controls.Add(this.lblMunicipio);
-            this.gbxDomicilio.Controls.Add(this.txtDepartamento);
-            this.gbxDomicilio.Controls.Add(this.lblResidencia);
-            this.gbxDomicilio.Controls.Add(this.txtResidencia);
-            this.gbxDomicilio.Controls.Add(this.lblTelefono);
-            this.gbxDomicilio.Enabled = false;
-            this.gbxDomicilio.Location = new System.Drawing.Point(19, 35);
-            this.gbxDomicilio.Name = "gbxDomicilio";
-            this.gbxDomicilio.Size = new System.Drawing.Size(387, 294);
-            this.gbxDomicilio.TabIndex = 32;
-            this.gbxDomicilio.TabStop = false;
-            this.gbxDomicilio.Text = "Domicilio";
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtTelefono.Location = new System.Drawing.Point(187, 247);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(129, 27);
-            this.txtTelefono.TabIndex = 12;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // txtZona
-            // 
-            this.txtZona.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtZona.Location = new System.Drawing.Point(187, 69);
-            this.txtZona.Name = "txtZona";
-            this.txtZona.Size = new System.Drawing.Size(183, 27);
-            this.txtZona.TabIndex = 8;
-            this.txtZona.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblCorreoElectronico
-            // 
-            this.lblCorreoElectronico.AutoSize = true;
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(7, 206);
-            this.lblCorreoElectronico.Name = "lblCorreoElectronico";
-            this.lblCorreoElectronico.Size = new System.Drawing.Size(161, 20);
-            this.lblCorreoElectronico.TabIndex = 22;
-            this.lblCorreoElectronico.Text = "Correo Electrónico";
-            // 
-            // lblDepartamento
-            // 
-            this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Location = new System.Drawing.Point(7, 165);
-            this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(121, 20);
-            this.lblDepartamento.TabIndex = 3;
-            this.lblDepartamento.Text = "Departamento";
-            // 
-            // txtCorreoElectronico
-            // 
-            this.txtCorreoElectronico.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(187, 199);
-            this.txtCorreoElectronico.Name = "txtCorreoElectronico";
-            this.txtCorreoElectronico.Size = new System.Drawing.Size(183, 27);
-            this.txtCorreoElectronico.TabIndex = 11;
-            // 
-            // txtMunicipio
-            // 
-            this.txtMunicipio.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtMunicipio.Location = new System.Drawing.Point(187, 112);
-            this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(183, 27);
-            this.txtMunicipio.TabIndex = 9;
-            this.txtMunicipio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // lbZona
-            // 
-            this.lbZona.AutoSize = true;
-            this.lbZona.Location = new System.Drawing.Point(8, 75);
-            this.lbZona.Name = "lbZona";
-            this.lbZona.Size = new System.Drawing.Size(140, 20);
-            this.lbZona.TabIndex = 1;
-            this.lbZona.Text = "Número de Zona";
-            // 
-            // lblMunicipio
-            // 
-            this.lblMunicipio.AutoSize = true;
-            this.lblMunicipio.Location = new System.Drawing.Point(7, 119);
-            this.lblMunicipio.Name = "lblMunicipio";
-            this.lblMunicipio.Size = new System.Drawing.Size(88, 20);
-            this.lblMunicipio.TabIndex = 4;
-            this.lblMunicipio.Text = "Municipio";
-            // 
-            // txtDepartamento
-            // 
-            this.txtDepartamento.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtDepartamento.Location = new System.Drawing.Point(187, 158);
-            this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(183, 27);
-            this.txtDepartamento.TabIndex = 10;
-            this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
-            // 
-            // lblResidencia
-            // 
-            this.lblResidencia.AutoSize = true;
-            this.lblResidencia.Location = new System.Drawing.Point(7, 34);
-            this.lblResidencia.Name = "lblResidencia";
-            this.lblResidencia.Size = new System.Drawing.Size(163, 20);
-            this.lblResidencia.TabIndex = 2;
-            this.lblResidencia.Text = "Número Residencia";
-            // 
-            // txtResidencia
-            // 
-            this.txtResidencia.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtResidencia.Location = new System.Drawing.Point(187, 27);
-            this.txtResidencia.Name = "txtResidencia";
-            this.txtResidencia.Size = new System.Drawing.Size(183, 27);
-            this.txtResidencia.TabIndex = 7;
-            this.txtResidencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(7, 254);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(79, 20);
-            this.lblTelefono.TabIndex = 11;
-            this.lblTelefono.Text = "Teléfono";
-            // 
-            // lblTipoLicencia
-            // 
-            this.lblTipoLicencia.AutoSize = true;
-            this.lblTipoLicencia.Location = new System.Drawing.Point(445, 94);
-            this.lblTipoLicencia.Name = "lblTipoLicencia";
-            this.lblTipoLicencia.Size = new System.Drawing.Size(192, 20);
-            this.lblTipoLicencia.TabIndex = 29;
-            this.lblTipoLicencia.Text = "Tipo Licencia Conducir";
+            this.tbpDatosPersonales.UseVisualStyleBackColor = true;
             // 
             // gbxFormacionAcademica
             // 
-            this.gbxFormacionAcademica.Controls.Add(this.cmbNivelEstudios);
+            this.gbxFormacionAcademica.Controls.Add(this.txtNivelEstudios);
             this.gbxFormacionAcademica.Controls.Add(this.txtProfesion);
             this.gbxFormacionAcademica.Controls.Add(this.lblProfesion);
             this.gbxFormacionAcademica.Controls.Add(this.lblNivelEstudios);
@@ -607,18 +423,17 @@
             this.gbxFormacionAcademica.TabStop = false;
             this.gbxFormacionAcademica.Text = "Formación Académica";
             // 
-            // cmbNivelEstudios
+            // txtNivelEstudios
             // 
-            this.cmbNivelEstudios.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbNivelEstudios.FormattingEnabled = true;
-            this.cmbNivelEstudios.Location = new System.Drawing.Point(174, 41);
-            this.cmbNivelEstudios.Name = "cmbNivelEstudios";
-            this.cmbNivelEstudios.Size = new System.Drawing.Size(290, 28);
-            this.cmbNivelEstudios.TabIndex = 14;
+            this.txtNivelEstudios.Enabled = false;
+            this.txtNivelEstudios.Location = new System.Drawing.Point(174, 44);
+            this.txtNivelEstudios.Name = "txtNivelEstudios";
+            this.txtNivelEstudios.Size = new System.Drawing.Size(169, 27);
+            this.txtNivelEstudios.TabIndex = 29;
+            this.txtNivelEstudios.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtProfesion
             // 
-            this.txtProfesion.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtProfesion.Enabled = false;
             this.txtProfesion.Location = new System.Drawing.Point(174, 89);
             this.txtProfesion.Name = "txtProfesion";
@@ -644,10 +459,146 @@
             this.lblNivelEstudios.TabIndex = 0;
             this.lblNivelEstudios.Text = "Nivel de Estudios";
             // 
+            // gbxDomicilio
+            // 
+            this.gbxDomicilio.Controls.Add(this.txtTelefono);
+            this.gbxDomicilio.Controls.Add(this.txtCalleNumero);
+            this.gbxDomicilio.Controls.Add(this.lblCorreoElectronico);
+            this.gbxDomicilio.Controls.Add(this.lblDepartamento);
+            this.gbxDomicilio.Controls.Add(this.txtCorreoElectronico);
+            this.gbxDomicilio.Controls.Add(this.lblCalleNumero);
+            this.gbxDomicilio.Controls.Add(this.txtDepartamento);
+            this.gbxDomicilio.Controls.Add(this.lblColonia);
+            this.gbxDomicilio.Controls.Add(this.lblPais);
+            this.gbxDomicilio.Controls.Add(this.txtColonia);
+            this.gbxDomicilio.Controls.Add(this.lblTelefono);
+            this.gbxDomicilio.Controls.Add(this.txtPais);
+            this.gbxDomicilio.Enabled = false;
+            this.gbxDomicilio.Location = new System.Drawing.Point(19, 22);
+            this.gbxDomicilio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxDomicilio.Name = "gbxDomicilio";
+            this.gbxDomicilio.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxDomicilio.Size = new System.Drawing.Size(387, 294);
+            this.gbxDomicilio.TabIndex = 26;
+            this.gbxDomicilio.TabStop = false;
+            this.gbxDomicilio.Text = "Domicilio";
+            // 
+            // txtTelefono
+            // 
+            this.txtTelefono.Enabled = false;
+            this.txtTelefono.Location = new System.Drawing.Point(188, 247);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(129, 27);
+            this.txtTelefono.TabIndex = 23;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // txtCalleNumero
+            // 
+            this.txtCalleNumero.Enabled = false;
+            this.txtCalleNumero.Location = new System.Drawing.Point(188, 18);
+            this.txtCalleNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCalleNumero.Name = "txtCalleNumero";
+            this.txtCalleNumero.Size = new System.Drawing.Size(184, 27);
+            this.txtCalleNumero.TabIndex = 5;
+            // 
+            // lblCorreoElectronico
+            // 
+            this.lblCorreoElectronico.AutoSize = true;
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(6, 206);
+            this.lblCorreoElectronico.Name = "lblCorreoElectronico";
+            this.lblCorreoElectronico.Size = new System.Drawing.Size(161, 20);
+            this.lblCorreoElectronico.TabIndex = 22;
+            this.lblCorreoElectronico.Text = "Correo Electrónico";
+            // 
+            // lblDepartamento
+            // 
+            this.lblDepartamento.AutoSize = true;
+            this.lblDepartamento.Location = new System.Drawing.Point(6, 112);
+            this.lblDepartamento.Name = "lblDepartamento";
+            this.lblDepartamento.Size = new System.Drawing.Size(121, 20);
+            this.lblDepartamento.TabIndex = 3;
+            this.lblDepartamento.Text = "Departamento";
+            // 
+            // txtCorreoElectronico
+            // 
+            this.txtCorreoElectronico.Enabled = false;
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(188, 199);
+            this.txtCorreoElectronico.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCorreoElectronico.Name = "txtCorreoElectronico";
+            this.txtCorreoElectronico.Size = new System.Drawing.Size(184, 27);
+            this.txtCorreoElectronico.TabIndex = 12;
+            // 
+            // lblCalleNumero
+            // 
+            this.lblCalleNumero.AutoSize = true;
+            this.lblCalleNumero.Location = new System.Drawing.Point(6, 26);
+            this.lblCalleNumero.Name = "lblCalleNumero";
+            this.lblCalleNumero.Size = new System.Drawing.Size(133, 20);
+            this.lblCalleNumero.TabIndex = 1;
+            this.lblCalleNumero.Text = "Calle y Número";
+            // 
+            // txtDepartamento
+            // 
+            this.txtDepartamento.Enabled = false;
+            this.txtDepartamento.Location = new System.Drawing.Point(188, 105);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDepartamento.Name = "txtDepartamento";
+            this.txtDepartamento.Size = new System.Drawing.Size(184, 27);
+            this.txtDepartamento.TabIndex = 7;
+            this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            // 
+            // lblColonia
+            // 
+            this.lblColonia.AutoSize = true;
+            this.lblColonia.Location = new System.Drawing.Point(6, 71);
+            this.lblColonia.Name = "lblColonia";
+            this.lblColonia.Size = new System.Drawing.Size(71, 20);
+            this.lblColonia.TabIndex = 2;
+            this.lblColonia.Text = "Colonia";
+            // 
+            // lblPais
+            // 
+            this.lblPais.AutoSize = true;
+            this.lblPais.Location = new System.Drawing.Point(6, 156);
+            this.lblPais.Name = "lblPais";
+            this.lblPais.Size = new System.Drawing.Size(41, 20);
+            this.lblPais.TabIndex = 4;
+            this.lblPais.Text = "Pais";
+            // 
+            // txtColonia
+            // 
+            this.txtColonia.Enabled = false;
+            this.txtColonia.Location = new System.Drawing.Point(188, 64);
+            this.txtColonia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtColonia.Name = "txtColonia";
+            this.txtColonia.Size = new System.Drawing.Size(184, 27);
+            this.txtColonia.TabIndex = 6;
+            this.txtColonia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(6, 254);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(79, 20);
+            this.lblTelefono.TabIndex = 11;
+            this.lblTelefono.Text = "Teléfono";
+            // 
+            // txtPais
+            // 
+            this.txtPais.Enabled = false;
+            this.txtPais.Location = new System.Drawing.Point(188, 149);
+            this.txtPais.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(184, 27);
+            this.txtPais.TabIndex = 8;
+            this.txtPais.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
+            // 
             // lblEstadoCivil
             // 
             this.lblEstadoCivil.AutoSize = true;
-            this.lblEstadoCivil.Location = new System.Drawing.Point(445, 45);
+            this.lblEstadoCivil.Location = new System.Drawing.Point(445, 85);
             this.lblEstadoCivil.Name = "lblEstadoCivil";
             this.lblEstadoCivil.Size = new System.Drawing.Size(103, 20);
             this.lblEstadoCivil.TabIndex = 22;
@@ -665,11 +616,53 @@
             this.btnContratar.UseVisualStyleBackColor = true;
             this.btnContratar.Click += new System.EventHandler(this.btnContratar_Click);
             // 
+            // cmbDepartamento
+            // 
+            this.cmbDepartamento.FormattingEnabled = true;
+            this.cmbDepartamento.Location = new System.Drawing.Point(7, 112);
+            this.cmbDepartamento.Name = "cmbDepartamento";
+            this.cmbDepartamento.Size = new System.Drawing.Size(171, 28);
+            this.cmbDepartamento.TabIndex = 31;
+            // 
+            // cmbPuesto
+            // 
+            this.cmbPuesto.FormattingEnabled = true;
+            this.cmbPuesto.Location = new System.Drawing.Point(7, 35);
+            this.cmbPuesto.Name = "cmbPuesto";
+            this.cmbPuesto.Size = new System.Drawing.Size(171, 28);
+            this.cmbPuesto.TabIndex = 32;
+            // 
+            // cmbTipoLicencia
+            // 
+            this.cmbTipoLicencia.Enabled = false;
+            this.cmbTipoLicencia.FormattingEnabled = true;
+            this.cmbTipoLicencia.Location = new System.Drawing.Point(673, 127);
+            this.cmbTipoLicencia.Name = "cmbTipoLicencia";
+            this.cmbTipoLicencia.Size = new System.Drawing.Size(140, 28);
+            this.cmbTipoLicencia.TabIndex = 30;
+            // 
+            // lblTipoLicencia
+            // 
+            this.lblTipoLicencia.AutoSize = true;
+            this.lblTipoLicencia.Location = new System.Drawing.Point(445, 134);
+            this.lblTipoLicencia.Name = "lblTipoLicencia";
+            this.lblTipoLicencia.Size = new System.Drawing.Size(192, 20);
+            this.lblTipoLicencia.TabIndex = 29;
+            this.lblTipoLicencia.Text = "Tipo Licencia Conducir";
+            // 
+            // cmbEstadoCivil
+            // 
+            this.cmbEstadoCivil.Enabled = false;
+            this.cmbEstadoCivil.FormattingEnabled = true;
+            this.cmbEstadoCivil.Location = new System.Drawing.Point(673, 75);
+            this.cmbEstadoCivil.Name = "cmbEstadoCivil";
+            this.cmbEstadoCivil.Size = new System.Drawing.Size(140, 28);
+            this.cmbEstadoCivil.TabIndex = 31;
+            // 
             // frmContratacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.btnContratar);
             this.Controls.Add(this.tbcContratar);
@@ -682,6 +675,7 @@
             this.tbcContratar.ResumeLayout(false);
             this.tbpDatosGenerales.ResumeLayout(false);
             this.tbpDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).EndInit();
             this.pnlPuesto.ResumeLayout(false);
             this.pnlPuesto.PerformLayout();
             this.gbxSexo.ResumeLayout(false);
@@ -690,10 +684,10 @@
             this.pnlDatosGenerales.PerformLayout();
             this.tbpDatosPersonales.ResumeLayout(false);
             this.tbpDatosPersonales.PerformLayout();
-            this.gbxDomicilio.ResumeLayout(false);
-            this.gbxDomicilio.PerformLayout();
             this.gbxFormacionAcademica.ResumeLayout(false);
             this.gbxFormacionAcademica.PerformLayout();
+            this.gbxDomicilio.ResumeLayout(false);
+            this.gbxDomicilio.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -707,8 +701,9 @@
         private System.Windows.Forms.Panel pnlPuesto;
         private System.Windows.Forms.Label lblPuesto;
         private System.Windows.Forms.Label lblDepartamentoTrabajo;
+        private System.Windows.Forms.PictureBox pbxFotografia;
         private System.Windows.Forms.GroupBox gbxSexo;
-        private System.Windows.Forms.TextBox txtGenero;
+        private System.Windows.Forms.TextBox txtSexo;
         private System.Windows.Forms.Panel pnlDatosGenerales;
         private System.Windows.Forms.DateTimePicker dtpFechaNacimiento;
         private System.Windows.Forms.TextBox txtNumeroIgss;
@@ -725,6 +720,19 @@
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
         private System.Windows.Forms.TabPage tbpDatosPersonales;
+        private System.Windows.Forms.GroupBox gbxDomicilio;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtCalleNumero;
+        private System.Windows.Forms.Label lblCorreoElectronico;
+        private System.Windows.Forms.Label lblDepartamento;
+        private System.Windows.Forms.TextBox txtCorreoElectronico;
+        private System.Windows.Forms.Label lblCalleNumero;
+        private System.Windows.Forms.TextBox txtDepartamento;
+        private System.Windows.Forms.Label lblColonia;
+        private System.Windows.Forms.Label lblPais;
+        private System.Windows.Forms.TextBox txtColonia;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.TextBox txtPais;
         private System.Windows.Forms.Label lblEstadoCivil;
         private System.Windows.Forms.Label lblIngreseIDRecluta;
         private System.Windows.Forms.Button btnContratar;
@@ -732,26 +740,12 @@
         private System.Windows.Forms.TextBox txtProfesion;
         private System.Windows.Forms.Label lblProfesion;
         private System.Windows.Forms.Label lblNivelEstudios;
-        private System.Windows.Forms.Label lblTipoLicencia;
-        private System.Windows.Forms.GroupBox gbxDomicilio;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.TextBox txtZona;
-        private System.Windows.Forms.Label lblCorreoElectronico;
-        private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.TextBox txtCorreoElectronico;
-        private System.Windows.Forms.TextBox txtMunicipio;
-        private System.Windows.Forms.Label lbZona;
-        private System.Windows.Forms.Label lblMunicipio;
-        private System.Windows.Forms.TextBox txtDepartamento;
-        private System.Windows.Forms.Label lblResidencia;
-        private System.Windows.Forms.TextBox txtResidencia;
-        private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.ComboBox cmbTipoLicencia;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
-        private System.Windows.Forms.ComboBox cmbNivelEstudios;
+        private System.Windows.Forms.Label lblFotografia;
+        private System.Windows.Forms.TextBox txtNivelEstudios;
+        private System.Windows.Forms.ComboBox cmbDepartamento;
         private System.Windows.Forms.ComboBox cmbPuesto;
-        private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
-        private System.Windows.Forms.TextBox txtCuentaBanc;
-        private System.Windows.Forms.Label lblCuentaBanc;
+        private System.Windows.Forms.ComboBox cmbTipoLicencia;
+        private System.Windows.Forms.Label lblTipoLicencia;
+        private System.Windows.Forms.ComboBox cmbEstadoCivil;
     }
 }

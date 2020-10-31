@@ -35,13 +35,9 @@
             // 
             // dgvMostrarEmpleados
             // 
-            this.dgvMostrarEmpleados.AllowUserToAddRows = false;
-            this.dgvMostrarEmpleados.AllowUserToDeleteRows = false;
             this.dgvMostrarEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMostrarEmpleados.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 149);
+            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 162);
             this.dgvMostrarEmpleados.Name = "dgvMostrarEmpleados";
-            this.dgvMostrarEmpleados.RowHeadersVisible = false;
             this.dgvMostrarEmpleados.RowHeadersWidth = 51;
             this.dgvMostrarEmpleados.RowTemplate.Height = 24;
             this.dgvMostrarEmpleados.Size = new System.Drawing.Size(932, 354);
@@ -50,10 +46,10 @@
             // lblEmpleados
             // 
             this.lblEmpleados.AutoSize = true;
-            this.lblEmpleados.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.Location = new System.Drawing.Point(394, 99);
+            this.lblEmpleados.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleados.Location = new System.Drawing.Point(386, 99);
             this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(137, 27);
+            this.lblEmpleados.Size = new System.Drawing.Size(97, 20);
             this.lblEmpleados.TabIndex = 3;
             this.lblEmpleados.Text = "Empleados";
             // 
@@ -61,7 +57,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.lblEmpleados);
             this.Controls.Add(this.dgvMostrarEmpleados);

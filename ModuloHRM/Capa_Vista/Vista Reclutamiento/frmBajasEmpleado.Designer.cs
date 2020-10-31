@@ -30,13 +30,15 @@
         {
             this.tbcDatosBajaEmpleado = new System.Windows.Forms.TabControl();
             this.tbpDatosGenerales = new System.Windows.Forms.TabPage();
+            this.lblFotografia = new System.Windows.Forms.Label();
             this.lblIngreseIdEmpleado = new System.Windows.Forms.Label();
+            this.pbxFotografia = new System.Windows.Forms.PictureBox();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.pnlPuesto = new System.Windows.Forms.Panel();
-            this.cmbDepartamento = new System.Windows.Forms.ComboBox();
+            this.cmbTipoEntrevista = new System.Windows.Forms.ComboBox();
             this.lblPuesto = new System.Windows.Forms.Label();
-            this.cmbPuesto = new System.Windows.Forms.ComboBox();
+            this.cmbDepartamentoTrabajo = new System.Windows.Forms.ComboBox();
             this.lblDepartamentoTrabajo = new System.Windows.Forms.Label();
             this.pnlDatosGenerales = new System.Windows.Forms.Panel();
             this.txtPrimerApellido = new System.Windows.Forms.TextBox();
@@ -52,7 +54,7 @@
             this.rbtnDespido = new System.Windows.Forms.RadioButton();
             this.lblTipoBaja = new System.Windows.Forms.Label();
             this.gbxPrestacionesDespido = new System.Windows.Forms.GroupBox();
-            this.BtnBaja = new System.Windows.Forms.Button();
+            this.rbtnBaja = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.lblFechaBaja = new System.Windows.Forms.Label();
             this.rtxtCausaDespido = new System.Windows.Forms.RichTextBox();
@@ -63,6 +65,7 @@
             this.lblTiempoLaborado = new System.Windows.Forms.Label();
             this.tbcDatosBajaEmpleado.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).BeginInit();
             this.pnlPuesto.SuspendLayout();
             this.pnlDatosGenerales.SuspendLayout();
             this.tbpDespido_Renuncia.SuspendLayout();
@@ -79,13 +82,14 @@
             this.tbcDatosBajaEmpleado.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbcDatosBajaEmpleado.Name = "tbcDatosBajaEmpleado";
             this.tbcDatosBajaEmpleado.SelectedIndex = 0;
-            this.tbcDatosBajaEmpleado.Size = new System.Drawing.Size(944, 530);
+            this.tbcDatosBajaEmpleado.Size = new System.Drawing.Size(1091, 530);
             this.tbcDatosBajaEmpleado.TabIndex = 22;
             // 
             // tbpDatosGenerales
             // 
-            this.tbpDatosGenerales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpDatosGenerales.Controls.Add(this.lblFotografia);
             this.tbpDatosGenerales.Controls.Add(this.lblIngreseIdEmpleado);
+            this.tbpDatosGenerales.Controls.Add(this.pbxFotografia);
             this.tbpDatosGenerales.Controls.Add(this.txtIdEmpleado);
             this.tbpDatosGenerales.Controls.Add(this.btnBuscar);
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
@@ -95,24 +99,43 @@
             this.tbpDatosGenerales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
             this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tbpDatosGenerales.Size = new System.Drawing.Size(936, 497);
+            this.tbpDatosGenerales.Size = new System.Drawing.Size(1083, 497);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
+            this.tbpDatosGenerales.UseVisualStyleBackColor = true;
+            // 
+            // lblFotografia
+            // 
+            this.lblFotografia.AutoSize = true;
+            this.lblFotografia.Location = new System.Drawing.Point(886, 157);
+            this.lblFotografia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFotografia.Name = "lblFotografia";
+            this.lblFotografia.Size = new System.Drawing.Size(88, 20);
+            this.lblFotografia.TabIndex = 28;
+            this.lblFotografia.Text = "Fotografía";
             // 
             // lblIngreseIdEmpleado
             // 
             this.lblIngreseIdEmpleado.AutoSize = true;
-            this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(185, 99);
+            this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(320, 87);
             this.lblIngreseIdEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngreseIdEmpleado.Name = "lblIngreseIdEmpleado";
             this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(222, 20);
             this.lblIngreseIdEmpleado.TabIndex = 27;
             this.lblIngreseIdEmpleado.Text = "Ingrese el ID del Empleado";
             // 
+            // pbxFotografia
+            // 
+            this.pbxFotografia.Location = new System.Drawing.Point(830, 190);
+            this.pbxFotografia.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.pbxFotografia.Name = "pbxFotografia";
+            this.pbxFotografia.Size = new System.Drawing.Size(224, 191);
+            this.pbxFotografia.TabIndex = 0;
+            this.pbxFotografia.TabStop = false;
+            // 
             // txtIdEmpleado
             // 
-            this.txtIdEmpleado.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIdEmpleado.Location = new System.Drawing.Point(429, 96);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(564, 84);
             this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
             this.txtIdEmpleado.Size = new System.Drawing.Size(184, 27);
@@ -122,7 +145,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(646, 90);
+            this.btnBuscar.Location = new System.Drawing.Point(781, 78);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(119, 38);
@@ -133,27 +156,26 @@
             // 
             // pnlPuesto
             // 
-            this.pnlPuesto.Controls.Add(this.cmbDepartamento);
+            this.pnlPuesto.Controls.Add(this.cmbTipoEntrevista);
             this.pnlPuesto.Controls.Add(this.lblPuesto);
-            this.pnlPuesto.Controls.Add(this.cmbPuesto);
+            this.pnlPuesto.Controls.Add(this.cmbDepartamentoTrabajo);
             this.pnlPuesto.Controls.Add(this.lblDepartamentoTrabajo);
             this.pnlPuesto.Enabled = false;
-            this.pnlPuesto.Location = new System.Drawing.Point(597, 190);
+            this.pnlPuesto.Location = new System.Drawing.Point(564, 190);
             this.pnlPuesto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlPuesto.Name = "pnlPuesto";
             this.pnlPuesto.Size = new System.Drawing.Size(235, 191);
             this.pnlPuesto.TabIndex = 25;
             // 
-            // cmbDepartamento
+            // cmbTipoEntrevista
             // 
-            this.cmbDepartamento.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbDepartamento.Enabled = false;
-            this.cmbDepartamento.FormattingEnabled = true;
-            this.cmbDepartamento.Location = new System.Drawing.Point(9, 136);
-            this.cmbDepartamento.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(218, 28);
-            this.cmbDepartamento.TabIndex = 30;
+            this.cmbTipoEntrevista.Enabled = false;
+            this.cmbTipoEntrevista.FormattingEnabled = true;
+            this.cmbTipoEntrevista.Location = new System.Drawing.Point(9, 136);
+            this.cmbTipoEntrevista.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbTipoEntrevista.Name = "cmbTipoEntrevista";
+            this.cmbTipoEntrevista.Size = new System.Drawing.Size(218, 28);
+            this.cmbTipoEntrevista.TabIndex = 30;
             // 
             // lblPuesto
             // 
@@ -166,16 +188,15 @@
             this.lblPuesto.TabIndex = 19;
             this.lblPuesto.Text = "Puesto";
             // 
-            // cmbPuesto
+            // cmbDepartamentoTrabajo
             // 
-            this.cmbPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbPuesto.Enabled = false;
-            this.cmbPuesto.FormattingEnabled = true;
-            this.cmbPuesto.Location = new System.Drawing.Point(9, 58);
-            this.cmbPuesto.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbPuesto.Name = "cmbPuesto";
-            this.cmbPuesto.Size = new System.Drawing.Size(218, 28);
-            this.cmbPuesto.TabIndex = 29;
+            this.cmbDepartamentoTrabajo.Enabled = false;
+            this.cmbDepartamentoTrabajo.FormattingEnabled = true;
+            this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(9, 58);
+            this.cmbDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
+            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(218, 28);
+            this.cmbDepartamentoTrabajo.TabIndex = 29;
             // 
             // lblDepartamentoTrabajo
             // 
@@ -199,7 +220,7 @@
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerApellido);
             this.pnlDatosGenerales.Enabled = false;
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(50, 168);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(25, 175);
             this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
             this.pnlDatosGenerales.Size = new System.Drawing.Size(492, 226);
@@ -207,7 +228,6 @@
             // 
             // txtPrimerApellido
             // 
-            this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerApellido.Enabled = false;
             this.txtPrimerApellido.Location = new System.Drawing.Point(250, 128);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -229,7 +249,6 @@
             // 
             // txtSegundoApellido
             // 
-            this.txtSegundoApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoApellido.Enabled = false;
             this.txtSegundoApellido.Location = new System.Drawing.Point(250, 181);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -240,7 +259,6 @@
             // 
             // txtPrimerNombre
             // 
-            this.txtPrimerNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPrimerNombre.Enabled = false;
             this.txtPrimerNombre.Location = new System.Drawing.Point(250, 20);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -251,7 +269,6 @@
             // 
             // txtSegundoNombre
             // 
-            this.txtSegundoNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtSegundoNombre.Enabled = false;
             this.txtSegundoNombre.Location = new System.Drawing.Point(250, 76);
             this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -295,7 +312,6 @@
             // 
             // tbpDespido_Renuncia
             // 
-            this.tbpDespido_Renuncia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpDespido_Renuncia.Controls.Add(this.rbtnRenuncia);
             this.tbpDespido_Renuncia.Controls.Add(this.rbtnDespido);
             this.tbpDespido_Renuncia.Controls.Add(this.lblTipoBaja);
@@ -303,14 +319,14 @@
             this.tbpDespido_Renuncia.Location = new System.Drawing.Point(4, 29);
             this.tbpDespido_Renuncia.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDespido_Renuncia.Name = "tbpDespido_Renuncia";
-            this.tbpDespido_Renuncia.Size = new System.Drawing.Size(936, 497);
+            this.tbpDespido_Renuncia.Size = new System.Drawing.Size(1083, 497);
             this.tbpDespido_Renuncia.TabIndex = 3;
             this.tbpDespido_Renuncia.Text = "Despidos/Renuncias";
+            this.tbpDespido_Renuncia.UseVisualStyleBackColor = true;
             // 
             // rbtnRenuncia
             // 
             this.rbtnRenuncia.AutoSize = true;
-            this.rbtnRenuncia.Enabled = false;
             this.rbtnRenuncia.Location = new System.Drawing.Point(199, 58);
             this.rbtnRenuncia.Name = "rbtnRenuncia";
             this.rbtnRenuncia.Size = new System.Drawing.Size(103, 24);
@@ -323,7 +339,6 @@
             // rbtnDespido
             // 
             this.rbtnDespido.AutoSize = true;
-            this.rbtnDespido.Enabled = false;
             this.rbtnDespido.Location = new System.Drawing.Point(45, 58);
             this.rbtnDespido.Name = "rbtnDespido";
             this.rbtnDespido.Size = new System.Drawing.Size(95, 24);
@@ -344,7 +359,7 @@
             // 
             // gbxPrestacionesDespido
             // 
-            this.gbxPrestacionesDespido.Controls.Add(this.BtnBaja);
+            this.gbxPrestacionesDespido.Controls.Add(this.rbtnBaja);
             this.gbxPrestacionesDespido.Controls.Add(this.dtpFecha);
             this.gbxPrestacionesDespido.Controls.Add(this.lblFechaBaja);
             this.gbxPrestacionesDespido.Controls.Add(this.rtxtCausaDespido);
@@ -353,31 +368,30 @@
             this.gbxPrestacionesDespido.Controls.Add(this.txtMontoPrestaciones);
             this.gbxPrestacionesDespido.Controls.Add(this.lblPrestaciones);
             this.gbxPrestacionesDespido.Controls.Add(this.lblTiempoLaborado);
-            this.gbxPrestacionesDespido.Enabled = false;
             this.gbxPrestacionesDespido.Location = new System.Drawing.Point(13, 113);
             this.gbxPrestacionesDespido.Margin = new System.Windows.Forms.Padding(4);
             this.gbxPrestacionesDespido.Name = "gbxPrestacionesDespido";
             this.gbxPrestacionesDespido.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxPrestacionesDespido.Size = new System.Drawing.Size(914, 380);
+            this.gbxPrestacionesDespido.Size = new System.Drawing.Size(1061, 380);
             this.gbxPrestacionesDespido.TabIndex = 7;
             this.gbxPrestacionesDespido.TabStop = false;
             this.gbxPrestacionesDespido.Text = "Prestaciones";
             // 
-            // BtnBaja
+            // rbtnBaja
             // 
-            this.BtnBaja.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBaja.Location = new System.Drawing.Point(698, 26);
-            this.BtnBaja.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.BtnBaja.Name = "BtnBaja";
-            this.BtnBaja.Size = new System.Drawing.Size(194, 50);
-            this.BtnBaja.TabIndex = 22;
-            this.BtnBaja.Text = "Realizar Baja";
-            this.BtnBaja.UseVisualStyleBackColor = true;
-            this.BtnBaja.Click += new System.EventHandler(this.BtnBaja_Click);
+            this.rbtnBaja.Enabled = false;
+            this.rbtnBaja.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnBaja.Location = new System.Drawing.Point(859, 63);
+            this.rbtnBaja.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.rbtnBaja.Name = "rbtnBaja";
+            this.rbtnBaja.Size = new System.Drawing.Size(194, 50);
+            this.rbtnBaja.TabIndex = 22;
+            this.rbtnBaja.Text = "Realizar Baja";
+            this.rbtnBaja.UseVisualStyleBackColor = true;
+            this.rbtnBaja.Click += new System.EventHandler(this.rbtnDespido_Click);
             // 
             // dtpFecha
             // 
-            this.dtpFecha.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
             this.dtpFecha.Location = new System.Drawing.Point(294, 122);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
@@ -396,11 +410,10 @@
             // 
             // rtxtCausaDespido
             // 
-            this.rtxtCausaDespido.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.rtxtCausaDespido.Location = new System.Drawing.Point(8, 182);
             this.rtxtCausaDespido.Margin = new System.Windows.Forms.Padding(4);
             this.rtxtCausaDespido.Name = "rtxtCausaDespido";
-            this.rtxtCausaDespido.Size = new System.Drawing.Size(884, 190);
+            this.rtxtCausaDespido.Size = new System.Drawing.Size(1045, 190);
             this.rtxtCausaDespido.TabIndex = 12;
             this.rtxtCausaDespido.Text = "";
             // 
@@ -416,17 +429,15 @@
             // 
             // txtTiempoLaborado
             // 
-            this.txtTiempoLaborado.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtTiempoLaborado.Location = new System.Drawing.Point(294, 71);
             this.txtTiempoLaborado.Margin = new System.Windows.Forms.Padding(4);
             this.txtTiempoLaborado.Name = "txtTiempoLaborado";
             this.txtTiempoLaborado.Size = new System.Drawing.Size(200, 27);
             this.txtTiempoLaborado.TabIndex = 9;
-            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtMontoPrestaciones
             // 
-            this.txtMontoPrestaciones.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtMontoPrestaciones.Location = new System.Drawing.Point(294, 27);
             this.txtMontoPrestaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontoPrestaciones.Name = "txtMontoPrestaciones";
@@ -458,8 +469,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(944, 530);
+            this.ClientSize = new System.Drawing.Size(1091, 530);
             this.Controls.Add(this.tbcDatosBajaEmpleado);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -467,10 +477,10 @@
             this.MinimizeBox = false;
             this.Name = "frmBajasEmpleado";
             this.Text = "frmBajasEmpleado";
-            this.Load += new System.EventHandler(this.frmBajasEmpleado_Load);
             this.tbcDatosBajaEmpleado.ResumeLayout(false);
             this.tbpDatosGenerales.ResumeLayout(false);
             this.tbpDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotografia)).EndInit();
             this.pnlPuesto.ResumeLayout(false);
             this.pnlPuesto.PerformLayout();
             this.pnlDatosGenerales.ResumeLayout(false);
@@ -487,13 +497,15 @@
 
         private System.Windows.Forms.TabControl tbcDatosBajaEmpleado;
         private System.Windows.Forms.TabPage tbpDatosGenerales;
+        private System.Windows.Forms.Label lblFotografia;
+        private System.Windows.Forms.PictureBox pbxFotografia;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label lblIngreseIdEmpleado;
         private System.Windows.Forms.Panel pnlPuesto;
-        private System.Windows.Forms.ComboBox cmbDepartamento;
+        private System.Windows.Forms.ComboBox cmbTipoEntrevista;
         private System.Windows.Forms.Label lblPuesto;
-        private System.Windows.Forms.ComboBox cmbPuesto;
+        private System.Windows.Forms.ComboBox cmbDepartamentoTrabajo;
         private System.Windows.Forms.Label lblDepartamentoTrabajo;
         private System.Windows.Forms.Panel pnlDatosGenerales;
         private System.Windows.Forms.TextBox txtPrimerApellido;
@@ -505,7 +517,7 @@
         private System.Windows.Forms.Label lblPrimerNombre;
         private System.Windows.Forms.Label lblPrimerApellido;
         private System.Windows.Forms.TabPage tbpDespido_Renuncia;
-        private System.Windows.Forms.Button BtnBaja;
+        private System.Windows.Forms.Button rbtnBaja;
         private System.Windows.Forms.GroupBox gbxPrestacionesDespido;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Label lblFechaBaja;
