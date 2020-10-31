@@ -34,41 +34,26 @@
             this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblFecPlan = new System.Windows.Forms.Label();
             this.lblPeriodoPLanilla = new System.Windows.Forms.Label();
             this.lblPlanillaPer = new System.Windows.Forms.Label();
             this.dgvPlanillaPer = new System.Windows.Forms.DataGridView();
-            this.clmIdEmpPerPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNomEmpPerPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPerPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMontoPerPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPlanillaDed = new System.Windows.Forms.Label();
             this.dgvPlanillaDed = new System.Windows.Forms.DataGridView();
-            this.clmIdEmpPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNomEmpPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDedPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMontoDedPlan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpDedPer = new System.Windows.Forms.TabPage();
             this.lblPercep = new System.Windows.Forms.Label();
-            this.dgvDeduc = new System.Windows.Forms.DataGridView();
-            this.clmIDDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNomDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMontoDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDescripDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblDeduc = new System.Windows.Forms.Label();
             this.dgvPercep = new System.Windows.Forms.DataGridView();
-            this.clmIDPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmNombrePer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMontoPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDescripPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblDeduc = new System.Windows.Forms.Label();
+            this.dgvDeduc = new System.Windows.Forms.DataGridView();
+            this.cmbPeriPlanilla = new System.Windows.Forms.ComboBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.tbpNomina.SuspendLayout();
             this.Planilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaTotales)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaPer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaDed)).BeginInit();
             this.tbpDedPer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpNomina
@@ -86,8 +71,9 @@
             // 
             // Planilla
             // 
+            this.Planilla.Controls.Add(this.btnActualizar);
+            this.Planilla.Controls.Add(this.cmbPeriPlanilla);
             this.Planilla.Controls.Add(this.dgvPlanillaTotales);
-            this.Planilla.Controls.Add(this.lblFecPlan);
             this.Planilla.Controls.Add(this.lblPeriodoPLanilla);
             this.Planilla.Controls.Add(this.lblPlanillaPer);
             this.Planilla.Controls.Add(this.dgvPlanillaPer);
@@ -142,19 +128,10 @@
             this.clmTotal.Name = "clmTotal";
             this.clmTotal.ReadOnly = true;
             // 
-            // lblFecPlan
-            // 
-            this.lblFecPlan.AutoSize = true;
-            this.lblFecPlan.Location = new System.Drawing.Point(655, 4);
-            this.lblFecPlan.Name = "lblFecPlan";
-            this.lblFecPlan.Size = new System.Drawing.Size(15, 20);
-            this.lblFecPlan.TabIndex = 17;
-            this.lblFecPlan.Text = "-";
-            // 
             // lblPeriodoPLanilla
             // 
             this.lblPeriodoPLanilla.AutoSize = true;
-            this.lblPeriodoPLanilla.Location = new System.Drawing.Point(454, 4);
+            this.lblPeriodoPLanilla.Location = new System.Drawing.Point(369, 12);
             this.lblPeriodoPLanilla.Name = "lblPeriodoPLanilla";
             this.lblPeriodoPLanilla.Size = new System.Drawing.Size(162, 20);
             this.lblPeriodoPLanilla.TabIndex = 16;
@@ -176,11 +153,6 @@
             this.dgvPlanillaPer.AllowUserToDeleteRows = false;
             this.dgvPlanillaPer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlanillaPer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlanillaPer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIdEmpPerPlan,
-            this.clmNomEmpPerPlan,
-            this.clmPerPlan,
-            this.clmMontoPerPlan});
             this.dgvPlanillaPer.Location = new System.Drawing.Point(588, 62);
             this.dgvPlanillaPer.Margin = new System.Windows.Forms.Padding(5);
             this.dgvPlanillaPer.Name = "dgvPlanillaPer";
@@ -189,34 +161,6 @@
             this.dgvPlanillaPer.RowTemplate.Height = 24;
             this.dgvPlanillaPer.Size = new System.Drawing.Size(577, 427);
             this.dgvPlanillaPer.TabIndex = 12;
-            // 
-            // clmIdEmpPerPlan
-            // 
-            this.clmIdEmpPerPlan.HeaderText = "ID Empleado";
-            this.clmIdEmpPerPlan.MinimumWidth = 6;
-            this.clmIdEmpPerPlan.Name = "clmIdEmpPerPlan";
-            this.clmIdEmpPerPlan.ReadOnly = true;
-            // 
-            // clmNomEmpPerPlan
-            // 
-            this.clmNomEmpPerPlan.HeaderText = "Nombre Empleado";
-            this.clmNomEmpPerPlan.MinimumWidth = 6;
-            this.clmNomEmpPerPlan.Name = "clmNomEmpPerPlan";
-            this.clmNomEmpPerPlan.ReadOnly = true;
-            // 
-            // clmPerPlan
-            // 
-            this.clmPerPlan.HeaderText = "Percepción";
-            this.clmPerPlan.MinimumWidth = 6;
-            this.clmPerPlan.Name = "clmPerPlan";
-            this.clmPerPlan.ReadOnly = true;
-            // 
-            // clmMontoPerPlan
-            // 
-            this.clmMontoPerPlan.HeaderText = "Monto";
-            this.clmMontoPerPlan.MinimumWidth = 6;
-            this.clmMontoPerPlan.Name = "clmMontoPerPlan";
-            this.clmMontoPerPlan.ReadOnly = true;
             // 
             // lblPlanillaDed
             // 
@@ -234,11 +178,6 @@
             this.dgvPlanillaDed.AllowUserToDeleteRows = false;
             this.dgvPlanillaDed.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlanillaDed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlanillaDed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIdEmpPlan,
-            this.clmNomEmpPlan,
-            this.clmDedPlan,
-            this.clmMontoDedPlan});
             this.dgvPlanillaDed.Location = new System.Drawing.Point(5, 62);
             this.dgvPlanillaDed.Margin = new System.Windows.Forms.Padding(5);
             this.dgvPlanillaDed.Name = "dgvPlanillaDed";
@@ -248,40 +187,12 @@
             this.dgvPlanillaDed.Size = new System.Drawing.Size(577, 427);
             this.dgvPlanillaDed.TabIndex = 13;
             // 
-            // clmIdEmpPlan
-            // 
-            this.clmIdEmpPlan.HeaderText = "ID Empleado";
-            this.clmIdEmpPlan.MinimumWidth = 6;
-            this.clmIdEmpPlan.Name = "clmIdEmpPlan";
-            this.clmIdEmpPlan.ReadOnly = true;
-            // 
-            // clmNomEmpPlan
-            // 
-            this.clmNomEmpPlan.HeaderText = "Nombre Empleado";
-            this.clmNomEmpPlan.MinimumWidth = 6;
-            this.clmNomEmpPlan.Name = "clmNomEmpPlan";
-            this.clmNomEmpPlan.ReadOnly = true;
-            // 
-            // clmDedPlan
-            // 
-            this.clmDedPlan.HeaderText = "Deducción";
-            this.clmDedPlan.MinimumWidth = 6;
-            this.clmDedPlan.Name = "clmDedPlan";
-            this.clmDedPlan.ReadOnly = true;
-            // 
-            // clmMontoDedPlan
-            // 
-            this.clmMontoDedPlan.HeaderText = "Monto";
-            this.clmMontoDedPlan.MinimumWidth = 6;
-            this.clmMontoDedPlan.Name = "clmMontoDedPlan";
-            this.clmMontoDedPlan.ReadOnly = true;
-            // 
             // tbpDedPer
             // 
             this.tbpDedPer.Controls.Add(this.lblPercep);
-            this.tbpDedPer.Controls.Add(this.dgvDeduc);
-            this.tbpDedPer.Controls.Add(this.lblDeduc);
             this.tbpDedPer.Controls.Add(this.dgvPercep);
+            this.tbpDedPer.Controls.Add(this.lblDeduc);
+            this.tbpDedPer.Controls.Add(this.dgvDeduc);
             this.tbpDedPer.Location = new System.Drawing.Point(4, 29);
             this.tbpDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDedPer.Name = "tbpDedPer";
@@ -301,49 +212,20 @@
             this.lblPercep.TabIndex = 11;
             this.lblPercep.Text = "Percepciones";
             // 
-            // dgvDeduc
+            // dgvPercep
             // 
-            this.dgvDeduc.AllowUserToAddRows = false;
-            this.dgvDeduc.AllowUserToDeleteRows = false;
-            this.dgvDeduc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvDeduc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDeduc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIDDed,
-            this.clmNomDed,
-            this.clmMontoDed,
-            this.clmDescripDed});
-            this.dgvDeduc.Location = new System.Drawing.Point(621, 40);
-            this.dgvDeduc.Margin = new System.Windows.Forms.Padding(5);
-            this.dgvDeduc.Name = "dgvDeduc";
-            this.dgvDeduc.ReadOnly = true;
-            this.dgvDeduc.RowHeadersWidth = 51;
-            this.dgvDeduc.RowTemplate.Height = 24;
-            this.dgvDeduc.Size = new System.Drawing.Size(549, 615);
-            this.dgvDeduc.TabIndex = 8;
-            // 
-            // clmIDDed
-            // 
-            this.clmIDDed.HeaderText = "ID";
-            this.clmIDDed.MinimumWidth = 6;
-            this.clmIDDed.Name = "clmIDDed";
-            // 
-            // clmNomDed
-            // 
-            this.clmNomDed.HeaderText = "Nombre";
-            this.clmNomDed.MinimumWidth = 6;
-            this.clmNomDed.Name = "clmNomDed";
-            // 
-            // clmMontoDed
-            // 
-            this.clmMontoDed.HeaderText = "Monto";
-            this.clmMontoDed.MinimumWidth = 6;
-            this.clmMontoDed.Name = "clmMontoDed";
-            // 
-            // clmDescripDed
-            // 
-            this.clmDescripDed.HeaderText = "Descripción";
-            this.clmDescripDed.MinimumWidth = 6;
-            this.clmDescripDed.Name = "clmDescripDed";
+            this.dgvPercep.AllowUserToAddRows = false;
+            this.dgvPercep.AllowUserToDeleteRows = false;
+            this.dgvPercep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPercep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPercep.Location = new System.Drawing.Point(621, 40);
+            this.dgvPercep.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvPercep.Name = "dgvPercep";
+            this.dgvPercep.ReadOnly = true;
+            this.dgvPercep.RowHeadersWidth = 51;
+            this.dgvPercep.RowTemplate.Height = 24;
+            this.dgvPercep.Size = new System.Drawing.Size(549, 615);
+            this.dgvPercep.TabIndex = 8;
             // 
             // lblDeduc
             // 
@@ -355,53 +237,38 @@
             this.lblDeduc.TabIndex = 10;
             this.lblDeduc.Text = "Deducciones";
             // 
-            // dgvPercep
+            // dgvDeduc
             // 
-            this.dgvPercep.AllowUserToAddRows = false;
-            this.dgvPercep.AllowUserToDeleteRows = false;
-            this.dgvPercep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPercep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPercep.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmIDPer,
-            this.clmNombrePer,
-            this.clmMontoPer,
-            this.clmDescripPer});
-            this.dgvPercep.Location = new System.Drawing.Point(-4, 40);
-            this.dgvPercep.Margin = new System.Windows.Forms.Padding(5);
-            this.dgvPercep.Name = "dgvPercep";
-            this.dgvPercep.ReadOnly = true;
-            this.dgvPercep.RowHeadersWidth = 51;
-            this.dgvPercep.RowTemplate.Height = 24;
-            this.dgvPercep.Size = new System.Drawing.Size(549, 615);
-            this.dgvPercep.TabIndex = 9;
+            this.dgvDeduc.AllowUserToAddRows = false;
+            this.dgvDeduc.AllowUserToDeleteRows = false;
+            this.dgvDeduc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeduc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeduc.Location = new System.Drawing.Point(-4, 40);
+            this.dgvDeduc.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvDeduc.Name = "dgvDeduc";
+            this.dgvDeduc.ReadOnly = true;
+            this.dgvDeduc.RowHeadersWidth = 51;
+            this.dgvDeduc.RowTemplate.Height = 24;
+            this.dgvDeduc.Size = new System.Drawing.Size(549, 615);
+            this.dgvDeduc.TabIndex = 9;
             // 
-            // clmIDPer
+            // cmbPeriPlanilla
             // 
-            this.clmIDPer.HeaderText = "ID";
-            this.clmIDPer.MinimumWidth = 6;
-            this.clmIDPer.Name = "clmIDPer";
-            this.clmIDPer.ReadOnly = true;
+            this.cmbPeriPlanilla.FormattingEnabled = true;
+            this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
+            this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
+            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 28);
+            this.cmbPeriPlanilla.TabIndex = 19;
             // 
-            // clmNombrePer
+            // btnActualizar
             // 
-            this.clmNombrePer.HeaderText = "Nombre";
-            this.clmNombrePer.MinimumWidth = 6;
-            this.clmNombrePer.Name = "clmNombrePer";
-            this.clmNombrePer.ReadOnly = true;
-            // 
-            // clmMontoPer
-            // 
-            this.clmMontoPer.HeaderText = "Monto";
-            this.clmMontoPer.MinimumWidth = 6;
-            this.clmMontoPer.Name = "clmMontoPer";
-            this.clmMontoPer.ReadOnly = true;
-            // 
-            // clmDescripPer
-            // 
-            this.clmDescripPer.HeaderText = "Descripción";
-            this.clmDescripPer.MinimumWidth = 6;
-            this.clmDescripPer.Name = "clmDescripPer";
-            this.clmDescripPer.ReadOnly = true;
+            this.btnActualizar.Location = new System.Drawing.Point(1060, 11);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(102, 26);
+            this.btnActualizar.TabIndex = 20;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // frmNomina
             // 
@@ -413,6 +280,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNomina";
+            this.Load += new System.EventHandler(this.frmNomina_Load);
             this.tbpNomina.ResumeLayout(false);
             this.Planilla.ResumeLayout(false);
             this.Planilla.PerformLayout();
@@ -421,8 +289,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaDed)).EndInit();
             this.tbpDedPer.ResumeLayout(false);
             this.tbpDedPer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -433,34 +301,19 @@
         private System.Windows.Forms.TabPage Planilla;
         private System.Windows.Forms.TabPage tbpDedPer;
         private System.Windows.Forms.Label lblPercep;
-        private System.Windows.Forms.DataGridView dgvDeduc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIDDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNomDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMontoDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDescripDed;
-        private System.Windows.Forms.Label lblDeduc;
         private System.Windows.Forms.DataGridView dgvPercep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIDPer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNombrePer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMontoPer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDescripPer;
+        private System.Windows.Forms.Label lblDeduc;
+        private System.Windows.Forms.DataGridView dgvDeduc;
         private System.Windows.Forms.Label lblPlanillaPer;
         private System.Windows.Forms.DataGridView dgvPlanillaPer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdEmpPerPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNomEmpPerPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPerPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMontoPerPlan;
         private System.Windows.Forms.Label lblPlanillaDed;
         private System.Windows.Forms.DataGridView dgvPlanillaDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmIdEmpPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmNomEmpPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDedPlan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMontoDedPlan;
-        private System.Windows.Forms.Label lblFecPlan;
         private System.Windows.Forms.Label lblPeriodoPLanilla;
         private System.Windows.Forms.DataGridView dgvPlanillaTotales;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDed;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPer;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
+        private System.Windows.Forms.ComboBox cmbPeriPlanilla;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
