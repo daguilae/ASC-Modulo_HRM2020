@@ -45,13 +45,8 @@
             this.lblNomEmpleIngreso = new System.Windows.Forms.Label();
             this.lblIdEmpIngreso = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
-            this.dgvTotalesEmp = new System.Windows.Forms.DataGridView();
-            this.clmDiasTrab = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDiasAusJust = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDiasAusInj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.cmbBuscarPeriodoPlanilla = new System.Windows.Forms.ComboBox();
             this.dgvPerEpm = new System.Windows.Forms.DataGridView();
             this.dgvDedEmp = new System.Windows.Forms.DataGridView();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -77,13 +72,14 @@
             this.lblEliminarDedPer = new System.Windows.Forms.Label();
             this.lblEliminarNomEmp = new System.Windows.Forms.Label();
             this.lblEliminarIdEmp = new System.Windows.Forms.Label();
-            this.cmbBuscarPeriodoPlanilla = new System.Windows.Forms.ComboBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.txtTotalPer = new System.Windows.Forms.TextBox();
+            this.txtTotalDed = new System.Windows.Forms.TextBox();
+            this.lblTotalDed = new System.Windows.Forms.Label();
+            this.lblTotalPer = new System.Windows.Forms.Label();
             this.tbcEmpleadoNomina.SuspendLayout();
             this.tbpIngresarEmpleDedPer.SuspendLayout();
             this.gbxIngresoTipoCob.SuspendLayout();
             this.tbpBuscar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalesEmp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerEpm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDedEmp)).BeginInit();
             this.tbpEliminarEmpleDedPer.SuspendLayout();
@@ -256,9 +252,12 @@
             // 
             // tbpBuscar
             // 
+            this.tbpBuscar.Controls.Add(this.lblTotalPer);
+            this.tbpBuscar.Controls.Add(this.lblTotalDed);
+            this.tbpBuscar.Controls.Add(this.txtTotalDed);
+            this.tbpBuscar.Controls.Add(this.txtTotalPer);
             this.tbpBuscar.Controls.Add(this.btnLimpiar);
             this.tbpBuscar.Controls.Add(this.cmbBuscarPeriodoPlanilla);
-            this.tbpBuscar.Controls.Add(this.dgvTotalesEmp);
             this.tbpBuscar.Controls.Add(this.dgvPerEpm);
             this.tbpBuscar.Controls.Add(this.dgvDedEmp);
             this.tbpBuscar.Controls.Add(this.btnBuscar);
@@ -277,69 +276,23 @@
             this.tbpBuscar.Text = "Buscar";
             this.tbpBuscar.UseVisualStyleBackColor = true;
             // 
-            // dgvTotalesEmp
+            // btnLimpiar
             // 
-            this.dgvTotalesEmp.AllowUserToAddRows = false;
-            this.dgvTotalesEmp.AllowUserToDeleteRows = false;
-            this.dgvTotalesEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTotalesEmp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTotalesEmp.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmDiasTrab,
-            this.clmDiasAusJust,
-            this.clmDiasAusInj,
-            this.clmTotalDed,
-            this.clmTotalPer,
-            this.clmTotal});
-            this.dgvTotalesEmp.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTotalesEmp.Location = new System.Drawing.Point(3, 346);
-            this.dgvTotalesEmp.Name = "dgvTotalesEmp";
-            this.dgvTotalesEmp.ReadOnly = true;
-            this.dgvTotalesEmp.RowHeadersWidth = 51;
-            this.dgvTotalesEmp.RowTemplate.Height = 24;
-            this.dgvTotalesEmp.Size = new System.Drawing.Size(818, 150);
-            this.dgvTotalesEmp.TabIndex = 12;
+            this.btnLimpiar.Location = new System.Drawing.Point(626, 122);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(92, 27);
+            this.btnLimpiar.TabIndex = 14;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // clmDiasTrab
+            // cmbBuscarPeriodoPlanilla
             // 
-            this.clmDiasTrab.HeaderText = "Días Trabajados";
-            this.clmDiasTrab.MinimumWidth = 6;
-            this.clmDiasTrab.Name = "clmDiasTrab";
-            this.clmDiasTrab.ReadOnly = true;
-            // 
-            // clmDiasAusJust
-            // 
-            this.clmDiasAusJust.HeaderText = "Días Ausente Justificado";
-            this.clmDiasAusJust.MinimumWidth = 6;
-            this.clmDiasAusJust.Name = "clmDiasAusJust";
-            this.clmDiasAusJust.ReadOnly = true;
-            // 
-            // clmDiasAusInj
-            // 
-            this.clmDiasAusInj.HeaderText = "Días Ausente Injustificado";
-            this.clmDiasAusInj.MinimumWidth = 6;
-            this.clmDiasAusInj.Name = "clmDiasAusInj";
-            this.clmDiasAusInj.ReadOnly = true;
-            // 
-            // clmTotalDed
-            // 
-            this.clmTotalDed.HeaderText = "Total Deducciones";
-            this.clmTotalDed.MinimumWidth = 6;
-            this.clmTotalDed.Name = "clmTotalDed";
-            this.clmTotalDed.ReadOnly = true;
-            // 
-            // clmTotalPer
-            // 
-            this.clmTotalPer.HeaderText = "Total Percepciones";
-            this.clmTotalPer.MinimumWidth = 6;
-            this.clmTotalPer.Name = "clmTotalPer";
-            this.clmTotalPer.ReadOnly = true;
-            // 
-            // clmTotal
-            // 
-            this.clmTotal.HeaderText = "Total";
-            this.clmTotal.MinimumWidth = 6;
-            this.clmTotal.Name = "clmTotal";
-            this.clmTotal.ReadOnly = true;
+            this.cmbBuscarPeriodoPlanilla.FormattingEnabled = true;
+            this.cmbBuscarPeriodoPlanilla.Location = new System.Drawing.Point(217, 122);
+            this.cmbBuscarPeriodoPlanilla.Name = "cmbBuscarPeriodoPlanilla";
+            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(296, 28);
+            this.cmbBuscarPeriodoPlanilla.TabIndex = 13;
             // 
             // dgvPerEpm
             // 
@@ -352,7 +305,7 @@
             this.dgvPerEpm.ReadOnly = true;
             this.dgvPerEpm.RowHeadersWidth = 51;
             this.dgvPerEpm.RowTemplate.Height = 24;
-            this.dgvPerEpm.Size = new System.Drawing.Size(406, 176);
+            this.dgvPerEpm.Size = new System.Drawing.Size(406, 232);
             this.dgvPerEpm.TabIndex = 11;
             // 
             // dgvDedEmp
@@ -366,7 +319,7 @@
             this.dgvDedEmp.ReadOnly = true;
             this.dgvDedEmp.RowHeadersWidth = 51;
             this.dgvDedEmp.RowTemplate.Height = 24;
-            this.dgvDedEmp.Size = new System.Drawing.Size(406, 176);
+            this.dgvDedEmp.Size = new System.Drawing.Size(406, 232);
             this.dgvDedEmp.TabIndex = 10;
             // 
             // btnBuscar
@@ -471,11 +424,11 @@
             // 
             // btnEliminarBuscar
             // 
-            this.btnEliminarBuscar.Location = new System.Drawing.Point(628, 199);
+            this.btnEliminarBuscar.Location = new System.Drawing.Point(565, 199);
             this.btnEliminarBuscar.Name = "btnEliminarBuscar";
-            this.btnEliminarBuscar.Size = new System.Drawing.Size(91, 29);
+            this.btnEliminarBuscar.Size = new System.Drawing.Size(154, 29);
             this.btnEliminarBuscar.TabIndex = 19;
-            this.btnEliminarBuscar.Text = "Buscar";
+            this.btnEliminarBuscar.Text = "Buscar Empleado";
             this.btnEliminarBuscar.UseVisualStyleBackColor = true;
             this.btnEliminarBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -590,23 +543,39 @@
             this.lblEliminarIdEmp.TabIndex = 8;
             this.lblEliminarIdEmp.Text = "ID Empleado:";
             // 
-            // cmbBuscarPeriodoPlanilla
+            // txtTotalPer
             // 
-            this.cmbBuscarPeriodoPlanilla.FormattingEnabled = true;
-            this.cmbBuscarPeriodoPlanilla.Location = new System.Drawing.Point(217, 122);
-            this.cmbBuscarPeriodoPlanilla.Name = "cmbBuscarPeriodoPlanilla";
-            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(296, 28);
-            this.cmbBuscarPeriodoPlanilla.TabIndex = 13;
+            this.txtTotalPer.Enabled = false;
+            this.txtTotalPer.Location = new System.Drawing.Point(562, 438);
+            this.txtTotalPer.Name = "txtTotalPer";
+            this.txtTotalPer.Size = new System.Drawing.Size(156, 27);
+            this.txtTotalPer.TabIndex = 15;
             // 
-            // btnLimpiar
+            // txtTotalDed
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(626, 122);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(92, 27);
-            this.btnLimpiar.TabIndex = 14;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.txtTotalDed.Enabled = false;
+            this.txtTotalDed.Location = new System.Drawing.Point(119, 438);
+            this.txtTotalDed.Name = "txtTotalDed";
+            this.txtTotalDed.Size = new System.Drawing.Size(156, 27);
+            this.txtTotalDed.TabIndex = 16;
+            // 
+            // lblTotalDed
+            // 
+            this.lblTotalDed.AutoSize = true;
+            this.lblTotalDed.Location = new System.Drawing.Point(115, 415);
+            this.lblTotalDed.Name = "lblTotalDed";
+            this.lblTotalDed.Size = new System.Drawing.Size(160, 20);
+            this.lblTotalDed.TabIndex = 17;
+            this.lblTotalDed.Text = "Total Deducciones:";
+            // 
+            // lblTotalPer
+            // 
+            this.lblTotalPer.AutoSize = true;
+            this.lblTotalPer.Location = new System.Drawing.Point(558, 415);
+            this.lblTotalPer.Name = "lblTotalPer";
+            this.lblTotalPer.Size = new System.Drawing.Size(165, 20);
+            this.lblTotalPer.TabIndex = 18;
+            this.lblTotalPer.Text = "Total Percepciones:";
             // 
             // frmEmpleadoNomina
             // 
@@ -626,7 +595,6 @@
             this.gbxIngresoTipoCob.PerformLayout();
             this.tbpBuscar.ResumeLayout(false);
             this.tbpBuscar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalesEmp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPerEpm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDedEmp)).EndInit();
             this.tbpEliminarEmpleDedPer.ResumeLayout(false);
@@ -676,19 +644,16 @@
         private System.Windows.Forms.Label lblBuscarNomEmp;
         private System.Windows.Forms.TextBox txtBuscarIdEmp;
         private System.Windows.Forms.Label lbBuscarIDEmp;
-        private System.Windows.Forms.DataGridView dgvTotalesEmp;
         private System.Windows.Forms.DataGridView dgvPerEpm;
         private System.Windows.Forms.DataGridView dgvDedEmp;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblBuscarFecPlanilla;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiasTrab;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiasAusJust;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiasAusInj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
         private System.Windows.Forms.Button btnIngresarBuscar;
         private System.Windows.Forms.ComboBox cmbBuscarPeriodoPlanilla;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label lblTotalPer;
+        private System.Windows.Forms.Label lblTotalDed;
+        private System.Windows.Forms.TextBox txtTotalDed;
+        private System.Windows.Forms.TextBox txtTotalPer;
     }
 }
