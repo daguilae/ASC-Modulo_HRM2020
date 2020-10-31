@@ -45,10 +45,9 @@
     <Compile Include="clsConexion.cs" />
     <Compile Include="Modelo Desarrollo\clsConsultaDesarrollo.cs" />
     <Compile Include="Modelo Nomina\clsConsultasNomina.cs" />
+    <Compile Include="Modelo Reclutamiento\clsConsultasReclutamiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Modelo Reclutamiento\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
