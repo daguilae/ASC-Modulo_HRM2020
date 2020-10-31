@@ -35,9 +35,15 @@
             // 
             // dgvMostrarBancoTalento
             // 
+            this.dgvMostrarBancoTalento.AllowUserToAddRows = false;
+            this.dgvMostrarBancoTalento.AllowUserToDeleteRows = false;
+            this.dgvMostrarBancoTalento.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMostrarBancoTalento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMostrarBancoTalento.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvMostrarBancoTalento.Location = new System.Drawing.Point(0, 149);
             this.dgvMostrarBancoTalento.Name = "dgvMostrarBancoTalento";
+            this.dgvMostrarBancoTalento.ReadOnly = true;
+            this.dgvMostrarBancoTalento.RowHeadersVisible = false;
             this.dgvMostrarBancoTalento.RowHeadersWidth = 51;
             this.dgvMostrarBancoTalento.RowTemplate.Height = 24;
             this.dgvMostrarBancoTalento.Size = new System.Drawing.Size(932, 354);
@@ -46,10 +52,10 @@
             // lblBancoTalento
             // 
             this.lblBancoTalento.AutoSize = true;
-            this.lblBancoTalento.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBancoTalento.Location = new System.Drawing.Point(386, 99);
+            this.lblBancoTalento.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBancoTalento.Location = new System.Drawing.Point(356, 98);
             this.lblBancoTalento.Name = "lblBancoTalento";
-            this.lblBancoTalento.Size = new System.Drawing.Size(144, 20);
+            this.lblBancoTalento.Size = new System.Drawing.Size(204, 27);
             this.lblBancoTalento.TabIndex = 2;
             this.lblBancoTalento.Text = "Banco de Talento";
             // 
@@ -57,6 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(932, 503);
             this.Controls.Add(this.lblBancoTalento);
             this.Controls.Add(this.dgvMostrarBancoTalento);

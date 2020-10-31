@@ -43,11 +43,10 @@
   <ItemGroup>
     <Compile Include="Controlador Desarrollo\clsControladorDesarrollo.cs" />
     <Compile Include="Controlador Nomina\clsControladorNomina.cs" />
+    <Compile Include="Controlador Reclutamiento\clsControladorReclutamiento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controlador Reclutamiento\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Capa_Modelo\Capa_Modelo.csproj">
       <Project>{c183677f-c371-4cf2-bae7-9f1be1de6233}</Project>
