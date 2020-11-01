@@ -63,23 +63,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Vista Capacitacion\frmCapacitacion.cs">
+    <Compile Include="Vista Capacitacion\frmIngresoCurso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista Capacitacion\frmCapacitacion.Designer.cs">
-      <DependentUpon>frmCapacitacion.cs</DependentUpon>
+    <Compile Include="Vista Capacitacion\frmIngresoCurso.Designer.cs">
+      <DependentUpon>frmIngresoCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Capacitacion\frmCursos.Designer.cs">
+      <DependentUpon>frmCursos.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Capacitacion\frmEmpCapacitado.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista Capacitacion\frmEmpCapacitado.Designer.cs">
       <DependentUpon>frmEmpCapacitado.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista Capacitacion\frmBusquedaCap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista Capacitacion\frmBusquedaCap.Designer.cs">
-      <DependentUpon>frmBusquedaCap.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Desarrollo\frmCompetencias.cs">
       <SubType>Form</SubType>
@@ -187,14 +187,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista Capacitacion\frmCursos.resx">
+      <DependentUpon>frmCursos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Capacitacion\frmEmpCapacitado.resx">
       <DependentUpon>frmEmpCapacitado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista Capacitacion\frmBusquedaCap.resx">
-      <DependentUpon>frmBusquedaCap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista Capacitacion\frmCapacitacion.resx">
-      <DependentUpon>frmCapacitacion.cs</DependentUpon>
+    <EmbeddedResource Include="Vista Capacitacion\frmIngresoCurso.resx">
+      <DependentUpon>frmIngresoCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Desarrollo\frmCompetencias.resx">
       <DependentUpon>frmCompetencias.cs</DependentUpon>
