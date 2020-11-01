@@ -44,11 +44,6 @@ namespace Capa_Vista
 
         }
 
-        private void tsmiDesarrolloDelPersonalCatalogos_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
-        }
-
         private void tsmiCapacitacionesCatalogos_Click(object sender, EventArgs e)
         {
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmBusquedaCap());
@@ -61,12 +56,12 @@ namespace Capa_Vista
 
         private void tsmiPuestosCatalogos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmPuesto());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
         }
 
         private void tsmiDepartamentoCatalogos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmDepartamento());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
         }
 
         private void tsmiIniciarNomina_Click(object sender, EventArgs e)
@@ -96,7 +91,7 @@ namespace Capa_Vista
 
         private void tsmiEstadísticas_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmEstadisticas());
+            //funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmEstadisticas());
         }
 
         private void tsmiIngresarNuevaCapacitacion_Click(object sender, EventArgs e)
@@ -115,9 +110,9 @@ namespace Capa_Vista
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
         }
 
-        private void tsmiDesarrolloDeUnEmpleado_Click(object sender, EventArgs e)
+        private void tsmiMantenimientos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmDesarrollo());
+
         }
     }
 
