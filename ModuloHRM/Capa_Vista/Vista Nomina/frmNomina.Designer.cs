@@ -30,6 +30,8 @@
         {
             this.tbpNomina = new System.Windows.Forms.TabControl();
             this.Planilla = new System.Windows.Forms.TabPage();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.cmbPeriPlanilla = new System.Windows.Forms.ComboBox();
             this.dgvPlanillaTotales = new System.Windows.Forms.DataGridView();
             this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,8 +46,6 @@
             this.dgvPercep = new System.Windows.Forms.DataGridView();
             this.lblDeduc = new System.Windows.Forms.Label();
             this.dgvDeduc = new System.Windows.Forms.DataGridView();
-            this.cmbPeriPlanilla = new System.Windows.Forms.ComboBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
             this.tbpNomina.SuspendLayout();
             this.Planilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaTotales)).BeginInit();
@@ -71,6 +71,7 @@
             // 
             // Planilla
             // 
+            this.Planilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.Planilla.Controls.Add(this.btnActualizar);
             this.Planilla.Controls.Add(this.cmbPeriPlanilla);
             this.Planilla.Controls.Add(this.dgvPlanillaTotales);
@@ -86,7 +87,25 @@
             this.Planilla.Size = new System.Drawing.Size(1170, 651);
             this.Planilla.TabIndex = 2;
             this.Planilla.Text = "Planilla";
-            this.Planilla.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(1060, 11);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(102, 26);
+            this.btnActualizar.TabIndex = 20;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // cmbPeriPlanilla
+            // 
+            this.cmbPeriPlanilla.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbPeriPlanilla.FormattingEnabled = true;
+            this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
+            this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
+            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 28);
+            this.cmbPeriPlanilla.TabIndex = 19;
             // 
             // dgvPlanillaTotales
             // 
@@ -189,6 +208,7 @@
             // 
             // tbpDedPer
             // 
+            this.tbpDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpDedPer.Controls.Add(this.lblPercep);
             this.tbpDedPer.Controls.Add(this.dgvPercep);
             this.tbpDedPer.Controls.Add(this.lblDeduc);
@@ -200,7 +220,6 @@
             this.tbpDedPer.Size = new System.Drawing.Size(1170, 651);
             this.tbpDedPer.TabIndex = 4;
             this.tbpDedPer.Text = "Deducciones/Percepciones";
-            this.tbpDedPer.UseVisualStyleBackColor = true;
             // 
             // lblPercep
             // 
@@ -252,28 +271,11 @@
             this.dgvDeduc.Size = new System.Drawing.Size(549, 615);
             this.dgvDeduc.TabIndex = 9;
             // 
-            // cmbPeriPlanilla
-            // 
-            this.cmbPeriPlanilla.FormattingEnabled = true;
-            this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
-            this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
-            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 28);
-            this.cmbPeriPlanilla.TabIndex = 19;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(1060, 11);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(102, 26);
-            this.btnActualizar.TabIndex = 20;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
-            // 
             // frmNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(1178, 684);
             this.ControlBox = false;
             this.Controls.Add(this.tbpNomina);

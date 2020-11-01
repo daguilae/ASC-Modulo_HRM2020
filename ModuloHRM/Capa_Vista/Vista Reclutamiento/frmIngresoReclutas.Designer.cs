@@ -1,6 +1,6 @@
 ﻿namespace Capa_Vista.Vista_Reclutamiento
 {
-    partial class frmIngreso
+    partial class frmIngresoReclutas
     {
         /// <summary>
         /// Required designer variable.

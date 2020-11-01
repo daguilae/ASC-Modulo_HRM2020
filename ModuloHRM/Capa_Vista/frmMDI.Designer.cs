@@ -66,6 +66,17 @@
             this.tsmiCapacitacionInforme = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.ingresarReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entrevistaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contrataciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarReclutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ascensosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bajasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoCursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verNóminaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mspMDI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +95,7 @@
             this.mspMDI.Location = new System.Drawing.Point(0, 0);
             this.mspMDI.Name = "mspMDI";
             this.mspMDI.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.mspMDI.Size = new System.Drawing.Size(800, 28);
+            this.mspMDI.Size = new System.Drawing.Size(800, 25);
             this.mspMDI.TabIndex = 0;
             // 
             // tsmiInicio
@@ -94,7 +105,7 @@
             this.tsmiCerrarSesion});
             this.tsmiInicio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiInicio.Name = "tsmiInicio";
-            this.tsmiInicio.Size = new System.Drawing.Size(63, 24);
+            this.tsmiInicio.Size = new System.Drawing.Size(63, 21);
             this.tsmiInicio.Text = "Inicio";
             // 
             // tsmiInicioSesion
@@ -127,6 +138,9 @@
             // 
             // tsmiEmpleadosCatalogos
             // 
+            this.tsmiEmpleadosCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarEmpleadosToolStripMenuItem,
+            this.modificarEmpleadoToolStripMenuItem});
             this.tsmiEmpleadosCatalogos.Name = "tsmiEmpleadosCatalogos";
             this.tsmiEmpleadosCatalogos.Size = new System.Drawing.Size(303, 26);
             this.tsmiEmpleadosCatalogos.Text = "Empleados";
@@ -134,6 +148,8 @@
             // 
             // tsmiReclutadosCatalogos
             // 
+            this.tsmiReclutadosCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarReclutasToolStripMenuItem});
             this.tsmiReclutadosCatalogos.Name = "tsmiReclutadosCatalogos";
             this.tsmiReclutadosCatalogos.Size = new System.Drawing.Size(303, 26);
             this.tsmiReclutadosCatalogos.Text = "Reclutados";
@@ -148,6 +164,9 @@
             // 
             // tsmiCapacitacionesCatalogos
             // 
+            this.tsmiCapacitacionesCatalogos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarCursosToolStripMenuItem,
+            this.ingresoCursosToolStripMenuItem});
             this.tsmiCapacitacionesCatalogos.Name = "tsmiCapacitacionesCatalogos";
             this.tsmiCapacitacionesCatalogos.Size = new System.Drawing.Size(303, 26);
             this.tsmiCapacitacionesCatalogos.Text = "Capacitaciones";
@@ -189,14 +208,21 @@
             // 
             // tsmiReclutamientoProceso
             // 
+            this.tsmiReclutamientoProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ingresarReclutaToolStripMenuItem});
             this.tsmiReclutamientoProceso.Name = "tsmiReclutamientoProceso";
-            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(193, 26);
+            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(224, 26);
             this.tsmiReclutamientoProceso.Text = "Reclutamiento";
             // 
             // tsmiSeleccionProceso
             // 
+            this.tsmiSeleccionProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.entrevistaToolStripMenuItem,
+            this.contrataciónToolStripMenuItem,
+            this.ascensosToolStripMenuItem,
+            this.bajasToolStripMenuItem});
             this.tsmiSeleccionProceso.Name = "tsmiSeleccionProceso";
-            this.tsmiSeleccionProceso.Size = new System.Drawing.Size(193, 26);
+            this.tsmiSeleccionProceso.Size = new System.Drawing.Size(224, 26);
             this.tsmiSeleccionProceso.Text = "Selección";
             // 
             // tsmiNominaProceso
@@ -205,9 +231,10 @@
             this.tsmiIniciarNomina,
             this.tsmiDeduccionesPercepcciones,
             this.tsmiPagoAEmpleado,
-            this.tsmiCierreNómina});
+            this.tsmiCierreNómina,
+            this.verNóminaToolStripMenuItem});
             this.tsmiNominaProceso.Name = "tsmiNominaProceso";
-            this.tsmiNominaProceso.Size = new System.Drawing.Size(193, 26);
+            this.tsmiNominaProceso.Size = new System.Drawing.Size(224, 26);
             this.tsmiNominaProceso.Text = "Nómina";
             // 
             // tsmiIniciarNomina
@@ -258,7 +285,7 @@
             this.tsmiCapacitacionProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarNuevaCapacitacion});
             this.tsmiCapacitacionProceso.Name = "tsmiCapacitacionProceso";
-            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(193, 26);
+            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(224, 26);
             this.tsmiCapacitacionProceso.Text = "Capacitación";
             // 
             // tsmiIngresarNuevaCapacitacion
@@ -272,7 +299,7 @@
             // 
             this.tsmiHerramientas.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiHerramientas.Name = "tsmiHerramientas";
-            this.tsmiHerramientas.Size = new System.Drawing.Size(118, 24);
+            this.tsmiHerramientas.Size = new System.Drawing.Size(118, 21);
             this.tsmiHerramientas.Text = "Herramientas";
             // 
             // tsmiReportes
@@ -285,7 +312,7 @@
             this.tsmiCapacitacionInforme});
             this.tsmiReportes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiReportes.Name = "tsmiReportes";
-            this.tsmiReportes.Size = new System.Drawing.Size(85, 24);
+            this.tsmiReportes.Size = new System.Drawing.Size(85, 21);
             this.tsmiReportes.Text = "Reportes";
             // 
             // tsmiReclutamientoInforme
@@ -294,7 +321,7 @@
             this.tsmiBancoDeTalento,
             this.tsmiReclutados});
             this.tsmiReclutamientoInforme.Name = "tsmiReclutamientoInforme";
-            this.tsmiReclutamientoInforme.Size = new System.Drawing.Size(193, 26);
+            this.tsmiReclutamientoInforme.Size = new System.Drawing.Size(224, 26);
             this.tsmiReclutamientoInforme.Text = "Reclutamiento";
             // 
             // tsmiBancoDeTalento
@@ -315,7 +342,7 @@
             this.empleadosToolStripMenuItem,
             this.bajasDeEmpleadosToolStripMenuItem});
             this.tsmiSeleccionInforme.Name = "tsmiSeleccionInforme";
-            this.tsmiSeleccionInforme.Size = new System.Drawing.Size(193, 26);
+            this.tsmiSeleccionInforme.Size = new System.Drawing.Size(224, 26);
             this.tsmiSeleccionInforme.Text = "Selección";
             // 
             // empleadosToolStripMenuItem
@@ -333,7 +360,7 @@
             // tsmiNominaInforme
             // 
             this.tsmiNominaInforme.Name = "tsmiNominaInforme";
-            this.tsmiNominaInforme.Size = new System.Drawing.Size(193, 26);
+            this.tsmiNominaInforme.Size = new System.Drawing.Size(224, 26);
             this.tsmiNominaInforme.Text = "Nómina";
             // 
             // tsmiDesarrolloInforme
@@ -341,7 +368,7 @@
             this.tsmiDesarrolloInforme.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.competenciasToolStripMenuItem1});
             this.tsmiDesarrolloInforme.Name = "tsmiDesarrolloInforme";
-            this.tsmiDesarrolloInforme.Size = new System.Drawing.Size(193, 26);
+            this.tsmiDesarrolloInforme.Size = new System.Drawing.Size(224, 26);
             this.tsmiDesarrolloInforme.Text = "Desarrollo";
             // 
             // competenciasToolStripMenuItem1
@@ -353,25 +380,102 @@
             // tsmiCapacitacionInforme
             // 
             this.tsmiCapacitacionInforme.Name = "tsmiCapacitacionInforme";
-            this.tsmiCapacitacionInforme.Size = new System.Drawing.Size(193, 26);
+            this.tsmiCapacitacionInforme.Size = new System.Drawing.Size(224, 26);
             this.tsmiCapacitacionInforme.Text = "Capacitación";
             // 
             // tsmiAyuda
             // 
             this.tsmiAyuda.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiAyuda.Name = "tsmiAyuda";
-            this.tsmiAyuda.Size = new System.Drawing.Size(66, 24);
+            this.tsmiAyuda.Size = new System.Drawing.Size(66, 21);
             this.tsmiAyuda.Text = "Ayuda";
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(0, 28);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenedor.Location = new System.Drawing.Point(0, 25);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(800, 422);
+            this.pnlContenedor.Size = new System.Drawing.Size(800, 425);
             this.pnlContenedor.TabIndex = 1;
+            // 
+            // ingresarReclutaToolStripMenuItem
+            // 
+            this.ingresarReclutaToolStripMenuItem.Name = "ingresarReclutaToolStripMenuItem";
+            this.ingresarReclutaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ingresarReclutaToolStripMenuItem.Text = "Ingresar Recluta";
+            this.ingresarReclutaToolStripMenuItem.Click += new System.EventHandler(this.ingresarReclutaToolStripMenuItem_Click);
+            // 
+            // entrevistaToolStripMenuItem
+            // 
+            this.entrevistaToolStripMenuItem.Name = "entrevistaToolStripMenuItem";
+            this.entrevistaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.entrevistaToolStripMenuItem.Text = "Entrevista";
+            this.entrevistaToolStripMenuItem.Click += new System.EventHandler(this.entrevistaToolStripMenuItem_Click);
+            // 
+            // contrataciónToolStripMenuItem
+            // 
+            this.contrataciónToolStripMenuItem.Name = "contrataciónToolStripMenuItem";
+            this.contrataciónToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.contrataciónToolStripMenuItem.Text = "Contratación";
+            this.contrataciónToolStripMenuItem.Click += new System.EventHandler(this.contrataciónToolStripMenuItem_Click);
+            // 
+            // mostrarEmpleadosToolStripMenuItem
+            // 
+            this.mostrarEmpleadosToolStripMenuItem.Name = "mostrarEmpleadosToolStripMenuItem";
+            this.mostrarEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.mostrarEmpleadosToolStripMenuItem.Text = "Mostrar Empleados";
+            this.mostrarEmpleadosToolStripMenuItem.Click += new System.EventHandler(this.mostrarEmpleadosToolStripMenuItem_Click);
+            // 
+            // mostrarReclutasToolStripMenuItem
+            // 
+            this.mostrarReclutasToolStripMenuItem.Name = "mostrarReclutasToolStripMenuItem";
+            this.mostrarReclutasToolStripMenuItem.Size = new System.Drawing.Size(249, 26);
+            this.mostrarReclutasToolStripMenuItem.Text = "Mostrar Reclutas";
+            this.mostrarReclutasToolStripMenuItem.Click += new System.EventHandler(this.mostrarReclutasToolStripMenuItem_Click);
+            // 
+            // ascensosToolStripMenuItem
+            // 
+            this.ascensosToolStripMenuItem.Name = "ascensosToolStripMenuItem";
+            this.ascensosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ascensosToolStripMenuItem.Text = "Ascensos";
+            this.ascensosToolStripMenuItem.Click += new System.EventHandler(this.ascensosToolStripMenuItem_Click);
+            // 
+            // bajasToolStripMenuItem
+            // 
+            this.bajasToolStripMenuItem.Name = "bajasToolStripMenuItem";
+            this.bajasToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bajasToolStripMenuItem.Text = "Bajas";
+            this.bajasToolStripMenuItem.Click += new System.EventHandler(this.bajasToolStripMenuItem_Click);
+            // 
+            // modificarEmpleadoToolStripMenuItem
+            // 
+            this.modificarEmpleadoToolStripMenuItem.Name = "modificarEmpleadoToolStripMenuItem";
+            this.modificarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.modificarEmpleadoToolStripMenuItem.Text = "Modificar Empleado";
+            this.modificarEmpleadoToolStripMenuItem.Click += new System.EventHandler(this.modificarEmpleadoToolStripMenuItem_Click);
+            // 
+            // mostrarCursosToolStripMenuItem
+            // 
+            this.mostrarCursosToolStripMenuItem.Name = "mostrarCursosToolStripMenuItem";
+            this.mostrarCursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.mostrarCursosToolStripMenuItem.Text = "Mostrar Cursos";
+            this.mostrarCursosToolStripMenuItem.Click += new System.EventHandler(this.mostrarCursosToolStripMenuItem_Click);
+            // 
+            // ingresoCursosToolStripMenuItem
+            // 
+            this.ingresoCursosToolStripMenuItem.Name = "ingresoCursosToolStripMenuItem";
+            this.ingresoCursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ingresoCursosToolStripMenuItem.Text = "Ingreso Cursos";
+            this.ingresoCursosToolStripMenuItem.Click += new System.EventHandler(this.ingresoCursosToolStripMenuItem_Click);
+            // 
+            // verNóminaToolStripMenuItem
+            // 
+            this.verNóminaToolStripMenuItem.Name = "verNóminaToolStripMenuItem";
+            this.verNóminaToolStripMenuItem.Size = new System.Drawing.Size(295, 26);
+            this.verNóminaToolStripMenuItem.Text = "Ver Nómina";
+            this.verNóminaToolStripMenuItem.Click += new System.EventHandler(this.verNóminaToolStripMenuItem_Click);
             // 
             // frmMDI
             // 
@@ -434,5 +538,16 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiPuestosCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiDepartamentoCatalogos;
         private System.Windows.Forms.ToolStripMenuItem tsmiIngresarNuevaCapacitacion;
+        private System.Windows.Forms.ToolStripMenuItem mostrarEmpleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarReclutasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarReclutaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entrevistaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contrataciónToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ascensosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bajasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarEmpleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarCursosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresoCursosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verNóminaToolStripMenuItem;
     }
 }

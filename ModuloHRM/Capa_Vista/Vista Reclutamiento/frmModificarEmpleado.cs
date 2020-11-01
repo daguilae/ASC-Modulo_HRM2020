@@ -12,9 +12,9 @@ using Capa_Controlador.Controlador_Reclutamiento;
 
 namespace Capa_Vista.Vista_Reclutamiento
 {
-    public partial class frmEmpleado : Form
+    public partial class frmModificarEmpleado : Form
     {
-        public frmEmpleado()
+        public frmModificarEmpleado()
         {
             InitializeComponent();
             funcLlenarPuesto();
