@@ -51,7 +51,7 @@ namespace Capa_Vista
 
         private void tsmiCapacitacionesCatalogos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmBusquedaCap());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmIngresoCurso());
         }
 
         private void tsmiBancoDeTalentoCatalogos_Click(object sender, EventArgs e)
@@ -101,7 +101,7 @@ namespace Capa_Vista
 
         private void tsmiIngresarNuevaCapacitacion_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmCapacitacion());
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmEmpCapacitado());
         }
    
 

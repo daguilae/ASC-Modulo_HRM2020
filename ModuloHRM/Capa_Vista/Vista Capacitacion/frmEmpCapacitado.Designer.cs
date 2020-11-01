@@ -30,9 +30,11 @@
         {
             this.tbcCapacitacion = new System.Windows.Forms.TabControl();
             this.tbpAsignacion = new System.Windows.Forms.TabPage();
+            this.txtCodiCapa = new System.Windows.Forms.TextBox();
             this.gbxDetCap = new System.Windows.Forms.GroupBox();
+            this.txtCodigoEncabezado = new System.Windows.Forms.TextBox();
+            this.lblCodigoC = new System.Windows.Forms.Label();
             this.btnIngresoCurso = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblFeFin = new System.Windows.Forms.Label();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.lblFeIni = new System.Windows.Forms.Label();
@@ -41,6 +43,7 @@
             this.dtpFechFin = new System.Windows.Forms.DateTimePicker();
             this.nudHoras = new System.Windows.Forms.NumericUpDown();
             this.lblHoras = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.gbxHstEmp = new System.Windows.Forms.GroupBox();
             this.dgvCompetencias = new System.Windows.Forms.DataGridView();
             this.btnBuscarEmp = new System.Windows.Forms.Button();
@@ -65,15 +68,15 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.dgvCompIng = new System.Windows.Forms.DataGridView();
             this.gbxIngresoR = new System.Windows.Forms.GroupBox();
+            this.btnBuscarCap = new System.Windows.Forms.Button();
+            this.cmbCodigoCap = new System.Windows.Forms.ComboBox();
             this.btnIngresarCompetencia = new System.Windows.Forms.Button();
-            this.lblCompetencia = new System.Windows.Forms.Label();
+            this.lblCodCap = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
-            this.cmbCompetencias = new System.Windows.Forms.ComboBox();
             this.lblResultado = new System.Windows.Forms.Label();
             this.tbcCapacitacion.SuspendLayout();
             this.tbpAsignacion.SuspendLayout();
             this.gbxDetCap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).BeginInit();
             this.gbxHstEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
@@ -98,7 +101,9 @@
             // tbpAsignacion
             // 
             this.tbpAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpAsignacion.Controls.Add(this.txtCodiCapa);
             this.tbpAsignacion.Controls.Add(this.gbxDetCap);
+            this.tbpAsignacion.Controls.Add(this.lblCodigo);
             this.tbpAsignacion.Controls.Add(this.gbxHstEmp);
             this.tbpAsignacion.Controls.Add(this.btnBuscarEmp);
             this.tbpAsignacion.Controls.Add(this.txtBusqCodEmp);
@@ -111,10 +116,19 @@
             this.tbpAsignacion.TabIndex = 0;
             this.tbpAsignacion.Text = "Asignación";
             // 
+            // txtCodiCapa
+            // 
+            this.txtCodiCapa.Location = new System.Drawing.Point(228, 6);
+            this.txtCodiCapa.Name = "txtCodiCapa";
+            this.txtCodiCapa.Size = new System.Drawing.Size(213, 23);
+            this.txtCodiCapa.TabIndex = 13;
+            this.txtCodiCapa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
+            // 
             // gbxDetCap
             // 
+            this.gbxDetCap.Controls.Add(this.txtCodigoEncabezado);
+            this.gbxDetCap.Controls.Add(this.lblCodigoC);
             this.gbxDetCap.Controls.Add(this.btnIngresoCurso);
-            this.gbxDetCap.Controls.Add(this.dataGridView1);
             this.gbxDetCap.Controls.Add(this.lblFeFin);
             this.gbxDetCap.Controls.Add(this.cmbCurso);
             this.gbxDetCap.Controls.Add(this.lblFeIni);
@@ -131,27 +145,37 @@
             this.gbxDetCap.TabStop = false;
             this.gbxDetCap.Text = "Detalles de Capacitación";
             // 
+            // txtCodigoEncabezado
+            // 
+            this.txtCodigoEncabezado.Location = new System.Drawing.Point(114, 34);
+            this.txtCodigoEncabezado.Name = "txtCodigoEncabezado";
+            this.txtCodigoEncabezado.Size = new System.Drawing.Size(213, 23);
+            this.txtCodigoEncabezado.TabIndex = 11;
+            this.txtCodigoEncabezado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
+            // 
+            // lblCodigoC
+            // 
+            this.lblCodigoC.AutoSize = true;
+            this.lblCodigoC.Location = new System.Drawing.Point(7, 37);
+            this.lblCodigoC.Name = "lblCodigoC";
+            this.lblCodigoC.Size = new System.Drawing.Size(51, 16);
+            this.lblCodigoC.TabIndex = 10;
+            this.lblCodigoC.Text = "Codigo";
+            // 
             // btnIngresoCurso
             // 
-            this.btnIngresoCurso.Location = new System.Drawing.Point(252, 164);
+            this.btnIngresoCurso.Location = new System.Drawing.Point(264, 268);
             this.btnIngresoCurso.Name = "btnIngresoCurso";
-            this.btnIngresoCurso.Size = new System.Drawing.Size(75, 23);
+            this.btnIngresoCurso.Size = new System.Drawing.Size(69, 23);
             this.btnIngresoCurso.TabIndex = 9;
             this.btnIngresoCurso.Text = "Ingresar";
             this.btnIngresoCurso.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 195);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(317, 96);
-            this.dataGridView1.TabIndex = 5;
+            this.btnIngresoCurso.Click += new System.EventHandler(this.btnIngresoCurso_Click);
             // 
             // lblFeFin
             // 
             this.lblFeFin.AutoSize = true;
-            this.lblFeFin.Location = new System.Drawing.Point(6, 105);
+            this.lblFeFin.Location = new System.Drawing.Point(7, 160);
             this.lblFeFin.Name = "lblFeFin";
             this.lblFeFin.Size = new System.Drawing.Size(108, 16);
             this.lblFeFin.TabIndex = 8;
@@ -160,7 +184,7 @@
             // cmbCurso
             // 
             this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(114, 25);
+            this.cmbCurso.Location = new System.Drawing.Point(114, 63);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(213, 24);
             this.cmbCurso.TabIndex = 7;
@@ -168,7 +192,7 @@
             // lblFeIni
             // 
             this.lblFeIni.AutoSize = true;
-            this.lblFeIni.Location = new System.Drawing.Point(6, 69);
+            this.lblFeIni.Location = new System.Drawing.Point(7, 124);
             this.lblFeIni.Name = "lblFeIni";
             this.lblFeIni.Size = new System.Drawing.Size(95, 16);
             this.lblFeIni.TabIndex = 6;
@@ -177,7 +201,7 @@
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(6, 28);
+            this.lblCurso.Location = new System.Drawing.Point(6, 66);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(43, 16);
             this.lblCurso.TabIndex = 5;
@@ -185,33 +209,43 @@
             // 
             // dtpFechIni
             // 
-            this.dtpFechIni.Location = new System.Drawing.Point(114, 64);
+            this.dtpFechIni.Location = new System.Drawing.Point(115, 119);
             this.dtpFechIni.Name = "dtpFechIni";
             this.dtpFechIni.Size = new System.Drawing.Size(213, 23);
             this.dtpFechIni.TabIndex = 4;
             // 
             // dtpFechFin
             // 
-            this.dtpFechFin.Location = new System.Drawing.Point(114, 100);
+            this.dtpFechFin.Location = new System.Drawing.Point(115, 155);
             this.dtpFechFin.Name = "dtpFechFin";
             this.dtpFechFin.Size = new System.Drawing.Size(213, 23);
             this.dtpFechFin.TabIndex = 3;
             // 
             // nudHoras
             // 
-            this.nudHoras.Location = new System.Drawing.Point(258, 135);
+            this.nudHoras.Location = new System.Drawing.Point(258, 220);
             this.nudHoras.Name = "nudHoras";
             this.nudHoras.Size = new System.Drawing.Size(69, 23);
             this.nudHoras.TabIndex = 1;
+            this.nudHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(7, 137);
+            this.lblHoras.Location = new System.Drawing.Point(7, 222);
             this.lblHoras.Name = "lblHoras";
             this.lblHoras.Size = new System.Drawing.Size(42, 16);
             this.lblHoras.TabIndex = 0;
             this.lblHoras.Text = "Horas";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(12, 9);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(149, 16);
+            this.lblCodigo.TabIndex = 12;
+            this.lblCodigo.Text = "Codigo de Capacitación";
             // 
             // gbxHstEmp
             // 
@@ -270,6 +304,7 @@
             this.gbxDatEmp.Controls.Add(this.lblEstao);
             this.gbxDatEmp.Controls.Add(this.lblNom);
             this.gbxDatEmp.Controls.Add(this.lblDept);
+            this.gbxDatEmp.Enabled = false;
             this.gbxDatEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatEmp.Location = new System.Drawing.Point(6, 49);
             this.gbxDatEmp.Name = "gbxDatEmp";
@@ -362,6 +397,7 @@
             // 
             // txtCapR
             // 
+            this.txtCapR.Enabled = false;
             this.txtCapR.Location = new System.Drawing.Point(150, 51);
             this.txtCapR.Name = "txtCapR";
             this.txtCapR.Size = new System.Drawing.Size(269, 23);
@@ -373,31 +409,33 @@
             this.lblCapR.AutoSize = true;
             this.lblCapR.Location = new System.Drawing.Point(6, 54);
             this.lblCapR.Name = "lblCapR";
-            this.lblCapR.Size = new System.Drawing.Size(85, 16);
+            this.lblCapR.Size = new System.Drawing.Size(91, 16);
             this.lblCapR.TabIndex = 22;
-            this.lblCapR.Text = "Capacitación";
+            this.lblCapR.Text = "Departamento";
             // 
             // btnBuscarR
             // 
             this.btnBuscarR.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarR.Location = new System.Drawing.Point(697, 14);
+            this.btnBuscarR.Location = new System.Drawing.Point(697, 22);
             this.btnBuscarR.Name = "btnBuscarR";
             this.btnBuscarR.Size = new System.Drawing.Size(75, 23);
             this.btnBuscarR.TabIndex = 21;
             this.btnBuscarR.Text = "Buscar";
             this.btnBuscarR.UseVisualStyleBackColor = true;
+            this.btnBuscarR.Click += new System.EventHandler(this.btnBuscarR_Click);
             // 
             // txtCodEmpR
             // 
             this.txtCodEmpR.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodEmpR.Location = new System.Drawing.Point(581, 14);
+            this.txtCodEmpR.Location = new System.Drawing.Point(599, 22);
             this.txtCodEmpR.Name = "txtCodEmpR";
-            this.txtCodEmpR.Size = new System.Drawing.Size(110, 23);
+            this.txtCodEmpR.Size = new System.Drawing.Size(92, 23);
             this.txtCodEmpR.TabIndex = 20;
             this.txtCodEmpR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // txtNombEmpR
             // 
+            this.txtNombEmpR.Enabled = false;
             this.txtNombEmpR.Location = new System.Drawing.Point(150, 22);
             this.txtNombEmpR.Name = "txtNombEmpR";
             this.txtNombEmpR.Size = new System.Drawing.Size(269, 23);
@@ -408,7 +446,7 @@
             // 
             this.lblCodEmpR.AutoSize = true;
             this.lblCodEmpR.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodEmpR.Location = new System.Drawing.Point(462, 17);
+            this.lblCodEmpR.Location = new System.Drawing.Point(462, 25);
             this.lblCodEmpR.Name = "lblCodEmpR";
             this.lblCodEmpR.Size = new System.Drawing.Size(113, 16);
             this.lblCodEmpR.TabIndex = 19;
@@ -429,9 +467,9 @@
             this.lblTitulo.Font = new System.Drawing.Font("Rockwell", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(6, 168);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(166, 18);
+            this.lblTitulo.Size = new System.Drawing.Size(150, 18);
             this.lblTitulo.TabIndex = 7;
-            this.lblTitulo.Text = "Competencias Ingresadas";
+            this.lblTitulo.Text = "Capacitación Realizada";
             // 
             // dgvCompIng
             // 
@@ -443,10 +481,11 @@
             // 
             // gbxIngresoR
             // 
+            this.gbxIngresoR.Controls.Add(this.btnBuscarCap);
+            this.gbxIngresoR.Controls.Add(this.cmbCodigoCap);
             this.gbxIngresoR.Controls.Add(this.btnIngresarCompetencia);
-            this.gbxIngresoR.Controls.Add(this.lblCompetencia);
+            this.gbxIngresoR.Controls.Add(this.lblCodCap);
             this.gbxIngresoR.Controls.Add(this.txtResultado);
-            this.gbxIngresoR.Controls.Add(this.cmbCompetencias);
             this.gbxIngresoR.Controls.Add(this.lblResultado);
             this.gbxIngresoR.Location = new System.Drawing.Point(6, 104);
             this.gbxIngresoR.Name = "gbxIngresoR";
@@ -454,6 +493,25 @@
             this.gbxIngresoR.TabIndex = 7;
             this.gbxIngresoR.TabStop = false;
             this.gbxIngresoR.Text = "Ingreso de Resultados";
+            // 
+            // btnBuscarCap
+            // 
+            this.btnBuscarCap.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCap.Location = new System.Drawing.Point(301, 22);
+            this.btnBuscarCap.Name = "btnBuscarCap";
+            this.btnBuscarCap.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCap.TabIndex = 24;
+            this.btnBuscarCap.Text = "Buscar";
+            this.btnBuscarCap.UseVisualStyleBackColor = true;
+            this.btnBuscarCap.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cmbCodigoCap
+            // 
+            this.cmbCodigoCap.FormattingEnabled = true;
+            this.cmbCodigoCap.Location = new System.Drawing.Point(153, 21);
+            this.cmbCodigoCap.Name = "cmbCodigoCap";
+            this.cmbCodigoCap.Size = new System.Drawing.Size(142, 24);
+            this.cmbCodigoCap.TabIndex = 25;
             // 
             // btnIngresarCompetencia
             // 
@@ -463,41 +521,34 @@
             this.btnIngresarCompetencia.TabIndex = 4;
             this.btnIngresarCompetencia.Text = "INGRESAR";
             this.btnIngresarCompetencia.UseVisualStyleBackColor = true;
+            this.btnIngresarCompetencia.Click += new System.EventHandler(this.btnIngresarCompetencia_Click);
             // 
-            // lblCompetencia
+            // lblCodCap
             // 
-            this.lblCompetencia.AutoSize = true;
-            this.lblCompetencia.Location = new System.Drawing.Point(117, 25);
-            this.lblCompetencia.Name = "lblCompetencia";
-            this.lblCompetencia.Size = new System.Drawing.Size(92, 16);
-            this.lblCompetencia.TabIndex = 3;
-            this.lblCompetencia.Text = "Competencias";
+            this.lblCodCap.AutoSize = true;
+            this.lblCodCap.Location = new System.Drawing.Point(9, 25);
+            this.lblCodCap.Name = "lblCodCap";
+            this.lblCodCap.Size = new System.Drawing.Size(131, 16);
+            this.lblCodCap.TabIndex = 24;
+            this.lblCodCap.Text = "Codigo Capacitación";
             // 
             // txtResultado
             // 
             this.txtResultado.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtResultado.Location = new System.Drawing.Point(456, 22);
+            this.txtResultado.Location = new System.Drawing.Point(565, 22);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(164, 23);
+            this.txtResultado.Size = new System.Drawing.Size(95, 23);
             this.txtResultado.TabIndex = 2;
-            // 
-            // cmbCompetencias
-            // 
-            this.cmbCompetencias.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbCompetencias.FormattingEnabled = true;
-            this.cmbCompetencias.Location = new System.Drawing.Point(215, 22);
-            this.cmbCompetencias.Name = "cmbCompetencias";
-            this.cmbCompetencias.Size = new System.Drawing.Size(164, 24);
-            this.cmbCompetencias.TabIndex = 1;
+            this.txtResultado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(385, 25);
+            this.lblResultado.Location = new System.Drawing.Point(396, 25);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(65, 16);
+            this.lblResultado.Size = new System.Drawing.Size(163, 16);
             this.lblResultado.TabIndex = 0;
-            this.lblResultado.Text = "Resultado";
+            this.lblResultado.Text = "Resultado de Capacitación";
             // 
             // frmEmpCapacitado
             // 
@@ -513,7 +564,6 @@
             this.tbpAsignacion.PerformLayout();
             this.gbxDetCap.ResumeLayout(false);
             this.gbxDetCap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).EndInit();
             this.gbxHstEmp.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();
@@ -557,7 +607,6 @@
         private System.Windows.Forms.Label lblDept;
         private System.Windows.Forms.DataGridView dgvCompetencias;
         private System.Windows.Forms.Button btnIngresoCurso;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox gbxDatEmpR;
         private System.Windows.Forms.TextBox txtCapR;
         private System.Windows.Forms.Label lblCapR;
@@ -570,9 +619,14 @@
         private System.Windows.Forms.DataGridView dgvCompIng;
         private System.Windows.Forms.GroupBox gbxIngresoR;
         private System.Windows.Forms.Button btnIngresarCompetencia;
-        private System.Windows.Forms.Label lblCompetencia;
         private System.Windows.Forms.TextBox txtResultado;
-        private System.Windows.Forms.ComboBox cmbCompetencias;
         private System.Windows.Forms.Label lblResultado;
+        private System.Windows.Forms.TextBox txtCodigoEncabezado;
+        private System.Windows.Forms.Label lblCodigoC;
+        private System.Windows.Forms.TextBox txtCodiCapa;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.ComboBox cmbCodigoCap;
+        private System.Windows.Forms.Label lblCodCap;
+        private System.Windows.Forms.Button btnBuscarCap;
     }
 }
