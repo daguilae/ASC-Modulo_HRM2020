@@ -14,13 +14,13 @@ using Capa_Controlador.Controlador_Reclutamiento;
 
 namespace Capa_Vista.Vista_Reclutamiento
 {
-    public partial class frmIngreso : Form
+    public partial class frmIngresoReclutas : Form
     {
 
         clsControladorDesarrollo Cont = new clsControladorDesarrollo();
         clsControladorReclutamiento Cont_R = new clsControladorReclutamiento();
 
-        public frmIngreso()
+        public frmIngresoReclutas()
         {
             InitializeComponent();
             funcLlenarPuesto();

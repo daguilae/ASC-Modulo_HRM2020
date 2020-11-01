@@ -45,6 +45,10 @@
             this.lblNomEmpleIngreso = new System.Windows.Forms.Label();
             this.lblIdEmpIngreso = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.lblTotalPer = new System.Windows.Forms.Label();
+            this.lblTotalDed = new System.Windows.Forms.Label();
+            this.txtTotalDed = new System.Windows.Forms.TextBox();
+            this.txtTotalPer = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.cmbBuscarPeriodoPlanilla = new System.Windows.Forms.ComboBox();
             this.dgvPerEpm = new System.Windows.Forms.DataGridView();
@@ -72,10 +76,6 @@
             this.lblEliminarDedPer = new System.Windows.Forms.Label();
             this.lblEliminarNomEmp = new System.Windows.Forms.Label();
             this.lblEliminarIdEmp = new System.Windows.Forms.Label();
-            this.txtTotalPer = new System.Windows.Forms.TextBox();
-            this.txtTotalDed = new System.Windows.Forms.TextBox();
-            this.lblTotalDed = new System.Windows.Forms.Label();
-            this.lblTotalPer = new System.Windows.Forms.Label();
             this.tbcEmpleadoNomina.SuspendLayout();
             this.tbpIngresarEmpleDedPer.SuspendLayout();
             this.gbxIngresoTipoCob.SuspendLayout();
@@ -100,6 +100,7 @@
             // 
             // tbpIngresarEmpleDedPer
             // 
+            this.tbpIngresarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresarBuscar);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblTipoCobro);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresoEmpleadoDedPer);
@@ -118,7 +119,6 @@
             this.tbpIngresarEmpleDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpIngresarEmpleDedPer.TabIndex = 0;
             this.tbpIngresarEmpleDedPer.Text = "Ingresar";
-            this.tbpIngresarEmpleDedPer.UseVisualStyleBackColor = true;
             // 
             // btnIngresarBuscar
             // 
@@ -174,17 +174,19 @@
             // rbtnIngresoPerc
             // 
             this.rbtnIngresoPerc.AutoSize = true;
+            this.rbtnIngresoPerc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.rbtnIngresoPerc.Location = new System.Drawing.Point(153, 15);
             this.rbtnIngresoPerc.Name = "rbtnIngresoPerc";
             this.rbtnIngresoPerc.Size = new System.Drawing.Size(120, 24);
             this.rbtnIngresoPerc.TabIndex = 1;
             this.rbtnIngresoPerc.TabStop = true;
             this.rbtnIngresoPerc.Text = "Percepción";
-            this.rbtnIngresoPerc.UseVisualStyleBackColor = true;
+            this.rbtnIngresoPerc.UseVisualStyleBackColor = false;
             this.rbtnIngresoPerc.CheckedChanged += new System.EventHandler(this.rbtnIngresoPerc_CheckedChanged);
             // 
             // cmbIngresoFecPLan
             // 
+            this.cmbIngresoFecPLan.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbIngresoFecPLan.FormattingEnabled = true;
             this.cmbIngresoFecPLan.Location = new System.Drawing.Point(232, 165);
             this.cmbIngresoFecPLan.Name = "cmbIngresoFecPLan";
@@ -193,6 +195,7 @@
             // 
             // cmbIngresoDedPer
             // 
+            this.cmbIngresoDedPer.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbIngresoDedPer.FormattingEnabled = true;
             this.cmbIngresoDedPer.Location = new System.Drawing.Point(232, 130);
             this.cmbIngresoDedPer.Name = "cmbIngresoDedPer";
@@ -201,6 +204,7 @@
             // 
             // txtIngresoNomEmp
             // 
+            this.txtIngresoNomEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoNomEmp.Enabled = false;
             this.txtIngresoNomEmp.Location = new System.Drawing.Point(234, 54);
             this.txtIngresoNomEmp.Name = "txtIngresoNomEmp";
@@ -209,6 +213,7 @@
             // 
             // txtIngresoIdEmp
             // 
+            this.txtIngresoIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoIdEmp.Location = new System.Drawing.Point(233, 17);
             this.txtIngresoIdEmp.Name = "txtIngresoIdEmp";
             this.txtIngresoIdEmp.Size = new System.Drawing.Size(280, 27);
@@ -252,6 +257,7 @@
             // 
             // tbpBuscar
             // 
+            this.tbpBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpBuscar.Controls.Add(this.lblTotalPer);
             this.tbpBuscar.Controls.Add(this.lblTotalDed);
             this.tbpBuscar.Controls.Add(this.txtTotalDed);
@@ -274,7 +280,42 @@
             this.tbpBuscar.Size = new System.Drawing.Size(824, 499);
             this.tbpBuscar.TabIndex = 2;
             this.tbpBuscar.Text = "Buscar";
-            this.tbpBuscar.UseVisualStyleBackColor = true;
+            // 
+            // lblTotalPer
+            // 
+            this.lblTotalPer.AutoSize = true;
+            this.lblTotalPer.Location = new System.Drawing.Point(558, 415);
+            this.lblTotalPer.Name = "lblTotalPer";
+            this.lblTotalPer.Size = new System.Drawing.Size(165, 20);
+            this.lblTotalPer.TabIndex = 18;
+            this.lblTotalPer.Text = "Total Percepciones:";
+            // 
+            // lblTotalDed
+            // 
+            this.lblTotalDed.AutoSize = true;
+            this.lblTotalDed.Location = new System.Drawing.Point(115, 415);
+            this.lblTotalDed.Name = "lblTotalDed";
+            this.lblTotalDed.Size = new System.Drawing.Size(160, 20);
+            this.lblTotalDed.TabIndex = 17;
+            this.lblTotalDed.Text = "Total Deducciones:";
+            // 
+            // txtTotalDed
+            // 
+            this.txtTotalDed.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtTotalDed.Enabled = false;
+            this.txtTotalDed.Location = new System.Drawing.Point(119, 438);
+            this.txtTotalDed.Name = "txtTotalDed";
+            this.txtTotalDed.Size = new System.Drawing.Size(156, 27);
+            this.txtTotalDed.TabIndex = 16;
+            // 
+            // txtTotalPer
+            // 
+            this.txtTotalPer.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtTotalPer.Enabled = false;
+            this.txtTotalPer.Location = new System.Drawing.Point(562, 438);
+            this.txtTotalPer.Name = "txtTotalPer";
+            this.txtTotalPer.Size = new System.Drawing.Size(156, 27);
+            this.txtTotalPer.TabIndex = 15;
             // 
             // btnLimpiar
             // 
@@ -288,6 +329,7 @@
             // 
             // cmbBuscarPeriodoPlanilla
             // 
+            this.cmbBuscarPeriodoPlanilla.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbBuscarPeriodoPlanilla.FormattingEnabled = true;
             this.cmbBuscarPeriodoPlanilla.Location = new System.Drawing.Point(217, 122);
             this.cmbBuscarPeriodoPlanilla.Name = "cmbBuscarPeriodoPlanilla";
@@ -343,6 +385,7 @@
             // 
             // txtBuscarPuestoEmp
             // 
+            this.txtBuscarPuestoEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBuscarPuestoEmp.Enabled = false;
             this.txtBuscarPuestoEmp.Location = new System.Drawing.Point(217, 89);
             this.txtBuscarPuestoEmp.Name = "txtBuscarPuestoEmp";
@@ -360,6 +403,7 @@
             // 
             // txtBuscarNomEmp
             // 
+            this.txtBuscarNomEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBuscarNomEmp.Enabled = false;
             this.txtBuscarNomEmp.Location = new System.Drawing.Point(217, 56);
             this.txtBuscarNomEmp.Name = "txtBuscarNomEmp";
@@ -377,6 +421,7 @@
             // 
             // txtBuscarIdEmp
             // 
+            this.txtBuscarIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBuscarIdEmp.Location = new System.Drawing.Point(217, 23);
             this.txtBuscarIdEmp.Name = "txtBuscarIdEmp";
             this.txtBuscarIdEmp.Size = new System.Drawing.Size(296, 27);
@@ -393,6 +438,7 @@
             // 
             // tbpEliminarEmpleDedPer
             // 
+            this.tbpEliminarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblTipoCobroEliminar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarBuscar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarEmpleadoDedPer);
@@ -411,7 +457,6 @@
             this.tbpEliminarEmpleDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpEliminarEmpleDedPer.TabIndex = 1;
             this.tbpEliminarEmpleDedPer.Text = "Eliminar";
-            this.tbpEliminarEmpleDedPer.UseVisualStyleBackColor = true;
             // 
             // lblTipoCobroEliminar
             // 
@@ -478,6 +523,7 @@
             // 
             // cmbEliminarFechPlan
             // 
+            this.cmbEliminarFechPlan.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbEliminarFechPlan.FormattingEnabled = true;
             this.cmbEliminarFechPlan.Location = new System.Drawing.Point(232, 165);
             this.cmbEliminarFechPlan.Name = "cmbEliminarFechPlan";
@@ -486,6 +532,7 @@
             // 
             // cmbEliminarDedPer
             // 
+            this.cmbEliminarDedPer.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbEliminarDedPer.FormattingEnabled = true;
             this.cmbEliminarDedPer.Location = new System.Drawing.Point(232, 130);
             this.cmbEliminarDedPer.Name = "cmbEliminarDedPer";
@@ -494,6 +541,7 @@
             // 
             // txtEliminarNomEmp
             // 
+            this.txtEliminarNomEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarNomEmp.Enabled = false;
             this.txtEliminarNomEmp.Location = new System.Drawing.Point(234, 54);
             this.txtEliminarNomEmp.Name = "txtEliminarNomEmp";
@@ -502,6 +550,7 @@
             // 
             // txtEliminarIdEmp
             // 
+            this.txtEliminarIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarIdEmp.Location = new System.Drawing.Point(233, 17);
             this.txtEliminarIdEmp.Name = "txtEliminarIdEmp";
             this.txtEliminarIdEmp.Size = new System.Drawing.Size(280, 27);
@@ -543,44 +592,11 @@
             this.lblEliminarIdEmp.TabIndex = 8;
             this.lblEliminarIdEmp.Text = "ID Empleado:";
             // 
-            // txtTotalPer
-            // 
-            this.txtTotalPer.Enabled = false;
-            this.txtTotalPer.Location = new System.Drawing.Point(562, 438);
-            this.txtTotalPer.Name = "txtTotalPer";
-            this.txtTotalPer.Size = new System.Drawing.Size(156, 27);
-            this.txtTotalPer.TabIndex = 15;
-            // 
-            // txtTotalDed
-            // 
-            this.txtTotalDed.Enabled = false;
-            this.txtTotalDed.Location = new System.Drawing.Point(119, 438);
-            this.txtTotalDed.Name = "txtTotalDed";
-            this.txtTotalDed.Size = new System.Drawing.Size(156, 27);
-            this.txtTotalDed.TabIndex = 16;
-            // 
-            // lblTotalDed
-            // 
-            this.lblTotalDed.AutoSize = true;
-            this.lblTotalDed.Location = new System.Drawing.Point(115, 415);
-            this.lblTotalDed.Name = "lblTotalDed";
-            this.lblTotalDed.Size = new System.Drawing.Size(160, 20);
-            this.lblTotalDed.TabIndex = 17;
-            this.lblTotalDed.Text = "Total Deducciones:";
-            // 
-            // lblTotalPer
-            // 
-            this.lblTotalPer.AutoSize = true;
-            this.lblTotalPer.Location = new System.Drawing.Point(558, 415);
-            this.lblTotalPer.Name = "lblTotalPer";
-            this.lblTotalPer.Size = new System.Drawing.Size(165, 20);
-            this.lblTotalPer.TabIndex = 18;
-            this.lblTotalPer.Text = "Total Percepciones:";
-            // 
             // frmEmpleadoNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(832, 532);
             this.ControlBox = false;
             this.Controls.Add(this.tbcEmpleadoNomina);

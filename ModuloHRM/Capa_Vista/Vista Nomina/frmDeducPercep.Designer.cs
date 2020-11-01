@@ -91,6 +91,7 @@
             // 
             // tbpIngresoDedPer
             // 
+            this.tbpIngresoDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpIngresoDedPer.Controls.Add(this.btnIngresoDedPer);
             this.tbpIngresoDedPer.Controls.Add(this.txtIngresoMontoCob);
             this.tbpIngresoDedPer.Controls.Add(this.rtxtIngresoDescCob);
@@ -107,7 +108,6 @@
             this.tbpIngresoDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpIngresoDedPer.TabIndex = 1;
             this.tbpIngresoDedPer.Text = "Ingreso";
-            this.tbpIngresoDedPer.UseVisualStyleBackColor = true;
             // 
             // btnIngresoDedPer
             // 
@@ -121,6 +121,7 @@
             // 
             // txtIngresoMontoCob
             // 
+            this.txtIngresoMontoCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtIngresoMontoCob.Name = "txtIngresoMontoCob";
             this.txtIngresoMontoCob.Size = new System.Drawing.Size(279, 27);
@@ -128,6 +129,7 @@
             // 
             // rtxtIngresoDescCob
             // 
+            this.rtxtIngresoDescCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.rtxtIngresoDescCob.Location = new System.Drawing.Point(12, 191);
             this.rtxtIngresoDescCob.Name = "rtxtIngresoDescCob";
             this.rtxtIngresoDescCob.Size = new System.Drawing.Size(440, 74);
@@ -154,6 +156,7 @@
             // 
             // txtIngresoNomCob
             // 
+            this.txtIngresoNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtIngresoNomCob.Name = "txtIngresoNomCob";
             this.txtIngresoNomCob.Size = new System.Drawing.Size(279, 27);
@@ -211,6 +214,7 @@
             // 
             // tbpModicarDedPer
             // 
+            this.tbpModicarDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpModicarDedPer.Controls.Add(this.btnBuscarModificar);
             this.tbpModicarDedPer.Controls.Add(this.btnModificar);
             this.tbpModicarDedPer.Controls.Add(this.txtModificarMontoCob);
@@ -228,7 +232,6 @@
             this.tbpModicarDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpModicarDedPer.TabIndex = 2;
             this.tbpModicarDedPer.Text = "Modificar";
-            this.tbpModicarDedPer.UseVisualStyleBackColor = true;
             // 
             // btnBuscarModificar
             // 
@@ -252,6 +255,7 @@
             // 
             // txtModificarMontoCob
             // 
+            this.txtModificarMontoCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtModificarMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtModificarMontoCob.Name = "txtModificarMontoCob";
             this.txtModificarMontoCob.Size = new System.Drawing.Size(279, 27);
@@ -259,6 +263,7 @@
             // 
             // rtxtModificarDescCob
             // 
+            this.rtxtModificarDescCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.rtxtModificarDescCob.Location = new System.Drawing.Point(12, 191);
             this.rtxtModificarDescCob.Name = "rtxtModificarDescCob";
             this.rtxtModificarDescCob.Size = new System.Drawing.Size(440, 74);
@@ -285,6 +290,7 @@
             // 
             // txtModificarNomCob
             // 
+            this.txtModificarNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtModificarNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtModificarNomCob.Name = "txtModificarNomCob";
             this.txtModificarNomCob.Size = new System.Drawing.Size(279, 27);
@@ -342,6 +348,7 @@
             // 
             // tbpEliminar
             // 
+            this.tbpEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.tbpEliminar.Controls.Add(this.btnEliminarBuscar);
             this.tbpEliminar.Controls.Add(this.btnEliminar);
             this.tbpEliminar.Controls.Add(this.txtEliminarMontoCob);
@@ -359,7 +366,6 @@
             this.tbpEliminar.Size = new System.Drawing.Size(824, 499);
             this.tbpEliminar.TabIndex = 3;
             this.tbpEliminar.Text = "Eliminar";
-            this.tbpEliminar.UseVisualStyleBackColor = true;
             // 
             // btnEliminarBuscar
             // 
@@ -383,6 +389,7 @@
             // 
             // txtEliminarMontoCob
             // 
+            this.txtEliminarMontoCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarMontoCob.Enabled = false;
             this.txtEliminarMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtEliminarMontoCob.Name = "txtEliminarMontoCob";
@@ -391,6 +398,7 @@
             // 
             // rtxtEliminarDescCob
             // 
+            this.rtxtEliminarDescCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.rtxtEliminarDescCob.Enabled = false;
             this.rtxtEliminarDescCob.Location = new System.Drawing.Point(12, 191);
             this.rtxtEliminarDescCob.Name = "rtxtEliminarDescCob";
@@ -418,6 +426,7 @@
             // 
             // txtEliminarNomCob
             // 
+            this.txtEliminarNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtEliminarNomCob.Name = "txtEliminarNomCob";
             this.txtEliminarNomCob.Size = new System.Drawing.Size(279, 27);
@@ -477,6 +486,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
             this.ClientSize = new System.Drawing.Size(832, 532);
             this.ControlBox = false;
             this.Controls.Add(this.tbcDeducPer);
