@@ -100,7 +100,7 @@
             // 
             // tbpAsignacion
             // 
-            this.tbpAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpAsignacion.Controls.Add(this.txtCodiCapa);
             this.tbpAsignacion.Controls.Add(this.gbxDetCap);
             this.tbpAsignacion.Controls.Add(this.lblCodigo);
@@ -366,7 +366,7 @@
             // 
             // tbpResultados
             // 
-            this.tbpResultados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpResultados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpResultados.Controls.Add(this.gbxDatEmpR);
             this.tbpResultados.Controls.Add(this.lblTitulo);
             this.tbpResultados.Controls.Add(this.dgvCompIng);
@@ -554,9 +554,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(825, 402);
             this.Controls.Add(this.tbcCapacitacion);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmEmpCapacitado";
             this.Text = "Capacitaciones";
             this.tbcCapacitacion.ResumeLayout(false);

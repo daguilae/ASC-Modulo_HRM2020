@@ -46,10 +46,9 @@
             // btnBuscar
             // 
             this.btnBuscar.Enabled = false;
-            this.btnBuscar.Location = new System.Drawing.Point(329, 143);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(247, 116);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 9;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -58,10 +57,9 @@
             // 
             this.txtIDPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIDPuesto.Enabled = false;
-            this.txtIDPuesto.Location = new System.Drawing.Point(145, 143);
-            this.txtIDPuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDPuesto.Location = new System.Drawing.Point(109, 116);
             this.txtIDPuesto.Name = "txtIDPuesto";
-            this.txtIDPuesto.Size = new System.Drawing.Size(161, 22);
+            this.txtIDPuesto.Size = new System.Drawing.Size(122, 20);
             this.txtIDPuesto.TabIndex = 8;
             this.txtIDPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -69,10 +67,9 @@
             // 
             this.lblIDepa.AutoSize = true;
             this.lblIDepa.Enabled = false;
-            this.lblIDepa.Location = new System.Drawing.Point(33, 149);
-            this.lblIDepa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDepa.Location = new System.Drawing.Point(25, 121);
             this.lblIDepa.Name = "lblIDepa";
-            this.lblIDepa.Size = new System.Drawing.Size(69, 17);
+            this.lblIDepa.Size = new System.Drawing.Size(54, 13);
             this.lblIDepa.TabIndex = 7;
             this.lblIDepa.Text = "ID Puesto";
             // 
@@ -84,11 +81,9 @@
             this.gbxDatos.Controls.Add(this.txtSalario);
             this.gbxDatos.Controls.Add(this.lblNombre);
             this.gbxDatos.Controls.Add(this.txtNombrePuesto);
-            this.gbxDatos.Location = new System.Drawing.Point(24, 196);
-            this.gbxDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxDatos.Location = new System.Drawing.Point(18, 159);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxDatos.Size = new System.Drawing.Size(423, 235);
+            this.gbxDatos.Size = new System.Drawing.Size(317, 191);
             this.gbxDatos.TabIndex = 6;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos Del Puesto";
@@ -97,84 +92,76 @@
             // 
             this.cmbHorario.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbHorario.FormattingEnabled = true;
-            this.cmbHorario.Location = new System.Drawing.Point(33, 187);
-            this.cmbHorario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHorario.Location = new System.Drawing.Point(25, 152);
             this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(356, 24);
+            this.cmbHorario.Size = new System.Drawing.Size(268, 21);
             this.cmbHorario.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 167);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(22, 136);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 17);
+            this.label2.Size = new System.Drawing.Size(41, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Horario";
             // 
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(29, 101);
-            this.lblSalario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSalario.Location = new System.Drawing.Point(22, 82);
             this.lblSalario.Name = "lblSalario";
-            this.lblSalario.Size = new System.Drawing.Size(52, 17);
+            this.lblSalario.Size = new System.Drawing.Size(39, 13);
             this.lblSalario.TabIndex = 2;
             this.lblSalario.Text = "Salario";
             // 
             // txtSalario
             // 
             this.txtSalario.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSalario.Location = new System.Drawing.Point(33, 121);
-            this.txtSalario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSalario.Location = new System.Drawing.Point(25, 98);
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(356, 22);
+            this.txtSalario.Size = new System.Drawing.Size(268, 20);
             this.txtSalario.TabIndex = 3;
             this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(29, 37);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(22, 30);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(129, 17);
+            this.lblNombre.Size = new System.Drawing.Size(97, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Puesto";
             // 
             // txtNombrePuesto
             // 
             this.txtNombrePuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNombrePuesto.Location = new System.Drawing.Point(33, 57);
-            this.txtNombrePuesto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombrePuesto.Location = new System.Drawing.Point(25, 46);
             this.txtNombrePuesto.Name = "txtNombrePuesto";
-            this.txtNombrePuesto.Size = new System.Drawing.Size(356, 22);
+            this.txtNombrePuesto.Size = new System.Drawing.Size(268, 20);
             this.txtNombrePuesto.TabIndex = 1;
             this.txtNombrePuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // dgvPuestos
             // 
             this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuestos.Location = new System.Drawing.Point(469, 143);
-            this.dgvPuestos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPuestos.Location = new System.Drawing.Point(352, 116);
             this.dgvPuestos.Name = "dgvPuestos";
             this.dgvPuestos.RowHeadersWidth = 51;
-            this.dgvPuestos.Size = new System.Drawing.Size(673, 290);
+            this.dgvPuestos.Size = new System.Drawing.Size(505, 236);
             this.dgvPuestos.TabIndex = 10;
             // 
             // frmMantenimientoPuesto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(1164, 446);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.ClientSize = new System.Drawing.Size(873, 362);
             this.Controls.Add(this.dgvPuestos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtIDPuesto);
             this.Controls.Add(this.lblIDepa);
             this.Controls.Add(this.gbxDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoPuesto";

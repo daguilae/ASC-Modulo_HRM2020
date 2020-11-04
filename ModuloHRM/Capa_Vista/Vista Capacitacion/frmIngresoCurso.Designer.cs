@@ -101,9 +101,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(570, 343);
             this.Controls.Add(this.gbxCursos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmIngresoCurso";
             this.Text = "Ingreso Cursos";
             this.gbxCursos.ResumeLayout(false);

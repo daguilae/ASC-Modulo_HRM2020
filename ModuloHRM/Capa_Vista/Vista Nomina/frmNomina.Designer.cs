@@ -71,7 +71,7 @@
             // 
             // Planilla
             // 
-            this.Planilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.Planilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.Planilla.Controls.Add(this.btnActualizar);
             this.Planilla.Controls.Add(this.cmbPeriPlanilla);
             this.Planilla.Controls.Add(this.dgvPlanillaTotales);
@@ -80,11 +80,11 @@
             this.Planilla.Controls.Add(this.dgvPlanillaPer);
             this.Planilla.Controls.Add(this.lblPlanillaDed);
             this.Planilla.Controls.Add(this.dgvPlanillaDed);
-            this.Planilla.Location = new System.Drawing.Point(4, 29);
+            this.Planilla.Location = new System.Drawing.Point(4, 26);
             this.Planilla.Margin = new System.Windows.Forms.Padding(4);
             this.Planilla.Name = "Planilla";
             this.Planilla.Padding = new System.Windows.Forms.Padding(4);
-            this.Planilla.Size = new System.Drawing.Size(1170, 651);
+            this.Planilla.Size = new System.Drawing.Size(1170, 654);
             this.Planilla.TabIndex = 2;
             this.Planilla.Text = "Planilla";
             // 
@@ -104,7 +104,7 @@
             this.cmbPeriPlanilla.FormattingEnabled = true;
             this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
             this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
-            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 28);
+            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 25);
             this.cmbPeriPlanilla.TabIndex = 19;
             // 
             // dgvPlanillaTotales
@@ -118,7 +118,7 @@
             this.clmTotalPer,
             this.clmTotal});
             this.dgvPlanillaTotales.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPlanillaTotales.Location = new System.Drawing.Point(4, 497);
+            this.dgvPlanillaTotales.Location = new System.Drawing.Point(4, 500);
             this.dgvPlanillaTotales.Name = "dgvPlanillaTotales";
             this.dgvPlanillaTotales.ReadOnly = true;
             this.dgvPlanillaTotales.RowHeadersWidth = 51;
@@ -152,7 +152,7 @@
             this.lblPeriodoPLanilla.AutoSize = true;
             this.lblPeriodoPLanilla.Location = new System.Drawing.Point(369, 12);
             this.lblPeriodoPLanilla.Name = "lblPeriodoPLanilla";
-            this.lblPeriodoPLanilla.Size = new System.Drawing.Size(162, 20);
+            this.lblPeriodoPLanilla.Size = new System.Drawing.Size(134, 17);
             this.lblPeriodoPLanilla.TabIndex = 16;
             this.lblPeriodoPLanilla.Text = "Periodo de Planilla:";
             // 
@@ -162,7 +162,7 @@
             this.lblPlanillaPer.Location = new System.Drawing.Point(833, 37);
             this.lblPlanillaPer.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPlanillaPer.Name = "lblPlanillaPer";
-            this.lblPlanillaPer.Size = new System.Drawing.Size(117, 20);
+            this.lblPlanillaPer.Size = new System.Drawing.Size(95, 17);
             this.lblPlanillaPer.TabIndex = 15;
             this.lblPlanillaPer.Text = "Percepciones";
             // 
@@ -187,7 +187,7 @@
             this.lblPlanillaDed.Location = new System.Drawing.Point(221, 22);
             this.lblPlanillaDed.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPlanillaDed.Name = "lblPlanillaDed";
-            this.lblPlanillaDed.Size = new System.Drawing.Size(112, 20);
+            this.lblPlanillaDed.Size = new System.Drawing.Size(91, 17);
             this.lblPlanillaDed.TabIndex = 14;
             this.lblPlanillaDed.Text = "Deducciones";
             // 
@@ -208,16 +208,16 @@
             // 
             // tbpDedPer
             // 
-            this.tbpDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpDedPer.Controls.Add(this.lblPercep);
             this.tbpDedPer.Controls.Add(this.dgvPercep);
             this.tbpDedPer.Controls.Add(this.lblDeduc);
             this.tbpDedPer.Controls.Add(this.dgvDeduc);
-            this.tbpDedPer.Location = new System.Drawing.Point(4, 29);
+            this.tbpDedPer.Location = new System.Drawing.Point(4, 26);
             this.tbpDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDedPer.Name = "tbpDedPer";
             this.tbpDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpDedPer.Size = new System.Drawing.Size(1170, 651);
+            this.tbpDedPer.Size = new System.Drawing.Size(1170, 654);
             this.tbpDedPer.TabIndex = 4;
             this.tbpDedPer.Text = "Deducciones/Percepciones";
             // 
@@ -227,7 +227,7 @@
             this.lblPercep.Location = new System.Drawing.Point(855, 15);
             this.lblPercep.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPercep.Name = "lblPercep";
-            this.lblPercep.Size = new System.Drawing.Size(117, 20);
+            this.lblPercep.Size = new System.Drawing.Size(95, 17);
             this.lblPercep.TabIndex = 11;
             this.lblPercep.Text = "Percepciones";
             // 
@@ -252,7 +252,7 @@
             this.lblDeduc.Location = new System.Drawing.Point(150, 15);
             this.lblDeduc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDeduc.Name = "lblDeduc";
-            this.lblDeduc.Size = new System.Drawing.Size(112, 20);
+            this.lblDeduc.Size = new System.Drawing.Size(91, 17);
             this.lblDeduc.TabIndex = 10;
             this.lblDeduc.Text = "Deducciones";
             // 
@@ -273,14 +273,15 @@
             // 
             // frmNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1178, 684);
-            this.ControlBox = false;
             this.Controls.Add(this.tbpNomina);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmNomina";
             this.Load += new System.EventHandler(this.frmNomina_Load);
             this.tbpNomina.ResumeLayout(false);

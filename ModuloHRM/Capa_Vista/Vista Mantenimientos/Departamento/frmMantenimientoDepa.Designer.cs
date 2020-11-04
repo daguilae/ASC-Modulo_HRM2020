@@ -42,20 +42,18 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(29, 37);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Location = new System.Drawing.Point(22, 30);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(175, 17);
+            this.lblNombre.Size = new System.Drawing.Size(131, 13);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Departamento";
             // 
             // txtNombreDepa
             // 
             this.txtNombreDepa.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNombreDepa.Location = new System.Drawing.Point(33, 74);
-            this.txtNombreDepa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreDepa.Location = new System.Drawing.Point(25, 60);
             this.txtNombreDepa.Name = "txtNombreDepa";
-            this.txtNombreDepa.Size = new System.Drawing.Size(356, 22);
+            this.txtNombreDepa.Size = new System.Drawing.Size(268, 20);
             this.txtNombreDepa.TabIndex = 1;
             this.txtNombreDepa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -63,11 +61,9 @@
             // 
             this.gbxDatos.Controls.Add(this.lblNombre);
             this.gbxDatos.Controls.Add(this.txtNombreDepa);
-            this.gbxDatos.Location = new System.Drawing.Point(19, 278);
-            this.gbxDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbxDatos.Location = new System.Drawing.Point(14, 226);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxDatos.Size = new System.Drawing.Size(423, 119);
+            this.gbxDatos.Size = new System.Drawing.Size(317, 97);
             this.gbxDatos.TabIndex = 2;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos Del Departamento";
@@ -76,10 +72,9 @@
             // 
             this.lblIDepa.AutoSize = true;
             this.lblIDepa.Enabled = false;
-            this.lblIDepa.Location = new System.Drawing.Point(26, 188);
-            this.lblIDepa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIDepa.Location = new System.Drawing.Point(20, 153);
             this.lblIDepa.Name = "lblIDepa";
-            this.lblIDepa.Size = new System.Drawing.Size(115, 17);
+            this.lblIDepa.Size = new System.Drawing.Size(88, 13);
             this.lblIDepa.TabIndex = 3;
             this.lblIDepa.Text = "ID Departamento";
             // 
@@ -87,19 +82,17 @@
             // 
             this.txtIDepa.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIDepa.Enabled = false;
-            this.txtIDepa.Location = new System.Drawing.Point(151, 184);
-            this.txtIDepa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIDepa.Location = new System.Drawing.Point(113, 150);
             this.txtIDepa.Name = "txtIDepa";
-            this.txtIDepa.Size = new System.Drawing.Size(161, 22);
+            this.txtIDepa.Size = new System.Drawing.Size(122, 20);
             this.txtIDepa.TabIndex = 4;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Enabled = false;
-            this.btnBuscar.Location = new System.Drawing.Point(335, 184);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBuscar.Location = new System.Drawing.Point(251, 150);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -107,25 +100,23 @@
             // dgvDepartamentos
             // 
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDepartamentos.Location = new System.Drawing.Point(465, 138);
-            this.dgvDepartamentos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDepartamentos.Location = new System.Drawing.Point(349, 112);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
             this.dgvDepartamentos.RowHeadersWidth = 51;
-            this.dgvDepartamentos.Size = new System.Drawing.Size(612, 277);
+            this.dgvDepartamentos.Size = new System.Drawing.Size(459, 225);
             this.dgvDepartamentos.TabIndex = 9;
             // 
             // frmMantenimientoDepa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(1103, 430);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.ClientSize = new System.Drawing.Size(827, 349);
             this.Controls.Add(this.dgvDepartamentos);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtIDepa);
             this.Controls.Add(this.lblIDepa);
             this.Controls.Add(this.gbxDatos);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoDepa";
