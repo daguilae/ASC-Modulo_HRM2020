@@ -107,7 +107,7 @@
             // 
             // tbpIngresar
             // 
-            this.tbpIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpIngresar.Controls.Add(this.btnBuscarCapacit);
             this.tbpIngresar.Controls.Add(this.txtCodigoCurso);
             this.tbpIngresar.Controls.Add(this.lblCodCur);
@@ -290,7 +290,7 @@
             // 
             // tbpEditar
             // 
-            this.tbpEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpEditar.Controls.Add(this.btnActualizarCE);
             this.tbpEditar.Controls.Add(this.txtCodigoCapCE);
             this.tbpEditar.Controls.Add(this.txtNombreCE);
@@ -486,7 +486,7 @@
             // 
             // tbpEliminar
             // 
-            this.tbpEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.tbpEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpEliminar.Controls.Add(this.txtCodigoCapEli);
             this.tbpEliminar.Controls.Add(this.txtNombreEli);
             this.tbpEliminar.Controls.Add(this.label4);
@@ -675,11 +675,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(517, 539);
             this.Controls.Add(this.tbcCursos);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmCursos";
             this.Text = "frmCursos";
             this.tbcCursos.ResumeLayout(false);

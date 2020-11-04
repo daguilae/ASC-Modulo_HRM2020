@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gbxDatosCompetencia = new System.Windows.Forms.GroupBox();
+            this.gbxRemoverCompetencia = new System.Windows.Forms.GroupBox();
+            this.lblIDCompetencia = new System.Windows.Forms.Label();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.txtIDCompetencia = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
@@ -37,24 +41,20 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtIDEmpleado = new System.Windows.Forms.TextBox();
             this.dgvCompetencias = new System.Windows.Forms.DataGridView();
+            this.clmIDCompetencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCompetencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmResultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIDEmpleado = new System.Windows.Forms.Label();
             this.gbxCompetencias = new System.Windows.Forms.GroupBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
             this.lblCompetencia = new System.Windows.Forms.Label();
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.cmbCompetencias = new System.Windows.Forms.ComboBox();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.clmIDCompetencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCompetencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmResultado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gbxRemoverCompetencia = new System.Windows.Forms.GroupBox();
-            this.lblIDCompetencia = new System.Windows.Forms.Label();
-            this.txtIDCompetencia = new System.Windows.Forms.TextBox();
             this.gbxDatosCompetencia.SuspendLayout();
+            this.gbxRemoverCompetencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
             this.gbxCompetencias.SuspendLayout();
-            this.gbxRemoverCompetencia.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxDatosCompetencia
@@ -77,6 +77,45 @@
             this.gbxDatosCompetencia.TabIndex = 5;
             this.gbxDatosCompetencia.TabStop = false;
             this.gbxDatosCompetencia.Text = "Datos De Las Competencias Del Empleado";
+            // 
+            // gbxRemoverCompetencia
+            // 
+            this.gbxRemoverCompetencia.Controls.Add(this.lblIDCompetencia);
+            this.gbxRemoverCompetencia.Controls.Add(this.btnRemover);
+            this.gbxRemoverCompetencia.Controls.Add(this.txtIDCompetencia);
+            this.gbxRemoverCompetencia.Location = new System.Drawing.Point(323, 158);
+            this.gbxRemoverCompetencia.Name = "gbxRemoverCompetencia";
+            this.gbxRemoverCompetencia.Size = new System.Drawing.Size(221, 211);
+            this.gbxRemoverCompetencia.TabIndex = 5;
+            this.gbxRemoverCompetencia.TabStop = false;
+            this.gbxRemoverCompetencia.Text = "Remover Competencia";
+            // 
+            // lblIDCompetencia
+            // 
+            this.lblIDCompetencia.AutoSize = true;
+            this.lblIDCompetencia.Location = new System.Drawing.Point(67, 62);
+            this.lblIDCompetencia.Name = "lblIDCompetencia";
+            this.lblIDCompetencia.Size = new System.Drawing.Size(88, 13);
+            this.lblIDCompetencia.TabIndex = 3;
+            this.lblIDCompetencia.Text = "ID Competencia";
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(46, 134);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(138, 36);
+            this.btnRemover.TabIndex = 5;
+            this.btnRemover.Text = "REMOVER COMPETENCIA";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // txtIDCompetencia
+            // 
+            this.txtIDCompetencia.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtIDCompetencia.Location = new System.Drawing.Point(30, 85);
+            this.txtIDCompetencia.Name = "txtIDCompetencia";
+            this.txtIDCompetencia.Size = new System.Drawing.Size(164, 20);
+            this.txtIDCompetencia.TabIndex = 2;
             // 
             // btnBuscar
             // 
@@ -154,6 +193,27 @@
             this.dgvCompetencias.Size = new System.Drawing.Size(381, 182);
             this.dgvCompetencias.TabIndex = 3;
             // 
+            // clmIDCompetencia
+            // 
+            this.clmIDCompetencia.HeaderText = "ID Competencia";
+            this.clmIDCompetencia.Name = "clmIDCompetencia";
+            this.clmIDCompetencia.ReadOnly = true;
+            this.clmIDCompetencia.Width = 104;
+            // 
+            // clmCompetencia
+            // 
+            this.clmCompetencia.HeaderText = "Competencia";
+            this.clmCompetencia.Name = "clmCompetencia";
+            this.clmCompetencia.ReadOnly = true;
+            this.clmCompetencia.Width = 99;
+            // 
+            // clmResultado
+            // 
+            this.clmResultado.HeaderText = "Resultado";
+            this.clmResultado.Name = "clmResultado";
+            this.clmResultado.ReadOnly = true;
+            this.clmResultado.Width = 81;
+            // 
             // lblIDEmpleado
             // 
             this.lblIDEmpleado.AutoSize = true;
@@ -176,6 +236,16 @@
             this.gbxCompetencias.TabIndex = 2;
             this.gbxCompetencias.TabStop = false;
             this.gbxCompetencias.Text = "Ingreso Competencia";
+            // 
+            // btnIngresar
+            // 
+            this.btnIngresar.Location = new System.Drawing.Point(35, 155);
+            this.btnIngresar.Name = "btnIngresar";
+            this.btnIngresar.Size = new System.Drawing.Size(138, 36);
+            this.btnIngresar.TabIndex = 4;
+            this.btnIngresar.Text = "INGRESAR COMPETENCIA";
+            this.btnIngresar.UseVisualStyleBackColor = true;
+            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // lblCompetencia
             // 
@@ -213,81 +283,11 @@
             this.lblResultado.TabIndex = 0;
             this.lblResultado.Text = "Resultado";
             // 
-            // btnIngresar
-            // 
-            this.btnIngresar.Location = new System.Drawing.Point(35, 155);
-            this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(138, 36);
-            this.btnIngresar.TabIndex = 4;
-            this.btnIngresar.Text = "INGRESAR COMPETENCIA";
-            this.btnIngresar.UseVisualStyleBackColor = true;
-            this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Location = new System.Drawing.Point(46, 134);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(138, 36);
-            this.btnRemover.TabIndex = 5;
-            this.btnRemover.Text = "REMOVER COMPETENCIA";
-            this.btnRemover.UseVisualStyleBackColor = true;
-            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
-            // 
-            // clmIDCompetencia
-            // 
-            this.clmIDCompetencia.HeaderText = "ID Competencia";
-            this.clmIDCompetencia.Name = "clmIDCompetencia";
-            this.clmIDCompetencia.ReadOnly = true;
-            this.clmIDCompetencia.Width = 104;
-            // 
-            // clmCompetencia
-            // 
-            this.clmCompetencia.HeaderText = "Competencia";
-            this.clmCompetencia.Name = "clmCompetencia";
-            this.clmCompetencia.ReadOnly = true;
-            this.clmCompetencia.Width = 99;
-            // 
-            // clmResultado
-            // 
-            this.clmResultado.HeaderText = "Resultado";
-            this.clmResultado.Name = "clmResultado";
-            this.clmResultado.ReadOnly = true;
-            this.clmResultado.Width = 81;
-            // 
-            // gbxRemoverCompetencia
-            // 
-            this.gbxRemoverCompetencia.Controls.Add(this.lblIDCompetencia);
-            this.gbxRemoverCompetencia.Controls.Add(this.btnRemover);
-            this.gbxRemoverCompetencia.Controls.Add(this.txtIDCompetencia);
-            this.gbxRemoverCompetencia.Location = new System.Drawing.Point(323, 158);
-            this.gbxRemoverCompetencia.Name = "gbxRemoverCompetencia";
-            this.gbxRemoverCompetencia.Size = new System.Drawing.Size(221, 211);
-            this.gbxRemoverCompetencia.TabIndex = 5;
-            this.gbxRemoverCompetencia.TabStop = false;
-            this.gbxRemoverCompetencia.Text = "Remover Competencia";
-            // 
-            // lblIDCompetencia
-            // 
-            this.lblIDCompetencia.AutoSize = true;
-            this.lblIDCompetencia.Location = new System.Drawing.Point(67, 62);
-            this.lblIDCompetencia.Name = "lblIDCompetencia";
-            this.lblIDCompetencia.Size = new System.Drawing.Size(88, 13);
-            this.lblIDCompetencia.TabIndex = 3;
-            this.lblIDCompetencia.Text = "ID Competencia";
-            // 
-            // txtIDCompetencia
-            // 
-            this.txtIDCompetencia.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIDCompetencia.Location = new System.Drawing.Point(30, 85);
-            this.txtIDCompetencia.Name = "txtIDCompetencia";
-            this.txtIDCompetencia.Size = new System.Drawing.Size(164, 20);
-            this.txtIDCompetencia.TabIndex = 2;
-            // 
             // frmCompetencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1068, 511);
             this.Controls.Add(this.gbxDatosCompetencia);
             this.MaximizeBox = false;
@@ -297,11 +297,11 @@
             this.Load += new System.EventHandler(this.frmCompetencias_Load);
             this.gbxDatosCompetencia.ResumeLayout(false);
             this.gbxDatosCompetencia.PerformLayout();
+            this.gbxRemoverCompetencia.ResumeLayout(false);
+            this.gbxRemoverCompetencia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();
             this.gbxCompetencias.ResumeLayout(false);
             this.gbxCompetencias.PerformLayout();
-            this.gbxRemoverCompetencia.ResumeLayout(false);
-            this.gbxRemoverCompetencia.PerformLayout();
             this.ResumeLayout(false);
 
         }

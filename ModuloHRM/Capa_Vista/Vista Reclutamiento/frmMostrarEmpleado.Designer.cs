@@ -39,32 +39,35 @@
             this.dgvMostrarEmpleados.AllowUserToDeleteRows = false;
             this.dgvMostrarEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarEmpleados.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 149);
+            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 121);
+            this.dgvMostrarEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMostrarEmpleados.Name = "dgvMostrarEmpleados";
             this.dgvMostrarEmpleados.RowHeadersVisible = false;
             this.dgvMostrarEmpleados.RowHeadersWidth = 51;
             this.dgvMostrarEmpleados.RowTemplate.Height = 24;
-            this.dgvMostrarEmpleados.Size = new System.Drawing.Size(932, 354);
+            this.dgvMostrarEmpleados.Size = new System.Drawing.Size(699, 288);
             this.dgvMostrarEmpleados.TabIndex = 0;
             // 
             // lblEmpleados
             // 
             this.lblEmpleados.AutoSize = true;
             this.lblEmpleados.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.Location = new System.Drawing.Point(394, 99);
+            this.lblEmpleados.Location = new System.Drawing.Point(296, 80);
+            this.lblEmpleados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(137, 27);
+            this.lblEmpleados.Size = new System.Drawing.Size(109, 21);
             this.lblEmpleados.TabIndex = 3;
             this.lblEmpleados.Text = "Empleados";
             // 
             // frmMostrarEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(163)))), ((int)(((byte)(111)))), ((int)(((byte)(199)))));
-            this.ClientSize = new System.Drawing.Size(932, 503);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.ClientSize = new System.Drawing.Size(699, 409);
             this.Controls.Add(this.lblEmpleados);
             this.Controls.Add(this.dgvMostrarEmpleados);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMostrarEmpleado";
