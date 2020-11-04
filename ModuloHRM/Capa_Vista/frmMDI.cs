@@ -17,6 +17,7 @@ namespace Capa_Vista
             InitializeComponent();
         }
 
+        // FUNCIÓN PARA CONTENER UN FORM EN UN PANEL \\
         public void funcAbrirFormEnPanel(object Formhijo)
         {
             if (this.pnlContenedor.Controls.Count > 0)
@@ -29,147 +30,116 @@ namespace Capa_Vista
             fh.Show();
         }
 
-        private void tsmiEmpleadosCatalogos_Click(object sender, EventArgs e)
+        private void tsmiInicioSesion_Click(object sender, EventArgs e)
         {
+            // INICIAR SESIÓN \\
+        }
+
+        private void tsmiCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // CERRAR SESIÓN \\
+        }
+
+        private void tsmiPuestosMantenimientos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE PUESTOS \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
+        }
+
+        private void tsmiDepartamentoMantenimientos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEPARTAMENTOS EMPRESARIALES \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
+        }
+
+        private void tsmiTiposDeCompetenciasMantenimientos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE TIPOS DE COMPETENCIAS \\
             
         }
 
-        private void tsmiReclutadosCatalogos_Click(object sender, EventArgs e)
+        private void tsmiIngresarFaltaMantenimientos_Click(object sender, EventArgs e)
         {
-
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE FALTA \\
+            
         }
 
-        private void tsmiNominaCatalogos_Click(object sender, EventArgs e)
+        private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmEmpleadoNomina());
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESAR FALTA DE UN EMPLEADO \\
+            
         }
 
-        private void tsmiCapacitacionesCatalogos_Click(object sender, EventArgs e)
+        private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmIngresoCurso());
-        }
-
-        private void tsmiBancoDeTalentoCatalogos_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmMostrarBancoTalento());
-        }
-
-        private void tsmiPuestosCatalogos_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
-        }
-
-        private void tsmiDepartamentoCatalogos_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
-        }
-
-        private void tsmiIniciarNomina_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tsmiDeduccionesPercepcciones_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmDeducPercep());
-        }
-
-        private void tsmiPagoAEmpleado_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tsmiCierreNómina_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tsmiIngresarCompetencias_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
-        }
-
-        private void tsmiEstadísticas_Click(object sender, EventArgs e)
-        {
-            //funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmEstadisticas());
-        }
-
-        private void tsmiIngresarNuevaCapacitacion_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmEmpCapacitado());
-        }
-   
-
-        private void tsmiDepartamentosEmpresariales_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
-        }
-
-        private void tsmiPuestos_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
-        }
-
-        private void tsmiMantenimientos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void mostrarEmpleadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmMostrarEmpleado());
-        }
-
-    
-        private void mostrarReclutasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmMostrarReclutas());
-        }
-
-        private void modificarEmpleadoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR EDITAR EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado());
         }
 
-        private void ingresarReclutaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiAscenderEmpleadoProceso_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas());
-        }
-
-        private void entrevistaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmEntrevista());
-        }
-
-        private void contrataciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmContratacion());
-        }
-
-        private void ascensosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR ASCENDER EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmAscender());
         }
 
-        private void bajasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiDespedirEmpleadoProceso_Click(object sender, EventArgs e)
         {
+            // LLAMAR FUNCIÓN PARA MOSTRAR DESPEDIR EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmBajasEmpleado());
         }
 
-        private void mostrarCursosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiIngresarReclutaProceso_Click(object sender, EventArgs e)
         {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmIngresoCurso());
-        }
-        
-
-        private void ingresoCursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Capacitacion.frmCursos());
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE RECLUTADO \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas());
         }
 
-        private void verNóminaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tsmiEntrevistaProceso_Click(object sender, EventArgs e)
         {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO ENTREVISTA \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmEntrevista());
+        }
+
+        private void tsmiContratacionProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO CONTRATACIÓN \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmContratacion());
+        }
+
+        private void tsmiBuscarDatosGeneralesDeNominaProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR DATOS GENERALES DE NOMINA \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmNomina());
+        }
+
+        private void tsmiDeduccionesPercepccionesProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEDUCCIONES / PERCEPCCIONES \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmDeducPercep());
+        }
+
+        private void tsmiDeducciónPercepciónEmpleadoProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE DEDUCCIONES / PERCEPCCIONES EN UN EMPLEADO \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmEmpleadoNomina());
+        }
+
+        private void tsmiControlDeHorasDíasProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR CONTROL DE HORAS \\
+            
+        }
+
+        private void tsmiIngresarCompetenciasProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE COMPETENCIAS \\
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
+        }
+
+        private void tsmiEstadisticasProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR ESTADISTICAS \\
+            
         }
     }
 
