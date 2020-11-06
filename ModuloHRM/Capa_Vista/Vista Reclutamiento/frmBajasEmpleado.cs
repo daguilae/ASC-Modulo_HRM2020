@@ -103,6 +103,13 @@ namespace Capa_Vista.Vista_Reclutamiento
 
         }
 
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.Show();
+        }
+
         private void rbtnDespido_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnDespido.Checked == true)
@@ -143,6 +150,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                             //Se envía la función con los datos anteriores a la siguiente capa
 
                             Cont_R.funcDespidoEmp(IdEmpleado, TipoBaja, Prestaciones, TiempoLabo, FechaBaja, Razones, EstadoEmp);
+                            MessageBox.Show("Se ha dado de Baja al Empleado con Éxito", "FORMULARIO BAJAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             funcLimpieza();
                             funcBloqueo();

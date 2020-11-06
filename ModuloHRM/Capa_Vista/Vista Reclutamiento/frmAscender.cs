@@ -110,6 +110,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                     Cont_R.funcAscenderEmpleado(PuestoN, DeptoN, IdEmpleado);
 
+                    MessageBox.Show("Se ha ascendido con Éxito", "FORMULARIO ASCENSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     funcLimpieza();
                     funcBloqueo();
 
@@ -141,6 +142,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void frmAscender_Load(object sender, EventArgs e)
         {
             txtIdEmpleado.MaxLength = 8;
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.Show();
         }
 
         //Función de Bloqueo

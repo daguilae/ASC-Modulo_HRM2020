@@ -33,6 +33,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;
 
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.Show();
+        }
+
         //metodo para llenar el combo puesto
         public void funcLlenarPuesto()
         {
@@ -108,6 +115,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                     Cont_R.funcModificarEmpleado(PrimerNom, SegundoNom, PrimerAp, SegundoAp,
                        EstadoCivil, Email, Telefono, TipoLicencia, Puesto, CuentaBanc, Departamento, Residencia, Zona
                        , Municipio, Depto, IdEmpleado);
+                    MessageBox.Show("Se han modificado los datos del Empleado con Éxito", "FORMULARIO MODIFICAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     funcLimpieza();
                     funcBloqueo();
