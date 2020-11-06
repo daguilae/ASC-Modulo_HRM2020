@@ -112,6 +112,13 @@ namespace Capa_Vista.Vista_Reclutamiento
             txtIdBancoTalento.MaxLength = 8;
         }
 
+        private void btnReclutas_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
+            MostrarReclu.Show();
+        }
+
         private void btnIngresoEntrevista_Click(object sender, EventArgs e)
         {
             //Mensaje de Validación
@@ -140,6 +147,8 @@ namespace Capa_Vista.Vista_Reclutamiento
                             //envío de datos hacia capa Controlador
 
                             Cont_R.funcInsertarEntrevista(IdEmpleado, IdRecluta, TipoEntrevista, Resultado, Comentarios);
+                            MessageBox.Show("Se ha ingresado la Entrevista con Éxito", "FORMULARIO ENTREVISTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             funcLimpieza();
                             funcBloqueo();
 

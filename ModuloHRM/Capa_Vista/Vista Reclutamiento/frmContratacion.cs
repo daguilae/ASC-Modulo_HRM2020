@@ -28,6 +28,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Email, NombreProf, IdRecluta;
         int NivelEstudio, Genero, EstadoCivil, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta, Dpi,CuentaBanc;
 
+        private void btnBancoTalento_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarBancoTalento MostrarBancoT = new frmMostrarBancoTalento();
+            MostrarBancoT.Show();
+        }
+
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;
 
@@ -156,6 +163,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                     Cont_R.funcContratar(PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Dpi, Genero,
                     EstadoCivil, Email, Telefono, NumIgss, TipoLicencia, Puesto, EstadoRecluta, CuentaBanc,
                     Departamento, EstadoRecluta, IdRecluta, Residencia, Zona, Municipio, Depto);
+                    MessageBox.Show("Se ha contratado con Éxito al Empleado", "FORMULARIO CONTRATACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     funcLimpieza();
                     funcBloqueo();
