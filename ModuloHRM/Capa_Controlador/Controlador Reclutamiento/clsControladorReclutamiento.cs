@@ -109,11 +109,11 @@ namespace Capa_Controlador.Controlador_Reclutamiento
         }
         //Paso de datos para consulta ingresar en la entidad empleado
         public void funcContratar(string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNac,
-          int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int CuentaB,int Puesto, int Estado, int Depto,
+          int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto, int CuentaB, int Estado, int Depto,
           int EstadoR, string IdRecluta, string Residencia, string Zona, string Municipio, string Departamento)
         {
             sn.funcContratar(Nombre1, Nombre2, Apellido1, Apellido2, FechaNac, Dpi, Genero, EstadoCivil, Email,
-                Tel, NumIgss, Licencia, CuentaB,Puesto, Estado, Depto, EstadoR, IdRecluta, Residencia, Zona, Municipio, Departamento);
+                Tel, NumIgss, Licencia, Puesto,CuentaB, Estado, Depto, EstadoR, IdRecluta, Residencia, Zona, Municipio, Departamento);
         }
 
         //Paso de datos para consulta buscar en la entidad Reclutamiento
@@ -129,9 +129,9 @@ namespace Capa_Controlador.Controlador_Reclutamiento
             return Lector2;
         }
         //Paso de datos para consulta buscar en la entidad empleados
-        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado)
+        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado,int Estado)
         {
-            OdbcDataReader Lector = sn.funcBuscarEmpleado(IdEmpleado);
+            OdbcDataReader Lector = sn.funcBuscarEmpleado(IdEmpleado, Estado);
             return Lector;
         }
 
@@ -166,41 +166,41 @@ namespace Capa_Controlador.Controlador_Reclutamiento
             return table;
         }
         //Paso de datos para consulta mostrar en la entidad empleado por Id
-        public DataTable funcFiltradoIdEmpleado(string Parametro)
+        public DataTable funcFiltradoIdEmpleado(string Parametro, int Estado)
         {
-            OdbcDataAdapter dt = sn.funcFiltradoIdEmpleado(Parametro);
+            OdbcDataAdapter dt = sn.funcFiltradoIdEmpleado(Parametro, Estado);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
         //Paso de datos para consulta mostrar en la entidad empleado por Primer Nombre
-        public DataTable funcFiltradoNombreEmpleado(string Parametro)
+        public DataTable funcFiltradoNombreEmpleado(string Parametro, int Estado)
         {
-            OdbcDataAdapter dt = sn.funcFiltradoNombreEmpleado(Parametro);
+            OdbcDataAdapter dt = sn.funcFiltradoNombreEmpleado(Parametro, Estado);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
         //Paso de datos para consulta mostrar en la entidad empleado por Primer Apellido
-        public DataTable funcFiltradoApellidoEmpleado(string Parametro)
+        public DataTable funcFiltradoApellidoEmpleado(string Parametro, int Estado)
         {
-            OdbcDataAdapter dt = sn.funcFiltradoApellidoEmpleado(Parametro);
+            OdbcDataAdapter dt = sn.funcFiltradoApellidoEmpleado(Parametro, Estado);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
         //Paso de datos para consulta mostrar en la entidad empleado por Puesto
-        public DataTable funcFiltradoPuestoEmpleado(string Parametro)
+        public DataTable funcFiltradoPuestoEmpleado(string Parametro, int Estado)
         {
-            OdbcDataAdapter dt = sn.funcFiltradoPuestoEmpleado(Parametro);
+            OdbcDataAdapter dt = sn.funcFiltradoPuestoEmpleado(Parametro, Estado);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;
         }
         //Paso de datos para consulta mostrar en la entidad empleado por Departamento
-        public DataTable funcFiltradoDepartamentoEmpleado(string Parametro)
+        public DataTable funcFiltradoDepartamentoEmpleado(string Parametro, int Estado)
         {
-            OdbcDataAdapter dt = sn.funcFiltradoDepartamentoEmpleado(Parametro);
+            OdbcDataAdapter dt = sn.funcFiltradoDepartamentoEmpleado(Parametro , Estado);
             DataTable table = new DataTable();
             dt.Fill(table);
             return table;

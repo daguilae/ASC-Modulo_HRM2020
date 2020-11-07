@@ -30,6 +30,7 @@
         {
             this.tbcDatosBajaEmpleado = new System.Windows.Forms.TabControl();
             this.tbpDatosGenerales = new System.Windows.Forms.TabPage();
+            this.btnEmpleados = new System.Windows.Forms.Button();
             this.lblIngreseIdEmpleado = new System.Windows.Forms.Label();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -61,7 +62,6 @@
             this.txtMontoPrestaciones = new System.Windows.Forms.TextBox();
             this.lblPrestaciones = new System.Windows.Forms.Label();
             this.lblTiempoLaborado = new System.Windows.Forms.Label();
-            this.btnEmpleados = new System.Windows.Forms.Button();
             this.tbcDatosBajaEmpleado.SuspendLayout();
             this.tbpDatosGenerales.SuspendLayout();
             this.pnlPuesto.SuspendLayout();
@@ -100,6 +100,18 @@
             this.tbpDatosGenerales.Size = new System.Drawing.Size(936, 497);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.Location = new System.Drawing.Point(50, 412);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(173, 68);
+            this.btnEmpleados.TabIndex = 33;
+            this.btnEmpleados.Text = "Ver Lista Empleados";
+            this.btnEmpleados.UseVisualStyleBackColor = true;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
             // 
             // lblIngreseIdEmpleado
             // 
@@ -456,18 +468,6 @@
             this.lblTiempoLaborado.TabIndex = 2;
             this.lblTiempoLaborado.Text = "Tiempo Laborado en la Empresa";
             // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.Location = new System.Drawing.Point(50, 412);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(173, 68);
-            this.btnEmpleados.TabIndex = 33;
-            this.btnEmpleados.Text = "Ver Lista Empleados";
-            this.btnEmpleados.UseVisualStyleBackColor = true;
-            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
-            // 
             // frmBajasEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -476,6 +476,7 @@
             this.ClientSize = new System.Drawing.Size(944, 530);
             this.Controls.Add(this.tbcDatosBajaEmpleado);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

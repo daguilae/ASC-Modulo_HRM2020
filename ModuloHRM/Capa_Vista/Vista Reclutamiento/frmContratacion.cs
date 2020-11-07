@@ -26,13 +26,13 @@ namespace Capa_Vista.Vista_Reclutamiento
 
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Email, NombreProf, IdRecluta;
-        int NivelEstudio, Genero, EstadoCivil, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta, Dpi,CuentaBanc;
+        int NivelEstudio, Genero, EstadoCivil, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoEmp,EstadoRecluta, Dpi,CuentaBanc;
 
         private void btnBancoTalento_Click(object sender, EventArgs e)
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
             frmMostrarBancoTalento MostrarBancoT = new frmMostrarBancoTalento();
-            MostrarBancoT.Show();
+            MostrarBancoT.ShowDialog();
         }
 
         //Declaración variables Entidad Dirección
@@ -127,7 +127,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void btnContratar_Click(object sender, EventArgs e)
         {
             //Mensaje de Validación
-            if (txtIdBancoTalento.Text == "") { MessageBox.Show("ADVERTENCIA: El campo del Id no puede estar vacío.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+            if (txtIdBancoTalento.Text == "" || txtCuentaBanc.Text == "") { MessageBox.Show("ADVERTENCIA: Uno o más campos están vacios.", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
                 //Mensaje de Pregunta
@@ -148,7 +148,8 @@ namespace Capa_Vista.Vista_Reclutamiento
                     Dpi = int.Parse(txtDpi.Text);
                     NivelEstudio = cmbNivelEstudios.SelectedIndex + 1;
                     CuentaBanc = Convert.ToInt32(txtCuentaBanc.Text);
-                    EstadoRecluta = 1;
+                    EstadoEmp = 1;
+                    EstadoRecluta = 4;
                     IdRecluta = txtIdBancoTalento.Text;
 
 
@@ -161,7 +162,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                     //envío de datos hacia capa Controlador
 
                     Cont_R.funcContratar(PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Dpi, Genero,
-                    EstadoCivil, Email, Telefono, NumIgss, TipoLicencia, Puesto, EstadoRecluta, CuentaBanc,
+                    EstadoCivil, Email, Telefono, NumIgss, TipoLicencia, Puesto, CuentaBanc, EstadoEmp,
                     Departamento, EstadoRecluta, IdRecluta, Residencia, Zona, Municipio, Depto);
                     MessageBox.Show("Se ha contratado con Éxito al Empleado", "FORMULARIO CONTRATACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -90,7 +90,7 @@
             // 
             this.btnModificar.Enabled = false;
             this.btnModificar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(972, 555);
+            this.btnModificar.Location = new System.Drawing.Point(972, 548);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(161, 60);
@@ -428,7 +428,7 @@
             this.tbpDatosPersonales.Location = new System.Drawing.Point(4, 29);
             this.tbpDatosPersonales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbpDatosPersonales.Name = "tbpDatosPersonales";
-            this.tbpDatosPersonales.Size = new System.Drawing.Size(1138, 518);
+            this.tbpDatosPersonales.Size = new System.Drawing.Size(1138, 499);
             this.tbpDatosPersonales.TabIndex = 3;
             this.tbpDatosPersonales.Text = "Datos Personales";
             // 
@@ -660,6 +660,7 @@
             this.Controls.Add(this.tbcModificarEmpleado);
             this.Controls.Add(this.btnModificar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

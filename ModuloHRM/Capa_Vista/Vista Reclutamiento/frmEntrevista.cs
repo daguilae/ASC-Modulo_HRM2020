@@ -22,6 +22,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             InitializeComponent();
             funcLlenarTipoEntrevista();
+            cmbTipoEntrevista.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         //Declaración de variables Entidad Reclutamiento
@@ -36,7 +37,10 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             if (rbtnReprobado.Checked == true)
             {
-                Resultado = 2;
+                Resultado = 3;
+                pnlOpciones.Enabled = false;
+                rbtnPrimeraOp.Checked = false;
+                rbtnSegOpcion.Checked = false;
             }
         }
         //Se agrega el codigo a la variable resultado de aprobado
@@ -44,7 +48,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             if (rbtnAprobado.Checked == true)
             {
-                Resultado = 1;
+                pnlOpciones.Enabled = true;
             }
         }
 
@@ -116,7 +120,23 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
             frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
-            MostrarReclu.Show();
+            MostrarReclu.ShowDialog();
+        }
+
+        private void rbtnPrimeraOp_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnPrimeraOp.Checked == true)
+            {
+                Resultado = 1;
+            }
+        }
+
+        private void rbtnSegOpcion_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbtnSegOpcion.Checked == true)
+            {
+                Resultado = 2;
+            }
         }
 
         private void btnIngresoEntrevista_Click(object sender, EventArgs e)
@@ -133,26 +153,29 @@ namespace Capa_Vista.Vista_Reclutamiento
                     if (rtxtComentarios.Text == "") { MessageBox.Show("ADVERTENCIA: No ha ingresado sus Comentarios sobre el Recluta Entrevistado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
                     else
                     {
-
+                        if (rbtnAprobado.Checked==true &&(rbtnPrimeraOp.Checked==false && rbtnSegOpcion.Checked==false )) { MessageBox.Show("ADVERTENCIA: No ha seleccionado un Tipo de Opción", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
+                        else { 
                         //Mensaje de Pregunta
-                        if (MessageBox.Show("¿Desea agregar un nuevo Resultado de Entrevista ?", "Entrevista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
-                        else
-                        {
+                            if (MessageBox.Show("¿Desea agregar un nuevo Resultado de Entrevista ?", "Entrevista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != System.Windows.Forms.DialogResult.Yes) { }
+                            else
+                            {
 
-                            //Se da a las variables los valores correspondientes para enviarse a la capa Controlador
-                            //datos Reclutamiento
-                            IdEmpleado = txtIdEmpleado.Text;
-                            TipoEntrevista = cmbTipoEntrevista.SelectedIndex + 1;
-                            Comentarios = rtxtComentarios.Text;
-                            //envío de datos hacia capa Controlador
+                                //Se da a las variables los valores correspondientes para enviarse a la capa Controlador
+                                //datos Reclutamiento
+                                IdEmpleado = txtIdEmpleado.Text;
+                                TipoEntrevista = cmbTipoEntrevista.SelectedIndex + 1;
+                                Comentarios = rtxtComentarios.Text;
+                                //envío de datos hacia capa Controlador
 
-                            Cont_R.funcInsertarEntrevista(IdEmpleado, IdRecluta, TipoEntrevista, Resultado, Comentarios);
-                            MessageBox.Show("Se ha ingresado la Entrevista con Éxito", "FORMULARIO ENTREVISTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Cont_R.funcInsertarEntrevista(IdEmpleado, IdRecluta, TipoEntrevista, Resultado, Comentarios);
+                                MessageBox.Show("Se ha ingresado la Entrevista con Éxito", "FORMULARIO ENTREVISTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            funcLimpieza();
-                            funcBloqueo();
+                                funcLimpieza();
+                                funcBloqueo();
 
-                        }//fin elseif Pregunta
+                            }//fin elseif Pregunta
+
+                        }//fin else if rbtn aprobado con opcion
 
                     }//fin elseif txt
 
@@ -177,14 +200,15 @@ namespace Capa_Vista.Vista_Reclutamiento
             rbtnAprobado.Checked = false;
             rbtnReprobado.Checked = false;
             rtxtComentarios.Text = "";
-
+            rbtnPrimeraOp.Checked = false;
+            rbtnSegOpcion.Checked = false;
 
 
         }
         //Función de Bloqueo
         private void funcBloqueo()
         {
-            gbxDatosEntrevista.Enabled = true;
+            gbxDatosEntrevista.Enabled = false;
         }
 
 

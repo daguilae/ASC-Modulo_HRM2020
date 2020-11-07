@@ -24,12 +24,14 @@ namespace Capa_Vista.Vista_Reclutamiento
             InitializeComponent();
             funcLlenarPuestoNuevo();
             funcLlnearDeptoNuevo();
-
+            cmbPuestoNuevo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartamentoNuevo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
 
         String IdEmpleado;
         int PuestoN, DeptoN;
+        int Estado = 1;
 
         //función para llenar el contenido de la tabla hacia el combo
         public void funcLlenarPuestoNuevo()
@@ -62,7 +64,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                 IdEmpleado = txtIdEmpleado.Text;
                 //Inicio para Busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text,Estado);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())
@@ -148,7 +150,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
             frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
-            MostrarEmp.Show();
+            MostrarEmp.ShowDialog();
         }
 
         //Función de Bloqueo
