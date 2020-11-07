@@ -11,7 +11,7 @@ namespace Capa_Modelo
     {
         public OdbcConnection funcconexion()
         {
-            //creacion de la conexion via ODBC
+            //creacion de la conexion via ODBC clc_erp
             OdbcConnection conn = new OdbcConnection("Dsn=clc_erp");
             try
             {

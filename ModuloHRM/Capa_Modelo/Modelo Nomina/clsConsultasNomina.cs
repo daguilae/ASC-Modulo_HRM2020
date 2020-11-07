@@ -178,6 +178,28 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        public string funcObtenerPeriodoFinal (string FI)
+        {
+            string PeriodoFinal;
+            try
+            {
+                string sentencia = "SELECT fecha_fin_encabezado_nomina FROM encabezado_nomina " +
+                    "WHERE fecha_inicio_encabezado_nomina = '" + FI + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                PeriodoFinal = Convert.ToString(Query_Validacion1.ExecuteScalar());
+                return PeriodoFinal;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         // Metodos para formulario frmEmpleadoNomina
 
         public OdbcDataReader funcBuscarNomEmpleado(int Id)
@@ -550,6 +572,231 @@ namespace Capa_Modelo.Modelo_Nomina
                 Lector.SelectCommand = Query_Validacion1;
                 Lector.Fill(Datos);
                 return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable funcVisHoras(string Fecha)
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT emp.pk_id_empleado AS 'ID Empleado' , emp.nombre1_empleado AS 'Primer Nombre', emp.nombre2_empleado AS 'Segundo Nombre', emp.apellido1_empleado AS 'Primer Apellido', emp.apellido2_empleado AS 'Segundo Apellido'," +
+                    " ch.horas_hordinarias AS 'Horas Ordinarias', ch.horas_extra AS 'Horas Extraordinarias' FROM control_horas AS ch, empleado AS emp, encabezado_nomina AS enc " +
+                    "WHERE ch.fk_id_control_horas_empleado = emp.pk_id_empleado AND enc.fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public DataTable funcVisDias(string Fecha)
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT emp.pk_id_empleado AS 'ID Empleado' , emp.nombre1_empleado AS 'Primer Nombre', emp.nombre2_empleado AS 'Segundo Nombre', emp.apellido1_empleado AS 'Primer Apellido', emp.apellido2_empleado AS 'Segundo Apellido'," +
+                    " ca.dias_laborados AS 'Dias Laborados', ca.dias_ausente_justificados AS 'Dias Ausentado(Justificados)', ca.dias_ausente_injustificados AS 'Dias Ausentado(Injustificados)' " +
+                    "FROM control_asistencia AS ca, empleado AS emp, encabezado_nomina AS enc " +
+                    "WHERE ca.fk_id_control_asistencia_empleado = emp.pk_id_empleado AND enc.fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public void funcCrearPeriodo(string Nom, string FI, string FF)
+        {
+            try
+            {
+                string Correlativo = "SELECT IFNULL(MAX(pk_id_encabezado_nomina),0) +1 FROM encabezado_nomina";
+                OdbcCommand Query_Validacion = new OdbcCommand(Correlativo, Conexion.funcconexion());
+                int IdEnc = Convert.ToInt32(Query_Validacion.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = Query_Validacion.ExecuteReader();
+
+                string sentencia = "INSERT INTO encabezado_nomina (pk_id_encabezado_nomina, nombre_encabezado_nomina, fecha_inicio_encabezado_nomina, fecha_fin_encabezado_nomina) VALUES ('" + IdEnc + "','" + Nom + "','" + FI + "','" + FF + "')";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+                MessageBox.Show("Ingreso Exitoso", "INGRESO DE PERIODO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Metodos para formulario frmControlHorasDias
+
+        public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
+        {
+            try
+            {
+                string Correlativo = "SELECT IFNULL(MAX(pk_id_control_horas),0) +1 FROM control_horas";
+                OdbcCommand Query = new OdbcCommand(Correlativo, Conexion.funcconexion());
+                int Id_Control_Horas = Convert.ToInt32(Query.ExecuteScalar());
+
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "INSERT INTO control_horas (pk_id_control_horas , fk_id_control_horas_empleado  , fk_id_control_horas_encabezado_nomina, horas_hordinarias, horas_extra) VALUES ('" + Id_Control_Horas    + "','" + IdEmp + "','" + IdEncNom + "','" + HorasOrd + "','" + HorasExt + "')";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion2.ExecuteNonQuery();
+                MessageBox.Show("Ingreso Exitoso", "INGRESO DE HORAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void funcIgresarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
+        {
+            try
+            {
+                string Correlativo = "SELECT IFNULL(MAX(pk_id_control_asistencia ),0) +1 FROM control_asistencia";
+                OdbcCommand Query = new OdbcCommand(Correlativo, Conexion.funcconexion());
+                int Id_Control_asistencia = Convert.ToInt32(Query.ExecuteScalar());
+
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "INSERT INTO control_asistencia (pk_id_control_asistencia , fk_id_control_asistencia_empleado ,fk_id_control_asistencia_encabezado_nomina, dias_laborados, dias_ausente_justificados, dias_ausente_injustificados) VALUES ('" + Id_Control_asistencia + "','" + IdEmp + "','" + IdEncNom + "','" + DiasLab + "','" + DiasJus + "','" + DiasInjust + "')";
+                OdbcCommand Query_Validacion2 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion2.ExecuteNonQuery();
+                MessageBox.Show("Ingreso Exitoso", "INGRESO DE DIAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void funcModificarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
+        {
+            try
+            {
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "UPDATE control_horas SET horas_hordinarias='" + HorasOrd + "', horas_extra='" + HorasExt + "' WHERE fk_id_control_horas_empleado= '" + IdEmp + "' AND fk_id_control_horas_encabezado_nomina= '" + IdEncNom + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+                MessageBox.Show("Modificación Exitosa", "MODIFICACIÓN DE HORAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void funcModificarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
+        {
+            try
+            {
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "UPDATE control_asistencia SET dias_laborados='" + DiasLab + "', dias_ausente_justificados='" + DiasJus + "', dias_ausente_injustificados='" + DiasInjust + "' WHERE fk_id_control_asistencia_empleado= '" + IdEmp + "' AND fk_id_control_asistencia_encabezado_nomina= '" + IdEncNom + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+                MessageBox.Show("Modificación Exitosa", "MODIFICACIÓN DE HORAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public OdbcDataReader funcBuscarHoras(int IdEmp, string Fecha)
+        {
+            try
+            {
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "SELECT 	horas_hordinarias, 	horas_extra FROM control_horas WHERE fk_id_control_horas_empleado = '" + IdEmp + "'AND fk_id_control_horas_encabezado_nomina = '" + IdEncNom + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataReader Lector = Query_Validacion1.ExecuteReader();
+                return Lector;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        public OdbcDataReader funcBuscarDias(int IdEmp, string Fecha)
+        {
+            try
+            {
+                string sentenciaEncNom = "SELECT pk_id_encabezado_nomina  FROM encabezado_nomina WHERE fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion3 = new OdbcCommand(sentenciaEncNom, Conexion.funcconexion());
+                int IdEncNom = Convert.ToInt32(Query_Validacion3.ExecuteScalar());
+
+                string sentencia = "SELECT dias_laborados, dias_ausente_justificados, dias_ausente_injustificados FROM control_asistencia WHERE fk_id_control_asistencia_empleado = '" + IdEmp + "'AND fk_id_control_asistencia_encabezado_nomina = '" + IdEncNom + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataReader Lector = Query_Validacion1.ExecuteReader();
+                return Lector;
             }
             catch (Exception ex)
             {

@@ -30,6 +30,7 @@
         {
             this.tbcEmpleadoNomina = new System.Windows.Forms.TabControl();
             this.tbpIngresarEmpleDedPer = new System.Windows.Forms.TabPage();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
             this.btnIngresarBuscar = new System.Windows.Forms.Button();
             this.lblTipoCobro = new System.Windows.Forms.Label();
             this.btnIngresoEmpleadoDedPer = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.lblNomEmpleIngreso = new System.Windows.Forms.Label();
             this.lblIdEmpIngreso = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.txtBuscarFechaFin = new System.Windows.Forms.TextBox();
             this.lblTotalPer = new System.Windows.Forms.Label();
             this.lblTotalDed = new System.Windows.Forms.Label();
             this.txtTotalDed = new System.Windows.Forms.TextBox();
@@ -62,6 +64,7 @@
             this.txtBuscarIdEmp = new System.Windows.Forms.TextBox();
             this.lbBuscarIDEmp = new System.Windows.Forms.Label();
             this.tbpEliminarEmpleDedPer = new System.Windows.Forms.TabPage();
+            this.txtEliminarFechFin = new System.Windows.Forms.TextBox();
             this.lblTipoCobroEliminar = new System.Windows.Forms.Label();
             this.btnEliminarBuscar = new System.Windows.Forms.Button();
             this.btnEliminarEmpleadoDedPer = new System.Windows.Forms.Button();
@@ -101,6 +104,7 @@
             // tbpIngresarEmpleDedPer
             // 
             this.tbpIngresarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpIngresarEmpleDedPer.Controls.Add(this.txtIngresoFechFin);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresarBuscar);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblTipoCobro);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresoEmpleadoDedPer);
@@ -113,16 +117,24 @@
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblPerceDeducIngreso);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblNomEmpleIngreso);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblIdEmpIngreso);
-            this.tbpIngresarEmpleDedPer.Location = new System.Drawing.Point(4, 26);
+            this.tbpIngresarEmpleDedPer.Location = new System.Drawing.Point(4, 29);
             this.tbpIngresarEmpleDedPer.Name = "tbpIngresarEmpleDedPer";
             this.tbpIngresarEmpleDedPer.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpIngresarEmpleDedPer.Size = new System.Drawing.Size(824, 502);
+            this.tbpIngresarEmpleDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpIngresarEmpleDedPer.TabIndex = 0;
             this.tbpIngresarEmpleDedPer.Text = "Ingresar";
             // 
+            // txtIngresoFechFin
+            // 
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(380, 166);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(133, 27);
+            this.txtIngresoFechFin.TabIndex = 22;
+            // 
             // btnIngresarBuscar
             // 
-            this.btnIngresarBuscar.Location = new System.Drawing.Point(561, 199);
+            this.btnIngresarBuscar.Location = new System.Drawing.Point(559, 230);
             this.btnIngresarBuscar.Name = "btnIngresarBuscar";
             this.btnIngresarBuscar.Size = new System.Drawing.Size(158, 29);
             this.btnIngresarBuscar.TabIndex = 21;
@@ -135,13 +147,13 @@
             this.lblTipoCobro.AutoSize = true;
             this.lblTipoCobro.Location = new System.Drawing.Point(7, 98);
             this.lblTipoCobro.Name = "lblTipoCobro";
-            this.lblTipoCobro.Size = new System.Drawing.Size(108, 17);
+            this.lblTipoCobro.Size = new System.Drawing.Size(127, 20);
             this.lblTipoCobro.TabIndex = 20;
             this.lblTipoCobro.Text = "Tipo de Cobro:";
             // 
             // btnIngresoEmpleadoDedPer
             // 
-            this.btnIngresoEmpleadoDedPer.Location = new System.Drawing.Point(725, 199);
+            this.btnIngresoEmpleadoDedPer.Location = new System.Drawing.Point(727, 230);
             this.btnIngresoEmpleadoDedPer.Name = "btnIngresoEmpleadoDedPer";
             this.btnIngresoEmpleadoDedPer.Size = new System.Drawing.Size(91, 29);
             this.btnIngresoEmpleadoDedPer.TabIndex = 17;
@@ -164,7 +176,7 @@
             this.rbtnIngresoDed.AutoSize = true;
             this.rbtnIngresoDed.Location = new System.Drawing.Point(6, 15);
             this.rbtnIngresoDed.Name = "rbtnIngresoDed";
-            this.rbtnIngresoDed.Size = new System.Drawing.Size(95, 21);
+            this.rbtnIngresoDed.Size = new System.Drawing.Size(115, 24);
             this.rbtnIngresoDed.TabIndex = 0;
             this.rbtnIngresoDed.TabStop = true;
             this.rbtnIngresoDed.Text = "Deducción";
@@ -177,7 +189,7 @@
             this.rbtnIngresoPerc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.rbtnIngresoPerc.Location = new System.Drawing.Point(153, 15);
             this.rbtnIngresoPerc.Name = "rbtnIngresoPerc";
-            this.rbtnIngresoPerc.Size = new System.Drawing.Size(99, 21);
+            this.rbtnIngresoPerc.Size = new System.Drawing.Size(120, 24);
             this.rbtnIngresoPerc.TabIndex = 1;
             this.rbtnIngresoPerc.TabStop = true;
             this.rbtnIngresoPerc.Text = "Percepción";
@@ -187,19 +199,22 @@
             // cmbIngresoFecPLan
             // 
             this.cmbIngresoFecPLan.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbIngresoFecPLan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIngresoFecPLan.FormattingEnabled = true;
             this.cmbIngresoFecPLan.Location = new System.Drawing.Point(232, 165);
             this.cmbIngresoFecPLan.Name = "cmbIngresoFecPLan";
-            this.cmbIngresoFecPLan.Size = new System.Drawing.Size(280, 25);
+            this.cmbIngresoFecPLan.Size = new System.Drawing.Size(141, 28);
             this.cmbIngresoFecPLan.TabIndex = 15;
+            this.cmbIngresoFecPLan.SelectedIndexChanged += new System.EventHandler(this.cmbIngresoFecPLan_SelectedIndexChanged);
             // 
             // cmbIngresoDedPer
             // 
             this.cmbIngresoDedPer.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbIngresoDedPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIngresoDedPer.FormattingEnabled = true;
             this.cmbIngresoDedPer.Location = new System.Drawing.Point(232, 130);
             this.cmbIngresoDedPer.Name = "cmbIngresoDedPer";
-            this.cmbIngresoDedPer.Size = new System.Drawing.Size(280, 25);
+            this.cmbIngresoDedPer.Size = new System.Drawing.Size(280, 28);
             this.cmbIngresoDedPer.TabIndex = 14;
             // 
             // txtIngresoNomEmp
@@ -208,7 +223,7 @@
             this.txtIngresoNomEmp.Enabled = false;
             this.txtIngresoNomEmp.Location = new System.Drawing.Point(234, 54);
             this.txtIngresoNomEmp.Name = "txtIngresoNomEmp";
-            this.txtIngresoNomEmp.Size = new System.Drawing.Size(278, 23);
+            this.txtIngresoNomEmp.Size = new System.Drawing.Size(278, 27);
             this.txtIngresoNomEmp.TabIndex = 13;
             // 
             // txtIngresoIdEmp
@@ -216,7 +231,7 @@
             this.txtIngresoIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoIdEmp.Location = new System.Drawing.Point(233, 17);
             this.txtIngresoIdEmp.Name = "txtIngresoIdEmp";
-            this.txtIngresoIdEmp.Size = new System.Drawing.Size(280, 23);
+            this.txtIngresoIdEmp.Size = new System.Drawing.Size(280, 27);
             this.txtIngresoIdEmp.TabIndex = 12;
             // 
             // lblFecPlanIngreso
@@ -224,7 +239,7 @@
             this.lblFecPlanIngreso.AutoSize = true;
             this.lblFecPlanIngreso.Location = new System.Drawing.Point(7, 173);
             this.lblFecPlanIngreso.Name = "lblFecPlanIngreso";
-            this.lblFecPlanIngreso.Size = new System.Drawing.Size(96, 17);
+            this.lblFecPlanIngreso.Size = new System.Drawing.Size(118, 20);
             this.lblFecPlanIngreso.TabIndex = 11;
             this.lblFecPlanIngreso.Text = "Fecha Planilla";
             // 
@@ -233,7 +248,7 @@
             this.lblPerceDeducIngreso.AutoSize = true;
             this.lblPerceDeducIngreso.Location = new System.Drawing.Point(7, 138);
             this.lblPerceDeducIngreso.Name = "lblPerceDeducIngreso";
-            this.lblPerceDeducIngreso.Size = new System.Drawing.Size(170, 17);
+            this.lblPerceDeducIngreso.Size = new System.Drawing.Size(207, 20);
             this.lblPerceDeducIngreso.TabIndex = 10;
             this.lblPerceDeducIngreso.Text = "Deducción o Percepción:";
             // 
@@ -242,7 +257,7 @@
             this.lblNomEmpleIngreso.AutoSize = true;
             this.lblNomEmpleIngreso.Location = new System.Drawing.Point(7, 61);
             this.lblNomEmpleIngreso.Name = "lblNomEmpleIngreso";
-            this.lblNomEmpleIngreso.Size = new System.Drawing.Size(135, 17);
+            this.lblNomEmpleIngreso.Size = new System.Drawing.Size(162, 20);
             this.lblNomEmpleIngreso.TabIndex = 9;
             this.lblNomEmpleIngreso.Text = "Nombre Empleado:";
             // 
@@ -251,13 +266,14 @@
             this.lblIdEmpIngreso.AutoSize = true;
             this.lblIdEmpIngreso.Location = new System.Drawing.Point(7, 24);
             this.lblIdEmpIngreso.Name = "lblIdEmpIngreso";
-            this.lblIdEmpIngreso.Size = new System.Drawing.Size(96, 17);
+            this.lblIdEmpIngreso.Size = new System.Drawing.Size(115, 20);
             this.lblIdEmpIngreso.TabIndex = 8;
             this.lblIdEmpIngreso.Text = "ID Empleado:";
             // 
             // tbpBuscar
             // 
             this.tbpBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpBuscar.Controls.Add(this.txtBuscarFechaFin);
             this.tbpBuscar.Controls.Add(this.lblTotalPer);
             this.tbpBuscar.Controls.Add(this.lblTotalDed);
             this.tbpBuscar.Controls.Add(this.txtTotalDed);
@@ -274,19 +290,27 @@
             this.tbpBuscar.Controls.Add(this.lblBuscarNomEmp);
             this.tbpBuscar.Controls.Add(this.txtBuscarIdEmp);
             this.tbpBuscar.Controls.Add(this.lbBuscarIDEmp);
-            this.tbpBuscar.Location = new System.Drawing.Point(4, 26);
+            this.tbpBuscar.Location = new System.Drawing.Point(4, 29);
             this.tbpBuscar.Name = "tbpBuscar";
             this.tbpBuscar.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpBuscar.Size = new System.Drawing.Size(824, 502);
+            this.tbpBuscar.Size = new System.Drawing.Size(824, 499);
             this.tbpBuscar.TabIndex = 2;
             this.tbpBuscar.Text = "Buscar";
+            // 
+            // txtBuscarFechaFin
+            // 
+            this.txtBuscarFechaFin.Enabled = false;
+            this.txtBuscarFechaFin.Location = new System.Drawing.Point(380, 123);
+            this.txtBuscarFechaFin.Name = "txtBuscarFechaFin";
+            this.txtBuscarFechaFin.Size = new System.Drawing.Size(133, 27);
+            this.txtBuscarFechaFin.TabIndex = 19;
             // 
             // lblTotalPer
             // 
             this.lblTotalPer.AutoSize = true;
             this.lblTotalPer.Location = new System.Drawing.Point(558, 415);
             this.lblTotalPer.Name = "lblTotalPer";
-            this.lblTotalPer.Size = new System.Drawing.Size(134, 17);
+            this.lblTotalPer.Size = new System.Drawing.Size(165, 20);
             this.lblTotalPer.TabIndex = 18;
             this.lblTotalPer.Text = "Total Percepciones:";
             // 
@@ -295,7 +319,7 @@
             this.lblTotalDed.AutoSize = true;
             this.lblTotalDed.Location = new System.Drawing.Point(115, 415);
             this.lblTotalDed.Name = "lblTotalDed";
-            this.lblTotalDed.Size = new System.Drawing.Size(130, 17);
+            this.lblTotalDed.Size = new System.Drawing.Size(160, 20);
             this.lblTotalDed.TabIndex = 17;
             this.lblTotalDed.Text = "Total Deducciones:";
             // 
@@ -305,7 +329,7 @@
             this.txtTotalDed.Enabled = false;
             this.txtTotalDed.Location = new System.Drawing.Point(119, 438);
             this.txtTotalDed.Name = "txtTotalDed";
-            this.txtTotalDed.Size = new System.Drawing.Size(156, 23);
+            this.txtTotalDed.Size = new System.Drawing.Size(156, 27);
             this.txtTotalDed.TabIndex = 16;
             // 
             // txtTotalPer
@@ -314,7 +338,7 @@
             this.txtTotalPer.Enabled = false;
             this.txtTotalPer.Location = new System.Drawing.Point(562, 438);
             this.txtTotalPer.Name = "txtTotalPer";
-            this.txtTotalPer.Size = new System.Drawing.Size(156, 23);
+            this.txtTotalPer.Size = new System.Drawing.Size(156, 27);
             this.txtTotalPer.TabIndex = 15;
             // 
             // btnLimpiar
@@ -330,11 +354,13 @@
             // cmbBuscarPeriodoPlanilla
             // 
             this.cmbBuscarPeriodoPlanilla.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbBuscarPeriodoPlanilla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBuscarPeriodoPlanilla.FormattingEnabled = true;
             this.cmbBuscarPeriodoPlanilla.Location = new System.Drawing.Point(217, 122);
             this.cmbBuscarPeriodoPlanilla.Name = "cmbBuscarPeriodoPlanilla";
-            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(296, 25);
+            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(157, 28);
             this.cmbBuscarPeriodoPlanilla.TabIndex = 13;
+            this.cmbBuscarPeriodoPlanilla.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarPeriodoPlanilla_SelectedIndexChanged);
             // 
             // dgvPerEpm
             // 
@@ -379,7 +405,7 @@
             this.lblBuscarFecPlanilla.AutoSize = true;
             this.lblBuscarFecPlanilla.Location = new System.Drawing.Point(20, 130);
             this.lblBuscarFecPlanilla.Name = "lblBuscarFecPlanilla";
-            this.lblBuscarFecPlanilla.Size = new System.Drawing.Size(134, 17);
+            this.lblBuscarFecPlanilla.Size = new System.Drawing.Size(162, 20);
             this.lblBuscarFecPlanilla.TabIndex = 7;
             this.lblBuscarFecPlanilla.Text = "Periodo de Planilla:";
             // 
@@ -389,7 +415,7 @@
             this.txtBuscarPuestoEmp.Enabled = false;
             this.txtBuscarPuestoEmp.Location = new System.Drawing.Point(217, 89);
             this.txtBuscarPuestoEmp.Name = "txtBuscarPuestoEmp";
-            this.txtBuscarPuestoEmp.Size = new System.Drawing.Size(296, 23);
+            this.txtBuscarPuestoEmp.Size = new System.Drawing.Size(296, 27);
             this.txtBuscarPuestoEmp.TabIndex = 5;
             // 
             // lblBuscarPuestoEmp
@@ -397,7 +423,7 @@
             this.lblBuscarPuestoEmp.AutoSize = true;
             this.lblBuscarPuestoEmp.Location = new System.Drawing.Point(20, 96);
             this.lblBuscarPuestoEmp.Name = "lblBuscarPuestoEmp";
-            this.lblBuscarPuestoEmp.Size = new System.Drawing.Size(149, 17);
+            this.lblBuscarPuestoEmp.Size = new System.Drawing.Size(180, 20);
             this.lblBuscarPuestoEmp.TabIndex = 4;
             this.lblBuscarPuestoEmp.Text = "Puesto del Empleado:";
             // 
@@ -407,7 +433,7 @@
             this.txtBuscarNomEmp.Enabled = false;
             this.txtBuscarNomEmp.Location = new System.Drawing.Point(217, 56);
             this.txtBuscarNomEmp.Name = "txtBuscarNomEmp";
-            this.txtBuscarNomEmp.Size = new System.Drawing.Size(296, 23);
+            this.txtBuscarNomEmp.Size = new System.Drawing.Size(296, 27);
             this.txtBuscarNomEmp.TabIndex = 3;
             // 
             // lblBuscarNomEmp
@@ -415,7 +441,7 @@
             this.lblBuscarNomEmp.AutoSize = true;
             this.lblBuscarNomEmp.Location = new System.Drawing.Point(20, 63);
             this.lblBuscarNomEmp.Name = "lblBuscarNomEmp";
-            this.lblBuscarNomEmp.Size = new System.Drawing.Size(160, 17);
+            this.lblBuscarNomEmp.Size = new System.Drawing.Size(191, 20);
             this.lblBuscarNomEmp.TabIndex = 2;
             this.lblBuscarNomEmp.Text = "Nombre del Empleado:";
             // 
@@ -424,7 +450,7 @@
             this.txtBuscarIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtBuscarIdEmp.Location = new System.Drawing.Point(217, 23);
             this.txtBuscarIdEmp.Name = "txtBuscarIdEmp";
-            this.txtBuscarIdEmp.Size = new System.Drawing.Size(296, 23);
+            this.txtBuscarIdEmp.Size = new System.Drawing.Size(296, 27);
             this.txtBuscarIdEmp.TabIndex = 1;
             // 
             // lbBuscarIDEmp
@@ -432,13 +458,14 @@
             this.lbBuscarIDEmp.AutoSize = true;
             this.lbBuscarIDEmp.Location = new System.Drawing.Point(20, 30);
             this.lbBuscarIDEmp.Name = "lbBuscarIDEmp";
-            this.lbBuscarIDEmp.Size = new System.Drawing.Size(96, 17);
+            this.lbBuscarIDEmp.Size = new System.Drawing.Size(115, 20);
             this.lbBuscarIDEmp.TabIndex = 0;
             this.lbBuscarIDEmp.Text = "ID Empleado:";
             // 
             // tbpEliminarEmpleDedPer
             // 
             this.tbpEliminarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpEliminarEmpleDedPer.Controls.Add(this.txtEliminarFechFin);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblTipoCobroEliminar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarBuscar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarEmpleadoDedPer);
@@ -451,19 +478,26 @@
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblEliminarDedPer);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblEliminarNomEmp);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblEliminarIdEmp);
-            this.tbpEliminarEmpleDedPer.Location = new System.Drawing.Point(4, 26);
+            this.tbpEliminarEmpleDedPer.Location = new System.Drawing.Point(4, 29);
             this.tbpEliminarEmpleDedPer.Name = "tbpEliminarEmpleDedPer";
             this.tbpEliminarEmpleDedPer.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpEliminarEmpleDedPer.Size = new System.Drawing.Size(824, 502);
+            this.tbpEliminarEmpleDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpEliminarEmpleDedPer.TabIndex = 1;
             this.tbpEliminarEmpleDedPer.Text = "Eliminar";
+            // 
+            // txtEliminarFechFin
+            // 
+            this.txtEliminarFechFin.Location = new System.Drawing.Point(385, 165);
+            this.txtEliminarFechFin.Name = "txtEliminarFechFin";
+            this.txtEliminarFechFin.Size = new System.Drawing.Size(127, 27);
+            this.txtEliminarFechFin.TabIndex = 21;
             // 
             // lblTipoCobroEliminar
             // 
             this.lblTipoCobroEliminar.AutoSize = true;
             this.lblTipoCobroEliminar.Location = new System.Drawing.Point(7, 98);
             this.lblTipoCobroEliminar.Name = "lblTipoCobroEliminar";
-            this.lblTipoCobroEliminar.Size = new System.Drawing.Size(108, 17);
+            this.lblTipoCobroEliminar.Size = new System.Drawing.Size(127, 20);
             this.lblTipoCobroEliminar.TabIndex = 20;
             this.lblTipoCobroEliminar.Text = "Tipo de Cobro:";
             // 
@@ -502,7 +536,7 @@
             this.rbtnEliminarDed.AutoSize = true;
             this.rbtnEliminarDed.Location = new System.Drawing.Point(6, 15);
             this.rbtnEliminarDed.Name = "rbtnEliminarDed";
-            this.rbtnEliminarDed.Size = new System.Drawing.Size(95, 21);
+            this.rbtnEliminarDed.Size = new System.Drawing.Size(115, 24);
             this.rbtnEliminarDed.TabIndex = 0;
             this.rbtnEliminarDed.TabStop = true;
             this.rbtnEliminarDed.Text = "Deducción";
@@ -514,7 +548,7 @@
             this.rbtnEliminarPer.AutoSize = true;
             this.rbtnEliminarPer.Location = new System.Drawing.Point(153, 15);
             this.rbtnEliminarPer.Name = "rbtnEliminarPer";
-            this.rbtnEliminarPer.Size = new System.Drawing.Size(99, 21);
+            this.rbtnEliminarPer.Size = new System.Drawing.Size(120, 24);
             this.rbtnEliminarPer.TabIndex = 1;
             this.rbtnEliminarPer.TabStop = true;
             this.rbtnEliminarPer.Text = "Percepción";
@@ -524,19 +558,22 @@
             // cmbEliminarFechPlan
             // 
             this.cmbEliminarFechPlan.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbEliminarFechPlan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEliminarFechPlan.FormattingEnabled = true;
             this.cmbEliminarFechPlan.Location = new System.Drawing.Point(232, 165);
             this.cmbEliminarFechPlan.Name = "cmbEliminarFechPlan";
-            this.cmbEliminarFechPlan.Size = new System.Drawing.Size(280, 25);
+            this.cmbEliminarFechPlan.Size = new System.Drawing.Size(146, 28);
             this.cmbEliminarFechPlan.TabIndex = 15;
+            this.cmbEliminarFechPlan.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarFechPlan_SelectedIndexChanged);
             // 
             // cmbEliminarDedPer
             // 
             this.cmbEliminarDedPer.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbEliminarDedPer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEliminarDedPer.FormattingEnabled = true;
             this.cmbEliminarDedPer.Location = new System.Drawing.Point(232, 130);
             this.cmbEliminarDedPer.Name = "cmbEliminarDedPer";
-            this.cmbEliminarDedPer.Size = new System.Drawing.Size(280, 25);
+            this.cmbEliminarDedPer.Size = new System.Drawing.Size(280, 28);
             this.cmbEliminarDedPer.TabIndex = 14;
             // 
             // txtEliminarNomEmp
@@ -545,7 +582,7 @@
             this.txtEliminarNomEmp.Enabled = false;
             this.txtEliminarNomEmp.Location = new System.Drawing.Point(234, 54);
             this.txtEliminarNomEmp.Name = "txtEliminarNomEmp";
-            this.txtEliminarNomEmp.Size = new System.Drawing.Size(280, 23);
+            this.txtEliminarNomEmp.Size = new System.Drawing.Size(280, 27);
             this.txtEliminarNomEmp.TabIndex = 13;
             // 
             // txtEliminarIdEmp
@@ -553,7 +590,7 @@
             this.txtEliminarIdEmp.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarIdEmp.Location = new System.Drawing.Point(233, 17);
             this.txtEliminarIdEmp.Name = "txtEliminarIdEmp";
-            this.txtEliminarIdEmp.Size = new System.Drawing.Size(280, 23);
+            this.txtEliminarIdEmp.Size = new System.Drawing.Size(280, 27);
             this.txtEliminarIdEmp.TabIndex = 12;
             // 
             // lblEliminarFechPlan
@@ -561,7 +598,7 @@
             this.lblEliminarFechPlan.AutoSize = true;
             this.lblEliminarFechPlan.Location = new System.Drawing.Point(7, 173);
             this.lblEliminarFechPlan.Name = "lblEliminarFechPlan";
-            this.lblEliminarFechPlan.Size = new System.Drawing.Size(96, 17);
+            this.lblEliminarFechPlan.Size = new System.Drawing.Size(118, 20);
             this.lblEliminarFechPlan.TabIndex = 11;
             this.lblEliminarFechPlan.Text = "Fecha Planilla";
             // 
@@ -570,7 +607,7 @@
             this.lblEliminarDedPer.AutoSize = true;
             this.lblEliminarDedPer.Location = new System.Drawing.Point(7, 138);
             this.lblEliminarDedPer.Name = "lblEliminarDedPer";
-            this.lblEliminarDedPer.Size = new System.Drawing.Size(170, 17);
+            this.lblEliminarDedPer.Size = new System.Drawing.Size(207, 20);
             this.lblEliminarDedPer.TabIndex = 10;
             this.lblEliminarDedPer.Text = "Deducción o Percepción:";
             // 
@@ -579,7 +616,7 @@
             this.lblEliminarNomEmp.AutoSize = true;
             this.lblEliminarNomEmp.Location = new System.Drawing.Point(7, 61);
             this.lblEliminarNomEmp.Name = "lblEliminarNomEmp";
-            this.lblEliminarNomEmp.Size = new System.Drawing.Size(135, 17);
+            this.lblEliminarNomEmp.Size = new System.Drawing.Size(162, 20);
             this.lblEliminarNomEmp.TabIndex = 9;
             this.lblEliminarNomEmp.Text = "Nombre Empleado:";
             // 
@@ -588,13 +625,13 @@
             this.lblEliminarIdEmp.AutoSize = true;
             this.lblEliminarIdEmp.Location = new System.Drawing.Point(7, 24);
             this.lblEliminarIdEmp.Name = "lblEliminarIdEmp";
-            this.lblEliminarIdEmp.Size = new System.Drawing.Size(96, 17);
+            this.lblEliminarIdEmp.Size = new System.Drawing.Size(115, 20);
             this.lblEliminarIdEmp.TabIndex = 8;
             this.lblEliminarIdEmp.Text = "ID Empleado:";
             // 
             // frmEmpleadoNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(832, 532);
@@ -672,5 +709,8 @@
         private System.Windows.Forms.Label lblTotalDed;
         private System.Windows.Forms.TextBox txtTotalDed;
         private System.Windows.Forms.TextBox txtTotalPer;
+        private System.Windows.Forms.TextBox txtIngresoFechFin;
+        private System.Windows.Forms.TextBox txtBuscarFechaFin;
+        private System.Windows.Forms.TextBox txtEliminarFechFin;
     }
 }

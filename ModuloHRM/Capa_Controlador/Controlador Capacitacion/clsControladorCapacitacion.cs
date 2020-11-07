@@ -82,5 +82,29 @@ namespace Capa_Controlador.Controlador_Capacitación
             DataTable dato = cons.funcDatosDGBCurso();
             return dato;
         }
+        public DataSet funcLlenarCampos()
+        {
+            DataSet Items = cons.funcLlenarCampos();
+            return Items;
+        }
+        public DataTable funcLlenarBusqueda(string nomCampo, string compare)
+        {
+            DataTable dato = cons.funcLlenarBusqueda(nomCampo, compare);
+            return dato;
+        }
+        public string[] funcConsultarCapa(string idCapa) {
+
+            string[] datos = new string[6];
+            datos = cons.funcConsultarCapa(idCapa);
+            return datos;
+        }
+
+        public void funcActualizarCapa(string idCapacitacion, string fechaInicio, string fechaFin, string idEmpleado, string nomCur, string horas, string idEncCapa) {
+            cons.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
+        }
+        public void funcEliminarCurso(string idCapa, string idEncCapa) {
+
+            cons.funcEliminarCurso(idCapa, idEncCapa);
+        }
     }
 }

@@ -25,7 +25,11 @@ namespace Capa_Vista.Vista_Reclutamiento
             InitializeComponent();
             funcLlenarPuesto();
             funcLlnearDepto();
-           
+            cmbDepartamentoTrabajo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbNivelEstudios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoLicencia.DropDownStyle = ComboBoxStyle.DropDownList;
             funcItemsLicencia();
             funcItemsEstadoCivil();
             funcItemsNivelEstudio();
@@ -34,6 +38,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Email, NombreProf, IdRecluta;
         int NivelEstudio, Genero, EstadoCivil, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta,Dpi;
+
+        private void btnReclutas_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
+            MostrarReclu.ShowDialog();
+        }
 
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;
@@ -80,11 +91,13 @@ namespace Capa_Vista.Vista_Reclutamiento
                             Cont_R.funcModificarRecluta(PrimerNom, SegundoNom, PrimerAp, SegundoAp,
                                EstadoCivil, Email, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, Residencia, Zona
                                , Municipio, Depto,IdRecluta);
+                    MessageBox.Show("Se han modificado los datos del Recluta con Éxito", "FORMULARIO RECLUTAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     funcLimpieza();
+                    funcBloqueo();
 
-                        
-                  
+
+
 
                 }//fin elseif Pregunta
 
@@ -219,8 +232,9 @@ namespace Capa_Vista.Vista_Reclutamiento
                                 Cont_R.funcInsertarRecluta(NivelEstudio, PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Dpi,Genero, 
                                    EstadoCivil, Email, Telefono, NumIgss, TipoLicencia, Puesto, EstadoRecluta, NombreProf, Departamento, Residencia, Zona
                                    , Municipio, Depto);
+                        MessageBox.Show("Se ha ingresado al Banco de Talento con Éxito", "FORMULARIO RECLUTAMIENTO", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                funcLimpieza();
+                        funcLimpieza();
 
                           
 
@@ -361,12 +375,14 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Función Bloqueo
         private void funcBloqueo()
         {
-            gbxSexo.Enabled = false;
-            btnIngreso.Enabled = false;
+            gbxSexo.Enabled = true;
+            btnIngreso.Enabled = true;
             btnModificar.Enabled = true;
-            gbxFormacionAcademica.Enabled = false;
-            dtpFechaNacimiento.Enabled = false;
-            txtDpi.Enabled = false;
+            gbxFormacionAcademica.Enabled = true;
+            dtpFechaNacimiento.Enabled = true;
+            txtDpi.Enabled = true;
+            btnModificar.Enabled = false;
+            btnIngreso.Enabled = true;
         }
 
 

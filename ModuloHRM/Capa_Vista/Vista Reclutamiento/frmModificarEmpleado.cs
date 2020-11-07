@@ -21,6 +21,10 @@ namespace Capa_Vista.Vista_Reclutamiento
             funcLlnearDepto();
             funcItemsLicencia();
             funcItemsEstadoCivil();
+            cmbTipoLicencia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
@@ -29,9 +33,16 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, Email, IdEmpleado;
         int  Genero, EstadoCivil, Telefono, TipoLicencia, Puesto, Departamento, CuentaBanc;
-
+        int Estado = 1;
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.ShowDialog();
+        }
 
         //metodo para llenar el combo puesto
         public void funcLlenarPuesto()
@@ -108,6 +119,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                     Cont_R.funcModificarEmpleado(PrimerNom, SegundoNom, PrimerAp, SegundoAp,
                        EstadoCivil, Email, Telefono, TipoLicencia, Puesto, CuentaBanc, Departamento, Residencia, Zona
                        , Municipio, Depto, IdEmpleado);
+                    MessageBox.Show("Se han modificado los datos del Empleado con Éxito", "FORMULARIO MODIFICAR", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     funcLimpieza();
                     funcBloqueo();
@@ -160,7 +172,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                 IdEmpleado = txtIdEmpleado.Text;
                 //Inicio para Busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text, Estado);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())

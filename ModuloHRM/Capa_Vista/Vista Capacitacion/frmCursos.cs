@@ -17,7 +17,20 @@ namespace Capa_Vista.Vista_Capacitacion
         clsControladorCapacitacion con = new clsControladorCapacitacion();
         public frmCursos()
         {
+            
             InitializeComponent();
+            funcAMLP();
+        }
+
+        public void funcAMLP() {
+            DataSet Datos = con.funcLlenarCampos();
+            for (int i = 0; i < Datos.Tables[0].Columns.Count; i++)
+            {
+                //se agregan los nombres de las columnas al dgvCamposCreacion
+                cmbEncabezado.Items.Add(Datos.Tables[0].Columns[i].ColumnName);
+
+            }
+
         }
         public void letra(object sender, KeyPressEventArgs e)
         {
@@ -154,6 +167,17 @@ namespace Capa_Vista.Vista_Capacitacion
                 txtEmailCaEli.Text = datosc[1];
                 txtPuestoEli.Text = datosc[2];
             }
+        }
+
+        private void btnBuscarEmp_Click(object sender, EventArgs e)
+        {
+            
+            string nomCampo= cmbEncabezado.Text;
+            string compare=txtBuscador.Text;
+            DataTable dato = con.funcLlenarBusqueda(nomCampo, compare);
+            dvgEmpleadosMostrar.DataSource = dato;
+            cmbEncabezado.Text = "";
+            txtBuscador.Text="";
         }
     }
 }
