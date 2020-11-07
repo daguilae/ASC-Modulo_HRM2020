@@ -66,13 +66,15 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnIngresoCurso_Click(object sender, EventArgs e)
         {
-            string idCapacitacion; string fechaInicio; string fechaFin;
+            string idCapacitacion = txtCodiCapa.Text;
+            string fechaInicio = dtpFechIni.Value.Date.ToShortDateString(); 
+            string fechaFin= dtpFechFin.Value.Date.ToShortDateString(); ;
             string idEmpleado = txtBusqCodEmp.Text;
             string nomCur = cmbCurso.Text;
             string horas = Convert.ToString(nudHoras.Value);
             string idEncCapa = txtCodigoEncabezado.Text;
 
-            // con.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
+            con.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
 
         }
     }

@@ -100,7 +100,7 @@ namespace Capa_Controlador.Controlador_Capacitación
             return datos;
         }
 
-        public void funcActualizarCapa(string idCapacitacion, string fechaInicio, string fechaFin, string idEmpleado, string nomCur, int horas, string idEncCapa) {
+        public void funcActualizarCapa(string idCapacitacion, string fechaInicio, string fechaFin, string idEmpleado, string nomCur, string horas, string idEncCapa) {
             cons.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
         }
     }
