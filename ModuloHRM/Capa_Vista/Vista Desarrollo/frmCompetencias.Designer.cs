@@ -51,6 +51,7 @@
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.cmbCompetencias = new System.Windows.Forms.ComboBox();
             this.lblResultado = new System.Windows.Forms.Label();
+            this.btnListado = new System.Windows.Forms.Button();
             this.gbxDatosCompetencia.SuspendLayout();
             this.gbxRemoverCompetencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
@@ -59,6 +60,7 @@
             // 
             // gbxDatosCompetencia
             // 
+            this.gbxDatosCompetencia.Controls.Add(this.btnListado);
             this.gbxDatosCompetencia.Controls.Add(this.gbxRemoverCompetencia);
             this.gbxDatosCompetencia.Controls.Add(this.btnBuscar);
             this.gbxDatosCompetencia.Controls.Add(this.lblFechaFin);
@@ -123,9 +125,9 @@
             // 
             this.btnBuscar.Location = new System.Drawing.Point(641, 29);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.Size = new System.Drawing.Size(192, 23);
             this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.Text = "Ingresar Desarrollo";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
             // lblFechaFin
@@ -287,6 +289,16 @@
             this.lblResultado.TabIndex = 0;
             this.lblResultado.Text = "Resultado";
             // 
+            // btnListado
+            // 
+            this.btnListado.Location = new System.Drawing.Point(56, 34);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(123, 43);
+            this.btnListado.TabIndex = 10;
+            this.btnListado.Text = "Listado de Empleados";
+            this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
+            // 
             // frmCompetencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +348,6 @@
         private System.Windows.Forms.GroupBox gbxRemoverCompetencia;
         private System.Windows.Forms.Label lblIDCompetencia;
         private System.Windows.Forms.TextBox txtIDCompetencia;
+        private System.Windows.Forms.Button btnListado;
     }
 }

@@ -107,5 +107,11 @@ namespace Capa_Vista.Vista_Desarrollo
         {
             txtResultado.MaxLength = 2;
         }
+
+        private void btnListado_Click(object sender, EventArgs e)
+        {
+            Vista_Reclutamiento.frmMostrarEmpleado MostrarEmp = new Vista_Reclutamiento.frmMostrarEmpleado();
+            MostrarEmp.ShowDialog();
+        }
     }
 }

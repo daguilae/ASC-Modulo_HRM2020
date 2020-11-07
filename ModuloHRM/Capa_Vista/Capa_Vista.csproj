@@ -95,6 +95,12 @@
     <Compile Include="Vista Desarrollo\frmCompetencias.Designer.cs">
       <DependentUpon>frmCompetencias.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Desarrollo\frmEstadísticas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Desarrollo\frmEstadísticas.Designer.cs">
+      <DependentUpon>frmEstadísticas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Desarrollo\frmCompetencias.resx">
       <DependentUpon>frmCompetencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Desarrollo\frmEstadísticas.resx">
+      <DependentUpon>frmEstadísticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.resx">
       <DependentUpon>frmMantenimientoDepa.cs</DependentUpon>
