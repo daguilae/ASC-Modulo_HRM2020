@@ -70,11 +70,7 @@ namespace Capa_Vista.Vista_Nomina
                 FI = dtpGestPlanIni.Value.Date.ToShortDateString();
                 FF = dtpGestPlanFin.Value.Date.ToShortDateString();
 
-                if(FI == FF)
-                {
-                    MessageBox.Show("La fecha de inicio y de finalización del periodo son las mismas.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
+                if(funcValidarFechas(FI,FF) == true)
                 {
                     ConsNom.funcCrearPeriodo(txtGestPlanNom.Text, FI, FF);
                     txtGestPlanNom.Text = "";
@@ -156,6 +152,25 @@ namespace Capa_Vista.Vista_Nomina
             DataTable Dias = ConsNom.funcVisDias(cmbHorasDias.Text);
             dgvDias.DataSource = Dias;
             dgvDias.Refresh();
+        }
+
+        private bool funcValidarFechas(string FI, string FF)
+        {
+            if (FI == FF)
+            {
+                MessageBox.Show("La fecha de inicio y de finalización del periodo son las mismas.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if(dtpGestPlanIni.Value.Date.CompareTo(dtpGestPlanFin.Value.Date) != -1)
+            {
+                MessageBox.Show("La fecha de finalizacion es menor a la fecha de inicio.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
         }
     }
 }
