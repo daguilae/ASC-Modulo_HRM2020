@@ -184,10 +184,10 @@
             // 
             // rtxtDetalleC
             // 
-            this.rtxtDetalleC.Location = new System.Drawing.Point(14, 289);
+            this.rtxtDetalleC.Location = new System.Drawing.Point(7, 289);
             this.rtxtDetalleC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleC.Name = "rtxtDetalleC";
-            this.rtxtDetalleC.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleC.Size = new System.Drawing.Size(468, 148);
             this.rtxtDetalleC.TabIndex = 5;
             this.rtxtDetalleC.Text = "";
             // 
