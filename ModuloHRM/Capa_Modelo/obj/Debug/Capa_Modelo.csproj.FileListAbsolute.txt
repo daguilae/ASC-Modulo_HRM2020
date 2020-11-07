@@ -4,12 +4,6 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.Cor
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssemblyReference.cache
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.pdb
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssemblyReference.cache
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CoreCompileInputs.cache
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.dll
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.pdb
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssemblyReference.cache
@@ -22,3 +16,9 @@ C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAsse
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CoreCompileInputs.cache
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.dll
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\bin\Debug\Capa_Modelo.pdb
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csprojAssemblyReference.cache
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.csproj.CoreCompileInputs.cache
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.dll
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Modelo\obj\Debug\Capa_Modelo.pdb

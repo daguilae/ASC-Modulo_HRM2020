@@ -46,6 +46,18 @@
             this.dgvPercep = new System.Windows.Forms.DataGridView();
             this.lblDeduc = new System.Windows.Forms.Label();
             this.dgvDeduc = new System.Windows.Forms.DataGridView();
+            this.tbpHorasDias = new System.Windows.Forms.TabPage();
+            this.btnHorasDiasActualizar = new System.Windows.Forms.Button();
+            this.cmbHorasDias = new System.Windows.Forms.ComboBox();
+            this.dgvTotalHorasDias = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblHorasDiasPeriodo = new System.Windows.Forms.Label();
+            this.lblDias = new System.Windows.Forms.Label();
+            this.dgvDias = new System.Windows.Forms.DataGridView();
+            this.lblHoras = new System.Windows.Forms.Label();
+            this.dgvHoras = new System.Windows.Forms.DataGridView();
             this.tbpNomina.SuspendLayout();
             this.Planilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaTotales)).BeginInit();
@@ -54,12 +66,17 @@
             this.tbpDedPer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).BeginInit();
+            this.tbpHorasDias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalHorasDias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoras)).BeginInit();
             this.SuspendLayout();
             // 
             // tbpNomina
             // 
             this.tbpNomina.Controls.Add(this.Planilla);
             this.tbpNomina.Controls.Add(this.tbpDedPer);
+            this.tbpNomina.Controls.Add(this.tbpHorasDias);
             this.tbpNomina.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbpNomina.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpNomina.Location = new System.Drawing.Point(0, 0);
@@ -80,11 +97,11 @@
             this.Planilla.Controls.Add(this.dgvPlanillaPer);
             this.Planilla.Controls.Add(this.lblPlanillaDed);
             this.Planilla.Controls.Add(this.dgvPlanillaDed);
-            this.Planilla.Location = new System.Drawing.Point(4, 26);
+            this.Planilla.Location = new System.Drawing.Point(4, 29);
             this.Planilla.Margin = new System.Windows.Forms.Padding(4);
             this.Planilla.Name = "Planilla";
             this.Planilla.Padding = new System.Windows.Forms.Padding(4);
-            this.Planilla.Size = new System.Drawing.Size(1170, 654);
+            this.Planilla.Size = new System.Drawing.Size(1170, 651);
             this.Planilla.TabIndex = 2;
             this.Planilla.Text = "Planilla";
             // 
@@ -104,7 +121,7 @@
             this.cmbPeriPlanilla.FormattingEnabled = true;
             this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
             this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
-            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 25);
+            this.cmbPeriPlanilla.Size = new System.Drawing.Size(248, 28);
             this.cmbPeriPlanilla.TabIndex = 19;
             // 
             // dgvPlanillaTotales
@@ -118,7 +135,7 @@
             this.clmTotalPer,
             this.clmTotal});
             this.dgvPlanillaTotales.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPlanillaTotales.Location = new System.Drawing.Point(4, 500);
+            this.dgvPlanillaTotales.Location = new System.Drawing.Point(4, 497);
             this.dgvPlanillaTotales.Name = "dgvPlanillaTotales";
             this.dgvPlanillaTotales.ReadOnly = true;
             this.dgvPlanillaTotales.RowHeadersWidth = 51;
@@ -152,7 +169,7 @@
             this.lblPeriodoPLanilla.AutoSize = true;
             this.lblPeriodoPLanilla.Location = new System.Drawing.Point(369, 12);
             this.lblPeriodoPLanilla.Name = "lblPeriodoPLanilla";
-            this.lblPeriodoPLanilla.Size = new System.Drawing.Size(134, 17);
+            this.lblPeriodoPLanilla.Size = new System.Drawing.Size(162, 20);
             this.lblPeriodoPLanilla.TabIndex = 16;
             this.lblPeriodoPLanilla.Text = "Periodo de Planilla:";
             // 
@@ -162,7 +179,7 @@
             this.lblPlanillaPer.Location = new System.Drawing.Point(833, 37);
             this.lblPlanillaPer.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPlanillaPer.Name = "lblPlanillaPer";
-            this.lblPlanillaPer.Size = new System.Drawing.Size(95, 17);
+            this.lblPlanillaPer.Size = new System.Drawing.Size(117, 20);
             this.lblPlanillaPer.TabIndex = 15;
             this.lblPlanillaPer.Text = "Percepciones";
             // 
@@ -187,7 +204,7 @@
             this.lblPlanillaDed.Location = new System.Drawing.Point(221, 22);
             this.lblPlanillaDed.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPlanillaDed.Name = "lblPlanillaDed";
-            this.lblPlanillaDed.Size = new System.Drawing.Size(91, 17);
+            this.lblPlanillaDed.Size = new System.Drawing.Size(112, 20);
             this.lblPlanillaDed.TabIndex = 14;
             this.lblPlanillaDed.Text = "Deducciones";
             // 
@@ -213,11 +230,11 @@
             this.tbpDedPer.Controls.Add(this.dgvPercep);
             this.tbpDedPer.Controls.Add(this.lblDeduc);
             this.tbpDedPer.Controls.Add(this.dgvDeduc);
-            this.tbpDedPer.Location = new System.Drawing.Point(4, 26);
+            this.tbpDedPer.Location = new System.Drawing.Point(4, 29);
             this.tbpDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDedPer.Name = "tbpDedPer";
             this.tbpDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpDedPer.Size = new System.Drawing.Size(1170, 654);
+            this.tbpDedPer.Size = new System.Drawing.Size(1170, 651);
             this.tbpDedPer.TabIndex = 4;
             this.tbpDedPer.Text = "Deducciones/Percepciones";
             // 
@@ -227,7 +244,7 @@
             this.lblPercep.Location = new System.Drawing.Point(855, 15);
             this.lblPercep.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPercep.Name = "lblPercep";
-            this.lblPercep.Size = new System.Drawing.Size(95, 17);
+            this.lblPercep.Size = new System.Drawing.Size(117, 20);
             this.lblPercep.TabIndex = 11;
             this.lblPercep.Text = "Percepciones";
             // 
@@ -252,7 +269,7 @@
             this.lblDeduc.Location = new System.Drawing.Point(150, 15);
             this.lblDeduc.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDeduc.Name = "lblDeduc";
-            this.lblDeduc.Size = new System.Drawing.Size(91, 17);
+            this.lblDeduc.Size = new System.Drawing.Size(112, 20);
             this.lblDeduc.TabIndex = 10;
             this.lblDeduc.Text = "Deducciones";
             // 
@@ -271,12 +288,150 @@
             this.dgvDeduc.Size = new System.Drawing.Size(549, 615);
             this.dgvDeduc.TabIndex = 9;
             // 
+            // tbpHorasDias
+            // 
+            this.tbpHorasDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpHorasDias.Controls.Add(this.btnHorasDiasActualizar);
+            this.tbpHorasDias.Controls.Add(this.cmbHorasDias);
+            this.tbpHorasDias.Controls.Add(this.dgvTotalHorasDias);
+            this.tbpHorasDias.Controls.Add(this.lblHorasDiasPeriodo);
+            this.tbpHorasDias.Controls.Add(this.lblDias);
+            this.tbpHorasDias.Controls.Add(this.dgvDias);
+            this.tbpHorasDias.Controls.Add(this.lblHoras);
+            this.tbpHorasDias.Controls.Add(this.dgvHoras);
+            this.tbpHorasDias.Location = new System.Drawing.Point(4, 29);
+            this.tbpHorasDias.Margin = new System.Windows.Forms.Padding(4);
+            this.tbpHorasDias.Name = "tbpHorasDias";
+            this.tbpHorasDias.Padding = new System.Windows.Forms.Padding(4);
+            this.tbpHorasDias.Size = new System.Drawing.Size(1170, 651);
+            this.tbpHorasDias.TabIndex = 5;
+            this.tbpHorasDias.Text = "Horas/Dias";
+            // 
+            // btnHorasDiasActualizar
+            // 
+            this.btnHorasDiasActualizar.Location = new System.Drawing.Point(1060, 11);
+            this.btnHorasDiasActualizar.Name = "btnHorasDiasActualizar";
+            this.btnHorasDiasActualizar.Size = new System.Drawing.Size(102, 26);
+            this.btnHorasDiasActualizar.TabIndex = 20;
+            this.btnHorasDiasActualizar.Text = "Actualizar";
+            this.btnHorasDiasActualizar.UseVisualStyleBackColor = true;
+            this.btnHorasDiasActualizar.Click += new System.EventHandler(this.btnHorasDiasActualizar_Click);
+            // 
+            // cmbHorasDias
+            // 
+            this.cmbHorasDias.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbHorasDias.FormattingEnabled = true;
+            this.cmbHorasDias.Location = new System.Drawing.Point(550, 9);
+            this.cmbHorasDias.Name = "cmbHorasDias";
+            this.cmbHorasDias.Size = new System.Drawing.Size(248, 28);
+            this.cmbHorasDias.TabIndex = 19;
+            // 
+            // dgvTotalHorasDias
+            // 
+            this.dgvTotalHorasDias.AllowUserToAddRows = false;
+            this.dgvTotalHorasDias.AllowUserToDeleteRows = false;
+            this.dgvTotalHorasDias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTotalHorasDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTotalHorasDias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.dgvTotalHorasDias.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvTotalHorasDias.Location = new System.Drawing.Point(4, 497);
+            this.dgvTotalHorasDias.Name = "dgvTotalHorasDias";
+            this.dgvTotalHorasDias.ReadOnly = true;
+            this.dgvTotalHorasDias.RowHeadersWidth = 51;
+            this.dgvTotalHorasDias.RowTemplate.Height = 24;
+            this.dgvTotalHorasDias.Size = new System.Drawing.Size(1162, 150);
+            this.dgvTotalHorasDias.TabIndex = 18;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Total Deducciones";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "TotalPercepciones";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // lblHorasDiasPeriodo
+            // 
+            this.lblHorasDiasPeriodo.AutoSize = true;
+            this.lblHorasDiasPeriodo.Location = new System.Drawing.Point(369, 12);
+            this.lblHorasDiasPeriodo.Name = "lblHorasDiasPeriodo";
+            this.lblHorasDiasPeriodo.Size = new System.Drawing.Size(162, 20);
+            this.lblHorasDiasPeriodo.TabIndex = 16;
+            this.lblHorasDiasPeriodo.Text = "Periodo de Planilla:";
+            // 
+            // lblDias
+            // 
+            this.lblDias.AutoSize = true;
+            this.lblDias.Location = new System.Drawing.Point(838, 22);
+            this.lblDias.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDias.Name = "lblDias";
+            this.lblDias.Size = new System.Drawing.Size(110, 20);
+            this.lblDias.TabIndex = 15;
+            this.lblDias.Text = "Total de Dias";
+            // 
+            // dgvDias
+            // 
+            this.dgvDias.AllowUserToAddRows = false;
+            this.dgvDias.AllowUserToDeleteRows = false;
+            this.dgvDias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDias.Location = new System.Drawing.Point(588, 62);
+            this.dgvDias.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvDias.Name = "dgvDias";
+            this.dgvDias.ReadOnly = true;
+            this.dgvDias.RowHeadersWidth = 51;
+            this.dgvDias.RowTemplate.Height = 24;
+            this.dgvDias.Size = new System.Drawing.Size(577, 427);
+            this.dgvDias.TabIndex = 12;
+            // 
+            // lblHoras
+            // 
+            this.lblHoras.AutoSize = true;
+            this.lblHoras.Location = new System.Drawing.Point(221, 22);
+            this.lblHoras.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblHoras.Name = "lblHoras";
+            this.lblHoras.Size = new System.Drawing.Size(122, 20);
+            this.lblHoras.TabIndex = 14;
+            this.lblHoras.Text = "Total de Horas";
+            // 
+            // dgvHoras
+            // 
+            this.dgvHoras.AllowUserToAddRows = false;
+            this.dgvHoras.AllowUserToDeleteRows = false;
+            this.dgvHoras.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHoras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHoras.Location = new System.Drawing.Point(5, 62);
+            this.dgvHoras.Margin = new System.Windows.Forms.Padding(5);
+            this.dgvHoras.Name = "dgvHoras";
+            this.dgvHoras.ReadOnly = true;
+            this.dgvHoras.RowHeadersWidth = 51;
+            this.dgvHoras.RowTemplate.Height = 24;
+            this.dgvHoras.Size = new System.Drawing.Size(577, 427);
+            this.dgvHoras.TabIndex = 13;
+            // 
             // frmNomina
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1178, 684);
+            this.ControlBox = false;
             this.Controls.Add(this.tbpNomina);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -294,6 +449,11 @@
             this.tbpDedPer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).EndInit();
+            this.tbpHorasDias.ResumeLayout(false);
+            this.tbpHorasDias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalHorasDias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHoras)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,5 +478,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
         private System.Windows.Forms.ComboBox cmbPeriPlanilla;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TabPage tbpHorasDias;
+        private System.Windows.Forms.Button btnHorasDiasActualizar;
+        private System.Windows.Forms.ComboBox cmbHorasDias;
+        private System.Windows.Forms.DataGridView dgvTotalHorasDias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Label lblHorasDiasPeriodo;
+        private System.Windows.Forms.Label lblDias;
+        private System.Windows.Forms.DataGridView dgvDias;
+        private System.Windows.Forms.Label lblHoras;
+        private System.Windows.Forms.DataGridView dgvHoras;
     }
 }
