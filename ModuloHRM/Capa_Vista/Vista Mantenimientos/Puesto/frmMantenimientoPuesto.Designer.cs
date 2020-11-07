@@ -48,7 +48,7 @@
             // 
             // dgvPuestos
             // 
-            this.dgvPuestos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgvPuestos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPuestos.Location = new System.Drawing.Point(351, 114);
             this.dgvPuestos.Name = "dgvPuestos";
@@ -224,10 +224,11 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.NavegadorPuesto);
             this.Controls.Add(this.dgvPuestos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoPuesto";
-            this.Text = "Mantenimiento Puestos";
+            this.Text = "309 - Mantenimiento Puestos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

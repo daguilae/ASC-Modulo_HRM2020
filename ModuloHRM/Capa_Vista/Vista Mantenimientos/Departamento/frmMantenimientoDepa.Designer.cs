@@ -64,6 +64,7 @@
             // 
             // dgvDepartamentos
             // 
+            this.dgvDepartamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDepartamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDepartamentos.Location = new System.Drawing.Point(457, 145);
             this.dgvDepartamentos.Name = "dgvDepartamentos";
@@ -164,10 +165,11 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvDepartamentos);
             this.Controls.Add(this.lblIDepa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoDepa";
-            this.Text = "Mantenimiento Departamentos";
+            this.Text = "307 - Mantenimiento Departamentos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
