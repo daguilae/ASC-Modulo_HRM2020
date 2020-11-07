@@ -439,6 +439,7 @@
             // 
             // dtpGestPlanFin
             // 
+            this.dtpGestPlanFin.Enabled = false;
             this.dtpGestPlanFin.Location = new System.Drawing.Point(311, 147);
             this.dtpGestPlanFin.Name = "dtpGestPlanFin";
             this.dtpGestPlanFin.Size = new System.Drawing.Size(330, 27);
