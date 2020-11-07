@@ -680,6 +680,7 @@
             // 
             // dvgEmpleadosMostrar
             // 
+            this.dvgEmpleadosMostrar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dvgEmpleadosMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEmpleadosMostrar.Location = new System.Drawing.Point(509, 38);
             this.dvgEmpleadosMostrar.Name = "dvgEmpleadosMostrar";
