@@ -524,7 +524,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                 }
                 else
                 {
-                    MessageBox.Show("ERROR: El codigo de empleado no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ERROR: El codigo de capacitación no es valido o no se encuentra registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 return datos;
             }
@@ -555,7 +555,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                 string modificarCur = "UPDATE `encabezado_capacitacion` SET `fecha_inicio_encabezado_capacitacion` = '" + fechaInicio + "', `fecha_fin_encabezado_capacitacion` = '" + fechaFin + "', `fk_id_curso_encabezado_capacitacion` = '" + codigoCurso + "', `horas_encabezado_capacitacion` = '" + horas + "' WHERE `encabezado_capacitacion`.`pk_id_encabezado_capacitacion` = '" + idEncCapa + "' ;";
                 OdbcCommand Query_Actualizar1 = new OdbcCommand(modificarCur, conexion.funcconexion());
                 Query_Actualizar1.ExecuteNonQuery();
-                MessageBox.Show("Modificación Exitosa", "CURSOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Modificación Exitosa", "CAPACITACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
@@ -582,7 +582,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                 string eliminarEncCapa = "DELETE FROM `encabezado_capacitacion` WHERE `encabezado_capacitacion`.`pk_id_encabezado_capacitacion` = '" + idEncCapa + "';";
                 OdbcCommand Query_Actualizar1 = new OdbcCommand(eliminarEncCapa, conexion.funcconexion());
                 Query_Actualizar1.ExecuteNonQuery();
-                MessageBox.Show("Eliminación Exitosa", "CURSOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Eliminación Exitosa", "CAPACITACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception ex)
