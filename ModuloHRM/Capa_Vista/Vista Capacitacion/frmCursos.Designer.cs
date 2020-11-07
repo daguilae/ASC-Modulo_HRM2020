@@ -452,7 +452,7 @@
             // 
             // btnBuscarCap
             // 
-            this.btnBuscarCap.Location = new System.Drawing.Point(373, 13);
+            this.btnBuscarCap.Location = new System.Drawing.Point(373, 10);
             this.btnBuscarCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscarCap.Name = "btnBuscarCap";
             this.btnBuscarCap.Size = new System.Drawing.Size(83, 23);
