@@ -144,6 +144,18 @@ namespace Capa_Controlador.Controlador_Nomina
             return Datos;
         }
 
+        public DataTable funcVisHoras(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisHoras(Fecha);
+            return Datos;
+        }
+
+        public DataTable funcVisDias(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisDias(Fecha);
+            return Datos;
+        }
+
         //Metodos para formulario frmControlHorasDias
 
         public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
