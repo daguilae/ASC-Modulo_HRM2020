@@ -104,6 +104,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(570, 343);
             this.Controls.Add(this.gbxCursos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIngresoCurso";
