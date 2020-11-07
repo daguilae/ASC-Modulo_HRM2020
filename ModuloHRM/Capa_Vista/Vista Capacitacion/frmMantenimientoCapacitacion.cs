@@ -77,5 +77,31 @@ namespace Capa_Vista.Vista_Capacitacion
             con.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] datos = new string[6];
+            string[] datosc = new string[3];
+            datos = con.funcConsultarCapa(txtCodigoCapE.Text);
+
+            txtEmpEC.Text = datos[0];
+
+            if (txtEmpEC.Text != "")
+            {
+                datosc = con.funcConsultaEmp(txtEmpEC.Text);
+                DataTable dato = con.funcLlenarCurso();
+                cmbCursoE.DataSource = dato;
+                cmbCursoE.DisplayMember = "nombre_curso";
+                cmbCursoE.ResetText();
+                dtpFechIE.Value = Convert.ToDateTime(datos[2]);
+                dtpFechFE.Value = Convert.ToDateTime(datos[3]);
+            }
+            txtNombEmpE.Text = datosc[0];
+            txtEstadoEE.Text = datosc[1];
+            txtDepEE.Text = datosc[2];
+            txtCodigoEncCapE.Text = datos[1];
+            nudHorasE.Value = Convert.ToInt32(datos[4]);
+            cmbCursoE.Text = datos[5];
+        }
     }
 }
