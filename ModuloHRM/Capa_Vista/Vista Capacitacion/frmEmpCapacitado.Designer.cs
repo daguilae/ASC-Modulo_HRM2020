@@ -190,6 +190,7 @@
             // 
             // cmbCurso
             // 
+            this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurso.FormattingEnabled = true;
             this.cmbCurso.Location = new System.Drawing.Point(133, 78);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -539,6 +540,7 @@
             // 
             // cmbCodigoCap
             // 
+            this.cmbCodigoCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCodigoCap.FormattingEnabled = true;
             this.cmbCodigoCap.Location = new System.Drawing.Point(178, 32);
             this.cmbCodigoCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

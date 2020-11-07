@@ -698,6 +698,7 @@
             // 
             // cmbEncabezado
             // 
+            this.cmbEncabezado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEncabezado.FormattingEnabled = true;
             this.cmbEncabezado.Location = new System.Drawing.Point(565, 10);
             this.cmbEncabezado.Name = "cmbEncabezado";
