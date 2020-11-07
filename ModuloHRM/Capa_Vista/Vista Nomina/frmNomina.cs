@@ -59,6 +59,11 @@ namespace Capa_Vista.Vista_Nomina
             cmbPeriPlanilla.DataSource = Datos;
             cmbPeriPlanilla.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbPeriPlanilla.ResetText();
+
+            cmbHorasDias.DataSource = Datos;
+            cmbHorasDias.DisplayMember = "fecha_inicio_encabezado_nomina";
+            cmbHorasDias.ResetText();
+
         }
 
         private void funcLimpiarPlanilla()
@@ -69,6 +74,16 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaPer.Refresh();
             dgvPlanillaTotales.Rows.Clear();
             dgvPlanillaTotales.Refresh();
+        }
+
+        private void funcHoras()
+        {
+
+        }
+
+        private void funcDias()
+        {
+
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -87,6 +102,11 @@ namespace Capa_Vista.Vista_Nomina
                 dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
 
             }
+        }
+
+        private void btnHorasDiasActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
