@@ -176,6 +176,8 @@ namespace Capa_Vista.Vista_Capacitacion
             string compare=txtBuscador.Text;
             DataTable dato = con.funcLlenarBusqueda(nomCampo, compare);
             dvgEmpleadosMostrar.DataSource = dato;
+            cmbEncabezado.Text = "";
+            txtBuscador.Text="";
         }
     }
 }
