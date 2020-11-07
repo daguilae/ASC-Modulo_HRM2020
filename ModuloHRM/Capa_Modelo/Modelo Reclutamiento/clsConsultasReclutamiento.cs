@@ -825,7 +825,6 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
                 string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.NOMBRE1_EMPLEADO LIKE ('" + Parametro +"%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
-
                 return dataTable;
             }
             catch (Exception ex)
