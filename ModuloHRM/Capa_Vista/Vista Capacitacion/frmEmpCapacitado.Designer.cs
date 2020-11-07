@@ -280,9 +280,9 @@
             // txtBusqCodEmp
             // 
             this.txtBusqCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqCodEmp.Location = new System.Drawing.Point(606, 6);
+            this.txtBusqCodEmp.Location = new System.Drawing.Point(569, 6);
             this.txtBusqCodEmp.Name = "txtBusqCodEmp";
-            this.txtBusqCodEmp.Size = new System.Drawing.Size(100, 23);
+            this.txtBusqCodEmp.Size = new System.Drawing.Size(137, 23);
             this.txtBusqCodEmp.TabIndex = 17;
             this.txtBusqCodEmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
@@ -290,7 +290,7 @@
             // 
             this.lblCodEmp.AutoSize = true;
             this.lblCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodEmp.Location = new System.Drawing.Point(487, 9);
+            this.lblCodEmp.Location = new System.Drawing.Point(451, 9);
             this.lblCodEmp.Name = "lblCodEmp";
             this.lblCodEmp.Size = new System.Drawing.Size(113, 16);
             this.lblCodEmp.TabIndex = 16;

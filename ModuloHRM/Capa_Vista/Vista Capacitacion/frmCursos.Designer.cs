@@ -98,11 +98,11 @@
             this.tbcCursos.Controls.Add(this.tbpIngresar);
             this.tbcCursos.Controls.Add(this.tbpEditar);
             this.tbcCursos.Controls.Add(this.tbpEliminar);
-            this.tbcCursos.Location = new System.Drawing.Point(14, 15);
+            this.tbcCursos.Location = new System.Drawing.Point(14, 13);
             this.tbcCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcCursos.Name = "tbcCursos";
             this.tbcCursos.SelectedIndex = 0;
-            this.tbcCursos.Size = new System.Drawing.Size(489, 510);
+            this.tbcCursos.Size = new System.Drawing.Size(489, 512);
             this.tbcCursos.TabIndex = 0;
             // 
             // tbpIngresar
@@ -123,7 +123,7 @@
             this.tbpIngresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpIngresar.Name = "tbpIngresar";
             this.tbpIngresar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpIngresar.Size = new System.Drawing.Size(481, 481);
+            this.tbpIngresar.Size = new System.Drawing.Size(481, 483);
             this.tbpIngresar.TabIndex = 0;
             this.tbpIngresar.Text = "Ingresar Curso";
             // 
