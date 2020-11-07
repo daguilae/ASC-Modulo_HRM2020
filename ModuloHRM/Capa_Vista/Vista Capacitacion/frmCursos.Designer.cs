@@ -84,6 +84,12 @@
             this.btnEliminarC = new System.Windows.Forms.Button();
             this.lblDetalleCE = new System.Windows.Forms.Label();
             this.rtxtDetalleCE = new System.Windows.Forms.RichTextBox();
+            this.dvgEmpleadosMostrar = new System.Windows.Forms.DataGridView();
+            this.lblAser = new System.Windows.Forms.Label();
+            this.cmbEncabezado = new System.Windows.Forms.ComboBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
+            this.btnBuscarEmp = new System.Windows.Forms.Button();
+            this.lblEsft = new System.Windows.Forms.Label();
             this.tbcCursos.SuspendLayout();
             this.tbpIngresar.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -91,6 +97,7 @@
             this.groupBox2.SuspendLayout();
             this.tbpEliminar.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosMostrar)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcCursos
@@ -98,11 +105,11 @@
             this.tbcCursos.Controls.Add(this.tbpIngresar);
             this.tbcCursos.Controls.Add(this.tbpEditar);
             this.tbcCursos.Controls.Add(this.tbpEliminar);
-            this.tbcCursos.Location = new System.Drawing.Point(14, 15);
+            this.tbcCursos.Location = new System.Drawing.Point(14, 13);
             this.tbcCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcCursos.Name = "tbcCursos";
             this.tbcCursos.SelectedIndex = 0;
-            this.tbcCursos.Size = new System.Drawing.Size(489, 510);
+            this.tbcCursos.Size = new System.Drawing.Size(489, 512);
             this.tbcCursos.TabIndex = 0;
             // 
             // tbpIngresar
@@ -123,7 +130,7 @@
             this.tbpIngresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpIngresar.Name = "tbpIngresar";
             this.tbpIngresar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpIngresar.Size = new System.Drawing.Size(481, 481);
+            this.tbpIngresar.Size = new System.Drawing.Size(481, 483);
             this.tbpIngresar.TabIndex = 0;
             this.tbpIngresar.Text = "Ingresar Curso";
             // 
@@ -671,12 +678,69 @@
             this.rtxtDetalleCE.TabIndex = 24;
             this.rtxtDetalleCE.Text = "";
             // 
+            // dvgEmpleadosMostrar
+            // 
+            this.dvgEmpleadosMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgEmpleadosMostrar.Location = new System.Drawing.Point(509, 38);
+            this.dvgEmpleadosMostrar.Name = "dvgEmpleadosMostrar";
+            this.dvgEmpleadosMostrar.Size = new System.Drawing.Size(661, 489);
+            this.dvgEmpleadosMostrar.TabIndex = 1;
+            // 
+            // lblAser
+            // 
+            this.lblAser.AutoSize = true;
+            this.lblAser.Location = new System.Drawing.Point(509, 13);
+            this.lblAser.Name = "lblAser";
+            this.lblAser.Size = new System.Drawing.Size(51, 16);
+            this.lblAser.TabIndex = 2;
+            this.lblAser.Text = "Campo";
+            // 
+            // cmbEncabezado
+            // 
+            this.cmbEncabezado.FormattingEnabled = true;
+            this.cmbEncabezado.Location = new System.Drawing.Point(565, 10);
+            this.cmbEncabezado.Name = "cmbEncabezado";
+            this.cmbEncabezado.Size = new System.Drawing.Size(216, 24);
+            this.cmbEncabezado.TabIndex = 3;
+            // 
+            // txtBuscador
+            // 
+            this.txtBuscador.Location = new System.Drawing.Point(844, 10);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(246, 23);
+            this.txtBuscador.TabIndex = 4;
+            // 
+            // btnBuscarEmp
+            // 
+            this.btnBuscarEmp.Location = new System.Drawing.Point(1096, 10);
+            this.btnBuscarEmp.Name = "btnBuscarEmp";
+            this.btnBuscarEmp.Size = new System.Drawing.Size(74, 23);
+            this.btnBuscarEmp.TabIndex = 5;
+            this.btnBuscarEmp.Text = "Buscar";
+            this.btnBuscarEmp.UseVisualStyleBackColor = true;
+            this.btnBuscarEmp.Click += new System.EventHandler(this.btnBuscarEmp_Click);
+            // 
+            // lblEsft
+            // 
+            this.lblEsft.AutoSize = true;
+            this.lblEsft.Location = new System.Drawing.Point(787, 13);
+            this.lblEsft.Name = "lblEsft";
+            this.lblEsft.Size = new System.Drawing.Size(49, 16);
+            this.lblEsft.TabIndex = 6;
+            this.lblEsft.Text = "Igual A";
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(517, 539);
+            this.ClientSize = new System.Drawing.Size(1182, 539);
+            this.Controls.Add(this.lblEsft);
+            this.Controls.Add(this.btnBuscarEmp);
+            this.Controls.Add(this.txtBuscador);
+            this.Controls.Add(this.cmbEncabezado);
+            this.Controls.Add(this.lblAser);
+            this.Controls.Add(this.dvgEmpleadosMostrar);
             this.Controls.Add(this.tbcCursos);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -697,7 +761,9 @@
             this.tbpEliminar.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosMostrar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -759,5 +825,11 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombCaEli;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridView dvgEmpleadosMostrar;
+        private System.Windows.Forms.Label lblAser;
+        private System.Windows.Forms.ComboBox cmbEncabezado;
+        private System.Windows.Forms.TextBox txtBuscador;
+        private System.Windows.Forms.Button btnBuscarEmp;
+        private System.Windows.Forms.Label lblEsft;
     }
 }

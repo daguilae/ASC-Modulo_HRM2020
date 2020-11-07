@@ -118,9 +118,9 @@
             // 
             // txtCodiCapa
             // 
-            this.txtCodiCapa.Location = new System.Drawing.Point(228, 6);
+            this.txtCodiCapa.Location = new System.Drawing.Point(172, 6);
             this.txtCodiCapa.Name = "txtCodiCapa";
-            this.txtCodiCapa.Size = new System.Drawing.Size(213, 23);
+            this.txtCodiCapa.Size = new System.Drawing.Size(269, 23);
             this.txtCodiCapa.TabIndex = 13;
             this.txtCodiCapa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
@@ -280,9 +280,9 @@
             // txtBusqCodEmp
             // 
             this.txtBusqCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqCodEmp.Location = new System.Drawing.Point(606, 6);
+            this.txtBusqCodEmp.Location = new System.Drawing.Point(569, 6);
             this.txtBusqCodEmp.Name = "txtBusqCodEmp";
-            this.txtBusqCodEmp.Size = new System.Drawing.Size(100, 23);
+            this.txtBusqCodEmp.Size = new System.Drawing.Size(137, 23);
             this.txtBusqCodEmp.TabIndex = 17;
             this.txtBusqCodEmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
@@ -290,7 +290,7 @@
             // 
             this.lblCodEmp.AutoSize = true;
             this.lblCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodEmp.Location = new System.Drawing.Point(487, 9);
+            this.lblCodEmp.Location = new System.Drawing.Point(451, 9);
             this.lblCodEmp.Name = "lblCodEmp";
             this.lblCodEmp.Size = new System.Drawing.Size(113, 16);
             this.lblCodEmp.TabIndex = 16;
@@ -503,7 +503,7 @@
             this.btnBuscarCap.TabIndex = 24;
             this.btnBuscarCap.Text = "Buscar";
             this.btnBuscarCap.UseVisualStyleBackColor = true;
-            this.btnBuscarCap.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscarCap.Click += new System.EventHandler(this.btnBuscarCap_Click);
             // 
             // cmbCodigoCap
             // 
