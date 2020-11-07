@@ -306,3 +306,5 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capaci
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmIngresoCurso.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas.resources
+C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Faltas.frmFaltas.resources
+C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia.resources

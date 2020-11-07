@@ -36,7 +36,7 @@
             this.txtNombreDepa = new System.Windows.Forms.TextBox();
             this.rbtnInactivo = new System.Windows.Forms.RadioButton();
             this.rbtnActivo = new System.Windows.Forms.RadioButton();
-            this.lblEstadoPuesto = new System.Windows.Forms.Label();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDepartamentos)).BeginInit();
             this.SuspendLayout();
@@ -126,16 +126,16 @@
             this.rbtnActivo.UseVisualStyleBackColor = true;
             this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rbtnActivo_CheckedChanged);
             // 
-            // lblEstadoPuesto
+            // lblEstado
             // 
-            this.lblEstadoPuesto.AutoSize = true;
-            this.lblEstadoPuesto.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoPuesto.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEstadoPuesto.Location = new System.Drawing.Point(133, 284);
-            this.lblEstadoPuesto.Name = "lblEstadoPuesto";
-            this.lblEstadoPuesto.Size = new System.Drawing.Size(120, 15);
-            this.lblEstadoPuesto.TabIndex = 29;
-            this.lblEstadoPuesto.Text = "Estado del Puesto";
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblEstado.Location = new System.Drawing.Point(133, 284);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(169, 15);
+            this.lblEstado.TabIndex = 29;
+            this.lblEstado.Text = "Estado del Departamento";
             // 
             // txtEstado
             // 
@@ -146,6 +146,7 @@
             this.txtEstado.Tag = "estado_departamento_empresarial";
             this.txtEstado.Visible = false;
             this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            this.txtEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // frmMantenimientoDepa
             // 
@@ -156,7 +157,7 @@
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.rbtnInactivo);
             this.Controls.Add(this.rbtnActivo);
-            this.Controls.Add(this.lblEstadoPuesto);
+            this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.txtNombreDepa);
             this.Controls.Add(this.txtIDepartamento);
             this.Controls.Add(this.NavegadorDepartamentos);
@@ -183,7 +184,7 @@
         private System.Windows.Forms.TextBox txtNombreDepa;
         private System.Windows.Forms.RadioButton rbtnInactivo;
         private System.Windows.Forms.RadioButton rbtnActivo;
-        private System.Windows.Forms.Label lblEstadoPuesto;
+        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtEstado;
     }
 }

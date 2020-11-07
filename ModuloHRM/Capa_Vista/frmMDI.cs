@@ -76,13 +76,34 @@ namespace Capa_Vista
         private void tsmiTiposDeCompetenciasMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE TIPOS DE COMPETENCIAS \\
-            
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+            if (seguridad.PermisosAcceso("3", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+
         }
 
         private void tsmiIngresarFaltaMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE FALTA \\
-            
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+            if (seguridad.PermisosAcceso("4", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Faltas.frmFaltas(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
