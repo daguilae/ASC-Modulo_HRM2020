@@ -55,6 +55,12 @@ namespace Capa_Controlador.Controlador_Nomina
             Consulta.funcEliminarPercepcion(Nom);
         }
 
+        public string funcObtenerPeriodoFinal(string FI)
+        {
+            string FF = Consulta.funcObtenerPeriodoFinal(FI);
+            return FF;
+        }
+
         //Metodos para formulario frmEmpleadoNomina
 
         public OdbcDataReader funcBuscarNomEmpleado(int Id)

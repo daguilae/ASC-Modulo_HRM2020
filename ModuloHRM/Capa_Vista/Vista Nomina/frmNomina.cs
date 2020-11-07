@@ -68,7 +68,6 @@ namespace Capa_Vista.Vista_Nomina
             {
                 string FI, FF;
                 FI = dtpGestPlanIni.Value.Date.ToShortDateString();
-                dtpGestPlanFin.Value.Date.AddMonths(1);
                 FF = dtpGestPlanFin.Value.Date.ToShortDateString();
 
                 if(funcValidarFechas(FI,FF) == true)
@@ -172,6 +171,11 @@ namespace Capa_Vista.Vista_Nomina
                 return true;
             }
 
+        }
+
+        private void dtpGestPlanIni_ValueChanged(object sender, EventArgs e)
+        {
+            dtpGestPlanFin.Value = dtpGestPlanIni.Value.Date.AddMonths(1);
         }
     }
 }

@@ -79,6 +79,7 @@
             this.lblModificarPuesto = new System.Windows.Forms.Label();
             this.lblModificarNomEmp = new System.Windows.Forms.Label();
             this.lblModificarIdEmp = new System.Windows.Forms.Label();
+            this.txtModificarPeriodoFin = new System.Windows.Forms.TextBox();
             this.tbcControlHorasDias.SuspendLayout();
             this.tbpIngreso.SuspendLayout();
             this.gbxIngresoDias.SuspendLayout();
@@ -390,6 +391,7 @@
             // 
             // tbpModificar
             // 
+            this.tbpModificar.Controls.Add(this.txtModificarPeriodoFin);
             this.tbpModificar.Controls.Add(this.btnModificarLimpiar);
             this.tbpModificar.Controls.Add(this.btnModificarBuscarEmp);
             this.tbpModificar.Controls.Add(this.lblModificarPeriodo);
@@ -450,6 +452,7 @@
             this.cmbModificarPeriodo.Name = "cmbModificarPeriodo";
             this.cmbModificarPeriodo.Size = new System.Drawing.Size(312, 28);
             this.cmbModificarPeriodo.TabIndex = 8;
+            this.cmbModificarPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbModificarPeriodo_SelectedIndexChanged);
             // 
             // txtModificarPuesto
             // 
@@ -666,6 +669,14 @@
             this.lblModificarIdEmp.TabIndex = 0;
             this.lblModificarIdEmp.Text = "ID de Empleado:";
             // 
+            // txtModificarPeriodoFin
+            // 
+            this.txtModificarPeriodoFin.Enabled = false;
+            this.txtModificarPeriodoFin.Location = new System.Drawing.Point(563, 125);
+            this.txtModificarPeriodoFin.Name = "txtModificarPeriodoFin";
+            this.txtModificarPeriodoFin.Size = new System.Drawing.Size(154, 27);
+            this.txtModificarPeriodoFin.TabIndex = 12;
+            // 
             // frmControlHorasDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
@@ -757,5 +768,6 @@
         private System.Windows.Forms.Label lblModificarIdEmp;
         private System.Windows.Forms.Button btnIngrespLimpiar;
         private System.Windows.Forms.Button btnModificarLimpiar;
+        private System.Windows.Forms.TextBox txtModificarPeriodoFin;
     }
 }

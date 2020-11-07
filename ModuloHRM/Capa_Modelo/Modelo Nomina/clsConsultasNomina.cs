@@ -178,6 +178,28 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        public string funcObtenerPeriodoFinal (string FI)
+        {
+            string PeriodoFinal;
+            try
+            {
+                string sentencia = "SELECT fecha_fin_encabezado_nomina FROM encabezado_nomina " +
+                    "WHERE fecha_inicio_encabezado_nomina = '" + FI + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                PeriodoFinal = Convert.ToString(Query_Validacion1.ExecuteScalar());
+                return PeriodoFinal;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         // Metodos para formulario frmEmpleadoNomina
 
         public OdbcDataReader funcBuscarNomEmpleado(int Id)

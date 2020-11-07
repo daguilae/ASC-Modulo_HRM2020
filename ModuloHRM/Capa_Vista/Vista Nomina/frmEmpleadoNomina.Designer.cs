@@ -76,6 +76,9 @@
             this.lblEliminarDedPer = new System.Windows.Forms.Label();
             this.lblEliminarNomEmp = new System.Windows.Forms.Label();
             this.lblEliminarIdEmp = new System.Windows.Forms.Label();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
+            this.txtBuscarFechaFin = new System.Windows.Forms.TextBox();
+            this.txtEliminarFechFin = new System.Windows.Forms.TextBox();
             this.tbcEmpleadoNomina.SuspendLayout();
             this.tbpIngresarEmpleDedPer.SuspendLayout();
             this.gbxIngresoTipoCob.SuspendLayout();
@@ -101,6 +104,7 @@
             // tbpIngresarEmpleDedPer
             // 
             this.tbpIngresarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpIngresarEmpleDedPer.Controls.Add(this.txtIngresoFechFin);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresarBuscar);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.lblTipoCobro);
             this.tbpIngresarEmpleDedPer.Controls.Add(this.btnIngresoEmpleadoDedPer);
@@ -122,7 +126,7 @@
             // 
             // btnIngresarBuscar
             // 
-            this.btnIngresarBuscar.Location = new System.Drawing.Point(561, 199);
+            this.btnIngresarBuscar.Location = new System.Drawing.Point(559, 230);
             this.btnIngresarBuscar.Name = "btnIngresarBuscar";
             this.btnIngresarBuscar.Size = new System.Drawing.Size(158, 29);
             this.btnIngresarBuscar.TabIndex = 21;
@@ -141,7 +145,7 @@
             // 
             // btnIngresoEmpleadoDedPer
             // 
-            this.btnIngresoEmpleadoDedPer.Location = new System.Drawing.Point(725, 199);
+            this.btnIngresoEmpleadoDedPer.Location = new System.Drawing.Point(727, 230);
             this.btnIngresoEmpleadoDedPer.Name = "btnIngresoEmpleadoDedPer";
             this.btnIngresoEmpleadoDedPer.Size = new System.Drawing.Size(91, 29);
             this.btnIngresoEmpleadoDedPer.TabIndex = 17;
@@ -191,8 +195,9 @@
             this.cmbIngresoFecPLan.FormattingEnabled = true;
             this.cmbIngresoFecPLan.Location = new System.Drawing.Point(232, 165);
             this.cmbIngresoFecPLan.Name = "cmbIngresoFecPLan";
-            this.cmbIngresoFecPLan.Size = new System.Drawing.Size(280, 28);
+            this.cmbIngresoFecPLan.Size = new System.Drawing.Size(141, 28);
             this.cmbIngresoFecPLan.TabIndex = 15;
+            this.cmbIngresoFecPLan.SelectedIndexChanged += new System.EventHandler(this.cmbIngresoFecPLan_SelectedIndexChanged);
             // 
             // cmbIngresoDedPer
             // 
@@ -260,6 +265,7 @@
             // tbpBuscar
             // 
             this.tbpBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpBuscar.Controls.Add(this.txtBuscarFechaFin);
             this.tbpBuscar.Controls.Add(this.lblTotalPer);
             this.tbpBuscar.Controls.Add(this.lblTotalDed);
             this.tbpBuscar.Controls.Add(this.txtTotalDed);
@@ -336,8 +342,9 @@
             this.cmbBuscarPeriodoPlanilla.FormattingEnabled = true;
             this.cmbBuscarPeriodoPlanilla.Location = new System.Drawing.Point(217, 122);
             this.cmbBuscarPeriodoPlanilla.Name = "cmbBuscarPeriodoPlanilla";
-            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(296, 28);
+            this.cmbBuscarPeriodoPlanilla.Size = new System.Drawing.Size(157, 28);
             this.cmbBuscarPeriodoPlanilla.TabIndex = 13;
+            this.cmbBuscarPeriodoPlanilla.SelectedIndexChanged += new System.EventHandler(this.cmbBuscarPeriodoPlanilla_SelectedIndexChanged);
             // 
             // dgvPerEpm
             // 
@@ -442,6 +449,7 @@
             // tbpEliminarEmpleDedPer
             // 
             this.tbpEliminarEmpleDedPer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpEliminarEmpleDedPer.Controls.Add(this.txtEliminarFechFin);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.lblTipoCobroEliminar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarBuscar);
             this.tbpEliminarEmpleDedPer.Controls.Add(this.btnEliminarEmpleadoDedPer);
@@ -531,8 +539,9 @@
             this.cmbEliminarFechPlan.FormattingEnabled = true;
             this.cmbEliminarFechPlan.Location = new System.Drawing.Point(232, 165);
             this.cmbEliminarFechPlan.Name = "cmbEliminarFechPlan";
-            this.cmbEliminarFechPlan.Size = new System.Drawing.Size(280, 28);
+            this.cmbEliminarFechPlan.Size = new System.Drawing.Size(146, 28);
             this.cmbEliminarFechPlan.TabIndex = 15;
+            this.cmbEliminarFechPlan.SelectedIndexChanged += new System.EventHandler(this.cmbEliminarFechPlan_SelectedIndexChanged);
             // 
             // cmbEliminarDedPer
             // 
@@ -596,6 +605,29 @@
             this.lblEliminarIdEmp.Size = new System.Drawing.Size(115, 20);
             this.lblEliminarIdEmp.TabIndex = 8;
             this.lblEliminarIdEmp.Text = "ID Empleado:";
+            // 
+            // txtIngresoFechFin
+            // 
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(380, 166);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(133, 27);
+            this.txtIngresoFechFin.TabIndex = 22;
+            // 
+            // txtBuscarFechaFin
+            // 
+            this.txtBuscarFechaFin.Enabled = false;
+            this.txtBuscarFechaFin.Location = new System.Drawing.Point(380, 123);
+            this.txtBuscarFechaFin.Name = "txtBuscarFechaFin";
+            this.txtBuscarFechaFin.Size = new System.Drawing.Size(133, 27);
+            this.txtBuscarFechaFin.TabIndex = 19;
+            // 
+            // txtEliminarFechFin
+            // 
+            this.txtEliminarFechFin.Location = new System.Drawing.Point(385, 165);
+            this.txtEliminarFechFin.Name = "txtEliminarFechFin";
+            this.txtEliminarFechFin.Size = new System.Drawing.Size(127, 27);
+            this.txtEliminarFechFin.TabIndex = 21;
             // 
             // frmEmpleadoNomina
             // 
@@ -677,5 +709,8 @@
         private System.Windows.Forms.Label lblTotalDed;
         private System.Windows.Forms.TextBox txtTotalDed;
         private System.Windows.Forms.TextBox txtTotalPer;
+        private System.Windows.Forms.TextBox txtIngresoFechFin;
+        private System.Windows.Forms.TextBox txtBuscarFechaFin;
+        private System.Windows.Forms.TextBox txtEliminarFechFin;
     }
 }
