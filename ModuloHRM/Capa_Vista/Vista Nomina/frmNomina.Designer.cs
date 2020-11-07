@@ -33,11 +33,6 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.cmbPeriPlanilla = new System.Windows.Forms.ComboBox();
             this.dgvPlanillaTotales = new System.Windows.Forms.DataGridView();
-            this.clmTotalHoras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalHorasExt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalDias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalDiasJust = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalDiasInjust = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPeriodoPLanilla = new System.Windows.Forms.Label();
             this.lblPlanillaPer = new System.Windows.Forms.Label();
             this.dgvPlanillaPer = new System.Windows.Forms.DataGridView();
@@ -64,6 +59,9 @@
             this.lblGestPlanFin = new System.Windows.Forms.Label();
             this.lblGestPlanInicio = new System.Windows.Forms.Label();
             this.lblGestPlanNom = new System.Windows.Forms.Label();
+            this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpNomina.SuspendLayout();
             this.Planilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaTotales)).BeginInit();
@@ -139,11 +137,9 @@
             this.dgvPlanillaTotales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlanillaTotales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlanillaTotales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmTotalHoras,
-            this.clmTotalHorasExt,
-            this.clmTotalDias,
-            this.clmTotalDiasJust,
-            this.clmTotalDiasInjust});
+            this.clmTotalDed,
+            this.clmTotalPer,
+            this.clmTotal});
             this.dgvPlanillaTotales.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvPlanillaTotales.Location = new System.Drawing.Point(4, 497);
             this.dgvPlanillaTotales.Name = "dgvPlanillaTotales";
@@ -152,41 +148,6 @@
             this.dgvPlanillaTotales.RowTemplate.Height = 24;
             this.dgvPlanillaTotales.Size = new System.Drawing.Size(1162, 150);
             this.dgvPlanillaTotales.TabIndex = 18;
-            // 
-            // clmTotalHoras
-            // 
-            this.clmTotalHoras.HeaderText = "Total Horas";
-            this.clmTotalHoras.MinimumWidth = 6;
-            this.clmTotalHoras.Name = "clmTotalHoras";
-            this.clmTotalHoras.ReadOnly = true;
-            // 
-            // clmTotalHorasExt
-            // 
-            this.clmTotalHorasExt.HeaderText = "Total Horas Extra";
-            this.clmTotalHorasExt.MinimumWidth = 6;
-            this.clmTotalHorasExt.Name = "clmTotalHorasExt";
-            this.clmTotalHorasExt.ReadOnly = true;
-            // 
-            // clmTotalDias
-            // 
-            this.clmTotalDias.HeaderText = "Total Dias Laborados";
-            this.clmTotalDias.MinimumWidth = 6;
-            this.clmTotalDias.Name = "clmTotalDias";
-            this.clmTotalDias.ReadOnly = true;
-            // 
-            // clmTotalDiasJust
-            // 
-            this.clmTotalDiasJust.HeaderText = "Total Dias Ausentados(Justificados)";
-            this.clmTotalDiasJust.MinimumWidth = 6;
-            this.clmTotalDiasJust.Name = "clmTotalDiasJust";
-            this.clmTotalDiasJust.ReadOnly = true;
-            // 
-            // clmTotalDiasInjust
-            // 
-            this.clmTotalDiasInjust.HeaderText = "Total Dias Ausentados(Injustificados)";
-            this.clmTotalDiasInjust.MinimumWidth = 6;
-            this.clmTotalDiasInjust.Name = "clmTotalDiasInjust";
-            this.clmTotalDiasInjust.ReadOnly = true;
             // 
             // lblPeriodoPLanilla
             // 
@@ -486,13 +447,33 @@
             this.lblGestPlanNom.TabIndex = 0;
             this.lblGestPlanNom.Text = "Nombre de Planilla";
             // 
+            // clmTotalDed
+            // 
+            this.clmTotalDed.HeaderText = "Total de Deducciones";
+            this.clmTotalDed.MinimumWidth = 6;
+            this.clmTotalDed.Name = "clmTotalDed";
+            this.clmTotalDed.ReadOnly = true;
+            // 
+            // clmTotalPer
+            // 
+            this.clmTotalPer.HeaderText = "Total de Percepciones";
+            this.clmTotalPer.MinimumWidth = 6;
+            this.clmTotalPer.Name = "clmTotalPer";
+            this.clmTotalPer.ReadOnly = true;
+            // 
+            // clmTotal
+            // 
+            this.clmTotal.HeaderText = "Total";
+            this.clmTotal.MinimumWidth = 6;
+            this.clmTotal.Name = "clmTotal";
+            this.clmTotal.ReadOnly = true;
+            // 
             // frmNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1178, 684);
-            this.ControlBox = false;
             this.Controls.Add(this.tbpNomina);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -545,11 +526,6 @@
         private System.Windows.Forms.Label lblHoras;
         private System.Windows.Forms.DataGridView dgvHoras;
         private System.Windows.Forms.DataGridView dgvPlanillaTotales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalHoras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalHorasExt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDiasJust;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDiasInjust;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Button btnGestPlanCrear;
         private System.Windows.Forms.DateTimePicker dtpGestPlanFin;
@@ -558,5 +534,8 @@
         private System.Windows.Forms.Label lblGestPlanFin;
         private System.Windows.Forms.Label lblGestPlanInicio;
         private System.Windows.Forms.Label lblGestPlanNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
     }
 }
