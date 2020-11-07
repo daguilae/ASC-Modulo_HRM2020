@@ -28,7 +28,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                                                 "AND emp.pk_id_empleado = '" + idEmpleado + "';";
                 OdbcCommand Query_Busqueda = new OdbcCommand(BuscarDatoEmpleado, conexion.funcconexion());
                 OdbcDataReader Lector = Query_Busqueda.ExecuteReader();
-                
+
 
                 if (Lector.HasRows == true)
                 {
@@ -101,7 +101,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                 ex.GetType().ToString() + System.Environment.NewLine +
                 ex.Message, "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
 
         }
@@ -116,7 +116,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                                             "AND emp.pk_id_empleado = '" + idEmpleado + "';";
                 OdbcCommand Query_Busqueda = new OdbcCommand(BuscarDatoEmpleado, conexion.funcconexion());
                 OdbcDataReader Lector = Query_Busqueda.ExecuteReader();
-                
+
 
                 if (Lector.HasRows == true)
                 {
@@ -140,7 +140,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return datos;
+                return datos;
             }
 
         }
@@ -153,7 +153,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                                              "FROM curso as cu WHERE cu.pk_id_curso = '" + idCurso + "';";
                 OdbcCommand Query_Busqueda = new OdbcCommand(BuscarDatoEmpleado, conexion.funcconexion());
                 OdbcDataReader Lector = Query_Busqueda.ExecuteReader();
-                
+
 
                 if (Lector.HasRows == true)
                 {
@@ -177,7 +177,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return datos;
+                return datos;
             }
 
         }
@@ -230,64 +230,65 @@ namespace Capa_Modelo.Modelo_Capacitacion
         }
         public void funcIngresoDetalleCap(string idEmpleado, string idEncabezado, string fechaInic, string fechaFin, string idCurso, int horas, string codigoCapa)
         {
-            try { 
+            try
+            {
                 string buscarCurso = "SELECT * FROM `capacitacion` WHERE pk_id_capacitacion   = '" + codigoCapa + "';";
                 OdbcCommand Query_Busqueda = new OdbcCommand(buscarCurso, conexion.funcconexion());
                 OdbcDataReader Lector = Query_Busqueda.ExecuteReader();
 
-            if (Lector.HasRows == true)
-            {
-                MessageBox.Show("ERROR: El codigo de capacitación puede que esté registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                try
+                if (Lector.HasRows == true)
                 {
-                    string obtenerID = "SELECT cur.pk_id_curso FROM curso as cur WHERE cur.nombre_curso = '" + idCurso + "'; ";
-                    OdbcCommand Query_Obtener = new OdbcCommand(obtenerID, conexion.funcconexion());
-                    Query_Obtener.ExecuteNonQuery();
-                    int codigoCurso = Convert.ToInt32(Query_Obtener.ExecuteScalar());
-
-                    string buscarCurso2 = "SELECT * FROM `encabezado_capacitacion`  WHERE  	pk_id_encabezado_capacitacion    = '" + idEncabezado + "';";
-                    OdbcCommand Query_Busqueda2 = new OdbcCommand(buscarCurso2, conexion.funcconexion());
-                    OdbcDataReader Lector2 = Query_Busqueda2.ExecuteReader();
-
-                    if (Lector2.HasRows == true)
-                    {
-                        MessageBox.Show("ERROR: El codigo de detalle puede que esté registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-                    else
-                    {
-
-                        string insertarEncabezado = "INSERT INTO `encabezado_capacitacion` " +
-                                              "(`pk_id_encabezado_capacitacion`, `fecha_inicio_encabezado_capacitacion`, `fecha_fin_encabezado_capacitacion`, `fk_id_curso_encabezado_capacitacion`, `horas_encabezado_capacitacion`) " +
-                                              "VALUES ('" + idEncabezado + "', '" + fechaInic + "', '" + fechaFin + "', '" + codigoCurso + "', '" + Convert.ToString(horas) + "') ";
-
-
-                        OdbcCommand Query_Ingreso = new OdbcCommand(insertarEncabezado, conexion.funcconexion());
-                        Query_Ingreso.ExecuteNonQuery();
-
-                        string insertarCapacitacion = "INSERT INTO `capacitacion` (`pk_id_capacitacion`, `fk_id_encabezado_capacitacion`, `fk_id_empleado_capacitacion`) " +
-                                                        "VALUES ('" + codigoCapa + "', '" + idEncabezado + "', '" + idEmpleado + "') ";
-                        OdbcCommand Query_IngresoC = new OdbcCommand(insertarCapacitacion, conexion.funcconexion());
-                        Query_IngresoC.ExecuteNonQuery();
-                        MessageBox.Show("Ingreso Exitoso", "Curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    MessageBox.Show("ERROR: El codigo de capacitación puede que esté registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-                catch (Exception ex)
+                else
                 {
+                    try
+                    {
+                        string obtenerID = "SELECT cur.pk_id_curso FROM curso as cur WHERE cur.nombre_curso = '" + idCurso + "'; ";
+                        OdbcCommand Query_Obtener = new OdbcCommand(obtenerID, conexion.funcconexion());
+                        Query_Obtener.ExecuteNonQuery();
+                        int codigoCurso = Convert.ToInt32(Query_Obtener.ExecuteScalar());
 
-                    MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        string buscarCurso2 = "SELECT * FROM `encabezado_capacitacion`  WHERE  	pk_id_encabezado_capacitacion    = '" + idEncabezado + "';";
+                        OdbcCommand Query_Busqueda2 = new OdbcCommand(buscarCurso2, conexion.funcconexion());
+                        OdbcDataReader Lector2 = Query_Busqueda2.ExecuteReader();
+
+                        if (Lector2.HasRows == true)
+                        {
+                            MessageBox.Show("ERROR: El codigo de detalle puede que esté registrado.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                        else
+                        {
+
+                            string insertarEncabezado = "INSERT INTO `encabezado_capacitacion` " +
+                                                  "(`pk_id_encabezado_capacitacion`, `fecha_inicio_encabezado_capacitacion`, `fecha_fin_encabezado_capacitacion`, `fk_id_curso_encabezado_capacitacion`, `horas_encabezado_capacitacion`) " +
+                                                  "VALUES ('" + idEncabezado + "', '" + fechaInic + "', '" + fechaFin + "', '" + codigoCurso + "', '" + Convert.ToString(horas) + "') ";
+
+
+                            OdbcCommand Query_Ingreso = new OdbcCommand(insertarEncabezado, conexion.funcconexion());
+                            Query_Ingreso.ExecuteNonQuery();
+
+                            string insertarCapacitacion = "INSERT INTO `capacitacion` (`pk_id_capacitacion`, `fk_id_encabezado_capacitacion`, `fk_id_empleado_capacitacion`) " +
+                                                            "VALUES ('" + codigoCapa + "', '" + idEncabezado + "', '" + idEmpleado + "') ";
+                            OdbcCommand Query_IngresoC = new OdbcCommand(insertarCapacitacion, conexion.funcconexion());
+                            Query_IngresoC.ExecuteNonQuery();
+                            MessageBox.Show("Ingreso Exitoso", "Curso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show("Error al ejecutar SQL: " +
+                        System.Environment.NewLine + System.Environment.NewLine +
+                        ex.GetType().ToString() + System.Environment.NewLine +
+                        ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
-        }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar SQL: " +
@@ -295,7 +296,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                 ex.GetType().ToString() + System.Environment.NewLine +
                 ex.Message, "Error",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+
             }
         }
         public DataTable funcLlenarCurso()
@@ -327,7 +328,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
             DataTable Datos = new DataTable();
             try
             {
-                string cargaDatos = "SELECT cap.pk_id_capacitacion AS 'Codigo de Capacitacion', cu.nombre_curso AS 'Nombre de Curso', enc.fecha_inicio_encabezado_capacitacion AS 'Fecha de Inicio',enc.fecha_fin_encabezado_capacitacion AS 'Fecha de Termino', cap.resultado_capacitacion AS 'Resultado'FROM capacitacion as cap, curso as cu, encabezado_capacitacion as enc WHERE cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion AND (cap.fk_id_empleado_capacitacion = '"+ idEmpleado + "' AND cap.pk_id_capacitacion = '"+idCap+"') AND cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion AND enc.fk_id_curso_encabezado_capacitacion = cu.pk_id_curso ";
+                string cargaDatos = "SELECT cap.pk_id_capacitacion AS 'Codigo de Capacitacion', cu.nombre_curso AS 'Nombre de Curso', enc.fecha_inicio_encabezado_capacitacion AS 'Fecha de Inicio',enc.fecha_fin_encabezado_capacitacion AS 'Fecha de Termino', cap.resultado_capacitacion AS 'Resultado'FROM capacitacion as cap, curso as cu, encabezado_capacitacion as enc WHERE cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion AND (cap.fk_id_empleado_capacitacion = '" + idEmpleado + "' AND cap.pk_id_capacitacion = '" + idCap + "') AND cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion AND enc.fk_id_curso_encabezado_capacitacion = cu.pk_id_curso ";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(cargaDatos, conexion.funcconexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
@@ -439,7 +440,8 @@ namespace Capa_Modelo.Modelo_Capacitacion
             }
         }
 
-        public DataSet funcLlenarCampos() {
+        public DataSet funcLlenarCampos()
+        {
             DataSet Campos = new DataSet();
 
             try
@@ -465,12 +467,13 @@ namespace Capa_Modelo.Modelo_Capacitacion
 
         }
 
-        public DataTable funcLlenarBusqueda(string nomCampo, string compare) {
+        public DataTable funcLlenarBusqueda(string nomCampo, string compare)
+        {
 
             DataTable Datos = new DataTable();
             try
             {
-                string cargaDatos = "SELECT emp.pk_id_empleado AS 'Codigo Empleado', CONCAT(emp.nombre1_empleado, ' ', emp.nombre2_empleado, ' ', emp.apellido1_empleado, ' ', emp.apellido2_empleado)AS 'Nombre' FROM empleado as emp WHERE emp."+ nomCampo + " = '"+ compare + "';";
+                string cargaDatos = "SELECT emp.pk_id_empleado AS 'Codigo Empleado', CONCAT(emp.nombre1_empleado, ' ', emp.nombre2_empleado, ' ', emp.apellido1_empleado, ' ', emp.apellido2_empleado)AS 'Nombre' FROM empleado as emp WHERE emp." + nomCampo + " = '" + compare + "';";
                 OdbcCommand Query_Busqueda1 = new OdbcCommand(cargaDatos, conexion.funcconexion());
 
                 OdbcDataAdapter Lector = new OdbcDataAdapter();
@@ -491,7 +494,8 @@ namespace Capa_Modelo.Modelo_Capacitacion
 
         }
 
-        public string[] funcConsultarCapa(string idCapa) {
+        public string[] funcConsultarCapa(string idCapa)
+        {
             string[] datos = new string[6];
             try
             {
@@ -499,7 +503,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
                                              "enc.fecha_inicio_encabezado_capacitacion, enc.fecha_fin_encabezado_capacitacion, " +
                                              "enc.horas_encabezado_capacitacion, cu.nombre_curso FROM capacitacion as cap, " +
                                              "encabezado_capacitacion as enc, curso as cu " +
-                                             "WHERE cap.pk_id_capacitacion = '"+idCapa+"' AND (cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion " +
+                                             "WHERE cap.pk_id_capacitacion = '" + idCapa + "' AND (cap.fk_id_encabezado_capacitacion = enc.pk_id_encabezado_capacitacion " +
                                              "AND enc.fk_id_curso_encabezado_capacitacion = cu.pk_id_curso) ;";
                 OdbcCommand Query_Busqueda = new OdbcCommand(BuscarDatoEmpleado, conexion.funcconexion());
                 OdbcDataReader Lector = Query_Busqueda.ExecuteReader();
@@ -539,16 +543,16 @@ namespace Capa_Modelo.Modelo_Capacitacion
             try
             {
 
-                string modificarEmp = "UPDATE `capacitacion` SET `fk_id_empleado_capacitacion` = '"+ idEmpleado + "' WHERE `capacitacion`.`pk_id_capacitacion` = '"+idCapacitacion+"';";
+                string modificarEmp = "UPDATE `capacitacion` SET `fk_id_empleado_capacitacion` = '" + idEmpleado + "' WHERE `capacitacion`.`pk_id_capacitacion` = '" + idCapacitacion + "';";
                 OdbcCommand Query_Actualizar = new OdbcCommand(modificarEmp, conexion.funcconexion());
                 Query_Actualizar.ExecuteNonQuery();
 
-                string obtenerID = "SELECT cu.pk_id_curso FROM curso as cu WHERE cu.nombre_curso = '"+ nomCur + "' ";
+                string obtenerID = "SELECT cu.pk_id_curso FROM curso as cu WHERE cu.nombre_curso = '" + nomCur + "' ";
                 OdbcCommand Query_Obtener = new OdbcCommand(obtenerID, conexion.funcconexion());
                 Query_Obtener.ExecuteNonQuery();
                 int codigoCurso = Convert.ToInt32(Query_Obtener.ExecuteScalar());
 
-                string modificarCur = "UPDATE `encabezado_capacitacion` SET `fecha_inicio_encabezado_capacitacion` = '"+ fechaInicio + "', `fecha_fin_encabezado_capacitacion` = '"+ fechaFin + "', `fk_id_curso_encabezado_capacitacion` = '"+ codigoCurso + "', `horas_encabezado_capacitacion` = '"+horas+"' WHERE `encabezado_capacitacion`.`pk_id_encabezado_capacitacion` = '"+idEncCapa+"' ;";
+                string modificarCur = "UPDATE `encabezado_capacitacion` SET `fecha_inicio_encabezado_capacitacion` = '" + fechaInicio + "', `fecha_fin_encabezado_capacitacion` = '" + fechaFin + "', `fk_id_curso_encabezado_capacitacion` = '" + codigoCurso + "', `horas_encabezado_capacitacion` = '" + horas + "' WHERE `encabezado_capacitacion`.`pk_id_encabezado_capacitacion` = '" + idEncCapa + "' ;";
                 OdbcCommand Query_Actualizar1 = new OdbcCommand(modificarCur, conexion.funcconexion());
                 Query_Actualizar1.ExecuteNonQuery();
                 MessageBox.Show("Modificación Exitosa", "CURSOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -567,5 +571,31 @@ namespace Capa_Modelo.Modelo_Capacitacion
 
         }
 
+        public void funcEliminarCurso(string idCapa, string idEncCapa)
+        {
+            try
+            {
+                string eliminarCapa = "DELETE FROM `capacitacion` WHERE `capacitacion`.`pk_id_capacitacion` = '" + idCapa + "'; ";
+                OdbcCommand Query_Actualizar = new OdbcCommand(eliminarCapa, conexion.funcconexion());
+                Query_Actualizar.ExecuteNonQuery();
+
+                string eliminarEncCapa = "DELETE FROM `encabezado_capacitacion` WHERE `encabezado_capacitacion`.`pk_id_encabezado_capacitacion` = '" + idEncCapa + "';";
+                OdbcCommand Query_Actualizar1 = new OdbcCommand(eliminarEncCapa, conexion.funcconexion());
+                Query_Actualizar1.ExecuteNonQuery();
+                MessageBox.Show("Eliminación Exitosa", "CURSOS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
+        }
     }
 }
