@@ -107,19 +107,17 @@
     <Compile Include="Vista Mantenimientos\Puesto\frmMantenimientoPuesto.Designer.cs">
       <DependentUpon>frmMantenimientoPuesto.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Vista Mantenimientos\Tipo Competencia\frmTipoCompetencia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista Mantenimientos\Tipo Competencia\frmTipoCompetencia.Designer.cs">
       <DependentUpon>frmTipoCompetencia.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Vista Nomina\frmControlHorasDias.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vista Nomina\frmControlHorasDias.Designer.cs">
       <DependentUpon>frmControlHorasDias.cs</DependentUpon>
->>>>>>> 4d7453e16d42df2927b8daf2655d001fa10c4a0e
     </Compile>
     <Compile Include="Vista Nomina\frmDeducPercep.cs">
       <SubType>Form</SubType>
@@ -230,13 +228,11 @@
     <EmbeddedResource Include="Vista Mantenimientos\Puesto\frmMantenimientoPuesto.resx">
       <DependentUpon>frmMantenimientoPuesto.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Vista Mantenimientos\Tipo Competencia\frmTipoCompetencia.resx">
       <DependentUpon>frmTipoCompetencia.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmControlHorasDias.resx">
       <DependentUpon>frmControlHorasDias.cs</DependentUpon>
->>>>>>> 4d7453e16d42df2927b8daf2655d001fa10c4a0e
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Nomina\frmDeducPercep.resx">
       <DependentUpon>frmDeducPercep.cs</DependentUpon>
