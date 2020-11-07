@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaVistaSeguridad;
 
 namespace Capa_Vista
 {
@@ -43,25 +44,66 @@ namespace Capa_Vista
         private void tsmiPuestosMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE PUESTOS \\
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Puesto.frmMantenimientoPuesto());
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad(); 
+            if (seguridad.PermisosAcceso("1", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Puesto.frmMantenimientoPuesto(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void tsmiDepartamentoMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEPARTAMENTOS EMPRESARIALES \\
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Mantenimientos.Departamento.frmMantenimientoDepa());
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+            if (seguridad.PermisosAcceso("2", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Departamento.frmMantenimientoDepa(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void tsmiTiposDeCompetenciasMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE TIPOS DE COMPETENCIAS \\
-            
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+            if (seguridad.PermisosAcceso("3", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
+
         }
 
         private void tsmiIngresarFaltaMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE FALTA \\
-            
+            clsVistaBitacora bit = new clsVistaBitacora();
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
+            if (seguridad.PermisosAcceso("4", txtUsuario.Text) == 1)
+            {
+                bit.user(txtUsuario.Text);
+                funcAbrirFormEnPanel(new Vista_Mantenimientos.Faltas.frmFaltas(txtUsuario.Text, this));
+            }
+            else
+            {
+                MessageBox.Show("El Usuario No Cuenta Con Permisos De Acceso A La Aplicación");
+            }
         }
 
         private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
@@ -73,7 +115,7 @@ namespace Capa_Vista
         private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR EDITAR EMPLEADO \\
-            funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado());
+            funcAbrirFormEnPanel(new Vista_Reclutamiento.frmModificarEmpleado());
         }
 
         private void tsmiAscenderEmpleadoProceso_Click(object sender, EventArgs e)
@@ -140,6 +182,13 @@ namespace Capa_Vista
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR ESTADISTICAS \\
             
+        }
+
+        private void frmMDI_Load(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+            txtUsuario.Text = login.usuario();
         }
     }
 
