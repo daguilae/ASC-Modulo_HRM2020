@@ -179,6 +179,11 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarCamposIngreso()
         {
+
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(cmbIngresoFecPLan.Text);
+
             if (rbtnIngresoDed.Checked == false && rbtnIngresoPerc.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,6 +192,11 @@ namespace Capa_Vista.Vista_Nomina
             else if (txtIngresoIdEmp.Text == "" || txtIngresoNomEmp.Text == "" || cmbIngresoDedPer.Text == "" || cmbIngresoFecPLan.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if(Hoy.Month.CompareTo(Periodo.Month) == 1 || Hoy.Year.CompareTo(Periodo.Year) == 1)
+            {
+                MessageBox.Show("No se puede realizar el ingreso, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
