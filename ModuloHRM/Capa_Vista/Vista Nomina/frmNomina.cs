@@ -25,6 +25,44 @@ namespace Capa_Vista.Vista_Nomina
             funcFecha();
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if(cmbPeriPlanilla.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un periodo de planilla","ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                funcLimpiarPlanilla();
+            }
+            else
+            {
+                funcLimpiarPlanilla();
+                funcDedEmp();
+                funcPerEmp();
+                double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
+                dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
+
+            }
+        }
+
+        private void btnHorasDiasActualizar_Click(object sender, EventArgs e)
+        {
+            if (cmbHorasDias.Text == "")
+            {
+                MessageBox.Show("No se ha seleccionado un periodo de planilla", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                funcLimpiarPlanilla();
+            }
+            else
+            {
+                funcLimpiarHorasDias();
+                funcHoras();
+                funcDias();
+            }
+        }
+
+        private void btnGestPlanCrear_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void funcDedPer()
         {
             DataTable Ded = ConsNom.funcVisDeducciones();
@@ -52,17 +90,18 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
         }
 
-
         private void funcFecha()
         {
             DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
             cmbPeriPlanilla.DataSource = Datos;
             cmbPeriPlanilla.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbPeriPlanilla.ResetText();
+            cmbPeriPlanilla.SelectedIndex = -1;
 
             cmbHorasDias.DataSource = Datos;
             cmbHorasDias.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbHorasDias.ResetText();
+            cmbHorasDias.SelectedIndex = -1;
 
         }
 
@@ -76,37 +115,26 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaTotales.Refresh();
         }
 
+        private void funcLimpiarHorasDias()
+        {
+            dgvHoras.DataSource = null;
+            dgvHoras.Refresh();
+            dgvDias.DataSource = null;
+            dgvDias.Refresh();
+        }
+
         private void funcHoras()
         {
-
+            DataTable Horas = ConsNom.funcVisHoras(cmbHorasDias.Text);
+            dgvHoras.DataSource = Horas;
+            dgvHoras.Refresh();
         }
 
         private void funcDias()
         {
-
-        }
-
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            if(cmbPeriPlanilla.Text == "")
-            {
-                MessageBox.Show("No se ha seleccionado un periodo de planilla","ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                funcLimpiarPlanilla();
-            }
-            else
-            {
-                funcLimpiarPlanilla();
-                funcDedEmp();
-                funcPerEmp();
-                double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
-                dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
-
-            }
-        }
-
-        private void btnHorasDiasActualizar_Click(object sender, EventArgs e)
-        {
-
+            DataTable Dias = ConsNom.funcVisDias(cmbHorasDias.Text);
+            dgvDias.DataSource = Dias;
+            dgvDias.Refresh();
         }
     }
 }

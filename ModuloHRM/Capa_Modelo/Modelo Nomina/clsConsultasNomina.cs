@@ -587,6 +587,32 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        public DataTable funcVisDias(string Fecha)
+        {
+            try
+            {
+                DataTable Datos = new DataTable();
+                string sentencia = "SELECT emp.pk_id_empleado AS 'ID Empleado' , emp.nombre1_empleado AS 'Primer Nombre', emp.nombre2_empleado AS 'Segundo Nombre', emp.apellido1_empleado AS 'Primer Apellido', emp.apellido2_empleado AS 'Segundo Apellido'," +
+                    " ca.dias_laborados AS 'Dias Laborados', ca.dias_ausente_justificados AS 'Dias Ausentado(Justificados)', ca.dias_ausente_injustificados AS 'Dias Ausentado(Injustificados)' " +
+                    "FROM control_asistencia AS ca, empleado AS emp, encabezado_nomina AS enc " +
+                    "WHERE ca.fk_id_control_asistencia_empleado = emp.pk_id_empleado AND enc.fecha_inicio_encabezado_nomina ='" + Fecha + "'";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                OdbcDataAdapter Lector = new OdbcDataAdapter();
+                Lector.SelectCommand = Query_Validacion1;
+                Lector.Fill(Datos);
+                return Datos;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
         // Metodos para formulario frmControlHorasDias
 
         public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
