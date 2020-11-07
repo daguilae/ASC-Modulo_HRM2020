@@ -84,7 +84,6 @@ namespace Capa_Controlador.Controlador_Capacitación
         }
         public DataSet funcLlenarCampos()
         {
-
             DataSet Items = cons.funcLlenarCampos();
             return Items;
         }
