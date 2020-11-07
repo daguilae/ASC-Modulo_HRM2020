@@ -33,9 +33,6 @@
             this.btnActualizar = new System.Windows.Forms.Button();
             this.cmbPeriPlanilla = new System.Windows.Forms.ComboBox();
             this.dgvPlanillaTotales = new System.Windows.Forms.DataGridView();
-            this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblPeriodoPLanilla = new System.Windows.Forms.Label();
             this.lblPlanillaPer = new System.Windows.Forms.Label();
             this.dgvPlanillaPer = new System.Windows.Forms.DataGridView();
@@ -49,15 +46,22 @@
             this.tbpHorasDias = new System.Windows.Forms.TabPage();
             this.btnHorasDiasActualizar = new System.Windows.Forms.Button();
             this.cmbHorasDias = new System.Windows.Forms.ComboBox();
-            this.dgvTotalHorasDias = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblHorasDiasPeriodo = new System.Windows.Forms.Label();
             this.lblDias = new System.Windows.Forms.Label();
             this.dgvDias = new System.Windows.Forms.DataGridView();
             this.lblHoras = new System.Windows.Forms.Label();
             this.dgvHoras = new System.Windows.Forms.DataGridView();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnGestPlanCrear = new System.Windows.Forms.Button();
+            this.dtpGestPlanFin = new System.Windows.Forms.DateTimePicker();
+            this.dtpGestPlanIni = new System.Windows.Forms.DateTimePicker();
+            this.txtGestPlanNom = new System.Windows.Forms.TextBox();
+            this.lblGestPlanFin = new System.Windows.Forms.Label();
+            this.lblGestPlanInicio = new System.Windows.Forms.Label();
+            this.lblGestPlanNom = new System.Windows.Forms.Label();
+            this.clmTotalDed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTotalPer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbpNomina.SuspendLayout();
             this.Planilla.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlanillaTotales)).BeginInit();
@@ -67,9 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPercep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).BeginInit();
             this.tbpHorasDias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalHorasDias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoras)).BeginInit();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbpNomina
@@ -77,6 +81,7 @@
             this.tbpNomina.Controls.Add(this.Planilla);
             this.tbpNomina.Controls.Add(this.tbpDedPer);
             this.tbpNomina.Controls.Add(this.tbpHorasDias);
+            this.tbpNomina.Controls.Add(this.tabPage1);
             this.tbpNomina.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbpNomina.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbpNomina.Location = new System.Drawing.Point(0, 0);
@@ -118,6 +123,7 @@
             // cmbPeriPlanilla
             // 
             this.cmbPeriPlanilla.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbPeriPlanilla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPeriPlanilla.FormattingEnabled = true;
             this.cmbPeriPlanilla.Location = new System.Drawing.Point(550, 9);
             this.cmbPeriPlanilla.Name = "cmbPeriPlanilla";
@@ -142,27 +148,6 @@
             this.dgvPlanillaTotales.RowTemplate.Height = 24;
             this.dgvPlanillaTotales.Size = new System.Drawing.Size(1162, 150);
             this.dgvPlanillaTotales.TabIndex = 18;
-            // 
-            // clmTotalDed
-            // 
-            this.clmTotalDed.HeaderText = "Total Deducciones";
-            this.clmTotalDed.MinimumWidth = 6;
-            this.clmTotalDed.Name = "clmTotalDed";
-            this.clmTotalDed.ReadOnly = true;
-            // 
-            // clmTotalPer
-            // 
-            this.clmTotalPer.HeaderText = "TotalPercepciones";
-            this.clmTotalPer.MinimumWidth = 6;
-            this.clmTotalPer.Name = "clmTotalPer";
-            this.clmTotalPer.ReadOnly = true;
-            // 
-            // clmTotal
-            // 
-            this.clmTotal.HeaderText = "Total";
-            this.clmTotal.MinimumWidth = 6;
-            this.clmTotal.Name = "clmTotal";
-            this.clmTotal.ReadOnly = true;
             // 
             // lblPeriodoPLanilla
             // 
@@ -254,13 +239,13 @@
             this.dgvPercep.AllowUserToDeleteRows = false;
             this.dgvPercep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPercep.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPercep.Location = new System.Drawing.Point(621, 40);
+            this.dgvPercep.Location = new System.Drawing.Point(597, 40);
             this.dgvPercep.Margin = new System.Windows.Forms.Padding(5);
             this.dgvPercep.Name = "dgvPercep";
             this.dgvPercep.ReadOnly = true;
             this.dgvPercep.RowHeadersWidth = 51;
             this.dgvPercep.RowTemplate.Height = 24;
-            this.dgvPercep.Size = new System.Drawing.Size(549, 615);
+            this.dgvPercep.Size = new System.Drawing.Size(573, 615);
             this.dgvPercep.TabIndex = 8;
             // 
             // lblDeduc
@@ -285,7 +270,7 @@
             this.dgvDeduc.ReadOnly = true;
             this.dgvDeduc.RowHeadersWidth = 51;
             this.dgvDeduc.RowTemplate.Height = 24;
-            this.dgvDeduc.Size = new System.Drawing.Size(549, 615);
+            this.dgvDeduc.Size = new System.Drawing.Size(574, 615);
             this.dgvDeduc.TabIndex = 9;
             // 
             // tbpHorasDias
@@ -293,7 +278,6 @@
             this.tbpHorasDias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpHorasDias.Controls.Add(this.btnHorasDiasActualizar);
             this.tbpHorasDias.Controls.Add(this.cmbHorasDias);
-            this.tbpHorasDias.Controls.Add(this.dgvTotalHorasDias);
             this.tbpHorasDias.Controls.Add(this.lblHorasDiasPeriodo);
             this.tbpHorasDias.Controls.Add(this.lblDias);
             this.tbpHorasDias.Controls.Add(this.dgvDias);
@@ -320,51 +304,12 @@
             // cmbHorasDias
             // 
             this.cmbHorasDias.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbHorasDias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHorasDias.FormattingEnabled = true;
             this.cmbHorasDias.Location = new System.Drawing.Point(550, 9);
             this.cmbHorasDias.Name = "cmbHorasDias";
             this.cmbHorasDias.Size = new System.Drawing.Size(248, 28);
             this.cmbHorasDias.TabIndex = 19;
-            // 
-            // dgvTotalHorasDias
-            // 
-            this.dgvTotalHorasDias.AllowUserToAddRows = false;
-            this.dgvTotalHorasDias.AllowUserToDeleteRows = false;
-            this.dgvTotalHorasDias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTotalHorasDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTotalHorasDias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dgvTotalHorasDias.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvTotalHorasDias.Location = new System.Drawing.Point(4, 497);
-            this.dgvTotalHorasDias.Name = "dgvTotalHorasDias";
-            this.dgvTotalHorasDias.ReadOnly = true;
-            this.dgvTotalHorasDias.RowHeadersWidth = 51;
-            this.dgvTotalHorasDias.RowTemplate.Height = 24;
-            this.dgvTotalHorasDias.Size = new System.Drawing.Size(1162, 150);
-            this.dgvTotalHorasDias.TabIndex = 18;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Total Deducciones";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "TotalPercepciones";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Total";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // lblHorasDiasPeriodo
             // 
@@ -378,7 +323,7 @@
             // lblDias
             // 
             this.lblDias.AutoSize = true;
-            this.lblDias.Location = new System.Drawing.Point(838, 22);
+            this.lblDias.Location = new System.Drawing.Point(869, 37);
             this.lblDias.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDias.Name = "lblDias";
             this.lblDias.Size = new System.Drawing.Size(110, 20);
@@ -397,13 +342,13 @@
             this.dgvDias.ReadOnly = true;
             this.dgvDias.RowHeadersWidth = 51;
             this.dgvDias.RowTemplate.Height = 24;
-            this.dgvDias.Size = new System.Drawing.Size(577, 427);
+            this.dgvDias.Size = new System.Drawing.Size(577, 579);
             this.dgvDias.TabIndex = 12;
             // 
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(221, 22);
+            this.lblHoras.Location = new System.Drawing.Point(205, 37);
             this.lblHoras.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHoras.Name = "lblHoras";
             this.lblHoras.Size = new System.Drawing.Size(122, 20);
@@ -422,8 +367,106 @@
             this.dgvHoras.ReadOnly = true;
             this.dgvHoras.RowHeadersWidth = 51;
             this.dgvHoras.RowTemplate.Height = 24;
-            this.dgvHoras.Size = new System.Drawing.Size(577, 427);
+            this.dgvHoras.Size = new System.Drawing.Size(577, 579);
             this.dgvHoras.TabIndex = 13;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tabPage1.Controls.Add(this.btnGestPlanCrear);
+            this.tabPage1.Controls.Add(this.dtpGestPlanFin);
+            this.tabPage1.Controls.Add(this.dtpGestPlanIni);
+            this.tabPage1.Controls.Add(this.txtGestPlanNom);
+            this.tabPage1.Controls.Add(this.lblGestPlanFin);
+            this.tabPage1.Controls.Add(this.lblGestPlanInicio);
+            this.tabPage1.Controls.Add(this.lblGestPlanNom);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(1170, 651);
+            this.tabPage1.TabIndex = 6;
+            this.tabPage1.Text = "Gestion Planilla";
+            // 
+            // btnGestPlanCrear
+            // 
+            this.btnGestPlanCrear.Location = new System.Drawing.Point(497, 205);
+            this.btnGestPlanCrear.Name = "btnGestPlanCrear";
+            this.btnGestPlanCrear.Size = new System.Drawing.Size(144, 26);
+            this.btnGestPlanCrear.TabIndex = 6;
+            this.btnGestPlanCrear.Text = "Crear Planilla";
+            this.btnGestPlanCrear.UseVisualStyleBackColor = true;
+            this.btnGestPlanCrear.Click += new System.EventHandler(this.btnGestPlanCrear_Click);
+            // 
+            // dtpGestPlanFin
+            // 
+            this.dtpGestPlanFin.Location = new System.Drawing.Point(311, 147);
+            this.dtpGestPlanFin.Name = "dtpGestPlanFin";
+            this.dtpGestPlanFin.Size = new System.Drawing.Size(330, 27);
+            this.dtpGestPlanFin.TabIndex = 5;
+            // 
+            // dtpGestPlanIni
+            // 
+            this.dtpGestPlanIni.Location = new System.Drawing.Point(311, 86);
+            this.dtpGestPlanIni.Name = "dtpGestPlanIni";
+            this.dtpGestPlanIni.Size = new System.Drawing.Size(330, 27);
+            this.dtpGestPlanIni.TabIndex = 4;
+            this.dtpGestPlanIni.ValueChanged += new System.EventHandler(this.dtpGestPlanIni_ValueChanged);
+            // 
+            // txtGestPlanNom
+            // 
+            this.txtGestPlanNom.Location = new System.Drawing.Point(311, 28);
+            this.txtGestPlanNom.Name = "txtGestPlanNom";
+            this.txtGestPlanNom.Size = new System.Drawing.Size(330, 27);
+            this.txtGestPlanNom.TabIndex = 3;
+            // 
+            // lblGestPlanFin
+            // 
+            this.lblGestPlanFin.AutoSize = true;
+            this.lblGestPlanFin.Location = new System.Drawing.Point(32, 154);
+            this.lblGestPlanFin.Name = "lblGestPlanFin";
+            this.lblGestPlanFin.Size = new System.Drawing.Size(273, 20);
+            this.lblGestPlanFin.TabIndex = 2;
+            this.lblGestPlanFin.Text = "Fecha de Finalización del Periodo";
+            // 
+            // lblGestPlanInicio
+            // 
+            this.lblGestPlanInicio.AutoSize = true;
+            this.lblGestPlanInicio.Location = new System.Drawing.Point(32, 93);
+            this.lblGestPlanInicio.Name = "lblGestPlanInicio";
+            this.lblGestPlanInicio.Size = new System.Drawing.Size(223, 20);
+            this.lblGestPlanInicio.TabIndex = 1;
+            this.lblGestPlanInicio.Text = "Fecha de Inicio del Periodo";
+            // 
+            // lblGestPlanNom
+            // 
+            this.lblGestPlanNom.AutoSize = true;
+            this.lblGestPlanNom.Location = new System.Drawing.Point(32, 35);
+            this.lblGestPlanNom.Name = "lblGestPlanNom";
+            this.lblGestPlanNom.Size = new System.Drawing.Size(159, 20);
+            this.lblGestPlanNom.TabIndex = 0;
+            this.lblGestPlanNom.Text = "Nombre de Planilla";
+            // 
+            // clmTotalDed
+            // 
+            this.clmTotalDed.HeaderText = "Total de Deducciones";
+            this.clmTotalDed.MinimumWidth = 6;
+            this.clmTotalDed.Name = "clmTotalDed";
+            this.clmTotalDed.ReadOnly = true;
+            // 
+            // clmTotalPer
+            // 
+            this.clmTotalPer.HeaderText = "Total de Percepciones";
+            this.clmTotalPer.MinimumWidth = 6;
+            this.clmTotalPer.Name = "clmTotalPer";
+            this.clmTotalPer.ReadOnly = true;
+            // 
+            // clmTotal
+            // 
+            this.clmTotal.HeaderText = "Total";
+            this.clmTotal.MinimumWidth = 6;
+            this.clmTotal.Name = "clmTotal";
+            this.clmTotal.ReadOnly = true;
             // 
             // frmNomina
             // 
@@ -431,7 +474,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1178, 684);
-            this.ControlBox = false;
             this.Controls.Add(this.tbpNomina);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -451,9 +493,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeduc)).EndInit();
             this.tbpHorasDias.ResumeLayout(false);
             this.tbpHorasDias.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTotalHorasDias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDias)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoras)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -472,23 +515,27 @@
         private System.Windows.Forms.Label lblPlanillaDed;
         private System.Windows.Forms.DataGridView dgvPlanillaDed;
         private System.Windows.Forms.Label lblPeriodoPLanilla;
-        private System.Windows.Forms.DataGridView dgvPlanillaTotales;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
         private System.Windows.Forms.ComboBox cmbPeriPlanilla;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.TabPage tbpHorasDias;
         private System.Windows.Forms.Button btnHorasDiasActualizar;
         private System.Windows.Forms.ComboBox cmbHorasDias;
-        private System.Windows.Forms.DataGridView dgvTotalHorasDias;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Label lblHorasDiasPeriodo;
         private System.Windows.Forms.Label lblDias;
         private System.Windows.Forms.DataGridView dgvDias;
         private System.Windows.Forms.Label lblHoras;
         private System.Windows.Forms.DataGridView dgvHoras;
+        private System.Windows.Forms.DataGridView dgvPlanillaTotales;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnGestPlanCrear;
+        private System.Windows.Forms.DateTimePicker dtpGestPlanFin;
+        private System.Windows.Forms.DateTimePicker dtpGestPlanIni;
+        private System.Windows.Forms.TextBox txtGestPlanNom;
+        private System.Windows.Forms.Label lblGestPlanFin;
+        private System.Windows.Forms.Label lblGestPlanInicio;
+        private System.Windows.Forms.Label lblGestPlanNom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalDed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotalPer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTotal;
     }
 }

@@ -155,6 +155,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoPeriodo.DataSource = Datos;
             cmbIngresoPeriodo.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbIngresoPeriodo.ResetText();
+            cmbIngresoPeriodo.SelectedIndex = -1;
         }
 
         private void funcFechaPlanillaModificar()
@@ -226,9 +227,18 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarCamposIngreso()
         {
-            if(txtIngresoIdEmp.Text == "" || cmbIngresoPeriodo.Text == "")
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+
+            if (txtIngresoIdEmp.Text == "" || cmbIngresoPeriodo.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (Hoy.Date.CompareTo(Periodo.Date) == 1)
+            {
+                MessageBox.Show("No se puede realizar el ingreso, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -239,15 +249,34 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarCamposModificar()
         {
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(txtModificarPeriodoFin.Text);
+
             if (txtModificarIdEmp.Text == "" || cmbModificarPeriodo.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (Hoy.Date.CompareTo(Periodo.Date) == 1)
+            {
+                MessageBox.Show("No se puede realizar la modificación, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
             {
                 return true;
             }
+        }
+
+        private void cmbModificarPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtModificarPeriodoFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbModificarPeriodo.Text);
+        }
+
+        private void cmbIngresoPeriodo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtIngresoFechFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbIngresoPeriodo.Text);
         }
     }
 }

@@ -30,30 +30,34 @@
         {
             this.tbcControlHorasDias = new System.Windows.Forms.TabControl();
             this.tbpIngreso = new System.Windows.Forms.TabPage();
-            this.lblIngresoIdEmp = new System.Windows.Forms.Label();
-            this.lblNombreEmp = new System.Windows.Forms.Label();
-            this.lblIngresoPuesto = new System.Windows.Forms.Label();
-            this.gbxIngresoHoras = new System.Windows.Forms.GroupBox();
-            this.gbxIngresoDias = new System.Windows.Forms.GroupBox();
-            this.txtIngresoIdEmp = new System.Windows.Forms.TextBox();
-            this.txtIngresoNomEmp = new System.Windows.Forms.TextBox();
-            this.txtIngresoPuestoEmp = new System.Windows.Forms.TextBox();
-            this.cmbIngresoPeriodo = new System.Windows.Forms.ComboBox();
-            this.lblIngresoPeriodo = new System.Windows.Forms.Label();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
+            this.btnIngrespLimpiar = new System.Windows.Forms.Button();
             this.btnIngresoBuscarEmp = new System.Windows.Forms.Button();
-            this.lblIngresoHorasOrd = new System.Windows.Forms.Label();
-            this.lblIngresoHorasExt = new System.Windows.Forms.Label();
-            this.lblIngresoDias = new System.Windows.Forms.Label();
-            this.lblIngresoDiasJust = new System.Windows.Forms.Label();
-            this.lblIngresoDiasInjust = new System.Windows.Forms.Label();
-            this.nudIngresoHorasOrd = new System.Windows.Forms.NumericUpDown();
-            this.nudIngresoHorasExt = new System.Windows.Forms.NumericUpDown();
-            this.nudIngresoDiasLab = new System.Windows.Forms.NumericUpDown();
-            this.nudIngresoDiasJust = new System.Windows.Forms.NumericUpDown();
-            this.nudIngresoDiasInjust = new System.Windows.Forms.NumericUpDown();
-            this.btnIngresarHoras = new System.Windows.Forms.Button();
+            this.lblIngresoPeriodo = new System.Windows.Forms.Label();
+            this.cmbIngresoPeriodo = new System.Windows.Forms.ComboBox();
+            this.txtIngresoPuestoEmp = new System.Windows.Forms.TextBox();
+            this.txtIngresoNomEmp = new System.Windows.Forms.TextBox();
+            this.txtIngresoIdEmp = new System.Windows.Forms.TextBox();
+            this.gbxIngresoDias = new System.Windows.Forms.GroupBox();
             this.btnIngresarDias = new System.Windows.Forms.Button();
+            this.nudIngresoDiasInjust = new System.Windows.Forms.NumericUpDown();
+            this.nudIngresoDiasJust = new System.Windows.Forms.NumericUpDown();
+            this.nudIngresoDiasLab = new System.Windows.Forms.NumericUpDown();
+            this.lblIngresoDiasInjust = new System.Windows.Forms.Label();
+            this.lblIngresoDiasJust = new System.Windows.Forms.Label();
+            this.lblIngresoDias = new System.Windows.Forms.Label();
+            this.gbxIngresoHoras = new System.Windows.Forms.GroupBox();
+            this.btnIngresarHoras = new System.Windows.Forms.Button();
+            this.nudIngresoHorasExt = new System.Windows.Forms.NumericUpDown();
+            this.nudIngresoHorasOrd = new System.Windows.Forms.NumericUpDown();
+            this.lblIngresoHorasExt = new System.Windows.Forms.Label();
+            this.lblIngresoHorasOrd = new System.Windows.Forms.Label();
+            this.lblIngresoPuesto = new System.Windows.Forms.Label();
+            this.lblNombreEmp = new System.Windows.Forms.Label();
+            this.lblIngresoIdEmp = new System.Windows.Forms.Label();
             this.tbpModificar = new System.Windows.Forms.TabPage();
+            this.txtModificarPeriodoFin = new System.Windows.Forms.TextBox();
+            this.btnModificarLimpiar = new System.Windows.Forms.Button();
             this.btnModificarBuscarEmp = new System.Windows.Forms.Button();
             this.lblModificarPeriodo = new System.Windows.Forms.Label();
             this.cmbModificarPeriodo = new System.Windows.Forms.ComboBox();
@@ -77,17 +81,15 @@
             this.lblModificarPuesto = new System.Windows.Forms.Label();
             this.lblModificarNomEmp = new System.Windows.Forms.Label();
             this.lblModificarIdEmp = new System.Windows.Forms.Label();
-            this.btnModificarLimpiar = new System.Windows.Forms.Button();
-            this.btnIngrespLimpiar = new System.Windows.Forms.Button();
             this.tbcControlHorasDias.SuspendLayout();
             this.tbpIngreso.SuspendLayout();
-            this.gbxIngresoHoras.SuspendLayout();
             this.gbxIngresoDias.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasOrd)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasExt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasLab)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasJust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasInjust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasJust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasLab)).BeginInit();
+            this.gbxIngresoHoras.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasExt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasOrd)).BeginInit();
             this.tbpModificar.SuspendLayout();
             this.gbxModificarDias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudModificarDiasInjust)).BeginInit();
@@ -104,7 +106,7 @@
             this.tbcControlHorasDias.Controls.Add(this.tbpModificar);
             this.tbcControlHorasDias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tbcControlHorasDias.Location = new System.Drawing.Point(0, 0);
-            this.tbcControlHorasDias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbcControlHorasDias.Margin = new System.Windows.Forms.Padding(4);
             this.tbcControlHorasDias.Name = "tbcControlHorasDias";
             this.tbcControlHorasDias.SelectedIndex = 0;
             this.tbcControlHorasDias.Size = new System.Drawing.Size(1230, 589);
@@ -112,6 +114,8 @@
             // 
             // tbpIngreso
             // 
+            this.tbpIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpIngreso.Controls.Add(this.txtIngresoFechFin);
             this.tbpIngreso.Controls.Add(this.btnIngrespLimpiar);
             this.tbpIngreso.Controls.Add(this.btnIngresoBuscarEmp);
             this.tbpIngreso.Controls.Add(this.lblIngresoPeriodo);
@@ -125,122 +129,30 @@
             this.tbpIngreso.Controls.Add(this.lblNombreEmp);
             this.tbpIngreso.Controls.Add(this.lblIngresoIdEmp);
             this.tbpIngreso.Location = new System.Drawing.Point(4, 29);
-            this.tbpIngreso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpIngreso.Margin = new System.Windows.Forms.Padding(4);
             this.tbpIngreso.Name = "tbpIngreso";
-            this.tbpIngreso.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbpIngreso.Padding = new System.Windows.Forms.Padding(4);
             this.tbpIngreso.Size = new System.Drawing.Size(1222, 556);
             this.tbpIngreso.TabIndex = 0;
             this.tbpIngreso.Text = "Ingreso";
-            this.tbpIngreso.UseVisualStyleBackColor = true;
             // 
-            // lblIngresoIdEmp
+            // txtIngresoFechFin
             // 
-            this.lblIngresoIdEmp.AutoSize = true;
-            this.lblIngresoIdEmp.Location = new System.Drawing.Point(28, 24);
-            this.lblIngresoIdEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIngresoIdEmp.Name = "lblIngresoIdEmp";
-            this.lblIngresoIdEmp.Size = new System.Drawing.Size(139, 20);
-            this.lblIngresoIdEmp.TabIndex = 0;
-            this.lblIngresoIdEmp.Text = "ID de Empleado:";
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(400, 126);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(142, 27);
+            this.txtIngresoFechFin.TabIndex = 12;
             // 
-            // lblNombreEmp
+            // btnIngrespLimpiar
             // 
-            this.lblNombreEmp.AutoSize = true;
-            this.lblNombreEmp.Location = new System.Drawing.Point(28, 60);
-            this.lblNombreEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombreEmp.Name = "lblNombreEmp";
-            this.lblNombreEmp.Size = new System.Drawing.Size(191, 20);
-            this.lblNombreEmp.TabIndex = 1;
-            this.lblNombreEmp.Text = "Nombre del Empleado:";
-            // 
-            // lblIngresoPuesto
-            // 
-            this.lblIngresoPuesto.AutoSize = true;
-            this.lblIngresoPuesto.Location = new System.Drawing.Point(28, 95);
-            this.lblIngresoPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIngresoPuesto.Name = "lblIngresoPuesto";
-            this.lblIngresoPuesto.Size = new System.Drawing.Size(67, 20);
-            this.lblIngresoPuesto.TabIndex = 2;
-            this.lblIngresoPuesto.Text = "Puesto:";
-            // 
-            // gbxIngresoHoras
-            // 
-            this.gbxIngresoHoras.Controls.Add(this.btnIngresarHoras);
-            this.gbxIngresoHoras.Controls.Add(this.nudIngresoHorasExt);
-            this.gbxIngresoHoras.Controls.Add(this.nudIngresoHorasOrd);
-            this.gbxIngresoHoras.Controls.Add(this.lblIngresoHorasExt);
-            this.gbxIngresoHoras.Controls.Add(this.lblIngresoHorasOrd);
-            this.gbxIngresoHoras.Location = new System.Drawing.Point(10, 218);
-            this.gbxIngresoHoras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxIngresoHoras.Name = "gbxIngresoHoras";
-            this.gbxIngresoHoras.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxIngresoHoras.Size = new System.Drawing.Size(602, 329);
-            this.gbxIngresoHoras.TabIndex = 3;
-            this.gbxIngresoHoras.TabStop = false;
-            this.gbxIngresoHoras.Text = "Ingreso de Horas";
-            // 
-            // gbxIngresoDias
-            // 
-            this.gbxIngresoDias.Controls.Add(this.btnIngresarDias);
-            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasInjust);
-            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasJust);
-            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasLab);
-            this.gbxIngresoDias.Controls.Add(this.lblIngresoDiasInjust);
-            this.gbxIngresoDias.Controls.Add(this.lblIngresoDiasJust);
-            this.gbxIngresoDias.Controls.Add(this.lblIngresoDias);
-            this.gbxIngresoDias.Location = new System.Drawing.Point(620, 218);
-            this.gbxIngresoDias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxIngresoDias.Name = "gbxIngresoDias";
-            this.gbxIngresoDias.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.gbxIngresoDias.Size = new System.Drawing.Size(600, 329);
-            this.gbxIngresoDias.TabIndex = 4;
-            this.gbxIngresoDias.TabStop = false;
-            this.gbxIngresoDias.Text = "Ingreso de Dias";
-            // 
-            // txtIngresoIdEmp
-            // 
-            this.txtIngresoIdEmp.Location = new System.Drawing.Point(231, 18);
-            this.txtIngresoIdEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtIngresoIdEmp.Name = "txtIngresoIdEmp";
-            this.txtIngresoIdEmp.Size = new System.Drawing.Size(312, 27);
-            this.txtIngresoIdEmp.TabIndex = 5;
-            // 
-            // txtIngresoNomEmp
-            // 
-            this.txtIngresoNomEmp.Enabled = false;
-            this.txtIngresoNomEmp.Location = new System.Drawing.Point(231, 54);
-            this.txtIngresoNomEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtIngresoNomEmp.Name = "txtIngresoNomEmp";
-            this.txtIngresoNomEmp.Size = new System.Drawing.Size(312, 27);
-            this.txtIngresoNomEmp.TabIndex = 6;
-            // 
-            // txtIngresoPuestoEmp
-            // 
-            this.txtIngresoPuestoEmp.Enabled = false;
-            this.txtIngresoPuestoEmp.Location = new System.Drawing.Point(231, 89);
-            this.txtIngresoPuestoEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtIngresoPuestoEmp.Name = "txtIngresoPuestoEmp";
-            this.txtIngresoPuestoEmp.Size = new System.Drawing.Size(312, 27);
-            this.txtIngresoPuestoEmp.TabIndex = 7;
-            // 
-            // cmbIngresoPeriodo
-            // 
-            this.cmbIngresoPeriodo.FormattingEnabled = true;
-            this.cmbIngresoPeriodo.Location = new System.Drawing.Point(231, 125);
-            this.cmbIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbIngresoPeriodo.Name = "cmbIngresoPeriodo";
-            this.cmbIngresoPeriodo.Size = new System.Drawing.Size(312, 28);
-            this.cmbIngresoPeriodo.TabIndex = 8;
-            // 
-            // lblIngresoPeriodo
-            // 
-            this.lblIngresoPeriodo.AutoSize = true;
-            this.lblIngresoPeriodo.Location = new System.Drawing.Point(31, 132);
-            this.lblIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblIngresoPeriodo.Name = "lblIngresoPeriodo";
-            this.lblIngresoPeriodo.Size = new System.Drawing.Size(162, 20);
-            this.lblIngresoPeriodo.TabIndex = 9;
-            this.lblIngresoPeriodo.Text = "Periodo de Planilla:";
+            this.btnIngrespLimpiar.Location = new System.Drawing.Point(563, 54);
+            this.btnIngrespLimpiar.Name = "btnIngrespLimpiar";
+            this.btnIngrespLimpiar.Size = new System.Drawing.Size(154, 27);
+            this.btnIngrespLimpiar.TabIndex = 11;
+            this.btnIngrespLimpiar.Text = "Limpiar";
+            this.btnIngrespLimpiar.UseVisualStyleBackColor = true;
+            this.btnIngrespLimpiar.Click += new System.EventHandler(this.btnIngrespLimpiar_Click);
             // 
             // btnIngresoBuscarEmp
             // 
@@ -252,97 +164,80 @@
             this.btnIngresoBuscarEmp.UseVisualStyleBackColor = true;
             this.btnIngresoBuscarEmp.Click += new System.EventHandler(this.btnIngresoBuscarEmp_Click);
             // 
-            // lblIngresoHorasOrd
+            // lblIngresoPeriodo
             // 
-            this.lblIngresoHorasOrd.AutoSize = true;
-            this.lblIngresoHorasOrd.Location = new System.Drawing.Point(9, 54);
-            this.lblIngresoHorasOrd.Name = "lblIngresoHorasOrd";
-            this.lblIngresoHorasOrd.Size = new System.Drawing.Size(148, 20);
-            this.lblIngresoHorasOrd.TabIndex = 0;
-            this.lblIngresoHorasOrd.Text = "Horas Ordinarias:";
+            this.lblIngresoPeriodo.AutoSize = true;
+            this.lblIngresoPeriodo.Location = new System.Drawing.Point(31, 132);
+            this.lblIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIngresoPeriodo.Name = "lblIngresoPeriodo";
+            this.lblIngresoPeriodo.Size = new System.Drawing.Size(162, 20);
+            this.lblIngresoPeriodo.TabIndex = 9;
+            this.lblIngresoPeriodo.Text = "Periodo de Planilla:";
             // 
-            // lblIngresoHorasExt
+            // cmbIngresoPeriodo
             // 
-            this.lblIngresoHorasExt.AutoSize = true;
-            this.lblIngresoHorasExt.Location = new System.Drawing.Point(9, 106);
-            this.lblIngresoHorasExt.Name = "lblIngresoHorasExt";
-            this.lblIngresoHorasExt.Size = new System.Drawing.Size(105, 20);
-            this.lblIngresoHorasExt.TabIndex = 1;
-            this.lblIngresoHorasExt.Text = "Horas Extra:";
+            this.cmbIngresoPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIngresoPeriodo.FormattingEnabled = true;
+            this.cmbIngresoPeriodo.Location = new System.Drawing.Point(231, 125);
+            this.cmbIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbIngresoPeriodo.Name = "cmbIngresoPeriodo";
+            this.cmbIngresoPeriodo.Size = new System.Drawing.Size(162, 28);
+            this.cmbIngresoPeriodo.TabIndex = 8;
+            this.cmbIngresoPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbIngresoPeriodo_SelectedIndexChanged);
             // 
-            // lblIngresoDias
+            // txtIngresoPuestoEmp
             // 
-            this.lblIngresoDias.AutoSize = true;
-            this.lblIngresoDias.Location = new System.Drawing.Point(7, 54);
-            this.lblIngresoDias.Name = "lblIngresoDias";
-            this.lblIngresoDias.Size = new System.Drawing.Size(196, 20);
-            this.lblIngresoDias.TabIndex = 2;
-            this.lblIngresoDias.Text = "Total de Dias Laborados";
+            this.txtIngresoPuestoEmp.Enabled = false;
+            this.txtIngresoPuestoEmp.Location = new System.Drawing.Point(231, 89);
+            this.txtIngresoPuestoEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIngresoPuestoEmp.Name = "txtIngresoPuestoEmp";
+            this.txtIngresoPuestoEmp.Size = new System.Drawing.Size(312, 27);
+            this.txtIngresoPuestoEmp.TabIndex = 7;
             // 
-            // lblIngresoDiasJust
+            // txtIngresoNomEmp
             // 
-            this.lblIngresoDiasJust.AutoSize = true;
-            this.lblIngresoDiasJust.Location = new System.Drawing.Point(7, 106);
-            this.lblIngresoDiasJust.Name = "lblIngresoDiasJust";
-            this.lblIngresoDiasJust.Size = new System.Drawing.Size(300, 20);
-            this.lblIngresoDiasJust.TabIndex = 3;
-            this.lblIngresoDiasJust.Text = "Total de Dias Ausentado (Justificado):";
+            this.txtIngresoNomEmp.Enabled = false;
+            this.txtIngresoNomEmp.Location = new System.Drawing.Point(231, 54);
+            this.txtIngresoNomEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIngresoNomEmp.Name = "txtIngresoNomEmp";
+            this.txtIngresoNomEmp.Size = new System.Drawing.Size(312, 27);
+            this.txtIngresoNomEmp.TabIndex = 6;
             // 
-            // lblIngresoDiasInjust
+            // txtIngresoIdEmp
             // 
-            this.lblIngresoDiasInjust.AutoSize = true;
-            this.lblIngresoDiasInjust.Location = new System.Drawing.Point(7, 154);
-            this.lblIngresoDiasInjust.Name = "lblIngresoDiasInjust";
-            this.lblIngresoDiasInjust.Size = new System.Drawing.Size(315, 20);
-            this.lblIngresoDiasInjust.TabIndex = 4;
-            this.lblIngresoDiasInjust.Text = "Total de Dias Ausentado (Injustificado):";
+            this.txtIngresoIdEmp.Location = new System.Drawing.Point(231, 18);
+            this.txtIngresoIdEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIngresoIdEmp.Name = "txtIngresoIdEmp";
+            this.txtIngresoIdEmp.Size = new System.Drawing.Size(312, 27);
+            this.txtIngresoIdEmp.TabIndex = 5;
             // 
-            // nudIngresoHorasOrd
+            // gbxIngresoDias
             // 
-            this.nudIngresoHorasOrd.Location = new System.Drawing.Point(163, 47);
-            this.nudIngresoHorasOrd.Maximum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            0});
-            this.nudIngresoHorasOrd.Name = "nudIngresoHorasOrd";
-            this.nudIngresoHorasOrd.ReadOnly = true;
-            this.nudIngresoHorasOrd.Size = new System.Drawing.Size(120, 27);
-            this.nudIngresoHorasOrd.TabIndex = 2;
+            this.gbxIngresoDias.Controls.Add(this.btnIngresarDias);
+            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasInjust);
+            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasJust);
+            this.gbxIngresoDias.Controls.Add(this.nudIngresoDiasLab);
+            this.gbxIngresoDias.Controls.Add(this.lblIngresoDiasInjust);
+            this.gbxIngresoDias.Controls.Add(this.lblIngresoDiasJust);
+            this.gbxIngresoDias.Controls.Add(this.lblIngresoDias);
+            this.gbxIngresoDias.Location = new System.Drawing.Point(620, 218);
+            this.gbxIngresoDias.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxIngresoDias.Name = "gbxIngresoDias";
+            this.gbxIngresoDias.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxIngresoDias.Size = new System.Drawing.Size(600, 329);
+            this.gbxIngresoDias.TabIndex = 4;
+            this.gbxIngresoDias.TabStop = false;
+            this.gbxIngresoDias.Text = "Ingreso de Dias";
             // 
-            // nudIngresoHorasExt
+            // btnIngresarDias
             // 
-            this.nudIngresoHorasExt.Location = new System.Drawing.Point(163, 99);
-            this.nudIngresoHorasExt.Name = "nudIngresoHorasExt";
-            this.nudIngresoHorasExt.ReadOnly = true;
-            this.nudIngresoHorasExt.Size = new System.Drawing.Size(120, 27);
-            this.nudIngresoHorasExt.TabIndex = 3;
-            // 
-            // nudIngresoDiasLab
-            // 
-            this.nudIngresoDiasLab.Location = new System.Drawing.Point(330, 47);
-            this.nudIngresoDiasLab.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.nudIngresoDiasLab.Name = "nudIngresoDiasLab";
-            this.nudIngresoDiasLab.ReadOnly = true;
-            this.nudIngresoDiasLab.Size = new System.Drawing.Size(120, 27);
-            this.nudIngresoDiasLab.TabIndex = 5;
-            // 
-            // nudIngresoDiasJust
-            // 
-            this.nudIngresoDiasJust.Location = new System.Drawing.Point(330, 103);
-            this.nudIngresoDiasJust.Maximum = new decimal(new int[] {
-            31,
-            0,
-            0,
-            0});
-            this.nudIngresoDiasJust.Name = "nudIngresoDiasJust";
-            this.nudIngresoDiasJust.ReadOnly = true;
-            this.nudIngresoDiasJust.Size = new System.Drawing.Size(120, 27);
-            this.nudIngresoDiasJust.TabIndex = 6;
+            this.btnIngresarDias.Location = new System.Drawing.Point(498, 291);
+            this.btnIngresarDias.Name = "btnIngresarDias";
+            this.btnIngresarDias.Size = new System.Drawing.Size(95, 31);
+            this.btnIngresarDias.TabIndex = 5;
+            this.btnIngresarDias.Text = "Ingresar";
+            this.btnIngresarDias.UseVisualStyleBackColor = true;
+            this.btnIngresarDias.Click += new System.EventHandler(this.btnIngresarDias_Click);
             // 
             // nudIngresoDiasInjust
             // 
@@ -357,6 +252,75 @@
             this.nudIngresoDiasInjust.Size = new System.Drawing.Size(120, 27);
             this.nudIngresoDiasInjust.TabIndex = 7;
             // 
+            // nudIngresoDiasJust
+            // 
+            this.nudIngresoDiasJust.Location = new System.Drawing.Point(330, 103);
+            this.nudIngresoDiasJust.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.nudIngresoDiasJust.Name = "nudIngresoDiasJust";
+            this.nudIngresoDiasJust.ReadOnly = true;
+            this.nudIngresoDiasJust.Size = new System.Drawing.Size(120, 27);
+            this.nudIngresoDiasJust.TabIndex = 6;
+            // 
+            // nudIngresoDiasLab
+            // 
+            this.nudIngresoDiasLab.Location = new System.Drawing.Point(330, 47);
+            this.nudIngresoDiasLab.Maximum = new decimal(new int[] {
+            31,
+            0,
+            0,
+            0});
+            this.nudIngresoDiasLab.Name = "nudIngresoDiasLab";
+            this.nudIngresoDiasLab.ReadOnly = true;
+            this.nudIngresoDiasLab.Size = new System.Drawing.Size(120, 27);
+            this.nudIngresoDiasLab.TabIndex = 5;
+            // 
+            // lblIngresoDiasInjust
+            // 
+            this.lblIngresoDiasInjust.AutoSize = true;
+            this.lblIngresoDiasInjust.Location = new System.Drawing.Point(7, 154);
+            this.lblIngresoDiasInjust.Name = "lblIngresoDiasInjust";
+            this.lblIngresoDiasInjust.Size = new System.Drawing.Size(315, 20);
+            this.lblIngresoDiasInjust.TabIndex = 4;
+            this.lblIngresoDiasInjust.Text = "Total de Dias Ausentado (Injustificado):";
+            // 
+            // lblIngresoDiasJust
+            // 
+            this.lblIngresoDiasJust.AutoSize = true;
+            this.lblIngresoDiasJust.Location = new System.Drawing.Point(7, 106);
+            this.lblIngresoDiasJust.Name = "lblIngresoDiasJust";
+            this.lblIngresoDiasJust.Size = new System.Drawing.Size(300, 20);
+            this.lblIngresoDiasJust.TabIndex = 3;
+            this.lblIngresoDiasJust.Text = "Total de Dias Ausentado (Justificado):";
+            // 
+            // lblIngresoDias
+            // 
+            this.lblIngresoDias.AutoSize = true;
+            this.lblIngresoDias.Location = new System.Drawing.Point(7, 54);
+            this.lblIngresoDias.Name = "lblIngresoDias";
+            this.lblIngresoDias.Size = new System.Drawing.Size(196, 20);
+            this.lblIngresoDias.TabIndex = 2;
+            this.lblIngresoDias.Text = "Total de Dias Laborados";
+            // 
+            // gbxIngresoHoras
+            // 
+            this.gbxIngresoHoras.Controls.Add(this.btnIngresarHoras);
+            this.gbxIngresoHoras.Controls.Add(this.nudIngresoHorasExt);
+            this.gbxIngresoHoras.Controls.Add(this.nudIngresoHorasOrd);
+            this.gbxIngresoHoras.Controls.Add(this.lblIngresoHorasExt);
+            this.gbxIngresoHoras.Controls.Add(this.lblIngresoHorasOrd);
+            this.gbxIngresoHoras.Location = new System.Drawing.Point(10, 218);
+            this.gbxIngresoHoras.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxIngresoHoras.Name = "gbxIngresoHoras";
+            this.gbxIngresoHoras.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxIngresoHoras.Size = new System.Drawing.Size(602, 329);
+            this.gbxIngresoHoras.TabIndex = 3;
+            this.gbxIngresoHoras.TabStop = false;
+            this.gbxIngresoHoras.Text = "Ingreso de Horas";
+            // 
             // btnIngresarHoras
             // 
             this.btnIngresarHoras.Location = new System.Drawing.Point(490, 291);
@@ -367,18 +331,79 @@
             this.btnIngresarHoras.UseVisualStyleBackColor = true;
             this.btnIngresarHoras.Click += new System.EventHandler(this.btnIngresarHoras_Click);
             // 
-            // btnIngresarDias
+            // nudIngresoHorasExt
             // 
-            this.btnIngresarDias.Location = new System.Drawing.Point(498, 291);
-            this.btnIngresarDias.Name = "btnIngresarDias";
-            this.btnIngresarDias.Size = new System.Drawing.Size(95, 31);
-            this.btnIngresarDias.TabIndex = 5;
-            this.btnIngresarDias.Text = "Ingresar";
-            this.btnIngresarDias.UseVisualStyleBackColor = true;
-            this.btnIngresarDias.Click += new System.EventHandler(this.btnIngresarDias_Click);
+            this.nudIngresoHorasExt.Location = new System.Drawing.Point(163, 99);
+            this.nudIngresoHorasExt.Name = "nudIngresoHorasExt";
+            this.nudIngresoHorasExt.ReadOnly = true;
+            this.nudIngresoHorasExt.Size = new System.Drawing.Size(120, 27);
+            this.nudIngresoHorasExt.TabIndex = 3;
+            // 
+            // nudIngresoHorasOrd
+            // 
+            this.nudIngresoHorasOrd.Location = new System.Drawing.Point(163, 47);
+            this.nudIngresoHorasOrd.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudIngresoHorasOrd.Name = "nudIngresoHorasOrd";
+            this.nudIngresoHorasOrd.ReadOnly = true;
+            this.nudIngresoHorasOrd.Size = new System.Drawing.Size(120, 27);
+            this.nudIngresoHorasOrd.TabIndex = 2;
+            // 
+            // lblIngresoHorasExt
+            // 
+            this.lblIngresoHorasExt.AutoSize = true;
+            this.lblIngresoHorasExt.Location = new System.Drawing.Point(9, 106);
+            this.lblIngresoHorasExt.Name = "lblIngresoHorasExt";
+            this.lblIngresoHorasExt.Size = new System.Drawing.Size(105, 20);
+            this.lblIngresoHorasExt.TabIndex = 1;
+            this.lblIngresoHorasExt.Text = "Horas Extra:";
+            // 
+            // lblIngresoHorasOrd
+            // 
+            this.lblIngresoHorasOrd.AutoSize = true;
+            this.lblIngresoHorasOrd.Location = new System.Drawing.Point(9, 54);
+            this.lblIngresoHorasOrd.Name = "lblIngresoHorasOrd";
+            this.lblIngresoHorasOrd.Size = new System.Drawing.Size(148, 20);
+            this.lblIngresoHorasOrd.TabIndex = 0;
+            this.lblIngresoHorasOrd.Text = "Horas Ordinarias:";
+            // 
+            // lblIngresoPuesto
+            // 
+            this.lblIngresoPuesto.AutoSize = true;
+            this.lblIngresoPuesto.Location = new System.Drawing.Point(28, 95);
+            this.lblIngresoPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIngresoPuesto.Name = "lblIngresoPuesto";
+            this.lblIngresoPuesto.Size = new System.Drawing.Size(67, 20);
+            this.lblIngresoPuesto.TabIndex = 2;
+            this.lblIngresoPuesto.Text = "Puesto:";
+            // 
+            // lblNombreEmp
+            // 
+            this.lblNombreEmp.AutoSize = true;
+            this.lblNombreEmp.Location = new System.Drawing.Point(28, 60);
+            this.lblNombreEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombreEmp.Name = "lblNombreEmp";
+            this.lblNombreEmp.Size = new System.Drawing.Size(191, 20);
+            this.lblNombreEmp.TabIndex = 1;
+            this.lblNombreEmp.Text = "Nombre del Empleado:";
+            // 
+            // lblIngresoIdEmp
+            // 
+            this.lblIngresoIdEmp.AutoSize = true;
+            this.lblIngresoIdEmp.Location = new System.Drawing.Point(28, 24);
+            this.lblIngresoIdEmp.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblIngresoIdEmp.Name = "lblIngresoIdEmp";
+            this.lblIngresoIdEmp.Size = new System.Drawing.Size(139, 20);
+            this.lblIngresoIdEmp.TabIndex = 0;
+            this.lblIngresoIdEmp.Text = "ID de Empleado:";
             // 
             // tbpModificar
             // 
+            this.tbpModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpModificar.Controls.Add(this.txtModificarPeriodoFin);
             this.tbpModificar.Controls.Add(this.btnModificarLimpiar);
             this.tbpModificar.Controls.Add(this.btnModificarBuscarEmp);
             this.tbpModificar.Controls.Add(this.lblModificarPeriodo);
@@ -397,8 +422,25 @@
             this.tbpModificar.Padding = new System.Windows.Forms.Padding(4);
             this.tbpModificar.Size = new System.Drawing.Size(1222, 556);
             this.tbpModificar.TabIndex = 1;
-            this.tbpModificar.Text = "Modificar";
-            this.tbpModificar.UseVisualStyleBackColor = true;
+            this.tbpModificar.Text = "Buscar/Modificar";
+            // 
+            // txtModificarPeriodoFin
+            // 
+            this.txtModificarPeriodoFin.Enabled = false;
+            this.txtModificarPeriodoFin.Location = new System.Drawing.Point(401, 126);
+            this.txtModificarPeriodoFin.Name = "txtModificarPeriodoFin";
+            this.txtModificarPeriodoFin.Size = new System.Drawing.Size(142, 27);
+            this.txtModificarPeriodoFin.TabIndex = 12;
+            // 
+            // btnModificarLimpiar
+            // 
+            this.btnModificarLimpiar.Location = new System.Drawing.Point(563, 54);
+            this.btnModificarLimpiar.Name = "btnModificarLimpiar";
+            this.btnModificarLimpiar.Size = new System.Drawing.Size(154, 27);
+            this.btnModificarLimpiar.TabIndex = 11;
+            this.btnModificarLimpiar.Text = "Limpiar";
+            this.btnModificarLimpiar.UseVisualStyleBackColor = true;
+            this.btnModificarLimpiar.Click += new System.EventHandler(this.btnModificarLimpiar_Click);
             // 
             // btnModificarBuscarEmp
             // 
@@ -422,12 +464,14 @@
             // 
             // cmbModificarPeriodo
             // 
+            this.cmbModificarPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificarPeriodo.FormattingEnabled = true;
             this.cmbModificarPeriodo.Location = new System.Drawing.Point(231, 125);
             this.cmbModificarPeriodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbModificarPeriodo.Name = "cmbModificarPeriodo";
-            this.cmbModificarPeriodo.Size = new System.Drawing.Size(312, 28);
+            this.cmbModificarPeriodo.Size = new System.Drawing.Size(162, 28);
             this.cmbModificarPeriodo.TabIndex = 8;
+            this.cmbModificarPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbModificarPeriodo_SelectedIndexChanged);
             // 
             // txtModificarPuesto
             // 
@@ -644,49 +688,29 @@
             this.lblModificarIdEmp.TabIndex = 0;
             this.lblModificarIdEmp.Text = "ID de Empleado:";
             // 
-            // btnModificarLimpiar
-            // 
-            this.btnModificarLimpiar.Location = new System.Drawing.Point(563, 54);
-            this.btnModificarLimpiar.Name = "btnModificarLimpiar";
-            this.btnModificarLimpiar.Size = new System.Drawing.Size(154, 27);
-            this.btnModificarLimpiar.TabIndex = 11;
-            this.btnModificarLimpiar.Text = "Limpiar";
-            this.btnModificarLimpiar.UseVisualStyleBackColor = true;
-            this.btnModificarLimpiar.Click += new System.EventHandler(this.btnModificarLimpiar_Click);
-            // 
-            // btnIngrespLimpiar
-            // 
-            this.btnIngrespLimpiar.Location = new System.Drawing.Point(563, 54);
-            this.btnIngrespLimpiar.Name = "btnIngrespLimpiar";
-            this.btnIngrespLimpiar.Size = new System.Drawing.Size(154, 27);
-            this.btnIngrespLimpiar.TabIndex = 11;
-            this.btnIngrespLimpiar.Text = "Limpiar";
-            this.btnIngrespLimpiar.UseVisualStyleBackColor = true;
-            this.btnIngrespLimpiar.Click += new System.EventHandler(this.btnIngrespLimpiar_Click);
-            // 
             // frmControlHorasDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1230, 589);
-            this.ControlBox = false;
             this.Controls.Add(this.tbcControlHorasDias);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmControlHorasDias";
             this.Load += new System.EventHandler(this.frmControlHorasDias_Load);
             this.tbcControlHorasDias.ResumeLayout(false);
             this.tbpIngreso.ResumeLayout(false);
             this.tbpIngreso.PerformLayout();
-            this.gbxIngresoHoras.ResumeLayout(false);
-            this.gbxIngresoHoras.PerformLayout();
             this.gbxIngresoDias.ResumeLayout(false);
             this.gbxIngresoDias.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasOrd)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasExt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasLab)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasJust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasInjust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasJust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoDiasLab)).EndInit();
+            this.gbxIngresoHoras.ResumeLayout(false);
+            this.gbxIngresoHoras.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasExt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIngresoHorasOrd)).EndInit();
             this.tbpModificar.ResumeLayout(false);
             this.tbpModificar.PerformLayout();
             this.gbxModificarDias.ResumeLayout(false);
@@ -755,5 +779,7 @@
         private System.Windows.Forms.Label lblModificarIdEmp;
         private System.Windows.Forms.Button btnIngrespLimpiar;
         private System.Windows.Forms.Button btnModificarLimpiar;
+        private System.Windows.Forms.TextBox txtModificarPeriodoFin;
+        private System.Windows.Forms.TextBox txtIngresoFechFin;
     }
 }
