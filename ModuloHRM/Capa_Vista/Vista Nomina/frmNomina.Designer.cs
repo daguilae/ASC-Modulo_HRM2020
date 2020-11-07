@@ -439,7 +439,6 @@
             // 
             // dtpGestPlanFin
             // 
-            this.dtpGestPlanFin.Enabled = false;
             this.dtpGestPlanFin.Location = new System.Drawing.Point(311, 147);
             this.dtpGestPlanFin.Name = "dtpGestPlanFin";
             this.dtpGestPlanFin.Size = new System.Drawing.Size(330, 27);
@@ -451,6 +450,7 @@
             this.dtpGestPlanIni.Name = "dtpGestPlanIni";
             this.dtpGestPlanIni.Size = new System.Drawing.Size(330, 27);
             this.dtpGestPlanIni.TabIndex = 4;
+            this.dtpGestPlanIni.ValueChanged += new System.EventHandler(this.dtpGestPlanIni_ValueChanged);
             // 
             // txtGestPlanNom
             // 
