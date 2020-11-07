@@ -78,7 +78,9 @@ namespace Capa_Vista.Vista_Capacitacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+
+        private void btnBuscElimi_Click(object sender, EventArgs e)
         {
             string[] datos = new string[6];
             string[] datosc = new string[3];
@@ -104,7 +106,7 @@ namespace Capa_Vista.Vista_Capacitacion
             cmbCursoE.Text = datos[5];
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnEliminarC_Click(object sender, EventArgs e)
         {
             string idCapa = txtCodigoCapE.Text;
             string idEncCapa = txtCodigoEncCapE.Text;
