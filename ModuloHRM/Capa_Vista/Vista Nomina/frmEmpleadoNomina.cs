@@ -220,6 +220,10 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarCamposEliminar()
         {
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(cmbEliminarFechPlan.Text);
+
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -228,6 +232,11 @@ namespace Capa_Vista.Vista_Nomina
             else if (txtEliminarIdEmp.Text == "" || txtEliminarNomEmp.Text == "" || cmbEliminarDedPer.Text == "" || cmbEliminarFechPlan.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (Hoy.Month.CompareTo(Periodo.Month) == 1 || Hoy.Year.CompareTo(Periodo.Year) == 1)
+            {
+                MessageBox.Show("No se puede realizar la eliminación, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
