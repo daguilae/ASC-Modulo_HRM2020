@@ -41,7 +41,7 @@ namespace Capa_Vista.Vista_Nomina
         {
             if (txtEliminarIdEmp.Text == "")
             {
-                MessageBox.Show("Ingree el ID del empleado.", "ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el ID del empleado.", "ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -82,7 +82,7 @@ namespace Capa_Vista.Vista_Nomina
         {
             if(txtIngresoIdEmp.Text == "")
             {
-                MessageBox.Show("Ingree el ID del empleado.","ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el ID del empleado.","ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
