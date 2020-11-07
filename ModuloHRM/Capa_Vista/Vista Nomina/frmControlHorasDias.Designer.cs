@@ -55,6 +55,7 @@
             this.lblNombreEmp = new System.Windows.Forms.Label();
             this.lblIngresoIdEmp = new System.Windows.Forms.Label();
             this.tbpModificar = new System.Windows.Forms.TabPage();
+            this.txtModificarPeriodoFin = new System.Windows.Forms.TextBox();
             this.btnModificarLimpiar = new System.Windows.Forms.Button();
             this.btnModificarBuscarEmp = new System.Windows.Forms.Button();
             this.lblModificarPeriodo = new System.Windows.Forms.Label();
@@ -79,7 +80,7 @@
             this.lblModificarPuesto = new System.Windows.Forms.Label();
             this.lblModificarNomEmp = new System.Windows.Forms.Label();
             this.lblModificarIdEmp = new System.Windows.Forms.Label();
-            this.txtModificarPeriodoFin = new System.Windows.Forms.TextBox();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
             this.tbcControlHorasDias.SuspendLayout();
             this.tbpIngreso.SuspendLayout();
             this.gbxIngresoDias.SuspendLayout();
@@ -113,6 +114,7 @@
             // 
             // tbpIngreso
             // 
+            this.tbpIngreso.Controls.Add(this.txtIngresoFechFin);
             this.tbpIngreso.Controls.Add(this.btnIngrespLimpiar);
             this.tbpIngreso.Controls.Add(this.btnIngresoBuscarEmp);
             this.tbpIngreso.Controls.Add(this.lblIngresoPeriodo);
@@ -171,8 +173,9 @@
             this.cmbIngresoPeriodo.Location = new System.Drawing.Point(231, 125);
             this.cmbIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbIngresoPeriodo.Name = "cmbIngresoPeriodo";
-            this.cmbIngresoPeriodo.Size = new System.Drawing.Size(312, 28);
+            this.cmbIngresoPeriodo.Size = new System.Drawing.Size(162, 28);
             this.cmbIngresoPeriodo.TabIndex = 8;
+            this.cmbIngresoPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbIngresoPeriodo_SelectedIndexChanged);
             // 
             // txtIngresoPuestoEmp
             // 
@@ -413,6 +416,14 @@
             this.tbpModificar.Text = "Buscar/Modificar";
             this.tbpModificar.UseVisualStyleBackColor = true;
             // 
+            // txtModificarPeriodoFin
+            // 
+            this.txtModificarPeriodoFin.Enabled = false;
+            this.txtModificarPeriodoFin.Location = new System.Drawing.Point(401, 126);
+            this.txtModificarPeriodoFin.Name = "txtModificarPeriodoFin";
+            this.txtModificarPeriodoFin.Size = new System.Drawing.Size(142, 27);
+            this.txtModificarPeriodoFin.TabIndex = 12;
+            // 
             // btnModificarLimpiar
             // 
             this.btnModificarLimpiar.Location = new System.Drawing.Point(563, 54);
@@ -450,7 +461,7 @@
             this.cmbModificarPeriodo.Location = new System.Drawing.Point(231, 125);
             this.cmbModificarPeriodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbModificarPeriodo.Name = "cmbModificarPeriodo";
-            this.cmbModificarPeriodo.Size = new System.Drawing.Size(312, 28);
+            this.cmbModificarPeriodo.Size = new System.Drawing.Size(162, 28);
             this.cmbModificarPeriodo.TabIndex = 8;
             this.cmbModificarPeriodo.SelectedIndexChanged += new System.EventHandler(this.cmbModificarPeriodo_SelectedIndexChanged);
             // 
@@ -669,13 +680,13 @@
             this.lblModificarIdEmp.TabIndex = 0;
             this.lblModificarIdEmp.Text = "ID de Empleado:";
             // 
-            // txtModificarPeriodoFin
+            // txtIngresoFechFin
             // 
-            this.txtModificarPeriodoFin.Enabled = false;
-            this.txtModificarPeriodoFin.Location = new System.Drawing.Point(563, 125);
-            this.txtModificarPeriodoFin.Name = "txtModificarPeriodoFin";
-            this.txtModificarPeriodoFin.Size = new System.Drawing.Size(154, 27);
-            this.txtModificarPeriodoFin.TabIndex = 12;
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(400, 126);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(142, 27);
+            this.txtIngresoFechFin.TabIndex = 12;
             // 
             // frmControlHorasDias
             // 
@@ -769,5 +780,6 @@
         private System.Windows.Forms.Button btnIngrespLimpiar;
         private System.Windows.Forms.Button btnModificarLimpiar;
         private System.Windows.Forms.TextBox txtModificarPeriodoFin;
+        private System.Windows.Forms.TextBox txtIngresoFechFin;
     }
 }
