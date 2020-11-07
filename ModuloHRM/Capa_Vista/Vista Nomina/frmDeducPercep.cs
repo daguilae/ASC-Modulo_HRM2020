@@ -213,6 +213,34 @@ namespace Capa_Vista.Vista_Nomina
             return Validado;
         }
 
+        private void txtIngresoMontoCob_TextChanged(object sender, EventArgs e)
+        {
+            decimal d;
+            if (decimal.TryParse(txtIngresoMontoCob.Text, out d) || txtIngresoMontoCob.Text == "")
+            {
+            }
+            else
+            {
+                txtIngresoMontoCob.Text = "";
+                MessageBox.Show("Ingrese unicamente numeros.");
+                return;
+            }
+        }
+
+        private void txtModificarMontoCob_TextChanged(object sender, EventArgs e)
+        {
+            decimal d;
+            if (decimal.TryParse(txtModificarMontoCob.Text, out d) || txtModificarMontoCob.Text == "")
+            {
+            }
+            else
+            {
+                txtModificarMontoCob.Text = "";
+                MessageBox.Show("Ingrese unicamente numeros.");
+                return;
+            }
+        }
+
         private bool funcValidarCamposEliminar()
         {
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
