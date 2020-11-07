@@ -104,6 +104,7 @@
             // 
             // tbpCapacitacionEdit
             // 
+            this.tbpCapacitacionEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEdit);
             this.tbpCapacitacionEdit.Controls.Add(this.txtCodiCapa);
             this.tbpCapacitacionEdit.Controls.Add(this.gbxDetCap);
@@ -119,10 +120,10 @@
             this.tbpCapacitacionEdit.Size = new System.Drawing.Size(927, 287);
             this.tbpCapacitacionEdit.TabIndex = 0;
             this.tbpCapacitacionEdit.Text = "Editar Capacitacion";
-            this.tbpCapacitacionEdit.UseVisualStyleBackColor = true;
             // 
             // tbpEliminarCap
             // 
+            this.tbpEliminarCap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpEliminarCap.Controls.Add(this.button3);
             this.tbpEliminarCap.Controls.Add(this.button1);
             this.tbpEliminarCap.Controls.Add(this.textBox1);
@@ -138,7 +139,6 @@
             this.tbpEliminarCap.Size = new System.Drawing.Size(927, 287);
             this.tbpEliminarCap.TabIndex = 1;
             this.tbpEliminarCap.Text = "Eliminar Capacitacion";
-            this.tbpEliminarCap.UseVisualStyleBackColor = true;
             // 
             // txtCodiCapa
             // 
@@ -632,9 +632,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(953, 333);
             this.Controls.Add(this.tbpMantenimientoCap);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMantenimientoCapacitacion";
             this.Text = "Mantenimientos Capacitacion";
