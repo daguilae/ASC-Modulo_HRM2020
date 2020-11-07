@@ -56,10 +56,10 @@
             // 
             this.dgvFaltas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFaltas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFaltas.Location = new System.Drawing.Point(427, 139);
+            this.dgvFaltas.Location = new System.Drawing.Point(403, 139);
             this.dgvFaltas.Name = "dgvFaltas";
             this.dgvFaltas.RowHeadersWidth = 51;
-            this.dgvFaltas.Size = new System.Drawing.Size(579, 262);
+            this.dgvFaltas.Size = new System.Drawing.Size(649, 262);
             this.dgvFaltas.TabIndex = 36;
             // 
             // rbtnInactivo
@@ -158,12 +158,12 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(321, 37);
             this.txtDescripcion.TabIndex = 50;
-            this.txtDescripcion.Tag = "descripción_falta";
+            this.txtDescripcion.Tag = "descripcion_falta";
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(395, 381);
+            this.txtEstado.Location = new System.Drawing.Point(357, 369);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(26, 20);
             this.txtEstado.TabIndex = 51;
