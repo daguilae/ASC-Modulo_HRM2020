@@ -613,6 +613,30 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        public void funcCrearPeriodo(string Nom, string FI, string FF)
+        {
+            try
+            {
+                string Correlativo = "SELECT IFNULL(MAX(pk_id_encabezado_nomina),0) +1 FROM encabezado_nomina";
+                OdbcCommand Query_Validacion = new OdbcCommand(Correlativo, Conexion.funcconexion());
+                int IdEnc = Convert.ToInt32(Query_Validacion.ExecuteScalar());
+                OdbcDataReader Ejecucion1 = Query_Validacion.ExecuteReader();
+
+                string sentencia = "INSERT INTO encabezado_nomina (pk_id_encabezado_nomina, nombre_encabezado_nomina, fecha_inicio_encabezado_nomina, fecha_fin_encabezado_nomina) VALUES ('" + IdEnc + "','" + Nom + "','" + FI + "','" + FF + "')";
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+                MessageBox.Show("Ingreso Exitoso", "INGRESO DE PERIODO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         // Metodos para formulario frmControlHorasDias
 
         public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)

@@ -60,7 +60,28 @@ namespace Capa_Vista.Vista_Nomina
 
         private void btnGestPlanCrear_Click(object sender, EventArgs e)
         {
+            if(txtGestPlanNom.Text == "")
+            {
+                MessageBox.Show("No se ha ingresado un nombre.", "ERROR NOMBRE PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                string FI, FF;
+                FI = dtpGestPlanIni.Value.Date.ToShortDateString();
+                FF = dtpGestPlanFin.Value.Date.ToShortDateString();
 
+                if(FI == FF)
+                {
+                    MessageBox.Show("La fecha de inicio y de finalización del periodo son las mismas.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    ConsNom.funcCrearPeriodo(txtGestPlanNom.Text, FI, FF);
+                    txtGestPlanNom.Text = "";
+                    dtpGestPlanIni.Value = DateTime.Today;
+                    dtpGestPlanFin.Value = DateTime.Today;
+                }
+            }
         }
 
         private void funcDedPer()
