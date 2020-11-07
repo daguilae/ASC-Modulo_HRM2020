@@ -103,5 +103,9 @@ namespace Capa_Controlador.Controlador_Capacitación
         public void funcActualizarCapa(string idCapacitacion, string fechaInicio, string fechaFin, string idEmpleado, string nomCur, string horas, string idEncCapa) {
             cons.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
         }
+        public void funcEliminarCurso(string idCapa, string idEncCapa) {
+
+            cons.funcEliminarCurso(idCapa, idEncCapa);
+        }
     }
 }

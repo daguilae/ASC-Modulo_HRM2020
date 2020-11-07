@@ -103,5 +103,12 @@ namespace Capa_Vista.Vista_Capacitacion
             nudHorasE.Value = Convert.ToInt32(datos[4]);
             cmbCursoE.Text = datos[5];
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string idCapa = txtCodigoCapE.Text;
+            string idEncCapa = txtCodigoEncCapE.Text;
+            con.funcEliminarCurso(idCapa, idEncCapa);
+        }
     }
 }
