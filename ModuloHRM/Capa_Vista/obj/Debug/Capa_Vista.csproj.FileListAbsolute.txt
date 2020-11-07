@@ -292,13 +292,11 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capaci
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmIngresoCurso.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas.resources
-<<<<<<< HEAD
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmCursos.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmIngresoCurso.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
-=======
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas.resources
->>>>>>> master
+
