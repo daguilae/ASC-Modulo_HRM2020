@@ -750,7 +750,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCursos";
-            this.Text = "Cursos";
+            this.Text = "302 - Cursos";
             this.tbcCursos.ResumeLayout(false);
             this.tbpIngresar.ResumeLayout(false);
             this.tbpIngresar.PerformLayout();

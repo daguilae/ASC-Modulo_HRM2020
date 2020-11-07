@@ -114,7 +114,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIngresoCurso";
-            this.Text = "Ingreso Cursos";
+            this.Text = "304 - Ingreso Cursos";
             this.gbxCursos.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -639,7 +639,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoCapacitacion";
-            this.Text = "Mantenimientos Capacitacion";
+            this.Text = "305 - Mantenimientos Capacitacion";
             this.tbpMantenimientoCap.ResumeLayout(false);
             this.tbpCapacitacionEdit.ResumeLayout(false);
             this.tbpCapacitacionEdit.PerformLayout();

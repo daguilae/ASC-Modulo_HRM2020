@@ -600,7 +600,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEmpCapacitado";
-            this.Text = "Capacitaciones";
+            this.Text = "303 - Capacitaciones";
             this.tbcCapacitacion.ResumeLayout(false);
             this.tbpAsignacion.ResumeLayout(false);
             this.tbpAsignacion.PerformLayout();
