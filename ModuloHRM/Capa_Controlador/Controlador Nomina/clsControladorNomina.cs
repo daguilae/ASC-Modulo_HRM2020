@@ -156,6 +156,11 @@ namespace Capa_Controlador.Controlador_Nomina
             return Datos;
         }
 
+        public void funcCrearPeriodo(string Nom, string FI, string FF)
+        {
+            Consulta.funcCrearPeriodo(Nom, FI, FF);
+        }
+
         //Metodos para formulario frmControlHorasDias
 
         public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
