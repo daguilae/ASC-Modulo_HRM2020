@@ -45,8 +45,6 @@
             this.nudHoras = new System.Windows.Forms.NumericUpDown();
             this.lblHoras = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.gbxHstEmp = new System.Windows.Forms.GroupBox();
-            this.dgvCompetencias = new System.Windows.Forms.DataGridView();
             this.btnBuscarEmp = new System.Windows.Forms.Button();
             this.txtBusqCodEmp = new System.Windows.Forms.TextBox();
             this.lblCodEmp = new System.Windows.Forms.Label();
@@ -57,6 +55,8 @@
             this.lblEstao = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.lblDept = new System.Windows.Forms.Label();
+            this.btnBuscarEdit = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -69,33 +69,27 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.tbpMantenimientoCap.SuspendLayout();
             this.tbpCapacitacionEdit.SuspendLayout();
             this.tbpEliminarCap.SuspendLayout();
             this.gbxDetCap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).BeginInit();
-            this.gbxHstEmp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
             this.gbxDatEmp.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbpMantenimientoCap
@@ -105,16 +99,16 @@
             this.tbpMantenimientoCap.Location = new System.Drawing.Point(12, 12);
             this.tbpMantenimientoCap.Name = "tbpMantenimientoCap";
             this.tbpMantenimientoCap.SelectedIndex = 0;
-            this.tbpMantenimientoCap.Size = new System.Drawing.Size(935, 520);
+            this.tbpMantenimientoCap.Size = new System.Drawing.Size(935, 316);
             this.tbpMantenimientoCap.TabIndex = 0;
             // 
             // tbpCapacitacionEdit
             // 
+            this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEdit);
             this.tbpCapacitacionEdit.Controls.Add(this.txtCodiCapa);
             this.tbpCapacitacionEdit.Controls.Add(this.gbxDetCap);
             this.tbpCapacitacionEdit.Controls.Add(this.btnIngresoCurso);
             this.tbpCapacitacionEdit.Controls.Add(this.lblCodigo);
-            this.tbpCapacitacionEdit.Controls.Add(this.gbxHstEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.txtBusqCodEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.lblCodEmp);
@@ -122,26 +116,26 @@
             this.tbpCapacitacionEdit.Location = new System.Drawing.Point(4, 25);
             this.tbpCapacitacionEdit.Name = "tbpCapacitacionEdit";
             this.tbpCapacitacionEdit.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCapacitacionEdit.Size = new System.Drawing.Size(927, 491);
+            this.tbpCapacitacionEdit.Size = new System.Drawing.Size(927, 287);
             this.tbpCapacitacionEdit.TabIndex = 0;
             this.tbpCapacitacionEdit.Text = "Editar Capacitacion";
             this.tbpCapacitacionEdit.UseVisualStyleBackColor = true;
             // 
             // tbpEliminarCap
             // 
+            this.tbpEliminarCap.Controls.Add(this.button3);
+            this.tbpEliminarCap.Controls.Add(this.button1);
             this.tbpEliminarCap.Controls.Add(this.textBox1);
             this.tbpEliminarCap.Controls.Add(this.groupBox1);
-            this.tbpEliminarCap.Controls.Add(this.button1);
-            this.tbpEliminarCap.Controls.Add(this.label6);
-            this.tbpEliminarCap.Controls.Add(this.groupBox2);
             this.tbpEliminarCap.Controls.Add(this.button2);
+            this.tbpEliminarCap.Controls.Add(this.label6);
             this.tbpEliminarCap.Controls.Add(this.textBox3);
             this.tbpEliminarCap.Controls.Add(this.label7);
-            this.tbpEliminarCap.Controls.Add(this.groupBox3);
+            this.tbpEliminarCap.Controls.Add(this.groupBox2);
             this.tbpEliminarCap.Location = new System.Drawing.Point(4, 25);
             this.tbpEliminarCap.Name = "tbpEliminarCap";
             this.tbpEliminarCap.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpEliminarCap.Size = new System.Drawing.Size(927, 491);
+            this.tbpEliminarCap.Size = new System.Drawing.Size(927, 287);
             this.tbpEliminarCap.TabIndex = 1;
             this.tbpEliminarCap.Text = "Eliminar Capacitacion";
             this.tbpEliminarCap.UseVisualStyleBackColor = true;
@@ -151,7 +145,7 @@
             this.txtCodiCapa.Location = new System.Drawing.Point(199, 7);
             this.txtCodiCapa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodiCapa.Name = "txtCodiCapa";
-            this.txtCodiCapa.Size = new System.Drawing.Size(313, 23);
+            this.txtCodiCapa.Size = new System.Drawing.Size(221, 23);
             this.txtCodiCapa.TabIndex = 39;
             // 
             // gbxDetCap
@@ -167,18 +161,18 @@
             this.gbxDetCap.Controls.Add(this.nudHoras);
             this.gbxDetCap.Controls.Add(this.lblHoras);
             this.gbxDetCap.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxDetCap.Location = new System.Drawing.Point(528, 80);
+            this.gbxDetCap.Location = new System.Drawing.Point(526, 66);
             this.gbxDetCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbxDetCap.Name = "gbxDetCap";
             this.gbxDetCap.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxDetCap.Size = new System.Drawing.Size(393, 366);
+            this.gbxDetCap.Size = new System.Drawing.Size(393, 173);
             this.gbxDetCap.TabIndex = 45;
             this.gbxDetCap.TabStop = false;
             this.gbxDetCap.Text = "Detalles de Capacitación";
             // 
             // txtCodigoEncabezado
             // 
-            this.txtCodigoEncabezado.Location = new System.Drawing.Point(133, 42);
+            this.txtCodigoEncabezado.Location = new System.Drawing.Point(133, 17);
             this.txtCodigoEncabezado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoEncabezado.Name = "txtCodigoEncabezado";
             this.txtCodigoEncabezado.Size = new System.Drawing.Size(248, 23);
@@ -187,7 +181,7 @@
             // lblCodigoC
             // 
             this.lblCodigoC.AutoSize = true;
-            this.lblCodigoC.Location = new System.Drawing.Point(8, 46);
+            this.lblCodigoC.Location = new System.Drawing.Point(6, 20);
             this.lblCodigoC.Name = "lblCodigoC";
             this.lblCodigoC.Size = new System.Drawing.Size(51, 16);
             this.lblCodigoC.TabIndex = 10;
@@ -195,18 +189,18 @@
             // 
             // btnIngresoCurso
             // 
-            this.btnIngresoCurso.Location = new System.Drawing.Point(841, 459);
+            this.btnIngresoCurso.Location = new System.Drawing.Point(839, 247);
             this.btnIngresoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIngresoCurso.Name = "btnIngresoCurso";
             this.btnIngresoCurso.Size = new System.Drawing.Size(80, 28);
             this.btnIngresoCurso.TabIndex = 9;
-            this.btnIngresoCurso.Text = "Ingresar";
+            this.btnIngresoCurso.Text = "Actualizar";
             this.btnIngresoCurso.UseVisualStyleBackColor = true;
             // 
             // lblFeFin
             // 
             this.lblFeFin.AutoSize = true;
-            this.lblFeFin.Location = new System.Drawing.Point(8, 197);
+            this.lblFeFin.Location = new System.Drawing.Point(6, 116);
             this.lblFeFin.Name = "lblFeFin";
             this.lblFeFin.Size = new System.Drawing.Size(108, 16);
             this.lblFeFin.TabIndex = 8;
@@ -215,7 +209,7 @@
             // cmbCurso
             // 
             this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(133, 78);
+            this.cmbCurso.Location = new System.Drawing.Point(133, 48);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(248, 24);
@@ -224,7 +218,7 @@
             // lblFeIni
             // 
             this.lblFeIni.AutoSize = true;
-            this.lblFeIni.Location = new System.Drawing.Point(8, 153);
+            this.lblFeIni.Location = new System.Drawing.Point(6, 85);
             this.lblFeIni.Name = "lblFeIni";
             this.lblFeIni.Size = new System.Drawing.Size(95, 16);
             this.lblFeIni.TabIndex = 6;
@@ -233,7 +227,7 @@
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(7, 81);
+            this.lblCurso.Location = new System.Drawing.Point(6, 51);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(43, 16);
             this.lblCurso.TabIndex = 5;
@@ -241,7 +235,7 @@
             // 
             // dtpFechIni
             // 
-            this.dtpFechIni.Location = new System.Drawing.Point(134, 146);
+            this.dtpFechIni.Location = new System.Drawing.Point(133, 80);
             this.dtpFechIni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFechIni.Name = "dtpFechIni";
             this.dtpFechIni.Size = new System.Drawing.Size(248, 23);
@@ -249,7 +243,7 @@
             // 
             // dtpFechFin
             // 
-            this.dtpFechFin.Location = new System.Drawing.Point(134, 191);
+            this.dtpFechFin.Location = new System.Drawing.Point(133, 111);
             this.dtpFechFin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFechFin.Name = "dtpFechFin";
             this.dtpFechFin.Size = new System.Drawing.Size(248, 23);
@@ -257,7 +251,7 @@
             // 
             // nudHoras
             // 
-            this.nudHoras.Location = new System.Drawing.Point(301, 271);
+            this.nudHoras.Location = new System.Drawing.Point(301, 142);
             this.nudHoras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudHoras.Name = "nudHoras";
             this.nudHoras.Size = new System.Drawing.Size(80, 23);
@@ -266,7 +260,7 @@
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(8, 273);
+            this.lblHoras.Location = new System.Drawing.Point(6, 144);
             this.lblHoras.Name = "lblHoras";
             this.lblHoras.Size = new System.Drawing.Size(42, 16);
             this.lblHoras.TabIndex = 0;
@@ -281,35 +275,13 @@
             this.lblCodigo.TabIndex = 38;
             this.lblCodigo.Text = "Codigo de Capacitación";
             // 
-            // gbxHstEmp
-            // 
-            this.gbxHstEmp.Controls.Add(this.dgvCompetencias);
-            this.gbxHstEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxHstEmp.Location = new System.Drawing.Point(7, 246);
-            this.gbxHstEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxHstEmp.Name = "gbxHstEmp";
-            this.gbxHstEmp.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxHstEmp.Size = new System.Drawing.Size(514, 199);
-            this.gbxHstEmp.TabIndex = 44;
-            this.gbxHstEmp.TabStop = false;
-            this.gbxHstEmp.Text = "Historial de Competencia";
-            // 
-            // dgvCompetencias
-            // 
-            this.dgvCompetencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompetencias.Location = new System.Drawing.Point(8, 24);
-            this.dgvCompetencias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvCompetencias.Name = "dgvCompetencias";
-            this.dgvCompetencias.Size = new System.Drawing.Size(497, 165);
-            this.dgvCompetencias.TabIndex = 4;
-            // 
             // btnBuscarEmp
             // 
             this.btnBuscarEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEmp.Location = new System.Drawing.Point(425, 33);
+            this.btnBuscarEmp.Location = new System.Drawing.Point(426, 51);
             this.btnBuscarEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscarEmp.Name = "btnBuscarEmp";
-            this.btnBuscarEmp.Size = new System.Drawing.Size(87, 28);
+            this.btnBuscarEmp.Size = new System.Drawing.Size(87, 23);
             this.btnBuscarEmp.TabIndex = 42;
             this.btnBuscarEmp.Text = "Buscar";
             this.btnBuscarEmp.UseVisualStyleBackColor = true;
@@ -317,7 +289,7 @@
             // txtBusqCodEmp
             // 
             this.txtBusqCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqCodEmp.Location = new System.Drawing.Point(199, 36);
+            this.txtBusqCodEmp.Location = new System.Drawing.Point(200, 51);
             this.txtBusqCodEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBusqCodEmp.Name = "txtBusqCodEmp";
             this.txtBusqCodEmp.Size = new System.Drawing.Size(220, 23);
@@ -327,7 +299,7 @@
             // 
             this.lblCodEmp.AutoSize = true;
             this.lblCodEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodEmp.Location = new System.Drawing.Point(12, 39);
+            this.lblCodEmp.Location = new System.Drawing.Point(12, 54);
             this.lblCodEmp.Name = "lblCodEmp";
             this.lblCodEmp.Size = new System.Drawing.Size(113, 16);
             this.lblCodEmp.TabIndex = 40;
@@ -403,13 +375,31 @@
             this.lblDept.TabIndex = 11;
             this.lblDept.Text = "Departamento de Trabajo";
             // 
+            // btnBuscarEdit
+            // 
+            this.btnBuscarEdit.Location = new System.Drawing.Point(426, 6);
+            this.btnBuscarEdit.Name = "btnBuscarEdit";
+            this.btnBuscarEdit.Size = new System.Drawing.Size(87, 24);
+            this.btnBuscarEdit.TabIndex = 46;
+            this.btnBuscarEdit.Text = "Buscar";
+            this.btnBuscarEdit.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(426, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 23);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(199, 5);
+            this.textBox1.Location = new System.Drawing.Point(199, 9);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(313, 23);
-            this.textBox1.TabIndex = 48;
+            this.textBox1.Size = new System.Drawing.Size(220, 23);
+            this.textBox1.TabIndex = 49;
             // 
             // groupBox1
             // 
@@ -424,18 +414,18 @@
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(528, 78);
+            this.groupBox1.Location = new System.Drawing.Point(526, 65);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(393, 366);
+            this.groupBox1.Size = new System.Drawing.Size(393, 176);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalles de Capacitación";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 42);
+            this.textBox2.Location = new System.Drawing.Point(133, 17);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(248, 23);
@@ -444,7 +434,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 46);
+            this.label1.Location = new System.Drawing.Point(6, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 10;
@@ -453,7 +443,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 197);
+            this.label2.Location = new System.Drawing.Point(6, 116);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(108, 16);
             this.label2.TabIndex = 8;
@@ -462,7 +452,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(133, 78);
+            this.comboBox1.Location = new System.Drawing.Point(133, 48);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(248, 24);
@@ -471,7 +461,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 153);
+            this.label3.Location = new System.Drawing.Point(6, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 6;
@@ -480,7 +470,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 81);
+            this.label4.Location = new System.Drawing.Point(6, 51);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 5;
@@ -488,7 +478,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(134, 146);
+            this.dateTimePicker1.Location = new System.Drawing.Point(133, 80);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(248, 23);
@@ -496,7 +486,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(134, 191);
+            this.dateTimePicker2.Location = new System.Drawing.Point(133, 111);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(248, 23);
@@ -504,7 +494,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(301, 271);
+            this.numericUpDown1.Location = new System.Drawing.Point(301, 142);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 23);
@@ -513,101 +503,68 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 273);
+            this.label5.Location = new System.Drawing.Point(6, 144);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 16);
             this.label5.TabIndex = 0;
             this.label5.Text = "Horas";
             // 
-            // button1
+            // button2
             // 
-            this.button1.Location = new System.Drawing.Point(841, 457);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 28);
-            this.button1.TabIndex = 46;
-            this.button1.Text = "Ingresar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(841, 249);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(80, 28);
+            this.button2.TabIndex = 47;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 8);
+            this.label6.Location = new System.Drawing.Point(12, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(149, 16);
-            this.label6.TabIndex = 47;
+            this.label6.TabIndex = 48;
             this.label6.Text = "Codigo de Capacitación";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(7, 244);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(514, 199);
-            this.groupBox2.TabIndex = 53;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Historial de Competencia";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 24);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(497, 165);
-            this.dataGridView1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(425, 31);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 28);
-            this.button2.TabIndex = 51;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(199, 34);
+            this.textBox3.Location = new System.Drawing.Point(199, 53);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(220, 23);
-            this.textBox3.TabIndex = 50;
+            this.textBox3.TabIndex = 51;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 37);
+            this.label7.Location = new System.Drawing.Point(13, 56);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 16);
-            this.label7.TabIndex = 49;
+            this.label7.TabIndex = 50;
             this.label7.Text = "Código Empleado";
             // 
-            // groupBox3
+            // groupBox2
             // 
-            this.groupBox3.Controls.Add(this.textBox4);
-            this.groupBox3.Controls.Add(this.textBox5);
-            this.groupBox3.Controls.Add(this.textBox6);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(6, 78);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(514, 159);
-            this.groupBox3.TabIndex = 52;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos del Empleado";
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.textBox5);
+            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(6, 82);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(514, 159);
+            this.groupBox2.TabIndex = 53;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Datos del Empleado";
             // 
             // textBox4
             // 
@@ -660,11 +617,22 @@
             this.label10.TabIndex = 11;
             this.label10.Text = "Departamento de Trabajo";
             // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(426, 53);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 23);
+            this.button3.TabIndex = 56;
+            this.button3.Text = "Buscar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // frmMantenimientoCapacitacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 544);
+            this.ClientSize = new System.Drawing.Size(953, 333);
             this.Controls.Add(this.tbpMantenimientoCap);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -678,17 +646,13 @@
             this.gbxDetCap.ResumeLayout(false);
             this.gbxDetCap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).EndInit();
-            this.gbxHstEmp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();
             this.gbxDatEmp.ResumeLayout(false);
             this.gbxDatEmp.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -712,8 +676,6 @@
         private System.Windows.Forms.Label lblHoras;
         private System.Windows.Forms.Button btnIngresoCurso;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.GroupBox gbxHstEmp;
-        private System.Windows.Forms.DataGridView dgvCompetencias;
         private System.Windows.Forms.Button btnBuscarEmp;
         private System.Windows.Forms.TextBox txtBusqCodEmp;
         private System.Windows.Forms.Label lblCodEmp;
@@ -724,6 +686,9 @@
         private System.Windows.Forms.Label lblEstao;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblDept;
+        private System.Windows.Forms.Button btnBuscarEdit;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -736,14 +701,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
