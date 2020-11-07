@@ -294,10 +294,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1068, 408);
             this.Controls.Add(this.gbxDatosCompetencia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCompetencias";
-            this.Text = "Competencias";
+            this.Text = "306 - Competencias";
             this.Load += new System.EventHandler(this.frmCompetencias_Load);
             this.gbxDatosCompetencia.ResumeLayout(false);
             this.gbxDatosCompetencia.PerformLayout();

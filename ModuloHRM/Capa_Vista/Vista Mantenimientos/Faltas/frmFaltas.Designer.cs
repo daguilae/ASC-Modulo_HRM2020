@@ -54,6 +54,7 @@
             // 
             // dgvFaltas
             // 
+            this.dgvFaltas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvFaltas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFaltas.Location = new System.Drawing.Point(427, 139);
             this.dgvFaltas.Name = "dgvFaltas";
@@ -189,8 +190,9 @@
             this.Controls.Add(this.lblIDFaltas);
             this.Controls.Add(this.dgvFaltas);
             this.Controls.Add(this.NavegadorFaltas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmFaltas";
-            this.Text = "frmFaltas";
+            this.Text = "308 - Mantenimientos de Faltas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaltas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

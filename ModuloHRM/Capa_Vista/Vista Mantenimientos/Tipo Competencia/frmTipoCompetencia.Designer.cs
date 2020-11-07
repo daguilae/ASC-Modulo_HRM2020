@@ -92,6 +92,7 @@
             // 
             // dgvCompetencias
             // 
+            this.dgvCompetencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCompetencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompetencias.Location = new System.Drawing.Point(444, 150);
             this.dgvCompetencias.Name = "dgvCompetencias";
@@ -164,8 +165,9 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.dgvCompetencias);
             this.Controls.Add(this.lblIDCompetencia);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmTipoCompetencia";
-            this.Text = "frmTipoCompetencia";
+            this.Text = "310 - Mantenimientos de Competencias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
