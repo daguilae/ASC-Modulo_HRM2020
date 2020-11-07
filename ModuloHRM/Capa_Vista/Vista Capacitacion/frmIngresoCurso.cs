@@ -24,7 +24,7 @@ namespace Capa_Vista.Vista_Capacitacion
         private void btnAgregarCap_Click(object sender, EventArgs e)
         {
             frmCursos emp = new frmCursos();
-            emp.Show();
+            emp.ShowDialog();
         }
         private void funcActualizarTabla()
         {
