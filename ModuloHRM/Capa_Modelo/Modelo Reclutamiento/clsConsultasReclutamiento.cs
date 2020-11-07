@@ -7,7 +7,6 @@ using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
 
-
 namespace Capa_Modelo.Modelo_Reclutamiento
 {
     public class clsConsultasReclutamiento
@@ -150,8 +149,6 @@ namespace Capa_Modelo.Modelo_Reclutamiento
             }
         }//fin 
 
-        
-
         //Muestra datos en combo Tipo Entrevista
         public DataTable funcCmbEntrevista()
         {
@@ -178,7 +175,9 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 return Datos;
             }
         }//fin 
-        //Consulta para ingresar Recluta
+
+
+        //Consulta para ingresar datos en la entidad reclutamiento
         public void funcInsertarRecluta(int NivelEstudio, string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNac,
             int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto, int Estado, string Profesion, int Depto,
             string Residencia, string Zona, string Municipio, string Departamento)
@@ -214,9 +213,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 Query_IngresoRec.ExecuteNonQuery();
                 Query_IngresoDir.ExecuteNonQuery();
 
-                //Mensaje de Insersión exitosa
-                MessageBox.Show("Se ha Ingresado Correctamente el Recluta", "INGRESO DE RECLUTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar SQL: " +
@@ -227,7 +224,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
             }
         }
 
-
+        //Consulta para buscar un recluta por el Id
         public OdbcDataReader funcBuscarRecluta(string IdRecluta)
         {
             try
@@ -252,8 +249,8 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
 
-
-               public void funcModificarRecluta(string Nombre1, string Nombre2, string Apellido1, string Apellido2,
+        //consulta para modificar en la entidad Reclutamiento
+        public void funcModificarRecluta(string Nombre1, string Nombre2, string Apellido1, string Apellido2,
                 int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto, int Depto,
                  string Residencia, string Zona, string Municipio, string Departamento, string IdRecluta)
         {
@@ -271,8 +268,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 OdbcCommand Query_Validacion2 = new OdbcCommand(sentencia2, Con.funcconexion());
                 Query_Validacion1.ExecuteNonQuery();
                 Query_Validacion2.ExecuteNonQuery();
-                MessageBox.Show("Modificación Exitosa", "MODIFICACIÓN DE RECLUTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar SQL: " +
@@ -302,13 +298,16 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                     "FK_ID_TIPO_ENTREVISTA, RESULTADO_ENTREVISTA, COMENTARIOS_ENTREVISTADOR_ENTREVISTA) VALUES " + "('" + IdEntrevista + "','" + IdEmpleado + "','" + IdRecluta + "','" + Entrevista + "','"
                     + resultado + "','" + Comentario + "')";
 
-               
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO_RECLUTADO_ENTREVISTA= '" + resultado + "'WHERE PK_ID_RECLUTAMIENTO='" + IdRecluta + "'";
+
+
                 OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.funcconexion());
                 Query_IngresoRec.ExecuteNonQuery();
-               
 
-                //Mensaje de Insersión exitosa
-                MessageBox.Show("Se ha Ingresado Correctamente el Recluta", "INGRESO DE RECLUTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+
             }
             catch (Exception ex)
             {
@@ -321,7 +320,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
 
-
+        //consulta para modificar en la entidad Empleado
         public void funcModificarEmpleado(string Nombre1, string Nombre2, string Apellido1, string Apellido2,
                 int EstadoCivil, string Email, int Tel, int Licencia, int Puesto, int CuentaB,int Depto,
                  string Residencia, string Zona, string Municipio, string Departamento, string IdEmpleado)
@@ -340,8 +339,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 OdbcCommand Query_Validacion2 = new OdbcCommand(sentencia2, Con.funcconexion());
                 Query_Validacion1.ExecuteNonQuery();
                 Query_Validacion2.ExecuteNonQuery();
-                MessageBox.Show("Modificación Exitosa", "MODIFICACIÓN DE RECLUTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar SQL: " +
@@ -353,8 +351,8 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
 
- 
-               public void funcAscenderEmpleado(int PuestoN, int DeptoN, string IdEmpleado){
+        //consulta para ascender(modificar puesto, depto) en la entidad empleado
+        public void funcAscenderEmpleado(int PuestoN, int DeptoN, string IdEmpleado){
             try
             {
                 string sentencia = "UPDATE EMPLEADO SET FK_ID_PUESTO_EMPLEADO='" + PuestoN + "', FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO='" + DeptoN +
@@ -363,7 +361,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
               
                 OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.funcconexion());
                 Query_Validacion1.ExecuteNonQuery();
-                MessageBox.Show("Modificación Exitosa", "MODIFICACIÓN DE RECLUTA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
             catch (Exception ex)
             {
@@ -402,11 +400,11 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
         }
 
-
+        //consulta para ingresar datos en la entidad empleado
         //Consulta para Contratar un Recluta
         public void funcContratar(string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNac,
-            int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto,int CuentaB, int Estado, int Depto,
-            int EstadoR, string IdRecluta, string Residencia, string Zona, string Municipio, string Departamento)
+          int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto, int CuentaB, int Estado, int Depto,
+          int EstadoR, string IdRecluta, string Residencia, string Zona, string Municipio, string Departamento)
         {
             try
             {
@@ -432,11 +430,9 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO_RECLUTADO_ENTREVISTA= '" + EstadoR + "'WHERE PK_ID_RECLUTAMIENTO='" + IdRecluta + "'";
 
                 //Sentencia para insertar datos a entidad Direccion
-                string SentenciaDireccion = "INSERT INTO DIRECCION(PK_ID_DIRECCION, DEPARTAMENTO_DIRECCION,ZONA_DIRECCION, MUNICIPIO_DIRECCION, RESIDENCIA_DIRECCION, FK_EMPLEADO_DIRECCION) VALUES "
-                    + "('" + IdDir + "','" + Departamento + "','" + Zona + "','" + Municipio + "','" + Residencia + "','" + IdDir + "')";
+                string SentenciaDireccion = "INSERT INTO DIRECCION(PK_ID_DIRECCION, DEPARTAMENTO_DIRECCION,ZONA_DIRECCION, MUNICIPIO_DIRECCION, RESIDENCIA_DIRECCION, FK_EMPLEADO_DIRECCION) VALUES "+ "('" + IdDir + "','" + Departamento + "','" + Zona + "','" + Municipio + "','" + Residencia + "','" + IdEmpleado + "')";
 
 
-             
                 OdbcCommand Query_IngresoEmp = new OdbcCommand(SentenciaEmpleado, Con.funcconexion());
                 Query_IngresoEmp.ExecuteNonQuery();
 
@@ -447,8 +443,6 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 Query_IngresoDir.ExecuteNonQuery();
 
 
-                //Mensaje de Insersión exitosa
-                MessageBox.Show("Se ha Ingresado Contratado al Recluta", "Contratación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -461,13 +455,13 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
 
-        //SENTENCIAS PARA BUSCAR UN EMPLEADO
-              public OdbcDataReader funcBuscarEmpleado(string IdEmpleado)
+        //consulta para buscar en la entidad empleados
+        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado,int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,E.FECHA_NACIMIENTO_EMPLEADO, E.DPI_EMPLEADO, E.FK_ID_GENERO_EMPLEADO, EC.NOMBRE_ESTADO_CIVIL, E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO,E.CUENTA_BANCARIA_EMPLEADO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL, D.DEPARTAMENTO_DIRECCION, D.ZONA_DIRECCION, D.MUNICIPIO_DIRECCION, D.RESIDENCIA_DIRECCION FROM EMPLEADO AS E, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.PK_ID_EMPLEADO = '" + IdEmpleado + "'";
+                string sentencia = "SELECT E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,E.FECHA_NACIMIENTO_EMPLEADO, E.DPI_EMPLEADO, E.FK_ID_GENERO_EMPLEADO, EC.NOMBRE_ESTADO_CIVIL, E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO,E.CUENTA_BANCARIA_EMPLEADO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL, D.DEPARTAMENTO_DIRECCION, D.ZONA_DIRECCION, D.MUNICIPIO_DIRECCION, D.RESIDENCIA_DIRECCION FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.PK_ID_EMPLEADO = '" + IdEmpleado + "' AND E.ESTADO_EMPLEADO = '" + Estado + "'";
 
     
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.funcconexion());
@@ -513,7 +507,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
 
 
-
+        //consulta para ingresar datos en la entidad Baja
         //Consulta para despidos
         public void funcDespidoEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, string Razones, int EstadoEmp)
         {
@@ -542,8 +536,6 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 Query_IngresoRec.ExecuteNonQuery();
 
 
-                //Mensaje de Insersión exitosa
-                MessageBox.Show("Se ha Realizado El Despido", "Despido Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -555,7 +547,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
             }
         }
 
-
+        //consulta para ingresar datos en la entidad Baja
         //Consulta para renuncias
         public void funcRenunciaEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, int EstadoEmp)
         {
@@ -587,8 +579,6 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 Query_IngresoRec.ExecuteNonQuery();
 
 
-                //Mensaje de Insersión exitosa
-                MessageBox.Show("Se ha Realizado la Renuncia Con Exito", "Renuncia Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -601,15 +591,15 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
 
-      
 
+        //consulta para mostrar datos de la entidad reclutamiento
 
-        public OdbcDataAdapter funcTablaBancoTalento(int Estado)
+        public OdbcDataAdapter funcTablaBancoTalento(int PrOpcion, int SgOpcion)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, R.NUMERO_IGSS_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.NOMBRE_PROFESION, D.DEPARTAMENTO_DIRECCION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND R.ESTADO_RECLUTADO_ENTREVISTA='"+ Estado + "'";
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "')";
 
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
@@ -626,14 +616,168 @@ namespace Capa_Modelo.Modelo_Reclutamiento
             }
         }
 
+        //consulta para mostrar datos de la entidad Reclutamiento por Id
+        public OdbcDataAdapter funcTablaBancoTalentoId(int PrOpcion, int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "') AND R.PK_ID_RECLUTAMIENTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
 
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por primer nombre
+        public OdbcDataAdapter funcTablaBancoTalentoNombre(int PrOpcion,int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" +  SgOpcion +"') AND R.NOMBRE1_RECLUTAMIENTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por primer apellido
+        public OdbcDataAdapter funcTablaBancoTalentoApellido(int PrOpcion, int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "') AND R.APELLIDO1_RECLUTAMIENTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Puesto
+        public OdbcDataAdapter funcTablaBancoTalentoPuesto(int PrOpcion, int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "') AND P.NOMBRE_PUESTO LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Departamento
+        public OdbcDataAdapter funcTablaBancoTalentoDepartamento(int PrOpcion, int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "') AND DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+        //consulta para mostrar datos de la entidad Reclutamiento por Profesion
+        public OdbcDataAdapter funcTablaBancoTalentoProfesion(int PrOpcion, int SgOpcion, string Parametro)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT R.PK_ID_RECLUTAMIENTO,R.NOMBRE1_RECLUTAMIENTO, R.NOMBRE2_RECLUTAMIENTO, R.APELLIDO1_RECLUTAMIENTO, R.APELLIDO2_RECLUTAMIENTO, P.NOMBRE_PUESTO,DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,R.EMAIL_RECLUTAMIENTO, R.TELEFONO_RECLUTAMIENTO, LC.TIPO_LICENCIA_CONDUCCION,  R.NOMBRE_PROFESION, FA.NOMBRE_FORMACION_ACADEMICA FROM RECLUTAMIENTO AS R, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE R.FK_ID_NIVEL_ESTUDIO_RECLUTAMIENTO = FA.PK_ID_FORMACION_ACADEMICA AND R.FK_ID_ESTADO_CIVIL_RECLUTAMIENTO = EC.PK_ID_ESTADO_CIVIL AND R.FK_ID_LICENCIA_CONDUCIR_RECLUTAMIENTO = LC.PK_ID_LICENCIA_CONDUCCION AND R.FK_ID_PUESTO_RECLUTAMIENTO = P.PK_ID_PUESTO AND R.FK_ID_DEPARTAMENTO_EMPRESARIAL_RECLUTAMIENTO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_RECLUTAMIENTO_DIRECCION = R.PK_ID_RECLUTAMIENTO AND (R.ESTADO_RECLUTADO_ENTREVISTA='" + PrOpcion + "' OR R.ESTADO_RECLUTADO_ENTREVISTA='" + SgOpcion + "') AND R.NOMBRE_PROFESION LIKE ('" + Parametro + "%')";
+
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+
+                return dataTable;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+        }
+
+
+
+
+
+
+        //consulta para mostrar datos de la entidad empleado
         public OdbcDataAdapter funcTablaEmpleado(int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO,E.CUENTA_BANCARIA_EMPLEADO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL, D.DEPARTAMENTO_DIRECCION FROM EMPLEADO AS E, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO ";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO,E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, E.CUENTA_BANCARIA_EMPLEADO FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '"+ Estado+"'";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -648,6 +792,127 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 return null;
             }
         }
+
+        //consulta para mostrar datos de la entidad Empleado por Id
+        public OdbcDataAdapter funcFiltradoIdEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.PK_ID_EMPLEADO LIKE ('" + Parametro + "%')";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+        //consulta para mostrar datos de la entidad Empleado por Primer Nombre
+        public OdbcDataAdapter funcFiltradoNombreEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.NOMBRE1_EMPLEADO LIKE ('" + Parametro +"%')";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+        //consulta para mostrar datos de la entidad Empleado por Primer Apellido
+        public OdbcDataAdapter funcFiltradoApellidoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.APELLIDO1_EMPLEADO LIKE ('" + Parametro + "%')";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+        //consulta para mostrar datos de la entidad Empleado por Puesto
+        public OdbcDataAdapter funcFiltradoPuestoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND P.NOMBRE_PUESTO LIKE ('" + Parametro + "%')";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+
+
+        //consulta para mostrar datos de la entidad Empleado por Departamento
+        public OdbcDataAdapter funcFiltradoDepartamentoEmpleado(string Parametro, int Estado)
+        {
+            try
+            {
+                //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL LIKE ('" + Parametro + "%')";
+                OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
+                return dataTable;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+
+
+        }
+
+
 
 
 

@@ -51,18 +51,21 @@
             this.gbxCursos.Controls.Add(this.btnAgregarCap);
             this.gbxCursos.Controls.Add(this.lsvInfoCap);
             this.gbxCursos.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxCursos.Location = new System.Drawing.Point(12, 12);
+            this.gbxCursos.Location = new System.Drawing.Point(14, 15);
+            this.gbxCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbxCursos.Name = "gbxCursos";
-            this.gbxCursos.Size = new System.Drawing.Size(546, 319);
+            this.gbxCursos.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbxCursos.Size = new System.Drawing.Size(639, 394);
             this.gbxCursos.TabIndex = 0;
             this.gbxCursos.TabStop = false;
             this.gbxCursos.Text = "Cursos";
             // 
             // btnAgregarCap
             // 
-            this.btnAgregarCap.Location = new System.Drawing.Point(469, 290);
+            this.btnAgregarCap.Location = new System.Drawing.Point(547, 357);
+            this.btnAgregarCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregarCap.Name = "btnAgregarCap";
-            this.btnAgregarCap.Size = new System.Drawing.Size(71, 23);
+            this.btnAgregarCap.Size = new System.Drawing.Size(83, 28);
             this.btnAgregarCap.TabIndex = 1;
             this.btnAgregarCap.Text = "Cursos";
             this.btnAgregarCap.UseVisualStyleBackColor = true;
@@ -75,9 +78,10 @@
             this.clmhCursoCap,
             this.clmhCapacitador});
             this.lsvInfoCap.HideSelection = false;
-            this.lsvInfoCap.Location = new System.Drawing.Point(6, 22);
+            this.lsvInfoCap.Location = new System.Drawing.Point(7, 27);
+            this.lsvInfoCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lsvInfoCap.Name = "lsvInfoCap";
-            this.lsvInfoCap.Size = new System.Drawing.Size(534, 262);
+            this.lsvInfoCap.Size = new System.Drawing.Size(622, 322);
             this.lsvInfoCap.TabIndex = 0;
             this.lsvInfoCap.UseCompatibleStateImageBehavior = false;
             this.lsvInfoCap.View = System.Windows.Forms.View.Details;
@@ -99,15 +103,18 @@
             // 
             // frmIngresoCurso
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(570, 343);
+            this.ClientSize = new System.Drawing.Size(665, 422);
             this.Controls.Add(this.gbxCursos);
+            this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIngresoCurso";
-            this.Text = "Ingreso Cursos";
+            this.Text = "304 - Ingreso Cursos";
             this.gbxCursos.ResumeLayout(false);
             this.ResumeLayout(false);
 

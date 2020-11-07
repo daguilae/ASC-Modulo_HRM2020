@@ -17,10 +17,11 @@ namespace Capa_Vista.Vista_Reclutamiento
         public frmBajasEmpleado()
         {
             InitializeComponent();
+
         }
 
         clsControladorReclutamiento Cont_R = new clsControladorReclutamiento();
-
+        int Estado = 1;
         //declaración de variables
         string IdEmpleado,  FechaBaja, Razones;
         int TipoBaja, EstadoEmp, TiempoLabo;
@@ -42,7 +43,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                 //se obtiene el valor del Id
                 IdEmpleado = txtIdEmpleado.Text;
                 //Inicio para la busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text,Estado);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())
@@ -103,6 +104,13 @@ namespace Capa_Vista.Vista_Reclutamiento
 
         }
 
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.ShowDialog();
+        }
+
         private void rbtnDespido_CheckedChanged(object sender, EventArgs e)
         {
             if (rbtnDespido.Checked == true)
@@ -143,6 +151,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                             //Se envía la función con los datos anteriores a la siguiente capa
 
                             Cont_R.funcDespidoEmp(IdEmpleado, TipoBaja, Prestaciones, TiempoLabo, FechaBaja, Razones, EstadoEmp);
+                            MessageBox.Show("Se ha dado de Baja al Empleado con Éxito", "FORMULARIO BAJAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             funcLimpieza();
                             funcBloqueo();
@@ -165,6 +174,8 @@ namespace Capa_Vista.Vista_Reclutamiento
                             EstadoEmp = 4;
                             //Se envía la función con los datos anteriores a la siguiente capa
                             Cont_R.funcRenunciaEmp(IdEmpleado, TipoBaja, Prestaciones, TiempoLabo, FechaBaja, EstadoEmp);
+                            MessageBox.Show("Se ha dado de Baja al Empleado con Éxito", "FORMULARIO BAJAS", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                             funcLimpieza();
                             funcBloqueo();
 

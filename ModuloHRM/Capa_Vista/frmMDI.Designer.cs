@@ -33,45 +33,46 @@
             this.tsmiInicioSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPuestosCatalogos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDepartamentoCatalogos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPuestosMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDepartamentoMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTiposDeCompetenciasMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFaltasMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngresarFaltaMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiFaltaDeUnEmpleadoMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiProcesos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEmpleadosProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEditarEmpleadoProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAscenderEmpleadoProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDespedirEmpleadoProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReclutamientoProceso = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarReclutaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngresarReclutaProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEntrevistaProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiContratacionProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNominaProceso = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIniciarNomina = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDeduccionesPercepcciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPagoAEmpleado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCierreNómina = new System.Windows.Forms.ToolStripMenuItem();
-            this.verNóminaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBuscarDatosGeneralesDeNominaProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDeduccionesPercepccionesProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDeducciónPercepciónEmpleadoProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiControlDeHorasDíasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDesarrolloProceso = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIngresarCompetencias = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngresarCompetenciasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCapacitacionProceso = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIngresarNuevaCapacitacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngresarNuevaCapacitacionProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEstadisticasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHerramientas = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReclutamientoInforme = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiBancoDeTalento = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReclutados = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiSeleccionInforme = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bajasDeEmpleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiNominaInforme = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiDesarrolloInforme = new System.Windows.Forms.ToolStripMenuItem();
-            this.competenciasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCapacitacionInforme = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReclutamientoReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBancoDeTalentoReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiReclutadosReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSeleccionReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEmpleadosReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiBajasDeEmpleadosReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiNominaReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDesarrolloReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCompetenciasReporte = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCapacitacionReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAyuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.tiposDeCompetenciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ingresarFaltaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.faltaDeUnEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ascenderEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.despedirEmpleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entrevistaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.contrataciónToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mspMDI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -108,149 +109,224 @@
             // 
             this.tsmiInicioSesion.BackColor = System.Drawing.SystemColors.Control;
             this.tsmiInicioSesion.Name = "tsmiInicioSesion";
-            this.tsmiInicioSesion.Size = new System.Drawing.Size(180, 22);
+            this.tsmiInicioSesion.Size = new System.Drawing.Size(150, 22);
             this.tsmiInicioSesion.Text = "Iniciar Sesión";
+            this.tsmiInicioSesion.Click += new System.EventHandler(this.tsmiInicioSesion_Click);
             // 
             // tsmiCerrarSesion
             // 
             this.tsmiCerrarSesion.Name = "tsmiCerrarSesion";
-            this.tsmiCerrarSesion.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCerrarSesion.Size = new System.Drawing.Size(150, 22);
             this.tsmiCerrarSesion.Text = "Cerrar Sesión";
+            this.tsmiCerrarSesion.Click += new System.EventHandler(this.tsmiCerrarSesion_Click);
             // 
             // tsmiMantenimientos
             // 
             this.tsmiMantenimientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiPuestosCatalogos,
-            this.tsmiDepartamentoCatalogos,
-            this.tiposDeCompetenciasToolStripMenuItem,
-            this.faltasToolStripMenuItem});
+            this.tsmiPuestosMantenimientos,
+            this.tsmiDepartamentoMantenimientos,
+            this.tsmiTiposDeCompetenciasMantenimientos,
+            this.tsmiFaltasMantenimientos});
             this.tsmiMantenimientos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiMantenimientos.Name = "tsmiMantenimientos";
             this.tsmiMantenimientos.Size = new System.Drawing.Size(108, 20);
             this.tsmiMantenimientos.Text = "Mantenimientos";
             this.tsmiMantenimientos.ToolTipText = "Mantenimientos del Módulo";
-            this.tsmiMantenimientos.Click += new System.EventHandler(this.tsmiMantenimientos_Click);
             // 
-            // tsmiPuestosCatalogos
+            // tsmiPuestosMantenimientos
             // 
-            this.tsmiPuestosCatalogos.Name = "tsmiPuestosCatalogos";
-            this.tsmiPuestosCatalogos.Size = new System.Drawing.Size(243, 22);
-            this.tsmiPuestosCatalogos.Text = "Puestos";
-            this.tsmiPuestosCatalogos.Click += new System.EventHandler(this.tsmiPuestosCatalogos_Click);
+            this.tsmiPuestosMantenimientos.Name = "tsmiPuestosMantenimientos";
+            this.tsmiPuestosMantenimientos.Size = new System.Drawing.Size(243, 22);
+            this.tsmiPuestosMantenimientos.Text = "Puestos";
+            this.tsmiPuestosMantenimientos.Click += new System.EventHandler(this.tsmiPuestosMantenimientos_Click);
             // 
-            // tsmiDepartamentoCatalogos
+            // tsmiDepartamentoMantenimientos
             // 
-            this.tsmiDepartamentoCatalogos.Name = "tsmiDepartamentoCatalogos";
-            this.tsmiDepartamentoCatalogos.Size = new System.Drawing.Size(243, 22);
-            this.tsmiDepartamentoCatalogos.Text = "Departamentos Empresariales";
-            this.tsmiDepartamentoCatalogos.Click += new System.EventHandler(this.tsmiDepartamentoCatalogos_Click);
+            this.tsmiDepartamentoMantenimientos.Name = "tsmiDepartamentoMantenimientos";
+            this.tsmiDepartamentoMantenimientos.Size = new System.Drawing.Size(243, 22);
+            this.tsmiDepartamentoMantenimientos.Text = "Departamentos Empresariales";
+            this.tsmiDepartamentoMantenimientos.Click += new System.EventHandler(this.tsmiDepartamentoMantenimientos_Click);
+            // 
+            // tsmiTiposDeCompetenciasMantenimientos
+            // 
+            this.tsmiTiposDeCompetenciasMantenimientos.Name = "tsmiTiposDeCompetenciasMantenimientos";
+            this.tsmiTiposDeCompetenciasMantenimientos.Size = new System.Drawing.Size(243, 22);
+            this.tsmiTiposDeCompetenciasMantenimientos.Text = "Tipos De Competencias";
+            this.tsmiTiposDeCompetenciasMantenimientos.Click += new System.EventHandler(this.tsmiTiposDeCompetenciasMantenimientos_Click);
+            // 
+            // tsmiFaltasMantenimientos
+            // 
+            this.tsmiFaltasMantenimientos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiIngresarFaltaMantenimientos,
+            this.tsmiFaltaDeUnEmpleadoMantenimientos});
+            this.tsmiFaltasMantenimientos.Name = "tsmiFaltasMantenimientos";
+            this.tsmiFaltasMantenimientos.Size = new System.Drawing.Size(243, 22);
+            this.tsmiFaltasMantenimientos.Text = "Faltas";
+            // 
+            // tsmiIngresarFaltaMantenimientos
+            // 
+            this.tsmiIngresarFaltaMantenimientos.Name = "tsmiIngresarFaltaMantenimientos";
+            this.tsmiIngresarFaltaMantenimientos.Size = new System.Drawing.Size(195, 22);
+            this.tsmiIngresarFaltaMantenimientos.Text = "Ingresar Falta";
+            this.tsmiIngresarFaltaMantenimientos.Click += new System.EventHandler(this.tsmiIngresarFaltaMantenimientos_Click);
+            // 
+            // tsmiFaltaDeUnEmpleadoMantenimientos
+            // 
+            this.tsmiFaltaDeUnEmpleadoMantenimientos.Name = "tsmiFaltaDeUnEmpleadoMantenimientos";
+            this.tsmiFaltaDeUnEmpleadoMantenimientos.Size = new System.Drawing.Size(195, 22);
+            this.tsmiFaltaDeUnEmpleadoMantenimientos.Text = "Falta de un Empleado";
+            this.tsmiFaltaDeUnEmpleadoMantenimientos.Click += new System.EventHandler(this.tsmiFaltaDeUnEmpleadoMantenimientos_Click);
             // 
             // tsmiProcesos
             // 
             this.tsmiProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem1,
+            this.tsmiEmpleadosProceso,
             this.tsmiReclutamientoProceso,
-            this.entrevistaToolStripMenuItem1,
-            this.contrataciónToolStripMenuItem1,
+            this.tsmiEntrevistaProceso,
+            this.tsmiContratacionProceso,
             this.tsmiNominaProceso,
             this.tsmiDesarrolloProceso,
-            this.tsmiCapacitacionProceso});
+            this.tsmiCapacitacionProceso,
+            this.tsmiEstadisticasProceso});
             this.tsmiProcesos.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiProcesos.Name = "tsmiProcesos";
             this.tsmiProcesos.Size = new System.Drawing.Size(70, 20);
             this.tsmiProcesos.Text = "Procesos";
             // 
+            // tsmiEmpleadosProceso
+            // 
+            this.tsmiEmpleadosProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiEditarEmpleadoProceso,
+            this.tsmiAscenderEmpleadoProceso,
+            this.tsmiDespedirEmpleadoProceso});
+            this.tsmiEmpleadosProceso.Name = "tsmiEmpleadosProceso";
+            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEmpleadosProceso.Text = "Empleados";
+            // 
+            // tsmiEditarEmpleadoProceso
+            // 
+            this.tsmiEditarEmpleadoProceso.Name = "tsmiEditarEmpleadoProceso";
+            this.tsmiEditarEmpleadoProceso.Size = new System.Drawing.Size(188, 22);
+            this.tsmiEditarEmpleadoProceso.Text = "Editar Empleado";
+            this.tsmiEditarEmpleadoProceso.Click += new System.EventHandler(this.tsmiEditarEmpleadoProceso_Click);
+            // 
+            // tsmiAscenderEmpleadoProceso
+            // 
+            this.tsmiAscenderEmpleadoProceso.Name = "tsmiAscenderEmpleadoProceso";
+            this.tsmiAscenderEmpleadoProceso.Size = new System.Drawing.Size(188, 22);
+            this.tsmiAscenderEmpleadoProceso.Text = "Ascender Empleado";
+            this.tsmiAscenderEmpleadoProceso.Click += new System.EventHandler(this.tsmiAscenderEmpleadoProceso_Click);
+            // 
+            // tsmiDespedirEmpleadoProceso
+            // 
+            this.tsmiDespedirEmpleadoProceso.Name = "tsmiDespedirEmpleadoProceso";
+            this.tsmiDespedirEmpleadoProceso.Size = new System.Drawing.Size(188, 22);
+            this.tsmiDespedirEmpleadoProceso.Text = "Despedir Empleado";
+            this.tsmiDespedirEmpleadoProceso.Click += new System.EventHandler(this.tsmiDespedirEmpleadoProceso_Click);
+            // 
             // tsmiReclutamientoProceso
             // 
             this.tsmiReclutamientoProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarReclutaToolStripMenuItem});
+            this.tsmiIngresarReclutaProceso});
             this.tsmiReclutamientoProceso.Name = "tsmiReclutamientoProceso";
-            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiReclutamientoProceso.Text = "Reclutamiento";
             // 
-            // ingresarReclutaToolStripMenuItem
+            // tsmiIngresarReclutaProceso
             // 
-            this.ingresarReclutaToolStripMenuItem.Name = "ingresarReclutaToolStripMenuItem";
-            this.ingresarReclutaToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.ingresarReclutaToolStripMenuItem.Text = "Ingresar/Editar Reclutado";
-            this.ingresarReclutaToolStripMenuItem.Click += new System.EventHandler(this.ingresarReclutaToolStripMenuItem_Click);
+            this.tsmiIngresarReclutaProceso.Name = "tsmiIngresarReclutaProceso";
+            this.tsmiIngresarReclutaProceso.Size = new System.Drawing.Size(218, 22);
+            this.tsmiIngresarReclutaProceso.Text = "Ingresar/Editar Reclutado";
+            this.tsmiIngresarReclutaProceso.Click += new System.EventHandler(this.tsmiIngresarReclutaProceso_Click);
+            // 
+            // tsmiEntrevistaProceso
+            // 
+            this.tsmiEntrevistaProceso.Name = "tsmiEntrevistaProceso";
+            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEntrevistaProceso.Text = "Entrevista";
+            this.tsmiEntrevistaProceso.Click += new System.EventHandler(this.tsmiEntrevistaProceso_Click);
+            // 
+            // tsmiContratacionProceso
+            // 
+            this.tsmiContratacionProceso.Name = "tsmiContratacionProceso";
+            this.tsmiContratacionProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiContratacionProceso.Text = "Contratación";
+            this.tsmiContratacionProceso.Click += new System.EventHandler(this.tsmiContratacionProceso_Click);
             // 
             // tsmiNominaProceso
             // 
             this.tsmiNominaProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiIniciarNomina,
-            this.tsmiDeduccionesPercepcciones,
-            this.tsmiPagoAEmpleado,
-            this.tsmiCierreNómina,
-            this.verNóminaToolStripMenuItem});
+            this.tsmiBuscarDatosGeneralesDeNominaProceso,
+            this.tsmiDeduccionesPercepccionesProceso,
+            this.tsmiDeducciónPercepciónEmpleadoProceso,
+            this.tsmiControlDeHorasDíasProceso});
             this.tsmiNominaProceso.Name = "tsmiNominaProceso";
-            this.tsmiNominaProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiNominaProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiNominaProceso.Text = "Nómina";
             // 
-            // tsmiIniciarNomina
+            // tsmiBuscarDatosGeneralesDeNominaProceso
             // 
-            this.tsmiIniciarNomina.Name = "tsmiIniciarNomina";
-            this.tsmiIniciarNomina.Size = new System.Drawing.Size(234, 22);
-            this.tsmiIniciarNomina.Text = "Iniciar Nómina";
-            this.tsmiIniciarNomina.Click += new System.EventHandler(this.tsmiIniciarNomina_Click);
+            this.tsmiBuscarDatosGeneralesDeNominaProceso.Name = "tsmiBuscarDatosGeneralesDeNominaProceso";
+            this.tsmiBuscarDatosGeneralesDeNominaProceso.Size = new System.Drawing.Size(270, 22);
+            this.tsmiBuscarDatosGeneralesDeNominaProceso.Text = "Buscar Datos Generales de Nómina";
+            this.tsmiBuscarDatosGeneralesDeNominaProceso.Click += new System.EventHandler(this.tsmiBuscarDatosGeneralesDeNominaProceso_Click);
             // 
-            // tsmiDeduccionesPercepcciones
+            // tsmiDeduccionesPercepccionesProceso
             // 
-            this.tsmiDeduccionesPercepcciones.Name = "tsmiDeduccionesPercepcciones";
-            this.tsmiDeduccionesPercepcciones.Size = new System.Drawing.Size(234, 22);
-            this.tsmiDeduccionesPercepcciones.Text = "Deducciones/Percepcciones";
-            this.tsmiDeduccionesPercepcciones.Click += new System.EventHandler(this.tsmiDeduccionesPercepcciones_Click);
+            this.tsmiDeduccionesPercepccionesProceso.Name = "tsmiDeduccionesPercepccionesProceso";
+            this.tsmiDeduccionesPercepccionesProceso.Size = new System.Drawing.Size(270, 22);
+            this.tsmiDeduccionesPercepccionesProceso.Text = "Deducciones / Percepcciones";
+            this.tsmiDeduccionesPercepccionesProceso.Click += new System.EventHandler(this.tsmiDeduccionesPercepccionesProceso_Click);
             // 
-            // tsmiPagoAEmpleado
+            // tsmiDeducciónPercepciónEmpleadoProceso
             // 
-            this.tsmiPagoAEmpleado.Name = "tsmiPagoAEmpleado";
-            this.tsmiPagoAEmpleado.Size = new System.Drawing.Size(234, 22);
-            this.tsmiPagoAEmpleado.Text = "Pago a Empleado";
-            this.tsmiPagoAEmpleado.Click += new System.EventHandler(this.tsmiPagoAEmpleado_Click);
+            this.tsmiDeducciónPercepciónEmpleadoProceso.Name = "tsmiDeducciónPercepciónEmpleadoProceso";
+            this.tsmiDeducciónPercepciónEmpleadoProceso.Size = new System.Drawing.Size(270, 22);
+            this.tsmiDeducciónPercepciónEmpleadoProceso.Text = "Deducción / Percepción Empleado";
+            this.tsmiDeducciónPercepciónEmpleadoProceso.Click += new System.EventHandler(this.tsmiDeducciónPercepciónEmpleadoProceso_Click);
             // 
-            // tsmiCierreNómina
+            // tsmiControlDeHorasDíasProceso
             // 
-            this.tsmiCierreNómina.Name = "tsmiCierreNómina";
-            this.tsmiCierreNómina.Size = new System.Drawing.Size(234, 22);
-            this.tsmiCierreNómina.Text = "Cierre Nómina";
-            this.tsmiCierreNómina.Click += new System.EventHandler(this.tsmiCierreNómina_Click);
-            // 
-            // verNóminaToolStripMenuItem
-            // 
-            this.verNóminaToolStripMenuItem.Name = "verNóminaToolStripMenuItem";
-            this.verNóminaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.verNóminaToolStripMenuItem.Text = "Ver Nómina";
-            this.verNóminaToolStripMenuItem.Click += new System.EventHandler(this.verNóminaToolStripMenuItem_Click);
+            this.tsmiControlDeHorasDíasProceso.Name = "tsmiControlDeHorasDíasProceso";
+            this.tsmiControlDeHorasDíasProceso.Size = new System.Drawing.Size(270, 22);
+            this.tsmiControlDeHorasDíasProceso.Text = "Control de Horas / Días";
+            this.tsmiControlDeHorasDíasProceso.Click += new System.EventHandler(this.tsmiControlDeHorasDíasProceso_Click);
             // 
             // tsmiDesarrolloProceso
             // 
             this.tsmiDesarrolloProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiIngresarCompetencias});
+            this.tsmiIngresarCompetenciasProceso});
             this.tsmiDesarrolloProceso.Name = "tsmiDesarrolloProceso";
-            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiDesarrolloProceso.Text = "Desarrollo";
             // 
-            // tsmiIngresarCompetencias
+            // tsmiIngresarCompetenciasProceso
             // 
-            this.tsmiIngresarCompetencias.Name = "tsmiIngresarCompetencias";
-            this.tsmiIngresarCompetencias.Size = new System.Drawing.Size(204, 22);
-            this.tsmiIngresarCompetencias.Text = "Ingresar Competencias";
-            this.tsmiIngresarCompetencias.Click += new System.EventHandler(this.tsmiIngresarCompetencias_Click);
+            this.tsmiIngresarCompetenciasProceso.Name = "tsmiIngresarCompetenciasProceso";
+            this.tsmiIngresarCompetenciasProceso.Size = new System.Drawing.Size(204, 22);
+            this.tsmiIngresarCompetenciasProceso.Text = "Ingresar Competencias";
+            this.tsmiIngresarCompetenciasProceso.Click += new System.EventHandler(this.tsmiIngresarCompetenciasProceso_Click);
             // 
             // tsmiCapacitacionProceso
             // 
             this.tsmiCapacitacionProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiIngresarNuevaCapacitacion});
+            this.tsmiIngresarNuevaCapacitacionProceso});
             this.tsmiCapacitacionProceso.Name = "tsmiCapacitacionProceso";
-            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiCapacitacionProceso.Text = "Capacitación";
             // 
-            // tsmiIngresarNuevaCapacitacion
+            // tsmiIngresarNuevaCapacitacionProceso
             // 
-            this.tsmiIngresarNuevaCapacitacion.Name = "tsmiIngresarNuevaCapacitacion";
-            this.tsmiIngresarNuevaCapacitacion.Size = new System.Drawing.Size(234, 22);
-            this.tsmiIngresarNuevaCapacitacion.Text = "Ingresar Nueva Capacitación";
-            this.tsmiIngresarNuevaCapacitacion.Click += new System.EventHandler(this.tsmiIngresarNuevaCapacitacion_Click);
+            this.tsmiIngresarNuevaCapacitacionProceso.Name = "tsmiIngresarNuevaCapacitacionProceso";
+            this.tsmiIngresarNuevaCapacitacionProceso.Size = new System.Drawing.Size(234, 22);
+            this.tsmiIngresarNuevaCapacitacionProceso.Text = "Ingresar Nueva Capacitación";
+            // 
+            // tsmiEstadisticasProceso
+            // 
+            this.tsmiEstadisticasProceso.Name = "tsmiEstadisticasProceso";
+            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEstadisticasProceso.Text = "Estadísticas";
+            this.tsmiEstadisticasProceso.Click += new System.EventHandler(this.tsmiEstadisticasProceso_Click);
             // 
             // tsmiHerramientas
             // 
@@ -262,83 +338,83 @@
             // tsmiReportes
             // 
             this.tsmiReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiReclutamientoInforme,
-            this.tsmiSeleccionInforme,
-            this.tsmiNominaInforme,
-            this.tsmiDesarrolloInforme,
-            this.tsmiCapacitacionInforme});
+            this.tsmiReclutamientoReporte,
+            this.tsmiSeleccionReporte,
+            this.tsmiNominaReporte,
+            this.tsmiDesarrolloReporte,
+            this.tsmiCapacitacionReporte});
             this.tsmiReportes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiReportes.Name = "tsmiReportes";
             this.tsmiReportes.Size = new System.Drawing.Size(70, 20);
             this.tsmiReportes.Text = "Reportes";
             // 
-            // tsmiReclutamientoInforme
+            // tsmiReclutamientoReporte
             // 
-            this.tsmiReclutamientoInforme.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiBancoDeTalento,
-            this.tsmiReclutados});
-            this.tsmiReclutamientoInforme.Name = "tsmiReclutamientoInforme";
-            this.tsmiReclutamientoInforme.Size = new System.Drawing.Size(180, 22);
-            this.tsmiReclutamientoInforme.Text = "Reclutamiento";
+            this.tsmiReclutamientoReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiBancoDeTalentoReporte,
+            this.tsmiReclutadosReporte});
+            this.tsmiReclutamientoReporte.Name = "tsmiReclutamientoReporte";
+            this.tsmiReclutamientoReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiReclutamientoReporte.Text = "Reclutamiento";
             // 
-            // tsmiBancoDeTalento
+            // tsmiBancoDeTalentoReporte
             // 
-            this.tsmiBancoDeTalento.Name = "tsmiBancoDeTalento";
-            this.tsmiBancoDeTalento.Size = new System.Drawing.Size(180, 22);
-            this.tsmiBancoDeTalento.Text = "Banco de Talento";
+            this.tsmiBancoDeTalentoReporte.Name = "tsmiBancoDeTalentoReporte";
+            this.tsmiBancoDeTalentoReporte.Size = new System.Drawing.Size(169, 22);
+            this.tsmiBancoDeTalentoReporte.Text = "Banco de Talento";
             // 
-            // tsmiReclutados
+            // tsmiReclutadosReporte
             // 
-            this.tsmiReclutados.Name = "tsmiReclutados";
-            this.tsmiReclutados.Size = new System.Drawing.Size(180, 22);
-            this.tsmiReclutados.Text = "Reclutados";
+            this.tsmiReclutadosReporte.Name = "tsmiReclutadosReporte";
+            this.tsmiReclutadosReporte.Size = new System.Drawing.Size(169, 22);
+            this.tsmiReclutadosReporte.Text = "Reclutados";
             // 
-            // tsmiSeleccionInforme
+            // tsmiSeleccionReporte
             // 
-            this.tsmiSeleccionInforme.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.empleadosToolStripMenuItem,
-            this.bajasDeEmpleadosToolStripMenuItem});
-            this.tsmiSeleccionInforme.Name = "tsmiSeleccionInforme";
-            this.tsmiSeleccionInforme.Size = new System.Drawing.Size(180, 22);
-            this.tsmiSeleccionInforme.Text = "Selección";
+            this.tsmiSeleccionReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiEmpleadosReporte,
+            this.tsmiBajasDeEmpleadosReporte});
+            this.tsmiSeleccionReporte.Name = "tsmiSeleccionReporte";
+            this.tsmiSeleccionReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSeleccionReporte.Text = "Selección";
             // 
-            // empleadosToolStripMenuItem
+            // tsmiEmpleadosReporte
             // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.tsmiEmpleadosReporte.Name = "tsmiEmpleadosReporte";
+            this.tsmiEmpleadosReporte.Size = new System.Drawing.Size(186, 22);
+            this.tsmiEmpleadosReporte.Text = "Empleados";
             // 
-            // bajasDeEmpleadosToolStripMenuItem
+            // tsmiBajasDeEmpleadosReporte
             // 
-            this.bajasDeEmpleadosToolStripMenuItem.Name = "bajasDeEmpleadosToolStripMenuItem";
-            this.bajasDeEmpleadosToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.bajasDeEmpleadosToolStripMenuItem.Text = "Bajas de Empleados";
+            this.tsmiBajasDeEmpleadosReporte.Name = "tsmiBajasDeEmpleadosReporte";
+            this.tsmiBajasDeEmpleadosReporte.Size = new System.Drawing.Size(186, 22);
+            this.tsmiBajasDeEmpleadosReporte.Text = "Bajas de Empleados";
             // 
-            // tsmiNominaInforme
+            // tsmiNominaReporte
             // 
-            this.tsmiNominaInforme.Name = "tsmiNominaInforme";
-            this.tsmiNominaInforme.Size = new System.Drawing.Size(180, 22);
-            this.tsmiNominaInforme.Text = "Nómina";
+            this.tsmiNominaReporte.Name = "tsmiNominaReporte";
+            this.tsmiNominaReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNominaReporte.Text = "Nómina";
             // 
-            // tsmiDesarrolloInforme
+            // tsmiDesarrolloReporte
             // 
-            this.tsmiDesarrolloInforme.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.competenciasToolStripMenuItem1});
-            this.tsmiDesarrolloInforme.Name = "tsmiDesarrolloInforme";
-            this.tsmiDesarrolloInforme.Size = new System.Drawing.Size(180, 22);
-            this.tsmiDesarrolloInforme.Text = "Desarrollo";
+            this.tsmiDesarrolloReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCompetenciasReporte});
+            this.tsmiDesarrolloReporte.Name = "tsmiDesarrolloReporte";
+            this.tsmiDesarrolloReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDesarrolloReporte.Text = "Desarrollo";
             // 
-            // competenciasToolStripMenuItem1
+            // tsmiCompetenciasReporte
             // 
-            this.competenciasToolStripMenuItem1.Name = "competenciasToolStripMenuItem1";
-            this.competenciasToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.competenciasToolStripMenuItem1.Text = "Competencias";
+            this.tsmiCompetenciasReporte.Name = "tsmiCompetenciasReporte";
+            this.tsmiCompetenciasReporte.Size = new System.Drawing.Size(154, 22);
+            this.tsmiCompetenciasReporte.Text = "Competencias";
             // 
-            // tsmiCapacitacionInforme
+            // tsmiCapacitacionReporte
             // 
-            this.tsmiCapacitacionInforme.Name = "tsmiCapacitacionInforme";
-            this.tsmiCapacitacionInforme.Size = new System.Drawing.Size(180, 22);
-            this.tsmiCapacitacionInforme.Text = "Capacitación";
+            this.tsmiCapacitacionReporte.Name = "tsmiCapacitacionReporte";
+            this.tsmiCapacitacionReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiCapacitacionReporte.Text = "Capacitación";
             // 
             // tsmiAyuda
             // 
@@ -346,6 +422,15 @@
             this.tsmiAyuda.Name = "tsmiAyuda";
             this.tsmiAyuda.Size = new System.Drawing.Size(55, 20);
             this.tsmiAyuda.Text = "Ayuda";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtUsuario.Enabled = false;
+            this.txtUsuario.Location = new System.Drawing.Point(0, 410);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(731, 20);
+            this.txtUsuario.TabIndex = 0;
             // 
             // pnlContenedor
             // 
@@ -356,88 +441,24 @@
             this.pnlContenedor.Size = new System.Drawing.Size(731, 406);
             this.pnlContenedor.TabIndex = 1;
             // 
-            // tiposDeCompetenciasToolStripMenuItem
-            // 
-            this.tiposDeCompetenciasToolStripMenuItem.Name = "tiposDeCompetenciasToolStripMenuItem";
-            this.tiposDeCompetenciasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.tiposDeCompetenciasToolStripMenuItem.Text = "Tipos De Competencias";
-            // 
-            // faltasToolStripMenuItem
-            // 
-            this.faltasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ingresarFaltaToolStripMenuItem,
-            this.faltaDeUnEmpleadoToolStripMenuItem});
-            this.faltasToolStripMenuItem.Name = "faltasToolStripMenuItem";
-            this.faltasToolStripMenuItem.Size = new System.Drawing.Size(243, 22);
-            this.faltasToolStripMenuItem.Text = "Faltas";
-            // 
-            // ingresarFaltaToolStripMenuItem
-            // 
-            this.ingresarFaltaToolStripMenuItem.Name = "ingresarFaltaToolStripMenuItem";
-            this.ingresarFaltaToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.ingresarFaltaToolStripMenuItem.Text = "Ingresar Falta";
-            // 
-            // faltaDeUnEmpleadoToolStripMenuItem
-            // 
-            this.faltaDeUnEmpleadoToolStripMenuItem.Name = "faltaDeUnEmpleadoToolStripMenuItem";
-            this.faltaDeUnEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
-            this.faltaDeUnEmpleadoToolStripMenuItem.Text = "Falta de un Empleado";
-            // 
-            // empleadosToolStripMenuItem1
-            // 
-            this.empleadosToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editarEmpleadoToolStripMenuItem,
-            this.ascenderEmpleadoToolStripMenuItem,
-            this.despedirEmpleadoToolStripMenuItem});
-            this.empleadosToolStripMenuItem1.Name = "empleadosToolStripMenuItem1";
-            this.empleadosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.empleadosToolStripMenuItem1.Text = "Empleados";
-            // 
-            // editarEmpleadoToolStripMenuItem
-            // 
-            this.editarEmpleadoToolStripMenuItem.Name = "editarEmpleadoToolStripMenuItem";
-            this.editarEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.editarEmpleadoToolStripMenuItem.Text = "Editar Empleado";
-            // 
-            // ascenderEmpleadoToolStripMenuItem
-            // 
-            this.ascenderEmpleadoToolStripMenuItem.Name = "ascenderEmpleadoToolStripMenuItem";
-            this.ascenderEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.ascenderEmpleadoToolStripMenuItem.Text = "Ascender Empleado";
-            // 
-            // despedirEmpleadoToolStripMenuItem
-            // 
-            this.despedirEmpleadoToolStripMenuItem.Name = "despedirEmpleadoToolStripMenuItem";
-            this.despedirEmpleadoToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
-            this.despedirEmpleadoToolStripMenuItem.Text = "Despedir Empleado";
-            // 
-            // entrevistaToolStripMenuItem1
-            // 
-            this.entrevistaToolStripMenuItem1.Name = "entrevistaToolStripMenuItem1";
-            this.entrevistaToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.entrevistaToolStripMenuItem1.Text = "Entrevista";
-            // 
-            // contrataciónToolStripMenuItem1
-            // 
-            this.contrataciónToolStripMenuItem1.Name = "contrataciónToolStripMenuItem1";
-            this.contrataciónToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.contrataciónToolStripMenuItem1.Text = "Contratación";
-            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(731, 430);
+            this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.mspMDI);
             this.HelpButton = true;
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspMDI;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MÓDULO DE RECURSOS HUMANOS";
+            this.Text = "301 - Módulo de Recursos Humanos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMDI_Load);
             this.mspMDI.ResumeLayout(false);
             this.mspMDI.PerformLayout();
             this.ResumeLayout(false);
@@ -449,7 +470,6 @@
 
         private System.Windows.Forms.MenuStrip mspMDI;
         private System.Windows.Forms.ToolStripMenuItem tsmiInicio;
-        private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.ToolStripMenuItem tsmiInicioSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiCerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiMantenimientos;
@@ -460,36 +480,38 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiReclutamientoProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiNominaProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloProceso;
-        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarCompetencias;
+        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarCompetenciasProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionProceso;
-        private System.Windows.Forms.ToolStripMenuItem tsmiReclutamientoInforme;
-        private System.Windows.Forms.ToolStripMenuItem tsmiBancoDeTalento;
-        private System.Windows.Forms.ToolStripMenuItem tsmiReclutados;
-        private System.Windows.Forms.ToolStripMenuItem tsmiSeleccionInforme;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bajasDeEmpleadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tsmiNominaInforme;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloInforme;
-        private System.Windows.Forms.ToolStripMenuItem competenciasToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionInforme;
-        private System.Windows.Forms.ToolStripMenuItem tsmiIniciarNomina;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDeduccionesPercepcciones;
-        private System.Windows.Forms.ToolStripMenuItem tsmiPagoAEmpleado;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCierreNómina;
-        private System.Windows.Forms.ToolStripMenuItem tsmiPuestosCatalogos;
-        private System.Windows.Forms.ToolStripMenuItem tsmiDepartamentoCatalogos;
-        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarNuevaCapacitacion;
-        private System.Windows.Forms.ToolStripMenuItem ingresarReclutaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verNóminaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tiposDeCompetenciasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem faltasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ingresarFaltaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem faltaDeUnEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editarEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ascenderEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem despedirEmpleadoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem entrevistaToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem contrataciónToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReclutamientoReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBancoDeTalentoReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiReclutadosReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSeleccionReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEmpleadosReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBajasDeEmpleadosReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiNominaReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCompetenciasReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionReporte;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDeduccionesPercepccionesProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiPuestosMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDepartamentoMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarNuevaCapacitacionProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarReclutaProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTiposDeCompetenciasMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFaltasMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiIngresarFaltaMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiFaltaDeUnEmpleadoMantenimientos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEmpleadosProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEditarEmpleadoProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAscenderEmpleadoProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDespedirEmpleadoProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEntrevistaProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiContratacionProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEstadisticasProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiBuscarDatosGeneralesDeNominaProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDeducciónPercepciónEmpleadoProceso;
+        private System.Windows.Forms.ToolStripMenuItem tsmiControlDeHorasDíasProceso;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Panel pnlContenedor;
     }
 }
