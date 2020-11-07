@@ -21,13 +21,13 @@ namespace Capa_Vista.Vista_Reclutamiento
             InitializeComponent();
             funcMostrarTabla();
         }
-       
+        int Estado = 1;
         clsControladorReclutamiento Cont_R = new clsControladorReclutamiento();
         //función para mostrar los datos de la BD en el datagrid
         public void funcMostrarTabla()
         {
 
-            int Estado = 1;
+            
             DataTable dt = Cont_R.funcTablaEmpleado(Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresEncabezados();
@@ -176,7 +176,7 @@ namespace Capa_Vista.Vista_Reclutamiento
             string Parametro = txtIdEmpleado.Text;
             
 
-            DataTable dt = Cont_R.funcFiltradoIdEmpleado(Parametro);
+            DataTable dt = Cont_R.funcFiltradoIdEmpleado(Parametro, Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresParametros();
         }
@@ -184,7 +184,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void txtPrimerNombre_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerNombre.Text;
-            DataTable dt = Cont_R.funcFiltradoNombreEmpleado(Parametro);
+            DataTable dt = Cont_R.funcFiltradoNombreEmpleado(Parametro, Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresParametros();
         }
@@ -192,7 +192,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void txtPrimerApellido_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPrimerApellido.Text;
-            DataTable dt = Cont_R.funcFiltradoApellidoEmpleado(Parametro);
+            DataTable dt = Cont_R.funcFiltradoApellidoEmpleado(Parametro, Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresParametros();
         }
@@ -201,7 +201,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void txtPuesto_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtPuesto.Text;
-            DataTable dt = Cont_R.funcFiltradoPuestoEmpleado(Parametro);
+            DataTable dt = Cont_R.funcFiltradoPuestoEmpleado(Parametro, Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresParametros();
 
@@ -210,7 +210,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void txtDepartamento_KeyUp(object sender, KeyEventArgs e)
         {
             string Parametro = txtDepartamento.Text;
-            DataTable dt = Cont_R.funcFiltradoDepartamentoEmpleado(Parametro);
+            DataTable dt = Cont_R.funcFiltradoDepartamentoEmpleado(Parametro, Estado);
             dgvMostrarEmpleados.DataSource = dt;
             funcNombresParametros();
         }

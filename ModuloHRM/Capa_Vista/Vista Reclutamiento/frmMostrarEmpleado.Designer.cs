@@ -36,13 +36,13 @@
             this.txtDepartamento = new System.Windows.Forms.TextBox();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.pnlDatosFiltro = new System.Windows.Forms.Panel();
+            this.btnMostrarTodo = new System.Windows.Forms.Button();
             this.gbxFiltrado = new System.Windows.Forms.GroupBox();
             this.rbtnFiltradoDepto = new System.Windows.Forms.RadioButton();
             this.rbtnFiltradoPuesto = new System.Windows.Forms.RadioButton();
             this.rbtnFiltradoApellido1 = new System.Windows.Forms.RadioButton();
             this.rbtnFiltradoNombre1 = new System.Windows.Forms.RadioButton();
             this.rbtnFiltradoId = new System.Windows.Forms.RadioButton();
-            this.btnMostrarTodo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEmpleados)).BeginInit();
             this.pnlDatosFiltro.SuspendLayout();
             this.gbxFiltrado.SuspendLayout();
@@ -140,6 +140,18 @@
             this.pnlDatosFiltro.Size = new System.Drawing.Size(1067, 206);
             this.pnlDatosFiltro.TabIndex = 10;
             // 
+            // btnMostrarTodo
+            // 
+            this.btnMostrarTodo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarTodo.Location = new System.Drawing.Point(876, 11);
+            this.btnMostrarTodo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMostrarTodo.Name = "btnMostrarTodo";
+            this.btnMostrarTodo.Size = new System.Drawing.Size(184, 61);
+            this.btnMostrarTodo.TabIndex = 11;
+            this.btnMostrarTodo.Text = "Mostrar Todos los Datos";
+            this.btnMostrarTodo.UseVisualStyleBackColor = true;
+            this.btnMostrarTodo.Click += new System.EventHandler(this.btnMostrarTodo_Click);
+            // 
             // gbxFiltrado
             // 
             this.gbxFiltrado.Controls.Add(this.rbtnFiltradoDepto);
@@ -231,18 +243,6 @@
             this.rbtnFiltradoId.UseVisualStyleBackColor = true;
             this.rbtnFiltradoId.CheckedChanged += new System.EventHandler(this.rbtnFiltradoId_CheckedChanged);
             // 
-            // btnMostrarTodo
-            // 
-            this.btnMostrarTodo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarTodo.Location = new System.Drawing.Point(876, 11);
-            this.btnMostrarTodo.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMostrarTodo.Name = "btnMostrarTodo";
-            this.btnMostrarTodo.Size = new System.Drawing.Size(184, 61);
-            this.btnMostrarTodo.TabIndex = 11;
-            this.btnMostrarTodo.Text = "Mostrar Todos los Datos";
-            this.btnMostrarTodo.UseVisualStyleBackColor = true;
-            this.btnMostrarTodo.Click += new System.EventHandler(this.btnMostrarTodo_Click);
-            // 
             // frmMostrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,6 +251,7 @@
             this.ClientSize = new System.Drawing.Size(1067, 560);
             this.Controls.Add(this.pnlDatosFiltro);
             this.Controls.Add(this.dgvMostrarEmpleados);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

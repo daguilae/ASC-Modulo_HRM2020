@@ -25,7 +25,11 @@ namespace Capa_Vista.Vista_Reclutamiento
             InitializeComponent();
             funcLlenarPuesto();
             funcLlnearDepto();
-           
+            cmbDepartamentoTrabajo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbNivelEstudios.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTipoLicencia.DropDownStyle = ComboBoxStyle.DropDownList;
             funcItemsLicencia();
             funcItemsEstadoCivil();
             funcItemsNivelEstudio();
@@ -34,6 +38,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, FechaNac, Email, NombreProf, IdRecluta;
         int NivelEstudio, Genero, EstadoCivil, Telefono, NumIgss, TipoLicencia, Puesto, Departamento, EstadoRecluta,Dpi;
+
+        private void btnReclutas_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarReclutas MostrarReclu = new frmMostrarReclutas();
+            MostrarReclu.ShowDialog();
+        }
 
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;

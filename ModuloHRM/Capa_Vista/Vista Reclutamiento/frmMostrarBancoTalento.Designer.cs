@@ -281,6 +281,7 @@
             this.ClientSize = new System.Drawing.Size(1065, 560);
             this.Controls.Add(this.pnlDatosFiltro);
             this.Controls.Add(this.dgvMostrarBancoTalento);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

@@ -21,6 +21,10 @@ namespace Capa_Vista.Vista_Reclutamiento
             funcLlnearDepto();
             funcItemsLicencia();
             funcItemsEstadoCivil();
+            cmbTipoLicencia.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbEstadoCivil.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbPuesto.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartamento.DropDownStyle = ComboBoxStyle.DropDownList;
 
         }
 
@@ -29,7 +33,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         //Declaración de variables Entidad Reclutamiento
         string PrimerNom, SegundoNom, PrimerAp, SegundoAp, Email, IdEmpleado;
         int  Genero, EstadoCivil, Telefono, TipoLicencia, Puesto, Departamento, CuentaBanc;
-
+        int Estado = 1;
         //Declaración variables Entidad Dirección
         string Residencia, Zona, Municipio, Depto;
 
@@ -37,7 +41,7 @@ namespace Capa_Vista.Vista_Reclutamiento
         {
             //Se llama al formulario que contiene todos una tabla de todos los empleados
             frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
-            MostrarEmp.Show();
+            MostrarEmp.ShowDialog();
         }
 
         //metodo para llenar el combo puesto
@@ -168,7 +172,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                 IdEmpleado = txtIdEmpleado.Text;
                 //Inicio para Busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text, Estado);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())

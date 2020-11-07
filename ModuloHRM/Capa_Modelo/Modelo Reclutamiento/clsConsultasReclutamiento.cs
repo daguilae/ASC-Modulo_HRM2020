@@ -298,11 +298,17 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                     "FK_ID_TIPO_ENTREVISTA, RESULTADO_ENTREVISTA, COMENTARIOS_ENTREVISTADOR_ENTREVISTA) VALUES " + "('" + IdEntrevista + "','" + IdEmpleado + "','" + IdRecluta + "','" + Entrevista + "','"
                     + resultado + "','" + Comentario + "')";
 
-               
+                string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO_RECLUTADO_ENTREVISTA= '" + resultado + "'WHERE PK_ID_RECLUTAMIENTO='" + IdRecluta + "'";
+
+
                 OdbcCommand Query_IngresoRec = new OdbcCommand(SentenciaRecluta, Con.funcconexion());
                 Query_IngresoRec.ExecuteNonQuery();
-               
-             }
+
+                OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.funcconexion());
+                Query_Validacion1.ExecuteNonQuery();
+
+
+            }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al ejecutar SQL: " +
@@ -397,8 +403,8 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         //consulta para ingresar datos en la entidad empleado
         //Consulta para Contratar un Recluta
         public void funcContratar(string Nombre1, string Nombre2, string Apellido1, string Apellido2, string FechaNac,
-            int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto,int CuentaB, int Estado, int Depto,
-            int EstadoR, string IdRecluta, string Residencia, string Zona, string Municipio, string Departamento)
+          int Dpi, int Genero, int EstadoCivil, string Email, int Tel, int NumIgss, int Licencia, int Puesto, int CuentaB, int Estado, int Depto,
+          int EstadoR, string IdRecluta, string Residencia, string Zona, string Municipio, string Departamento)
         {
             try
             {
@@ -424,11 +430,9 @@ namespace Capa_Modelo.Modelo_Reclutamiento
                 string sentencia = "UPDATE RECLUTAMIENTO SET ESTADO_RECLUTADO_ENTREVISTA= '" + EstadoR + "'WHERE PK_ID_RECLUTAMIENTO='" + IdRecluta + "'";
 
                 //Sentencia para insertar datos a entidad Direccion
-                string SentenciaDireccion = "INSERT INTO DIRECCION(PK_ID_DIRECCION, DEPARTAMENTO_DIRECCION,ZONA_DIRECCION, MUNICIPIO_DIRECCION, RESIDENCIA_DIRECCION, FK_EMPLEADO_DIRECCION) VALUES "
-                    + "('" + IdDir + "','" + Departamento + "','" + Zona + "','" + Municipio + "','" + Residencia + "','" + IdDir + "')";
+                string SentenciaDireccion = "INSERT INTO DIRECCION(PK_ID_DIRECCION, DEPARTAMENTO_DIRECCION,ZONA_DIRECCION, MUNICIPIO_DIRECCION, RESIDENCIA_DIRECCION, FK_EMPLEADO_DIRECCION) VALUES "+ "('" + IdDir + "','" + Departamento + "','" + Zona + "','" + Municipio + "','" + Residencia + "','" + IdEmpleado + "')";
 
 
-             
                 OdbcCommand Query_IngresoEmp = new OdbcCommand(SentenciaEmpleado, Con.funcconexion());
                 Query_IngresoEmp.ExecuteNonQuery();
 
@@ -452,12 +456,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
 
         //consulta para buscar en la entidad empleados
-        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado)
+        public OdbcDataReader funcBuscarEmpleado(string IdEmpleado,int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,E.FECHA_NACIMIENTO_EMPLEADO, E.DPI_EMPLEADO, E.FK_ID_GENERO_EMPLEADO, EC.NOMBRE_ESTADO_CIVIL, E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO,E.CUENTA_BANCARIA_EMPLEADO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL, D.DEPARTAMENTO_DIRECCION, D.ZONA_DIRECCION, D.MUNICIPIO_DIRECCION, D.RESIDENCIA_DIRECCION FROM EMPLEADO AS E, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.PK_ID_EMPLEADO = '" + IdEmpleado + "'";
+                string sentencia = "SELECT E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,E.FECHA_NACIMIENTO_EMPLEADO, E.DPI_EMPLEADO, E.FK_ID_GENERO_EMPLEADO, EC.NOMBRE_ESTADO_CIVIL, E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, P.NOMBRE_PUESTO,E.CUENTA_BANCARIA_EMPLEADO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL, D.DEPARTAMENTO_DIRECCION, D.ZONA_DIRECCION, D.MUNICIPIO_DIRECCION, D.RESIDENCIA_DIRECCION FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.PK_ID_EMPLEADO = '" + IdEmpleado + "' AND E.ESTADO_EMPLEADO = '" + Estado + "'";
 
     
                 OdbcCommand Query_BusquedaReclu = new OdbcCommand(sentencia, Con.funcconexion());
@@ -773,7 +777,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO,E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, E.CUENTA_BANCARIA_EMPLEADO FROM EMPLEADO AS E, DIRECCION AS D, FORMACION_ACADEMICA AS FA, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO ";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO,E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO,P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL,E.EMAIL_EMPLEADO, E.TELEFONO_EMPLEADO, E.NUMERO_IGGS_EMPLEADO, LC.TIPO_LICENCIA_CONDUCCION, E.CUENTA_BANCARIA_EMPLEADO FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '"+ Estado+"'";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -790,12 +794,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
         //consulta para mostrar datos de la entidad Empleado por Id
-        public OdbcDataAdapter funcFiltradoIdEmpleado(string Parametro)
+        public OdbcDataAdapter funcFiltradoIdEmpleado(string Parametro, int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.PK_ID_EMPLEADO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.PK_ID_EMPLEADO LIKE ('" + Parametro + "%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -814,12 +818,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
         }
 
         //consulta para mostrar datos de la entidad Empleado por Primer Nombre
-        public OdbcDataAdapter funcFiltradoNombreEmpleado(string Parametro)
+        public OdbcDataAdapter funcFiltradoNombreEmpleado(string Parametro, int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.NOMBRE1_EMPLEADO LIKE ('"+ Parametro +"%')";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.NOMBRE1_EMPLEADO LIKE ('" + Parametro +"%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -837,12 +841,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
         }
         //consulta para mostrar datos de la entidad Empleado por Primer Apellido
-        public OdbcDataAdapter funcFiltradoApellidoEmpleado(string Parametro)
+        public OdbcDataAdapter funcFiltradoApellidoEmpleado(string Parametro, int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.APELLIDO1_EMPLEADO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND E.APELLIDO1_EMPLEADO LIKE ('" + Parametro + "%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -860,12 +864,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
         }
         //consulta para mostrar datos de la entidad Empleado por Puesto
-        public OdbcDataAdapter funcFiltradoPuestoEmpleado(string Parametro)
+        public OdbcDataAdapter funcFiltradoPuestoEmpleado(string Parametro, int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND P.NOMBRE_PUESTO LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND P.NOMBRE_PUESTO LIKE ('" + Parametro + "%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;
@@ -886,12 +890,12 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
 
         //consulta para mostrar datos de la entidad Empleado por Departamento
-        public OdbcDataAdapter funcFiltradoDepartamentoEmpleado(string Parametro)
+        public OdbcDataAdapter funcFiltradoDepartamentoEmpleado(string Parametro, int Estado)
         {
             try
             {
                 //sentencia para realizar la busqueda obteniendo los nombres de las diferentes entidades e igualando los ID de las diferentes tablas
-                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL LIKE ('" + Parametro + "%')";
+                string sentencia = "SELECT E.PK_ID_EMPLEADO, E.NOMBRE1_EMPLEADO, E.NOMBRE2_EMPLEADO, E.APELLIDO1_EMPLEADO, E.APELLIDO2_EMPLEADO, P.NOMBRE_PUESTO, DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL FROM EMPLEADO AS E, DIRECCION AS D, ESTADO_CIVIL AS EC, LICENCIA_CONDUCCION AS LC, PUESTO AS P, DEPARTAMENTO_EMPRESARIAL AS DE WHERE E.fk_id_estado_civil_empleado = EC.PK_ID_ESTADO_CIVIL AND E.FK_ID_LICENCIA_CONDUCIR_EMPLEADO = LC.PK_ID_LICENCIA_CONDUCCION AND E.FK_ID_PUESTO_EMPLEADO = P.PK_ID_PUESTO AND E.FK_ID_DEPARTAMENTO_EMPRESARIAL_EMPLEADO = DE.PK_ID__DEPARTAMENTO_EMPRESARIAL AND D.FK_EMPLEADO_DIRECCION = E.PK_ID_EMPLEADO AND E.ESTADO_EMPLEADO = '" + Estado + "' AND DE.NOMBRE_DEPARTAMENTO_EMPRESARIAL LIKE ('" + Parametro + "%')";
                 OdbcDataAdapter dataTable = new OdbcDataAdapter(sentencia, Con.funcconexion());
 
                 return dataTable;

@@ -50,6 +50,9 @@
             this.lblPrimerApellido = new System.Windows.Forms.Label();
             this.tbpDatosEntrevista = new System.Windows.Forms.TabPage();
             this.gbxDatosEntrevista = new System.Windows.Forms.GroupBox();
+            this.pnlOpciones = new System.Windows.Forms.Panel();
+            this.rbtnSegOpcion = new System.Windows.Forms.RadioButton();
+            this.rbtnPrimeraOp = new System.Windows.Forms.RadioButton();
             this.txtIdEmpleado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rbtnReprobado = new System.Windows.Forms.RadioButton();
@@ -66,6 +69,7 @@
             this.pnlDatosGenerales.SuspendLayout();
             this.tbpDatosEntrevista.SuspendLayout();
             this.gbxDatosEntrevista.SuspendLayout();
+            this.pnlOpciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbcEntrevista
@@ -310,6 +314,7 @@
             // 
             // gbxDatosEntrevista
             // 
+            this.gbxDatosEntrevista.Controls.Add(this.pnlOpciones);
             this.gbxDatosEntrevista.Controls.Add(this.txtIdEmpleado);
             this.gbxDatosEntrevista.Controls.Add(this.label1);
             this.gbxDatosEntrevista.Controls.Add(this.rbtnReprobado);
@@ -327,6 +332,40 @@
             this.gbxDatosEntrevista.TabIndex = 10;
             this.gbxDatosEntrevista.TabStop = false;
             this.gbxDatosEntrevista.Text = "Datos de Entrevista";
+            // 
+            // pnlOpciones
+            // 
+            this.pnlOpciones.Controls.Add(this.rbtnSegOpcion);
+            this.pnlOpciones.Controls.Add(this.rbtnPrimeraOp);
+            this.pnlOpciones.Enabled = false;
+            this.pnlOpciones.Location = new System.Drawing.Point(544, 88);
+            this.pnlOpciones.Name = "pnlOpciones";
+            this.pnlOpciones.Size = new System.Drawing.Size(259, 80);
+            this.pnlOpciones.TabIndex = 13;
+            // 
+            // rbtnSegOpcion
+            // 
+            this.rbtnSegOpcion.AutoSize = true;
+            this.rbtnSegOpcion.Location = new System.Drawing.Point(3, 47);
+            this.rbtnSegOpcion.Name = "rbtnSegOpcion";
+            this.rbtnSegOpcion.Size = new System.Drawing.Size(252, 24);
+            this.rbtnSegOpcion.TabIndex = 1;
+            this.rbtnSegOpcion.TabStop = true;
+            this.rbtnSegOpcion.Text = "Segunda Opción a Contratar";
+            this.rbtnSegOpcion.UseVisualStyleBackColor = true;
+            this.rbtnSegOpcion.CheckedChanged += new System.EventHandler(this.rbtnSegOpcion_CheckedChanged);
+            // 
+            // rbtnPrimeraOp
+            // 
+            this.rbtnPrimeraOp.AutoSize = true;
+            this.rbtnPrimeraOp.Location = new System.Drawing.Point(4, 12);
+            this.rbtnPrimeraOp.Name = "rbtnPrimeraOp";
+            this.rbtnPrimeraOp.Size = new System.Drawing.Size(247, 24);
+            this.rbtnPrimeraOp.TabIndex = 0;
+            this.rbtnPrimeraOp.TabStop = true;
+            this.rbtnPrimeraOp.Text = "Primera Opción a Contratar";
+            this.rbtnPrimeraOp.UseVisualStyleBackColor = true;
+            this.rbtnPrimeraOp.CheckedChanged += new System.EventHandler(this.rbtnPrimeraOp_CheckedChanged);
             // 
             // txtIdEmpleado
             // 
@@ -349,7 +388,7 @@
             // rbtnReprobado
             // 
             this.rbtnReprobado.AutoSize = true;
-            this.rbtnReprobado.Location = new System.Drawing.Point(401, 88);
+            this.rbtnReprobado.Location = new System.Drawing.Point(391, 88);
             this.rbtnReprobado.Name = "rbtnReprobado";
             this.rbtnReprobado.Size = new System.Drawing.Size(116, 24);
             this.rbtnReprobado.TabIndex = 10;
@@ -433,6 +472,7 @@
             this.ClientSize = new System.Drawing.Size(1018, 436);
             this.Controls.Add(this.tbcEntrevista);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -449,6 +489,8 @@
             this.tbpDatosEntrevista.ResumeLayout(false);
             this.gbxDatosEntrevista.ResumeLayout(false);
             this.gbxDatosEntrevista.PerformLayout();
+            this.pnlOpciones.ResumeLayout(false);
+            this.pnlOpciones.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -487,5 +529,8 @@
         private System.Windows.Forms.TextBox txtIdEmpleado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnReclutas;
+        private System.Windows.Forms.Panel pnlOpciones;
+        private System.Windows.Forms.RadioButton rbtnSegOpcion;
+        private System.Windows.Forms.RadioButton rbtnPrimeraOp;
     }
 }
