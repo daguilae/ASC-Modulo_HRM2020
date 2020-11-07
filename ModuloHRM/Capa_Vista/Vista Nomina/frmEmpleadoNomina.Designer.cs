@@ -30,6 +30,7 @@
         {
             this.tbcEmpleadoNomina = new System.Windows.Forms.TabControl();
             this.tbpIngresarEmpleDedPer = new System.Windows.Forms.TabPage();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
             this.btnIngresarBuscar = new System.Windows.Forms.Button();
             this.lblTipoCobro = new System.Windows.Forms.Label();
             this.btnIngresoEmpleadoDedPer = new System.Windows.Forms.Button();
@@ -45,6 +46,7 @@
             this.lblNomEmpleIngreso = new System.Windows.Forms.Label();
             this.lblIdEmpIngreso = new System.Windows.Forms.Label();
             this.tbpBuscar = new System.Windows.Forms.TabPage();
+            this.txtBuscarFechaFin = new System.Windows.Forms.TextBox();
             this.lblTotalPer = new System.Windows.Forms.Label();
             this.lblTotalDed = new System.Windows.Forms.Label();
             this.txtTotalDed = new System.Windows.Forms.TextBox();
@@ -62,6 +64,7 @@
             this.txtBuscarIdEmp = new System.Windows.Forms.TextBox();
             this.lbBuscarIDEmp = new System.Windows.Forms.Label();
             this.tbpEliminarEmpleDedPer = new System.Windows.Forms.TabPage();
+            this.txtEliminarFechFin = new System.Windows.Forms.TextBox();
             this.lblTipoCobroEliminar = new System.Windows.Forms.Label();
             this.btnEliminarBuscar = new System.Windows.Forms.Button();
             this.btnEliminarEmpleadoDedPer = new System.Windows.Forms.Button();
@@ -76,9 +79,6 @@
             this.lblEliminarDedPer = new System.Windows.Forms.Label();
             this.lblEliminarNomEmp = new System.Windows.Forms.Label();
             this.lblEliminarIdEmp = new System.Windows.Forms.Label();
-            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
-            this.txtBuscarFechaFin = new System.Windows.Forms.TextBox();
-            this.txtEliminarFechFin = new System.Windows.Forms.TextBox();
             this.tbcEmpleadoNomina.SuspendLayout();
             this.tbpIngresarEmpleDedPer.SuspendLayout();
             this.gbxIngresoTipoCob.SuspendLayout();
@@ -123,6 +123,14 @@
             this.tbpIngresarEmpleDedPer.Size = new System.Drawing.Size(824, 499);
             this.tbpIngresarEmpleDedPer.TabIndex = 0;
             this.tbpIngresarEmpleDedPer.Text = "Ingresar";
+            // 
+            // txtIngresoFechFin
+            // 
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(380, 166);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(133, 27);
+            this.txtIngresoFechFin.TabIndex = 22;
             // 
             // btnIngresarBuscar
             // 
@@ -288,6 +296,14 @@
             this.tbpBuscar.Size = new System.Drawing.Size(824, 499);
             this.tbpBuscar.TabIndex = 2;
             this.tbpBuscar.Text = "Buscar";
+            // 
+            // txtBuscarFechaFin
+            // 
+            this.txtBuscarFechaFin.Enabled = false;
+            this.txtBuscarFechaFin.Location = new System.Drawing.Point(380, 123);
+            this.txtBuscarFechaFin.Name = "txtBuscarFechaFin";
+            this.txtBuscarFechaFin.Size = new System.Drawing.Size(133, 27);
+            this.txtBuscarFechaFin.TabIndex = 19;
             // 
             // lblTotalPer
             // 
@@ -469,6 +485,13 @@
             this.tbpEliminarEmpleDedPer.TabIndex = 1;
             this.tbpEliminarEmpleDedPer.Text = "Eliminar";
             // 
+            // txtEliminarFechFin
+            // 
+            this.txtEliminarFechFin.Location = new System.Drawing.Point(385, 165);
+            this.txtEliminarFechFin.Name = "txtEliminarFechFin";
+            this.txtEliminarFechFin.Size = new System.Drawing.Size(127, 27);
+            this.txtEliminarFechFin.TabIndex = 21;
+            // 
             // lblTipoCobroEliminar
             // 
             this.lblTipoCobroEliminar.AutoSize = true;
@@ -605,29 +628,6 @@
             this.lblEliminarIdEmp.Size = new System.Drawing.Size(115, 20);
             this.lblEliminarIdEmp.TabIndex = 8;
             this.lblEliminarIdEmp.Text = "ID Empleado:";
-            // 
-            // txtIngresoFechFin
-            // 
-            this.txtIngresoFechFin.Enabled = false;
-            this.txtIngresoFechFin.Location = new System.Drawing.Point(380, 166);
-            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
-            this.txtIngresoFechFin.Size = new System.Drawing.Size(133, 27);
-            this.txtIngresoFechFin.TabIndex = 22;
-            // 
-            // txtBuscarFechaFin
-            // 
-            this.txtBuscarFechaFin.Enabled = false;
-            this.txtBuscarFechaFin.Location = new System.Drawing.Point(380, 123);
-            this.txtBuscarFechaFin.Name = "txtBuscarFechaFin";
-            this.txtBuscarFechaFin.Size = new System.Drawing.Size(133, 27);
-            this.txtBuscarFechaFin.TabIndex = 19;
-            // 
-            // txtEliminarFechFin
-            // 
-            this.txtEliminarFechFin.Location = new System.Drawing.Point(385, 165);
-            this.txtEliminarFechFin.Name = "txtEliminarFechFin";
-            this.txtEliminarFechFin.Size = new System.Drawing.Size(127, 27);
-            this.txtEliminarFechFin.TabIndex = 21;
             // 
             // frmEmpleadoNomina
             // 

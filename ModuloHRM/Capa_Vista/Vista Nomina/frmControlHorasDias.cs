@@ -155,6 +155,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoPeriodo.DataSource = Datos;
             cmbIngresoPeriodo.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbIngresoPeriodo.ResetText();
+            cmbIngresoPeriodo.SelectedIndex = -1;
         }
 
         private void funcFechaPlanillaModificar()

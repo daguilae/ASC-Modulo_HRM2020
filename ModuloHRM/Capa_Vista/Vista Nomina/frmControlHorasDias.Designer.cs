@@ -30,6 +30,7 @@
         {
             this.tbcControlHorasDias = new System.Windows.Forms.TabControl();
             this.tbpIngreso = new System.Windows.Forms.TabPage();
+            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
             this.btnIngrespLimpiar = new System.Windows.Forms.Button();
             this.btnIngresoBuscarEmp = new System.Windows.Forms.Button();
             this.lblIngresoPeriodo = new System.Windows.Forms.Label();
@@ -80,7 +81,6 @@
             this.lblModificarPuesto = new System.Windows.Forms.Label();
             this.lblModificarNomEmp = new System.Windows.Forms.Label();
             this.lblModificarIdEmp = new System.Windows.Forms.Label();
-            this.txtIngresoFechFin = new System.Windows.Forms.TextBox();
             this.tbcControlHorasDias.SuspendLayout();
             this.tbpIngreso.SuspendLayout();
             this.gbxIngresoDias.SuspendLayout();
@@ -114,6 +114,7 @@
             // 
             // tbpIngreso
             // 
+            this.tbpIngreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpIngreso.Controls.Add(this.txtIngresoFechFin);
             this.tbpIngreso.Controls.Add(this.btnIngrespLimpiar);
             this.tbpIngreso.Controls.Add(this.btnIngresoBuscarEmp);
@@ -134,7 +135,14 @@
             this.tbpIngreso.Size = new System.Drawing.Size(1222, 556);
             this.tbpIngreso.TabIndex = 0;
             this.tbpIngreso.Text = "Ingreso";
-            this.tbpIngreso.UseVisualStyleBackColor = true;
+            // 
+            // txtIngresoFechFin
+            // 
+            this.txtIngresoFechFin.Enabled = false;
+            this.txtIngresoFechFin.Location = new System.Drawing.Point(400, 126);
+            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
+            this.txtIngresoFechFin.Size = new System.Drawing.Size(142, 27);
+            this.txtIngresoFechFin.TabIndex = 12;
             // 
             // btnIngrespLimpiar
             // 
@@ -394,6 +402,7 @@
             // 
             // tbpModificar
             // 
+            this.tbpModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpModificar.Controls.Add(this.txtModificarPeriodoFin);
             this.tbpModificar.Controls.Add(this.btnModificarLimpiar);
             this.tbpModificar.Controls.Add(this.btnModificarBuscarEmp);
@@ -414,7 +423,6 @@
             this.tbpModificar.Size = new System.Drawing.Size(1222, 556);
             this.tbpModificar.TabIndex = 1;
             this.tbpModificar.Text = "Buscar/Modificar";
-            this.tbpModificar.UseVisualStyleBackColor = true;
             // 
             // txtModificarPeriodoFin
             // 
@@ -680,20 +688,12 @@
             this.lblModificarIdEmp.TabIndex = 0;
             this.lblModificarIdEmp.Text = "ID de Empleado:";
             // 
-            // txtIngresoFechFin
-            // 
-            this.txtIngresoFechFin.Enabled = false;
-            this.txtIngresoFechFin.Location = new System.Drawing.Point(400, 126);
-            this.txtIngresoFechFin.Name = "txtIngresoFechFin";
-            this.txtIngresoFechFin.Size = new System.Drawing.Size(142, 27);
-            this.txtIngresoFechFin.TabIndex = 12;
-            // 
             // frmControlHorasDias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1230, 589);
-            this.ControlBox = false;
             this.Controls.Add(this.tbcControlHorasDias);
             this.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
