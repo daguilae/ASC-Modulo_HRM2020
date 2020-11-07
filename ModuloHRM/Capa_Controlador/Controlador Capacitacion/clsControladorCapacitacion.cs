@@ -82,5 +82,16 @@ namespace Capa_Controlador.Controlador_Capacitación
             DataTable dato = cons.funcDatosDGBCurso();
             return dato;
         }
+        public DataSet funcLlenarCampos()
+        {
+
+            DataSet Items = cons.funcLlenarCampos();
+            return Items;
+        }
+        public DataTable funcLlenarBusqueda(string nomCampo, string compare)
+        {
+            DataTable dato = cons.funcLlenarBusqueda(nomCampo, compare);
+            return dato;
+        }
     }
 }

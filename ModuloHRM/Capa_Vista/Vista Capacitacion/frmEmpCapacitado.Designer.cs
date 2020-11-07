@@ -118,9 +118,9 @@
             // 
             // txtCodiCapa
             // 
-            this.txtCodiCapa.Location = new System.Drawing.Point(228, 6);
+            this.txtCodiCapa.Location = new System.Drawing.Point(172, 6);
             this.txtCodiCapa.Name = "txtCodiCapa";
-            this.txtCodiCapa.Size = new System.Drawing.Size(213, 23);
+            this.txtCodiCapa.Size = new System.Drawing.Size(269, 23);
             this.txtCodiCapa.TabIndex = 13;
             this.txtCodiCapa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
@@ -503,7 +503,7 @@
             this.btnBuscarCap.TabIndex = 24;
             this.btnBuscarCap.Text = "Buscar";
             this.btnBuscarCap.UseVisualStyleBackColor = true;
-            this.btnBuscarCap.Click += new System.EventHandler(this.button1_Click);
+            this.btnBuscarCap.Click += new System.EventHandler(this.btnBuscarCap_Click);
             // 
             // cmbCodigoCap
             // 

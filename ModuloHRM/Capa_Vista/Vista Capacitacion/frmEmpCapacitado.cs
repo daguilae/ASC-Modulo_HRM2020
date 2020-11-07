@@ -106,10 +106,11 @@ namespace Capa_Vista.Vista_Capacitacion
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBuscarCap_Click(object sender, EventArgs e)
         {
-            if (cmbCodigoCap.Text=="") { MessageBox.Show("Campo Vacío"); }
-            else {
+            if (cmbCodigoCap.Text == "") { MessageBox.Show("Campo Vacíos"); }
+            else
+            {
                 dgvCompIng.DataSource = null;
                 string idEmpleado = txtCodEmpR.Text;
                 string idCap = cmbCodigoCap.Text;
@@ -119,7 +120,6 @@ namespace Capa_Vista.Vista_Capacitacion
                 datos = con.funcConsultaEmp(idEmpleado);
                 dgvCompIng.DataSource = dato;
             }
-           
         }
     }
 }
