@@ -165,6 +165,7 @@
             // 
             // cmbIngresoPeriodo
             // 
+            this.cmbIngresoPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIngresoPeriodo.FormattingEnabled = true;
             this.cmbIngresoPeriodo.Location = new System.Drawing.Point(231, 125);
             this.cmbIngresoPeriodo.Margin = new System.Windows.Forms.Padding(4);
@@ -442,6 +443,7 @@
             // 
             // cmbModificarPeriodo
             // 
+            this.cmbModificarPeriodo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbModificarPeriodo.FormattingEnabled = true;
             this.cmbModificarPeriodo.Location = new System.Drawing.Point(231, 125);
             this.cmbModificarPeriodo.Margin = new System.Windows.Forms.Padding(4);
