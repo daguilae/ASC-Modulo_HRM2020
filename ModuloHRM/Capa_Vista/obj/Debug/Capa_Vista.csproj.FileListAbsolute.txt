@@ -301,4 +301,6 @@ C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vist
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmModificarEmpleado.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas.resources
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmMantenimientoCapacitacion.resources
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
+C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmMantenimientoCapacitacion.resources
