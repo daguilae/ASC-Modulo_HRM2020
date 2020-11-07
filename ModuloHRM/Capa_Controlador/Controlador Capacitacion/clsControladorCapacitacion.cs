@@ -93,5 +93,15 @@ namespace Capa_Controlador.Controlador_Capacitación
             DataTable dato = cons.funcLlenarBusqueda(nomCampo, compare);
             return dato;
         }
+        public string[] funcConsultarCapa(string idCapa) {
+
+            string[] datos = new string[6];
+            datos = cons.funcConsultarCapa(idCapa);
+            return datos;
+        }
+
+        public void funcActualizarCapa(string idCapacitacion, string fechaInicio, string fechaFin, string idEmpleado, string nomCur, int horas, string idEncCapa) {
+            cons.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
+        }
     }
 }

@@ -172,6 +172,7 @@
             // 
             // txtCodigoEncabezado
             // 
+            this.txtCodigoEncabezado.Enabled = false;
             this.txtCodigoEncabezado.Location = new System.Drawing.Point(133, 17);
             this.txtCodigoEncabezado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoEncabezado.Name = "txtCodigoEncabezado";
@@ -196,6 +197,7 @@
             this.btnIngresoCurso.TabIndex = 9;
             this.btnIngresoCurso.Text = "Actualizar";
             this.btnIngresoCurso.UseVisualStyleBackColor = true;
+            this.btnIngresoCurso.Click += new System.EventHandler(this.btnIngresoCurso_Click);
             // 
             // lblFeFin
             // 
@@ -208,6 +210,7 @@
             // 
             // cmbCurso
             // 
+            this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurso.FormattingEnabled = true;
             this.cmbCurso.Location = new System.Drawing.Point(133, 48);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -285,6 +288,7 @@
             this.btnBuscarEmp.TabIndex = 42;
             this.btnBuscarEmp.Text = "Buscar";
             this.btnBuscarEmp.UseVisualStyleBackColor = true;
+            this.btnBuscarEmp.Click += new System.EventHandler(this.btnBuscarEmp_Click);
             // 
             // txtBusqCodEmp
             // 
@@ -383,6 +387,7 @@
             this.btnBuscarEdit.TabIndex = 46;
             this.btnBuscarEdit.Text = "Buscar";
             this.btnBuscarEdit.UseVisualStyleBackColor = true;
+            this.btnBuscarEdit.Click += new System.EventHandler(this.btnBuscarEdit_Click);
             // 
             // button1
             // 
@@ -451,6 +456,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(133, 48);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
