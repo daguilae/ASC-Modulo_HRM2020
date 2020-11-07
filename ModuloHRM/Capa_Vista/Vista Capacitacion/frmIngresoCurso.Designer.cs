@@ -60,7 +60,7 @@
             // 
             // btnAgregarCap
             // 
-            this.btnAgregarCap.Location = new System.Drawing.Point(469, 290);
+            this.btnAgregarCap.Location = new System.Drawing.Point(447, 290);
             this.btnAgregarCap.Name = "btnAgregarCap";
             this.btnAgregarCap.Size = new System.Drawing.Size(71, 23);
             this.btnAgregarCap.TabIndex = 1;
