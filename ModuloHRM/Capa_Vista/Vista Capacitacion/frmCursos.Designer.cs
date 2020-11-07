@@ -184,10 +184,10 @@
             // 
             // rtxtDetalleC
             // 
-            this.rtxtDetalleC.Location = new System.Drawing.Point(14, 289);
+            this.rtxtDetalleC.Location = new System.Drawing.Point(7, 281);
             this.rtxtDetalleC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleC.Name = "rtxtDetalleC";
-            this.rtxtDetalleC.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleC.Size = new System.Drawing.Size(468, 156);
             this.rtxtDetalleC.TabIndex = 5;
             this.rtxtDetalleC.Text = "";
             // 
@@ -314,7 +314,7 @@
             this.tbpEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpEditar.Name = "tbpEditar";
             this.tbpEditar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpEditar.Size = new System.Drawing.Size(481, 481);
+            this.tbpEditar.Size = new System.Drawing.Size(481, 483);
             this.tbpEditar.TabIndex = 1;
             this.tbpEditar.Text = "Editar Curso";
             // 
@@ -484,10 +484,10 @@
             // 
             // rtxtDetalleEdit
             // 
-            this.rtxtDetalleEdit.Location = new System.Drawing.Point(13, 315);
+            this.rtxtDetalleEdit.Location = new System.Drawing.Point(12, 307);
             this.rtxtDetalleEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleEdit.Name = "rtxtDetalleEdit";
-            this.rtxtDetalleEdit.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleEdit.Size = new System.Drawing.Size(469, 130);
             this.rtxtDetalleEdit.TabIndex = 13;
             this.rtxtDetalleEdit.Text = "";
             // 
@@ -509,7 +509,7 @@
             this.tbpEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpEliminar.Name = "tbpEliminar";
             this.tbpEliminar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpEliminar.Size = new System.Drawing.Size(481, 481);
+            this.tbpEliminar.Size = new System.Drawing.Size(481, 483);
             this.tbpEliminar.TabIndex = 2;
             this.tbpEliminar.Text = "Elminar Curso";
             // 
@@ -671,10 +671,10 @@
             // rtxtDetalleCE
             // 
             this.rtxtDetalleCE.Enabled = false;
-            this.rtxtDetalleCE.Location = new System.Drawing.Point(13, 315);
+            this.rtxtDetalleCE.Location = new System.Drawing.Point(6, 307);
             this.rtxtDetalleCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleCE.Name = "rtxtDetalleCE";
-            this.rtxtDetalleCE.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleCE.Size = new System.Drawing.Size(469, 130);
             this.rtxtDetalleCE.TabIndex = 24;
             this.rtxtDetalleCE.Text = "";
             // 
