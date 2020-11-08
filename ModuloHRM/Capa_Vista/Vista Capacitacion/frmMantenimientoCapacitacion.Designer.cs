@@ -104,12 +104,12 @@
             // tbpCapacitacionEdit
             // 
             this.tbpCapacitacionEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
+            this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEdit);
             this.tbpCapacitacionEdit.Controls.Add(this.txtCodiCapa);
             this.tbpCapacitacionEdit.Controls.Add(this.gbxDetCap);
             this.tbpCapacitacionEdit.Controls.Add(this.btnIngresoCurso);
             this.tbpCapacitacionEdit.Controls.Add(this.lblCodigo);
-            this.tbpCapacitacionEdit.Controls.Add(this.btnBuscarEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.txtBusqCodEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.lblCodEmp);
             this.tbpCapacitacionEdit.Controls.Add(this.gbxDatEmp);
@@ -270,13 +270,13 @@
             // 
             // btnBuscarEmp
             // 
-            this.btnBuscarEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarEmp.Location = new System.Drawing.Point(426, 51);
+            this.btnBuscarEmp.Font = new System.Drawing.Font("Rockwell", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarEmp.Location = new System.Drawing.Point(426, 48);
             this.btnBuscarEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscarEmp.Name = "btnBuscarEmp";
-            this.btnBuscarEmp.Size = new System.Drawing.Size(87, 23);
+            this.btnBuscarEmp.Size = new System.Drawing.Size(87, 30);
             this.btnBuscarEmp.TabIndex = 42;
-            this.btnBuscarEmp.Text = "Buscar";
+            this.btnBuscarEmp.Text = "Actualizar Empleado";
             this.btnBuscarEmp.UseVisualStyleBackColor = true;
             this.btnBuscarEmp.Click += new System.EventHandler(this.btnBuscarEmp_Click);
             // 
