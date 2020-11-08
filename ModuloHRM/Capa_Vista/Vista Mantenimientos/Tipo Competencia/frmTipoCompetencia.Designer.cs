@@ -46,9 +46,10 @@
             this.rbtnInactivo.AutoSize = true;
             this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbtnInactivo.Location = new System.Drawing.Point(268, 325);
+            this.rbtnInactivo.Location = new System.Drawing.Point(357, 400);
+            this.rbtnInactivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnInactivo.Name = "rbtnInactivo";
-            this.rbtnInactivo.Size = new System.Drawing.Size(77, 19);
+            this.rbtnInactivo.Size = new System.Drawing.Size(100, 24);
             this.rbtnInactivo.TabIndex = 40;
             this.rbtnInactivo.TabStop = true;
             this.rbtnInactivo.Text = "Inactivo";
@@ -60,9 +61,10 @@
             this.rbtnActivo.AutoSize = true;
             this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbtnActivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbtnActivo.Location = new System.Drawing.Point(186, 325);
+            this.rbtnActivo.Location = new System.Drawing.Point(248, 400);
+            this.rbtnActivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbtnActivo.Name = "rbtnActivo";
-            this.rbtnActivo.Size = new System.Drawing.Size(65, 19);
+            this.rbtnActivo.Size = new System.Drawing.Size(84, 24);
             this.rbtnActivo.TabIndex = 39;
             this.rbtnActivo.TabStop = true;
             this.rbtnActivo.Text = "Activo";
@@ -74,9 +76,10 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblEstado.Location = new System.Drawing.Point(131, 296);
+            this.lblEstado.Location = new System.Drawing.Point(175, 364);
+            this.lblEstado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(173, 15);
+            this.lblEstado.Size = new System.Drawing.Size(229, 20);
             this.lblEstado.TabIndex = 38;
             this.lblEstado.Text = "Estado de la Competencia";
             // 
@@ -84,9 +87,10 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(131, 235);
+            this.lblNombre.Location = new System.Drawing.Point(175, 289);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(180, 15);
+            this.lblNombre.Size = new System.Drawing.Size(241, 20);
             this.lblNombre.TabIndex = 33;
             this.lblNombre.Text = "Nombre de la Competencia";
             // 
@@ -94,10 +98,11 @@
             // 
             this.dgvCompetencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCompetencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompetencias.Location = new System.Drawing.Point(444, 150);
+            this.dgvCompetencias.Location = new System.Drawing.Point(592, 185);
+            this.dgvCompetencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvCompetencias.Name = "dgvCompetencias";
             this.dgvCompetencias.RowHeadersWidth = 51;
-            this.dgvCompetencias.Size = new System.Drawing.Size(508, 225);
+            this.dgvCompetencias.Size = new System.Drawing.Size(677, 277);
             this.dgvCompetencias.TabIndex = 35;
             // 
             // lblIDCompetencia
@@ -105,56 +110,53 @@
             this.lblIDCompetencia.AutoSize = true;
             this.lblIDCompetencia.Enabled = false;
             this.lblIDCompetencia.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDCompetencia.Location = new System.Drawing.Point(131, 171);
+            this.lblIDCompetencia.Location = new System.Drawing.Point(175, 210);
+            this.lblIDCompetencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIDCompetencia.Name = "lblIDCompetencia";
-            this.lblIDCompetencia.Size = new System.Drawing.Size(110, 15);
+            this.lblIDCompetencia.Size = new System.Drawing.Size(148, 20);
             this.lblIDCompetencia.TabIndex = 34;
             this.lblIDCompetencia.Text = "ID Competencia";
             // 
             // NavegadorCompetencias
             // 
             this.NavegadorCompetencias.BackColor = System.Drawing.Color.Transparent;
-            this.NavegadorCompetencias.Location = new System.Drawing.Point(12, 12);
+            this.NavegadorCompetencias.Location = new System.Drawing.Point(16, 15);
+            this.NavegadorCompetencias.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.NavegadorCompetencias.Name = "NavegadorCompetencias";
-            this.NavegadorCompetencias.Size = new System.Drawing.Size(1059, 105);
+            this.NavegadorCompetencias.Size = new System.Drawing.Size(1412, 129);
             this.NavegadorCompetencias.TabIndex = 41;
             this.NavegadorCompetencias.Load += new System.EventHandler(this.NavegadorCompetencias_Load);
             // 
             // txtIDCompetencia
             // 
-            this.txtIDCompetencia.Location = new System.Drawing.Point(134, 190);
+            this.txtIDCompetencia.Location = new System.Drawing.Point(179, 234);
             this.txtIDCompetencia.Name = "txtIDCompetencia";
-            this.txtIDCompetencia.Size = new System.Drawing.Size(253, 20);
+            this.txtIDCompetencia.Size = new System.Drawing.Size(321, 22);
             this.txtIDCompetencia.TabIndex = 42;
-            this.txtIDCompetencia.Tag = "pk_id_competencia";
-            this.txtIDCompetencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtIDCompetencia.Tag = "pk_id_tipo_competencia";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(134, 254);
+            this.txtNombre.Location = new System.Drawing.Point(179, 313);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(253, 20);
+            this.txtNombre.Size = new System.Drawing.Size(321, 22);
             this.txtNombre.TabIndex = 43;
             this.txtNombre.Tag = "nombre_competencia";
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(412, 355);
+            this.txtEstado.Location = new System.Drawing.Point(536, 440);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(26, 20);
+            this.txtEstado.Size = new System.Drawing.Size(36, 22);
             this.txtEstado.TabIndex = 44;
             this.txtEstado.Tag = "estado_competencia";
-            this.txtEstado.Visible = false;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
-            this.txtEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // frmTipoCompetencia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(1079, 413);
+            this.ClientSize = new System.Drawing.Size(1439, 508);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtIDCompetencia);
@@ -166,6 +168,7 @@
             this.Controls.Add(this.dgvCompetencias);
             this.Controls.Add(this.lblIDCompetencia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmTipoCompetencia";
             this.Text = "310 - Mantenimientos de Competencias";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();

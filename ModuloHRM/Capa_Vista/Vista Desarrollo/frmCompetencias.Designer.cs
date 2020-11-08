@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.gbxDatosCompetencia = new System.Windows.Forms.GroupBox();
+            this.btnListado = new System.Windows.Forms.Button();
             this.gbxRemoverCompetencia = new System.Windows.Forms.GroupBox();
             this.lblIDCompetencia = new System.Windows.Forms.Label();
             this.btnRemover = new System.Windows.Forms.Button();
             this.txtIDCompetencia = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnIngreso = new System.Windows.Forms.Button();
             this.lblFechaFin = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.lblFechaInicio = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.txtResultado = new System.Windows.Forms.TextBox();
             this.cmbCompetencias = new System.Windows.Forms.ComboBox();
             this.lblResultado = new System.Windows.Forms.Label();
-            this.btnListado = new System.Windows.Forms.Button();
             this.gbxDatosCompetencia.SuspendLayout();
             this.gbxRemoverCompetencia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
@@ -62,7 +62,7 @@
             // 
             this.gbxDatosCompetencia.Controls.Add(this.btnListado);
             this.gbxDatosCompetencia.Controls.Add(this.gbxRemoverCompetencia);
-            this.gbxDatosCompetencia.Controls.Add(this.btnBuscar);
+            this.gbxDatosCompetencia.Controls.Add(this.btnIngreso);
             this.gbxDatosCompetencia.Controls.Add(this.lblFechaFin);
             this.gbxDatosCompetencia.Controls.Add(this.dtpFechaFin);
             this.gbxDatosCompetencia.Controls.Add(this.lblFechaInicio);
@@ -79,6 +79,16 @@
             this.gbxDatosCompetencia.TabIndex = 5;
             this.gbxDatosCompetencia.TabStop = false;
             this.gbxDatosCompetencia.Text = "Datos De Las Competencias Del Empleado";
+            // 
+            // btnListado
+            // 
+            this.btnListado.Location = new System.Drawing.Point(56, 34);
+            this.btnListado.Name = "btnListado";
+            this.btnListado.Size = new System.Drawing.Size(123, 43);
+            this.btnListado.TabIndex = 10;
+            this.btnListado.Text = "Listado de Empleados";
+            this.btnListado.UseVisualStyleBackColor = true;
+            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
             // 
             // gbxRemoverCompetencia
             // 
@@ -121,14 +131,15 @@
             this.txtIDCompetencia.Size = new System.Drawing.Size(164, 23);
             this.txtIDCompetencia.TabIndex = 2;
             // 
-            // btnBuscar
+            // btnIngreso
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(641, 29);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(192, 23);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Ingresar Desarrollo";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnIngreso.Location = new System.Drawing.Point(641, 29);
+            this.btnIngreso.Name = "btnIngreso";
+            this.btnIngreso.Size = new System.Drawing.Size(192, 23);
+            this.btnIngreso.TabIndex = 9;
+            this.btnIngreso.Text = "Ingresar Desarrollo";
+            this.btnIngreso.UseVisualStyleBackColor = true;
+            this.btnIngreso.Click += new System.EventHandler(this.btnIngreso_Click);
             // 
             // lblFechaFin
             // 
@@ -289,16 +300,6 @@
             this.lblResultado.TabIndex = 0;
             this.lblResultado.Text = "Resultado";
             // 
-            // btnListado
-            // 
-            this.btnListado.Location = new System.Drawing.Point(56, 34);
-            this.btnListado.Name = "btnListado";
-            this.btnListado.Size = new System.Drawing.Size(123, 43);
-            this.btnListado.TabIndex = 10;
-            this.btnListado.Text = "Listado de Empleados";
-            this.btnListado.UseVisualStyleBackColor = true;
-            this.btnListado.Click += new System.EventHandler(this.btnListado_Click);
-            // 
             // frmCompetencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,7 +340,7 @@
         private System.Windows.Forms.DateTimePicker dtpFechaFin;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.DateTimePicker dtpFechaInicio;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnIngreso;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmIDCompetencia;
