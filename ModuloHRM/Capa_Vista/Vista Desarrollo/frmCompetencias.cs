@@ -153,7 +153,7 @@ namespace Capa_Vista.Vista_Desarrollo
 
                 if (funcValidarFechas(FI, FF) == true)
                 {
-                    ConsNom.funcCrearPeriodo(txtGestPlanNom.Text, FI, FF);
+                    //ConsNom.funcCrearPeriodo(txtGestPlanNom.Text, FI, FF);
                     txtIDEmpleado.Text = "";
                     dtpFechaInicio.Value = DateTime.Today;
                     dtpFechaFin.Value = DateTime.Today;

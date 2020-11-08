@@ -200,7 +200,7 @@
             this.tsmiAscenderEmpleadoProceso,
             this.tsmiDespedirEmpleadoProceso});
             this.tsmiEmpleadosProceso.Name = "tsmiEmpleadosProceso";
-            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiEmpleadosProceso.Text = "Empleados";
             // 
             // tsmiEditarEmpleadoProceso
@@ -229,7 +229,7 @@
             this.tsmiReclutamientoProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarReclutaProceso});
             this.tsmiReclutamientoProceso.Name = "tsmiReclutamientoProceso";
-            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiReclutamientoProceso.Text = "Reclutamiento";
             // 
             // tsmiIngresarReclutaProceso
@@ -242,14 +242,14 @@
             // tsmiEntrevistaProceso
             // 
             this.tsmiEntrevistaProceso.Name = "tsmiEntrevistaProceso";
-            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiEntrevistaProceso.Text = "Entrevista";
             this.tsmiEntrevistaProceso.Click += new System.EventHandler(this.tsmiEntrevistaProceso_Click);
             // 
             // tsmiContratacionProceso
             // 
             this.tsmiContratacionProceso.Name = "tsmiContratacionProceso";
-            this.tsmiContratacionProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiContratacionProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiContratacionProceso.Text = "Contratación";
             this.tsmiContratacionProceso.Click += new System.EventHandler(this.tsmiContratacionProceso_Click);
             // 
@@ -261,7 +261,7 @@
             this.tsmiDeducciónPercepciónEmpleadoProceso,
             this.tsmiControlDeHorasDíasProceso});
             this.tsmiNominaProceso.Name = "tsmiNominaProceso";
-            this.tsmiNominaProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNominaProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiNominaProceso.Text = "Nómina";
             // 
             // tsmiBuscarDatosGeneralesDeNominaProceso
@@ -297,7 +297,7 @@
             this.tsmiDesarrolloProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarCompetenciasProceso});
             this.tsmiDesarrolloProceso.Name = "tsmiDesarrolloProceso";
-            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiDesarrolloProceso.Text = "Desarrollo";
             // 
             // tsmiIngresarCompetenciasProceso
@@ -312,7 +312,7 @@
             this.tsmiCapacitacionProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarNuevaCapacitacionProceso});
             this.tsmiCapacitacionProceso.Name = "tsmiCapacitacionProceso";
-            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiCapacitacionProceso.Text = "Capacitación";
             // 
             // tsmiIngresarNuevaCapacitacionProceso
@@ -320,11 +320,12 @@
             this.tsmiIngresarNuevaCapacitacionProceso.Name = "tsmiIngresarNuevaCapacitacionProceso";
             this.tsmiIngresarNuevaCapacitacionProceso.Size = new System.Drawing.Size(234, 22);
             this.tsmiIngresarNuevaCapacitacionProceso.Text = "Ingresar Nueva Capacitación";
+            this.tsmiIngresarNuevaCapacitacionProceso.Click += new System.EventHandler(this.tsmiIngresarNuevaCapacitacionProceso_Click);
             // 
             // tsmiEstadisticasProceso
             // 
             this.tsmiEstadisticasProceso.Name = "tsmiEstadisticasProceso";
-            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(152, 22);
+            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(180, 22);
             this.tsmiEstadisticasProceso.Text = "Estadísticas";
             this.tsmiEstadisticasProceso.Click += new System.EventHandler(this.tsmiEstadisticasProceso_Click);
             // 
@@ -453,7 +454,7 @@
             this.HelpButton = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspMDI;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "301 - Módulo de Recursos Humanos";

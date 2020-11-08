@@ -66,7 +66,7 @@ namespace Capa_Modelo.Modelo_Desarrollo
         public void funcIngresoCompetencias()
         {
             //JULIO ES MULA DEBES AGREGAR LA TABLA
-            try
+            /*try
             {
                 string Correlativo = "SELECT IFNULL(MAX(pk_id_encabezado_nomina),0) +1 FROM encabezado_nomina";
                 OdbcCommand Query_Validacion = new OdbcCommand(Correlativo, Con.funcconexion());
@@ -85,7 +85,7 @@ namespace Capa_Modelo.Modelo_Desarrollo
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
     }
