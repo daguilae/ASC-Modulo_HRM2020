@@ -63,20 +63,44 @@ namespace Capa_Modelo.Modelo_Desarrollo
             }
         }
 
-        public void funcIngresoCompetencias()
+        public void funcIngresoCompetencias(string IDEmp, string FI, string FF, List<int> IDs_Competencias, List<int> Resultados)
         {
-            //JULIO ES MULA DEBES AGREGAR LA TABLA
-            /*try
+            try
             {
-                string Correlativo = "SELECT IFNULL(MAX(pk_id_encabezado_nomina),0) +1 FROM encabezado_nomina";
+                string Correlativo = "SELECT IFNULL(MAX(pk_id_encabezado_competencia),0) +1 FROM encabezado_competencia";
                 OdbcCommand Query_Validacion = new OdbcCommand(Correlativo, Con.funcconexion());
                 int IdEnc = Convert.ToInt32(Query_Validacion.ExecuteScalar());
                 OdbcDataReader Ejecucion1 = Query_Validacion.ExecuteReader();
 
-                string sentencia = "INSERT INTO encabezado_nomina (pk_id_encabezado_nomina, nombre_encabezado_nomina, fecha_inicio_encabezado_nomina, fecha_fin_encabezado_nomina) VALUES ('" + IdEnc + "','" + Nom + "','" + FI + "','" + FF + "')";
+                string sentencia = "INSERT INTO encabezado_competencia (pk_id_encabezado_competencia, fk_id_empleado_encabezado_competencia, fecha_inicio_encabezado_competencia, fecha_fin_encabezado_competencia) VALUES ('" + IdEnc + "','" + IDEmp + "','" + FI + "','" + FF + "')";
                 OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Con.funcconexion());
                 Query_Validacion1.ExecuteNonQuery();
-                MessageBox.Show("Ingreso Exitoso", "INGRESO DE PERIODO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                for(int i =0; i < IDs_Competencias.Count; i++)
+                {
+                    try
+                    {
+                        string Correlativo2 = "SELECT IFNULL(MAX(pk_id_competencia_desarrollo),0) +1 FROM competencia_desarrollo";
+                        OdbcCommand Query_Validacion2 = new OdbcCommand(Correlativo2, Con.funcconexion());
+                        int IdEnc2 = Convert.ToInt32(Query_Validacion2.ExecuteScalar());
+                        OdbcDataReader Ejecucion2 = Query_Validacion2.ExecuteReader();
+
+                        string InsertarCompetencias = "INSERT INTO competencia_desarrollo (pk_id_competencia_desarrollo, fk_id_encabezado_competencia, fk_id_tipo_competencia_desarrollo, resultado_competencia_desarrollo) VALUES ('" + IdEnc2 + "','" + IdEnc + "','" + IDs_Competencias[i] + "','" + Resultados[i] + "')";
+                        OdbcCommand Query_Validacion3 = new OdbcCommand(InsertarCompetencias, Con.funcconexion());
+                        Query_Validacion3.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al ejecutar SQL: " +
+                        System.Environment.NewLine + System.Environment.NewLine +
+                        ex.GetType().ToString() + System.Environment.NewLine +
+                        ex.Message, "Error",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+                MessageBox.Show("Ingreso Exitoso de las competencias del Empleado Ingresado", "HRM DESARROLLO LABORAL", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception ex)
             {
@@ -85,7 +109,7 @@ namespace Capa_Modelo.Modelo_Desarrollo
                     ex.GetType().ToString() + System.Environment.NewLine +
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
 
     }

@@ -16,6 +16,8 @@ namespace Capa_Vista.Vista_Desarrollo
         clsControladorDesarrollo Cont = new clsControladorDesarrollo();
 
         List<int> IDs_Competencia = new List<int>();
+        List<int> Resultados = new List<int>();
+
         public frmCompetencias()
         {
             InitializeComponent();
@@ -69,6 +71,7 @@ namespace Capa_Vista.Vista_Desarrollo
                 }
                 else
                 {
+                    
                     int ID_Competencia;
                     ID_Competencia = cmbCompetencias.SelectedIndex + 1;
 
@@ -87,7 +90,6 @@ namespace Capa_Vista.Vista_Desarrollo
                         }
                         if (existe == false)
                         {
-                            IDs_Competencia.Add(ID_Competencia);
                             DataGridViewRow row = (DataGridViewRow)dgvCompetencias.Rows[0].Clone();
                             row.Cells[0].Value = ID_Competencia;
                             row.Cells[1].Value = cmbCompetencias.Text;
@@ -111,7 +113,7 @@ namespace Capa_Vista.Vista_Desarrollo
             {
                 if (dgvCompetencias.RowCount <= 0)
                 {
-                    MessageBox.Show("ERROR :No se encuentra ninguna competencia registrada", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("ERROR :No se encuentra ninguna competencia registrada", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -147,18 +149,40 @@ namespace Capa_Vista.Vista_Desarrollo
             }
             else
             {
-                string FI, FF;
-                FI = dtpFechaInicio.Value.Date.ToShortDateString();
-                FF = dtpFechaFin.Value.Date.ToShortDateString();
-
-                if (funcValidarFechas(FI, FF) == true)
+                if (MessageBox.Show("¿Seguro que ingreso los resultados correctos?", "HRM DESARROLLO LABORAL", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) { }
+                else
                 {
-                    //ConsNom.funcCrearPeriodo(txtGestPlanNom.Text, FI, FF);
-                    txtIDEmpleado.Text = "";
-                    dtpFechaInicio.Value = DateTime.Today;
-                    dtpFechaFin.Value = DateTime.Today;
+                    if(dgvCompetencias.RowCount <= 0)
+                    {
+                        MessageBox.Show("ERROR :No se encuentra ninguna competencia registrada", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        string FI, FF;
+                        FI = dtpFechaInicio.Value.Date.ToShortDateString();
+                        FF = dtpFechaFin.Value.Date.ToShortDateString();
+
+                        if (funcValidarFechas(FI, FF) == true)
+                        {
+                            for (int i = 0; i < dgvCompetencias.RowCount - 1; i++)
+                            {
+                                IDs_Competencia.Add(Convert.ToInt32(dgvCompetencias.Rows[i].Cells["clmIDCompetencia"].Value));
+                                Resultados.Add(Convert.ToInt32(dgvCompetencias.Rows[i].Cells["clmResultado"].Value));
+                            }
+                            Cont.funcCrearPeriodo(txtIDEmpleado.Text, FI, FF, IDs_Competencia, Resultados);
+                            txtIDEmpleado.Text = "";
+                            dtpFechaInicio.Value = DateTime.Today;
+                            dtpFechaFin.Value = DateTime.Today;
+                            txtResultado.Text = "";
+                            txtIDEmpleado.Focus();
+                            dgvCompetencias.Rows.Clear();
+                        }
+                    }
+                    
                 }
+
             }
+
         }
     }
 }
