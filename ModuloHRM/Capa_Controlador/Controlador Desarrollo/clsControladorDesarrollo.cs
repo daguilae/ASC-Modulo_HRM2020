@@ -22,5 +22,10 @@ namespace Capa_Controlador.Controlador_Desarrollo
             DataTable Items = sn.funcCmbCompetencia();
             return Items;
         }
+
+        public void funcCrearPeriodo(string IDEmp, string FI, string FF, List<int> IDs_Competencias, List<int> Resultados)
+        {
+            sn.funcIngresoCompetencias(IDEmp, FI, FF, IDs_Competencias, Resultados);
+        }
     }
 }

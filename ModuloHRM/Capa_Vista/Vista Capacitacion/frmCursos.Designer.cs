@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Timer tmrDGVCurso;
             this.tbcCursos = new System.Windows.Forms.TabControl();
             this.tbpIngresar = new System.Windows.Forms.TabPage();
             this.btnBuscarCapacit = new System.Windows.Forms.Button();
@@ -36,7 +38,7 @@
             this.btnIngresarC = new System.Windows.Forms.Button();
             this.lblDetalleC = new System.Windows.Forms.Label();
             this.rtxtDetalleC = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbpDatos = new System.Windows.Forms.GroupBox();
             this.txtPuestoCurC = new System.Windows.Forms.TextBox();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -52,14 +54,14 @@
             this.txtCodigoCapCE = new System.Windows.Forms.TextBox();
             this.txtNombreCE = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblCodiCapa = new System.Windows.Forms.Label();
+            this.gbpDatosEdit = new System.Windows.Forms.GroupBox();
             this.txtPuestoDCE = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPuestoo = new System.Windows.Forms.Label();
             this.txtEmailDCE = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNommm = new System.Windows.Forms.Label();
             this.txtNombreDCE = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblCorr = new System.Windows.Forms.Label();
             this.txtCodigoCap = new System.Windows.Forms.TextBox();
             this.lblCodCap = new System.Windows.Forms.Label();
             this.btnBuscarCap = new System.Windows.Forms.Button();
@@ -69,28 +71,40 @@
             this.tbpEliminar = new System.Windows.Forms.TabPage();
             this.txtCodigoCapEli = new System.Windows.Forms.TextBox();
             this.txtNombreEli = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblNnomm = new System.Windows.Forms.Label();
+            this.lblCoddo = new System.Windows.Forms.Label();
+            this.gbpDatosEli = new System.Windows.Forms.GroupBox();
             this.txtPuestoEli = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblPuiest = new System.Windows.Forms.Label();
             this.txtEmailCaEli = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblNnommb = new System.Windows.Forms.Label();
             this.txtNombCaEli = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblEemail = new System.Windows.Forms.Label();
             this.txtCodigoCE = new System.Windows.Forms.TextBox();
             this.lblCodECE = new System.Windows.Forms.Label();
             this.btnBuscarCE = new System.Windows.Forms.Button();
             this.btnEliminarC = new System.Windows.Forms.Button();
             this.lblDetalleCE = new System.Windows.Forms.Label();
             this.rtxtDetalleCE = new System.Windows.Forms.RichTextBox();
+            this.dvgEmpleadosMostrar = new System.Windows.Forms.DataGridView();
+            this.lblAser = new System.Windows.Forms.Label();
+            this.cmbEncabezado = new System.Windows.Forms.ComboBox();
+            this.txtBuscador = new System.Windows.Forms.TextBox();
+            this.btnBuscarEmp = new System.Windows.Forms.Button();
+            this.lblEsft = new System.Windows.Forms.Label();
+            this.lsvInfoCap = new System.Windows.Forms.ListView();
+            this.clmhCodigoCap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhCursoCap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhCapacitador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            tmrDGVCurso = new System.Windows.Forms.Timer(this.components);
             this.tbcCursos.SuspendLayout();
             this.tbpIngresar.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gbpDatos.SuspendLayout();
             this.tbpEditar.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbpDatosEdit.SuspendLayout();
             this.tbpEliminar.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gbpDatosEli.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosMostrar)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcCursos
@@ -98,11 +112,11 @@
             this.tbcCursos.Controls.Add(this.tbpIngresar);
             this.tbcCursos.Controls.Add(this.tbpEditar);
             this.tbcCursos.Controls.Add(this.tbpEliminar);
-            this.tbcCursos.Location = new System.Drawing.Point(14, 15);
+            this.tbcCursos.Location = new System.Drawing.Point(14, 13);
             this.tbcCursos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcCursos.Name = "tbcCursos";
             this.tbcCursos.SelectedIndex = 0;
-            this.tbcCursos.Size = new System.Drawing.Size(489, 510);
+            this.tbcCursos.Size = new System.Drawing.Size(489, 512);
             this.tbcCursos.TabIndex = 0;
             // 
             // tbpIngresar
@@ -114,7 +128,7 @@
             this.tbpIngresar.Controls.Add(this.btnIngresarC);
             this.tbpIngresar.Controls.Add(this.lblDetalleC);
             this.tbpIngresar.Controls.Add(this.rtxtDetalleC);
-            this.tbpIngresar.Controls.Add(this.groupBox1);
+            this.tbpIngresar.Controls.Add(this.gbpDatos);
             this.tbpIngresar.Controls.Add(this.txtCodigoCapacit);
             this.tbpIngresar.Controls.Add(this.txtNombreCurso);
             this.tbpIngresar.Controls.Add(this.lblNombCurso);
@@ -123,7 +137,7 @@
             this.tbpIngresar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpIngresar.Name = "tbpIngresar";
             this.tbpIngresar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpIngresar.Size = new System.Drawing.Size(481, 481);
+            this.tbpIngresar.Size = new System.Drawing.Size(481, 483);
             this.tbpIngresar.TabIndex = 0;
             this.tbpIngresar.Text = "Ingresar Curso";
             // 
@@ -177,30 +191,30 @@
             // 
             // rtxtDetalleC
             // 
-            this.rtxtDetalleC.Location = new System.Drawing.Point(14, 289);
+            this.rtxtDetalleC.Location = new System.Drawing.Point(7, 281);
             this.rtxtDetalleC.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleC.Name = "rtxtDetalleC";
-            this.rtxtDetalleC.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleC.Size = new System.Drawing.Size(468, 156);
             this.rtxtDetalleC.TabIndex = 5;
             this.rtxtDetalleC.Text = "";
             // 
-            // groupBox1
+            // gbpDatos
             // 
-            this.groupBox1.Controls.Add(this.txtPuestoCurC);
-            this.groupBox1.Controls.Add(this.lblPuesto);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.lblNombreC);
-            this.groupBox1.Controls.Add(this.txtNombC);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Enabled = false;
-            this.groupBox1.Location = new System.Drawing.Point(7, 139);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(463, 118);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Capacitador";
+            this.gbpDatos.Controls.Add(this.txtPuestoCurC);
+            this.gbpDatos.Controls.Add(this.lblPuesto);
+            this.gbpDatos.Controls.Add(this.txtEmail);
+            this.gbpDatos.Controls.Add(this.lblNombreC);
+            this.gbpDatos.Controls.Add(this.txtNombC);
+            this.gbpDatos.Controls.Add(this.lblEmail);
+            this.gbpDatos.Enabled = false;
+            this.gbpDatos.Location = new System.Drawing.Point(7, 139);
+            this.gbpDatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatos.Name = "gbpDatos";
+            this.gbpDatos.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatos.Size = new System.Drawing.Size(463, 118);
+            this.gbpDatos.TabIndex = 4;
+            this.gbpDatos.TabStop = false;
+            this.gbpDatos.Text = "Datos Capacitador";
             // 
             // txtPuestoCurC
             // 
@@ -295,8 +309,8 @@
             this.tbpEditar.Controls.Add(this.txtCodigoCapCE);
             this.tbpEditar.Controls.Add(this.txtNombreCE);
             this.tbpEditar.Controls.Add(this.label5);
-            this.tbpEditar.Controls.Add(this.label6);
-            this.tbpEditar.Controls.Add(this.groupBox2);
+            this.tbpEditar.Controls.Add(this.lblCodiCapa);
+            this.tbpEditar.Controls.Add(this.gbpDatosEdit);
             this.tbpEditar.Controls.Add(this.txtCodigoCap);
             this.tbpEditar.Controls.Add(this.lblCodCap);
             this.tbpEditar.Controls.Add(this.btnBuscarCap);
@@ -307,7 +321,7 @@
             this.tbpEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpEditar.Name = "tbpEditar";
             this.tbpEditar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpEditar.Size = new System.Drawing.Size(481, 481);
+            this.tbpEditar.Size = new System.Drawing.Size(481, 483);
             this.tbpEditar.TabIndex = 1;
             this.tbpEditar.Text = "Editar Curso";
             // 
@@ -326,7 +340,7 @@
             this.txtCodigoCapCE.Location = new System.Drawing.Point(165, 110);
             this.txtCodigoCapCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoCapCE.Name = "txtCodigoCapCE";
-            this.txtCodigoCapCE.Size = new System.Drawing.Size(203, 23);
+            this.txtCodigoCapCE.Size = new System.Drawing.Size(202, 23);
             this.txtCodigoCapCE.TabIndex = 23;
             this.txtCodigoCapCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
@@ -347,32 +361,32 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Nombre del Curso";
             // 
-            // label6
+            // lblCodiCapa
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 113);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(145, 16);
-            this.label6.TabIndex = 20;
-            this.label6.Text = "Codigo de Capacitador";
+            this.lblCodiCapa.AutoSize = true;
+            this.lblCodiCapa.Location = new System.Drawing.Point(13, 113);
+            this.lblCodiCapa.Name = "lblCodiCapa";
+            this.lblCodiCapa.Size = new System.Drawing.Size(145, 16);
+            this.lblCodiCapa.TabIndex = 20;
+            this.lblCodiCapa.Text = "Codigo de Capacitador";
             // 
-            // groupBox2
+            // gbpDatosEdit
             // 
-            this.groupBox2.Controls.Add(this.txtPuestoDCE);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtEmailDCE);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.txtNombreDCE);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Enabled = false;
-            this.groupBox2.Location = new System.Drawing.Point(6, 165);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox2.Size = new System.Drawing.Size(463, 118);
-            this.groupBox2.TabIndex = 19;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos Capacitador";
+            this.gbpDatosEdit.Controls.Add(this.txtPuestoDCE);
+            this.gbpDatosEdit.Controls.Add(this.lblPuestoo);
+            this.gbpDatosEdit.Controls.Add(this.txtEmailDCE);
+            this.gbpDatosEdit.Controls.Add(this.lblNommm);
+            this.gbpDatosEdit.Controls.Add(this.txtNombreDCE);
+            this.gbpDatosEdit.Controls.Add(this.lblCorr);
+            this.gbpDatosEdit.Enabled = false;
+            this.gbpDatosEdit.Location = new System.Drawing.Point(6, 165);
+            this.gbpDatosEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatosEdit.Name = "gbpDatosEdit";
+            this.gbpDatosEdit.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatosEdit.Size = new System.Drawing.Size(463, 118);
+            this.gbpDatosEdit.TabIndex = 19;
+            this.gbpDatosEdit.TabStop = false;
+            this.gbpDatosEdit.Text = "Datos Capacitador";
             // 
             // txtPuestoDCE
             // 
@@ -382,14 +396,14 @@
             this.txtPuestoDCE.Size = new System.Drawing.Size(294, 23);
             this.txtPuestoDCE.TabIndex = 10;
             // 
-            // label1
+            // lblPuestoo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 89);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 16);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Puesto";
+            this.lblPuestoo.AutoSize = true;
+            this.lblPuestoo.Location = new System.Drawing.Point(7, 89);
+            this.lblPuestoo.Name = "lblPuestoo";
+            this.lblPuestoo.Size = new System.Drawing.Size(46, 16);
+            this.lblPuestoo.TabIndex = 9;
+            this.lblPuestoo.Text = "Puesto";
             // 
             // txtEmailDCE
             // 
@@ -399,14 +413,14 @@
             this.txtEmailDCE.Size = new System.Drawing.Size(294, 23);
             this.txtEmailDCE.TabIndex = 8;
             // 
-            // label2
+            // lblNommm
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 27);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Nombre";
+            this.lblNommm.AutoSize = true;
+            this.lblNommm.Location = new System.Drawing.Point(7, 27);
+            this.lblNommm.Name = "lblNommm";
+            this.lblNommm.Size = new System.Drawing.Size(55, 16);
+            this.lblNommm.TabIndex = 6;
+            this.lblNommm.Text = "Nombre";
             // 
             // txtNombreDCE
             // 
@@ -416,28 +430,28 @@
             this.txtNombreDCE.Size = new System.Drawing.Size(294, 23);
             this.txtNombreDCE.TabIndex = 7;
             // 
-            // label3
+            // lblCorr
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 16);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "E-Mail";
+            this.lblCorr.AutoSize = true;
+            this.lblCorr.Location = new System.Drawing.Point(7, 58);
+            this.lblCorr.Name = "lblCorr";
+            this.lblCorr.Size = new System.Drawing.Size(45, 16);
+            this.lblCorr.TabIndex = 5;
+            this.lblCorr.Text = "E-Mail";
             // 
             // txtCodigoCap
             // 
-            this.txtCodigoCap.Location = new System.Drawing.Point(238, 10);
+            this.txtCodigoCap.Location = new System.Drawing.Point(165, 10);
             this.txtCodigoCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoCap.Name = "txtCodigoCap";
-            this.txtCodigoCap.Size = new System.Drawing.Size(139, 23);
+            this.txtCodigoCap.Size = new System.Drawing.Size(202, 23);
             this.txtCodigoCap.TabIndex = 18;
             this.txtCodigoCap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // lblCodCap
             // 
             this.lblCodCap.AutoSize = true;
-            this.lblCodCap.Location = new System.Drawing.Point(125, 14);
+            this.lblCodCap.Location = new System.Drawing.Point(13, 13);
             this.lblCodCap.Name = "lblCodCap";
             this.lblCodCap.Size = new System.Drawing.Size(110, 16);
             this.lblCodCap.TabIndex = 17;
@@ -445,10 +459,10 @@
             // 
             // btnBuscarCap
             // 
-            this.btnBuscarCap.Location = new System.Drawing.Point(385, 7);
+            this.btnBuscarCap.Location = new System.Drawing.Point(373, 10);
             this.btnBuscarCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscarCap.Name = "btnBuscarCap";
-            this.btnBuscarCap.Size = new System.Drawing.Size(87, 28);
+            this.btnBuscarCap.Size = new System.Drawing.Size(83, 23);
             this.btnBuscarCap.TabIndex = 16;
             this.btnBuscarCap.Text = "Buscar";
             this.btnBuscarCap.UseVisualStyleBackColor = true;
@@ -477,10 +491,10 @@
             // 
             // rtxtDetalleEdit
             // 
-            this.rtxtDetalleEdit.Location = new System.Drawing.Point(13, 315);
+            this.rtxtDetalleEdit.Location = new System.Drawing.Point(6, 307);
             this.rtxtDetalleEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleEdit.Name = "rtxtDetalleEdit";
-            this.rtxtDetalleEdit.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleEdit.Size = new System.Drawing.Size(469, 130);
             this.rtxtDetalleEdit.TabIndex = 13;
             this.rtxtDetalleEdit.Text = "";
             // 
@@ -489,9 +503,9 @@
             this.tbpEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpEliminar.Controls.Add(this.txtCodigoCapEli);
             this.tbpEliminar.Controls.Add(this.txtNombreEli);
-            this.tbpEliminar.Controls.Add(this.label4);
-            this.tbpEliminar.Controls.Add(this.label7);
-            this.tbpEliminar.Controls.Add(this.groupBox3);
+            this.tbpEliminar.Controls.Add(this.lblNnomm);
+            this.tbpEliminar.Controls.Add(this.lblCoddo);
+            this.tbpEliminar.Controls.Add(this.gbpDatosEli);
             this.tbpEliminar.Controls.Add(this.txtCodigoCE);
             this.tbpEliminar.Controls.Add(this.lblCodECE);
             this.tbpEliminar.Controls.Add(this.btnBuscarCE);
@@ -502,7 +516,7 @@
             this.tbpEliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpEliminar.Name = "tbpEliminar";
             this.tbpEliminar.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpEliminar.Size = new System.Drawing.Size(481, 481);
+            this.tbpEliminar.Size = new System.Drawing.Size(481, 483);
             this.tbpEliminar.TabIndex = 2;
             this.tbpEliminar.Text = "Elminar Curso";
             // 
@@ -524,41 +538,41 @@
             this.txtNombreEli.Size = new System.Drawing.Size(294, 23);
             this.txtNombreEli.TabIndex = 33;
             // 
-            // label4
+            // lblNnomm
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 16);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Nombre del Curso";
+            this.lblNnomm.AutoSize = true;
+            this.lblNnomm.Location = new System.Drawing.Point(13, 78);
+            this.lblNnomm.Name = "lblNnomm";
+            this.lblNnomm.Size = new System.Drawing.Size(114, 16);
+            this.lblNnomm.TabIndex = 32;
+            this.lblNnomm.Text = "Nombre del Curso";
             // 
-            // label7
+            // lblCoddo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(13, 109);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(145, 16);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Codigo de Capacitador";
+            this.lblCoddo.AutoSize = true;
+            this.lblCoddo.Location = new System.Drawing.Point(13, 109);
+            this.lblCoddo.Name = "lblCoddo";
+            this.lblCoddo.Size = new System.Drawing.Size(145, 16);
+            this.lblCoddo.TabIndex = 31;
+            this.lblCoddo.Text = "Codigo de Capacitador";
             // 
-            // groupBox3
+            // gbpDatosEli
             // 
-            this.groupBox3.Controls.Add(this.txtPuestoEli);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.txtEmailCaEli);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.txtNombCaEli);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Enabled = false;
-            this.groupBox3.Location = new System.Drawing.Point(6, 161);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(463, 118);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Datos Capacitador";
+            this.gbpDatosEli.Controls.Add(this.txtPuestoEli);
+            this.gbpDatosEli.Controls.Add(this.lblPuiest);
+            this.gbpDatosEli.Controls.Add(this.txtEmailCaEli);
+            this.gbpDatosEli.Controls.Add(this.lblNnommb);
+            this.gbpDatosEli.Controls.Add(this.txtNombCaEli);
+            this.gbpDatosEli.Controls.Add(this.lblEemail);
+            this.gbpDatosEli.Enabled = false;
+            this.gbpDatosEli.Location = new System.Drawing.Point(6, 161);
+            this.gbpDatosEli.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatosEli.Name = "gbpDatosEli";
+            this.gbpDatosEli.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gbpDatosEli.Size = new System.Drawing.Size(463, 118);
+            this.gbpDatosEli.TabIndex = 30;
+            this.gbpDatosEli.TabStop = false;
+            this.gbpDatosEli.Text = "Datos Capacitador";
             // 
             // txtPuestoEli
             // 
@@ -568,14 +582,14 @@
             this.txtPuestoEli.Size = new System.Drawing.Size(294, 23);
             this.txtPuestoEli.TabIndex = 10;
             // 
-            // label8
+            // lblPuiest
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 89);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 16);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Puesto";
+            this.lblPuiest.AutoSize = true;
+            this.lblPuiest.Location = new System.Drawing.Point(7, 89);
+            this.lblPuiest.Name = "lblPuiest";
+            this.lblPuiest.Size = new System.Drawing.Size(46, 16);
+            this.lblPuiest.TabIndex = 9;
+            this.lblPuiest.Text = "Puesto";
             // 
             // txtEmailCaEli
             // 
@@ -585,14 +599,14 @@
             this.txtEmailCaEli.Size = new System.Drawing.Size(294, 23);
             this.txtEmailCaEli.TabIndex = 8;
             // 
-            // label9
+            // lblNnommb
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 16);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Nombre";
+            this.lblNnommb.AutoSize = true;
+            this.lblNnommb.Location = new System.Drawing.Point(7, 27);
+            this.lblNnommb.Name = "lblNnommb";
+            this.lblNnommb.Size = new System.Drawing.Size(55, 16);
+            this.lblNnommb.TabIndex = 6;
+            this.lblNnommb.Text = "Nombre";
             // 
             // txtNombCaEli
             // 
@@ -602,28 +616,28 @@
             this.txtNombCaEli.Size = new System.Drawing.Size(294, 23);
             this.txtNombCaEli.TabIndex = 7;
             // 
-            // label10
+            // lblEemail
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 58);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 16);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "E-Mail";
+            this.lblEemail.AutoSize = true;
+            this.lblEemail.Location = new System.Drawing.Point(7, 58);
+            this.lblEemail.Name = "lblEemail";
+            this.lblEemail.Size = new System.Drawing.Size(45, 16);
+            this.lblEemail.TabIndex = 5;
+            this.lblEemail.Text = "E-Mail";
             // 
             // txtCodigoCE
             // 
-            this.txtCodigoCE.Location = new System.Drawing.Point(238, 10);
+            this.txtCodigoCE.Location = new System.Drawing.Point(165, 11);
             this.txtCodigoCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoCE.Name = "txtCodigoCE";
-            this.txtCodigoCE.Size = new System.Drawing.Size(139, 23);
+            this.txtCodigoCE.Size = new System.Drawing.Size(214, 23);
             this.txtCodigoCE.TabIndex = 29;
             this.txtCodigoCE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numero);
             // 
             // lblCodECE
             // 
             this.lblCodECE.AutoSize = true;
-            this.lblCodECE.Location = new System.Drawing.Point(125, 14);
+            this.lblCodECE.Location = new System.Drawing.Point(13, 14);
             this.lblCodECE.Name = "lblCodECE";
             this.lblCodECE.Size = new System.Drawing.Size(110, 16);
             this.lblCodECE.TabIndex = 28;
@@ -631,10 +645,10 @@
             // 
             // btnBuscarCE
             // 
-            this.btnBuscarCE.Location = new System.Drawing.Point(385, 7);
+            this.btnBuscarCE.Location = new System.Drawing.Point(385, 10);
             this.btnBuscarCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBuscarCE.Name = "btnBuscarCE";
-            this.btnBuscarCE.Size = new System.Drawing.Size(87, 28);
+            this.btnBuscarCE.Size = new System.Drawing.Size(74, 25);
             this.btnBuscarCE.TabIndex = 27;
             this.btnBuscarCE.Text = "Buscar";
             this.btnBuscarCE.UseVisualStyleBackColor = true;
@@ -664,40 +678,139 @@
             // rtxtDetalleCE
             // 
             this.rtxtDetalleCE.Enabled = false;
-            this.rtxtDetalleCE.Location = new System.Drawing.Point(13, 315);
+            this.rtxtDetalleCE.Location = new System.Drawing.Point(6, 307);
             this.rtxtDetalleCE.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.rtxtDetalleCE.Name = "rtxtDetalleCE";
-            this.rtxtDetalleCE.Size = new System.Drawing.Size(443, 117);
+            this.rtxtDetalleCE.Size = new System.Drawing.Size(469, 130);
             this.rtxtDetalleCE.TabIndex = 24;
             this.rtxtDetalleCE.Text = "";
+            // 
+            // dvgEmpleadosMostrar
+            // 
+            this.dvgEmpleadosMostrar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dvgEmpleadosMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgEmpleadosMostrar.Location = new System.Drawing.Point(509, 38);
+            this.dvgEmpleadosMostrar.Name = "dvgEmpleadosMostrar";
+            this.dvgEmpleadosMostrar.Size = new System.Drawing.Size(661, 277);
+            this.dvgEmpleadosMostrar.TabIndex = 1;
+            // 
+            // lblAser
+            // 
+            this.lblAser.AutoSize = true;
+            this.lblAser.Location = new System.Drawing.Point(509, 13);
+            this.lblAser.Name = "lblAser";
+            this.lblAser.Size = new System.Drawing.Size(51, 16);
+            this.lblAser.TabIndex = 2;
+            this.lblAser.Text = "Campo";
+            // 
+            // cmbEncabezado
+            // 
+            this.cmbEncabezado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEncabezado.FormattingEnabled = true;
+            this.cmbEncabezado.Location = new System.Drawing.Point(565, 10);
+            this.cmbEncabezado.Name = "cmbEncabezado";
+            this.cmbEncabezado.Size = new System.Drawing.Size(216, 24);
+            this.cmbEncabezado.TabIndex = 3;
+            // 
+            // txtBuscador
+            // 
+            this.txtBuscador.Location = new System.Drawing.Point(844, 10);
+            this.txtBuscador.Name = "txtBuscador";
+            this.txtBuscador.Size = new System.Drawing.Size(246, 23);
+            this.txtBuscador.TabIndex = 4;
+            // 
+            // btnBuscarEmp
+            // 
+            this.btnBuscarEmp.Location = new System.Drawing.Point(1096, 10);
+            this.btnBuscarEmp.Name = "btnBuscarEmp";
+            this.btnBuscarEmp.Size = new System.Drawing.Size(74, 23);
+            this.btnBuscarEmp.TabIndex = 5;
+            this.btnBuscarEmp.Text = "Buscar";
+            this.btnBuscarEmp.UseVisualStyleBackColor = true;
+            this.btnBuscarEmp.Click += new System.EventHandler(this.btnBuscarEmp_Click);
+            // 
+            // lblEsft
+            // 
+            this.lblEsft.AutoSize = true;
+            this.lblEsft.Location = new System.Drawing.Point(787, 13);
+            this.lblEsft.Name = "lblEsft";
+            this.lblEsft.Size = new System.Drawing.Size(49, 16);
+            this.lblEsft.TabIndex = 6;
+            this.lblEsft.Text = "Igual A";
+            // 
+            // lsvInfoCap
+            // 
+            this.lsvInfoCap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmhCodigoCap,
+            this.clmhCursoCap,
+            this.clmhCapacitador});
+            this.lsvInfoCap.HideSelection = false;
+            this.lsvInfoCap.Location = new System.Drawing.Point(509, 319);
+            this.lsvInfoCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lsvInfoCap.Name = "lsvInfoCap";
+            this.lsvInfoCap.Size = new System.Drawing.Size(661, 207);
+            this.lsvInfoCap.TabIndex = 7;
+            this.lsvInfoCap.UseCompatibleStateImageBehavior = false;
+            this.lsvInfoCap.View = System.Windows.Forms.View.Details;
+            // 
+            // clmhCodigoCap
+            // 
+            this.clmhCodigoCap.Text = "Codigo";
+            this.clmhCodigoCap.Width = 67;
+            // 
+            // clmhCursoCap
+            // 
+            this.clmhCursoCap.Text = "Curso";
+            this.clmhCursoCap.Width = 165;
+            // 
+            // clmhCapacitador
+            // 
+            this.clmhCapacitador.Text = "Capacitador";
+            this.clmhCapacitador.Width = 263;
+            // 
+            // tmrDGVCurso
+            // 
+            tmrDGVCurso.Enabled = true;
+            tmrDGVCurso.Interval = 5000;
+            tmrDGVCurso.Tick += new System.EventHandler(this.tmrDGVCurso_Tick);
             // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(517, 539);
+            this.ClientSize = new System.Drawing.Size(1182, 539);
+            this.Controls.Add(this.lsvInfoCap);
+            this.Controls.Add(this.lblEsft);
+            this.Controls.Add(this.btnBuscarEmp);
+            this.Controls.Add(this.txtBuscador);
+            this.Controls.Add(this.cmbEncabezado);
+            this.Controls.Add(this.lblAser);
+            this.Controls.Add(this.dvgEmpleadosMostrar);
             this.Controls.Add(this.tbcCursos);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmCursos";
-            this.Text = "frmCursos";
+            this.Text = "302 - Cursos";
             this.tbcCursos.ResumeLayout(false);
             this.tbpIngresar.ResumeLayout(false);
             this.tbpIngresar.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gbpDatos.ResumeLayout(false);
+            this.gbpDatos.PerformLayout();
             this.tbpEditar.ResumeLayout(false);
             this.tbpEditar.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbpDatosEdit.ResumeLayout(false);
+            this.gbpDatosEdit.PerformLayout();
             this.tbpEliminar.ResumeLayout(false);
             this.tbpEliminar.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.gbpDatosEli.ResumeLayout(false);
+            this.gbpDatosEli.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosMostrar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -707,7 +820,7 @@
         private System.Windows.Forms.TabPage tbpIngresar;
         private System.Windows.Forms.Label lblDetalleC;
         private System.Windows.Forms.RichTextBox rtxtDetalleC;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbpDatos;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblNombreC;
         private System.Windows.Forms.TextBox txtNombC;
@@ -739,25 +852,35 @@
         private System.Windows.Forms.TextBox txtCodigoCapCE;
         private System.Windows.Forms.TextBox txtNombreCE;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lblCodiCapa;
+        private System.Windows.Forms.GroupBox gbpDatosEdit;
         private System.Windows.Forms.TextBox txtPuestoDCE;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPuestoo;
         private System.Windows.Forms.TextBox txtEmailDCE;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNommm;
         private System.Windows.Forms.TextBox txtNombreDCE;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblCorr;
         private System.Windows.Forms.Button btnActualizarCE;
         private System.Windows.Forms.TextBox txtCodigoCapEli;
         private System.Windows.Forms.TextBox txtNombreEli;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lblNnomm;
+        private System.Windows.Forms.Label lblCoddo;
+        private System.Windows.Forms.GroupBox gbpDatosEli;
         private System.Windows.Forms.TextBox txtPuestoEli;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblPuiest;
         private System.Windows.Forms.TextBox txtEmailCaEli;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblNnommb;
         private System.Windows.Forms.TextBox txtNombCaEli;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblEemail;
+        private System.Windows.Forms.DataGridView dvgEmpleadosMostrar;
+        private System.Windows.Forms.Label lblAser;
+        private System.Windows.Forms.ComboBox cmbEncabezado;
+        private System.Windows.Forms.TextBox txtBuscador;
+        private System.Windows.Forms.Button btnBuscarEmp;
+        private System.Windows.Forms.Label lblEsft;
+        private System.Windows.Forms.ListView lsvInfoCap;
+        private System.Windows.Forms.ColumnHeader clmhCodigoCap;
+        private System.Windows.Forms.ColumnHeader clmhCursoCap;
+        private System.Windows.Forms.ColumnHeader clmhCapacitador;
     }
 }

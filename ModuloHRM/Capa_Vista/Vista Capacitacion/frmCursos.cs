@@ -17,7 +17,20 @@ namespace Capa_Vista.Vista_Capacitacion
         clsControladorCapacitacion con = new clsControladorCapacitacion();
         public frmCursos()
         {
+            
             InitializeComponent();
+            funcAMLP();
+        }
+
+        public void funcAMLP() {
+            DataSet Datos = con.funcLlenarCampos();
+            for (int i = 0; i < Datos.Tables[0].Columns.Count; i++)
+            {
+                //se agregan los nombres de las columnas al dgvCamposCreacion
+                cmbEncabezado.Items.Add(Datos.Tables[0].Columns[i].ColumnName);
+
+            }
+
         }
         public void letra(object sender, KeyPressEventArgs e)
         {
@@ -30,17 +43,22 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnIngresarC_Click(object sender, EventArgs e)
         {
+           
             if (rtxtDetalleC.Text == "" || txtCodigoCapacit.Text == "" || txtNombreCurso.Text == "" || txtCodigoCurso.Text == "") { MessageBox.Show("Campo Vacío."); }
             else
             {
-                con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
-                rtxtDetalleC.Text = "";
-                txtCodigoCapacit.Text = "";
-                txtNombreCurso.Text = "";
-                txtCodigoCurso.Text = "";
-                txtNombC.Text = "";
-                txtEmail.Text = "";
-                txtPuestoCurC.Text = "";
+               
+                    con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
+                 
+
+                    rtxtDetalleC.Text = "";
+                    txtCodigoCapacit.Text = "";
+                    txtNombreCurso.Text = "";
+                    txtCodigoCurso.Text = "";
+                    txtNombC.Text = "";
+                    txtEmail.Text = "";
+                    txtPuestoCurC.Text = "";
+                
 
             }
 
@@ -153,6 +171,48 @@ namespace Capa_Vista.Vista_Capacitacion
                 txtNombCaEli.Text = datosc[0];
                 txtEmailCaEli.Text = datosc[1];
                 txtPuestoEli.Text = datosc[2];
+            }
+        }
+
+        private void btnBuscarEmp_Click(object sender, EventArgs e)
+        {
+            
+            string nomCampo= cmbEncabezado.Text;
+            string compare=txtBuscador.Text;
+            DataTable dato = con.funcLlenarBusqueda(nomCampo, compare);
+            dvgEmpleadosMostrar.DataSource = dato;
+            cmbEncabezado.Text = "";
+            txtBuscador.Text="";
+        }
+        private void funcActualizarTabla()
+        {
+            lsvInfoCap.Items.Clear();
+            DataTable dato = con.funcLlenarDGVCurso();
+            foreach (DataRow row in dato.Rows)
+            {
+                ListViewItem item = new ListViewItem(row[0].ToString());
+                for (int i = 1; i < dato.Columns.Count; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                lsvInfoCap.Items.Add(item);
+            }
+        }
+        private void tmrDGVCurso_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                funcActualizarTabla();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

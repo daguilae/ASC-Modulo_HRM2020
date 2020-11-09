@@ -68,6 +68,12 @@ namespace Capa_Vista.Vista_Capacitacion
             else
             {
                 con.funcIngresarEncabezado(idEmpleado, idEncabezado, fechaInic, fechaFin, idCurso, horas, codigoCapa);
+                txtBusqCodEmp.Text = "";
+                txtCodigoEncabezado.Text = "";
+                cmbCurso.Text = "";
+                txtCodiCapa.Text = "";
+                nudHoras.Value = 0;
+               
             }
         }
 
@@ -103,13 +109,17 @@ namespace Capa_Vista.Vista_Capacitacion
 
                 DataTable dato = con.funcLlenarDGVRes(idEmpleado, idCap);
                 dgvCompIng.DataSource = dato;
+                txtResultado.Text="";
+                cmbCodigoCap.Text="";
+
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBuscarCap_Click(object sender, EventArgs e)
         {
-            if (cmbCodigoCap.Text=="") { MessageBox.Show("Campo Vacío"); }
-            else {
+            if (cmbCodigoCap.Text == "") { MessageBox.Show("Campo Vacíos"); }
+            else
+            {
                 dgvCompIng.DataSource = null;
                 string idEmpleado = txtCodEmpR.Text;
                 string idCap = cmbCodigoCap.Text;
@@ -119,7 +129,6 @@ namespace Capa_Vista.Vista_Capacitacion
                 datos = con.funcConsultaEmp(idEmpleado);
                 dgvCompIng.DataSource = dato;
             }
-           
         }
     }
 }
