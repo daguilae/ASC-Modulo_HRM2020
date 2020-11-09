@@ -30,7 +30,6 @@
         {
             this.mspMDI = new System.Windows.Forms.MenuStrip();
             this.tsmiInicio = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInicioSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPuestosMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,6 +38,9 @@
             this.tsmiFaltasMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiIngresarFaltaMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiFaltaDeUnEmpleadoMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCapacitacion = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMantenimientosDeCapacitaciones = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMantenimientosDeCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiProcesos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEmpleadosProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEditarEmpleadoProceso = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,6 +59,7 @@
             this.tsmiIngresarCompetenciasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCapacitacionProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiIngresarNuevaCapacitacionProceso = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiIngresoDeCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEstadisticasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHerramientas = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReportes = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,10 +76,6 @@
             this.tsmiAyuda = new System.Windows.Forms.ToolStripMenuItem();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.tsmiCapacitacion = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiMantenimientosDeCapacitaciones = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiMantenimientosDeCursos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiIngresoDeCursos = new System.Windows.Forms.ToolStripMenuItem();
             this.mspMDI.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,7 +100,6 @@
             // tsmiInicio
             // 
             this.tsmiInicio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiInicioSesion,
             this.tsmiCerrarSesion});
             this.tsmiInicio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiInicio.Name = "tsmiInicio";
@@ -109,18 +107,10 @@
             this.tsmiInicio.Text = "Inicio";
             this.tsmiInicio.ToolTipText = "Opciones de Sesión";
             // 
-            // tsmiInicioSesion
-            // 
-            this.tsmiInicioSesion.BackColor = System.Drawing.SystemColors.Control;
-            this.tsmiInicioSesion.Name = "tsmiInicioSesion";
-            this.tsmiInicioSesion.Size = new System.Drawing.Size(150, 22);
-            this.tsmiInicioSesion.Text = "Iniciar Sesión";
-            this.tsmiInicioSesion.Click += new System.EventHandler(this.tsmiInicioSesion_Click);
-            // 
             // tsmiCerrarSesion
             // 
             this.tsmiCerrarSesion.Name = "tsmiCerrarSesion";
-            this.tsmiCerrarSesion.Size = new System.Drawing.Size(150, 22);
+            this.tsmiCerrarSesion.Size = new System.Drawing.Size(180, 22);
             this.tsmiCerrarSesion.Text = "Cerrar Sesión";
             this.tsmiCerrarSesion.Click += new System.EventHandler(this.tsmiCerrarSesion_Click);
             // 
@@ -182,6 +172,29 @@
             this.tsmiFaltaDeUnEmpleadoMantenimientos.Text = "Falta de un Empleado";
             this.tsmiFaltaDeUnEmpleadoMantenimientos.Click += new System.EventHandler(this.tsmiFaltaDeUnEmpleadoMantenimientos_Click);
             // 
+            // tsmiCapacitacion
+            // 
+            this.tsmiCapacitacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiMantenimientosDeCapacitaciones,
+            this.tsmiMantenimientosDeCursos});
+            this.tsmiCapacitacion.Name = "tsmiCapacitacion";
+            this.tsmiCapacitacion.Size = new System.Drawing.Size(243, 22);
+            this.tsmiCapacitacion.Text = "Capacitación";
+            // 
+            // tsmiMantenimientosDeCapacitaciones
+            // 
+            this.tsmiMantenimientosDeCapacitaciones.Name = "tsmiMantenimientosDeCapacitaciones";
+            this.tsmiMantenimientosDeCapacitaciones.Size = new System.Drawing.Size(268, 22);
+            this.tsmiMantenimientosDeCapacitaciones.Text = "Mantenimientos de Capacitaciones";
+            this.tsmiMantenimientosDeCapacitaciones.Click += new System.EventHandler(this.tsmiMantenimientosDeCapacitaciones_Click);
+            // 
+            // tsmiMantenimientosDeCursos
+            // 
+            this.tsmiMantenimientosDeCursos.Name = "tsmiMantenimientosDeCursos";
+            this.tsmiMantenimientosDeCursos.Size = new System.Drawing.Size(268, 22);
+            this.tsmiMantenimientosDeCursos.Text = "Mantenimientos de Cursos";
+            this.tsmiMantenimientosDeCursos.Click += new System.EventHandler(this.tsmiMantenimientosDeCursos_Click);
+            // 
             // tsmiProcesos
             // 
             this.tsmiProcesos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -205,7 +218,7 @@
             this.tsmiAscenderEmpleadoProceso,
             this.tsmiDespedirEmpleadoProceso});
             this.tsmiEmpleadosProceso.Name = "tsmiEmpleadosProceso";
-            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiEmpleadosProceso.Text = "Empleados";
             // 
             // tsmiEditarEmpleadoProceso
@@ -234,7 +247,7 @@
             this.tsmiReclutamientoProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarReclutaProceso});
             this.tsmiReclutamientoProceso.Name = "tsmiReclutamientoProceso";
-            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiReclutamientoProceso.Text = "Reclutamiento";
             // 
             // tsmiIngresarReclutaProceso
@@ -247,14 +260,14 @@
             // tsmiEntrevistaProceso
             // 
             this.tsmiEntrevistaProceso.Name = "tsmiEntrevistaProceso";
-            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiEntrevistaProceso.Text = "Entrevista";
             this.tsmiEntrevistaProceso.Click += new System.EventHandler(this.tsmiEntrevistaProceso_Click);
             // 
             // tsmiContratacionProceso
             // 
             this.tsmiContratacionProceso.Name = "tsmiContratacionProceso";
-            this.tsmiContratacionProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiContratacionProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiContratacionProceso.Text = "Contratación";
             this.tsmiContratacionProceso.Click += new System.EventHandler(this.tsmiContratacionProceso_Click);
             // 
@@ -266,7 +279,7 @@
             this.tsmiDeducciónPercepciónEmpleadoProceso,
             this.tsmiControlDeHorasDíasProceso});
             this.tsmiNominaProceso.Name = "tsmiNominaProceso";
-            this.tsmiNominaProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiNominaProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiNominaProceso.Text = "Nómina";
             // 
             // tsmiBuscarDatosGeneralesDeNominaProceso
@@ -302,7 +315,7 @@
             this.tsmiDesarrolloProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarCompetenciasProceso});
             this.tsmiDesarrolloProceso.Name = "tsmiDesarrolloProceso";
-            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiDesarrolloProceso.Text = "Desarrollo";
             // 
             // tsmiIngresarCompetenciasProceso
@@ -318,7 +331,7 @@
             this.tsmiIngresarNuevaCapacitacionProceso,
             this.tsmiIngresoDeCursos});
             this.tsmiCapacitacionProceso.Name = "tsmiCapacitacionProceso";
-            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiCapacitacionProceso.Text = "Capacitación";
             // 
             // tsmiIngresarNuevaCapacitacionProceso
@@ -328,10 +341,17 @@
             this.tsmiIngresarNuevaCapacitacionProceso.Text = "Ingresar Nueva Capacitación";
             this.tsmiIngresarNuevaCapacitacionProceso.Click += new System.EventHandler(this.tsmiIngresarNuevaCapacitacionProceso_Click);
             // 
+            // tsmiIngresoDeCursos
+            // 
+            this.tsmiIngresoDeCursos.Name = "tsmiIngresoDeCursos";
+            this.tsmiIngresoDeCursos.Size = new System.Drawing.Size(234, 22);
+            this.tsmiIngresoDeCursos.Text = "Ingreso de Cursos";
+            this.tsmiIngresoDeCursos.Click += new System.EventHandler(this.tsmiIngresoDeCursos_Click);
+            // 
             // tsmiEstadisticasProceso
             // 
             this.tsmiEstadisticasProceso.Name = "tsmiEstadisticasProceso";
-            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(180, 22);
+            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(152, 22);
             this.tsmiEstadisticasProceso.Text = "Estadísticas";
             this.tsmiEstadisticasProceso.Click += new System.EventHandler(this.tsmiEstadisticasProceso_Click);
             // 
@@ -449,36 +469,6 @@
             this.pnlContenedor.Size = new System.Drawing.Size(731, 406);
             this.pnlContenedor.TabIndex = 1;
             // 
-            // tsmiCapacitacion
-            // 
-            this.tsmiCapacitacion.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiMantenimientosDeCapacitaciones,
-            this.tsmiMantenimientosDeCursos});
-            this.tsmiCapacitacion.Name = "tsmiCapacitacion";
-            this.tsmiCapacitacion.Size = new System.Drawing.Size(243, 22);
-            this.tsmiCapacitacion.Text = "Capacitación";
-            // 
-            // tsmiMantenimientosDeCapacitaciones
-            // 
-            this.tsmiMantenimientosDeCapacitaciones.Name = "tsmiMantenimientosDeCapacitaciones";
-            this.tsmiMantenimientosDeCapacitaciones.Size = new System.Drawing.Size(268, 22);
-            this.tsmiMantenimientosDeCapacitaciones.Text = "Mantenimientos de Capacitaciones";
-            this.tsmiMantenimientosDeCapacitaciones.Click += new System.EventHandler(this.tsmiMantenimientosDeCapacitaciones_Click);
-            // 
-            // tsmiMantenimientosDeCursos
-            // 
-            this.tsmiMantenimientosDeCursos.Name = "tsmiMantenimientosDeCursos";
-            this.tsmiMantenimientosDeCursos.Size = new System.Drawing.Size(268, 22);
-            this.tsmiMantenimientosDeCursos.Text = "Mantenimientos de Cursos";
-            this.tsmiMantenimientosDeCursos.Click += new System.EventHandler(this.tsmiMantenimientosDeCursos_Click);
-            // 
-            // tsmiIngresoDeCursos
-            // 
-            this.tsmiIngresoDeCursos.Name = "tsmiIngresoDeCursos";
-            this.tsmiIngresoDeCursos.Size = new System.Drawing.Size(234, 22);
-            this.tsmiIngresoDeCursos.Text = "Ingreso de Cursos";
-            this.tsmiIngresoDeCursos.Click += new System.EventHandler(this.tsmiIngresoDeCursos_Click);
-            // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,10 +478,9 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.mspMDI);
-            this.HelpButton = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspMDI;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "301 - Módulo de Recursos Humanos";
@@ -508,7 +497,6 @@
 
         private System.Windows.Forms.MenuStrip mspMDI;
         private System.Windows.Forms.ToolStripMenuItem tsmiInicio;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInicioSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiCerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiMantenimientos;
         private System.Windows.Forms.ToolStripMenuItem tsmiProcesos;
@@ -550,10 +538,10 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDeducciónPercepciónEmpleadoProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiControlDeHorasDíasProceso;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacion;
         private System.Windows.Forms.ToolStripMenuItem tsmiMantenimientosDeCapacitaciones;
         private System.Windows.Forms.ToolStripMenuItem tsmiMantenimientosDeCursos;
         private System.Windows.Forms.ToolStripMenuItem tsmiIngresoDeCursos;
+        private System.Windows.Forms.Panel pnlContenedor;
     }
 }
