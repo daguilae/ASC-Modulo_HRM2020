@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,14 +32,15 @@ namespace Capa_Vista
             fh.Show();
         }
 
-        private void tsmiInicioSesion_Click(object sender, EventArgs e)
-        {
-            // INICIAR SESIÓN \\
-        }
 
         private void tsmiCerrarSesion_Click(object sender, EventArgs e)
         {
             // CERRAR SESIÓN \\
+            frmLogin frm = new frmLogin();
+            if(frm.ShowDialog() == DialogResult.OK)
+            {
+                txtUsuario.Text = frm.usuario();
+            }
         }
 
         private void tsmiPuestosMantenimientos_Click(object sender, EventArgs e)
@@ -200,7 +202,7 @@ namespace Capa_Vista
         private void tsmiAyuda_Click(object sender, EventArgs e)
         {
             //Se llaman a las ayudas del Modulo HRM
-            Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.html");
+            Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm");
         }
 
         private void tsmiMantenimientosDeCapacitaciones_Click(object sender, EventArgs e)
@@ -219,6 +221,18 @@ namespace Capa_Vista
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmIngresoCurso());
+        }
+
+        private void tsmiEmpleadosReporte_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Reportes.frmReporteEmpleado());
+        }
+
+        private void tsmiCapacitacionReporte_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCapacitacion());
         }
     }
 

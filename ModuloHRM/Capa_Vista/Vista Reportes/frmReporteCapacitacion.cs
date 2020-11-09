@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Capa_Vista.Vista_Desarrollo
+namespace Capa_Vista.Vista_Reportes
 {
-    public partial class frmEstadísticas : Form
+    public partial class frmReporteCapacitacion : Form
     {
-        public frmEstadísticas()
+        public frmReporteCapacitacion()
         {
             InitializeComponent();
         }
