@@ -723,7 +723,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmIngresoReclutas";
-            this.Text = "Ingreso Reclutas";
+            this.Text = "Ingreso/Modificacion Reclutas";
             this.Load += new System.EventHandler(this.funcfrmIngreso_Load);
             this.tbpDatosPersonales.ResumeLayout(false);
             this.tbpDatosPersonales.PerformLayout();
