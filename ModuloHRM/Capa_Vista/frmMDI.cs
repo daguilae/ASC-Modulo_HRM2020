@@ -234,6 +234,12 @@ namespace Capa_Vista
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
             funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCapacitacion());
         }
+
+        private void tsmiCompetenciasReporte_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCompeencias());
+        }
     }
 
 }
