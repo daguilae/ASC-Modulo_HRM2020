@@ -75,7 +75,7 @@
             this.gbxDatosCompetencia.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatosCompetencia.Location = new System.Drawing.Point(12, 12);
             this.gbxDatosCompetencia.Name = "gbxDatosCompetencia";
-            this.gbxDatosCompetencia.Size = new System.Drawing.Size(1044, 386);
+            this.gbxDatosCompetencia.Size = new System.Drawing.Size(1256, 451);
             this.gbxDatosCompetencia.TabIndex = 5;
             this.gbxDatosCompetencia.TabStop = false;
             this.gbxDatosCompetencia.Text = "Datos De Las Competencias Del Empleado";
@@ -96,9 +96,9 @@
             this.gbxRemoverCompetencia.Controls.Add(this.btnRemover);
             this.gbxRemoverCompetencia.Controls.Add(this.txtIDCompetencia);
             this.gbxRemoverCompetencia.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxRemoverCompetencia.Location = new System.Drawing.Point(280, 158);
+            this.gbxRemoverCompetencia.Location = new System.Drawing.Point(393, 187);
             this.gbxRemoverCompetencia.Name = "gbxRemoverCompetencia";
-            this.gbxRemoverCompetencia.Size = new System.Drawing.Size(221, 211);
+            this.gbxRemoverCompetencia.Size = new System.Drawing.Size(221, 246);
             this.gbxRemoverCompetencia.TabIndex = 5;
             this.gbxRemoverCompetencia.TabStop = false;
             this.gbxRemoverCompetencia.Text = "Remover Competencia";
@@ -115,7 +115,7 @@
             // btnRemover
             // 
             this.btnRemover.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRemover.Location = new System.Drawing.Point(46, 134);
+            this.btnRemover.Location = new System.Drawing.Point(46, 178);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(138, 36);
             this.btnRemover.TabIndex = 5;
@@ -133,7 +133,7 @@
             // 
             // btnIngreso
             // 
-            this.btnIngreso.Location = new System.Drawing.Point(641, 29);
+            this.btnIngreso.Location = new System.Drawing.Point(731, 43);
             this.btnIngreso.Name = "btnIngreso";
             this.btnIngreso.Size = new System.Drawing.Size(192, 23);
             this.btnIngreso.TabIndex = 9;
@@ -145,7 +145,7 @@
             // 
             this.lblFechaFin.AutoSize = true;
             this.lblFechaFin.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaFin.Location = new System.Drawing.Point(638, 74);
+            this.lblFechaFin.Location = new System.Drawing.Point(728, 88);
             this.lblFechaFin.Name = "lblFechaFin";
             this.lblFechaFin.Size = new System.Drawing.Size(87, 15);
             this.lblFechaFin.TabIndex = 8;
@@ -154,7 +154,7 @@
             // dtpFechaFin
             // 
             this.dtpFechaFin.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dtpFechaFin.Location = new System.Drawing.Point(541, 99);
+            this.dtpFechaFin.Location = new System.Drawing.Point(631, 113);
             this.dtpFechaFin.Name = "dtpFechaFin";
             this.dtpFechaFin.Size = new System.Drawing.Size(260, 23);
             this.dtpFechaFin.TabIndex = 7;
@@ -163,7 +163,7 @@
             // 
             this.lblFechaInicio.AutoSize = true;
             this.lblFechaInicio.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaInicio.Location = new System.Drawing.Point(296, 74);
+            this.lblFechaInicio.Location = new System.Drawing.Point(386, 88);
             this.lblFechaInicio.Name = "lblFechaInicio";
             this.lblFechaInicio.Size = new System.Drawing.Size(103, 15);
             this.lblFechaInicio.TabIndex = 6;
@@ -172,7 +172,7 @@
             // dtpFechaInicio
             // 
             this.dtpFechaInicio.CalendarMonthBackground = System.Drawing.SystemColors.ScrollBar;
-            this.dtpFechaInicio.Location = new System.Drawing.Point(224, 99);
+            this.dtpFechaInicio.Location = new System.Drawing.Point(314, 113);
             this.dtpFechaInicio.Name = "dtpFechaInicio";
             this.dtpFechaInicio.Size = new System.Drawing.Size(260, 23);
             this.dtpFechaInicio.TabIndex = 5;
@@ -181,7 +181,7 @@
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Rockwell", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(730, 149);
+            this.lblTitulo.Location = new System.Drawing.Point(902, 158);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(166, 18);
             this.lblTitulo.TabIndex = 4;
@@ -190,7 +190,7 @@
             // txtIDEmpleado
             // 
             this.txtIDEmpleado.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIDEmpleado.Location = new System.Drawing.Point(393, 31);
+            this.txtIDEmpleado.Location = new System.Drawing.Point(483, 45);
             this.txtIDEmpleado.Name = "txtIDEmpleado";
             this.txtIDEmpleado.Size = new System.Drawing.Size(214, 23);
             this.txtIDEmpleado.TabIndex = 1;
@@ -204,10 +204,10 @@
             this.clmIDCompetencia,
             this.clmCompetencia,
             this.clmResultado});
-            this.dgvCompetencias.Location = new System.Drawing.Point(541, 187);
+            this.dgvCompetencias.Location = new System.Drawing.Point(745, 187);
             this.dgvCompetencias.Name = "dgvCompetencias";
             this.dgvCompetencias.RowHeadersVisible = false;
-            this.dgvCompetencias.Size = new System.Drawing.Size(481, 182);
+            this.dgvCompetencias.Size = new System.Drawing.Size(481, 246);
             this.dgvCompetencias.TabIndex = 3;
             // 
             // clmIDCompetencia
@@ -232,7 +232,7 @@
             // 
             this.lblIDEmpleado.AutoSize = true;
             this.lblIDEmpleado.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDEmpleado.Location = new System.Drawing.Point(287, 34);
+            this.lblIDEmpleado.Location = new System.Drawing.Point(377, 48);
             this.lblIDEmpleado.Name = "lblIDEmpleado";
             this.lblIDEmpleado.Size = new System.Drawing.Size(90, 15);
             this.lblIDEmpleado.TabIndex = 0;
@@ -246,9 +246,9 @@
             this.gbxCompetencias.Controls.Add(this.cmbCompetencias);
             this.gbxCompetencias.Controls.Add(this.lblResultado);
             this.gbxCompetencias.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxCompetencias.Location = new System.Drawing.Point(35, 158);
+            this.gbxCompetencias.Location = new System.Drawing.Point(40, 187);
             this.gbxCompetencias.Name = "gbxCompetencias";
-            this.gbxCompetencias.Size = new System.Drawing.Size(221, 211);
+            this.gbxCompetencias.Size = new System.Drawing.Size(280, 246);
             this.gbxCompetencias.TabIndex = 2;
             this.gbxCompetencias.TabStop = false;
             this.gbxCompetencias.Text = "Ingreso Competencia";
@@ -256,7 +256,7 @@
             // btnIngresar
             // 
             this.btnIngresar.Font = new System.Drawing.Font("Rockwell", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresar.Location = new System.Drawing.Point(35, 155);
+            this.btnIngresar.Location = new System.Drawing.Point(66, 178);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(138, 36);
             this.btnIngresar.TabIndex = 4;
@@ -267,7 +267,7 @@
             // lblCompetencia
             // 
             this.lblCompetencia.AutoSize = true;
-            this.lblCompetencia.Location = new System.Drawing.Point(53, 29);
+            this.lblCompetencia.Location = new System.Drawing.Point(86, 36);
             this.lblCompetencia.Name = "lblCompetencia";
             this.lblCompetencia.Size = new System.Drawing.Size(99, 15);
             this.lblCompetencia.TabIndex = 3;
@@ -278,23 +278,24 @@
             this.txtResultado.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtResultado.Location = new System.Drawing.Point(21, 113);
             this.txtResultado.Name = "txtResultado";
-            this.txtResultado.Size = new System.Drawing.Size(164, 23);
+            this.txtResultado.Size = new System.Drawing.Size(230, 23);
             this.txtResultado.TabIndex = 2;
             this.txtResultado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // cmbCompetencias
             // 
             this.cmbCompetencias.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cmbCompetencias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCompetencias.FormattingEnabled = true;
             this.cmbCompetencias.Location = new System.Drawing.Point(21, 54);
             this.cmbCompetencias.Name = "cmbCompetencias";
-            this.cmbCompetencias.Size = new System.Drawing.Size(164, 23);
+            this.cmbCompetencias.Size = new System.Drawing.Size(230, 23);
             this.cmbCompetencias.TabIndex = 1;
             // 
             // lblResultado
             // 
             this.lblResultado.AutoSize = true;
-            this.lblResultado.Location = new System.Drawing.Point(63, 93);
+            this.lblResultado.Location = new System.Drawing.Point(98, 95);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(71, 15);
             this.lblResultado.TabIndex = 0;
@@ -305,7 +306,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(1068, 408);
+            this.ClientSize = new System.Drawing.Size(1280, 475);
             this.Controls.Add(this.gbxDatosCompetencia);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
