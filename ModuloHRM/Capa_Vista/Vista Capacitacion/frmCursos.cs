@@ -9,17 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Controlador;
 using Capa_Controlador.Controlador_Capacitación;
+using Capa_Vista;
 
 namespace Capa_Vista.Vista_Capacitacion
 {
     public partial class frmCursos : Form
     {
         clsControladorCapacitacion con = new clsControladorCapacitacion();
-        public frmCursos()
-        {
-            
-            InitializeComponent();
-            funcAMLP();
+        frmMDI frm = new frmMDI();
+        public frmCursos(){            
+            InitializeComponent();  
+            funcAMLP();            
         }
 
         public void funcAMLP() {
