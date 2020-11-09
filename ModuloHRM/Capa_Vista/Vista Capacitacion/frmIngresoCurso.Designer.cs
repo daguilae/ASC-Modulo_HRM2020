@@ -43,7 +43,6 @@
             // tmrDGVCurso
             // 
             tmrDGVCurso.Enabled = true;
-            tmrDGVCurso.Interval = 5000;
             tmrDGVCurso.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // gbxCursos
