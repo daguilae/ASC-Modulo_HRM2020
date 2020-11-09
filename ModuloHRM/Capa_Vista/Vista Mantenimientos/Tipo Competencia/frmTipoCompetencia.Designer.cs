@@ -115,6 +115,7 @@
             // 
             this.NavegadorCompetencias.BackColor = System.Drawing.Color.Transparent;
             this.NavegadorCompetencias.Location = new System.Drawing.Point(12, 12);
+            this.NavegadorCompetencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NavegadorCompetencias.Name = "NavegadorCompetencias";
             this.NavegadorCompetencias.Size = new System.Drawing.Size(1059, 105);
             this.NavegadorCompetencias.TabIndex = 41;
@@ -123,30 +124,32 @@
             // txtIDCompetencia
             // 
             this.txtIDCompetencia.Location = new System.Drawing.Point(134, 190);
+            this.txtIDCompetencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIDCompetencia.Name = "txtIDCompetencia";
-            this.txtIDCompetencia.Size = new System.Drawing.Size(253, 20);
+            this.txtIDCompetencia.Size = new System.Drawing.Size(242, 20);
             this.txtIDCompetencia.TabIndex = 42;
-            this.txtIDCompetencia.Tag = "pk_id_competencia";
+            this.txtIDCompetencia.Tag = "pk_id_tipo_competencia";
             this.txtIDCompetencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(134, 254);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(253, 20);
+            this.txtNombre.Size = new System.Drawing.Size(242, 20);
             this.txtNombre.TabIndex = 43;
             this.txtNombre.Tag = "nombre_competencia";
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtEstado
             // 
-            this.txtEstado.Location = new System.Drawing.Point(412, 355);
+            this.txtEstado.Location = new System.Drawing.Point(402, 358);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(26, 20);
+            this.txtEstado.Size = new System.Drawing.Size(28, 20);
             this.txtEstado.TabIndex = 44;
             this.txtEstado.Tag = "estado_competencia";
             this.txtEstado.Visible = false;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             this.txtEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // frmTipoCompetencia

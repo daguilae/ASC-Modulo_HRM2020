@@ -218,9 +218,11 @@ namespace Capa_Modelo.Modelo_Capacitacion
             }
             catch (Exception ex)
             {
-                
-                MessageBox.Show("NO PUEDE ELIMINAR UN CURSO MIENTRAS ESTE ESTÉ ASIGNADO A ALGUNA CAPACITACIÓN. REVISE Y VUELVA A INTENTAR."
-                    , "Error",
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
@@ -569,7 +571,7 @@ namespace Capa_Modelo.Modelo_Capacitacion
 
         }
 
-        public void funcEliminarCapa(string idCapa, string idEncCapa)
+        public void funcEliminarCurso(string idCapa, string idEncCapa)
         {
             try
             {
