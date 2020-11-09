@@ -193,13 +193,32 @@ namespace Capa_Vista
 
         private void tsmiIngresarNuevaCapacitacionProceso_Click(object sender, EventArgs e)
         {
-             
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO CAPACITACION \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmEmpCapacitado());
         }
 
         private void tsmiAyuda_Click(object sender, EventArgs e)
         {
             //Se llaman a las ayudas del Modulo HRM
             Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.html");
+        }
+
+        private void tsmiMantenimientosDeCapacitaciones_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CAPACITACIONES \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmMantenimientoCapacitacion());
+        }
+
+        private void tsmiMantenimientosDeCursos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmCursos());
+        }
+
+        private void tsmiIngresoDeCursos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmIngresoCurso());
         }
     }
 
