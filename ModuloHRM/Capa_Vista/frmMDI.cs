@@ -46,7 +46,7 @@ namespace Capa_Vista
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE PUESTOS \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad(); 
-            if (seguridad.PermisosAcceso("1", txtUsuario.Text) == 1)
+            if (seguridad.PermisosAcceso("12", txtUsuario.Text) == 1)
             {
                 bit.user(txtUsuario.Text);
                 funcAbrirFormEnPanel(new Vista_Mantenimientos.Puesto.frmMantenimientoPuesto(txtUsuario.Text, this));
@@ -62,7 +62,7 @@ namespace Capa_Vista
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEPARTAMENTOS EMPRESARIALES \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
-            if (seguridad.PermisosAcceso("2", txtUsuario.Text) == 1)
+            if (seguridad.PermisosAcceso("13", txtUsuario.Text) == 1)
             {
                 bit.user(txtUsuario.Text);
                 funcAbrirFormEnPanel(new Vista_Mantenimientos.Departamento.frmMantenimientoDepa(txtUsuario.Text, this));
@@ -78,7 +78,7 @@ namespace Capa_Vista
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE TIPOS DE COMPETENCIAS \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
-            if (seguridad.PermisosAcceso("3", txtUsuario.Text) == 1)
+            if (seguridad.PermisosAcceso("14", txtUsuario.Text) == 1)
             {
                 bit.user(txtUsuario.Text);
                 funcAbrirFormEnPanel(new Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia(txtUsuario.Text, this));
@@ -95,7 +95,7 @@ namespace Capa_Vista
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE FALTA \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
-            if (seguridad.PermisosAcceso("4", txtUsuario.Text) == 1)
+            if (seguridad.PermisosAcceso("15", txtUsuario.Text) == 1)
             {
                 bit.user(txtUsuario.Text);
                 funcAbrirFormEnPanel(new Vista_Mantenimientos.Faltas.frmFaltas(txtUsuario.Text, this));
@@ -169,7 +169,7 @@ namespace Capa_Vista
         private void tsmiControlDeHorasDíasProceso_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR CONTROL DE HORAS \\
-            
+            funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmControlHorasDias());
         }
 
         private void tsmiIngresarCompetenciasProceso_Click(object sender, EventArgs e)
@@ -189,6 +189,36 @@ namespace Capa_Vista
             frmLogin login = new frmLogin();
             login.ShowDialog();
             txtUsuario.Text = login.usuario();
+        }
+
+        private void tsmiIngresarNuevaCapacitacionProceso_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO CAPACITACION \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmEmpCapacitado());
+        }
+
+        private void tsmiAyuda_Click(object sender, EventArgs e)
+        {
+            //Se llaman a las ayudas del Modulo HRM
+            Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.html");
+        }
+
+        private void tsmiMantenimientosDeCapacitaciones_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CAPACITACIONES \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmMantenimientoCapacitacion());
+        }
+
+        private void tsmiMantenimientosDeCursos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmCursos());
+        }
+
+        private void tsmiIngresoDeCursos_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            funcAbrirFormEnPanel(new Vista_Capacitacion.frmIngresoCurso());
         }
     }
 
