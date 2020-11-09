@@ -85,9 +85,9 @@ namespace Capa_Vista.Vista_Mantenimientos.Puesto
             NavegadorPuesto.procActualizarData();
             NavegadorPuesto.procCargar();
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
-            NavegadorPuesto.ayudaRuta = "";
+            NavegadorPuesto.ayudaRuta = "Ayudas_HRM/Ayudas_Modulo_HRM.chm";
             //en ruta debe colocar la pagina html que quiere que se muestre cuendo se presione el boton ayuda
-            NavegadorPuesto.ruta = "";
+            NavegadorPuesto.ruta = "pg_0012.htm";
         }
 
         private void rbtnActivo_CheckedChanged(object sender, EventArgs e)
