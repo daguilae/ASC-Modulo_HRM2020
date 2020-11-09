@@ -11,11 +11,8 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControladorSegurida
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloSeguridad.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloReporteador.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControladorReporteador.dll
-C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControlador.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloNavegador.dll
-C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -27,8 +24,6 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Report
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModelo.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\ShockwaveFlashObjects.dll
