@@ -30,7 +30,6 @@
         {
             this.mspMDI = new System.Windows.Forms.MenuStrip();
             this.tsmiInicio = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiInicioSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCerrarSesion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiPuestosMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
@@ -101,7 +100,6 @@
             // tsmiInicio
             // 
             this.tsmiInicio.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiInicioSesion,
             this.tsmiCerrarSesion});
             this.tsmiInicio.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tsmiInicio.Name = "tsmiInicio";
@@ -109,18 +107,10 @@
             this.tsmiInicio.Text = "Inicio";
             this.tsmiInicio.ToolTipText = "Opciones de Sesión";
             // 
-            // tsmiInicioSesion
-            // 
-            this.tsmiInicioSesion.BackColor = System.Drawing.SystemColors.Control;
-            this.tsmiInicioSesion.Name = "tsmiInicioSesion";
-            this.tsmiInicioSesion.Size = new System.Drawing.Size(150, 22);
-            this.tsmiInicioSesion.Text = "Iniciar Sesión";
-            this.tsmiInicioSesion.Click += new System.EventHandler(this.tsmiInicioSesion_Click);
-            // 
             // tsmiCerrarSesion
             // 
             this.tsmiCerrarSesion.Name = "tsmiCerrarSesion";
-            this.tsmiCerrarSesion.Size = new System.Drawing.Size(150, 22);
+            this.tsmiCerrarSesion.Size = new System.Drawing.Size(180, 22);
             this.tsmiCerrarSesion.Text = "Cerrar Sesión";
             this.tsmiCerrarSesion.Click += new System.EventHandler(this.tsmiCerrarSesion_Click);
             // 
@@ -488,7 +478,6 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.mspMDI);
-            this.HelpButton = true;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspMDI;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -508,7 +497,6 @@
 
         private System.Windows.Forms.MenuStrip mspMDI;
         private System.Windows.Forms.ToolStripMenuItem tsmiInicio;
-        private System.Windows.Forms.ToolStripMenuItem tsmiInicioSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiCerrarSesion;
         private System.Windows.Forms.ToolStripMenuItem tsmiMantenimientos;
         private System.Windows.Forms.ToolStripMenuItem tsmiProcesos;
