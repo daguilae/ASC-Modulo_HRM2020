@@ -99,7 +99,6 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void frmBajasEmpleado_Load(object sender, EventArgs e)
         {
             txtMontoPrestaciones.MaxLength = 8;
-            txtTiempoLaborado.MaxLength = 8;
             txtIdEmpleado.MaxLength = 8;
 
         }
