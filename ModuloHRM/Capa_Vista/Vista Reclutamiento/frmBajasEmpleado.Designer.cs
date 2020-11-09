@@ -436,7 +436,7 @@
             this.txtTiempoLaborado.Name = "txtTiempoLaborado";
             this.txtTiempoLaborado.Size = new System.Drawing.Size(200, 27);
             this.txtTiempoLaborado.TabIndex = 9;
-            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtMontoPrestaciones
             // 
