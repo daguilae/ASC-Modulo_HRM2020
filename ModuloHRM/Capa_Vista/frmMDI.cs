@@ -204,7 +204,6 @@ namespace Capa_Vista
         {
             this.KeyPreview = true;
             this.KeyDown += new KeyEventHandler(frmMDI_KeyDown);
-            this.Focus();
             frmLogin login = new frmLogin();
             login.ShowDialog();
             txtUsuario.Text = login.usuario();
