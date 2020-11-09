@@ -193,7 +193,13 @@ namespace Capa_Vista
 
         private void tsmiIngresarNuevaCapacitacionProceso_Click(object sender, EventArgs e)
         {
+             
+        }
 
+        private void tsmiAyuda_Click(object sender, EventArgs e)
+        {
+            //Se llaman a las ayudas del Modulo HRM
+            Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.html");
         }
     }
 
