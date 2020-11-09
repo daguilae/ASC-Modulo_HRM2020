@@ -188,9 +188,9 @@ namespace Capa_Vista
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
-            //frmLogin login = new frmLogin();
-            //login.ShowDialog();
-            //txtUsuario.Text = login.usuario();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+            txtUsuario.Text = login.usuario();
         }
 
         private void tsmiIngresarNuevaCapacitacionProceso_Click(object sender, EventArgs e)
