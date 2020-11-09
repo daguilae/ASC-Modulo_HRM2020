@@ -13,6 +13,7 @@ namespace Capa_Vista
 {
     public partial class frmMDI : Form
     {
+        string ayudas;
         public frmMDI()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Capa_Vista
 
         // FUNCIÓN PARA CONTENER UN FORM EN UN PANEL \\
         public void funcAbrirFormEnPanel(object Formhijo)
-        {
+        {            
             if (this.pnlContenedor.Controls.Count > 0)
                 this.pnlContenedor.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
@@ -28,7 +29,7 @@ namespace Capa_Vista
             fh.Dock = DockStyle.None;
             this.pnlContenedor.Controls.Add(fh);
             this.pnlContenedor.Tag = fh;
-            fh.Show();
+            fh.Show();            
         }
 
         private void tsmiInicioSesion_Click(object sender, EventArgs e)
@@ -43,6 +44,7 @@ namespace Capa_Vista
 
         private void tsmiPuestosMantenimientos_Click(object sender, EventArgs e)
         {
+            ayudas = "mantPuesto";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE PUESTOS \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad(); 
@@ -59,6 +61,7 @@ namespace Capa_Vista
 
         private void tsmiDepartamentoMantenimientos_Click(object sender, EventArgs e)
         {
+            ayudas = "mantDept";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEPARTAMENTOS EMPRESARIALES \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
@@ -75,6 +78,7 @@ namespace Capa_Vista
 
         private void tsmiTiposDeCompetenciasMantenimientos_Click(object sender, EventArgs e)
         {
+            ayudas = "mantCompe";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE TIPOS DE COMPETENCIAS \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
@@ -92,6 +96,7 @@ namespace Capa_Vista
 
         private void tsmiIngresarFaltaMantenimientos_Click(object sender, EventArgs e)
         {
+            ayudas = "mantFalt";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE FALTA \\
             clsVistaBitacora bit = new clsVistaBitacora();
             clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
@@ -114,66 +119,77 @@ namespace Capa_Vista
 
         private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "modEmp";
             // LLAMAR FUNCIÓN PARA MOSTRAR EDITAR EMPLEADO \\
             funcAbrirFormEnPanel(new Vista_Reclutamiento.frmModificarEmpleado());
         }
 
         private void tsmiAscenderEmpleadoProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ascEmp";
             // LLAMAR FUNCIÓN PARA MOSTRAR ASCENDER EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmAscender());
         }
 
         private void tsmiDespedirEmpleadoProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "despEmp";
             // LLAMAR FUNCIÓN PARA MOSTRAR DESPEDIR EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmBajasEmpleado());
         }
 
         private void tsmiIngresarReclutaProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingresoRec";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE RECLUTADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmIngresoReclutas());
         }
 
         private void tsmiEntrevistaProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingEntrev";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO ENTREVISTA \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmEntrevista());
         }
 
         private void tsmiContratacionProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingContra";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO CONTRATACIÓN \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Reclutamiento.frmContratacion());
         }
 
         private void tsmiBuscarDatosGeneralesDeNominaProceso_Click(object sender, EventArgs e)
         {
+            ayudas="datNomi"; 
             // LLAMAR FUNCIÓN PARA MOSTRAR DATOS GENERALES DE NOMINA \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmNomina());
         }
 
         private void tsmiDeduccionesPercepccionesProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "mantDeduc";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE DEDUCCIONES / PERCEPCCIONES \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmDeducPercep());
         }
 
         private void tsmiDeducciónPercepciónEmpleadoProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingDeduc";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE DEDUCCIONES / PERCEPCCIONES EN UN EMPLEADO \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmEmpleadoNomina());
         }
 
         private void tsmiControlDeHorasDíasProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "controlHoras";
             // LLAMAR FUNCIÓN PARA MOSTRAR CONTROL DE HORAS \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmControlHorasDias());
         }
 
         private void tsmiIngresarCompetenciasProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingCompe";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE COMPETENCIAS \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
         }
@@ -186,6 +202,9 @@ namespace Capa_Vista
 
         private void frmMDI_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmMDI_KeyDown);
+            this.Focus();
             frmLogin login = new frmLogin();
             login.ShowDialog();
             txtUsuario.Text = login.usuario();
@@ -193,6 +212,7 @@ namespace Capa_Vista
 
         private void tsmiIngresarNuevaCapacitacionProceso_Click(object sender, EventArgs e)
         {
+            ayudas = "ingresoCap";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO CAPACITACION \\
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmEmpCapacitado());
         }
@@ -205,20 +225,102 @@ namespace Capa_Vista
 
         private void tsmiMantenimientosDeCapacitaciones_Click(object sender, EventArgs e)
         {
+            ayudas = "mantCapa";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CAPACITACIONES \\
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmMantenimientoCapacitacion());
         }
 
         private void tsmiMantenimientosDeCursos_Click(object sender, EventArgs e)
         {
+            ayudas = "mantCursos";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE CURSOS \\
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmCursos());
         }
 
         private void tsmiIngresoDeCursos_Click(object sender, EventArgs e)
         {
+            ayudas = "ingresoCurso";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmIngresoCurso());
+        }
+
+        public void frmMDI_KeyDown(object sender, KeyEventArgs e)
+        {
+            funcAyudas(e);
+        }
+
+        private void funcAyudas(KeyEventArgs e) {
+
+            if (e.KeyCode == Keys.F1)
+            {
+                switch (ayudas)
+                {
+                    case "ingresoCurso":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0003.htm");
+                        break;
+                    case "mantCursos":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0004.htm");
+                        break;
+                    case "ingresoCap":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0008.htm");
+                        break;
+                    case "mantCapa":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0010.htm");
+                        break;
+                    case "mantPuesto":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0012.htm");
+                        break;
+                    case "mantDept":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0013.htm");
+                        break;
+                    case "mantCompe":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0014.htm");
+                        break;
+                    case "mantFalt":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0015.htm");
+                        break;
+                    case "ingCompe":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0016.htm");
+                        break;
+                    //CARLOS IJUELAVERGA METE TUS AYUDAS AQUI
+                    case "datNomi":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0017.htm");
+                        break;
+                    case "mantDeduc":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0021.htm");
+                        break;
+                    case "ingDeduc":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0021.htm");
+                        break;
+                    case "controlHoras":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0021.htm");
+                        break;
+                    //HASTA AQUI
+                    case "ingresoRec":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0029.htm");
+                        break;
+                    case "ingEntrev":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0032.htm");
+                        break;
+                    case "ingContra":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0034.htm");
+                        break;
+                    case "modEmp":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0036.htm");
+                        break;
+                    case "ascEmp":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0038.htm");
+                        break;
+                    case "despEmp":
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0040.htm");
+                        break;
+                        
+                    default:
+                        Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.htm");
+                        break;
+
+                }
+            }
         }
     }
 
