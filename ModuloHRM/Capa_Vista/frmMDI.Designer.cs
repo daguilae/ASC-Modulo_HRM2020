@@ -63,12 +63,8 @@
             this.tsmiEstadisticasProceso = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHerramientas = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiReportes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReclutamientoReporte = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiBancoDeTalentoReporte = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiReclutadosReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSeleccionReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEmpleadosReporte = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiBajasDeEmpleadosReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiNominaReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiDesarrolloReporte = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCompetenciasReporte = new System.Windows.Forms.ToolStripMenuItem();
@@ -110,7 +106,7 @@
             // tsmiCerrarSesion
             // 
             this.tsmiCerrarSesion.Name = "tsmiCerrarSesion";
-            this.tsmiCerrarSesion.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCerrarSesion.Size = new System.Drawing.Size(150, 22);
             this.tsmiCerrarSesion.Text = "Cerrar Sesión";
             this.tsmiCerrarSesion.Click += new System.EventHandler(this.tsmiCerrarSesion_Click);
             // 
@@ -365,7 +361,6 @@
             // tsmiReportes
             // 
             this.tsmiReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiReclutamientoReporte,
             this.tsmiSeleccionReporte,
             this.tsmiNominaReporte,
             this.tsmiDesarrolloReporte,
@@ -375,34 +370,12 @@
             this.tsmiReportes.Size = new System.Drawing.Size(70, 20);
             this.tsmiReportes.Text = "Reportes";
             // 
-            // tsmiReclutamientoReporte
-            // 
-            this.tsmiReclutamientoReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiBancoDeTalentoReporte,
-            this.tsmiReclutadosReporte});
-            this.tsmiReclutamientoReporte.Name = "tsmiReclutamientoReporte";
-            this.tsmiReclutamientoReporte.Size = new System.Drawing.Size(152, 22);
-            this.tsmiReclutamientoReporte.Text = "Reclutamiento";
-            // 
-            // tsmiBancoDeTalentoReporte
-            // 
-            this.tsmiBancoDeTalentoReporte.Name = "tsmiBancoDeTalentoReporte";
-            this.tsmiBancoDeTalentoReporte.Size = new System.Drawing.Size(169, 22);
-            this.tsmiBancoDeTalentoReporte.Text = "Banco de Talento";
-            // 
-            // tsmiReclutadosReporte
-            // 
-            this.tsmiReclutadosReporte.Name = "tsmiReclutadosReporte";
-            this.tsmiReclutadosReporte.Size = new System.Drawing.Size(169, 22);
-            this.tsmiReclutadosReporte.Text = "Reclutados";
-            // 
             // tsmiSeleccionReporte
             // 
             this.tsmiSeleccionReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiEmpleadosReporte,
-            this.tsmiBajasDeEmpleadosReporte});
+            this.tsmiEmpleadosReporte});
             this.tsmiSeleccionReporte.Name = "tsmiSeleccionReporte";
-            this.tsmiSeleccionReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiSeleccionReporte.Size = new System.Drawing.Size(180, 22);
             this.tsmiSeleccionReporte.Text = "Selección";
             // 
             // tsmiEmpleadosReporte
@@ -410,17 +383,12 @@
             this.tsmiEmpleadosReporte.Name = "tsmiEmpleadosReporte";
             this.tsmiEmpleadosReporte.Size = new System.Drawing.Size(186, 22);
             this.tsmiEmpleadosReporte.Text = "Empleados";
-            // 
-            // tsmiBajasDeEmpleadosReporte
-            // 
-            this.tsmiBajasDeEmpleadosReporte.Name = "tsmiBajasDeEmpleadosReporte";
-            this.tsmiBajasDeEmpleadosReporte.Size = new System.Drawing.Size(186, 22);
-            this.tsmiBajasDeEmpleadosReporte.Text = "Bajas de Empleados";
+            this.tsmiEmpleadosReporte.Click += new System.EventHandler(this.tsmiEmpleadosReporte_Click);
             // 
             // tsmiNominaReporte
             // 
             this.tsmiNominaReporte.Name = "tsmiNominaReporte";
-            this.tsmiNominaReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiNominaReporte.Size = new System.Drawing.Size(180, 22);
             this.tsmiNominaReporte.Text = "Nómina";
             // 
             // tsmiDesarrolloReporte
@@ -428,7 +396,7 @@
             this.tsmiDesarrolloReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCompetenciasReporte});
             this.tsmiDesarrolloReporte.Name = "tsmiDesarrolloReporte";
-            this.tsmiDesarrolloReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiDesarrolloReporte.Size = new System.Drawing.Size(180, 22);
             this.tsmiDesarrolloReporte.Text = "Desarrollo";
             // 
             // tsmiCompetenciasReporte
@@ -440,7 +408,7 @@
             // tsmiCapacitacionReporte
             // 
             this.tsmiCapacitacionReporte.Name = "tsmiCapacitacionReporte";
-            this.tsmiCapacitacionReporte.Size = new System.Drawing.Size(152, 22);
+            this.tsmiCapacitacionReporte.Size = new System.Drawing.Size(180, 22);
             this.tsmiCapacitacionReporte.Text = "Capacitación";
             // 
             // tsmiAyuda
@@ -508,12 +476,8 @@
         private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiIngresarCompetenciasProceso;
         private System.Windows.Forms.ToolStripMenuItem tsmiCapacitacionProceso;
-        private System.Windows.Forms.ToolStripMenuItem tsmiReclutamientoReporte;
-        private System.Windows.Forms.ToolStripMenuItem tsmiBancoDeTalentoReporte;
-        private System.Windows.Forms.ToolStripMenuItem tsmiReclutadosReporte;
         private System.Windows.Forms.ToolStripMenuItem tsmiSeleccionReporte;
         private System.Windows.Forms.ToolStripMenuItem tsmiEmpleadosReporte;
-        private System.Windows.Forms.ToolStripMenuItem tsmiBajasDeEmpleadosReporte;
         private System.Windows.Forms.ToolStripMenuItem tsmiNominaReporte;
         private System.Windows.Forms.ToolStripMenuItem tsmiDesarrolloReporte;
         private System.Windows.Forms.ToolStripMenuItem tsmiCompetenciasReporte;

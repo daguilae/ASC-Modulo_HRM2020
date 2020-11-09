@@ -31,6 +31,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CapaVistaNavegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Navegador-main\Navegador\Navegador\CapaVista\bin\Debug\CapaVistaNavegador.dll</HintPath>
@@ -39,9 +40,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Navegador-main\Navegador\ObjetoSeguridad\CapaVistaSeguridad\bin\Debug\CapaVistaSeguridad.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +71,35 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reportes\ReporteCpacitacion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCpacitacion.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteCapacitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteCapacitacion.Designer.cs">
+      <DependentUpon>frmReporteCapacitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteCompeencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteCompeencias.Designer.cs">
+      <DependentUpon>frmReporteCompeencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista Reportes\ReporteCompetencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCompetencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\ReporteEmpleado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteEmpleado.rpt</DependentUpon>
     </Compile>
     <Compile Include="Vista Capacitacion\frmIngresoCurso.cs">
       <SubType>Form</SubType>
@@ -94,12 +130,6 @@
     </Compile>
     <Compile Include="Vista Desarrollo\frmCompetencias.Designer.cs">
       <DependentUpon>frmCompetencias.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vista Desarrollo\frmEstadísticas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista Desarrollo\frmEstadísticas.Designer.cs">
-      <DependentUpon>frmEstadísticas.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.cs">
       <SubType>Form</SubType>
@@ -203,8 +233,16 @@
     <Compile Include="Vista Reclutamiento\frmMostrarReclutas.Designer.cs">
       <DependentUpon>frmMostrarReclutas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista Reportes\frmReporteEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteEmpleado.Designer.cs">
+      <DependentUpon>frmReporteEmpleado.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Controlador\Capa_Controlador.csproj">
       <Project>{9155c9cd-1e86-4bbb-964c-7dda29064734}</Project>
@@ -218,6 +256,24 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\ReporteCpacitacion.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCpacitacion.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\frmReporteCapacitacion.resx">
+      <DependentUpon>frmReporteCapacitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\frmReporteCompeencias.resx">
+      <DependentUpon>frmReporteCompeencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\ReporteCompetencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCompetencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\ReporteEmpleado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteEmpleado.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Capacitacion\frmCursos.resx">
       <DependentUpon>frmCursos.cs</DependentUpon>
@@ -233,9 +289,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Desarrollo\frmCompetencias.resx">
       <DependentUpon>frmCompetencias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista Desarrollo\frmEstadísticas.resx">
-      <DependentUpon>frmEstadísticas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Mantenimientos\Departamento\frmMantenimientoDepa.resx">
       <DependentUpon>frmMantenimientoDepa.cs</DependentUpon>
@@ -287,6 +340,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Reclutamiento\frmMostrarReclutas.resx">
       <DependentUpon>frmMostrarReclutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\frmReporteEmpleado.resx">
+      <DependentUpon>frmReporteEmpleado.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
