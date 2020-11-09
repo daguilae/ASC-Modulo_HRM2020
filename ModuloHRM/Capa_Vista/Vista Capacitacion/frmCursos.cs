@@ -43,17 +43,22 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnIngresarC_Click(object sender, EventArgs e)
         {
+           
             if (rtxtDetalleC.Text == "" || txtCodigoCapacit.Text == "" || txtNombreCurso.Text == "" || txtCodigoCurso.Text == "") { MessageBox.Show("Campo Vacío."); }
             else
             {
-                con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
-                rtxtDetalleC.Text = "";
-                txtCodigoCapacit.Text = "";
-                txtNombreCurso.Text = "";
-                txtCodigoCurso.Text = "";
-                txtNombC.Text = "";
-                txtEmail.Text = "";
-                txtPuestoCurC.Text = "";
+               
+                    con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
+                 
+
+                    rtxtDetalleC.Text = "";
+                    txtCodigoCapacit.Text = "";
+                    txtNombreCurso.Text = "";
+                    txtCodigoCurso.Text = "";
+                    txtNombC.Text = "";
+                    txtEmail.Text = "";
+                    txtPuestoCurC.Text = "";
+                
 
             }
 
@@ -178,6 +183,37 @@ namespace Capa_Vista.Vista_Capacitacion
             dvgEmpleadosMostrar.DataSource = dato;
             cmbEncabezado.Text = "";
             txtBuscador.Text="";
+        }
+        private void funcActualizarTabla()
+        {
+            lsvInfoCap.Items.Clear();
+            DataTable dato = con.funcLlenarDGVCurso();
+            foreach (DataRow row in dato.Rows)
+            {
+                ListViewItem item = new ListViewItem(row[0].ToString());
+                for (int i = 1; i < dato.Columns.Count; i++)
+                {
+                    item.SubItems.Add(row[i].ToString());
+                }
+                lsvInfoCap.Items.Add(item);
+            }
+        }
+        private void tmrDGVCurso_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                funcActualizarTabla();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Error al ejecutar SQL: " +
+                    System.Environment.NewLine + System.Environment.NewLine +
+                    ex.GetType().ToString() + System.Environment.NewLine +
+                    ex.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

@@ -44,8 +44,6 @@
             this.nudHoras = new System.Windows.Forms.NumericUpDown();
             this.lblHoras = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.gbxHstEmp = new System.Windows.Forms.GroupBox();
-            this.dgvCompetencias = new System.Windows.Forms.DataGridView();
             this.btnBuscarEmp = new System.Windows.Forms.Button();
             this.txtBusqCodEmp = new System.Windows.Forms.TextBox();
             this.lblCodEmp = new System.Windows.Forms.Label();
@@ -78,8 +76,6 @@
             this.tbpAsignacion.SuspendLayout();
             this.gbxDetCap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).BeginInit();
-            this.gbxHstEmp.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).BeginInit();
             this.gbxDatEmp.SuspendLayout();
             this.tbpResultados.SuspendLayout();
             this.gbxDatEmpR.SuspendLayout();
@@ -96,7 +92,7 @@
             this.tbcCapacitacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcCapacitacion.Name = "tbcCapacitacion";
             this.tbcCapacitacion.SelectedIndex = 0;
-            this.tbcCapacitacion.Size = new System.Drawing.Size(934, 465);
+            this.tbcCapacitacion.Size = new System.Drawing.Size(934, 414);
             this.tbcCapacitacion.TabIndex = 0;
             // 
             // tbpAsignacion
@@ -104,8 +100,8 @@
             this.tbpAsignacion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpAsignacion.Controls.Add(this.txtCodiCapa);
             this.tbpAsignacion.Controls.Add(this.gbxDetCap);
+            this.tbpAsignacion.Controls.Add(this.btnIngresoCurso);
             this.tbpAsignacion.Controls.Add(this.lblCodigo);
-            this.tbpAsignacion.Controls.Add(this.gbxHstEmp);
             this.tbpAsignacion.Controls.Add(this.btnBuscarEmp);
             this.tbpAsignacion.Controls.Add(this.txtBusqCodEmp);
             this.tbpAsignacion.Controls.Add(this.lblCodEmp);
@@ -114,7 +110,7 @@
             this.tbpAsignacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpAsignacion.Name = "tbpAsignacion";
             this.tbpAsignacion.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpAsignacion.Size = new System.Drawing.Size(926, 436);
+            this.tbpAsignacion.Size = new System.Drawing.Size(926, 385);
             this.tbpAsignacion.TabIndex = 0;
             this.tbpAsignacion.Text = "Asignación";
             // 
@@ -131,7 +127,6 @@
             // 
             this.gbxDetCap.Controls.Add(this.txtCodigoEncabezado);
             this.gbxDetCap.Controls.Add(this.lblCodigoC);
-            this.gbxDetCap.Controls.Add(this.btnIngresoCurso);
             this.gbxDetCap.Controls.Add(this.lblFeFin);
             this.gbxDetCap.Controls.Add(this.cmbCurso);
             this.gbxDetCap.Controls.Add(this.lblFeIni);
@@ -145,14 +140,14 @@
             this.gbxDetCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbxDetCap.Name = "gbxDetCap";
             this.gbxDetCap.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxDetCap.Size = new System.Drawing.Size(388, 366);
+            this.gbxDetCap.Size = new System.Drawing.Size(388, 178);
             this.gbxDetCap.TabIndex = 21;
             this.gbxDetCap.TabStop = false;
             this.gbxDetCap.Text = "Detalles de Capacitación";
             // 
             // txtCodigoEncabezado
             // 
-            this.txtCodigoEncabezado.Location = new System.Drawing.Point(133, 42);
+            this.txtCodigoEncabezado.Location = new System.Drawing.Point(134, 17);
             this.txtCodigoEncabezado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCodigoEncabezado.Name = "txtCodigoEncabezado";
             this.txtCodigoEncabezado.Size = new System.Drawing.Size(248, 23);
@@ -162,7 +157,7 @@
             // lblCodigoC
             // 
             this.lblCodigoC.AutoSize = true;
-            this.lblCodigoC.Location = new System.Drawing.Point(8, 46);
+            this.lblCodigoC.Location = new System.Drawing.Point(7, 20);
             this.lblCodigoC.Name = "lblCodigoC";
             this.lblCodigoC.Size = new System.Drawing.Size(51, 16);
             this.lblCodigoC.TabIndex = 10;
@@ -170,7 +165,7 @@
             // 
             // btnIngresoCurso
             // 
-            this.btnIngresoCurso.Location = new System.Drawing.Point(308, 330);
+            this.btnIngresoCurso.Location = new System.Drawing.Point(840, 246);
             this.btnIngresoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnIngresoCurso.Name = "btnIngresoCurso";
             this.btnIngresoCurso.Size = new System.Drawing.Size(80, 28);
@@ -182,7 +177,7 @@
             // lblFeFin
             // 
             this.lblFeFin.AutoSize = true;
-            this.lblFeFin.Location = new System.Drawing.Point(8, 197);
+            this.lblFeFin.Location = new System.Drawing.Point(7, 116);
             this.lblFeFin.Name = "lblFeFin";
             this.lblFeFin.Size = new System.Drawing.Size(108, 16);
             this.lblFeFin.TabIndex = 8;
@@ -192,7 +187,7 @@
             // 
             this.cmbCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCurso.FormattingEnabled = true;
-            this.cmbCurso.Location = new System.Drawing.Point(133, 78);
+            this.cmbCurso.Location = new System.Drawing.Point(133, 48);
             this.cmbCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbCurso.Name = "cmbCurso";
             this.cmbCurso.Size = new System.Drawing.Size(248, 24);
@@ -201,7 +196,7 @@
             // lblFeIni
             // 
             this.lblFeIni.AutoSize = true;
-            this.lblFeIni.Location = new System.Drawing.Point(8, 153);
+            this.lblFeIni.Location = new System.Drawing.Point(7, 85);
             this.lblFeIni.Name = "lblFeIni";
             this.lblFeIni.Size = new System.Drawing.Size(95, 16);
             this.lblFeIni.TabIndex = 6;
@@ -210,7 +205,7 @@
             // lblCurso
             // 
             this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(7, 81);
+            this.lblCurso.Location = new System.Drawing.Point(7, 51);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(43, 16);
             this.lblCurso.TabIndex = 5;
@@ -218,7 +213,7 @@
             // 
             // dtpFechIni
             // 
-            this.dtpFechIni.Location = new System.Drawing.Point(134, 146);
+            this.dtpFechIni.Location = new System.Drawing.Point(134, 80);
             this.dtpFechIni.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFechIni.Name = "dtpFechIni";
             this.dtpFechIni.Size = new System.Drawing.Size(248, 23);
@@ -226,7 +221,7 @@
             // 
             // dtpFechFin
             // 
-            this.dtpFechFin.Location = new System.Drawing.Point(134, 191);
+            this.dtpFechFin.Location = new System.Drawing.Point(133, 111);
             this.dtpFechFin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFechFin.Name = "dtpFechFin";
             this.dtpFechFin.Size = new System.Drawing.Size(248, 23);
@@ -234,7 +229,7 @@
             // 
             // nudHoras
             // 
-            this.nudHoras.Location = new System.Drawing.Point(301, 271);
+            this.nudHoras.Location = new System.Drawing.Point(301, 142);
             this.nudHoras.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudHoras.Name = "nudHoras";
             this.nudHoras.Size = new System.Drawing.Size(80, 23);
@@ -244,7 +239,7 @@
             // lblHoras
             // 
             this.lblHoras.AutoSize = true;
-            this.lblHoras.Location = new System.Drawing.Point(8, 273);
+            this.lblHoras.Location = new System.Drawing.Point(7, 149);
             this.lblHoras.Name = "lblHoras";
             this.lblHoras.Size = new System.Drawing.Size(42, 16);
             this.lblHoras.TabIndex = 0;
@@ -258,28 +253,6 @@
             this.lblCodigo.Size = new System.Drawing.Size(149, 16);
             this.lblCodigo.TabIndex = 12;
             this.lblCodigo.Text = "Codigo de Capacitación";
-            // 
-            // gbxHstEmp
-            // 
-            this.gbxHstEmp.Controls.Add(this.dgvCompetencias);
-            this.gbxHstEmp.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxHstEmp.Location = new System.Drawing.Point(8, 226);
-            this.gbxHstEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxHstEmp.Name = "gbxHstEmp";
-            this.gbxHstEmp.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxHstEmp.Size = new System.Drawing.Size(514, 199);
-            this.gbxHstEmp.TabIndex = 20;
-            this.gbxHstEmp.TabStop = false;
-            this.gbxHstEmp.Text = "Historial de Competencia";
-            // 
-            // dgvCompetencias
-            // 
-            this.dgvCompetencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCompetencias.Location = new System.Drawing.Point(9, 27);
-            this.dgvCompetencias.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvCompetencias.Name = "dgvCompetencias";
-            this.dgvCompetencias.Size = new System.Drawing.Size(497, 164);
-            this.dgvCompetencias.TabIndex = 4;
             // 
             // btnBuscarEmp
             // 
@@ -327,14 +300,14 @@
             this.gbxDatEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbxDatEmp.Name = "gbxDatEmp";
             this.gbxDatEmp.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gbxDatEmp.Size = new System.Drawing.Size(514, 159);
+            this.gbxDatEmp.Size = new System.Drawing.Size(514, 178);
             this.gbxDatEmp.TabIndex = 19;
             this.gbxDatEmp.TabStop = false;
             this.gbxDatEmp.Text = "Datos del Empleado";
             // 
             // txtEstEmp
             // 
-            this.txtEstEmp.Location = new System.Drawing.Point(194, 118);
+            this.txtEstEmp.Location = new System.Drawing.Point(194, 141);
             this.txtEstEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEstEmp.Name = "txtEstEmp";
             this.txtEstEmp.Size = new System.Drawing.Size(313, 23);
@@ -343,7 +316,7 @@
             // 
             // txtDeptEmp
             // 
-            this.txtDeptEmp.Location = new System.Drawing.Point(194, 74);
+            this.txtDeptEmp.Location = new System.Drawing.Point(195, 82);
             this.txtDeptEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDeptEmp.Name = "txtDeptEmp";
             this.txtDeptEmp.Size = new System.Drawing.Size(313, 23);
@@ -352,7 +325,7 @@
             // 
             // txtNombEmp
             // 
-            this.txtNombEmp.Location = new System.Drawing.Point(194, 37);
+            this.txtNombEmp.Location = new System.Drawing.Point(194, 24);
             this.txtNombEmp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNombEmp.Name = "txtNombEmp";
             this.txtNombEmp.Size = new System.Drawing.Size(313, 23);
@@ -362,7 +335,7 @@
             // lblEstao
             // 
             this.lblEstao.AutoSize = true;
-            this.lblEstao.Location = new System.Drawing.Point(7, 122);
+            this.lblEstao.Location = new System.Drawing.Point(6, 142);
             this.lblEstao.Name = "lblEstao";
             this.lblEstao.Size = new System.Drawing.Size(131, 16);
             this.lblEstao.TabIndex = 12;
@@ -371,7 +344,7 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(7, 41);
+            this.lblNom.Location = new System.Drawing.Point(6, 27);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(138, 16);
             this.lblNom.TabIndex = 10;
@@ -380,7 +353,7 @@
             // lblDept
             // 
             this.lblDept.AutoSize = true;
-            this.lblDept.Location = new System.Drawing.Point(7, 78);
+            this.lblDept.Location = new System.Drawing.Point(6, 85);
             this.lblDept.Name = "lblDept";
             this.lblDept.Size = new System.Drawing.Size(156, 16);
             this.lblDept.TabIndex = 11;
@@ -397,7 +370,7 @@
             this.tbpResultados.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpResultados.Name = "tbpResultados";
             this.tbpResultados.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbpResultados.Size = new System.Drawing.Size(926, 436);
+            this.tbpResultados.Size = new System.Drawing.Size(926, 385);
             this.tbpResultados.TabIndex = 1;
             this.tbpResultados.Text = "Resultados";
             // 
@@ -502,11 +475,12 @@
             // 
             // dgvCompIng
             // 
+            this.dgvCompIng.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCompIng.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompIng.Location = new System.Drawing.Point(7, 233);
             this.dgvCompIng.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCompIng.Name = "dgvCompIng";
-            this.dgvCompIng.Size = new System.Drawing.Size(911, 195);
+            this.dgvCompIng.Size = new System.Drawing.Size(911, 147);
             this.dgvCompIng.TabIndex = 8;
             // 
             // gbxIngresoR
@@ -592,7 +566,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(962, 495);
+            this.ClientSize = new System.Drawing.Size(962, 442);
             this.Controls.Add(this.tbcCapacitacion);
             this.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -607,8 +581,6 @@
             this.gbxDetCap.ResumeLayout(false);
             this.gbxDetCap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudHoras)).EndInit();
-            this.gbxHstEmp.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCompetencias)).EndInit();
             this.gbxDatEmp.ResumeLayout(false);
             this.gbxDatEmp.PerformLayout();
             this.tbpResultados.ResumeLayout(false);
@@ -636,7 +608,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechFin;
         private System.Windows.Forms.NumericUpDown nudHoras;
         private System.Windows.Forms.Label lblHoras;
-        private System.Windows.Forms.GroupBox gbxHstEmp;
         private System.Windows.Forms.Button btnBuscarEmp;
         private System.Windows.Forms.TextBox txtBusqCodEmp;
         private System.Windows.Forms.Label lblCodEmp;
@@ -647,7 +618,6 @@
         private System.Windows.Forms.Label lblEstao;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label lblDept;
-        private System.Windows.Forms.DataGridView dgvCompetencias;
         private System.Windows.Forms.Button btnIngresoCurso;
         private System.Windows.Forms.GroupBox gbxDatEmpR;
         private System.Windows.Forms.TextBox txtCapR;
