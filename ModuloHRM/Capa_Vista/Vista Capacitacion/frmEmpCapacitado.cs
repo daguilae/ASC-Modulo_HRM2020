@@ -68,6 +68,12 @@ namespace Capa_Vista.Vista_Capacitacion
             else
             {
                 con.funcIngresarEncabezado(idEmpleado, idEncabezado, fechaInic, fechaFin, idCurso, horas, codigoCapa);
+                txtBusqCodEmp.Text = "";
+                txtCodigoEncabezado.Text = "";
+                cmbCurso.Text = "";
+                txtCodiCapa.Text = "";
+                nudHoras.Value = 0;
+               
             }
         }
 
@@ -103,6 +109,9 @@ namespace Capa_Vista.Vista_Capacitacion
 
                 DataTable dato = con.funcLlenarDGVRes(idEmpleado, idCap);
                 dgvCompIng.DataSource = dato;
+                txtResultado.Text="";
+                cmbCodigoCap.Text="";
+
             }
         }
 

@@ -66,16 +66,29 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnIngresoCurso_Click(object sender, EventArgs e)
         {
-            string idCapacitacion = txtCodiCapa.Text;
-            string fechaInicio = dtpFechIni.Value.Date.ToShortDateString(); 
-            string fechaFin= dtpFechFin.Value.Date.ToShortDateString(); ;
-            string idEmpleado = txtBusqCodEmp.Text;
-            string nomCur = cmbCurso.Text;
-            string horas = Convert.ToString(nudHoras.Value);
-            string idEncCapa = txtCodigoEncabezado.Text;
+            if (txtCodiCapa.Text == "" ||
+            txtBusqCodEmp.Text == "" ||
+            cmbCurso.Text == "" ||
+            nudHoras.Value == 0 ||
+            txtCodigoEncabezado.Text == "") { MessageBox.Show("Campo Vacío"); }
+            else
+            {
+                string idCapacitacion = txtCodiCapa.Text;
+                string fechaInicio = dtpFechIni.Value.Date.ToShortDateString();
+                string fechaFin = dtpFechFin.Value.Date.ToShortDateString(); ;
+                string idEmpleado = txtBusqCodEmp.Text;
+                string nomCur = cmbCurso.Text;
+                string horas = Convert.ToString(nudHoras.Value);
+                string idEncCapa = txtCodigoEncabezado.Text;
 
-            con.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
+                con.funcActualizarCapa(idCapacitacion, fechaInicio, fechaFin, idEmpleado, nomCur, horas, idEncCapa);
 
+                txtCodiCapa.Text = "";
+                txtBusqCodEmp.Text = "";
+                cmbCurso.Text = "";
+                nudHoras.Value = 0;
+                txtCodigoEncabezado.Text = "";
+            }
         }
 
 
@@ -108,9 +121,21 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnEliminarC_Click(object sender, EventArgs e)
         {
-            string idCapa = txtCodigoCapE.Text;
-            string idEncCapa = txtCodigoEncCapE.Text;
-            con.funcEliminarCurso(idCapa, idEncCapa);
+            if (txtCodigoCapE.Text == "") { MessageBox.Show("Campo Vacío"); }
+            else
+            {
+                string idCapa = txtCodigoCapE.Text;
+                string idEncCapa = txtCodigoEncCapE.Text;
+                con.funcEliminarCurso(idCapa, idEncCapa);
+                txtCodigoCapE.Text = "";
+                txtEmpEC.Text = "";
+                txtNombEmpE.Text = "";
+                txtDepEE.Text = "";
+                txtEstadoEE.Text = "";
+                txtCodigoEncCapE.Text = "";
+                cmbCursoE.Text = "";
+                nudHorasE.Value = 0;
+            }
         }
     }
 }

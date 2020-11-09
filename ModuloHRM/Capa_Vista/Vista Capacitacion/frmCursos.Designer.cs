@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Timer tmrDGVCurso;
             this.tbcCursos = new System.Windows.Forms.TabControl();
             this.tbpIngresar = new System.Windows.Forms.TabPage();
             this.btnBuscarCapacit = new System.Windows.Forms.Button();
@@ -90,6 +92,11 @@
             this.txtBuscador = new System.Windows.Forms.TextBox();
             this.btnBuscarEmp = new System.Windows.Forms.Button();
             this.lblEsft = new System.Windows.Forms.Label();
+            this.lsvInfoCap = new System.Windows.Forms.ListView();
+            this.clmhCodigoCap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhCursoCap = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmhCapacitador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            tmrDGVCurso = new System.Windows.Forms.Timer(this.components);
             this.tbcCursos.SuspendLayout();
             this.tbpIngresar.SuspendLayout();
             this.gbpDatos.SuspendLayout();
@@ -684,7 +691,7 @@
             this.dvgEmpleadosMostrar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgEmpleadosMostrar.Location = new System.Drawing.Point(509, 38);
             this.dvgEmpleadosMostrar.Name = "dvgEmpleadosMostrar";
-            this.dvgEmpleadosMostrar.Size = new System.Drawing.Size(661, 489);
+            this.dvgEmpleadosMostrar.Size = new System.Drawing.Size(661, 277);
             this.dvgEmpleadosMostrar.TabIndex = 1;
             // 
             // lblAser
@@ -731,12 +738,49 @@
             this.lblEsft.TabIndex = 6;
             this.lblEsft.Text = "Igual A";
             // 
+            // lsvInfoCap
+            // 
+            this.lsvInfoCap.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmhCodigoCap,
+            this.clmhCursoCap,
+            this.clmhCapacitador});
+            this.lsvInfoCap.HideSelection = false;
+            this.lsvInfoCap.Location = new System.Drawing.Point(509, 319);
+            this.lsvInfoCap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lsvInfoCap.Name = "lsvInfoCap";
+            this.lsvInfoCap.Size = new System.Drawing.Size(661, 207);
+            this.lsvInfoCap.TabIndex = 7;
+            this.lsvInfoCap.UseCompatibleStateImageBehavior = false;
+            this.lsvInfoCap.View = System.Windows.Forms.View.Details;
+            // 
+            // clmhCodigoCap
+            // 
+            this.clmhCodigoCap.Text = "Codigo";
+            this.clmhCodigoCap.Width = 67;
+            // 
+            // clmhCursoCap
+            // 
+            this.clmhCursoCap.Text = "Curso";
+            this.clmhCursoCap.Width = 165;
+            // 
+            // clmhCapacitador
+            // 
+            this.clmhCapacitador.Text = "Capacitador";
+            this.clmhCapacitador.Width = 263;
+            // 
+            // tmrDGVCurso
+            // 
+            tmrDGVCurso.Enabled = true;
+            tmrDGVCurso.Interval = 5000;
+            tmrDGVCurso.Tick += new System.EventHandler(this.tmrDGVCurso_Tick);
+            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1182, 539);
+            this.Controls.Add(this.lsvInfoCap);
             this.Controls.Add(this.lblEsft);
             this.Controls.Add(this.btnBuscarEmp);
             this.Controls.Add(this.txtBuscador);
@@ -834,5 +878,9 @@
         private System.Windows.Forms.TextBox txtBuscador;
         private System.Windows.Forms.Button btnBuscarEmp;
         private System.Windows.Forms.Label lblEsft;
+        private System.Windows.Forms.ListView lsvInfoCap;
+        private System.Windows.Forms.ColumnHeader clmhCodigoCap;
+        private System.Windows.Forms.ColumnHeader clmhCursoCap;
+        private System.Windows.Forms.ColumnHeader clmhCapacitador;
     }
 }
