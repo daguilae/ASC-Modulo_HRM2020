@@ -55,6 +55,12 @@ namespace Capa_Controlador.Controlador_Nomina
             Consulta.funcEliminarPercepcion(Nom);
         }
 
+        public string funcObtenerPeriodoFinal(string FI)
+        {
+            string FF = Consulta.funcObtenerPeriodoFinal(FI);
+            return FF;
+        }
+
         //Metodos para formulario frmEmpleadoNomina
 
         public OdbcDataReader funcBuscarNomEmpleado(int Id)
@@ -142,6 +148,57 @@ namespace Capa_Controlador.Controlador_Nomina
         {
             DataTable Datos = Consulta.funcVisPerPlanilla(Fecha);
             return Datos;
+        }
+
+        public DataTable funcVisHoras(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisHoras(Fecha);
+            return Datos;
+        }
+
+        public DataTable funcVisDias(string Fecha)
+        {
+            DataTable Datos = Consulta.funcVisDias(Fecha);
+            return Datos;
+        }
+
+        public void funcCrearPeriodo(string Nom, string FI, string FF)
+        {
+            Consulta.funcCrearPeriodo(Nom, FI, FF);
+        }
+
+        //Metodos para formulario frmControlHorasDias
+
+        public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
+        {
+            Consulta.funcIgresarHoras(Fecha, IdEmp, HorasOrd, HorasExt);
+        }
+
+        public void funcIgresarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
+        {
+            Consulta.funcIgresarDias(Fecha, IdEmp, DiasLab, DiasJus, DiasInjust);
+        }
+
+        public void funcModificarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
+        {
+            Consulta.funcModificarHoras(Fecha, IdEmp, HorasOrd, HorasExt);
+        }
+
+        public void funcModificarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
+        {
+            Consulta.funcModificarDias(Fecha, IdEmp, DiasLab, DiasJus, DiasInjust);
+        }
+
+        public OdbcDataReader funcBuscarHoras(int Id, string Fecha)
+        {
+            OdbcDataReader Lector = Consulta.funcBuscarHoras(Id, Fecha);
+            return Lector;
+        }
+
+        public OdbcDataReader funcBuscarDias(int Id, string Fecha)
+        {
+            OdbcDataReader Lector = Consulta.funcBuscarDias(Id, Fecha);
+            return Lector;
         }
     }
 }

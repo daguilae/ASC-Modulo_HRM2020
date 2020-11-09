@@ -24,12 +24,14 @@ namespace Capa_Vista.Vista_Reclutamiento
             InitializeComponent();
             funcLlenarPuestoNuevo();
             funcLlnearDeptoNuevo();
-
+            cmbPuestoNuevo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbDepartamentoNuevo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
 
         String IdEmpleado;
         int PuestoN, DeptoN;
+        int Estado = 1;
 
         //función para llenar el contenido de la tabla hacia el combo
         public void funcLlenarPuestoNuevo()
@@ -62,7 +64,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                 IdEmpleado = txtIdEmpleado.Text;
                 //Inicio para Busqueda
-                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text);
+                OdbcDataReader Lector = Cont_R.funcBuscarEmpleado(txtIdEmpleado.Text,Estado);
                 if (Lector.HasRows == true)
                 {
                     while (Lector.Read())
@@ -110,6 +112,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                     Cont_R.funcAscenderEmpleado(PuestoN, DeptoN, IdEmpleado);
 
+                    MessageBox.Show("Se ha ascendido con Éxito", "FORMULARIO ASCENSO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     funcLimpieza();
                     funcBloqueo();
 
@@ -141,6 +144,13 @@ namespace Capa_Vista.Vista_Reclutamiento
         private void frmAscender_Load(object sender, EventArgs e)
         {
             txtIdEmpleado.MaxLength = 8;
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            //Se llama al formulario que contiene todos una tabla de todos los empleados
+            frmMostrarEmpleado MostrarEmp = new frmMostrarEmpleado();
+            MostrarEmp.ShowDialog();
         }
 
         //Función de Bloqueo

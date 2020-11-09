@@ -41,7 +41,7 @@ namespace Capa_Vista.Vista_Nomina
         {
             if (txtEliminarIdEmp.Text == "")
             {
-                MessageBox.Show("Ingree el ID del empleado.", "ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el ID del empleado.", "ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -82,7 +82,7 @@ namespace Capa_Vista.Vista_Nomina
         {
             if(txtIngresoIdEmp.Text == "")
             {
-                MessageBox.Show("Ingree el ID del empleado.","ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese el ID del empleado.","ERROR BUSQUEDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -177,8 +177,28 @@ namespace Capa_Vista.Vista_Nomina
             funcLimpiarBuscar();
         }
 
+        private void cmbIngresoFecPLan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtIngresoFechFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbIngresoFecPLan.Text);
+        }
+
+        private void cmbBuscarPeriodoPlanilla_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtBuscarFechaFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbBuscarPeriodoPlanilla.Text);
+        }
+
+        private void cmbEliminarFechPlan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtEliminarFechFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbEliminarFechPlan.Text);
+        }
+
         private bool funcValidarCamposIngreso()
         {
+
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+
             if (rbtnIngresoDed.Checked == false && rbtnIngresoPerc.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -187,6 +207,11 @@ namespace Capa_Vista.Vista_Nomina
             else if (txtIngresoIdEmp.Text == "" || txtIngresoNomEmp.Text == "" || cmbIngresoDedPer.Text == "" || cmbIngresoFecPLan.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (Hoy.Date.CompareTo(Periodo.Date) == 1)
+            {
+                MessageBox.Show("No se puede realizar el ingreso, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -210,6 +235,10 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarCamposEliminar()
         {
+            DateTime Hoy, Periodo;
+            Hoy = DateTime.Now;
+            Periodo = Convert.ToDateTime(txtEliminarFechFin.Text);
+
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -218,6 +247,11 @@ namespace Capa_Vista.Vista_Nomina
             else if (txtEliminarIdEmp.Text == "" || txtEliminarNomEmp.Text == "" || cmbEliminarDedPer.Text == "" || cmbEliminarFechPlan.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (Hoy.Date.CompareTo(Periodo.Date) == 1)
+            {
+                MessageBox.Show("No se puede realizar la eliminación, el periodo de planilla ya finalizo", "PERIODO DE PLANILLA FINALIZADO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -232,6 +266,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoFecPLan.DataSource = Datos;
             cmbIngresoFecPLan.DisplayMember = "fecha_inicio_encabezado_nomina";
             cmbIngresoFecPLan.ResetText();
+            cmbIngresoFecPLan.SelectedIndex = -1;
         }
 
         private void funcFechaPlanillaBuscar()
@@ -261,6 +296,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoDedPer.Text = "";
             cmbIngresoFecPLan.Text = "";
             cmbIngresoDedPer.DataSource = null;
+            txtIngresoFechFin.Text = "";
         }
 
         private void funcLimpiarBuscar()
@@ -275,6 +311,7 @@ namespace Capa_Vista.Vista_Nomina
             dgvPerEpm.Refresh();
             txtTotalDed.Text = "";
             txtTotalPer.Text = "";
+            txtBuscarFechaFin.Text = "";
         }
         private void funcLimpiarEliminar()
         {
@@ -285,6 +322,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbEliminarDedPer.Text = "";
             cmbEliminarFechPlan.Text = "";
             cmbEliminarDedPer.DataSource = null;
+            txtEliminarFechFin.Text = "";
         }
     }
 }

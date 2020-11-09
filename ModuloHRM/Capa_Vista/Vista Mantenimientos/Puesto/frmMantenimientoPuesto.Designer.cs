@@ -28,146 +28,207 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtIDPuesto = new System.Windows.Forms.TextBox();
-            this.lblIDepa = new System.Windows.Forms.Label();
-            this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.cmbHorario = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblSalario = new System.Windows.Forms.Label();
-            this.txtSalario = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombrePuesto = new System.Windows.Forms.TextBox();
             this.dgvPuestos = new System.Windows.Forms.DataGridView();
-            this.gbxDatos.SuspendLayout();
+            this.NavegadorPuesto = new CapaVistaNavegador.Navegador();
+            this.lblEstadoPuesto = new System.Windows.Forms.Label();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.lblSalario = new System.Windows.Forms.Label();
+            this.lblIDepa = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtIDPuesto = new System.Windows.Forms.TextBox();
+            this.txtNombrePuesto = new System.Windows.Forms.TextBox();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.cmbCodHorario = new System.Windows.Forms.ComboBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.cmbHorario = new System.Windows.Forms.ComboBox();
+            this.rbtnActivo = new System.Windows.Forms.RadioButton();
+            this.rbtnInactivo = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnBuscar
+            // dgvPuestos
             // 
-            this.btnBuscar.Enabled = false;
-            this.btnBuscar.Location = new System.Drawing.Point(247, 116);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 9;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.dgvPuestos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPuestos.Location = new System.Drawing.Point(351, 114);
+            this.dgvPuestos.Name = "dgvPuestos";
+            this.dgvPuestos.RowHeadersWidth = 51;
+            this.dgvPuestos.Size = new System.Drawing.Size(716, 287);
+            this.dgvPuestos.TabIndex = 10;
             // 
-            // txtIDPuesto
+            // NavegadorPuesto
             // 
-            this.txtIDPuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIDPuesto.Enabled = false;
-            this.txtIDPuesto.Location = new System.Drawing.Point(109, 116);
-            this.txtIDPuesto.Name = "txtIDPuesto";
-            this.txtIDPuesto.Size = new System.Drawing.Size(122, 20);
-            this.txtIDPuesto.TabIndex = 8;
-            this.txtIDPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.NavegadorPuesto.BackColor = System.Drawing.Color.Transparent;
+            this.NavegadorPuesto.Location = new System.Drawing.Point(12, 5);
+            this.NavegadorPuesto.Name = "NavegadorPuesto";
+            this.NavegadorPuesto.Size = new System.Drawing.Size(1059, 105);
+            this.NavegadorPuesto.TabIndex = 11;
+            this.NavegadorPuesto.Load += new System.EventHandler(this.NavegadorPuesto_Load);
             // 
-            // lblIDepa
+            // lblEstadoPuesto
             // 
-            this.lblIDepa.AutoSize = true;
-            this.lblIDepa.Enabled = false;
-            this.lblIDepa.Location = new System.Drawing.Point(25, 121);
-            this.lblIDepa.Name = "lblIDepa";
-            this.lblIDepa.Size = new System.Drawing.Size(54, 13);
-            this.lblIDepa.TabIndex = 7;
-            this.lblIDepa.Text = "ID Puesto";
+            this.lblEstadoPuesto.AutoSize = true;
+            this.lblEstadoPuesto.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoPuesto.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblEstadoPuesto.Location = new System.Drawing.Point(34, 340);
+            this.lblEstadoPuesto.Name = "lblEstadoPuesto";
+            this.lblEstadoPuesto.Size = new System.Drawing.Size(120, 15);
+            this.lblEstadoPuesto.TabIndex = 20;
+            this.lblEstadoPuesto.Text = "Estado del Puesto";
             // 
-            // gbxDatos
+            // lblHorario
             // 
-            this.gbxDatos.Controls.Add(this.cmbHorario);
-            this.gbxDatos.Controls.Add(this.label2);
-            this.gbxDatos.Controls.Add(this.lblSalario);
-            this.gbxDatos.Controls.Add(this.txtSalario);
-            this.gbxDatos.Controls.Add(this.lblNombre);
-            this.gbxDatos.Controls.Add(this.txtNombrePuesto);
-            this.gbxDatos.Location = new System.Drawing.Point(18, 159);
-            this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(317, 191);
-            this.gbxDatos.TabIndex = 6;
-            this.gbxDatos.TabStop = false;
-            this.gbxDatos.Text = "Datos Del Puesto";
-            // 
-            // cmbHorario
-            // 
-            this.cmbHorario.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cmbHorario.FormattingEnabled = true;
-            this.cmbHorario.Location = new System.Drawing.Point(25, 152);
-            this.cmbHorario.Name = "cmbHorario";
-            this.cmbHorario.Size = new System.Drawing.Size(268, 21);
-            this.cmbHorario.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 136);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Horario";
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblHorario.Location = new System.Drawing.Point(34, 288);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(56, 15);
+            this.lblHorario.TabIndex = 16;
+            this.lblHorario.Text = "Horario";
             // 
             // lblSalario
             // 
             this.lblSalario.AutoSize = true;
-            this.lblSalario.Location = new System.Drawing.Point(22, 82);
+            this.lblSalario.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalario.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblSalario.Location = new System.Drawing.Point(34, 234);
             this.lblSalario.Name = "lblSalario";
-            this.lblSalario.Size = new System.Drawing.Size(39, 13);
-            this.lblSalario.TabIndex = 2;
+            this.lblSalario.Size = new System.Drawing.Size(53, 15);
+            this.lblSalario.TabIndex = 14;
             this.lblSalario.Text = "Salario";
             // 
-            // txtSalario
+            // lblIDepa
             // 
-            this.txtSalario.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSalario.Location = new System.Drawing.Point(25, 98);
-            this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(268, 20);
-            this.txtSalario.TabIndex = 3;
-            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.lblIDepa.AutoSize = true;
+            this.lblIDepa.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIDepa.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblIDepa.Location = new System.Drawing.Point(34, 135);
+            this.lblIDepa.Name = "lblIDepa";
+            this.lblIDepa.Size = new System.Drawing.Size(68, 15);
+            this.lblIDepa.TabIndex = 18;
+            this.lblIDepa.Text = "ID Puesto";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(22, 30);
+            this.lblNombre.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblNombre.Location = new System.Drawing.Point(34, 182);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(97, 13);
-            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Size = new System.Drawing.Size(127, 15);
+            this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "Nombre del Puesto";
+            // 
+            // txtIDPuesto
+            // 
+            this.txtIDPuesto.Location = new System.Drawing.Point(37, 153);
+            this.txtIDPuesto.Name = "txtIDPuesto";
+            this.txtIDPuesto.Size = new System.Drawing.Size(272, 20);
+            this.txtIDPuesto.TabIndex = 21;
+            this.txtIDPuesto.Tag = "pk_id_puesto";
+            this.txtIDPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // txtNombrePuesto
             // 
-            this.txtNombrePuesto.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtNombrePuesto.Location = new System.Drawing.Point(25, 46);
+            this.txtNombrePuesto.Location = new System.Drawing.Point(37, 199);
             this.txtNombrePuesto.Name = "txtNombrePuesto";
-            this.txtNombrePuesto.Size = new System.Drawing.Size(268, 20);
-            this.txtNombrePuesto.TabIndex = 1;
+            this.txtNombrePuesto.Size = new System.Drawing.Size(272, 20);
+            this.txtNombrePuesto.TabIndex = 22;
+            this.txtNombrePuesto.Tag = "nombre_puesto";
             this.txtNombrePuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
-            // dgvPuestos
+            // txtSalario
             // 
-            this.dgvPuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPuestos.Location = new System.Drawing.Point(352, 116);
-            this.dgvPuestos.Name = "dgvPuestos";
-            this.dgvPuestos.RowHeadersWidth = 51;
-            this.dgvPuestos.Size = new System.Drawing.Size(505, 236);
-            this.dgvPuestos.TabIndex = 10;
+            this.txtSalario.Location = new System.Drawing.Point(37, 251);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.Size = new System.Drawing.Size(272, 20);
+            this.txtSalario.TabIndex = 23;
+            this.txtSalario.Tag = "salario_puesto";
+            this.txtSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // cmbCodHorario
+            // 
+            this.cmbCodHorario.FormattingEnabled = true;
+            this.cmbCodHorario.Location = new System.Drawing.Point(252, 307);
+            this.cmbCodHorario.Name = "cmbCodHorario";
+            this.cmbCodHorario.Size = new System.Drawing.Size(57, 21);
+            this.cmbCodHorario.TabIndex = 24;
+            this.cmbCodHorario.Tag = "fk_id_horario_puesto";
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.Location = new System.Drawing.Point(319, 381);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(26, 20);
+            this.txtEstado.TabIndex = 25;
+            this.txtEstado.Tag = "estado_puesto";
+            this.txtEstado.Visible = false;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
+            this.txtEstado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            // 
+            // cmbHorario
+            // 
+            this.cmbHorario.FormattingEnabled = true;
+            this.cmbHorario.Location = new System.Drawing.Point(37, 307);
+            this.cmbHorario.Name = "cmbHorario";
+            this.cmbHorario.Size = new System.Drawing.Size(183, 21);
+            this.cmbHorario.TabIndex = 26;
+            // 
+            // rbtnActivo
+            // 
+            this.rbtnActivo.AutoSize = true;
+            this.rbtnActivo.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnActivo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbtnActivo.Location = new System.Drawing.Point(89, 369);
+            this.rbtnActivo.Name = "rbtnActivo";
+            this.rbtnActivo.Size = new System.Drawing.Size(65, 19);
+            this.rbtnActivo.TabIndex = 27;
+            this.rbtnActivo.TabStop = true;
+            this.rbtnActivo.Text = "Activo";
+            this.rbtnActivo.UseVisualStyleBackColor = true;
+            this.rbtnActivo.CheckedChanged += new System.EventHandler(this.rbtnActivo_CheckedChanged);
+            // 
+            // rbtnInactivo
+            // 
+            this.rbtnInactivo.AutoSize = true;
+            this.rbtnInactivo.Font = new System.Drawing.Font("Rockwell", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbtnInactivo.Location = new System.Drawing.Point(175, 369);
+            this.rbtnInactivo.Name = "rbtnInactivo";
+            this.rbtnInactivo.Size = new System.Drawing.Size(77, 19);
+            this.rbtnInactivo.TabIndex = 28;
+            this.rbtnInactivo.TabStop = true;
+            this.rbtnInactivo.Text = "Inactivo";
+            this.rbtnInactivo.UseVisualStyleBackColor = true;
+            this.rbtnInactivo.CheckedChanged += new System.EventHandler(this.rbtnInactivo_CheckedChanged);
             // 
             // frmMantenimientoPuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(873, 362);
-            this.Controls.Add(this.dgvPuestos);
-            this.Controls.Add(this.btnBuscar);
+            this.ClientSize = new System.Drawing.Size(1079, 413);
+            this.Controls.Add(this.rbtnInactivo);
+            this.Controls.Add(this.rbtnActivo);
+            this.Controls.Add(this.cmbHorario);
+            this.Controls.Add(this.txtEstado);
+            this.Controls.Add(this.cmbCodHorario);
+            this.Controls.Add(this.txtSalario);
+            this.Controls.Add(this.txtNombrePuesto);
             this.Controls.Add(this.txtIDPuesto);
+            this.Controls.Add(this.lblEstadoPuesto);
+            this.Controls.Add(this.lblHorario);
+            this.Controls.Add(this.lblSalario);
             this.Controls.Add(this.lblIDepa);
-            this.Controls.Add(this.gbxDatos);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.NavegadorPuesto);
+            this.Controls.Add(this.dgvPuestos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMantenimientoPuesto";
-            this.Text = "Mantenimiento Puestos";
-            this.gbxDatos.ResumeLayout(false);
-            this.gbxDatos.PerformLayout();
+            this.Text = "309 - Mantenimiento Puestos";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPuestos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -175,17 +236,20 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.TextBox txtIDPuesto;
-        private System.Windows.Forms.Label lblIDepa;
-        private System.Windows.Forms.GroupBox gbxDatos;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombrePuesto;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblSalario;
-        private System.Windows.Forms.TextBox txtSalario;
-        private System.Windows.Forms.ComboBox cmbHorario;
         private System.Windows.Forms.DataGridView dgvPuestos;
+        private CapaVistaNavegador.Navegador NavegadorPuesto;
+        private System.Windows.Forms.Label lblEstadoPuesto;
+        private System.Windows.Forms.Label lblHorario;
+        private System.Windows.Forms.Label lblSalario;
+        private System.Windows.Forms.Label lblIDepa;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtIDPuesto;
+        private System.Windows.Forms.TextBox txtNombrePuesto;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.ComboBox cmbCodHorario;
+        private System.Windows.Forms.TextBox txtEstado;
+        private System.Windows.Forms.ComboBox cmbHorario;
+        private System.Windows.Forms.RadioButton rbtnActivo;
+        private System.Windows.Forms.RadioButton rbtnInactivo;
     }
 }
