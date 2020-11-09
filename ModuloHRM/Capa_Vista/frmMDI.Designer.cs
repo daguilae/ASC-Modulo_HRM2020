@@ -375,7 +375,7 @@
             this.tsmiSeleccionReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiEmpleadosReporte});
             this.tsmiSeleccionReporte.Name = "tsmiSeleccionReporte";
-            this.tsmiSeleccionReporte.Size = new System.Drawing.Size(183, 26);
+            this.tsmiSeleccionReporte.Size = new System.Drawing.Size(224, 26);
             this.tsmiSeleccionReporte.Text = "Selección";
             // 
             // tsmiEmpleadosReporte
@@ -388,7 +388,7 @@
             // tsmiNominaReporte
             // 
             this.tsmiNominaReporte.Name = "tsmiNominaReporte";
-            this.tsmiNominaReporte.Size = new System.Drawing.Size(183, 26);
+            this.tsmiNominaReporte.Size = new System.Drawing.Size(224, 26);
             this.tsmiNominaReporte.Text = "Nómina";
             // 
             // tsmiDesarrolloReporte
@@ -396,14 +396,15 @@
             this.tsmiDesarrolloReporte.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCompetenciasReporte});
             this.tsmiDesarrolloReporte.Name = "tsmiDesarrolloReporte";
-            this.tsmiDesarrolloReporte.Size = new System.Drawing.Size(183, 26);
+            this.tsmiDesarrolloReporte.Size = new System.Drawing.Size(224, 26);
             this.tsmiDesarrolloReporte.Text = "Desarrollo";
             // 
             // tsmiCompetenciasReporte
             // 
             this.tsmiCompetenciasReporte.Name = "tsmiCompetenciasReporte";
-            this.tsmiCompetenciasReporte.Size = new System.Drawing.Size(192, 26);
+            this.tsmiCompetenciasReporte.Size = new System.Drawing.Size(224, 26);
             this.tsmiCompetenciasReporte.Text = "Competencias";
+            this.tsmiCompetenciasReporte.Click += new System.EventHandler(this.tsmiCompetenciasReporte_Click);
             // 
             // tsmiCapacitacionReporte
             // 
@@ -425,7 +426,7 @@
             this.txtUsuario.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.txtUsuario.Enabled = false;
             this.txtUsuario.Location = new System.Drawing.Point(0, 507);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(975, 22);
             this.txtUsuario.TabIndex = 0;
@@ -435,7 +436,7 @@
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(31)))), ((int)(((byte)(70)))));
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 28);
-            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4);
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(975, 501);
             this.pnlContenedor.TabIndex = 1;
