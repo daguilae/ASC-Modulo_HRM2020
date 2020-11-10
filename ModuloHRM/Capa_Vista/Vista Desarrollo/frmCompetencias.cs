@@ -35,11 +35,13 @@ namespace Capa_Vista.Vista_Desarrollo
         }
         private bool funcValidarFechas(string FI, string FF)
         {
+            //Validar si las fechas son las mismas
             if (FI == FF)
             {
                 MessageBox.Show("La fecha de inicio y de finalización del periodo son las mismas.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            //Validar si La fecha Inicio es menor a la fecha Fin
             else if (dtpFechaInicio.Value.Date.CompareTo(dtpFechaFin.Value.Date) != -1)
             {
                 MessageBox.Show("La fecha de finalizacion es menor a la fecha de inicio.", "ERROR PERIODO DE PLANILLA", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -54,6 +56,7 @@ namespace Capa_Vista.Vista_Desarrollo
 
         public void funcLlenarCompetencia()
         {
+            //Obtener Valores de la Capa Modelo para mostrar en ComboBox
             DataTable Datos = Cont.funcCmbCompetencia();
             cmbCompetencias.DataSource = Datos;
             cmbCompetencias.DisplayMember = "NOMBRE_COMPETENCIA";
@@ -62,9 +65,11 @@ namespace Capa_Vista.Vista_Desarrollo
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+            //Validar Campos Vacios
             if (cmbCompetencias.Text == "" || txtResultado.Text == "") { MessageBox.Show("ADVERTENCIA: No se ha seleccionado la competencia o no ingreso un resultado", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); }
             else
             {
+                //Validar Resultado
                 if (Convert.ToInt32(txtResultado.Text) > 100)
                 {
                     MessageBox.Show("ERROR: El resultado de la competencia no es válido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -90,6 +95,7 @@ namespace Capa_Vista.Vista_Desarrollo
                         }
                         if (existe == false)
                         {
+                            //Ingresar Competencia a DataGridView
                             DataGridViewRow row = (DataGridViewRow)dgvCompetencias.Rows[0].Clone();
                             row.Cells[0].Value = ID_Competencia;
                             row.Cells[1].Value = cmbCompetencias.Text;
@@ -105,18 +111,21 @@ namespace Capa_Vista.Vista_Desarrollo
 
         private void btnRemover_Click(object sender, EventArgs e)
         {
+            //VALIDACIONES CAMPOS VACIOS
             if (txtIDCompetencia.Text == "")
             {
                 MessageBox.Show("ADVERTENCIA:No se ha ingresado el ID de la competencia que se desea remover", "ADVERTENCIA", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
+                //VALIDACIONES DATAGIRDVIEW VACIO
                 if (dgvCompetencias.RowCount <= 0)
                 {
                     MessageBox.Show("ERROR :No se encuentra ninguna competencia registrada", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
+                    //Remover un Row de DataGridView
                     for (int i = 0; i < dgvCompetencias.RowCount; i++)
                     {
                         if (Convert.ToInt16(dgvCompetencias.Rows[i].Cells["clmIDCompetencia"].Value) == Convert.ToInt16(txtIDCompetencia.Text))
@@ -132,23 +141,27 @@ namespace Capa_Vista.Vista_Desarrollo
 
         private void frmCompetencias_Load(object sender, EventArgs e)
         {
+            //Limite de Caracteres
             txtResultado.MaxLength = 3;
         }
 
         private void btnListado_Click(object sender, EventArgs e)
         {
+           //Mostrar Listado de Empleados
             Vista_Reclutamiento.frmMostrarEmpleado MostrarEmp = new Vista_Reclutamiento.frmMostrarEmpleado();
             MostrarEmp.ShowDialog();
         }
 
         private void btnIngreso_Click(object sender, EventArgs e)
         {
+            //VALIDACIONES CAMPOS VACIOS
             if (txtIDEmpleado.Text == "")
             {
                 MessageBox.Show("ERROR: No se ha ingresado un ID del Empleado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                //Confirmar Si esta seguro de realizarlo
                 if (MessageBox.Show("¿Seguro que ingreso los resultados correctos?", "HRM DESARROLLO LABORAL", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) { }
                 else
                 {
@@ -158,17 +171,20 @@ namespace Capa_Vista.Vista_Desarrollo
                     }
                     else
                     {
+                        //Comenzar a Validar Fechas
                         string FI, FF;
                         FI = dtpFechaInicio.Value.Date.ToShortDateString();
                         FF = dtpFechaFin.Value.Date.ToShortDateString();
 
                         if (funcValidarFechas(FI, FF) == true)
                         {
+                            //Guardar valores del DatagridView en List
                             for (int i = 0; i < dgvCompetencias.RowCount - 1; i++)
                             {
                                 IDs_Competencia.Add(Convert.ToInt32(dgvCompetencias.Rows[i].Cells["clmIDCompetencia"].Value));
                                 Resultados.Add(Convert.ToInt32(dgvCompetencias.Rows[i].Cells["clmResultado"].Value));
                             }
+                            //Limpieza de Campos e inserción de datos en bd
                             Cont.funcCrearPeriodo(txtIDEmpleado.Text, FI, FF, IDs_Competencia, Resultados);
                             txtIDEmpleado.Text = "";
                             dtpFechaInicio.Value = DateTime.Today;
