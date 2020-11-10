@@ -98,9 +98,9 @@ namespace Capa_Vista.Vista_Mantenimientos.Faltas
             NavegadorFaltas.procActualizarData();
             NavegadorFaltas.procCargar();
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
-            NavegadorFaltas.ayudaRuta = "";
+            NavegadorFaltas.ayudaRuta = "Ayudas_HRM/Ayudas_Modulo_HRM.chm";
             //en ruta debe colocar la pagina html que quiere que se muestre cuendo se presione el boton ayuda
-            NavegadorFaltas.ruta = "";
+            NavegadorFaltas.ruta = "pg_0015.htm";
         }
     }
 }
