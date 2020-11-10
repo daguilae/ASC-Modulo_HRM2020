@@ -69,9 +69,9 @@ namespace Capa_Vista.Vista_Mantenimientos.Tipo_Competencia
             NavegadorCompetencias.procActualizarData();
             NavegadorCompetencias.procCargar();
             //en la variable ayuda ruta debe colocar la carpeta y el archivo.chm de su proyecto de ayuda
-            NavegadorCompetencias.ayudaRuta = "";
+            NavegadorCompetencias.ayudaRuta = "Ayudas_HRM/Ayudas_Modulo_HRM.chm";
             //en ruta debe colocar la pagina html que quiere que se muestre cuendo se presione el boton ayuda
-            NavegadorCompetencias.ruta = "";
+            NavegadorCompetencias.ruta = "pg_0014.htm";
         }
 
         private void rbtnActivo_CheckedChanged(object sender, EventArgs e)

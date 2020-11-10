@@ -9,20 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Controlador;
 using Capa_Controlador.Controlador_Capacitación;
+using Capa_Vista;
 
 namespace Capa_Vista.Vista_Capacitacion
 {
     public partial class frmCursos : Form
     {
         clsControladorCapacitacion con = new clsControladorCapacitacion();
+        frmMDI frm = new frmMDI();
         public frmCursos()
         {
-            
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += new KeyEventHandler(frmCursos_KeyDown);
             funcAMLP();
         }
 
-        public void funcAMLP() {
+        public void funcAMLP()
+        {
             DataSet Datos = con.funcLlenarCampos();
             for (int i = 0; i < Datos.Tables[0].Columns.Count; i++)
             {
@@ -43,22 +47,22 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnIngresarC_Click(object sender, EventArgs e)
         {
-           
+
             if (rtxtDetalleC.Text == "" || txtCodigoCapacit.Text == "" || txtNombreCurso.Text == "" || txtCodigoCurso.Text == "") { MessageBox.Show("Campo Vacío."); }
             else
             {
-               
-                    con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
-                 
 
-                    rtxtDetalleC.Text = "";
-                    txtCodigoCapacit.Text = "";
-                    txtNombreCurso.Text = "";
-                    txtCodigoCurso.Text = "";
-                    txtNombC.Text = "";
-                    txtEmail.Text = "";
-                    txtPuestoCurC.Text = "";
-                
+                con.funcIngresoCurso(txtCodigoCurso.Text, txtNombreCurso.Text, txtCodigoCapacit.Text, rtxtDetalleC.Text);
+
+
+                rtxtDetalleC.Text = "";
+                txtCodigoCapacit.Text = "";
+                txtNombreCurso.Text = "";
+                txtCodigoCurso.Text = "";
+                txtNombC.Text = "";
+                txtEmail.Text = "";
+                txtPuestoCurC.Text = "";
+
 
             }
 
@@ -94,7 +98,7 @@ namespace Capa_Vista.Vista_Capacitacion
                 txtCodigoCapCE.Text = datos[1];
                 rtxtDetalleEdit.Text = datos[2];
                 if (txtCodigoCapCE.Text != "") { datosc = con.funcDatosCapacitador(txtCodigoCapCE.Text); }
-                
+
                 txtNombreDCE.Text = datosc[0];
                 txtEmailDCE.Text = datosc[1];
                 txtPuestoDCE.Text = datosc[2];
@@ -166,8 +170,8 @@ namespace Capa_Vista.Vista_Capacitacion
                 txtNombreEli.Text = datos[0];
                 txtCodigoCapEli.Text = datos[1];
                 rtxtDetalleCE.Text = datos[2];
-                if (txtCodigoCapEli.Text!="") {datosc = con.funcDatosCapacitador(txtCodigoCapEli.Text); }
-               
+                if (txtCodigoCapEli.Text != "") { datosc = con.funcDatosCapacitador(txtCodigoCapEli.Text); }
+
                 txtNombCaEli.Text = datosc[0];
                 txtEmailCaEli.Text = datosc[1];
                 txtPuestoEli.Text = datosc[2];
@@ -176,13 +180,13 @@ namespace Capa_Vista.Vista_Capacitacion
 
         private void btnBuscarEmp_Click(object sender, EventArgs e)
         {
-            
-            string nomCampo= cmbEncabezado.Text;
-            string compare=txtBuscador.Text;
+
+            string nomCampo = cmbEncabezado.Text;
+            string compare = txtBuscador.Text;
             DataTable dato = con.funcLlenarBusqueda(nomCampo, compare);
             dvgEmpleadosMostrar.DataSource = dato;
             cmbEncabezado.Text = "";
-            txtBuscador.Text="";
+            txtBuscador.Text = "";
         }
         private void funcActualizarTabla()
         {
@@ -213,6 +217,14 @@ namespace Capa_Vista.Vista_Capacitacion
                     ex.Message, "Error",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            }
+        }
+
+        private void frmCursos_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0004.htm");
             }
         }
     }

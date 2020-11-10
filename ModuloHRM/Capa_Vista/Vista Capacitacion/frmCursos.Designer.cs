@@ -107,6 +107,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvgEmpleadosMostrar)).BeginInit();
             this.SuspendLayout();
             // 
+            // tmrDGVCurso
+            // 
+            tmrDGVCurso.Enabled = true;
+            tmrDGVCurso.Interval = 5000;
+            tmrDGVCurso.Tick += new System.EventHandler(this.tmrDGVCurso_Tick);
+            // 
             // tbcCursos
             // 
             this.tbcCursos.Controls.Add(this.tbpIngresar);
@@ -768,12 +774,6 @@
             this.clmhCapacitador.Text = "Capacitador";
             this.clmhCapacitador.Width = 263;
             // 
-            // tmrDGVCurso
-            // 
-            tmrDGVCurso.Enabled = true;
-            tmrDGVCurso.Interval = 5000;
-            tmrDGVCurso.Tick += new System.EventHandler(this.tmrDGVCurso_Tick);
-            // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -795,6 +795,7 @@
             this.MinimizeBox = false;
             this.Name = "frmCursos";
             this.Text = "302 - Cursos";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCursos_KeyDown);
             this.tbcCursos.ResumeLayout(false);
             this.tbpIngresar.ResumeLayout(false);
             this.tbpIngresar.PerformLayout();
