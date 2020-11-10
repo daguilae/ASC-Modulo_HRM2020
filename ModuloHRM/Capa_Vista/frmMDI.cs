@@ -314,22 +314,27 @@ namespace Capa_Vista
         }
         private void tsmiEmpleadosReporte_Click(object sender, EventArgs e)
         {
-            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            // LLAMAR FUNCIÓN PARA REPORTE EMPLEADO \\
             funcAbrirFormEnPanel(new Vista_Reportes.frmReporteEmpleado());
         }
 
         private void tsmiCapacitacionReporte_Click(object sender, EventArgs e)
         {
-            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            // LLAMAR FUNCIÓN PARA REPORTE CAPACITACION \\
             funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCapacitacion());
         }
 
         private void tsmiCompetenciasReporte_Click(object sender, EventArgs e)
         {
-            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
+            // LLAMAR FUNCIÓN PARA REPORTE COMPETENCIAS \\
             funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCompeencias());
 
         }
 
+        private void tsmiNominaReporte_Click(object sender, EventArgs e)
+        {
+            // LLAMAR FUNCIÓN PARA REPORTE NOMINA \\
+            funcAbrirFormEnPanel(new Vista_Reportes.frmReporteNomina());
+        }
     }
 }
