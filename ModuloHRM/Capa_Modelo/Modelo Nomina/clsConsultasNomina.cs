@@ -14,6 +14,8 @@ namespace Capa_Modelo.Modelo_Nomina
         clsConexion Conexion = new clsConexion();
 
         // Metodos para formulario frmDeducPercep
+
+         //Ingresa deducciones a la base de datos
         public void funIngresarDededuccion(string Nom, double Monto, string Desc)
         {
             try
@@ -38,6 +40,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //Ingresa percepciones a la base de datos
         public void funIngresarPercepcion(string Nom, double Monto, string Desc)
         {
             try
@@ -62,6 +65,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca las deducciones en la base de datos
         public OdbcDataReader funcBuscarDeduccion(string Nom)
         {
             try
@@ -82,6 +86,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca las percepciones en la base de datos
         public OdbcDataReader funcBuscarPercepcion(string Nom)
         {
             try
@@ -102,6 +107,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //modifica deducciones
         public void funcModificarDeduccion(string Nom, double Monto, string Desc, string NomAnt)
         {
             try
@@ -121,6 +127,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //modifica percepiones
         public void funcModificarPercepcion(string Nom, double Monto, string Desc, string NomAnt)
         {
             try
@@ -140,6 +147,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //elimina deducciones
         public void funcEliminarDeduccion(string Nom)
         {
             try
@@ -159,6 +167,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //elimina percepciones
         public void funcEliminarPercepcion(string Nom)
         {
             try
@@ -178,6 +187,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //obitne el periodo final de la planilla
         public string funcObtenerPeriodoFinal (string FI)
         {
             string PeriodoFinal;
@@ -202,6 +212,7 @@ namespace Capa_Modelo.Modelo_Nomina
 
         // Metodos para formulario frmEmpleadoNomina
 
+        //busca nombre del empleado
         public OdbcDataReader funcBuscarNomEmpleado(int Id)
         {
             try
@@ -223,6 +234,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca las deducciones para insertarlas en combobox
         public DataTable funcDeduccionescmb()
         {
             try
@@ -246,6 +258,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca las percepciones para insertarlas en combobox
         public DataTable funcPercepcionescmb()
         {
             try
@@ -269,6 +282,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca las fechas de inicio de planilla para insertarlas en combobox
         public DataTable funcFechaPlanillacmb()
         {
             try
@@ -292,6 +306,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //ingresa una deduccion a un empleado
         public void funcIngresarDeduccionEmpleado(string EncNom, int IdEmp, string Ded)
         {
             try
@@ -323,6 +338,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //ingresa una percepcion a un empleado
         public void funcIngresarPercepcionEmpleado(string EncNom, int IdEmp, string Per)
         {
             try
@@ -354,6 +370,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca deducciones de un empleado
         public DataTable funcDedEmpleado(int IdEmp,string Fecha)
         {
             try
@@ -380,6 +397,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca percepciones de un empleado
         public DataTable funcPerEmpleado(int IdEmp, string Fecha)
         {
             try
@@ -406,6 +424,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //elimina deducciones de un empleado
         public void funcEliminarDeduccionEmpleado(int IdEmp, string Ded, string Fecha)
         {
             try
@@ -436,6 +455,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //elimina percepciones de un empleado
         public void funcEliminarPercepcionEmpleado(int IdEmp, string Per, string Fecha)
         {
             try
@@ -464,6 +484,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca el puesto de un empleado.
         public string funcBuscarPuestoEmp(int Id)
         {
             string puesto = "";
@@ -488,6 +509,7 @@ namespace Capa_Modelo.Modelo_Nomina
 
         //Metodos para formulario frmNomina
 
+        //busca todas las deducciones realizadas a empleados de un periodo de planilla
         public DataTable funcVisDeducciones()
         {
             try
@@ -511,6 +533,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca todas las percepciones realizadas a empleados de un periodo de planilla
         public DataTable funcVisPercepciones()
         {
             try
@@ -534,6 +557,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca todas las deducciones de un periodode planilla
         public DataTable funcVisDedPlanilla(string Fecha)
         {
             try
@@ -559,6 +583,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca todas las percepciones de un periodode planilla
         public DataTable funcVisPerPlanilla(string Fecha)
         {
             try
@@ -584,6 +609,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca todas las horas de todos los empleados durante un periodo de planilla
         public DataTable funcVisHoras(string Fecha)
         {
             try
@@ -609,6 +635,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca todos los dias de todos los empleados durante un periodo de planilla
         public DataTable funcVisDias(string Fecha)
         {
             try
@@ -635,6 +662,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //Ingresa un nuevo periodo de planilla
         public void funcCrearPeriodo(string Nom, string FI, string FF)
         {
             try
@@ -661,6 +689,7 @@ namespace Capa_Modelo.Modelo_Nomina
 
         // Metodos para formulario frmControlHorasDias
 
+        //ingresa horas laboradas de un empleado
         public void funcIgresarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
         {
             try
@@ -688,6 +717,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //ingresa dias laboradas de un empleado
         public void funcIgresarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
         {
             try
@@ -715,6 +745,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //modifica horas laboradas de un empleado
         public void funcModificarHoras(string Fecha, int IdEmp, int HorasOrd, int HorasExt)
         {
             try
@@ -738,6 +769,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //modifica dias laboradas de un empleado
         public void funcModificarDias(string Fecha, int IdEmp, int DiasLab, int DiasJus, int DiasInjust)
         {
             try
@@ -761,6 +793,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca horas laboradas de un empleado
         public OdbcDataReader funcBuscarHoras(int IdEmp, string Fecha)
         {
             try
@@ -785,6 +818,7 @@ namespace Capa_Modelo.Modelo_Nomina
             }
         }
 
+        //busca dias laboradas de un empleado
         public OdbcDataReader funcBuscarDias(int IdEmp, string Fecha)
         {
             try
