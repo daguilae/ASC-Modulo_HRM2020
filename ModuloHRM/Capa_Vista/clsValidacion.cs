@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace Capa_Vista
 {
+    /*CODIGO QUE AL PARECER ES PÚBLICO Y QUE USAN TODOS LOS GRUPOS PERO QUE NO COMPARTí CON NADIE*/
     public class clsValidacion
     {
-
+        //Validar ingreso de letras RISKO
         public static void funcLetras(KeyPressEventArgs v)
         {
             if (Char.IsLetter(v.KeyChar))
@@ -28,7 +29,7 @@ namespace Capa_Vista
                 v.Handled = true;
             }
         }
-
+        //valida ingreso de números RISKO
         public static void funcNumeros(KeyPressEventArgs v)
         {
             if (Char.IsDigit(v.KeyChar))
