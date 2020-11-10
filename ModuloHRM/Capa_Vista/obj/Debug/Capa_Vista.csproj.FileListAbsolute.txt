@@ -98,11 +98,8 @@ C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControlador
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloSeguridad.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloReporteador.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControladorReporteador.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControlador.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloNavegador.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -114,8 +111,6 @@ C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecision
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModelo.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\ShockwaveFlashObjects.dll
@@ -304,7 +299,6 @@ C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Man
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Capacitacion.frmMantenimientoCapacitacion.resources
-C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Desarrollo.frmEstadísticas.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Faltas.frmFaltas.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Desarrollo.frmEstadísticas.resources
@@ -317,3 +311,6 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Report
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCapacitacion.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCompeencias.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteEmpleado.resources
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCapacitacion.resources
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCompeencias.resources
+C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteEmpleado.resources

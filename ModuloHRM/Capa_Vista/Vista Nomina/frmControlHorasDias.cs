@@ -199,9 +199,11 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarIngresoTotalDias()
         {
-            int dias;
-            dias = Convert.ToInt32(nudIngresoDiasLab.Value + nudIngresoDiasJust.Value + nudIngresoDiasInjust.Value);
-
+            int dias = 0;
+            if(txtIngresoFechFin.Text != "")
+            {
+                dias = Convert.ToInt32(nudIngresoDiasLab.Value + nudIngresoDiasJust.Value + nudIngresoDiasInjust.Value);
+            }
             if (dias > 31)
             {
                 MessageBox.Show("La cantidad de dias ingresados excede el periodo de planilla.", "ERROR DE INGRESO DE DIAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -215,9 +217,11 @@ namespace Capa_Vista.Vista_Nomina
 
         private bool funcValidarModificarTotalDias()
         {
-            int dias;
-            dias = Convert.ToInt32(nudModificarDiasLab.Value + nudModificarDiasJust.Value + nudModificarDiasInjust.Value);
-
+            int dias = 0;
+            if (txtModificarPeriodoFin.Text != "")
+            {
+                dias = Convert.ToInt32(nudModificarDiasLab.Value + nudModificarDiasJust.Value + nudModificarDiasInjust.Value);
+            }
             if (dias > 31)
             {
                 MessageBox.Show("La cantidad de dias ingresados excede el periodo de planilla.", "ERROR DE INGRESO DE DIAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -233,7 +237,11 @@ namespace Capa_Vista.Vista_Nomina
         {
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            Periodo = Hoy;
+            if(txtIngresoFechFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            }
 
             if (txtIngresoIdEmp.Text == "" || cmbIngresoPeriodo.Text == "")
             {
@@ -255,8 +263,11 @@ namespace Capa_Vista.Vista_Nomina
         {
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtModificarPeriodoFin.Text);
-
+            Periodo = Hoy;
+            if(txtModificarPeriodoFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtModificarPeriodoFin.Text);
+            }
             if (txtModificarIdEmp.Text == "" || cmbModificarPeriodo.Text == "")
             {
                 MessageBox.Show("Uno o mas campos se encuentran vacios.", "Campos Vacios.", MessageBoxButtons.OK, MessageBoxIcon.Error);
