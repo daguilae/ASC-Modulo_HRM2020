@@ -28,7 +28,7 @@ namespace Capa_Vista
                 v.Handled = true;
             }
         }
-
+        //valida texto
         public static void funcNumeros(KeyPressEventArgs v)
         {
             if (Char.IsDigit(v.KeyChar))
