@@ -137,13 +137,13 @@ namespace Capa_Controlador.Controlador_Reclutamiento
 
 
         //Paso de datos para consulta ingresar en la entidad Baja
-        public void funcDespidoEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, string Razones, int EstadoEmp)
+        public void funcDespidoEmp(string IdEmpleado, int TipoBaja, double Prestaciones, string TiempoLabo, string FechaBaja, string Razones, int EstadoEmp)
         {
             sn.funcDespidoEmp(IdEmpleado, TipoBaja, Prestaciones, TiempoLabo, FechaBaja, Razones, EstadoEmp);
         }
 
         //Paso de datos para consulta ingresar en la entidad Baja
-        public void funcRenunciaEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, int EstadoEmp)
+        public void funcRenunciaEmp(string IdEmpleado, int TipoBaja, double Prestaciones, string TiempoLabo, string FechaBaja, int EstadoEmp)
         {
             sn.funcRenunciaEmp(IdEmpleado, TipoBaja, Prestaciones, TiempoLabo, FechaBaja, EstadoEmp);
         }

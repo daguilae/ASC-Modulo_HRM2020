@@ -509,7 +509,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
         //consulta para ingresar datos en la entidad Baja
         //Consulta para despidos
-        public void funcDespidoEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, string Razones, int EstadoEmp)
+        public void funcDespidoEmp(string IdEmpleado, int TipoBaja, double Prestaciones, string TiempoLabo, string FechaBaja, string Razones, int EstadoEmp)
         {
             try
             {
@@ -549,7 +549,7 @@ namespace Capa_Modelo.Modelo_Reclutamiento
 
         //consulta para ingresar datos en la entidad Baja
         //Consulta para renuncias
-        public void funcRenunciaEmp(string IdEmpleado, int TipoBaja, double Prestaciones, int TiempoLabo, string FechaBaja, int EstadoEmp)
+        public void funcRenunciaEmp(string IdEmpleado, int TipoBaja, double Prestaciones, string TiempoLabo, string FechaBaja, int EstadoEmp)
         {
             try
             {

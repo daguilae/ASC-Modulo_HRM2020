@@ -16,14 +16,24 @@ namespace Capa_Vista.Vista_Nomina
     {
         public frmDeducPercep()
         {
+            //Se asigna cantidad de caracteres maximos para textbox y richtextbox.
             InitializeComponent();
+            txtIngresoNomCob.MaxLength = 45;
+            txtIngresoMontoCob.MaxLength = 45;
+            rtxtIngresoDescCob.MaxLength = 150;
+
+            txtModificarNomCob.MaxLength = 45;
+            txtModificarMontoCob.MaxLength = 45;
+            rtxtModificarDescCob.MaxLength = 150;
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();
 
-        string NombreCob, DescCob, NomOriginalCob;
-        double MontoCob;
-        bool Validado;
+        string NombreCob, DescCob, NomOriginalCob; // Varibles que guardan nombre, descripcion y nombre anterior del cobro.
+        double MontoCob; // Variable que guarda el monto del cobro
+        bool Validado; // Variable de validadcion de datos
+
+        //Inserta deduccion o percepcion a la base de datos
         private void btnIngresoDedPer_Click(object sender, EventArgs e)
         {
             if (funcValidarCamposIngreso() == true)
@@ -44,6 +54,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //modifica la deduccion o percepcion ingresada.
         private void btnModificar_Click(object sender, EventArgs e)
         {
             if(funcValidarCamposModificar() == true)
@@ -68,6 +79,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Busca si la modificacion es existente dentro de la pestaña modificar
         private void btnBuscarModificar_Click(object sender, EventArgs e)
         {
             NomOriginalCob = txtModificarNomCob.Text;
@@ -111,6 +123,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Elimina una deduccion o percepcion
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             if (funcValidarCamposEliminar() == true)
@@ -131,6 +144,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Busca la deduccion o percepcion dentro de la pestaña eliminar
         private void btnEliminarBuscar_Click(object sender, EventArgs e)
         {
             if (rbtnEliminarDed.Checked == true)
@@ -173,6 +187,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Valida los campos del ingreso.
         private bool funcValidarCamposIngreso()
         {
             if (rbtnDed.Checked == false && rbtnPer.Checked == false)
@@ -193,6 +208,7 @@ namespace Capa_Vista.Vista_Nomina
             return Validado;
         }
 
+        //Valida los campos de la pestaña modificar
         private bool funcValidarCamposModificar()
         {
             if (rbtnModificarDed.Checked == false && rbtnModificarPer.Checked == false)
@@ -213,6 +229,7 @@ namespace Capa_Vista.Vista_Nomina
             return Validado;
         }
 
+        //Validacion  para ingreso de numeros enteros y decimales unicamente en la pestaña ingreso
         private void txtIngresoMontoCob_TextChanged(object sender, EventArgs e)
         {
             decimal d;
@@ -227,6 +244,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Validacion  para ingreso de numeros enteros y decimales unicamente en la pestaña modificar
         private void txtModificarMontoCob_TextChanged(object sender, EventArgs e)
         {
             decimal d;
@@ -241,6 +259,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Valida los campos de la pestaña eliminar.
         private bool funcValidarCamposEliminar()
         {
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
@@ -261,6 +280,7 @@ namespace Capa_Vista.Vista_Nomina
             return Validado;
         }
 
+        //Limpia todos los campos/objetos del formulario.
         private void funcLimpiarCampos()
         {
             rbtnDed.Checked = false;
