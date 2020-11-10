@@ -434,9 +434,9 @@
             this.txtTiempoLaborado.Location = new System.Drawing.Point(294, 71);
             this.txtTiempoLaborado.Margin = new System.Windows.Forms.Padding(4);
             this.txtTiempoLaborado.Name = "txtTiempoLaborado";
-            this.txtTiempoLaborado.Size = new System.Drawing.Size(200, 27);
+            this.txtTiempoLaborado.Size = new System.Drawing.Size(300, 27);
             this.txtTiempoLaborado.TabIndex = 9;
-            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
+            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtMontoPrestaciones
             // 
@@ -446,7 +446,6 @@
             this.txtMontoPrestaciones.Name = "txtMontoPrestaciones";
             this.txtMontoPrestaciones.Size = new System.Drawing.Size(200, 27);
             this.txtMontoPrestaciones.TabIndex = 7;
-            this.txtMontoPrestaciones.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblPrestaciones
             // 
