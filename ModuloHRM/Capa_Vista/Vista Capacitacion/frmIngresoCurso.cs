@@ -14,22 +14,26 @@ namespace Capa_Vista.Vista_Capacitacion
 {
     public partial class frmIngresoCurso : Form
     {
-        clsControladorCapacitacion con = new clsControladorCapacitacion();
-       
+        //Inicializar controlador
+        clsControladorCapacitacion con = new clsControladorCapacitacion();       
         public frmIngresoCurso()
         {
             InitializeComponent();
         }
-        
+        //Agregar capacitación
         private void btnAgregarCap_Click(object sender, EventArgs e)
         {
+            //Muestra mantenimientos de cursos
             frmCursos emp = new frmCursos();
             emp.ShowDialog();
         }
+        //Actualizar la tabla
         private void funcActualizarTabla()
         {
+            //Llamada a controlador con paso de parámetros
             lsvInfoCap.Items.Clear();
             DataTable dato = con.funcLlenarDGVCurso();
+            //Llenar listView
             foreach (DataRow row in dato.Rows)
             {
                 ListViewItem item = new ListViewItem(row[0].ToString());
@@ -40,23 +44,11 @@ namespace Capa_Vista.Vista_Capacitacion
                 lsvInfoCap.Items.Add(item);
             }
         }
-
+        //Timer para actualizar tabla
         private void timer1_Tick(object sender, EventArgs e)
         {
-            try
-            {
-                funcActualizarTabla();
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al ejecutar SQL: " +
-                    System.Environment.NewLine + System.Environment.NewLine +
-                    ex.GetType().ToString() + System.Environment.NewLine +
-                    ex.Message, "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
+            //Llamada a función
+            funcActualizarTabla();
         }
     }
 }
