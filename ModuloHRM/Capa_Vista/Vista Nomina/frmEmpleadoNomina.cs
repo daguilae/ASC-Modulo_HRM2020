@@ -202,7 +202,11 @@ namespace Capa_Vista.Vista_Nomina
 
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            Periodo = Hoy;
+            if(txtIngresoFechFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            }
 
             if (rbtnIngresoDed.Checked == false && rbtnIngresoPerc.Checked == false)
             {
@@ -242,8 +246,11 @@ namespace Capa_Vista.Vista_Nomina
         {
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtEliminarFechFin.Text);
-
+            Periodo = Hoy;
+            if(txtEliminarFechFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtEliminarFechFin.Text);
+            }
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
