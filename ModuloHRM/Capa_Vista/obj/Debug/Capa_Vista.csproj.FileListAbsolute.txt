@@ -241,11 +241,8 @@ C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControladorSegurida
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloSeguridad.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloReporteador.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControladorReporteador.dll
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaControlador.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModeloNavegador.dll
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
@@ -257,8 +254,6 @@ C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Report
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportSource.dll
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CapaModelo.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\ShockwaveFlashObjects.dll
@@ -303,7 +298,6 @@ C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Cap
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Faltas.frmFaltas.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
-C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Desarrollo.frmEstadísticas.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Faltas.frmFaltas.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Mantenimientos.Tipo_Competencia.frmTipoCompetencia.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Nomina.frmControlHorasDias.resources
@@ -313,3 +307,6 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Report
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCapacitacion.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCompeencias.resources
 C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteEmpleado.resources
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCapacitacion.resources
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteCompeencias.resources
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteEmpleado.resources
