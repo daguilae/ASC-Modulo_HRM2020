@@ -17,15 +17,17 @@ namespace Capa_Vista.Vista_Nomina
         public frmEmpleadoNomina()
         {
             InitializeComponent();
-
+            //Se le asina una cantidad maxima de caracteres a los textbox
             txtIngresoIdEmp.MaxLength = 11;
             txtBuscarIdEmp.MaxLength = 11;
             txtEliminarIdEmp.MaxLength = 11;
 
         }
-
+        //Se llama a la clase controlador
         clsControladorNomina ConsNom = new clsControladorNomina();
-        int Id;
+        int Id; // Variable que guarda el ID del empleado
+
+        //Boton de ingreso de cobro a empleado
         private void btnIngresoEmpleadoDedPer_Click(object sender, EventArgs e)
         {
             if(funcValidarCamposIngreso() == true)
@@ -42,6 +44,7 @@ namespace Capa_Vista.Vista_Nomina
             funcLimpiarIngreso();
         }
 
+        //Busca el nombre y puesto de un empleado en la pestaña eliminar
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (txtEliminarIdEmp.Text == "")
@@ -67,6 +70,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Elimina la deduccion de un empleado.
         private void btnEliminarEmpleadoDedPer_Click(object sender, EventArgs e)
         {
             if (funcValidarCamposEliminar() == true)
@@ -83,6 +87,7 @@ namespace Capa_Vista.Vista_Nomina
             funcLimpiarEliminar();
         }
 
+        //Busca el nombre y puesto de un empleado en la pestaña ingreso.
         private void btnIngresarBuscar_Click(object sender, EventArgs e)
         {
             if(txtIngresoIdEmp.Text == "")
@@ -108,6 +113,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Asigna las deducciones al combobox de percepcion o deduccion
         private void rbtnIngresoDed_CheckedChanged(object sender, EventArgs e)
         {
             DataTable Datos = ConsNom.funcLlenarcmbDeducciones();
@@ -116,6 +122,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoDedPer.ResetText();
         }
 
+        //Carga los periodos de planillas dentro de los combobox correspondientes.
         private void frmEmpleadoNomina_Load(object sender, EventArgs e)
         {
             funcFechaPlanillaIngreso();
@@ -123,6 +130,7 @@ namespace Capa_Vista.Vista_Nomina
             funcFechaPlanillaEliminar();
         }
 
+        //Asigna las persepciones al combobox de percepcion o deduccion
         private void rbtnIngresoPerc_CheckedChanged(object sender, EventArgs e)
         {
             DataTable Datos = ConsNom.funcLlenarcmbPercepciones();
@@ -131,6 +139,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoDedPer.ResetText();
         }
 
+        //Boton usado en la pestaña buscar, buscar los cobros de un empleado
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             if (funcValidarCamposBuscar() == true)
@@ -161,6 +170,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Asigna las deducciones al combobox de percepcion o deduccion
         private void rbtnEliminarDed_CheckedChanged(object sender, EventArgs e)
         {
             DataTable Datos = ConsNom.funcLlenarcmbDeducciones();
@@ -169,6 +179,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbEliminarDedPer.ResetText();
         }
 
+        //Asigna las percepciones al combobox de percepcion o deduccion
         private void rbtnEliminarPer_CheckedChanged(object sender, EventArgs e)
         {
             DataTable Datos = ConsNom.funcLlenarcmbPercepciones();
@@ -177,32 +188,41 @@ namespace Capa_Vista.Vista_Nomina
             cmbEliminarDedPer.ResetText();
         }
 
+        //Limpia pestaña de Buscar.
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             funcLimpiarBuscar();
         }
 
+        //Busca la fecha en que finaliza un periodo en la pestaña ingreso.
         private void cmbIngresoFecPLan_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtIngresoFechFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbIngresoFecPLan.Text);
         }
 
+        //Busca la fecha en que finaliza un periodo en la pestaña buscar.
         private void cmbBuscarPeriodoPlanilla_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtBuscarFechaFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbBuscarPeriodoPlanilla.Text);
         }
 
+        //Busca la fecha en que finaliza un periodo en la pestaña eliminar.
         private void cmbEliminarFechPlan_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtEliminarFechFin.Text = ConsNom.funcObtenerPeriodoFinal(cmbEliminarFechPlan.Text);
         }
 
+        //Validaciones de la pestaña ingreso
         private bool funcValidarCamposIngreso()
         {
 
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            Periodo = Hoy;
+            if(txtIngresoFechFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtIngresoFechFin.Text);
+            }
 
             if (rbtnIngresoDed.Checked == false && rbtnIngresoPerc.Checked == false)
             {
@@ -225,6 +245,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Validaciones de la pestaña buscar
         private bool funcValidarCamposBuscar()
         {
             if (txtBuscarIdEmp.Text == "" || cmbBuscarPeriodoPlanilla.Text == "")
@@ -238,12 +259,16 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Validaciones de la pestaña eliminar
         private bool funcValidarCamposEliminar()
         {
             DateTime Hoy, Periodo;
             Hoy = DateTime.Now;
-            Periodo = Convert.ToDateTime(txtEliminarFechFin.Text);
-
+            Periodo = Hoy;
+            if(txtEliminarFechFin.Text != "")
+            {
+                Periodo = Convert.ToDateTime(txtEliminarFechFin.Text);
+            }
             if (rbtnEliminarDed.Checked == false && rbtnEliminarPer.Checked == false)
             {
                 MessageBox.Show("No se ha seleccionado el tipo de cobro.", "Tipo de Cobro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -265,6 +290,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Carga la fecha de inicio de un periodo dentro del combobox en la pestaña ingresar.
         private void funcFechaPlanillaIngreso()
         {
             DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
@@ -274,6 +300,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbIngresoFecPLan.SelectedIndex = -1;
         }
 
+        //Carga la fecha de inicio de un periodo dentro del combobox en la pestaña buscar.
         private void funcFechaPlanillaBuscar()
         {
             DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
@@ -283,6 +310,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbBuscarPeriodoPlanilla.SelectedIndex = -1;
         }
 
+        //Carga la fecha de inicio de un periodo dentro del combobox en la pestaña eliminar.
         private void funcFechaPlanillaEliminar()
         {
             DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
@@ -292,6 +320,7 @@ namespace Capa_Vista.Vista_Nomina
             cmbEliminarFechPlan.SelectedIndex = -1;
         }
 
+        //Limpia los campos/ objetos de la pestaña ingreso.
         private void funcLimpiarIngreso()
         {
             txtIngresoIdEmp.Text = "";
@@ -307,6 +336,7 @@ namespace Capa_Vista.Vista_Nomina
 
         }
 
+        //Limpia los campos/ objetos de la pestaña buscar.
         private void funcLimpiarBuscar()
         {
             txtBuscarIdEmp.Text = "";
@@ -322,6 +352,8 @@ namespace Capa_Vista.Vista_Nomina
             txtTotalPer.Text = "";
             txtBuscarFechaFin.Text = "";
         }
+
+        //Limpia los campos/ objetos de la pestaña eliminar.
         private void funcLimpiarEliminar()
         {
             txtEliminarIdEmp.Text = "";
