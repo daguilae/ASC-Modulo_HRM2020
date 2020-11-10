@@ -272,7 +272,6 @@ namespace Capa_Vista
                     case "ingCompe":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0016.htm");
                         break;
-                    
                     case "datNomi":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0017.htm");
                         break;
@@ -285,7 +284,6 @@ namespace Capa_Vista
                     case "controlHoras":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0027.htm");
                         break;
-                    
                     case "ingresoRec":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0029.htm");
                         break;
