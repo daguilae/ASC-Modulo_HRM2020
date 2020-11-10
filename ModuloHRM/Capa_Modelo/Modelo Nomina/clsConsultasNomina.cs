@@ -491,7 +491,7 @@ namespace Capa_Modelo.Modelo_Nomina
             try
             {
                 string sentencia = "SELECT p.nombre_puesto FROM empleado AS emp, puesto AS p " +
-                    "WHERE emp.fk_id_contrato_empleado = p.pk_id_puesto AND pk_id_empleado = '" + Id + "'";
+                    "WHERE emp.fk_id_puesto_empleado = p.pk_id_puesto AND pk_id_empleado = '" + Id + "'";
                 OdbcCommand Query_Validacion1 = new OdbcCommand(sentencia, Conexion.funcconexion());
                 puesto = Convert.ToString(Query_Validacion1.ExecuteScalar());
                 return puesto;
