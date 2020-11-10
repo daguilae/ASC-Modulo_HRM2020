@@ -323,3 +323,4 @@ C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Report
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Shared.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\stmar\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteNomina.resources
+C:\Users\TheVolts\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteNomina.resources

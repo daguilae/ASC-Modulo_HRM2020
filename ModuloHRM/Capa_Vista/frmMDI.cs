@@ -272,7 +272,7 @@ namespace Capa_Vista
                     case "ingCompe":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0016.htm");
                         break;
-                    //CARLOS IJUELAVERGA METE TUS AYUDAS AQUI
+                    
                     case "datNomi":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0017.htm");
                         break;
@@ -285,7 +285,7 @@ namespace Capa_Vista
                     case "controlHoras":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0021.htm");
                         break;
-                    //HASTA AQUI
+                    
                     case "ingresoRec":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0029.htm");
                         break;
