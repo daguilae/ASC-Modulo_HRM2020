@@ -16,6 +16,7 @@ namespace Capa_Vista.Vista_Nomina
         public frmNomina()
         {
             InitializeComponent();
+            txtGestPlanNom.MaxLength = 45;
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();
@@ -37,9 +38,11 @@ namespace Capa_Vista.Vista_Nomina
                 funcLimpiarPlanilla();
                 funcDedEmp();
                 funcPerEmp();
-                double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
-                dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
-
+                if (dgvPlanillaDed.Rows.Count > 0 && dgvPlanillaPer.Rows.Count > 0)
+                {
+                    double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
+                    dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
+                }
             }
         }
 
@@ -94,8 +97,14 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaDed.DataSource = Ded;
             dgvPlanillaDed.Refresh();
             var Deduc = Ded.Compute("SUM(Monto)", "");
-            dgvPlanillaTotales.Rows.Add();
-            dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value = Convert.ToString(Deduc);
+            if(dgvPlanillaDed.Rows.Count > 0)
+            {
+                if(dgvPlanillaTotales.Rows.Count < 0)
+                {
+                    dgvPlanillaTotales.Rows.Add();
+                }
+                dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value = Convert.ToString(Deduc);
+            }
         }
 
         private void funcPerEmp()
@@ -104,7 +113,14 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaPer.DataSource = Per;
             dgvPlanillaPer.Refresh();
             var Percep = Per.Compute("SUM(Monto)", "");
-            dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
+            if (dgvPlanillaPer.Rows.Count > 0)
+            {
+                if (dgvPlanillaTotales.Rows.Count < 0)
+                {
+                    dgvPlanillaTotales.Rows.Add();
+                }
+                dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
+            }
         }
 
         private void funcFecha()
