@@ -38,11 +38,12 @@ namespace Capa_Vista.Vista_Nomina
             else
             {
                 funcLimpiarPlanilla();
+                dgvPlanillaTotales.Rows.Add();
                 funcDedEmp();
                 funcPerEmp();
-                if (dgvPlanillaDed.Rows.Count > 0 && dgvPlanillaPer.Rows.Count > 0)
+                if (dgvPlanillaDed.RowCount > -1 && dgvPlanillaPer.RowCount > -1)
                 {
-                    double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
+                    double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value) - Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value);
                     dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
                 }
             }
@@ -102,13 +103,9 @@ namespace Capa_Vista.Vista_Nomina
             DataTable Ded = ConsNom.funcVisDedPlanilla(cmbPeriPlanilla.Text);
             dgvPlanillaDed.DataSource = Ded;
             dgvPlanillaDed.Refresh();
-            var Deduc = Ded.Compute("SUM(Monto)", "");
-            if(dgvPlanillaDed.Rows.Count > 0)
+            if(dgvPlanillaDed.RowCount > -1)
             {
-                if(dgvPlanillaTotales.Rows.Count < 0)
-                {
-                    dgvPlanillaTotales.Rows.Add();
-                }
+                var Deduc = Ded.Compute("SUM(Monto)", "");
                 dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value = Convert.ToString(Deduc);
             }
         }
@@ -119,13 +116,9 @@ namespace Capa_Vista.Vista_Nomina
             DataTable Per = ConsNom.funcVisPerPlanilla(cmbPeriPlanilla.Text);
             dgvPlanillaPer.DataSource = Per;
             dgvPlanillaPer.Refresh();
-            var Percep = Per.Compute("SUM(Monto)", "");
-            if (dgvPlanillaPer.Rows.Count > 0)
+            if (dgvPlanillaPer.RowCount > -1)
             {
-                if (dgvPlanillaTotales.Rows.Count < 0)
-                {
-                    dgvPlanillaTotales.Rows.Add();
-                }
+                var Percep = Per.Compute("SUM(Monto)", "");
                 dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
             }
         }
