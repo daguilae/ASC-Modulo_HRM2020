@@ -126,7 +126,7 @@ namespace Capa_Vista.Vista_Capacitacion
             {
                 string idCapa = txtCodigoCapE.Text;
                 string idEncCapa = txtCodigoEncCapE.Text;
-                con.funcEliminarCurso(idCapa, idEncCapa);
+                con.funcEliminarCapa(idCapa, idEncCapa);
                 txtCodigoCapE.Text = "";
                 txtEmpEC.Text = "";
                 txtNombEmpE.Text = "";
