@@ -1,4 +1,7 @@
-﻿namespace Capa_Vista.Vista_Reportes
+﻿using System;
+using System.IO;
+
+namespace Capa_Vista.Vista_Reportes
 {
     partial class frmReporteCompeencias
     {
@@ -41,8 +44,8 @@
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = "C:\\Users\\TheVolts\\Modulo_HRM\\ModuloHRM\\Capa_Vista\\Vista Reportes\\ReporteCompetenc" +
-    "ias.rpt";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+            string ruta = path + "\\Modulo_HRM\\ModuloHRM\\Capa_Vista\\Vista Reportes\\ReporteCompetencias.rpt";            
             this.crystalReportViewer1.Size = new System.Drawing.Size(1067, 554);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelWidth = 267;
