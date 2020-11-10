@@ -33,6 +33,7 @@ namespace Capa_Vista.Vista_Mantenimientos.Faltas
 
         private void rbtnActivo_CheckedChanged(object sender, EventArgs e)
         {
+            //Asignar estado en TxtEstado segun el Checked
             if (rbtnActivo.Checked == true)
             {
                 txtEstado.Text = "1";
@@ -41,6 +42,7 @@ namespace Capa_Vista.Vista_Mantenimientos.Faltas
 
         private void rbtnInactivo_CheckedChanged(object sender, EventArgs e)
         {
+            //Asignar estado en TxtEstado segun el Checked
             if (rbtnInactivo.Checked == true)
             {
                 txtEstado.Text = "0";
@@ -49,6 +51,7 @@ namespace Capa_Vista.Vista_Mantenimientos.Faltas
 
         private void txtEstado_TextChanged(object sender, EventArgs e)
         {
+            //Asignar estado en TxtEstado segun el Checked
             if (txtEstado.Text == "")
             {
                 rbtnActivo.Checked = false;

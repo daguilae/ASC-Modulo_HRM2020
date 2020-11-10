@@ -1,6 +1,6 @@
 ﻿namespace Capa_Vista.Vista_Reportes
 {
-    partial class frmReporteEmpleado
+    partial class frmReporteNomina
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.ReporteEmpleado1 = new Capa_Vista.Vista_Reportes.ReporteEmpleado();
+            this.ReporteNomina1 = new Capa_Vista.Vista_Reportes.ReporteNomina();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -40,19 +40,18 @@
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.ReporteEmpleado1;
+            this.crystalReportViewer1.ReportSource = this.ReporteNomina1;
             this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
             // 
-            // frmReporteEmpleado
+            // frmReporteNomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Name = "frmReporteEmpleado";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reportes Selección";
+            this.Name = "frmReporteNomina";
+            this.Text = "frmReporteNomina";
             this.ResumeLayout(false);
 
         }
@@ -60,6 +59,6 @@
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private ReporteEmpleado ReporteEmpleado1;
+        private ReporteNomina ReporteNomina1;
     }
 }
