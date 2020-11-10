@@ -55,22 +55,23 @@
             this.dgvMostrarEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvMostrarEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMostrarEmpleados.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 206);
-            this.dgvMostrarEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvMostrarEmpleados.Location = new System.Drawing.Point(0, 167);
+            this.dgvMostrarEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMostrarEmpleados.Name = "dgvMostrarEmpleados";
             this.dgvMostrarEmpleados.RowHeadersVisible = false;
             this.dgvMostrarEmpleados.RowHeadersWidth = 51;
             this.dgvMostrarEmpleados.RowTemplate.Height = 24;
-            this.dgvMostrarEmpleados.Size = new System.Drawing.Size(1067, 354);
+            this.dgvMostrarEmpleados.Size = new System.Drawing.Size(800, 288);
             this.dgvMostrarEmpleados.TabIndex = 0;
             // 
             // lblEmpleados
             // 
             this.lblEmpleados.AutoSize = true;
             this.lblEmpleados.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleados.Location = new System.Drawing.Point(475, 26);
+            this.lblEmpleados.Location = new System.Drawing.Point(356, 21);
+            this.lblEmpleados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmpleados.Name = "lblEmpleados";
-            this.lblEmpleados.Size = new System.Drawing.Size(137, 27);
+            this.lblEmpleados.Size = new System.Drawing.Size(109, 21);
             this.lblEmpleados.TabIndex = 3;
             this.lblEmpleados.Text = "Empleados";
             // 
@@ -78,9 +79,10 @@
             // 
             this.txtPrimerNombre.Enabled = false;
             this.txtPrimerNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerNombre.Location = new System.Drawing.Point(225, 91);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(169, 74);
+            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(127, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(96, 23);
             this.txtPrimerNombre.TabIndex = 5;
             this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             this.txtPrimerNombre.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrimerNombre_KeyUp);
@@ -89,9 +91,10 @@
             // 
             this.txtPrimerApellido.Enabled = false;
             this.txtPrimerApellido.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrimerApellido.Location = new System.Drawing.Point(447, 91);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(335, 74);
+            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(127, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(96, 23);
             this.txtPrimerApellido.TabIndex = 6;
             this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             this.txtPrimerApellido.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPrimerApellido_KeyUp);
@@ -100,9 +103,10 @@
             // 
             this.txtPuesto.Enabled = false;
             this.txtPuesto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPuesto.Location = new System.Drawing.Point(657, 91);
+            this.txtPuesto.Location = new System.Drawing.Point(493, 74);
+            this.txtPuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPuesto.Name = "txtPuesto";
-            this.txtPuesto.Size = new System.Drawing.Size(127, 27);
+            this.txtPuesto.Size = new System.Drawing.Size(96, 23);
             this.txtPuesto.TabIndex = 7;
             this.txtPuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             this.txtPuesto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPuesto_KeyUp);
@@ -111,9 +115,10 @@
             // 
             this.txtDepartamento.Enabled = false;
             this.txtDepartamento.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDepartamento.Location = new System.Drawing.Point(875, 91);
+            this.txtDepartamento.Location = new System.Drawing.Point(656, 74);
+            this.txtDepartamento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(127, 27);
+            this.txtDepartamento.Size = new System.Drawing.Size(96, 23);
             this.txtDepartamento.TabIndex = 8;
             this.txtDepartamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             this.txtDepartamento.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDepartamento_KeyUp);
@@ -122,9 +127,10 @@
             // 
             this.txtIdEmpleado.Enabled = false;
             this.txtIdEmpleado.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdEmpleado.Location = new System.Drawing.Point(26, 91);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(20, 74);
+            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(127, 27);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(96, 23);
             this.txtIdEmpleado.TabIndex = 9;
             this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             this.txtIdEmpleado.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIdEmpleado_KeyUp);
@@ -136,17 +142,17 @@
             this.pnlDatosFiltro.Controls.Add(this.lblEmpleados);
             this.pnlDatosFiltro.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDatosFiltro.Location = new System.Drawing.Point(0, 0);
+            this.pnlDatosFiltro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDatosFiltro.Name = "pnlDatosFiltro";
-            this.pnlDatosFiltro.Size = new System.Drawing.Size(1067, 206);
+            this.pnlDatosFiltro.Size = new System.Drawing.Size(800, 167);
             this.pnlDatosFiltro.TabIndex = 10;
             // 
             // btnMostrarTodo
             // 
             this.btnMostrarTodo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarTodo.Location = new System.Drawing.Point(876, 11);
-            this.btnMostrarTodo.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMostrarTodo.Location = new System.Drawing.Point(657, 9);
             this.btnMostrarTodo.Name = "btnMostrarTodo";
-            this.btnMostrarTodo.Size = new System.Drawing.Size(184, 61);
+            this.btnMostrarTodo.Size = new System.Drawing.Size(138, 50);
             this.btnMostrarTodo.TabIndex = 11;
             this.btnMostrarTodo.Text = "Mostrar Todos los Datos";
             this.btnMostrarTodo.UseVisualStyleBackColor = true;
@@ -166,9 +172,11 @@
             this.gbxFiltrado.Controls.Add(this.txtPuesto);
             this.gbxFiltrado.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.gbxFiltrado.Font = new System.Drawing.Font("Rockwell", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxFiltrado.Location = new System.Drawing.Point(0, 69);
+            this.gbxFiltrado.Location = new System.Drawing.Point(0, 56);
+            this.gbxFiltrado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbxFiltrado.Name = "gbxFiltrado";
-            this.gbxFiltrado.Size = new System.Drawing.Size(1067, 137);
+            this.gbxFiltrado.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxFiltrado.Size = new System.Drawing.Size(800, 111);
             this.gbxFiltrado.TabIndex = 10;
             this.gbxFiltrado.TabStop = false;
             this.gbxFiltrado.Text = "Filtrado De Datos";
@@ -177,10 +185,9 @@
             // 
             this.rbtnFiltradoDepto.AutoSize = true;
             this.rbtnFiltradoDepto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiltradoDepto.Location = new System.Drawing.Point(849, 51);
-            this.rbtnFiltradoDepto.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFiltradoDepto.Location = new System.Drawing.Point(637, 41);
             this.rbtnFiltradoDepto.Name = "rbtnFiltradoDepto";
-            this.rbtnFiltradoDepto.Size = new System.Drawing.Size(173, 24);
+            this.rbtnFiltradoDepto.Size = new System.Drawing.Size(143, 21);
             this.rbtnFiltradoDepto.TabIndex = 14;
             this.rbtnFiltradoDepto.TabStop = true;
             this.rbtnFiltradoDepto.Text = "Por Departamento";
@@ -191,10 +198,9 @@
             // 
             this.rbtnFiltradoPuesto.AutoSize = true;
             this.rbtnFiltradoPuesto.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiltradoPuesto.Location = new System.Drawing.Point(657, 51);
-            this.rbtnFiltradoPuesto.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFiltradoPuesto.Location = new System.Drawing.Point(493, 41);
             this.rbtnFiltradoPuesto.Name = "rbtnFiltradoPuesto";
-            this.rbtnFiltradoPuesto.Size = new System.Drawing.Size(114, 24);
+            this.rbtnFiltradoPuesto.Size = new System.Drawing.Size(94, 21);
             this.rbtnFiltradoPuesto.TabIndex = 13;
             this.rbtnFiltradoPuesto.TabStop = true;
             this.rbtnFiltradoPuesto.Text = "Por Puesto";
@@ -205,10 +211,9 @@
             // 
             this.rbtnFiltradoApellido1.AutoSize = true;
             this.rbtnFiltradoApellido1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiltradoApellido1.Location = new System.Drawing.Point(414, 51);
-            this.rbtnFiltradoApellido1.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFiltradoApellido1.Location = new System.Drawing.Point(310, 41);
             this.rbtnFiltradoApellido1.Name = "rbtnFiltradoApellido1";
-            this.rbtnFiltradoApellido1.Size = new System.Drawing.Size(186, 24);
+            this.rbtnFiltradoApellido1.Size = new System.Drawing.Size(156, 21);
             this.rbtnFiltradoApellido1.TabIndex = 12;
             this.rbtnFiltradoApellido1.TabStop = true;
             this.rbtnFiltradoApellido1.Text = "Por Primer Apellido";
@@ -219,10 +224,9 @@
             // 
             this.rbtnFiltradoNombre1.AutoSize = true;
             this.rbtnFiltradoNombre1.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiltradoNombre1.Location = new System.Drawing.Point(196, 51);
-            this.rbtnFiltradoNombre1.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFiltradoNombre1.Location = new System.Drawing.Point(147, 41);
             this.rbtnFiltradoNombre1.Name = "rbtnFiltradoNombre1";
-            this.rbtnFiltradoNombre1.Size = new System.Drawing.Size(183, 24);
+            this.rbtnFiltradoNombre1.Size = new System.Drawing.Size(153, 21);
             this.rbtnFiltradoNombre1.TabIndex = 11;
             this.rbtnFiltradoNombre1.TabStop = true;
             this.rbtnFiltradoNombre1.Text = "Por Primer Nombre";
@@ -233,10 +237,9 @@
             // 
             this.rbtnFiltradoId.AutoSize = true;
             this.rbtnFiltradoId.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFiltradoId.Location = new System.Drawing.Point(50, 51);
-            this.rbtnFiltradoId.Margin = new System.Windows.Forms.Padding(4);
+            this.rbtnFiltradoId.Location = new System.Drawing.Point(38, 41);
             this.rbtnFiltradoId.Name = "rbtnFiltradoId";
-            this.rbtnFiltradoId.Size = new System.Drawing.Size(76, 24);
+            this.rbtnFiltradoId.Size = new System.Drawing.Size(65, 21);
             this.rbtnFiltradoId.TabIndex = 10;
             this.rbtnFiltradoId.TabStop = true;
             this.rbtnFiltradoId.Text = "Por Id";
@@ -245,18 +248,18 @@
             // 
             // frmMostrarEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(1067, 560);
+            this.ClientSize = new System.Drawing.Size(800, 455);
             this.Controls.Add(this.pnlDatosFiltro);
             this.Controls.Add(this.dgvMostrarEmpleados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMostrarEmpleado";
-            this.Text = "Empleados";
+            this.Text = "322 - Empleados";
             this.Load += new System.EventHandler(this.frmMostrarEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMostrarEmpleados)).EndInit();
             this.pnlDatosFiltro.ResumeLayout(false);

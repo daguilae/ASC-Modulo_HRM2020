@@ -92,10 +92,10 @@
             this.tbpDatosRecluta.Controls.Add(this.btnBuscar);
             this.tbpDatosRecluta.Controls.Add(this.pnlPuesto);
             this.tbpDatosRecluta.Controls.Add(this.pnlDatosGenerales);
-            this.tbpDatosRecluta.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosRecluta.Location = new System.Drawing.Point(4, 26);
             this.tbpDatosRecluta.Name = "tbpDatosRecluta";
             this.tbpDatosRecluta.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDatosRecluta.Size = new System.Drawing.Size(1010, 403);
+            this.tbpDatosRecluta.Size = new System.Drawing.Size(1010, 406);
             this.tbpDatosRecluta.TabIndex = 0;
             this.tbpDatosRecluta.Text = "Datos Recluta";
             // 
@@ -117,7 +117,7 @@
             this.lblIngreseIdRecluta.Location = new System.Drawing.Point(223, 38);
             this.lblIngreseIdRecluta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngreseIdRecluta.Name = "lblIngreseIdRecluta";
-            this.lblIngreseIdRecluta.Size = new System.Drawing.Size(200, 20);
+            this.lblIngreseIdRecluta.Size = new System.Drawing.Size(166, 17);
             this.lblIngreseIdRecluta.TabIndex = 34;
             this.lblIngreseIdRecluta.Text = "Ingrese el ID del Recluta";
             // 
@@ -127,7 +127,7 @@
             this.txtIdBancoTalento.Location = new System.Drawing.Point(467, 35);
             this.txtIdBancoTalento.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdBancoTalento.Name = "txtIdBancoTalento";
-            this.txtIdBancoTalento.Size = new System.Drawing.Size(184, 27);
+            this.txtIdBancoTalento.Size = new System.Drawing.Size(184, 23);
             this.txtIdBancoTalento.TabIndex = 33;
             this.txtIdBancoTalento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -164,7 +164,7 @@
             this.cmbDepartamentoTrabajo.Location = new System.Drawing.Point(8, 136);
             this.cmbDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartamentoTrabajo.Name = "cmbDepartamentoTrabajo";
-            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(218, 28);
+            this.cmbDepartamentoTrabajo.Size = new System.Drawing.Size(218, 25);
             this.cmbDepartamentoTrabajo.TabIndex = 35;
             // 
             // lblPuesto
@@ -174,7 +174,7 @@
             this.lblPuesto.Location = new System.Drawing.Point(4, 15);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(62, 20);
+            this.lblPuesto.Size = new System.Drawing.Size(50, 17);
             this.lblPuesto.TabIndex = 19;
             this.lblPuesto.Text = "Puesto";
             // 
@@ -186,7 +186,7 @@
             this.cmbPuestoTrabajo.Location = new System.Drawing.Point(9, 58);
             this.cmbPuestoTrabajo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPuestoTrabajo.Name = "cmbPuestoTrabajo";
-            this.cmbPuestoTrabajo.Size = new System.Drawing.Size(218, 28);
+            this.cmbPuestoTrabajo.Size = new System.Drawing.Size(218, 25);
             this.cmbPuestoTrabajo.TabIndex = 29;
             // 
             // lblDepartamentoTrabajo
@@ -196,7 +196,7 @@
             this.lblDepartamentoTrabajo.Location = new System.Drawing.Point(4, 96);
             this.lblDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartamentoTrabajo.Name = "lblDepartamentoTrabajo";
-            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(121, 20);
+            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(99, 17);
             this.lblDepartamentoTrabajo.TabIndex = 18;
             this.lblDepartamentoTrabajo.Text = "Departamento";
             // 
@@ -224,7 +224,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(197, 118);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(229, 23);
             this.txtPrimerApellido.TabIndex = 7;
             // 
             // lblSegundoApellido
@@ -234,7 +234,7 @@
             this.lblSegundoApellido.Location = new System.Drawing.Point(16, 167);
             this.lblSegundoApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(149, 20);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(125, 17);
             this.lblSegundoApellido.TabIndex = 4;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
@@ -245,7 +245,7 @@
             this.txtSegundoApellido.Location = new System.Drawing.Point(197, 164);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(229, 27);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(229, 23);
             this.txtSegundoApellido.TabIndex = 8;
             // 
             // txtPrimerNombre
@@ -255,7 +255,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(197, 22);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(229, 23);
             this.txtPrimerNombre.TabIndex = 5;
             // 
             // txtSegundoNombre
@@ -265,7 +265,7 @@
             this.txtSegundoNombre.Location = new System.Drawing.Point(197, 69);
             this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(229, 27);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(229, 23);
             this.txtSegundoNombre.TabIndex = 6;
             // 
             // lblSegundoNombre
@@ -275,7 +275,7 @@
             this.lblSegundoNombre.Location = new System.Drawing.Point(16, 71);
             this.lblSegundoNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(146, 20);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(122, 17);
             this.lblSegundoNombre.TabIndex = 2;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -286,7 +286,7 @@
             this.lblPrimerNombre.Location = new System.Drawing.Point(16, 22);
             this.lblPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(131, 20);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(109, 17);
             this.lblPrimerNombre.TabIndex = 1;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -297,7 +297,7 @@
             this.lblPrimerApellido.Location = new System.Drawing.Point(16, 119);
             this.lblPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(138, 20);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(116, 17);
             this.lblPrimerApellido.TabIndex = 3;
             this.lblPrimerApellido.Text = "Primer Apellido ";
             // 
@@ -305,10 +305,10 @@
             // 
             this.tbpDatosEntrevista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.tbpDatosEntrevista.Controls.Add(this.gbxDatosEntrevista);
-            this.tbpDatosEntrevista.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosEntrevista.Location = new System.Drawing.Point(4, 26);
             this.tbpDatosEntrevista.Name = "tbpDatosEntrevista";
             this.tbpDatosEntrevista.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpDatosEntrevista.Size = new System.Drawing.Size(1010, 403);
+            this.tbpDatosEntrevista.Size = new System.Drawing.Size(1010, 406);
             this.tbpDatosEntrevista.TabIndex = 1;
             this.tbpDatosEntrevista.Text = "Datos Entrevista";
             // 
@@ -348,7 +348,7 @@
             this.rbtnSegOpcion.AutoSize = true;
             this.rbtnSegOpcion.Location = new System.Drawing.Point(3, 47);
             this.rbtnSegOpcion.Name = "rbtnSegOpcion";
-            this.rbtnSegOpcion.Size = new System.Drawing.Size(252, 24);
+            this.rbtnSegOpcion.Size = new System.Drawing.Size(209, 21);
             this.rbtnSegOpcion.TabIndex = 1;
             this.rbtnSegOpcion.TabStop = true;
             this.rbtnSegOpcion.Text = "Segunda Opción a Contratar";
@@ -360,7 +360,7 @@
             this.rbtnPrimeraOp.AutoSize = true;
             this.rbtnPrimeraOp.Location = new System.Drawing.Point(4, 12);
             this.rbtnPrimeraOp.Name = "rbtnPrimeraOp";
-            this.rbtnPrimeraOp.Size = new System.Drawing.Size(247, 24);
+            this.rbtnPrimeraOp.Size = new System.Drawing.Size(204, 21);
             this.rbtnPrimeraOp.TabIndex = 0;
             this.rbtnPrimeraOp.TabStop = true;
             this.rbtnPrimeraOp.Text = "Primera Opción a Contratar";
@@ -372,7 +372,7 @@
             this.txtIdEmpleado.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIdEmpleado.Location = new System.Drawing.Point(544, 24);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(125, 27);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(125, 23);
             this.txtIdEmpleado.TabIndex = 12;
             this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -381,7 +381,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(407, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(92, 17);
             this.label1.TabIndex = 11;
             this.label1.Text = "Ingrese su Id";
             // 
@@ -390,7 +390,7 @@
             this.rbtnReprobado.AutoSize = true;
             this.rbtnReprobado.Location = new System.Drawing.Point(391, 88);
             this.rbtnReprobado.Name = "rbtnReprobado";
-            this.rbtnReprobado.Size = new System.Drawing.Size(116, 24);
+            this.rbtnReprobado.Size = new System.Drawing.Size(98, 21);
             this.rbtnReprobado.TabIndex = 10;
             this.rbtnReprobado.TabStop = true;
             this.rbtnReprobado.Text = "Reprobado";
@@ -402,7 +402,7 @@
             this.rbtnAprobado.AutoSize = true;
             this.rbtnAprobado.Location = new System.Drawing.Point(248, 88);
             this.rbtnAprobado.Name = "rbtnAprobado";
-            this.rbtnAprobado.Size = new System.Drawing.Size(108, 24);
+            this.rbtnAprobado.Size = new System.Drawing.Size(92, 21);
             this.rbtnAprobado.TabIndex = 9;
             this.rbtnAprobado.TabStop = true;
             this.rbtnAprobado.Text = "Aprobado";
@@ -433,7 +433,7 @@
             this.lblComentarios.AutoSize = true;
             this.lblComentarios.Location = new System.Drawing.Point(6, 139);
             this.lblComentarios.Name = "lblComentarios";
-            this.lblComentarios.Size = new System.Drawing.Size(250, 20);
+            this.lblComentarios.Size = new System.Drawing.Size(206, 17);
             this.lblComentarios.TabIndex = 3;
             this.lblComentarios.Text = "Comentarios del Entrevistador";
             // 
@@ -443,7 +443,7 @@
             this.cmbTipoEntrevista.FormattingEnabled = true;
             this.cmbTipoEntrevista.Location = new System.Drawing.Point(248, 21);
             this.cmbTipoEntrevista.Name = "cmbTipoEntrevista";
-            this.cmbTipoEntrevista.Size = new System.Drawing.Size(121, 28);
+            this.cmbTipoEntrevista.Size = new System.Drawing.Size(121, 25);
             this.cmbTipoEntrevista.TabIndex = 7;
             // 
             // lblResultadoEntrevista
@@ -451,7 +451,7 @@
             this.lblResultadoEntrevista.AutoSize = true;
             this.lblResultadoEntrevista.Location = new System.Drawing.Point(6, 86);
             this.lblResultadoEntrevista.Name = "lblResultadoEntrevista";
-            this.lblResultadoEntrevista.Size = new System.Drawing.Size(211, 20);
+            this.lblResultadoEntrevista.Size = new System.Drawing.Size(174, 17);
             this.lblResultadoEntrevista.TabIndex = 4;
             this.lblResultadoEntrevista.Text = "Resultado de la Entrevista";
             // 
@@ -460,13 +460,13 @@
             this.lblTipoEntrevista.AutoSize = true;
             this.lblTipoEntrevista.Location = new System.Drawing.Point(6, 34);
             this.lblTipoEntrevista.Name = "lblTipoEntrevista";
-            this.lblTipoEntrevista.Size = new System.Drawing.Size(127, 20);
+            this.lblTipoEntrevista.Size = new System.Drawing.Size(105, 17);
             this.lblTipoEntrevista.TabIndex = 6;
             this.lblTipoEntrevista.Text = "Tipo Entrevista";
             // 
             // frmEntrevista
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1018, 436);
@@ -477,7 +477,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEntrevista";
-            this.Text = "Entrevista";
+            this.Text = "320 - Entrevista";
             this.Load += new System.EventHandler(this.frmEntrevista_Load);
             this.tbcEntrevista.ResumeLayout(false);
             this.tbpDatosRecluta.ResumeLayout(false);
