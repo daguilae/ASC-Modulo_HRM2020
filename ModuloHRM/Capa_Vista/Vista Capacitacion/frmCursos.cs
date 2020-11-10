@@ -26,7 +26,6 @@ namespace Capa_Vista.Vista_Capacitacion
             this.KeyDown += new KeyEventHandler(frmCursos_KeyDown);
             funcAMLP();
         }
-
         //Funcion para llenar daots del combobox
         public void funcAMLP()
         {
@@ -39,7 +38,6 @@ namespace Capa_Vista.Vista_Capacitacion
             }
 
         }
-
         //Acá inician los eventos de validación de teclas
         public void letra(object sender, KeyPressEventArgs e)
         {
@@ -50,7 +48,6 @@ namespace Capa_Vista.Vista_Capacitacion
             clsValidacion.funcNumeros(e);
         }
         //Finaliza eventos de validación de teclas
-
         //Insertar Curso
         private void btnIngresarC_Click(object sender, EventArgs e)
         {
@@ -224,13 +221,15 @@ namespace Capa_Vista.Vista_Capacitacion
         //Timer Para actualizar Tablas
         private void tmrDGVCurso_Tick(object sender, EventArgs e)
         {            
+            //Llamada de actualizacón de tabla
             funcActualizarTabla();           
         }
-
+        //Evento keyDown Para ayudas
         private void frmCursos_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F1)
             {
+                //Llamada de ayudas
                 Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0004.htm");
             }
         }
