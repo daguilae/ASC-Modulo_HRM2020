@@ -16,15 +16,18 @@ namespace Capa_Vista.Vista_Nomina
         public frmNomina()
         {
             InitializeComponent();
+            txtGestPlanNom.MaxLength = 45; //Se asigna la cantidad maxima de caracter permitidos dentro del textbox.
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();
+        //se cargan los datos a los combobox de las pestañas.
         private void frmNomina_Load(object sender, EventArgs e)
         {
             funcDedPer();
             funcFecha();
         }
 
+        //Actualiza los datagridview de la pestaña deducciones y percepciones
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             if(cmbPeriPlanilla.Text == "")
@@ -37,12 +40,15 @@ namespace Capa_Vista.Vista_Nomina
                 funcLimpiarPlanilla();
                 funcDedEmp();
                 funcPerEmp();
-                double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
-                dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
-
+                if (dgvPlanillaDed.Rows.Count > 0 && dgvPlanillaPer.Rows.Count > 0)
+                {
+                    double total = Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value) + Convert.ToDouble(dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value);
+                    dgvPlanillaTotales.Rows[0].Cells["clmTotal"].Value = total.ToString();
+                }
             }
         }
 
+        //Actualiza los datagridview de la pestaña horas/Dias
         private void btnHorasDiasActualizar_Click(object sender, EventArgs e)
         {
             if (cmbHorasDias.Text == "")
@@ -58,6 +64,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Crea un nuevo periodo de planilla.
         private void btnGestPlanCrear_Click(object sender, EventArgs e)
         {
             if(txtGestPlanNom.Text == "")
@@ -80,6 +87,7 @@ namespace Capa_Vista.Vista_Nomina
             }
         }
 
+        //Obtine todas las deducciones y percepciones
         private void funcDedPer()
         {
             DataTable Ded = ConsNom.funcVisDeducciones();
@@ -88,25 +96,41 @@ namespace Capa_Vista.Vista_Nomina
             dgvDeduc.DataSource = Ded;
         }
 
+        //Obtine todas las deducciones del periodo seleccionado
         private void funcDedEmp()
         {
             DataTable Ded = ConsNom.funcVisDedPlanilla(cmbPeriPlanilla.Text);
             dgvPlanillaDed.DataSource = Ded;
             dgvPlanillaDed.Refresh();
             var Deduc = Ded.Compute("SUM(Monto)", "");
-            dgvPlanillaTotales.Rows.Add();
-            dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value = Convert.ToString(Deduc);
+            if(dgvPlanillaDed.Rows.Count > 0)
+            {
+                if(dgvPlanillaTotales.Rows.Count < 0)
+                {
+                    dgvPlanillaTotales.Rows.Add();
+                }
+                dgvPlanillaTotales.Rows[0].Cells["clmTotalDed"].Value = Convert.ToString(Deduc);
+            }
         }
 
+        //Obtine todas las percepciones del periodo seleccionado
         private void funcPerEmp()
         {
             DataTable Per = ConsNom.funcVisPerPlanilla(cmbPeriPlanilla.Text);
             dgvPlanillaPer.DataSource = Per;
             dgvPlanillaPer.Refresh();
             var Percep = Per.Compute("SUM(Monto)", "");
-            dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
+            if (dgvPlanillaPer.Rows.Count > 0)
+            {
+                if (dgvPlanillaTotales.Rows.Count < 0)
+                {
+                    dgvPlanillaTotales.Rows.Add();
+                }
+                dgvPlanillaTotales.Rows[0].Cells["clmTotalPer"].Value = Convert.ToString(Percep);
+            }
         }
 
+        //Obtiene las fechas de los periodos existentes
         private void funcFecha()
         {
             DataTable Datos = ConsNom.funcLLenarcmbFechaPanitlla();
@@ -122,6 +146,7 @@ namespace Capa_Vista.Vista_Nomina
 
         }
 
+        //funcion para limpiar pantalla de deducciones y percepciones de los empleados
         private void funcLimpiarPlanilla()
         {
             dgvPlanillaDed.DataSource = null;
@@ -132,6 +157,7 @@ namespace Capa_Vista.Vista_Nomina
             dgvPlanillaTotales.Refresh();
         }
 
+        //funcion para limpiar pantalla de horas y dias de los empleados
         private void funcLimpiarHorasDias()
         {
             dgvHoras.DataSource = null;
@@ -140,6 +166,7 @@ namespace Capa_Vista.Vista_Nomina
             dgvDias.Refresh();
         }
 
+        //Obtiene las horas laboras durante el periodo seleccionado
         private void funcHoras()
         {
             DataTable Horas = ConsNom.funcVisHoras(cmbHorasDias.Text);
@@ -147,6 +174,7 @@ namespace Capa_Vista.Vista_Nomina
             dgvHoras.Refresh();
         }
 
+        //Obtiene los dias laboras durante el periodo seleccionado
         private void funcDias()
         {
             DataTable Dias = ConsNom.funcVisDias(cmbHorasDias.Text);
@@ -154,6 +182,7 @@ namespace Capa_Vista.Vista_Nomina
             dgvDias.Refresh();
         }
 
+        //funcion que valida la creacion de nuevos periodos de planilla.
         private bool funcValidarFechas(string FI, string FF)
         {
             if (FI == FF)
@@ -173,6 +202,7 @@ namespace Capa_Vista.Vista_Nomina
 
         }
 
+        //Agrega 1 mes de diferencia de la fecha seleccionada de inicio de periodo de planilla.
         private void dtpGestPlanIni_ValueChanged(object sender, EventArgs e)
         {
             dtpGestPlanFin.Value = dtpGestPlanIni.Value.Date.AddMonths(1);
