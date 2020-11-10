@@ -23,8 +23,8 @@ namespace Capa_Vista.Vista_Reclutamiento
         clsControladorReclutamiento Cont_R = new clsControladorReclutamiento();
         int Estado = 1;
         //declaración de variables
-        string IdEmpleado,  FechaBaja, Razones;
-        int TipoBaja, EstadoEmp, TiempoLabo;
+        string IdEmpleado,  FechaBaja, Razones, TiempoLabo;
+        int TipoBaja, EstadoEmp;
         double Prestaciones;
 
 
@@ -142,7 +142,7 @@ namespace Capa_Vista.Vista_Reclutamiento
 
                             //Se da a las variables los valores correspondientes para enviarse a la capa Controlador
                             Prestaciones = Convert.ToDouble(txtMontoPrestaciones.Text);
-                            TiempoLabo = Convert.ToInt32(txtTiempoLaborado.Text);
+                            TiempoLabo = txtTiempoLaborado.Text;
                             FechaBaja = dtpFecha.Value.Date.ToShortDateString();
                             Razones = rtxtCausaDespido.Text;
                             //Se envía el estado correspondiente del despido
@@ -167,7 +167,7 @@ namespace Capa_Vista.Vista_Reclutamiento
                         {
                             //Se da a las variables los valores correspondientes para enviarse a la capa Controlador
                             Prestaciones = Convert.ToDouble(txtMontoPrestaciones.Text);
-                            TiempoLabo = Convert.ToInt32(txtTiempoLaborado.Text);
+                            TiempoLabo = txtTiempoLaborado.Text;
                             FechaBaja = dtpFecha.Value.Date.ToShortDateString();
                             //Se envía el estado correspondiente de la renuncia
                             EstadoEmp = 4;
