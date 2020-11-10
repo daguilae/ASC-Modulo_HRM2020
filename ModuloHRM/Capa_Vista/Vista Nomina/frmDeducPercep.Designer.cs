@@ -101,11 +101,11 @@
             this.tbpIngresoDedPer.Controls.Add(this.lblIngresoNomCobro);
             this.tbpIngresoDedPer.Controls.Add(this.lblIngresoTipoCob);
             this.tbpIngresoDedPer.Controls.Add(this.gbxIngresoTipoCob);
-            this.tbpIngresoDedPer.Location = new System.Drawing.Point(4, 29);
+            this.tbpIngresoDedPer.Location = new System.Drawing.Point(4, 26);
             this.tbpIngresoDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpIngresoDedPer.Name = "tbpIngresoDedPer";
             this.tbpIngresoDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpIngresoDedPer.Size = new System.Drawing.Size(824, 499);
+            this.tbpIngresoDedPer.Size = new System.Drawing.Size(824, 502);
             this.tbpIngresoDedPer.TabIndex = 1;
             this.tbpIngresoDedPer.Text = "Ingreso";
             // 
@@ -124,7 +124,7 @@
             this.txtIngresoMontoCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtIngresoMontoCob.Name = "txtIngresoMontoCob";
-            this.txtIngresoMontoCob.Size = new System.Drawing.Size(279, 27);
+            this.txtIngresoMontoCob.Size = new System.Drawing.Size(279, 23);
             this.txtIngresoMontoCob.TabIndex = 15;
             this.txtIngresoMontoCob.TextChanged += new System.EventHandler(this.txtIngresoMontoCob_TextChanged);
             // 
@@ -142,7 +142,7 @@
             this.lblIngresoDescCob.AutoSize = true;
             this.lblIngresoDescCob.Location = new System.Drawing.Point(8, 153);
             this.lblIngresoDescCob.Name = "lblIngresoDescCob";
-            this.lblIngresoDescCob.Size = new System.Drawing.Size(188, 20);
+            this.lblIngresoDescCob.Size = new System.Drawing.Size(156, 17);
             this.lblIngresoDescCob.TabIndex = 13;
             this.lblIngresoDescCob.Text = "Descripción del cobro:";
             // 
@@ -151,7 +151,7 @@
             this.lblIngresoMontoCob.AutoSize = true;
             this.lblIngresoMontoCob.Location = new System.Drawing.Point(8, 111);
             this.lblIngresoMontoCob.Name = "lblIngresoMontoCob";
-            this.lblIngresoMontoCob.Size = new System.Drawing.Size(143, 20);
+            this.lblIngresoMontoCob.Size = new System.Drawing.Size(119, 17);
             this.lblIngresoMontoCob.TabIndex = 12;
             this.lblIngresoMontoCob.Text = "Monto del cobro:";
             // 
@@ -160,7 +160,7 @@
             this.txtIngresoNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIngresoNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtIngresoNomCob.Name = "txtIngresoNomCob";
-            this.txtIngresoNomCob.Size = new System.Drawing.Size(279, 27);
+            this.txtIngresoNomCob.Size = new System.Drawing.Size(279, 23);
             this.txtIngresoNomCob.TabIndex = 11;
             // 
             // lblIngresoNomCobro
@@ -168,7 +168,7 @@
             this.lblIngresoNomCobro.AutoSize = true;
             this.lblIngresoNomCobro.Location = new System.Drawing.Point(8, 66);
             this.lblIngresoNomCobro.Name = "lblIngresoNomCobro";
-            this.lblIngresoNomCobro.Size = new System.Drawing.Size(157, 20);
+            this.lblIngresoNomCobro.Size = new System.Drawing.Size(132, 17);
             this.lblIngresoNomCobro.TabIndex = 10;
             this.lblIngresoNomCobro.Text = "Nombre del cobro:";
             // 
@@ -177,7 +177,7 @@
             this.lblIngresoTipoCob.AutoSize = true;
             this.lblIngresoTipoCob.Location = new System.Drawing.Point(7, 25);
             this.lblIngresoTipoCob.Name = "lblIngresoTipoCob";
-            this.lblIngresoTipoCob.Size = new System.Drawing.Size(123, 20);
+            this.lblIngresoTipoCob.Size = new System.Drawing.Size(104, 17);
             this.lblIngresoTipoCob.TabIndex = 5;
             this.lblIngresoTipoCob.Text = "Tipo de cobro:";
             // 
@@ -196,7 +196,7 @@
             this.rbtnDed.AutoSize = true;
             this.rbtnDed.Location = new System.Drawing.Point(6, 15);
             this.rbtnDed.Name = "rbtnDed";
-            this.rbtnDed.Size = new System.Drawing.Size(115, 24);
+            this.rbtnDed.Size = new System.Drawing.Size(95, 21);
             this.rbtnDed.TabIndex = 0;
             this.rbtnDed.TabStop = true;
             this.rbtnDed.Text = "Deducción";
@@ -207,7 +207,7 @@
             this.rbtnPer.AutoSize = true;
             this.rbtnPer.Location = new System.Drawing.Point(153, 15);
             this.rbtnPer.Name = "rbtnPer";
-            this.rbtnPer.Size = new System.Drawing.Size(120, 24);
+            this.rbtnPer.Size = new System.Drawing.Size(99, 21);
             this.rbtnPer.TabIndex = 1;
             this.rbtnPer.TabStop = true;
             this.rbtnPer.Text = "Percepción";
@@ -226,11 +226,11 @@
             this.tbpModicarDedPer.Controls.Add(this.lblModificarNomCob);
             this.tbpModicarDedPer.Controls.Add(this.lblModificarTipoCob);
             this.tbpModicarDedPer.Controls.Add(this.gbxModificarTipoCob);
-            this.tbpModicarDedPer.Location = new System.Drawing.Point(4, 29);
+            this.tbpModicarDedPer.Location = new System.Drawing.Point(4, 26);
             this.tbpModicarDedPer.Margin = new System.Windows.Forms.Padding(4);
             this.tbpModicarDedPer.Name = "tbpModicarDedPer";
             this.tbpModicarDedPer.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpModicarDedPer.Size = new System.Drawing.Size(824, 499);
+            this.tbpModicarDedPer.Size = new System.Drawing.Size(824, 502);
             this.tbpModicarDedPer.TabIndex = 2;
             this.tbpModicarDedPer.Text = "Modificar";
             // 
@@ -259,7 +259,7 @@
             this.txtModificarMontoCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtModificarMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtModificarMontoCob.Name = "txtModificarMontoCob";
-            this.txtModificarMontoCob.Size = new System.Drawing.Size(279, 27);
+            this.txtModificarMontoCob.Size = new System.Drawing.Size(279, 23);
             this.txtModificarMontoCob.TabIndex = 15;
             this.txtModificarMontoCob.TextChanged += new System.EventHandler(this.txtModificarMontoCob_TextChanged);
             // 
@@ -277,7 +277,7 @@
             this.lblModificarDescCob.AutoSize = true;
             this.lblModificarDescCob.Location = new System.Drawing.Point(8, 153);
             this.lblModificarDescCob.Name = "lblModificarDescCob";
-            this.lblModificarDescCob.Size = new System.Drawing.Size(188, 20);
+            this.lblModificarDescCob.Size = new System.Drawing.Size(156, 17);
             this.lblModificarDescCob.TabIndex = 13;
             this.lblModificarDescCob.Text = "Descripción del cobro:";
             // 
@@ -286,7 +286,7 @@
             this.lblModificarMontoCob.AutoSize = true;
             this.lblModificarMontoCob.Location = new System.Drawing.Point(8, 111);
             this.lblModificarMontoCob.Name = "lblModificarMontoCob";
-            this.lblModificarMontoCob.Size = new System.Drawing.Size(143, 20);
+            this.lblModificarMontoCob.Size = new System.Drawing.Size(119, 17);
             this.lblModificarMontoCob.TabIndex = 12;
             this.lblModificarMontoCob.Text = "Monto del cobro:";
             // 
@@ -295,7 +295,7 @@
             this.txtModificarNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtModificarNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtModificarNomCob.Name = "txtModificarNomCob";
-            this.txtModificarNomCob.Size = new System.Drawing.Size(279, 27);
+            this.txtModificarNomCob.Size = new System.Drawing.Size(279, 23);
             this.txtModificarNomCob.TabIndex = 11;
             // 
             // lblModificarNomCob
@@ -303,7 +303,7 @@
             this.lblModificarNomCob.AutoSize = true;
             this.lblModificarNomCob.Location = new System.Drawing.Point(8, 66);
             this.lblModificarNomCob.Name = "lblModificarNomCob";
-            this.lblModificarNomCob.Size = new System.Drawing.Size(157, 20);
+            this.lblModificarNomCob.Size = new System.Drawing.Size(132, 17);
             this.lblModificarNomCob.TabIndex = 10;
             this.lblModificarNomCob.Text = "Nombre del cobro:";
             // 
@@ -312,7 +312,7 @@
             this.lblModificarTipoCob.AutoSize = true;
             this.lblModificarTipoCob.Location = new System.Drawing.Point(7, 25);
             this.lblModificarTipoCob.Name = "lblModificarTipoCob";
-            this.lblModificarTipoCob.Size = new System.Drawing.Size(123, 20);
+            this.lblModificarTipoCob.Size = new System.Drawing.Size(104, 17);
             this.lblModificarTipoCob.TabIndex = 5;
             this.lblModificarTipoCob.Text = "Tipo de cobro:";
             // 
@@ -331,7 +331,7 @@
             this.rbtnModificarDed.AutoSize = true;
             this.rbtnModificarDed.Location = new System.Drawing.Point(6, 15);
             this.rbtnModificarDed.Name = "rbtnModificarDed";
-            this.rbtnModificarDed.Size = new System.Drawing.Size(115, 24);
+            this.rbtnModificarDed.Size = new System.Drawing.Size(95, 21);
             this.rbtnModificarDed.TabIndex = 0;
             this.rbtnModificarDed.TabStop = true;
             this.rbtnModificarDed.Text = "Deducción";
@@ -342,7 +342,7 @@
             this.rbtnModificarPer.AutoSize = true;
             this.rbtnModificarPer.Location = new System.Drawing.Point(153, 15);
             this.rbtnModificarPer.Name = "rbtnModificarPer";
-            this.rbtnModificarPer.Size = new System.Drawing.Size(120, 24);
+            this.rbtnModificarPer.Size = new System.Drawing.Size(99, 21);
             this.rbtnModificarPer.TabIndex = 1;
             this.rbtnModificarPer.TabStop = true;
             this.rbtnModificarPer.Text = "Percepción";
@@ -361,11 +361,11 @@
             this.tbpEliminar.Controls.Add(this.lblEliminarNomCob);
             this.tbpEliminar.Controls.Add(this.lblEliminarTipoCob);
             this.tbpEliminar.Controls.Add(this.gbxEliminarTipoCob);
-            this.tbpEliminar.Location = new System.Drawing.Point(4, 29);
+            this.tbpEliminar.Location = new System.Drawing.Point(4, 26);
             this.tbpEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.tbpEliminar.Name = "tbpEliminar";
             this.tbpEliminar.Padding = new System.Windows.Forms.Padding(4);
-            this.tbpEliminar.Size = new System.Drawing.Size(824, 499);
+            this.tbpEliminar.Size = new System.Drawing.Size(824, 502);
             this.tbpEliminar.TabIndex = 3;
             this.tbpEliminar.Text = "Eliminar";
             // 
@@ -395,7 +395,7 @@
             this.txtEliminarMontoCob.Enabled = false;
             this.txtEliminarMontoCob.Location = new System.Drawing.Point(173, 111);
             this.txtEliminarMontoCob.Name = "txtEliminarMontoCob";
-            this.txtEliminarMontoCob.Size = new System.Drawing.Size(279, 27);
+            this.txtEliminarMontoCob.Size = new System.Drawing.Size(279, 23);
             this.txtEliminarMontoCob.TabIndex = 15;
             // 
             // rtxtEliminarDescCob
@@ -413,7 +413,7 @@
             this.lblEliminarDescCob.AutoSize = true;
             this.lblEliminarDescCob.Location = new System.Drawing.Point(8, 153);
             this.lblEliminarDescCob.Name = "lblEliminarDescCob";
-            this.lblEliminarDescCob.Size = new System.Drawing.Size(188, 20);
+            this.lblEliminarDescCob.Size = new System.Drawing.Size(156, 17);
             this.lblEliminarDescCob.TabIndex = 13;
             this.lblEliminarDescCob.Text = "Descripción del cobro:";
             // 
@@ -422,7 +422,7 @@
             this.lblEliminarMontoCob.AutoSize = true;
             this.lblEliminarMontoCob.Location = new System.Drawing.Point(8, 111);
             this.lblEliminarMontoCob.Name = "lblEliminarMontoCob";
-            this.lblEliminarMontoCob.Size = new System.Drawing.Size(143, 20);
+            this.lblEliminarMontoCob.Size = new System.Drawing.Size(119, 17);
             this.lblEliminarMontoCob.TabIndex = 12;
             this.lblEliminarMontoCob.Text = "Monto del cobro:";
             // 
@@ -431,7 +431,7 @@
             this.txtEliminarNomCob.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEliminarNomCob.Location = new System.Drawing.Point(173, 63);
             this.txtEliminarNomCob.Name = "txtEliminarNomCob";
-            this.txtEliminarNomCob.Size = new System.Drawing.Size(279, 27);
+            this.txtEliminarNomCob.Size = new System.Drawing.Size(279, 23);
             this.txtEliminarNomCob.TabIndex = 11;
             // 
             // lblEliminarNomCob
@@ -439,7 +439,7 @@
             this.lblEliminarNomCob.AutoSize = true;
             this.lblEliminarNomCob.Location = new System.Drawing.Point(8, 66);
             this.lblEliminarNomCob.Name = "lblEliminarNomCob";
-            this.lblEliminarNomCob.Size = new System.Drawing.Size(157, 20);
+            this.lblEliminarNomCob.Size = new System.Drawing.Size(132, 17);
             this.lblEliminarNomCob.TabIndex = 10;
             this.lblEliminarNomCob.Text = "Nombre del cobro:";
             // 
@@ -448,7 +448,7 @@
             this.lblEliminarTipoCob.AutoSize = true;
             this.lblEliminarTipoCob.Location = new System.Drawing.Point(7, 25);
             this.lblEliminarTipoCob.Name = "lblEliminarTipoCob";
-            this.lblEliminarTipoCob.Size = new System.Drawing.Size(123, 20);
+            this.lblEliminarTipoCob.Size = new System.Drawing.Size(104, 17);
             this.lblEliminarTipoCob.TabIndex = 5;
             this.lblEliminarTipoCob.Text = "Tipo de cobro:";
             // 
@@ -467,7 +467,7 @@
             this.rbtnEliminarDed.AutoSize = true;
             this.rbtnEliminarDed.Location = new System.Drawing.Point(6, 15);
             this.rbtnEliminarDed.Name = "rbtnEliminarDed";
-            this.rbtnEliminarDed.Size = new System.Drawing.Size(115, 24);
+            this.rbtnEliminarDed.Size = new System.Drawing.Size(95, 21);
             this.rbtnEliminarDed.TabIndex = 0;
             this.rbtnEliminarDed.TabStop = true;
             this.rbtnEliminarDed.Text = "Deducción";
@@ -478,7 +478,7 @@
             this.rbtnEliminarPer.AutoSize = true;
             this.rbtnEliminarPer.Location = new System.Drawing.Point(153, 15);
             this.rbtnEliminarPer.Name = "rbtnEliminarPer";
-            this.rbtnEliminarPer.Size = new System.Drawing.Size(120, 24);
+            this.rbtnEliminarPer.Size = new System.Drawing.Size(99, 21);
             this.rbtnEliminarPer.TabIndex = 1;
             this.rbtnEliminarPer.TabStop = true;
             this.rbtnEliminarPer.Text = "Percepción";
@@ -486,7 +486,7 @@
             // 
             // frmDeducPercep
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(832, 532);
@@ -496,6 +496,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDeducPercep";
+            this.Text = "312 - Deducciones / Percepcciones";
             this.tbcDeducPer.ResumeLayout(false);
             this.tbpIngresoDedPer.ResumeLayout(false);
             this.tbpIngresoDedPer.PerformLayout();

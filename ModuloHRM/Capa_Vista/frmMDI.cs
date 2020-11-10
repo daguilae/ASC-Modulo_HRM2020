@@ -113,12 +113,6 @@ namespace Capa_Vista
             }
         }
 
-        private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
-        {
-            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESAR FALTA DE UN EMPLEADO \\
-
-        }
-
         private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
         {
             ayudas = "modEmp";
@@ -194,12 +188,6 @@ namespace Capa_Vista
             ayudas = "ingCompe";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE COMPETENCIAS \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
-        }
-
-        private void tsmiEstadisticasProceso_Click(object sender, EventArgs e)
-        {
-            // LLAMAR FUNCIÓN PARA MOSTRAR ESTADISTICAS \\
-
         }
 
         private void frmMDI_Load(object sender, EventArgs e)

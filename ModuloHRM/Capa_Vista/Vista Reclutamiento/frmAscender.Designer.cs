@@ -66,11 +66,11 @@
             this.gbxNuevoCargo.Controls.Add(this.cmbPuestoNuevo);
             this.gbxNuevoCargo.Controls.Add(this.lblDepartamentoNuevo);
             this.gbxNuevoCargo.Enabled = false;
-            this.gbxNuevoCargo.Location = new System.Drawing.Point(677, 94);
-            this.gbxNuevoCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxNuevoCargo.Location = new System.Drawing.Point(508, 76);
+            this.gbxNuevoCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbxNuevoCargo.Name = "gbxNuevoCargo";
-            this.gbxNuevoCargo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxNuevoCargo.Size = new System.Drawing.Size(200, 196);
+            this.gbxNuevoCargo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxNuevoCargo.Size = new System.Drawing.Size(150, 159);
             this.gbxNuevoCargo.TabIndex = 30;
             this.gbxNuevoCargo.TabStop = false;
             this.gbxNuevoCargo.Text = "Nuevo Cargo";
@@ -79,19 +79,20 @@
             // 
             this.cmbDepartamentoNuevo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbDepartamentoNuevo.FormattingEnabled = true;
-            this.cmbDepartamentoNuevo.Location = new System.Drawing.Point(5, 142);
-            this.cmbDepartamentoNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDepartamentoNuevo.Location = new System.Drawing.Point(4, 115);
+            this.cmbDepartamentoNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDepartamentoNuevo.Name = "cmbDepartamentoNuevo";
-            this.cmbDepartamentoNuevo.Size = new System.Drawing.Size(175, 28);
+            this.cmbDepartamentoNuevo.Size = new System.Drawing.Size(132, 25);
             this.cmbDepartamentoNuevo.TabIndex = 34;
             // 
             // lblPuestoNuevo
             // 
             this.lblPuestoNuevo.AutoSize = true;
             this.lblPuestoNuevo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuestoNuevo.Location = new System.Drawing.Point(5, 26);
+            this.lblPuestoNuevo.Location = new System.Drawing.Point(4, 21);
+            this.lblPuestoNuevo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuestoNuevo.Name = "lblPuestoNuevo";
-            this.lblPuestoNuevo.Size = new System.Drawing.Size(62, 20);
+            this.lblPuestoNuevo.Size = new System.Drawing.Size(50, 17);
             this.lblPuestoNuevo.TabIndex = 32;
             this.lblPuestoNuevo.Text = "Puesto";
             // 
@@ -99,19 +100,20 @@
             // 
             this.cmbPuestoNuevo.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbPuestoNuevo.FormattingEnabled = true;
-            this.cmbPuestoNuevo.Location = new System.Drawing.Point(5, 57);
-            this.cmbPuestoNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbPuestoNuevo.Location = new System.Drawing.Point(4, 46);
+            this.cmbPuestoNuevo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbPuestoNuevo.Name = "cmbPuestoNuevo";
-            this.cmbPuestoNuevo.Size = new System.Drawing.Size(175, 28);
+            this.cmbPuestoNuevo.Size = new System.Drawing.Size(132, 25);
             this.cmbPuestoNuevo.TabIndex = 33;
             // 
             // lblDepartamentoNuevo
             // 
             this.lblDepartamentoNuevo.AutoSize = true;
             this.lblDepartamentoNuevo.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoNuevo.Location = new System.Drawing.Point(5, 103);
+            this.lblDepartamentoNuevo.Location = new System.Drawing.Point(4, 84);
+            this.lblDepartamentoNuevo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepartamentoNuevo.Name = "lblDepartamentoNuevo";
-            this.lblDepartamentoNuevo.Size = new System.Drawing.Size(121, 20);
+            this.lblDepartamentoNuevo.Size = new System.Drawing.Size(99, 17);
             this.lblDepartamentoNuevo.TabIndex = 31;
             this.lblDepartamentoNuevo.Text = "Departamento";
             // 
@@ -122,11 +124,11 @@
             this.gbxAntiguoCargo.Controls.Add(this.lblDepartamentoTrabajoAnterior);
             this.gbxAntiguoCargo.Controls.Add(this.cmbPuestoAnterior);
             this.gbxAntiguoCargo.Enabled = false;
-            this.gbxAntiguoCargo.Location = new System.Drawing.Point(459, 89);
-            this.gbxAntiguoCargo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbxAntiguoCargo.Location = new System.Drawing.Point(344, 72);
+            this.gbxAntiguoCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbxAntiguoCargo.Name = "gbxAntiguoCargo";
-            this.gbxAntiguoCargo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbxAntiguoCargo.Size = new System.Drawing.Size(193, 198);
+            this.gbxAntiguoCargo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxAntiguoCargo.Size = new System.Drawing.Size(145, 161);
             this.gbxAntiguoCargo.TabIndex = 29;
             this.gbxAntiguoCargo.TabStop = false;
             this.gbxAntiguoCargo.Text = "Antiguo Cargo";
@@ -135,19 +137,20 @@
             // 
             this.cmbDepartamentoAnterior.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbDepartamentoAnterior.FormattingEnabled = true;
-            this.cmbDepartamentoAnterior.Location = new System.Drawing.Point(5, 150);
-            this.cmbDepartamentoAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbDepartamentoAnterior.Location = new System.Drawing.Point(4, 122);
+            this.cmbDepartamentoAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbDepartamentoAnterior.Name = "cmbDepartamentoAnterior";
-            this.cmbDepartamentoAnterior.Size = new System.Drawing.Size(175, 28);
+            this.cmbDepartamentoAnterior.Size = new System.Drawing.Size(132, 25);
             this.cmbDepartamentoAnterior.TabIndex = 30;
             // 
             // lblPuestoAnterior
             // 
             this.lblPuestoAnterior.AutoSize = true;
             this.lblPuestoAnterior.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuestoAnterior.Location = new System.Drawing.Point(5, 34);
+            this.lblPuestoAnterior.Location = new System.Drawing.Point(4, 28);
+            this.lblPuestoAnterior.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuestoAnterior.Name = "lblPuestoAnterior";
-            this.lblPuestoAnterior.Size = new System.Drawing.Size(62, 20);
+            this.lblPuestoAnterior.Size = new System.Drawing.Size(50, 17);
             this.lblPuestoAnterior.TabIndex = 19;
             this.lblPuestoAnterior.Text = "Puesto";
             // 
@@ -155,9 +158,10 @@
             // 
             this.lblDepartamentoTrabajoAnterior.AutoSize = true;
             this.lblDepartamentoTrabajoAnterior.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoTrabajoAnterior.Location = new System.Drawing.Point(5, 105);
+            this.lblDepartamentoTrabajoAnterior.Location = new System.Drawing.Point(4, 85);
+            this.lblDepartamentoTrabajoAnterior.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDepartamentoTrabajoAnterior.Name = "lblDepartamentoTrabajoAnterior";
-            this.lblDepartamentoTrabajoAnterior.Size = new System.Drawing.Size(121, 20);
+            this.lblDepartamentoTrabajoAnterior.Size = new System.Drawing.Size(99, 17);
             this.lblDepartamentoTrabajoAnterior.TabIndex = 18;
             this.lblDepartamentoTrabajoAnterior.Text = "Departamento";
             // 
@@ -165,19 +169,19 @@
             // 
             this.cmbPuestoAnterior.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cmbPuestoAnterior.FormattingEnabled = true;
-            this.cmbPuestoAnterior.Location = new System.Drawing.Point(5, 65);
-            this.cmbPuestoAnterior.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbPuestoAnterior.Location = new System.Drawing.Point(4, 53);
+            this.cmbPuestoAnterior.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbPuestoAnterior.Name = "cmbPuestoAnterior";
-            this.cmbPuestoAnterior.Size = new System.Drawing.Size(175, 28);
+            this.cmbPuestoAnterior.Size = new System.Drawing.Size(132, 25);
             this.cmbPuestoAnterior.TabIndex = 29;
             // 
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(603, 34);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBuscar.Location = new System.Drawing.Point(452, 28);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(95, 30);
+            this.btnBuscar.Size = new System.Drawing.Size(71, 24);
             this.btnBuscar.TabIndex = 20;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -186,19 +190,20 @@
             // txtIdEmpleado
             // 
             this.txtIdEmpleado.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtIdEmpleado.Location = new System.Drawing.Point(423, 34);
-            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdEmpleado.Location = new System.Drawing.Point(317, 28);
+            this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(148, 27);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(112, 23);
             this.txtIdEmpleado.TabIndex = 26;
             this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
             // lblIngreseIdEmpleado
             // 
             this.lblIngreseIdEmpleado.AutoSize = true;
-            this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(161, 38);
+            this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(121, 31);
+            this.lblIngreseIdEmpleado.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIngreseIdEmpleado.Name = "lblIngreseIdEmpleado";
-            this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(222, 20);
+            this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(186, 17);
             this.lblIngreseIdEmpleado.TabIndex = 27;
             this.lblIngreseIdEmpleado.Text = "Ingrese el ID del Empleado";
             // 
@@ -213,65 +218,67 @@
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerNombre);
             this.pnlDatosGenerales.Controls.Add(this.lblPrimerApellido);
             this.pnlDatosGenerales.Enabled = false;
-            this.pnlDatosGenerales.Location = new System.Drawing.Point(11, 94);
-            this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDatosGenerales.Location = new System.Drawing.Point(8, 76);
+            this.pnlDatosGenerales.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDatosGenerales.Name = "pnlDatosGenerales";
-            this.pnlDatosGenerales.Size = new System.Drawing.Size(417, 192);
+            this.pnlDatosGenerales.Size = new System.Drawing.Size(313, 156);
             this.pnlDatosGenerales.TabIndex = 22;
             // 
             // txtPrimerApellido
             // 
             this.txtPrimerApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPrimerApellido.Location = new System.Drawing.Point(200, 102);
-            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrimerApellido.Location = new System.Drawing.Point(150, 83);
+            this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(184, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(139, 23);
             this.txtPrimerApellido.TabIndex = 7;
             // 
             // lblSegundoApellido
             // 
             this.lblSegundoApellido.AutoSize = true;
             this.lblSegundoApellido.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoApellido.Location = new System.Drawing.Point(13, 149);
+            this.lblSegundoApellido.Location = new System.Drawing.Point(10, 121);
+            this.lblSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(149, 20);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(125, 17);
             this.lblSegundoApellido.TabIndex = 4;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
             // txtSegundoApellido
             // 
             this.txtSegundoApellido.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSegundoApellido.Location = new System.Drawing.Point(200, 145);
-            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSegundoApellido.Location = new System.Drawing.Point(150, 118);
+            this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(184, 27);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(139, 23);
             this.txtSegundoApellido.TabIndex = 8;
             // 
             // txtPrimerNombre
             // 
             this.txtPrimerNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPrimerNombre.Location = new System.Drawing.Point(200, 16);
-            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrimerNombre.Location = new System.Drawing.Point(150, 13);
+            this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(184, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(139, 23);
             this.txtPrimerNombre.TabIndex = 5;
             // 
             // txtSegundoNombre
             // 
             this.txtSegundoNombre.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtSegundoNombre.Location = new System.Drawing.Point(200, 62);
-            this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSegundoNombre.Location = new System.Drawing.Point(150, 50);
+            this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(184, 27);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(139, 23);
             this.txtSegundoNombre.TabIndex = 6;
             // 
             // lblSegundoNombre
             // 
             this.lblSegundoNombre.AutoSize = true;
             this.lblSegundoNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSegundoNombre.Location = new System.Drawing.Point(13, 64);
+            this.lblSegundoNombre.Location = new System.Drawing.Point(10, 52);
+            this.lblSegundoNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(146, 20);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(122, 17);
             this.lblSegundoNombre.TabIndex = 2;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -279,9 +286,10 @@
             // 
             this.lblPrimerNombre.AutoSize = true;
             this.lblPrimerNombre.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerNombre.Location = new System.Drawing.Point(13, 18);
+            this.lblPrimerNombre.Location = new System.Drawing.Point(10, 15);
+            this.lblPrimerNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(131, 20);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(109, 17);
             this.lblPrimerNombre.TabIndex = 1;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -289,9 +297,10 @@
             // 
             this.lblPrimerApellido.AutoSize = true;
             this.lblPrimerApellido.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrimerApellido.Location = new System.Drawing.Point(13, 105);
+            this.lblPrimerApellido.Location = new System.Drawing.Point(10, 85);
+            this.lblPrimerApellido.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(138, 20);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(116, 17);
             this.lblPrimerApellido.TabIndex = 3;
             this.lblPrimerApellido.Text = "Primer Apellido ";
             // 
@@ -299,10 +308,10 @@
             // 
             this.btnAscender.Enabled = false;
             this.btnAscender.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAscender.Location = new System.Drawing.Point(735, 367);
-            this.btnAscender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAscender.Location = new System.Drawing.Point(551, 298);
+            this.btnAscender.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAscender.Name = "btnAscender";
-            this.btnAscender.Size = new System.Drawing.Size(161, 50);
+            this.btnAscender.Size = new System.Drawing.Size(121, 41);
             this.btnAscender.TabIndex = 22;
             this.btnAscender.Text = "Ascender";
             this.btnAscender.UseVisualStyleBackColor = true;
@@ -317,19 +326,19 @@
             this.pnlAscensos.Controls.Add(this.lblIngreseIdEmpleado);
             this.pnlAscensos.Controls.Add(this.btnBuscar);
             this.pnlAscensos.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlAscensos.Location = new System.Drawing.Point(3, 2);
-            this.pnlAscensos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlAscensos.Location = new System.Drawing.Point(2, 2);
+            this.pnlAscensos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlAscensos.Name = "pnlAscensos";
-            this.pnlAscensos.Size = new System.Drawing.Size(893, 343);
+            this.pnlAscensos.Size = new System.Drawing.Size(670, 279);
             this.pnlAscensos.TabIndex = 31;
             // 
             // btnEmpleados
             // 
             this.btnEmpleados.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.Location = new System.Drawing.Point(3, 351);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmpleados.Location = new System.Drawing.Point(2, 285);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(173, 68);
+            this.btnEmpleados.Size = new System.Drawing.Size(130, 55);
             this.btnEmpleados.TabIndex = 32;
             this.btnEmpleados.Text = "Ver Lista Empleados";
             this.btnEmpleados.UseVisualStyleBackColor = true;
@@ -337,19 +346,19 @@
             // 
             // frmAscender
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(900, 430);
+            this.ClientSize = new System.Drawing.Size(675, 349);
             this.Controls.Add(this.btnEmpleados);
             this.Controls.Add(this.pnlAscensos);
             this.Controls.Add(this.btnAscender);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmAscender";
-            this.Text = "Ascensos";
+            this.Text = "317 - Ascensos";
             this.Load += new System.EventHandler(this.frmAscender_Load);
             this.gbxNuevoCargo.ResumeLayout(false);
             this.gbxNuevoCargo.PerformLayout();
