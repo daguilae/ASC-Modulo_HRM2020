@@ -34,7 +34,6 @@
             this.gbxDetCap = new System.Windows.Forms.GroupBox();
             this.txtCodigoEncabezado = new System.Windows.Forms.TextBox();
             this.lblCodigoC = new System.Windows.Forms.Label();
-            this.btnIngresoCurso = new System.Windows.Forms.Button();
             this.lblFeFin = new System.Windows.Forms.Label();
             this.cmbCurso = new System.Windows.Forms.ComboBox();
             this.lblFeIni = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.dtpFechFin = new System.Windows.Forms.DateTimePicker();
             this.nudHoras = new System.Windows.Forms.NumericUpDown();
             this.lblHoras = new System.Windows.Forms.Label();
+            this.btnIngresoCurso = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnBuscarEmp = new System.Windows.Forms.Button();
             this.txtBusqCodEmp = new System.Windows.Forms.TextBox();
@@ -163,17 +163,6 @@
             this.lblCodigoC.TabIndex = 10;
             this.lblCodigoC.Text = "Codigo";
             // 
-            // btnIngresoCurso
-            // 
-            this.btnIngresoCurso.Location = new System.Drawing.Point(840, 246);
-            this.btnIngresoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnIngresoCurso.Name = "btnIngresoCurso";
-            this.btnIngresoCurso.Size = new System.Drawing.Size(80, 28);
-            this.btnIngresoCurso.TabIndex = 9;
-            this.btnIngresoCurso.Text = "Ingresar";
-            this.btnIngresoCurso.UseVisualStyleBackColor = true;
-            this.btnIngresoCurso.Click += new System.EventHandler(this.btnIngresoCurso_Click);
-            // 
             // lblFeFin
             // 
             this.lblFeFin.AutoSize = true;
@@ -244,6 +233,17 @@
             this.lblHoras.Size = new System.Drawing.Size(42, 16);
             this.lblHoras.TabIndex = 0;
             this.lblHoras.Text = "Horas";
+            // 
+            // btnIngresoCurso
+            // 
+            this.btnIngresoCurso.Location = new System.Drawing.Point(840, 349);
+            this.btnIngresoCurso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnIngresoCurso.Name = "btnIngresoCurso";
+            this.btnIngresoCurso.Size = new System.Drawing.Size(80, 28);
+            this.btnIngresoCurso.TabIndex = 9;
+            this.btnIngresoCurso.Text = "Ingresar";
+            this.btnIngresoCurso.UseVisualStyleBackColor = true;
+            this.btnIngresoCurso.Click += new System.EventHandler(this.btnIngresoCurso_Click);
             // 
             // lblCodigo
             // 
