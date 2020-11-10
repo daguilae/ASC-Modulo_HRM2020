@@ -17,6 +17,13 @@ namespace Capa_Vista.Vista_Nomina
         public frmDeducPercep()
         {
             InitializeComponent();
+            txtIngresoNomCob.MaxLength = 45;
+            txtIngresoMontoCob.MaxLength = 45;
+            rtxtIngresoDescCob.MaxLength = 150;
+
+            txtModificarNomCob.MaxLength = 45;
+            txtModificarMontoCob.MaxLength = 45;
+            rtxtModificarDescCob.MaxLength = 150;
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();

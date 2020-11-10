@@ -17,6 +17,11 @@ namespace Capa_Vista.Vista_Nomina
         public frmEmpleadoNomina()
         {
             InitializeComponent();
+
+            txtIngresoIdEmp.MaxLength = 11;
+            txtBuscarIdEmp.MaxLength = 11;
+            txtEliminarIdEmp.MaxLength = 11;
+
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();
@@ -294,9 +299,12 @@ namespace Capa_Vista.Vista_Nomina
             rbtnIngresoDed.Checked = false;
             rbtnIngresoPerc.Checked = false;
             cmbIngresoDedPer.Text = "";
-            cmbIngresoFecPLan.Text = "";
             cmbIngresoDedPer.DataSource = null;
+            cmbIngresoDedPer.SelectedIndex = -1;
+            cmbIngresoFecPLan.Text = "";
+            cmbIngresoFecPLan.SelectedIndex = -1;
             txtIngresoFechFin.Text = "";
+
         }
 
         private void funcLimpiarBuscar()
@@ -305,6 +313,7 @@ namespace Capa_Vista.Vista_Nomina
             txtBuscarNomEmp.Text = "";
             txtBuscarPuestoEmp.Text = "";
             cmbBuscarPeriodoPlanilla.Text = "";
+            cmbBuscarPeriodoPlanilla.SelectedIndex = -1;
             dgvDedEmp.DataSource = null;
             dgvDedEmp.Refresh();
             dgvPerEpm.DataSource = null;
@@ -320,8 +329,10 @@ namespace Capa_Vista.Vista_Nomina
             rbtnEliminarDed.Checked = false;
             rbtnEliminarPer.Checked = false;
             cmbEliminarDedPer.Text = "";
-            cmbEliminarFechPlan.Text = "";
             cmbEliminarDedPer.DataSource = null;
+            cmbEliminarFechPlan.Text = "";
+            cmbEliminarFechPlan.SelectedIndex = -1;
+            cmbEliminarDedPer.SelectedIndex = -1;
             txtEliminarFechFin.Text = "";
         }
     }

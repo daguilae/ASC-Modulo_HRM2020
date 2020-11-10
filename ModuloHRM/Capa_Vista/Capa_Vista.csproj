@@ -72,6 +72,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Vista Reportes\ReporteNomina.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteNomina.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteNomina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista Reportes\frmReporteNomina.Designer.cs">
+      <DependentUpon>frmReporteNomina.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista Reportes\ReporteCpacitacion.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -256,6 +268,13 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\ReporteNomina.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteNomina.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista Reportes\frmReporteNomina.resx">
+      <DependentUpon>frmReporteNomina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista Reportes\ReporteCpacitacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

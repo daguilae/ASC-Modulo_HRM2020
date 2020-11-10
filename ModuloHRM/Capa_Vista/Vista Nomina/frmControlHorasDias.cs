@@ -18,6 +18,8 @@ namespace Capa_Vista.Vista_Nomina
         public frmControlHorasDias()
         {
             InitializeComponent();
+            txtIngresoIdEmp.MaxLength = 11;
+            txtModificarIdEmp.MaxLength = 11;
         }
 
         clsControladorNomina ConsNom = new clsControladorNomina();
@@ -173,6 +175,7 @@ namespace Capa_Vista.Vista_Nomina
             txtIngresoNomEmp.Text = "";
             txtIngresoPuestoEmp.Text = "";
             cmbIngresoPeriodo.Text = "";
+            cmbIngresoPeriodo.SelectedIndex = -1;
             nudIngresoHorasOrd.Value = 0;
             nudIngresoHorasExt.Value = 0;
             nudIngresoDiasLab.Value = 0;
@@ -186,6 +189,7 @@ namespace Capa_Vista.Vista_Nomina
             txtModificarNomEmp.Text = "";
             txtModificarPuesto.Text = "";
             cmbModificarPeriodo.Text = "";
+            cmbModificarPeriodo.SelectedIndex = -1;
             nudModificarHorasOrd.Value = 0;
             nudModificarHorasExtra.Value = 0;
             nudModificarDiasLab.Value = 0;

@@ -93,11 +93,11 @@
             this.tbpDatosGenerales.Controls.Add(this.pnlPuesto);
             this.tbpDatosGenerales.Controls.Add(this.pnlDatosGenerales);
             this.tbpDatosGenerales.Font = new System.Drawing.Font("Rockwell", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 29);
+            this.tbpDatosGenerales.Location = new System.Drawing.Point(4, 26);
             this.tbpDatosGenerales.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbpDatosGenerales.Name = "tbpDatosGenerales";
             this.tbpDatosGenerales.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.tbpDatosGenerales.Size = new System.Drawing.Size(936, 497);
+            this.tbpDatosGenerales.Size = new System.Drawing.Size(936, 500);
             this.tbpDatosGenerales.TabIndex = 0;
             this.tbpDatosGenerales.Text = "Datos Generales";
             // 
@@ -119,7 +119,7 @@
             this.lblIngreseIdEmpleado.Location = new System.Drawing.Point(185, 99);
             this.lblIngreseIdEmpleado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIngreseIdEmpleado.Name = "lblIngreseIdEmpleado";
-            this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(222, 20);
+            this.lblIngreseIdEmpleado.Size = new System.Drawing.Size(186, 17);
             this.lblIngreseIdEmpleado.TabIndex = 27;
             this.lblIngreseIdEmpleado.Text = "Ingrese el ID del Empleado";
             // 
@@ -129,7 +129,7 @@
             this.txtIdEmpleado.Location = new System.Drawing.Point(429, 96);
             this.txtIdEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(184, 27);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(184, 23);
             this.txtIdEmpleado.TabIndex = 26;
             this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcNumero);
             // 
@@ -166,7 +166,7 @@
             this.cmbDepartamento.Location = new System.Drawing.Point(9, 136);
             this.cmbDepartamento.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDepartamento.Name = "cmbDepartamento";
-            this.cmbDepartamento.Size = new System.Drawing.Size(218, 28);
+            this.cmbDepartamento.Size = new System.Drawing.Size(218, 25);
             this.cmbDepartamento.TabIndex = 30;
             // 
             // lblPuesto
@@ -176,7 +176,7 @@
             this.lblPuesto.Location = new System.Drawing.Point(4, 15);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(62, 20);
+            this.lblPuesto.Size = new System.Drawing.Size(50, 17);
             this.lblPuesto.TabIndex = 19;
             this.lblPuesto.Text = "Puesto";
             // 
@@ -188,7 +188,7 @@
             this.cmbPuesto.Location = new System.Drawing.Point(9, 58);
             this.cmbPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPuesto.Name = "cmbPuesto";
-            this.cmbPuesto.Size = new System.Drawing.Size(218, 28);
+            this.cmbPuesto.Size = new System.Drawing.Size(218, 25);
             this.cmbPuesto.TabIndex = 29;
             // 
             // lblDepartamentoTrabajo
@@ -198,7 +198,7 @@
             this.lblDepartamentoTrabajo.Location = new System.Drawing.Point(4, 96);
             this.lblDepartamentoTrabajo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDepartamentoTrabajo.Name = "lblDepartamentoTrabajo";
-            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(121, 20);
+            this.lblDepartamentoTrabajo.Size = new System.Drawing.Size(99, 17);
             this.lblDepartamentoTrabajo.TabIndex = 18;
             this.lblDepartamentoTrabajo.Text = "Departamento";
             // 
@@ -226,7 +226,7 @@
             this.txtPrimerApellido.Location = new System.Drawing.Point(250, 128);
             this.txtPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerApellido.Name = "txtPrimerApellido";
-            this.txtPrimerApellido.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerApellido.Size = new System.Drawing.Size(229, 23);
             this.txtPrimerApellido.TabIndex = 7;
             this.txtPrimerApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -237,7 +237,7 @@
             this.lblSegundoApellido.Location = new System.Drawing.Point(16, 186);
             this.lblSegundoApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSegundoApellido.Name = "lblSegundoApellido";
-            this.lblSegundoApellido.Size = new System.Drawing.Size(149, 20);
+            this.lblSegundoApellido.Size = new System.Drawing.Size(125, 17);
             this.lblSegundoApellido.TabIndex = 4;
             this.lblSegundoApellido.Text = "Segundo Apellido";
             // 
@@ -248,7 +248,7 @@
             this.txtSegundoApellido.Location = new System.Drawing.Point(250, 181);
             this.txtSegundoApellido.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSegundoApellido.Name = "txtSegundoApellido";
-            this.txtSegundoApellido.Size = new System.Drawing.Size(229, 27);
+            this.txtSegundoApellido.Size = new System.Drawing.Size(229, 23);
             this.txtSegundoApellido.TabIndex = 8;
             this.txtSegundoApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -259,7 +259,7 @@
             this.txtPrimerNombre.Location = new System.Drawing.Point(250, 20);
             this.txtPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtPrimerNombre.Name = "txtPrimerNombre";
-            this.txtPrimerNombre.Size = new System.Drawing.Size(229, 27);
+            this.txtPrimerNombre.Size = new System.Drawing.Size(229, 23);
             this.txtPrimerNombre.TabIndex = 5;
             this.txtPrimerNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -270,7 +270,7 @@
             this.txtSegundoNombre.Location = new System.Drawing.Point(250, 76);
             this.txtSegundoNombre.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.txtSegundoNombre.Name = "txtSegundoNombre";
-            this.txtSegundoNombre.Size = new System.Drawing.Size(229, 27);
+            this.txtSegundoNombre.Size = new System.Drawing.Size(229, 23);
             this.txtSegundoNombre.TabIndex = 6;
             this.txtSegundoNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
@@ -281,7 +281,7 @@
             this.lblSegundoNombre.Location = new System.Drawing.Point(16, 80);
             this.lblSegundoNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSegundoNombre.Name = "lblSegundoNombre";
-            this.lblSegundoNombre.Size = new System.Drawing.Size(146, 20);
+            this.lblSegundoNombre.Size = new System.Drawing.Size(122, 17);
             this.lblSegundoNombre.TabIndex = 2;
             this.lblSegundoNombre.Text = "Segundo Nombre";
             // 
@@ -292,7 +292,7 @@
             this.lblPrimerNombre.Location = new System.Drawing.Point(16, 22);
             this.lblPrimerNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrimerNombre.Name = "lblPrimerNombre";
-            this.lblPrimerNombre.Size = new System.Drawing.Size(131, 20);
+            this.lblPrimerNombre.Size = new System.Drawing.Size(109, 17);
             this.lblPrimerNombre.TabIndex = 1;
             this.lblPrimerNombre.Text = "Primer Nombre";
             // 
@@ -303,7 +303,7 @@
             this.lblPrimerApellido.Location = new System.Drawing.Point(16, 131);
             this.lblPrimerApellido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrimerApellido.Name = "lblPrimerApellido";
-            this.lblPrimerApellido.Size = new System.Drawing.Size(138, 20);
+            this.lblPrimerApellido.Size = new System.Drawing.Size(116, 17);
             this.lblPrimerApellido.TabIndex = 3;
             this.lblPrimerApellido.Text = "Primer Apellido ";
             // 
@@ -314,10 +314,10 @@
             this.tbpDespido_Renuncia.Controls.Add(this.rbtnDespido);
             this.tbpDespido_Renuncia.Controls.Add(this.lblTipoBaja);
             this.tbpDespido_Renuncia.Controls.Add(this.gbxPrestacionesDespido);
-            this.tbpDespido_Renuncia.Location = new System.Drawing.Point(4, 29);
+            this.tbpDespido_Renuncia.Location = new System.Drawing.Point(4, 26);
             this.tbpDespido_Renuncia.Margin = new System.Windows.Forms.Padding(4);
             this.tbpDespido_Renuncia.Name = "tbpDespido_Renuncia";
-            this.tbpDespido_Renuncia.Size = new System.Drawing.Size(936, 497);
+            this.tbpDespido_Renuncia.Size = new System.Drawing.Size(936, 500);
             this.tbpDespido_Renuncia.TabIndex = 3;
             this.tbpDespido_Renuncia.Text = "Despidos/Renuncias";
             // 
@@ -327,7 +327,7 @@
             this.rbtnRenuncia.Enabled = false;
             this.rbtnRenuncia.Location = new System.Drawing.Point(199, 58);
             this.rbtnRenuncia.Name = "rbtnRenuncia";
-            this.rbtnRenuncia.Size = new System.Drawing.Size(103, 24);
+            this.rbtnRenuncia.Size = new System.Drawing.Size(84, 21);
             this.rbtnRenuncia.TabIndex = 10;
             this.rbtnRenuncia.TabStop = true;
             this.rbtnRenuncia.Text = "Renuncia";
@@ -340,7 +340,7 @@
             this.rbtnDespido.Enabled = false;
             this.rbtnDespido.Location = new System.Drawing.Point(45, 58);
             this.rbtnDespido.Name = "rbtnDespido";
-            this.rbtnDespido.Size = new System.Drawing.Size(95, 24);
+            this.rbtnDespido.Size = new System.Drawing.Size(80, 21);
             this.rbtnDespido.TabIndex = 9;
             this.rbtnDespido.TabStop = true;
             this.rbtnDespido.Text = "Despido";
@@ -352,7 +352,7 @@
             this.lblTipoBaja.AutoSize = true;
             this.lblTipoBaja.Location = new System.Drawing.Point(9, 22);
             this.lblTipoBaja.Name = "lblTipoBaja";
-            this.lblTipoBaja.Size = new System.Drawing.Size(324, 20);
+            this.lblTipoBaja.Size = new System.Drawing.Size(271, 17);
             this.lblTipoBaja.TabIndex = 8;
             this.lblTipoBaja.Text = "Indique el tipo de Baja que va a Realizar:";
             // 
@@ -395,7 +395,7 @@
             this.dtpFecha.Location = new System.Drawing.Point(294, 122);
             this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(429, 27);
+            this.dtpFecha.Size = new System.Drawing.Size(429, 23);
             this.dtpFecha.TabIndex = 24;
             // 
             // lblFechaBaja
@@ -404,7 +404,7 @@
             this.lblFechaBaja.Location = new System.Drawing.Point(10, 122);
             this.lblFechaBaja.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaBaja.Name = "lblFechaBaja";
-            this.lblFechaBaja.Size = new System.Drawing.Size(117, 20);
+            this.lblFechaBaja.Size = new System.Drawing.Size(97, 17);
             this.lblFechaBaja.TabIndex = 23;
             this.lblFechaBaja.Text = "Fecha de Baja";
             // 
@@ -424,7 +424,7 @@
             this.lblCausaDespido.Location = new System.Drawing.Point(9, 158);
             this.lblCausaDespido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCausaDespido.Name = "lblCausaDespido";
-            this.lblCausaDespido.Size = new System.Drawing.Size(127, 20);
+            this.lblCausaDespido.Size = new System.Drawing.Size(105, 17);
             this.lblCausaDespido.TabIndex = 11;
             this.lblCausaDespido.Text = "Causa Despido";
             // 
@@ -434,9 +434,8 @@
             this.txtTiempoLaborado.Location = new System.Drawing.Point(294, 71);
             this.txtTiempoLaborado.Margin = new System.Windows.Forms.Padding(4);
             this.txtTiempoLaborado.Name = "txtTiempoLaborado";
-            this.txtTiempoLaborado.Size = new System.Drawing.Size(300, 27);
+            this.txtTiempoLaborado.Size = new System.Drawing.Size(300, 23);
             this.txtTiempoLaborado.TabIndex = 9;
-            this.txtTiempoLaborado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.funcLetra);
             // 
             // txtMontoPrestaciones
             // 
@@ -444,7 +443,7 @@
             this.txtMontoPrestaciones.Location = new System.Drawing.Point(294, 27);
             this.txtMontoPrestaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtMontoPrestaciones.Name = "txtMontoPrestaciones";
-            this.txtMontoPrestaciones.Size = new System.Drawing.Size(200, 27);
+            this.txtMontoPrestaciones.Size = new System.Drawing.Size(200, 23);
             this.txtMontoPrestaciones.TabIndex = 7;
             // 
             // lblPrestaciones
@@ -453,7 +452,7 @@
             this.lblPrestaciones.Location = new System.Drawing.Point(9, 34);
             this.lblPrestaciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrestaciones.Name = "lblPrestaciones";
-            this.lblPrestaciones.Size = new System.Drawing.Size(230, 20);
+            this.lblPrestaciones.Size = new System.Drawing.Size(188, 17);
             this.lblPrestaciones.TabIndex = 0;
             this.lblPrestaciones.Text = "Monto Prestaciones  a Pagar";
             // 
@@ -463,13 +462,13 @@
             this.lblTiempoLaborado.Location = new System.Drawing.Point(9, 78);
             this.lblTiempoLaborado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTiempoLaborado.Name = "lblTiempoLaborado";
-            this.lblTiempoLaborado.Size = new System.Drawing.Size(263, 20);
+            this.lblTiempoLaborado.Size = new System.Drawing.Size(218, 17);
             this.lblTiempoLaborado.TabIndex = 2;
             this.lblTiempoLaborado.Text = "Tiempo Laborado en la Empresa";
             // 
             // frmBajasEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(57)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(944, 530);
@@ -480,7 +479,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmBajasEmpleado";
-            this.Text = "Bajas";
+            this.Text = "318 - Bajas Del Empleado";
             this.Load += new System.EventHandler(this.frmBajasEmpleado_Load);
             this.tbcDatosBajaEmpleado.ResumeLayout(false);
             this.tbpDatosGenerales.ResumeLayout(false);

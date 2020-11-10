@@ -113,12 +113,6 @@ namespace Capa_Vista
             }
         }
 
-        private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
-        {
-            // LLAMAR FUNCIÓN PARA MOSTRAR INGRESAR FALTA DE UN EMPLEADO \\
-
-        }
-
         private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
         {
             ayudas = "modEmp";
@@ -194,12 +188,6 @@ namespace Capa_Vista
             ayudas = "ingCompe";
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE COMPETENCIAS \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Desarrollo.frmCompetencias());
-        }
-
-        private void tsmiEstadisticasProceso_Click(object sender, EventArgs e)
-        {
-            // LLAMAR FUNCIÓN PARA MOSTRAR ESTADISTICAS \\
-
         }
 
         private void frmMDI_Load(object sender, EventArgs e)
@@ -284,7 +272,7 @@ namespace Capa_Vista
                     case "ingCompe":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0016.htm");
                         break;
-                    //CARLOS IJUELAVERGA METE TUS AYUDAS AQUI
+                    
                     case "datNomi":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0017.htm");
                         break;
@@ -297,7 +285,7 @@ namespace Capa_Vista
                     case "controlHoras":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0021.htm");
                         break;
-                    //HASTA AQUI
+                    
                     case "ingresoRec":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0029.htm");
                         break;
