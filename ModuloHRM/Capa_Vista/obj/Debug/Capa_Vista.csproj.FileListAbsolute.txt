@@ -315,4 +315,8 @@ C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Report
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteEmpleado.resources
 C:\Users\CarlosAugusto\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteNomina.resources
 C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\obj\Debug\Capa_Vista.Vista_Reportes.frmReporteNomina.resources
-
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\AxShockwaveFlashObjects.dll
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\alexs\Modulo_HRM\ModuloHRM\Capa_Vista\bin\Debug\CrystalDecisions.Windows.Forms.dll
