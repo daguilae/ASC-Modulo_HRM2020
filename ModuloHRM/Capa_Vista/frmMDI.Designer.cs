@@ -174,32 +174,20 @@
             this.tsmiMantenimientosDeCapacitaciones,
             this.tsmiMantenimientosDeCursos});
             this.tsmiCapacitacion.Name = "tsmiCapacitacion";
-<<<<<<< HEAD
-            this.tsmiCapacitacion.Size = new System.Drawing.Size(243, 22);
-=======
             this.tsmiCapacitacion.Size = new System.Drawing.Size(303, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiCapacitacion.Text = "Capacitación";
             // 
             // tsmiMantenimientosDeCapacitaciones
             // 
             this.tsmiMantenimientosDeCapacitaciones.Name = "tsmiMantenimientosDeCapacitaciones";
-<<<<<<< HEAD
-            this.tsmiMantenimientosDeCapacitaciones.Size = new System.Drawing.Size(268, 22);
-=======
             this.tsmiMantenimientosDeCapacitaciones.Size = new System.Drawing.Size(340, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiMantenimientosDeCapacitaciones.Text = "Mantenimientos de Capacitaciones";
             this.tsmiMantenimientosDeCapacitaciones.Click += new System.EventHandler(this.tsmiMantenimientosDeCapacitaciones_Click);
             // 
             // tsmiMantenimientosDeCursos
             // 
             this.tsmiMantenimientosDeCursos.Name = "tsmiMantenimientosDeCursos";
-<<<<<<< HEAD
-            this.tsmiMantenimientosDeCursos.Size = new System.Drawing.Size(268, 22);
-=======
             this.tsmiMantenimientosDeCursos.Size = new System.Drawing.Size(340, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiMantenimientosDeCursos.Text = "Mantenimientos de Cursos";
             this.tsmiMantenimientosDeCursos.Click += new System.EventHandler(this.tsmiMantenimientosDeCursos_Click);
             // 
@@ -226,11 +214,7 @@
             this.tsmiAscenderEmpleadoProceso,
             this.tsmiDespedirEmpleadoProceso});
             this.tsmiEmpleadosProceso.Name = "tsmiEmpleadosProceso";
-<<<<<<< HEAD
-            this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiEmpleadosProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiEmpleadosProceso.Text = "Empleados";
             // 
             // tsmiEditarEmpleadoProceso
@@ -259,11 +243,7 @@
             this.tsmiReclutamientoProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarReclutaProceso});
             this.tsmiReclutamientoProceso.Name = "tsmiReclutamientoProceso";
-<<<<<<< HEAD
-            this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiReclutamientoProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiReclutamientoProceso.Text = "Reclutamiento";
             // 
             // tsmiIngresarReclutaProceso
@@ -276,22 +256,14 @@
             // tsmiEntrevistaProceso
             // 
             this.tsmiEntrevistaProceso.Name = "tsmiEntrevistaProceso";
-<<<<<<< HEAD
-            this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiEntrevistaProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiEntrevistaProceso.Text = "Entrevista";
             this.tsmiEntrevistaProceso.Click += new System.EventHandler(this.tsmiEntrevistaProceso_Click);
             // 
             // tsmiContratacionProceso
             // 
             this.tsmiContratacionProceso.Name = "tsmiContratacionProceso";
-<<<<<<< HEAD
-            this.tsmiContratacionProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiContratacionProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiContratacionProceso.Text = "Contratación";
             this.tsmiContratacionProceso.Click += new System.EventHandler(this.tsmiContratacionProceso_Click);
             // 
@@ -303,11 +275,7 @@
             this.tsmiDeducciónPercepciónEmpleadoProceso,
             this.tsmiControlDeHorasDíasProceso});
             this.tsmiNominaProceso.Name = "tsmiNominaProceso";
-<<<<<<< HEAD
-            this.tsmiNominaProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiNominaProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiNominaProceso.Text = "Nómina";
             // 
             // tsmiBuscarDatosGeneralesDeNominaProceso
@@ -343,11 +311,7 @@
             this.tsmiDesarrolloProceso.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiIngresarCompetenciasProceso});
             this.tsmiDesarrolloProceso.Name = "tsmiDesarrolloProceso";
-<<<<<<< HEAD
-            this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiDesarrolloProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiDesarrolloProceso.Text = "Desarrollo";
             // 
             // tsmiIngresarCompetenciasProceso
@@ -363,11 +327,7 @@
             this.tsmiIngresarNuevaCapacitacionProceso,
             this.tsmiIngresoDeCursos});
             this.tsmiCapacitacionProceso.Name = "tsmiCapacitacionProceso";
-<<<<<<< HEAD
-            this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiCapacitacionProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiCapacitacionProceso.Text = "Capacitación";
             // 
             // tsmiIngresarNuevaCapacitacionProceso
@@ -380,22 +340,14 @@
             // tsmiIngresoDeCursos
             // 
             this.tsmiIngresoDeCursos.Name = "tsmiIngresoDeCursos";
-<<<<<<< HEAD
-            this.tsmiIngresoDeCursos.Size = new System.Drawing.Size(234, 22);
-=======
             this.tsmiIngresoDeCursos.Size = new System.Drawing.Size(295, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiIngresoDeCursos.Text = "Ingreso de Cursos";
             this.tsmiIngresoDeCursos.Click += new System.EventHandler(this.tsmiIngresoDeCursos_Click);
             // 
             // tsmiEstadisticasProceso
             // 
             this.tsmiEstadisticasProceso.Name = "tsmiEstadisticasProceso";
-<<<<<<< HEAD
-            this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(152, 22);
-=======
             this.tsmiEstadisticasProceso.Size = new System.Drawing.Size(193, 26);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.tsmiEstadisticasProceso.Text = "Estadísticas";
             this.tsmiEstadisticasProceso.Click += new System.EventHandler(this.tsmiEstadisticasProceso_Click);
             // 
@@ -500,17 +452,12 @@
             this.Controls.Add(this.mspMDI);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mspMDI;
-<<<<<<< HEAD
-            this.Margin = new System.Windows.Forms.Padding(2);
-=======
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
             this.Name = "frmMDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "301 - Módulo de Recursos Humanos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMDI_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMDI_KeyDown);
             this.mspMDI.ResumeLayout(false);
             this.mspMDI.PerformLayout();
             this.ResumeLayout(false);

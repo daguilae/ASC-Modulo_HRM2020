@@ -22,7 +22,7 @@ namespace Capa_Vista
 
         // FUNCIÓN PARA CONTENER UN FORM EN UN PANEL \\
         public void funcAbrirFormEnPanel(object Formhijo)
-        {            
+        {
             if (this.pnlContenedor.Controls.Count > 0)
                 this.pnlContenedor.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
@@ -30,7 +30,7 @@ namespace Capa_Vista
             fh.Dock = DockStyle.None;
             this.pnlContenedor.Controls.Add(fh);
             this.pnlContenedor.Tag = fh;
-            fh.Show();            
+            fh.Show();
         }
 
 
@@ -38,7 +38,7 @@ namespace Capa_Vista
         {
             // CERRAR SESIÓN \\
             frmLogin frm = new frmLogin();
-            if(frm.ShowDialog() == DialogResult.OK)
+            if (frm.ShowDialog() == DialogResult.OK)
             {
                 txtUsuario.Text = frm.usuario();
             }
@@ -49,7 +49,7 @@ namespace Capa_Vista
             ayudas = "mantPuesto";
             // LLAMAR FUNCIÓN PARA MOSTRAR MANTENIMIENTO DE PUESTOS \\
             clsVistaBitacora bit = new clsVistaBitacora();
-            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad(); 
+            clsFuncionesSeguridad seguridad = new clsFuncionesSeguridad();
             if (seguridad.PermisosAcceso("12", txtUsuario.Text) == 1)
             {
                 bit.user(txtUsuario.Text);
@@ -116,7 +116,7 @@ namespace Capa_Vista
         private void tsmiFaltaDeUnEmpleadoMantenimientos_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESAR FALTA DE UN EMPLEADO \\
-            
+
         }
 
         private void tsmiEditarEmpleadoProceso_Click(object sender, EventArgs e)
@@ -163,7 +163,7 @@ namespace Capa_Vista
 
         private void tsmiBuscarDatosGeneralesDeNominaProceso_Click(object sender, EventArgs e)
         {
-            ayudas="datNomi"; 
+            ayudas = "datNomi";
             // LLAMAR FUNCIÓN PARA MOSTRAR DATOS GENERALES DE NOMINA \\
             funcAbrirFormEnPanel(new Capa_Vista.Vista_Nomina.frmNomina());
         }
@@ -199,7 +199,7 @@ namespace Capa_Vista
         private void tsmiEstadisticasProceso_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR ESTADISTICAS \\
-            
+
         }
 
         private void frmMDI_Load(object sender, EventArgs e)
@@ -245,13 +245,13 @@ namespace Capa_Vista
             funcAbrirFormEnPanel(new Vista_Capacitacion.frmIngresoCurso());
         }
 
-<<<<<<< HEAD
         public void frmMDI_KeyDown(object sender, KeyEventArgs e)
         {
             funcAyudas(e);
         }
 
-        private void funcAyudas(KeyEventArgs e) {
+        private void funcAyudas(KeyEventArgs e)
+        {
 
             if (e.KeyCode == Keys.F1)
             {
@@ -316,14 +316,16 @@ namespace Capa_Vista
                     case "despEmp":
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0040.htm");
                         break;
-                        
+
                     default:
                         Help.ShowHelp(this, "Ayudas_HRM/Ayudas_Modulo_HRM.chm", "pg_0002.htm");
                         break;
 
                 }
             }
-=======
+
+
+        }
         private void tsmiEmpleadosReporte_Click(object sender, EventArgs e)
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
@@ -340,8 +342,8 @@ namespace Capa_Vista
         {
             // LLAMAR FUNCIÓN PARA MOSTRAR INGRESO DE CURSOS \\
             funcAbrirFormEnPanel(new Vista_Reportes.frmReporteCompeencias());
->>>>>>> 9a0710fbc3bfea361fdc1d89403c3af057fd9d84
-        }
-    }
 
+        }
+
+    }
 }
