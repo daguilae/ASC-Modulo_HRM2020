@@ -44,8 +44,8 @@ namespace Capa_Vista.Vista_Reportes
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
             this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
-            string ruta = path + "\\Modulo_HRM\\ModuloHRM\\Capa_Vista\\Vista Reportes\\ReporteNomina.rpt";
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            string ruta = path + "\\ModuloHRM\\ReporteNomina.rpt";
             this.crystalReportViewer1.Size = new System.Drawing.Size(1067, 554);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelWidth = 267;
