@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-11-2020 a las 03:26:58
--- Versión del servidor: 10.4.14-MariaDB
--- Versión de PHP: 7.4.11
+-- Tiempo de generación: 11-11-2020 a las 06:38:05
+-- Versión del servidor: 10.4.13-MariaDB
+-- Versión de PHP: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -289,7 +289,24 @@ INSERT INTO `bitacora` (`pk_id_bitacora`, `fk_idusuario_bitacora`, `fk_idaplicac
 (69, 6, 1, '09/11/2020 16:46:16', '192.168.0.31', 'LAP_MRJST21', 'Logeo Exitoso'),
 (70, 6, 1, '09/11/2020 17:43:25', '192.168.0.31', 'LAP_MRJST21', 'Logeo Exitoso'),
 (71, 6, 1, '09/11/2020 18:08:49', '192.168.0.31', 'LAP_MRJST21', 'Logeo Exitoso'),
-(72, 6, 1, '09/11/2020 18:50:13', '192.168.0.31', 'LAP_MRJST21', 'Logeo Exitoso');
+(72, 6, 1, '09/11/2020 18:50:13', '192.168.0.31', 'LAP_MRJST21', 'Logeo Exitoso'),
+(74, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Logeo Exitoso'),
+(75, 7, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Logeo Exitoso'),
+(76, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Logeo Exitoso'),
+(77, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', ' INSERT INTO puesto VALUES ( 10,  Gerente Informatico,  10000,  3,  1) '),
+(78, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'UPDATE puesto SET   nombre_puesto =  Gerente Informatico,  salario_puesto =  5000,  fk_id_horario_puesto =  3,  estado_puesto =  1  WHERE pk_id_puesto = 10; '),
+(79, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Formulario de ayuda'),
+(80, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Salir de la aplicacion'),
+(81, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', ' INSERT INTO departamento_empresarial VALUES ( 9,  Recursos Humanos,  1) '),
+(82, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'UPDATE departamento_empresarial SET   nombre_departamento_empresarial =  HRM,  estado_departamento_empresarial =  1  WHERE pk_id__departamento_empresarial = 9; '),
+(83, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Formulario de ayuda'),
+(84, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', ' INSERT INTO tipo_competencia VALUES ( 4,  Innovación,  1) '),
+(85, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', ' INSERT INTO tipo_competencia VALUES ( 5,  Análisis de Datos,  1) '),
+(86, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Salir de la aplicacion'),
+(87, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', ' INSERT INTO falta VALUES ( 1,  Agresión,  Mala interacción por parte del empleado,  1) '),
+(88, 6, 1, '10/11/2020 21:33:37', '192.168.0.29', 'MRJST21', 'Salir de la aplicacion'),
+(89, 6, 1, '10/11/2020 22:24:01', '192.168.0.29', 'MRJST21', 'Logeo Exitoso'),
+(90, 6, 1, '10/11/2020 22:46:56', '192.168.0.29', 'MRJST21', 'Logeo Exitoso');
 
 -- --------------------------------------------------------
 
@@ -363,21 +380,6 @@ CREATE TABLE `competencia_desarrollo` (
   `fk_id_tipo_competencia_desarrollo` int(11) DEFAULT NULL,
   `resultado_competencia_desarrollo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `competencia_desarrollo`
---
-
-INSERT INTO `competencia_desarrollo` (`pk_id_competencia_desarrollo`, `fk_id_encabezado_competencia`, `fk_id_tipo_competencia_desarrollo`, `resultado_competencia_desarrollo`) VALUES
-(1, 1, 1, 45),
-(2, 1, 3, 75),
-(3, 2, 1, 100),
-(4, 2, 2, 75),
-(5, 3, 3, 78),
-(6, 3, 1, 89),
-(7, 4, 1, 100),
-(8, 4, 3, 85),
-(9, 4, 2, 68);
 
 -- --------------------------------------------------------
 
@@ -630,14 +632,14 @@ CREATE TABLE `departamento_empresarial` (
 --
 
 INSERT INTO `departamento_empresarial` (`pk_id__departamento_empresarial`, `nombre_departamento_empresarial`, `estado_departamento_empresarial`) VALUES
-(1, 'Recursos Humanos', 0),
-(2, 'Financiero', 0),
-(3, 'Tecnico', 0),
-(4, 'Marketing', 0),
-(5, 'Comercial', 0),
-(6, 'Compras', 0),
-(7, 'Logistica y Operaciones', 0),
-(8, 'Control de Gestion', 0);
+(1, 'Recursos Humanos', 1),
+(2, 'Financiero', 1),
+(3, 'Tecnico', 1),
+(4, 'Marketing', 1),
+(5, 'Comercial', 1),
+(6, 'Compras', 1),
+(7, 'Logistica y Operaciones', 1),
+(8, 'Control de Gestion', 1);
 
 -- --------------------------------------------------------
 
@@ -848,10 +850,7 @@ CREATE TABLE `encabezado_competencia` (
 --
 
 INSERT INTO `encabezado_competencia` (`pk_id_encabezado_competencia`, `fk_id_empleado_encabezado_competencia`, `fecha_inicio_encabezado_competencia`, `fecha_fin_encabezado_competencia`) VALUES
-(1, 1, '08/11/2020', '09/11/2020'),
-(2, 1, '08/11/2020', '17/11/2020'),
-(3, 1, '08/11/2020', '24/11/2020'),
-(4, 1, '08/11/2020', '16/11/2020');
+(1, 3, '1/01/2020', '30/06/2020');
 
 -- --------------------------------------------------------
 
@@ -999,6 +998,13 @@ CREATE TABLE `falta` (
   `descripcion_falta` varchar(45) DEFAULT NULL,
   `estado_falta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `falta`
+--
+
+INSERT INTO `falta` (`pk_id_falta`, `nombre_falta`, `descripcion_falta`, `estado_falta`) VALUES
+(1, 'Agresión', 'Mala interacción por parte del empleado', 1);
 
 -- --------------------------------------------------------
 
@@ -1566,15 +1572,15 @@ CREATE TABLE `puesto` (
 --
 
 INSERT INTO `puesto` (`pk_id_puesto`, `nombre_puesto`, `salario_puesto`, `fk_id_horario_puesto`, `estado_puesto`) VALUES
-(1, 'CEO', 7500, 1, 0),
-(2, 'Secretaria', 4000, 1, 0),
-(3, 'Gerente Logística', 6500, 2, 0),
-(4, 'Gerente Financiero', 6500, 2, 0),
-(5, 'Gerente Comunicaciones', 5000, 2, 0),
-(6, 'Gerente Operaciones', 5500, 1, 0),
-(7, 'Gerente TI', 7500, 2, 0),
-(8, 'Gerente Recursos Humanos', 5200, 1, 0),
-(9, 'Capactitador', 5200, 1, 0);
+(1, 'CEO', 7500, 1, 1),
+(2, 'Secretaria', 4000, 1, 1),
+(3, 'Gerente Logística', 6500, 2, 1),
+(4, 'Gerente Financiero', 6500, 2, 1),
+(5, 'Gerente Comunicaciones', 5000, 2, 1),
+(6, 'Gerente Operaciones', 5500, 1, 1),
+(7, 'Gerente TI', 7500, 2, 1),
+(8, 'Gerente Recursos Humanos', 5200, 1, 1),
+(9, 'Capactitador', 5200, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -1745,7 +1751,9 @@ CREATE TABLE `tipo_competencia` (
 INSERT INTO `tipo_competencia` (`pk_id_tipo_competencia`, `nombre_competencia`, `estado_competencia`) VALUES
 (1, 'Trabajo en Equipo', 1),
 (2, 'Organización', 1),
-(3, 'Comunicación Efectiva', 1);
+(3, 'Comunicación Efectiva', 1),
+(4, 'Innovación', 1),
+(5, 'Análisis de Datos', 1);
 
 -- --------------------------------------------------------
 
@@ -2654,7 +2662,7 @@ ALTER TABLE `aplicacion_usuario`
 -- AUTO_INCREMENT de la tabla `bitacora`
 --
 ALTER TABLE `bitacora`
-  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `pk_id_bitacora` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
 
 --
 -- AUTO_INCREMENT de la tabla `bodega`
