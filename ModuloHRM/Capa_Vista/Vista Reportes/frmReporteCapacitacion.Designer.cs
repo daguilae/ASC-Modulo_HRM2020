@@ -1,4 +1,7 @@
-﻿namespace Capa_Vista.Vista_Reportes
+﻿using System;
+using System.IO;
+
+namespace Capa_Vista.Vista_Reportes
 {
     partial class frmReporteCapacitacion
     {
@@ -39,21 +42,17 @@
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
             this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = "C:\\Users\\TheVolts\\Modulo_HRM\\ModuloHRM\\Capa_Vista\\Vista Reportes\\ReporteCpacitaci" +
-    "on.rpt";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1067, 554);
+            this.crystalReportViewer1.ReportSource = "C:\\Users\\stmar\\AppData\\Roaming\\ModuloHRM\\ReporteCpacitacion.rpt";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(800, 450);
             this.crystalReportViewer1.TabIndex = 0;
-            this.crystalReportViewer1.ToolPanelWidth = 267;
             // 
             // frmReporteCapacitacion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmReporteCapacitacion";
             this.Text = "324 - Reporte Capacitacion";
             this.ResumeLayout(false);
